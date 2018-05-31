@@ -1,0 +1,75 @@
+#!/bin/bash
+#
+# bootcon -- power cycles a module via the terminal server hookup
+#            and verifies the modules are up by accessing serial consoles
+#
+
+loopcount=1
+ontime=20
+offtime=20
+
+if [ $# -eq "3" ]
+then
+	ontime=$2
+	offtime=$3
+fi
+
+if [ $# -eq "2" ]
+then
+	ontime=$2
+fi
+
+if [ $# -lt "1" ]
+then
+	echo "Usage: bootcon <count> [<ontime> <offtime>]"
+	echo "i.e.:  bootcon 10"
+	echo "i.e.:  bootcon 10 30"
+	echo "i.e.:  bootcon 10 30 5"
+	exit
+fi
+
+loopcount=$1
+
+ipmain=10.2.32.47
+ipvow=10.2.32.51
+
+portmain=8000
+portvow=8001
+
+current=1
+
+echo " "
+echo "BOOTCON TEST - starting ..."
+echo "BOOTCON TEST - ............ loopcount $loopcount ..."
+echo "BOOTCON TEST - ............ ontime $ontime seconds ..."
+echo "BOOTCON TEST - ............ offtime $offtime seconds ..."
+echo " "
+
+while [[ $current -le $loopcount ]] 
+do
+	echo " "
+	echo "BOOTCON TEST - loop $current start"
+	echo " "
+
+	power-ctl 1
+	sleep $ontime
+        console-exp $portmain
+        sleep 1 
+        console-exp $portvow
+        sleep 1
+	power-ctl 0
+
+	echo " "
+	echo "BOOTCON TEST - loop $current end"
+	echo " "
+	sleep $offtime
+
+	let current=$current+1
+done
+
+echo " "
+echo "BOOTCON TEST - done."
+echo " "
+
+exit
+

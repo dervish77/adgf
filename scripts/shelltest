@@ -1,0 +1,44 @@
+#!/bin/bash
+#
+# shelltest -- loops on verifying access to telnet shells
+#
+
+if [ $# -lt "2" ]
+then
+	echo "Usage: shelltest <ipaddr> <count>"
+	echo "i.e.:  shelltest 10.2.32.23 10"
+	exit
+fi
+
+ipaddr=$1
+loopcount=$2
+
+current=1
+
+echo " "
+echo "SHELL TEST - starting ..."
+echo "SHELL TEST - ............ ipaddress $ipaddr ..."
+echo "SHELL TEST - ............ loopcount $loopcount ..."
+echo " "
+
+while [[ $current -le $loopcount ]] 
+do
+	echo " "
+	echo "SHELL TEST - loop $current start"
+	echo " "
+
+        shell-exp $ipaddr
+        sleep 1
+
+	echo " "
+	echo "SHELL TEST - loop $current end"
+	echo " "
+
+	let current=$current+1
+done
+
+echo " "
+echo "SHELL TEST - $ipaddr - done."
+echo " "
+
+

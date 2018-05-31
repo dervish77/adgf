@@ -1,0 +1,206 @@
+#!/usr/bin/expect
+# mtinit-exp: 
+#
+# Uses System Debug Console to initialize Tuner manufacturing data
+#
+# Usage: mtinit-exp <ipaddr>
+#       ipaddr         - IP Address of modules
+#
+# Type: expect
+#
+# NOTES:
+#       - MUST be started when system is in Tuner UI
+#
+#
+# 1.1   11/05/2005      BSL     Updated for use by Program Source
+# 1.0	04/05/2001	BSL	Initial version.
+#
+##########################################################
+
+# Initialize variables
+set testresult "UNKNOWN"
+
+set timeout10 10;		# Set timeout (10 sec)
+
+set timeout3 3;			# Set timeout (3 sec)
+
+set tcpport 7072;               # tcp port of system debug interface
+
+
+# Get command line arguments
+if {$argc != 1} {
+	puts "Usage:  $argv0 <ipaddr>"
+	exit
+}
+
+set ipaddr [lindex $argv 0];	# AC outlet port number 
+
+
+set resultfile [open "~/var/mtinitexp-$ipaddr.log" "w"]
+
+#******************TOP of LOOP***********************
+
+spawn bash
+expect "$"
+
+send "telnet $ipaddr $tcpport \r"
+expect {
+	timeout10 {
+		set testresult "FAIL"
+		puts "\nTELNET to Terminal Server TIMED OUT\n"
+	}
+	"Connection refused" {
+		set testresult "BUSY"
+		puts "\nTCP port $tcpport is busy, try again in a few seconds."
+	}
+	"SysDbg>" {
+		set testresult "ACTIVE"
+
+		send "\r"
+                expect {
+                	timeout10 {
+		                set testresult "FAIL"
+	                	puts "\nModule is not running\n"
+	                }
+                	"SysDbg>" {
+	         	        set testresult "PASS"
+	                }
+                }
+                sleep 1
+
+		send "tuner bdp *MFA1218295.....\r"
+#		send "tuner bdp *MFA112345678900\r"
+                expect {
+                	timeout10 {
+		                set testresult "FAIL"
+	                	puts "\nModule is not running\n"
+	                }
+                	"OK" {
+	         	        set testresult "PASS"
+	                }
+                }
+                sleep 1
+
+		send "tuner bdp *MFA2291745-002.\r"
+#		send "tuner bdp *MFA200123456789\r"
+                expect {
+                	timeout10 {
+		                set testresult "FAIL"
+	                	puts "\nModule is not running\n"
+	                }
+                	"OK" {
+	         	        set testresult "PASS"
+	                }
+                }
+                sleep 1
+
+		send "tuner bdp *MFA303\r"
+                expect {
+                	timeout10 {
+		                set testresult "FAIL"
+	                	puts "\nModule is not running\n"
+	                }
+                	"OK" {
+	         	        set testresult "PASS"
+	                }
+                }
+                sleep 1
+
+		send "tuner bdp *MFA4291745.....\r"
+#		send "tuner bdp *MFA4L00.03.15..\r"
+                expect {
+                	timeout10 {
+		                set testresult "FAIL"
+	                	puts "\nModule is not running\n"
+	                }
+                	"OK" {
+	         	        set testresult "PASS"
+	                }
+                }
+                sleep 1
+
+		send "tuner bdp *MFA50000\r"
+                expect {
+                	timeout10 {
+		                set testresult "FAIL"
+	                	puts "\nModule is not running\n"
+	                }
+                	"OK" {
+	         	        set testresult "PASS"
+	                }
+                }
+                sleep 1
+
+		send "tuner bdp *MFA6000000\r"
+                expect {
+                	timeout10 {
+		                set testresult "FAIL"
+	                	puts "\nModule is not running\n"
+	                }
+                	"OK" {
+	         	        set testresult "PASS"
+	                }
+                }
+                sleep 1
+
+		send "tuner bdp *MFA71A07083867\r"
+#		send "tuner bdp *MFA75544332211\r"
+                expect {
+                	timeout10 {
+		                set testresult "FAIL"
+	                	puts "\nModule is not running\n"
+	                }
+                	"OK" {
+	         	        set testresult "PASS"
+	                }
+                }
+                sleep 1
+		
+		send "tuner bdp *MFA80000000000\r"
+                expect {
+                	timeout10 {
+		                set testresult "FAIL"
+	                	puts "\nModule is not running\n"
+	                }
+                	"OK" {
+	         	        set testresult "PASS"
+	                }
+                }
+                sleep 1
+
+		send "tuner bdp *MFA920070615\r"
+                expect {
+                	timeout10 {
+		                set testresult "FAIL"
+	                	puts "\nModule is not running\n"
+	                }
+                	"OK" {
+	         	        set testresult "PASS"
+	                }
+                }
+                sleep 1
+
+                send "exit\r"
+		expect {
+			timeout3 {
+		                set testresult "FAIL"
+                                puts "\nSysDbg exit TIMED OUT\n"
+			}
+			"$" {
+
+			}
+		}
+
+	}
+}
+
+send "exit\r"; # Exit ksh
+close; # Close spawned process
+wait;  # Wait for ksh to "exit"
+
+#****************BOTTOM of LOOP**********************
+puts $resultfile "mtinitexp $ipaddr - $testresult"
+close $resultfile
+
+exit
+

@@ -1,0 +1,108 @@
+#!/usr/bin/expect
+# console-exp: 
+#
+# Verifies that serial console of Integrity module is active
+#
+# Usage: console-exp <tcpport>
+#	tcpport 	- TCP Port Number (valid range 8000 to 8001)
+#
+# Type: expect
+#
+# 1.1   11/05/2005      BSL     Updated for use by Program Source
+# 1.0	04/05/2001	BSL	Initial version.
+#
+##########################################################
+
+# Initialize variables
+set host "cas";		        # hostname of Terminal Server
+
+set testresult "UNKNOWN"
+
+set timeout10 10;		# Set timeout (10 sec)
+
+set timeout3 3;			# Set timeout (3 sec)
+
+# Get command line arguments
+if {$argc != 1} {
+	puts "Usage:  $argv0 <tcpport>"
+	puts "        <tcpport> has valid range of 2001 to 2014"
+	exit
+}
+
+set tcpport [lindex $argv 0];	# AC outlet port number 
+
+# port 8003 is reserved for the Power SW
+if {$tcpport < 8000} {
+	puts "<port> has valid range of 8000 to 8002"
+	exit
+}
+if {$tcpport > 8002} {
+	puts "<port> has valid range of 8000 to 8002"
+	exit
+}
+
+set resultfile [open "~/var/consoleexp-$tcpport.log" "w"]
+
+#******************TOP of LOOP***********************
+
+spawn bash
+expect "$"
+
+send "telnet $host $tcpport \r"
+expect {
+	timeout10 {
+		set testresult "FAIL"
+		puts "\nTELNET to Terminal Server TIMED OUT\n"
+	}
+	"Connection refused" {
+		set testresult "BUSY"
+		puts "\nTCP port $tcpport is busy, try again in a few seconds."
+	}
+	"Escape" {
+		set testresult "ACTIVE"
+
+		send "\r"
+                expect {
+                	timeout10 {
+		                set testresult "FAIL"
+	                	puts "\nModule is not running\n"
+	                }
+                	"LINK2 v10a" {
+	         	        set testresult "PASS"
+	        	        puts "\nConsole Port $tcpport is ACTIVE\n"
+	                }
+                }
+
+		send ""
+		expect {
+			timeout3 {
+		                set testresult "FAIL"
+                                puts "\nTelnet escape TIMED OUT\n"
+			}
+			"telnet>" {
+		                send "quit\r"
+	                	expect {
+			                timeout3 {
+		                                set testresult "FAIL"
+                                                puts "\nQuit TIMED OUT\n"
+			                }
+			                "Connection closed" {
+                                                puts "\nGoodbye\n"
+			                }
+		                }
+			}
+		}
+
+	}
+}
+
+send "exit\r"; # Exit ksh
+close; # Close spawned process
+wait;  # Wait for ksh to "exit"
+
+#****************BOTTOM of LOOP**********************
+puts $resultfile "consoleexp $tcpport - $testresult"
+close $resultfile
+
+exit
+

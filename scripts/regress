@@ -1,0 +1,118 @@
+#!/bin/bash
+#
+# regress -- execute a series of regression tests
+#
+
+if [ $# -lt "1" ]
+then
+	echo "Usage: regress <log-file-id>"
+	echo "i.e.:  regress 10"
+	exit
+fi
+
+logid=$1
+
+ipmain=10.2.32.47
+ipvow=10.2.32.51
+
+portmain=8000
+portvow=8001
+
+rm -f regress-$logid.log
+rm -f ~/var/ping-*.log
+rm -f ~/var/shell*.log
+rm -f ~/var/console*.log
+rm -f ~/var/flash*.log
+rm -f ~/var/hdd*.log
+rm -f ~/var/cdrom*.log
+
+# starting test sequence
+echo "REGRESS - STARTING"
+echo "REGRESS - STARTING" > regress-$logid.log
+
+datetime=`date +%D-%T`
+echo "REGRESS - $datetime" >> regress-$logid.log
+echo "REGRESS - $datetime"
+
+echo "REGRESS - Log file is - regress-$logid.log"
+echo "REGRESS - MAIN IP is  - $ipmain"
+echo "REGRESS - VOW IP is   - $ipvow"
+
+# turn on system
+echo "REGRESS - Turning ON system..." 
+echo "REGRESS - Turning ON system..." >> regress-$logid.log
+power-ctl 1 >> regress-$logid.log
+cat ~/var/powerstate.log
+sleep 20
+
+# verify ping access
+echo "REGRESS - Verifying network..." 
+echo "REGRESS - Verifying network..." >> regress-$logid.log
+ping-exp $ipmain 256 5 >> regress-$logid.log
+cat ~/var/ping-$ipmain.log
+sleep 1
+ping-exp $ipvow 256 5 >> regress-$logid.log
+cat ~/var/ping-$ipvow.log
+sleep 1
+
+# verify serial console access
+echo "REGRESS - Verifying serial consoles..." 
+echo "REGRESS - Verifying serial consoles..." >> regress-$logid.log
+console-exp $portmain >> regress-$logid.log
+cat ~/var/consoleexp-$portmain.log
+sleep 1
+console-exp $portvow >> regress-$logid.log
+cat ~/var/consoleexp-$portvow.log
+sleep 1
+
+# verify telnet shell access
+echo "REGRESS - Verifying telnet shells..." 
+echo "REGRESS - Verifying telnet shells..." >> regress-$logid.log
+shell-exp $ipmain >> regress-$logid.log
+cat ~/var/shellexp-$ipmain.log
+sleep 1
+shell-exp $ipvow >> regress-$logid.log
+cat ~/var/shellexp-$ipvow.log
+sleep 1
+
+# verify flash partitions
+echo "REGRESS - Verifying FLASH partitions..." 
+echo "REGRESS - Verifying FLASH partitions..." >> regress-$logid.log
+flash-exp $ipmain >> regress-$logid.log
+cat ~/var/flashexp-$ipmain.log
+sleep 1
+flash-exp $ipvow >> regress-$logid.log
+cat ~/var/flashexp-$ipvow.log
+sleep 1
+
+# verify HDD partitions
+echo "REGRESS - Verifying HDD partitions..." 
+echo "REGRESS - Verifying HDD partitions..." >> regress-$logid.log
+hdd-exp $ipmain >> regress-$logid.log
+cat ~/var/hddexp-$ipmain.log
+sleep 1
+
+# verify CDROM partitions
+echo "REGRESS - Verifying CDROM partitions..." 
+echo "REGRESS - Verifying CDROM partitions..." >> regress-$logid.log
+cdrom-exp $ipmain >> regress-$logid.log
+cat ~/var/cdromexp-$ipmain.log
+sleep 1
+
+# turn off system
+echo "REGRESS - Turning OFF system..." 
+echo "REGRESS - Turning OFF system..." >> regress-$logid.log
+power-ctl 0 >> regress-$logid.log
+cat ~/var/powerstate.log
+sleep 2
+
+# done test sequence
+datetime=`date +%D-%T`
+echo "REGRESS - $datetime" >> regress-$logid.log
+echo "REGRESS - $datetime"
+
+echo "REGRESS - DONE"
+echo "REGRESS - DONE" >> regress-$logid.log
+
+exit
+

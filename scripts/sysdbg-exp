@@ -1,0 +1,90 @@
+#!/usr/bin/expect
+# sysdbg-exp: 
+#
+# Verifies that System Debug Console is active
+#
+# Usage: sysdbg-exp <ipaddr>
+#       ipaddr         - IP Address of modules
+#
+# Type: expect
+#
+# 1.1   11/05/2005      BSL     Updated for use by Program Source
+# 1.0	04/05/2001	BSL	Initial version.
+#
+##########################################################
+
+# Initialize variables
+set testresult "UNKNOWN"
+
+set timeout10 10;		# Set timeout (10 sec)
+
+set timeout3 3;			# Set timeout (3 sec)
+
+set tcpport 7072;               # tcp port of system debug interface
+
+
+# Get command line arguments
+if {$argc != 1} {
+	puts "Usage:  $argv0 <ipaddr>"
+	exit
+}
+
+set ipaddr [lindex $argv 0];	# AC outlet port number 
+
+
+set resultfile [open "~/var/sysdbgexp-$ipaddr.log" "w"]
+
+#******************TOP of LOOP***********************
+
+spawn bash
+expect "$"
+
+send "telnet $ipaddr $tcpport \r"
+expect {
+	timeout10 {
+		set testresult "FAIL"
+		puts "\nTELNET to Terminal Server TIMED OUT\n"
+	}
+	"Connection refused" {
+		set testresult "BUSY"
+		puts "\nTCP port $tcpport is busy, try again in a few seconds."
+	}
+	"SysDbg>" {
+		set testresult "ACTIVE"
+
+		send "\r"
+                expect {
+                	timeout10 {
+		                set testresult "FAIL"
+	                	puts "\nModule is not running\n"
+	                }
+                	"SysDbg>" {
+	         	        set testresult "PASS"
+	        	        puts "\nSystem Debug Console at $ipaddr is ACTIVE\n"
+	                }
+                }
+
+		send "exit\r"
+		expect {
+			timeout3 {
+		                set testresult "FAIL"
+                                puts "\nSysDbg exit TIMED OUT\n"
+			}
+			"$" {
+
+			}
+		}
+
+	}
+}
+
+send "exit\r"; # Exit ksh
+close; # Close spawned process
+wait;  # Wait for ksh to "exit"
+
+#****************BOTTOM of LOOP**********************
+puts $resultfile "sysdbgexp $ipaddr - $testresult"
+close $resultfile
+
+exit
+

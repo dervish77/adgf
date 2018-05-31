@@ -1,0 +1,22 @@
+#!/bin/bash
+#
+# ping_group -- starts a group of ping's in quiet mode
+#
+
+if [ $# -lt "3" ]
+then
+	echo "Usage: ping_group <network_id> <start_host> <stop_host>"
+	echo "i.e.:  ping_group 10.2.32 2 10"
+	exit
+fi
+
+current=$2
+
+while [[ $current -le $3 ]] 
+do
+	ping-exp $1.${current} -1 -1 &
+	let current=$current+1
+	sleep 1
+done
+exit
+

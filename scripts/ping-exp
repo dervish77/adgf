@@ -1,0 +1,117 @@
+#!/usr/bin/expect
+# ping-exp: 
+#
+# Usage: ping-exp <ip-address> <size> <count>
+#	ip-address 	- Valid IP address.
+#	size 		- Size of packet in bytes (default = 56)
+#	count 		- Count. (default = 5).
+#
+# Type: expect
+#
+# 1.0	12/15/2000	BSL	Initial version.
+#
+##########################################################
+
+# Initialize variables
+set testresult "UNKNOWN"
+set DefaultSwitches "";    # Quiet mode
+#set DefaultSwitches "-s";  # Verbose mode
+
+set SwSize "-l";           # cygwin size
+set SwCount "-n";          # cygwin count
+#set SwSize "-s";           # linux size
+#set SwCount "-c";          # linux count
+
+set DefaultSize "56";      # Default packet size
+set DefaultCount "5";      # Default packet count
+set timeout 10;            # Set timeout (10 sec)
+
+# Get command line arguments
+if {$argc != 3} {
+	puts "Usage:  $argv0 <ip-address> <size> <count>"
+	exit
+}
+
+set ipaddress [lindex $argv 0];	# ipaddress 
+
+set Size  [lindex $argv 1];     # size of ping packets
+switch -- $Size\
+	"-1" {
+		set PingSize $DefaultSize
+	}\
+	default {
+		set PingSize $Size; #Note - no check for non-numberic.
+	}
+
+set Count  [lindex $argv 2];  # count of ping packets
+switch -- $Count\
+	"-1" {
+		set PingCount $DefaultCount
+	}\
+	default {
+		set PingCount $Count; #Note - no check for non-numberic.
+	}
+
+
+# Set switches
+set Switches "$DefaultSwitches"
+
+# open log file
+set logfile [open "~/var/ping-$ipaddress.log" "a"]
+
+#******************TOP of LOOP***********************
+
+	spawn bash
+	expect "$"
+
+	#send "ping $Switches $SwSize $PingSize $SwCount $PingCount $ipaddress \r"
+	send "ping $ipaddress $PingSize $PingCount \r"
+	expect {
+		timeout {
+		set testresult "FAIL - Ping timed out"
+		puts "PING TIMED OUT"
+		}
+		"Unreachable" {
+		puts "Ping $ipaddress $PingSize $PingCount - FAILED - Host unreachable"
+		set testresult "FAIL - Host unreachable"
+		}
+		"100%" {
+		puts "Ping $ipaddress $PingSize $PingCount - FAILED - High packet loss"
+		set testresult "FAIL - High packet loss"
+		}
+		"is alive" {
+		puts "Ping $ipaddress $PingSize $PingCount - PASSED"
+		set testresult "PASS"
+		}
+		"0%" {
+		puts "Ping $ipaddress $PingSize $PingCount - PASSED"
+		set testresult "PASS - 0% packet loss"
+		}
+		"1%" {
+		puts "Ping $ipaddress $PingSize $PingCount - PASSED"
+		set testresult "PASS - 1% packet loss"
+		}
+		"2%" {
+		puts "Ping $ipaddress $PingSize $PingCount - PASSED"
+		set testresult "PASS - 2% packet loss"
+		}
+	}
+
+	send "exit\r"; # Exit ksh
+	close; # Close spawned process
+	wait;  # Wait for ksh to "exit"
+
+	puts $logfile "Ping $ipaddress $PingSize $PingCount - $testresult"
+
+	# Display and log the test result
+	puts "Ping $ipaddress $PingSize $PingCount - $testresult"
+
+
+#****************BOTTOM of LOOP**********************
+puts "STOPPING TEST on Exit"
+#puts $logfile "STOPPING TEST on Exit"
+
+close $logfile
+
+exit
+

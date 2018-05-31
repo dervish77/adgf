@@ -1,0 +1,51 @@
+#!/bin/bash
+#
+# pingtest -- loops on pings of increasing packet size
+#
+
+if [ $# -lt "2" ]
+then
+	echo "Usage: pingtest <ipaddress> <count>"
+	echo "i.e.:  pingtest 10.2.32.23  10"
+	exit
+fi
+
+loopcount=$2
+
+current=1
+
+loopdelay=10
+
+echo " "
+echo "PING TEST - starting ..."
+echo "PING TEST - ............ ipaddress $1 ..."
+echo "PING TEST - ............ loopcount $loopcount ..."
+echo " "
+
+while [[ $current -le $loopcount ]] 
+do
+	echo " "
+	echo "PING TEST - loop $current start"
+	echo " "
+
+        #ping-exp $1 64 5 
+        ping-exp $1 128 5 
+        #ping-exp $1 256 5 
+        #ping-exp $1 512 5 
+        #ping-exp $1 1024 5 
+        #ping-exp $1 1492 5 
+
+	echo " "
+	echo "PING TEST - loop $current end"
+	echo " "
+
+	sleep $loopdelay
+
+	let current=$current+1
+done
+
+echo " "
+echo "PING TEST - done."
+echo " "
+
+

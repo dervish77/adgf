@@ -1,0 +1,127 @@
+#!/usr/bin/expect
+# power-ctl: 
+#
+# Usage: power-ctl <toggle>
+#	toggle 		- Toggle value (1 = on, 0 = off)
+#
+# Type: expect
+#
+# 1.1   11/02/2005      BSL     Updated for use with RPS-10
+# 1.0	04/05/2001	BSL	Initial version.
+#
+##########################################################
+
+# Initialize variables
+set host "cas";		        # hostname of Terminal Server
+set tcpport "8003";		# tcp port of Power SW serial port
+
+set armingcode "";	        # arming code used by Power SW
+
+set a0 "";                    # arming code is ^B^X^X^B^X^X
+set a1 "\030";
+set a2 "\030";
+set a3 "";
+set a4 "\030";
+set a5 "\030";
+
+set offcode "0";                # off = 00, on = 01
+
+set testresult "UNKOWN"
+
+set timeout10 10;		# Set timeout (10 sec)
+
+set timeout3 1;			# Set timeout (3 sec)
+
+# Get command line arguments
+if {$argc != 1} {
+	puts "Usage:  $argv0 <toggle>"
+	puts "        <toggle> is 1 for on, 0 for off"
+	exit
+}
+
+set toggle [lindex $argv 0];	# AC outlet toggle state 
+
+if {($toggle < 0) || ($toggle > 1)} {
+	puts "Usage:  $argv0 <toggle>"
+	puts "        <toggle> is 1 for on, 0 for off"
+	exit
+}
+if {$toggle == 1} {
+	set state "ON"
+}
+if {$toggle == 0} {
+	set state "OFF"
+}
+
+set statefile [open "~/var/powerstate.log" "w"]
+
+#******************TOP of LOOP***********************
+
+spawn bash
+expect "$"
+
+send "telnet $host $tcpport \r"
+expect {
+	timeout10 {
+		set testresult "FAIL"
+		puts "\nTELNET to Terminal Server TIMED OUT\n"
+	}
+	"Connection refused" {
+		set testresult "BUSY"
+		puts "\nTCP port for Power Switch is busy,"
+		puts "try again in a few seconds.\n"
+	}
+	"]" {
+		set testresult "ACTIVE"
+
+                sleep 1
+
+		send "$a0$a1$a2$a3$a4$a5$offcode$toggle\r"
+		expect {
+			timeout3 {
+		                set testresult "FAIL"
+                                puts "\nToggle code response TIMED OUT\n"
+			}
+			"Invalid" {
+		                set testresult "FAIL"
+				puts "\nControl codes are invalid\n"
+			}
+			"Plug 0 O" {
+                                puts $statefile "$state"
+				puts "\n\nAC Outlet Port is now set to $state\n"
+			}
+		}
+
+                sleep 1
+
+		send ""
+		expect {
+			timeout3 {
+		                set testresult "FAIL"
+                                puts "\nTelnet escape response TIMED OUT\n"
+			}
+			"telnet>" {
+		                send "quit\r"
+	                	expect {
+			                timeout3 {
+		                                set testresult "FAIL"
+                                                puts "\nQuit TIMED OUT\n"
+			                }
+			                "Connection closed" {
+                                                puts "\nGoodbye\n"
+			                }
+		                }
+			}
+		}
+	}
+}
+
+send "exit\r"; # Exit ksh
+close; # Close spawned process
+wait;  # Wait for ksh to "exit"
+
+#****************BOTTOM of LOOP**********************
+close $statefile
+
+exit
+

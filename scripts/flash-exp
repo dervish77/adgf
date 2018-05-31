@@ -1,0 +1,99 @@
+#!/usr/bin/expect
+# flash-exp: 
+#
+# Verifies that flash partition of Integrity module is mounted
+#
+# Usage: flash-exp <ipaddress>
+#	ipaddress 	- IP address of Integrity module
+#
+# Type: expect
+#
+# 1.1   11/05/2005      BSL     Updated for use by Program Source
+# 1.0	04/05/2001	BSL	Initial version.
+#
+##########################################################
+
+# Initialize variables
+set tcpport 8081;               # tcp port of telnet shell
+
+set testresult "UNKNOWN"
+
+set timeout10 10;		# Set timeout (10 sec)
+
+set timeout5 5;			# Set timeout (5 sec)
+
+set timeout3 3;			# Set timeout (3 sec)
+
+# Get command line arguments
+if {$argc != 1} {
+	puts "Usage:  $argv0 <ipaddress>"
+	exit
+}
+
+set ipaddr [lindex $argv 0];	# address of telnet shell 
+
+set resultfile [open "~/var/flashexp-$ipaddr.log" "w"]
+
+#******************TOP of LOOP***********************
+
+spawn bash
+expect "$"
+
+send "telnet $ipaddr $tcpport \r"
+expect {
+	timeout5 {
+		set testresult "FAIL"
+		puts "\nTELNET to Telnet Shell TIMED OUT\n"
+	}
+	"Connection refused" {
+		set testresult "BUSY"
+		puts "\nTELNET to Telnet Shell REFUSED"
+	}
+	">" {
+		set testresult "ACTIVE"
+
+		send "df\r"
+                expect {
+                	timeout3 {
+		                set testresult "FAIL"
+	                	puts "\nCommand df timed out\n"
+	                }
+                	"WLFSDev" {
+	         	        set testresult "PASS"
+	        	        puts "\nFlash partition at $ipaddr is MOUNTED\n"
+	                }
+                }
+
+		send ""
+		expect {
+			timeout3 {
+		                set testresult "FAIL"
+                                puts "\nTelnet escape TIMED OUT\n"
+			}
+			"telnet>" {
+		                send "quit\r"
+	                	expect {
+			                timeout3 {
+		                                set testresult "FAIL"
+                                                puts "\nQuit TIMED OUT\n"
+			                }
+			                "Connection closed" {
+                                                puts "\nGoodbye\n"
+			                }
+		                }
+			}
+		}
+
+	}
+}
+
+send "exit\r"; # Exit ksh
+close; # Close spawned process
+wait;  # Wait for ksh to "exit"
+
+#****************BOTTOM of LOOP**********************
+puts $resultfile "flashexp $ipaddr - $testresult"
+close $resultfile
+
+exit
+

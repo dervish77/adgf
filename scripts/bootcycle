@@ -1,0 +1,76 @@
+#!/bin/bash
+#
+# bootcyle -- power cycles a module via the terminal server hookup
+#
+
+loopcount=1
+ontime=20
+offtime=20
+
+if [ $# -eq "3" ]
+then
+	ontime=$2
+	offtime=$3
+fi
+
+if [ $# -eq "2" ]
+then
+	ontime=$2
+fi
+
+if [ $# -lt "1" ]
+then
+	echo "Usage: bootcycle <count> [<ontime> <offtime>]"
+	echo "i.e.:  bootcycle 10"
+	echo "i.e.:  bootcycle 10 60"
+	echo "i.e.:  bootcycle 10 60 10"
+	exit
+fi
+
+loopcount=$1
+
+ipmain=10.2.32.47
+ipvow=10.2.32.51
+
+current=1
+
+echo " "
+echo "BOOTCYCLE TEST - starting ..."
+echo "BOOTCYCLE TEST - ............ loopcount $loopcount ..."
+echo "BOOTCYCLE TEST - ............ ontime $ontime seconds ..."
+echo "BOOTCYCLE TEST - ............ offtime $offtime seconds ..."
+echo " "
+
+while [[ $current -le $loopcount ]] 
+do
+	echo " "
+	echo "BOOTCYCLE TEST - loop $current start"
+	echo " "
+
+#	power-ctl 1
+#	sleep $ontime
+#	power-ctl 0
+
+        ~/bin/power-ctl 1
+        sleep $ontime
+#        ping-exp $ipmain 256 3
+#        ping-exp $ipvow 256 3
+#        sleep 1
+        ~/bin/unmount-main-exp $ipmain
+        ~/bin/unmount-vow-exp $ipvow
+        ~/bin/power-ctl 0
+
+	echo " "
+	echo "BOOTCYCLE TEST - loop $current end"
+	echo " "
+	sleep $offtime
+
+	let current=$current+1
+done
+
+echo " "
+echo "BOOTCYCLE TEST - done."
+echo " "
+
+exit
+

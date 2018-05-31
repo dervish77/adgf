@@ -1,0 +1,118 @@
+#!/usr/bin/expect
+# upload-exp: 
+#
+# Usage: upload-exp <hostname or ip> <filename> <upload-path>
+#	hostname 	- hostname or ip address of FTP server
+#	filename	- file to upload
+#       upload-path     - upload path
+#
+# Type: expect
+#
+# 1.1   11/22/2005      BSL     Adapted for FTP uploading.
+# 1.0	04/05/2001	BSL	Initial version.
+#
+##########################################################
+
+# Initialize variables
+set testresult "UNKNOWN"
+set timeout30 30;		# Set timeout (30 sec)
+set timeout10 10;		# Set timeout (10 sec)
+set timeout3 3;			# Set timeout (3 sec)
+
+# Get command line arguments
+if {$argc != 3} {
+	puts "Usage:  $argv0 <hostname> <filename> <upload-path>"
+	exit
+}
+
+set hostname [lindex $argv 0];	# hostname of FTP server
+set filename [lindex $argv 1];	# file to upload
+set upload   [lindex $argv 2];  # upload path
+
+puts ".....\n"
+puts "Uploading $filename to TFTP server $hostname at $upload\n"
+puts ".....\n"
+
+#******************TOP of LOOP***********************
+
+spawn bash
+expect "$"
+
+send "ftp $hostname\r"
+expect {
+	timeout10 {
+		set testresult "FAIL"
+		puts "\nFTP to $hostname TIMED OUT\n"
+	}
+	"Name (" {
+		send "tftpuser\r"
+		expect {
+			timeout3 {
+				set testresult "FAIL"
+				puts "\nTELNET to Terminal Server TIMED OUT\n"
+			}
+			"Password:" {
+				set testresult "ACTIVE"
+                        	send "bose901\r";
+                        	expect {
+	                        	timeout3 {
+                        			set testresult "FAIL"
+                        			puts "\napp launch TIMED OUT\n"
+                        		}
+                        		"ftp>" {
+                        			set testresult "ACTIVE"
+                        		}
+                        	}
+
+			}
+		}
+	}
+}
+
+if {$testresult == "ACTIVE"} {
+	send "cd $upload\r";
+	expect {
+		timeout3 {
+			set testresult "FAIL"
+			puts "\nCD command TIMED OUT\n"
+		}
+		"ftp>" {
+			set testresult "ACTIVE"
+		}
+	}
+}
+
+if {$testresult == "ACTIVE"} {
+	send "put $filename\r";
+	expect {
+		timeout30 {
+			set testresult "FAIL"
+			puts "\nPUT command TIMED OUT\n"
+		}
+		"ftp>" {
+			set testresult "ACTIVE"
+		}
+	}
+}
+
+if {$testresult == "ACTIVE"} {
+	send "bye\r";
+	expect {
+		timeout3 {
+			set testresult "FAIL"
+			puts "\nBYE command TIMED OUT\n"
+		}
+		"Goodbye" {
+			set testresult "ACTIVE"
+		}
+	}
+}
+
+send "exit\r"; # Exit ksh
+close; # Close spawned process
+wait;  # Wait for ksh to "exit"
+
+#****************BOTTOM of LOOP**********************
+
+exit
+

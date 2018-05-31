@@ -1,0 +1,80 @@
+#!/usr/bin/expect
+# lite-exp: 
+#
+# Usage: lite-exp <hostname or ip> <appname>
+#	hostname 	- hostname or ip address
+#	appname		- app to run
+#
+# Type: expect
+#
+# 1.0	04/05/2001	BSL	Initial version.
+#
+##########################################################
+
+# Initialize variables
+set testresult "UNKOWN"
+set timeout30 30;		# Set timeout (30 sec)
+set timeout10 10;		# Set timeout (10 sec)
+set timeout3 3;			# Set timeout (3 sec)
+
+# Get command line arguments
+if {$argc != 2} {
+	puts "Usage:  $argv0 <hostname> <appname>"
+	exit
+}
+
+set hostname [lindex $argv 0];	# hostname of lite board
+set appname [lindex $argv 1];	# app to run
+
+#******************TOP of LOOP***********************
+
+spawn bash
+expect "$"
+
+send "telnet $hostname\r"
+expect {
+	timeout30 {
+		set testresult "FAIL"
+		puts "\nTELNET to $hostname TIMED OUT\n"
+	}
+	"Connection timed out" {
+		set testresult "BUSY"
+		puts "\nTELNET to $hostname TIMED OUT, host not reachable\n"
+	}
+	"login:" {
+		set testresult "ACTIVE"
+
+		send "root\r"
+		expect {
+			timeout3 {
+				set testresult "FAIL"
+				puts "\nTELNET to Terminal Server TIMED OUT\n"
+			}
+			"#" {
+				set testresult "ACTIVE"
+			}
+		}
+	}
+}
+
+if {$testresult == "ACTIVE"} {
+	send "$appname\r";
+	expect {
+		timeout10 {
+			set testresult "FAIL"
+			puts "\napp launch TIMED OUT\n"
+		}
+		"#" {
+			set testresult "ACTIVE"
+		}
+	}
+}
+
+send "exit\r"; # Exit ksh
+close; # Close spawned process
+wait;  # Wait for ksh to "exit"
+
+#****************BOTTOM of LOOP**********************
+
+exit
+

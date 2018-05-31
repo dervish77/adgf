@@ -1,0 +1,68 @@
+#!/bin/bash
+#
+# copytest -- execute a file copy test on the MAIN board
+#
+
+if [ $# -lt "3" ]
+then
+	echo "Usage: copytest <src> <dest> <wait> [<logid>]"
+        echo "i.e.:  copytest /cdrom/file /hd/file 20"
+	exit
+fi
+
+logid=1
+
+if [ $# -eq "4" ]
+then
+        logid=$4
+fi
+
+ipmain=10.2.32.23
+ipvow=10.2.32.40
+
+rm -f copytest-$logid.log
+
+# starting test sequence
+echo "COPYTEST - STARTING"
+echo "COPYTEST - STARTING" >> copytest-$logid.log
+
+datetime=`date +%D-%T`
+echo "COPYTEST - $datetime" >> copytest-$logid.log
+echo "COPYTEST - $datetime"
+
+echo "COPYTEST - Log file is - copytest-$logid.log"
+echo "COPYTEST - MAIN IP is  - $ipmain"
+echo "COPYTEST - SRC is      - $1"
+echo "COPYTEST - DEST is     - $2"
+echo "COPYTEST - DELAY is    - $3"
+
+# turn on system
+echo "COPYTEST - Turning ON system..." 
+power-ctl 1 >> copytest-$logid.log
+cat ~/var/powerstate.log
+sleep 30
+
+
+# verify CDROM partitions
+echo "COPYTEST - Verifying COPY..." 
+copy-exp $ipmain $1 $2 $3 
+cat ~/var/copyexp-$ipmain.log
+sleep 2
+
+
+# turn off system
+echo "COPYTEST - Turning OFF system..." 
+power-ctl 0 >> copytest-$logid.log
+cat ~/var/powerstate.log
+sleep 2
+
+# done test sequence
+datetime=`date +%D-%T`
+echo "COPYTEST - $datetime" >> copytest-$logid.log
+echo "COPYTEST - $datetime"
+
+echo "COPYTEST - DONE"
+echo "COPYTEST - DONE" >> copytest-$logid.log
+
+exit
+

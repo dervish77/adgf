@@ -1,0 +1,44 @@
+#!/bin/bash
+#
+# consoletest -- loops on verifying access to serial consoles
+#
+
+if [ $# -lt "1" ]
+then
+	echo "Usage: consoletest <count>"
+	echo "i.e.:  consoletest 10"
+	exit
+fi
+
+loopcount=$1
+
+current=1
+
+echo " "
+echo "CONSOLE TEST - starting ..."
+echo "CONSOLE TEST - ............ loopcount $loopcount ..."
+echo " "
+
+while [[ $current -le $loopcount ]] 
+do
+	echo " "
+	echo "CONSOLE TEST - loop $current start"
+	echo " "
+
+        console-exp 8000
+        sleep 1 
+        console-exp 8001 
+        sleep 1
+
+	echo " "
+	echo "CONSOLE TEST - loop $current end"
+	echo " "
+
+	let current=$current+1
+done
+
+echo " "
+echo "CONSOLE TEST - done."
+echo " "
+
+

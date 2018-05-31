@@ -1,0 +1,198 @@
+#!/usr/bin/expect
+# mdinit-exp: 
+#
+# Uses System Debug Console to initialize Display Unit manufacturing data
+#
+# Usage: mdinit-exp <ipaddr>
+#       ipaddr         - IP Address of modules
+#
+# Type: expect
+#
+# NOTES:
+#       - MUST be started when system is in Tuner UI
+#
+#
+# 1.1   11/05/2005      BSL     Updated for use by Program Source
+# 1.0	04/05/2001	BSL	Initial version.
+#
+##########################################################
+
+# Initialize variables
+set testresult "UNKNOWN"
+
+set timeout10 10;		# Set timeout (10 sec)
+
+set timeout3 3;			# Set timeout (3 sec)
+
+set tcpport 7072;               # tcp port of system debug interface
+
+
+# Get command line arguments
+if {$argc != 1} {
+	puts "Usage:  $argv0 <ipaddr>"
+	exit
+}
+
+set ipaddr [lindex $argv 0];	# AC outlet port number 
+
+
+set resultfile [open "~/var/mdinitexp-$ipaddr.log" "w"]
+
+#******************TOP of LOOP***********************
+
+spawn bash
+expect "$"
+
+send "telnet $ipaddr $tcpport \r"
+expect {
+	timeout10 {
+		set testresult "FAIL"
+		puts "\nTELNET to Terminal Server TIMED OUT\n"
+	}
+	"Connection refused" {
+		set testresult "BUSY"
+		puts "\nTCP port $tcpport is busy, try again in a few seconds."
+	}
+	"SysDbg>" {
+		set testresult "ACTIVE"
+
+		send "\r"
+                expect {
+                	timeout10 {
+		                set testresult "FAIL"
+	                	puts "\nModule is not running\n"
+	                }
+                	"SysDbg>" {
+	         	        set testresult "PASS"
+	                }
+                }
+                sleep 1
+
+# send programming password
+		send "fpc bdp *MP4D5248\r"
+                expect {
+                	timeout10 {
+		                set testresult "FAIL"
+	                	puts "\nModule is not running\n"
+	                }
+                	"OK" {
+	         	        set testresult "PASS"
+	                }
+                }
+                sleep 1
+
+# Format info:
+#
+# serial number      10   AAAAAAAAAA               3030363439
+# DOM                8    BBBBBBBB                 20070615
+# HW number          18   CCCCCCCCCCCCCCCCCC       323935323638303031
+# HW rev             4    DDDD                     3030
+# Ferrari part num   12   EEEEEEEEEEEE             323138323933
+# Bose part num      18   FFFFFFFFFFFFFFFFFF       323935333638303031
+# SW number          22   GGGGGGGGGGGGGGGGGGGGGG   3239353336382020202020
+# SW rev             4    HHHH                     0012
+# Homolog. number    12   IIIIIIIIIIII             303030303030
+# ISO code           10   JJJJJJJJJJ               1A070286FE
+
+#                             *MI00AAAAAAAAAABBBBBBBBCCCCCCCCCCCCCC
+		send "fpc bdp *MI0030303634392007061532393533363830\r"
+                expect {
+                	timeout10 {
+		                set testresult "FAIL"
+	                	puts "\nModule is not running\n"
+	                }
+                	"OK" {
+	         	        set testresult "PASS"
+	                }
+                }
+                sleep 1
+
+#                             *MI01CCCCDDDDEEEEEEEEEEEEFFFFFFFFFFFF
+		send "fpc bdp *MI0130313030323138323933323935333638\r"
+                expect {
+                	timeout10 {
+		                set testresult "FAIL"
+	                	puts "\nModule is not running\n"
+	                }
+                	"OK" {
+	         	        set testresult "PASS"
+	                }
+                }
+                sleep 1
+
+#                             *MI02FFFFFFGGGGGGGGGGGGGGGGGGGGGGHHHH
+		send "fpc bdp *MI0230303132393533363820202020200012\r"
+                expect {
+                	timeout10 {
+		                set testresult "FAIL"
+	                	puts "\nModule is not running\n"
+	                }
+                	"OK" {
+	         	        set testresult "PASS"
+	                }
+                }
+                sleep 1
+
+# send programming password (again)
+		send "fpc bdp *MP4D5248\r"
+                expect {
+                	timeout10 {
+		                set testresult "FAIL"
+	                	puts "\nModule is not running\n"
+	                }
+                	"OK" {
+	         	        set testresult "PASS"
+	                }
+                }
+                sleep 1
+
+#                             *MI03IIIIIIIIIIIIJJJJJJJJJJ3030303030
+		send "fpc bdp *MI033030303030301a070286fe3030303030\r"
+                expect {
+                	timeout10 {
+		                set testresult "FAIL"
+	                	puts "\nModule is not running\n"
+	                }
+                	"OK" {
+	         	        set testresult "PASS"
+	                }
+                }
+                sleep 1
+
+#		send "fpc bdp *MI04ffeeddccbbaa99887766554433221100\r"
+		send "fpc bdp *MI0430303030303030303030303030303030\r"
+                expect {
+                	timeout10 {
+		                set testresult "FAIL"
+	                	puts "\nModule is not running\n"
+	                }
+                	"OK" {
+	         	        set testresult "PASS"
+	                }
+                }
+                sleep 1
+		
+                send "exit\r"
+		expect {
+			timeout3 {
+		                set testresult "FAIL"
+                                puts "\nSysDbg exit TIMED OUT\n"
+			}
+			"$" {
+
+			}
+		}
+
+	}
+}
+
+send "exit\r"; # Exit ksh
+close; # Close spawned process
+wait;  # Wait for ksh to "exit"
+
+#****************BOTTOM of LOOP**********************
+puts $resultfile "mdinitexp $ipaddr - $testresult"
+close $resultfile
+
+exit
+

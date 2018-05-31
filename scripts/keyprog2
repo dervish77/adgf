@@ -1,0 +1,214 @@
+#!/usr/bin/expect
+# validkey-exp: 
+#
+# Uses System Debug Console to perform source switch test
+#
+# Usage: validkey-exp <ipaddr>
+#       ipaddr         - IP Address of modules
+#
+# Type: expect
+#
+# NOTES:
+#       - MUST be started when system is in Tuner UI
+#
+#
+# 1.1   11/05/2005      BSL     Updated for use by Program Source
+# 1.0	04/05/2001	BSL	Initial version.
+#
+##########################################################
+
+# Initialize variables
+set testresult "UNKNOWN"
+
+set timeout10 10;		# Set timeout (10 sec)
+
+set timeout3 3;			# Set timeout (3 sec)
+
+set tcpport 7072;               # tcp port of system debug interface
+
+
+# Get command line arguments
+if {$argc != 1} {
+	puts "Usage:  $argv0 <ipaddr>"
+	exit
+}
+
+set ipaddr [lindex $argv 0];	# AC outlet port number 
+
+
+set resultfile [open "~/var/validkeyexp-$ipaddr.log" "w"]
+
+#******************TOP of LOOP***********************
+
+spawn bash
+expect "$"
+
+send "telnet $ipaddr $tcpport \r"
+expect {
+	timeout10 {
+		set testresult "FAIL"
+		puts "\nTELNET to Terminal Server TIMED OUT\n"
+	}
+	"Connection refused" {
+		set testresult "BUSY"
+		puts "\nTCP port $tcpport is busy, try again in a few seconds."
+	}
+	"SysDbg>" {
+		set testresult "ACTIVE"
+
+		send "\r"
+                expect {
+                	timeout10 {
+		                set testresult "FAIL"
+	                	puts "\nModule is not running\n"
+	                }
+                	"SysDbg>" {
+	         	        set testresult "PASS"
+	                }
+                }
+                sleep 1
+
+		send "system validkey 0   7e5f77ca314f69245e7228cfefb6a6a3a6662b68b56288a0aaf96dc30e8a6294\r"
+                expect {
+                	timeout10 {
+		                set testresult "FAIL"
+	                	puts "\nModule is not running\n"
+	                }
+                	"ERROR" {
+	         	        set testresult "FAIL"
+	                }
+                	"OK" {
+	         	        set testresult "PASS"
+	                }
+                }
+                sleep 1
+
+		send "system validkey 32  437b09dd425f9e9017f7e87da5857833a520303b493e9dd7b1c81982bb74fa27\r"
+                expect {
+                	timeout10 {
+		                set testresult "FAIL"
+	                	puts "\nModule is not running\n"
+	                }
+                	"ERROR" {
+	         	        set testresult "FAIL"
+	                }
+                	"OK" {
+	         	        set testresult "PASS"
+	                }
+                }
+                sleep 1
+
+		send "system validkey 64  442193ea8f0d43191301d5df9bf1a79d21c8dd28754c157908ead108f794cea5\r"
+                expect {
+                	timeout10 {
+		                set testresult "FAIL"
+	                	puts "\nModule is not running\n"
+	                }
+                	"ERROR" {
+	         	        set testresult "FAIL"
+	                }
+                	"OK" {
+	         	        set testresult "PASS"
+	                }
+                }
+                sleep 1
+
+		send "system validkey 96  60090178039e480061c711ab84f54b39e6caf837870c92c936c05b146c28b0a3\r"
+                expect {
+                	timeout10 {
+		                set testresult "FAIL"
+	                	puts "\nModule is not running\n"
+	                }
+                	"ERROR" {
+	         	        set testresult "FAIL"
+	                }
+                	"OK" {
+	         	        set testresult "PASS"
+	                }
+                }
+                sleep 1
+
+		send "system validkey 128 3878216f803e1f2d445d65f70e6b18324e87533803403447f800868bad0cf6fb\r"
+                expect {
+                	timeout10 {
+		                set testresult "FAIL"
+	                	puts "\nModule is not running\n"
+	                }
+                	"ERROR" {
+	         	        set testresult "FAIL"
+	                }
+                	"OK" {
+	         	        set testresult "PASS"
+	                }
+                }
+                sleep 1
+
+		send "system validkey 160 d1e163b3980e64e58f7153a301514542c5f5421036e986553e310b7708a21415\r"
+                expect {
+                	timeout10 {
+		                set testresult "FAIL"
+	                	puts "\nModule is not running\n"
+	                }
+                	"ERROR" {
+	         	        set testresult "FAIL"
+	                }
+                	"OK" {
+	         	        set testresult "PASS"
+	                }
+                }
+                sleep 1
+
+		send "system validkey 192 ec32f6bfa6cf56b169682c1d1bc8c424f38b0956f8cce74532c30a09bd8c868d\r"
+                expect {
+                	timeout10 {
+		                set testresult "FAIL"
+	                	puts "\nModule is not running\n"
+	                }
+                	"ERROR" {
+	         	        set testresult "FAIL"
+	                }
+                	"OK" {
+	         	        set testresult "PASS"
+	                }
+                }
+                sleep 1
+
+		send "system validkey 224 92cffa7b407bbf7dc6887d1717627eb6ec403e687ba144b80a32a688293aa868\r"
+                expect {
+                	timeout10 {
+		                set testresult "FAIL"
+	                	puts "\nModule is not running\n"
+	                }
+                	"ERROR" {
+	         	        set testresult "FAIL"
+	                }
+                	"OK" {
+	         	        set testresult "PASS"
+	                }
+                }
+                sleep 1
+	
+                send "exit\r"
+		expect {
+			timeout3 {
+		                set testresult "FAIL"
+                                puts "\nSysDbg exit TIMED OUT\n"
+			}
+			"$" {
+
+			}
+		}
+
+	}
+}
+
+send "exit\r"; # Exit ksh
+close; # Close spawned process
+wait;  # Wait for ksh to "exit"
+
+#****************BOTTOM of LOOP**********************
+puts $resultfile "validkeyexp $ipaddr - $testresult"
+close $resultfile
+
+exit
+
