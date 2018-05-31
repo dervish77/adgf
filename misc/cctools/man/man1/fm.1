@@ -1,0 +1,76 @@
+.ad l
+.TH FM 1 "07 May 1999" "3Com"
+.SH NAME
+fm - branch merge script for ClearCase.
+
+.SH SYNOPSIS
+.B "fm" \fI<ALL|vob>\fP \fI<src_branch>\fP [\fIprint|merge|grmerge|qualify\fP]
+
+.SH DESCRIPTION
+Using the cleartool findmerge command, the script performs a branch to 
+branch merge tailored for the SMM project.  
+.PP
+It assumes that the destination branch is your current view.  Checkout 
+comments are suppressed.  The script performs reserved checkouts for 
+merged files.
+.PP
+The script will verify that you are in a ClearCase view.  However, the 
+source branch is not verified to exist.
+
+.SH FIELDS
+.TP 5
+.B "<ALL|vob>" - ALL or VOB name.
+
+"ALL" will perform merge for all HDM VOBs as defined by CLEARCASE_AVOBS
+environment variable.  Also valid for "smm_root", "smm_sw", "smm_sc", 
+"lynx", or "3party".
+
+.TP 5
+.B "<src_branch>" - source branch name.
+
+Valid for any existing ClearCase branch type.  The branch type is not
+verified to exist.
+
+.TP 5
+.B "[print|merge|grmerge|qualify]" - merge type.
+
+- "print" mode performs no actual merge.
+.br
+- "merge" mode is best for trivial or automatic merges.
+.br
+- "grmerge" mode pops up graphical merge tool for file conflicts.
+.br
+- "qualify" mode requires confirmation of every merge decision via 
+the popup graphical merge tool.
+
+.SH EXAMPLES
+.PP
+To get preview of merge, use
+.PP
+.B
+     fm ALL dev_ne_feature print
+.PP
+To perform trivial or automatic merge, use
+.PP
+.B
+     fm smm_sw dev_ne_feature merge
+.PP
+To pop up graphical merge tool on file conflicts, use
+.PP
+.B
+     fm smm_root dev_ne_feature grmerge
+
+.SH ENVIRONMENT
+CLEARCASE_AVOBS variable defines which VOBs are in the "ALL" VOBs set.
+
+.SH SEE ALSO
+cleartool, cleartool man findmerge
+
+.SH FILES
+/millenniumvobs/smm_root/cctools/bin/smm_fm.sh
+
+.SH COPYRIGHT
+Copyright 1999 3Com Corporation.
+
+.SH AUTHORS
+Brian Lingard, 3Com Corporation.

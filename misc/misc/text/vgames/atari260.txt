@@ -1,0 +1,106 @@
+Atari 2600
+
+[Atari 2600 four-switch console] The Atari 2600, introduced in 1977 as the
+                                 Atari Video Computer System (VCS), was the
+most popular pre-crash home system. It first released in a six-switch model
+with a large base, a second six-switch model, and later in four-switch
+woodgrain, four-switch black-panel, and "2600jr" models, as well as several
+sub-models which are variations on these models (see the list in the FAQ).
+Atari released the 2800 in Japan, which was released in the U.S. as the Sears
+Video Arcade II (see below). Atari also had a prototype wireless 2600 which
+never made it to store shelves. All models play the same cartridges and use the
+same peripherals.
+
+In 1983, four companies proposed to turn the Atari 2600 into a real home
+computer. However, Atari's My First Computer [second picture from Matt Brady],
+Entex's Piggyback, Unitronics's Expander, and Spectravideo's Compumate were
+deficient in some way (capabilities, keyboard, price, etc) and couldn't stand
+up against the existing home computer market.
+
+Through the early 1980s, Atari and third parties introduced (some as vaporware)
+all kinds of expansions for the aging 2600. Atari themselves had the Space-Age
+Joystick, as well as the above-mentioned keyboard and the Voice Commander voice
+recognition system. CVC had the Gameline Master Module which allowed users to
+play games downloaded through a modem. Milton-Bradley came up with a couple of
+novel controllers as well, including the Flight Commander and the Cosmic
+Commander which came with their own cartridges. Amiga, maker of various
+creative devices, dreamed up the Joyboard and a tape-based game system as part
+of its "Power System" line of products. The user stands on the Joyboard and
+rocks in various directions to emulate a joystick. Try playing Activision
+Decathlon with that!
+
+Due to the popularity of the Atari 2600, there were quite a few compatibility
+modules for other systems. Mattel made a 2600-compatibility module for its
+Intellivision II, and Atari made one for its 5200. Cardco announced one for the
+Commodore VIC-20 but it was not made publicly available. Coleco had not only
+2600-compatibility expansion module for its ColecoVision, but a 2600 clone
+called the Gemini which spurred a lawsuit from Atari.
+
+Clones of the Atari 2600 were abundant. Coleco's Gemini system included two
+controllers that had both sticks and paddle knobs. It was also sold by Columbia
+House as the Columbia Home Arcade, which sold 2600 cartridges under roughly the
+same deal as its book or tape/CD clubs now. Sears had a number of its own 2600
+clones, produced with the cooperation of Atari, under the Video Arcade label
+(they also sold Intellivision clones under the "Super Video Arcade" label). The
+first two were six- and four-switch models like the Atari models, but with a
+different plate around the switches and a different fake woodgrain pattern.
+However, the next model was the Sears Video Arcade II, the only version of the
+Atari 2800 sold in the U.S. It's shaped like the 7800 but has four joystick
+ports. Sears also sold Atari cartridges under the Tele-games label, three of
+which were Sears exclusives.
+
+Unauthorized clones of the 2600 were popular after the crash and some are still
+being produced today. The Dynavision is a "plain" clone which plays cartridge
+games. It is called "plain" since many unauthorized clones, like the Rambo,
+come with built-in games. One clone still being produced is the TV Boy [better
+picture from JerryG]. The TV Boy is small and portable. Using the optional
+antenna and four AA batteries, all one needs to do is point it at a TV tuned to
+channel 13 and play one of the 126 built-in games. It would be the perfect
+portable 2600 but it has no cartridge port-- one can only play the built-in
+games.
+
+Atari attempted to bring back the Atari 2600 and in 1989 was trying hard to
+sell it in a big promotion along with the 7800 and XE Game System. By this
+time, Nintendo's NES held most of the market and advanced systems like the Sega
+Genesis were appearing on the scene. Despite Atari's "The Fun is Back... Under
+$50" campaign, no one wanted the twelve-year-old technology.
+
+Related Information
+
+   * Atari 2600/5200/7800 FAQ
+   * List of Atari 2600 Cartridges
+   * How to Turn Your Atari Into A Computer by Martin Bass (links to pictures
+     below)
+
+Pictures
+
+   * Atari 2600 four-switch console
+   * Atari 2600 six-switch model
+   * Atari 2600 four-switch woodgrain
+   * Atari 2600jr
+   * Wireless 2600
+   * Atari's My First Computer 2600 add-on
+   * Atari MFC again [second picture from Matt Brady]
+   * Entex's Piggyback computer add-on
+   * Unitronics's Expander computer add-on
+   * Spectravideo's Compumate computer add-on
+   * Space-Age Joystick
+   * Atari's MFC yet again and the Voice Commander
+   * CVC's Gameline Master Module
+   * MB Flight Commander
+   * MB Cosmic Commander
+   * Amiga's Joyboard
+   * Amiga's Power System
+   * Columbia Home Arcade 2600 clone
+   * Sears Video Arcade II (Atari 2800)
+   * Dynavision 2600 clone
+   * TV Boy portable 2600 clone with built-in games
+   * TV Boy again [better picture from JerryG]
+   * 2600 promotional flier page
+
+[PREV] [UP] [NEXT]
+-------------------------------------------------------------------------------
+
+Dennis Brown, dgb@owlnet.rice.edu, creator and maintainer. E-Mail me with
+corrections and additions. All contents copyright 1996, Dennis Brown. All
+trademarks are properties of their respective companies.

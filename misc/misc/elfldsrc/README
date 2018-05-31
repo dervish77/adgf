@@ -1,0 +1,53 @@
+        README
+
+        Utility - elfld
+        Author: Jim Petrie
+        
+        Usage:   elfld <elf_file>
+       
+
+This program will open an "elf" format file and display to stdout the 
+load information.
+
+This load information is derived from the .elf formatted headers. This 
+includes an elf file header describing the file followed by an unlimited 
+number of program and section headers.
+
+The program headers are read first to determine the virtual address range 
+being loaded. 
+
+The section headers are scanned next to obtain the data which applies to 
+each program segment. 
+
+When a valid section has been detected within the range of memory specified 
+by the program segment, the data will be loaded. Ooops... since this is a 
+display utility, we don't actually load the data but instead we display the 
+load information to the screen.
+
+This enables us to look at an elf image as it is loaded into memory. Thus, 
+both address and data will be displayed per line.
+
+
+Caveats: 
+
+This program currently assumes that the elf filename is 
+diag24.elf.  This name is hardwired in main.c.
+{Note this "feature" was commented out by Brian Lingard, 4/7/98}
+
+
+Contents:
+
+	Makefile		- makefile for elfld
+	README			- this file
+	diag24.elf		- sample ELF file
+
+	elf.h			- header files	
+	elfcommon.h
+	elfld.h
+	types.h
+	unistd.h
+
+	elfld.c			- source code
+	main.c
+
+

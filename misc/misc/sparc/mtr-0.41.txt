@@ -1,0 +1,60 @@
+WHAT IS MTR?
+
+  mtr combines the functionality of the 'traceroute' and 'ping' programs 
+  in a single network diagnostic tool.
+
+  As mtr starts, it investigates the network connection between the host
+  mtr runs on and a user-specified destination host.  After it
+  determines the address of each network hop between the machines, 
+  it sends a sequence ICMP ECHO requests to each one to determine the 
+  quality of the link to each machine.  As it does this, it prints
+  running statistics about each machine.
+
+  mtr is distributed under the GNU General Public License. 
+  See the COPYING file for details.  
+
+INSTALLING
+
+  Slightly more hints are in the file INSTALL. If this doesn't work
+  you could try reading that too.... 
+
+  To begin compiling mtr, first use the included configure script:
+
+	./configure
+
+  The configure script will generate a Makefile.  Build mtr:
+
+	make
+
+  After compiling, install:
+
+	make install
+
+  Note that mtr must be suid-root because it requires access to raw IP 
+  sockets.  See SECURITY for security information.
+
+  If you want to build a version that doesn't use GTK, but if you
+  DO have GTK installed, you can use 
+
+	./configure --with-gtk-prefix=/we_dont_want_gtk_so_we_use_a_name_that_certainly_doesnt_exist
+
+  It seems the --no_gtk (whatever) doesn't work. Feel free to submit 
+  a patch for this, I'm not that familiar with autoconf (it works for
+  me :-).
+
+  
+
+
+WHERE CAN I GET THE LATEST VERSION OR MORE INFORMATION?
+
+  See the mtr web page at 
+         http://www.BitWizard.nl/mtr/ 
+
+  Subscribe to the mtr mailing list.  All mtr related announcements
+  are posted to the mtr mailing list.  To subscribe, send email to
+  'majordomo@lists.xmission.com' with 'subscribe mtr' in the body of
+  the message.  To send a message to the mailing list, mail to 
+  'mtr@lists.xmission.com'.
+
+  Bug reports and feature requests should be sent to the mtr 
+  mailing list.

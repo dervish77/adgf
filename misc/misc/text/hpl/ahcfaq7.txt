@@ -1,0 +1,208 @@
+
+                                  Internet
+     _________________________________________________________________
+   
+   This portion of the alt.horror.cthulhu FAQ was brought to you by
+   Donovan K. Loucks (dloucks@primenet.com). This document was last
+   updated on July 2, 1997.
+     _________________________________________________________________
+   
+     * Q: What internet Usenet groups might be of interest to Lovecraft
+       fans?
+       A: The newsgroups of primary interest are:
+          + alt.horror.cthulhu
+          + alt.necronomicon
+       Those of secondary interest include (in alphabetical order):
+          + alt.horror
+          + alt.horror.cthulu [sic]
+          + alt.necromicon [sic]
+          + alt.sex.cthulhu -- Please note that the contents of this
+            newsgroup are likely to offend many.
+       Those of tertiary interest include (in alphabetical order):
+          + alt.cthulhu.fridge.zool.did-i-mention
+          + alt.evil
+          + alt.fantasy.conan
+          + alt.gothic
+          + alt.horror.shub-internet
+          + alt.illuminati
+          + alt.magick
+          + alt.paranormal
+          + alt.pulp
+          + alt.satanism
+          + alt.vampyres
+          + rec.arts.books
+          + rec.arts.comics.misc
+          + rec.games.frp.archives
+          + rec.games.frp.misc
+     * Q: What Lovecraft info/stuff is available via ftp?
+       A: In terms of textual information, the World-Wide Web has, for
+       the most part, replaced ftp. However, there are still many ftp
+       sites where Lovecraft-related programs and files can be found.
+          + Alt.Horror.Cthulhu FAQ
+               o Maintained by Donovan K. Loucks (dloucks@primenet.com)
+               o address: ftp.primenet.com/users/d/dloucks/ahc
+          + "Chaosium Digest" archive at Berkeley
+               o The "Chaosium Digest" includes articles on all of
+                 Chaosium's games, including "Call of Cthulhu".
+               o Available in ASCII or Windows Help File formats,
+                 although there are more issues in ASCII format.
+               o address: ftp.csua.berkeley.edu/pub/chaosium/archive
+          + Chaosium's "Call of Cthulhu" archive at Berkeley
+               o Anonymous ftp site for the "Call of Cthulhu"
+                 role-playing game.
+               o Maintained by Shannon Appel (sappel@netcom.com).
+               o Materials available includes character sheets, character
+                 generation programs, the "Mythos-Delvers" archive,
+                 photographs, a "Cthulhu Mythos" bibliography, and "The
+                 Shadow Over Usenet" archive.
+               o address: ftp.csua.berkeley.edu/pub/chaosium/cthulhu
+          + Cthulhu Gif at Wuarchive
+               o This image is a scan of Raymond Bayless' cover to Arkham
+                 House's The Dunwich Horror and Others.
+               o directory: wuarchive.wustl.edu/multimedia/images/gif/c
+               o file: cthulhu.gif
+          + Necronomicon directory at LIU in Sweden
+               o This directory contains:
+                    # The entry for the Necronomicon in the Encyclopedia
+                      of Occultism and Parapsychology, 2nd Ed.,
+                    # Colin Low's Necronomicon "Anti-FAQ",
+                    # and a brief article by Tyagi Mordred Nagasiva
+                      regarding the nature of the "Simon" Necronomicon.
+               o address: ftp.lysator.liu.se/pub/magick/Necronomicon
+          + Necronomicon FAQ
+               o address: ftp.io.com/pub/usr/kendrick
+               o Maintained by Kendrick Kerwin Chua (kendrick@io.com)
+          + Necronomicon Press archive at Berkeley
+               o Materials available includes a catalog, a checklist of
+                 publications, and an issue of The New Lovecraft
+                 Collector.
+               o address: ftp.csua.berkeley.edu/pub/cthulhu/necropress
+          + Pagan Publishing archive at Berkeley
+               o Materials available includes a catalog, a transcript of
+                 a "Delta Green" session, and issues 1 through 4 of The
+                 Unspeakable Oath.
+               o address: ftp.csua.berkeley.edu/pub/chaosium/paganpub
+     * Q: What Lovecraft information is available at World Wide Web
+       sites?
+       A: There are dozens of Lovecraft-related pages dotting the web.
+       Many of them consist of nothing but collections of links, but
+       those in the list below provide their own unique information.
+          + "The H.P. Lovecraft Archive" (Donovan Loucks)
+               o The URL is: http://www.primenet.com/~dloucks/hpl
+               o Maintained by Donovan K. Loucks (dloucks@primenet.com),
+                 the keeper of this FAQ.
+               o Includes over 30 photographs of Lovecraftian locations
+                 in New England!
+          + "Beyond Books" (Andrew Migliore)
+               o The URL is: http://www.teleport.com/~beyond
+               o "Arkham House Price Guide" page.
+               o "H.P. Lovecraft in the Movies" page.
+          + Chaosium's Page
+               o The URL is:
+                 http://www.sirius.com/~chaosium/chaosium.html
+          + The Darkest of the Hillside Thickets page
+               o The URL is: http://www.holycow.com/thickets
+               o Maintained by Joe Fulgham (puck@holycow.com)
+               o The Darkest of the Hillside Thickets is a band from
+                 Chilliwack, British Columbia, Canada, that plays "punky
+                 surf tunes".
+          + "De Web Mysteriis" (Laurent Alquier)
+               o The URL is: http://www.eerie.fr/~alquier/cthulhu.html.
+          + "Dossier Howard Phillips Lovecraft" (Carles Bellver)
+               o The URL is http://nti.uji.es/CPE/ed/0.0/hpl.
+          + "H.P. Lovecraft Image Gallery" (Jack Graham)
+               o The URL is: http://crow.acns.nwu.edu:8082/hpl.
+          + "Ia, Shub-Niggurath!" page (Peter Vorobieff)
+               o The URL is: http://www.rt66.com/~kalmoth/hpl.html
+          + I-Motion's Page
+               o The URL is: http://www.imotion.com
+               o I-Motion (with Infogrames) is the maker of a line of
+                 Lovecraftian computer games, including "Alone in the
+                 Dark", "Shadow of the Comet", and "Prisoner of Ice".
+          + Infogrames Entertainment page
+               o The URL is: http://www.infogrames.fr
+               o Infogrames (with I-Motion) is the maker of a line of
+                 Lovecraftian computer games, including "Alone in the
+                 Dark", "Shadow of the Comet", and "Prisoner of Ice".
+          + Necronomicon Press Page
+               o The URL is: http://www.necropress.com.
+               o Maintained by Marc Michaud (necropress@ids.net)
+          + The NetherReal Cyberzine
+               o A very thorough site devoted to the fiction and art of
+                 H.P. Lovecraft and the "Cthulhu Mythos".
+               o The URL is http://www.geocities.com/Area51/Vault/4657/
+               o Maintained by Jim Hawley (rupickman@geocities.com)
+          + Reader's Guide to the Cthulhu Mythos
+               o A great reference to the fiction and poetry of the
+                 "Cthulhu Mythos," using Berglund's A Reader's Guide to
+                 the Cthulhu Mythos (1969) as a starting point.
+               o The URL is http://www.toddalan.com/~berglund
+               o Maintained by Edward P. Berglund
+                 (berglund@feemsb.toddalan.com), editor of The Disciples
+                 of Cthulhu, the first Cthulhu Mythos anthology of
+                 original fiction.
+     * Q: What mailing lists exist that contain Lovecraftian information?
+       A: Mailing lists function like a newsgroup, although messages are
+       received via e-mail rather than news. The following mailing lists
+       are devoted to Lovecraft or the "mythos".
+          + The Chaosium Digest - This weekly digest is about all
+            Chaosium games, primarily "Call of Cthulhu", "Elric!",
+            "Nephilim" and "Pendragon". To subscribe, write Shannon Appel
+            at appel@erzo.org and request to be added to the list. Note
+            that subscription and unsubscription is not automated.
+            Archives of The Chaosium Digest may be found at
+            ftp://ftp.csua.berkeley.edu/pub/chaosium.
+          + Strange Aeons - This mailing list is specifically about "Call
+            of Cthulhu" and may be subscribed to by e-mailing
+            strange-aeons-l@lists.consensus.com and including the word
+            "SUBSCRIBE" in the subject of the message.
+          + Dark Designs - This is a newer mailing list just about "Call
+            of Cthulhu" which can be subscribed to by e-mailing
+            dark-designs-requests@iastate.edu. Like The Chaosium Digest,
+            subscription is not automated.
+     * Q: What IRC channels are devoted to Lovecraft and the Mythos?
+       A: Marv Boyes (mlboyes@orion.branch-co.lib.mi.us) has established
+       the #cthulhu channel on DALnet for the express discussion of H.P.
+       Lovecraft and the Cthulhu Mythos. Marv is working on a robot,
+       named Brown_Jenkin, which will answer simple questions about
+       Lovecraft in the absence of anyone else. A number of people from
+       the alt.horror.cthulhu newsgroup meet there Wednesday evenings
+       from 6 to 8 PST (9 to 11 EST). For more information on how to
+       connect to DALnet, check http://www.dalnet.com or
+       http://www.dal.net.
+     * Q: What other sources are available on the Internet?
+       A: Although not strictly on the Internet, the following service
+       may be accessed through an Online Service Provider.
+          + Chaosium Online
+               o A service of America Online
+               o "provides game descriptions, press releases, answers to
+                 questions, etc."
+               o Contributed by: Keith Ivey (kcivey@cpcug.org)
+     * Q: Are any Call of Cthulhu games available via the internet (PBEM,
+       MUDs, MOOs, MUSHes, etc.)?
+       A: First, there is always the possibility of someone running an
+       informal Play-By-E-Mail (PBEM) game. These come and go, and will
+       not be listed here.
+          + Arkham MUSH: This MUSH is "dedicated to H.P.Lovecraft" and
+            was created by Hugues Bigault. Telnet to belair.enstimac.fr
+            4201.
+          + Barbary MUSH: Created by Joel and Lynn Gazis-Sax, this MUSH
+            is set in 1890s San Francisco and uses the "Call of Cthulhu"
+            rules. Telnet to telmaron.com 6250 or 206.246.120.2 6250.
+          + CthulhuMUD: Telnet to zen.btc.uwe.ac.uk (164.11.2.18)
+          + Cthulhu_Mud: Telnet to leaoibm2.epfl.ch (128.178.152.15)
+          + LambdaMOO: There is a Call of Cthulhu MOO running on the
+            LambdaMOO 1.7.1 server and db. The game is set in 1926-27 in
+            "Lovecraft Country". E-mail Ray D. Arrastia (asmodeus@io.com)
+            for more information.
+          + Realm of Magic: A MUD which includes an Innsmouth-based town
+            created by Matthias Walder. Telnet to 134.102.201.111 4000.
+          + Xthulu MUX: Set in the fictional city of Avalon, this is a
+            1920s game which uses the "Call of Cthulhu" rules. Telnet to
+            adb.no.neosoft.com 1920. For more information, contact Aaron
+            Bouler (alxndria@adb.no.neosoft.com).
+          + ?: A MUSH maintained by devin@beamlab.ps.uci.edu. Telnet to
+            ganymede.ics.uci.edu 1927.
+     _________________________________________________________________
+   
+   End of Part 7 of the alt.horror.cthulhu FAQ, "Internet".

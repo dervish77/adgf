@@ -1,0 +1,19 @@
+
+# Template file for ksh startup initialisation
+# @(#)kshrc_template	1.3 94/02/04 11:38:52
+# Author S. Winter
+#
+# execute the baseline common project kshrc file
+
+#print -u2 sourcing .kshrc
+
+if [ -r ${IATC_LOCAL}/common_kshrc ]
+then	. ${IATC_LOCAL}/common_kshrc
+elif [ -r $HOME/.kshrc.old ]
+then	. $HOME/.kshrc.old
+fi
+
+#print end of .kshrc
+
+##########################################################################
+## User specific .kshrc stuff goes here

@@ -1,0 +1,2 @@
+x-world/x-vrml; /home/hki020hk/lingard/misc/src/vrweb/VRweb %s
+x-gif/x-jpg; /home/hki020hk/lingard/bin/xv %s

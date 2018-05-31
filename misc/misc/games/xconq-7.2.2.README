@@ -1,0 +1,41 @@
+Xconq is an empire-building strategy game, where players contest for
+world domination.  In the standard game, each player (there may be up
+to 31) starts with a handful of towns and cities, and may build
+infantry, armor, airplanes, and a variety of ships.  Each side's
+movements are hidden; speed and surprise are important.  Any or all
+sides may be played by the computer.  In addition to the standard
+game, Xconq includes a game design language (GDL) that can be used to
+define a wide variety of games. Games already in the distribution's
+library include everything from basic combat to elaborate world
+models, with time periods ranging from ancient history into the
+distant future.  Xconq has a huge number of features, and a lengthy
+manual describing them.
+
+Xconq runs on many different systems; it includes graphical interfaces
+for X11, curses, and Macintosh(tm).  The X11 interface allows for
+multiple human players, each on a different display.  The game design
+mechanism includes the ability to add new color and monochrome imagery
+for games.
+
+The first version of Xconq was released in 1987.  Since then there
+have been many releases by various people, most of them based on
+version 5.  Version 7 is a major rewrite and expansion of 5.5, and
+includes many more capabilities; see the file NEWS for a summary.
+
+The current version is 7.2.2.
+
+All sources:	ftp://ftp.cygnus.com/pub/xconq/xconq-7.2.2.tar.gz
+Mac binary:	ftp://ftp.cygnus.com/pub/xconq/xconq-7.2.2.cpt.hqx
+Postscript:	ftp://ftp.cygnus.com/pub/xconq/xconq-7.2-ps.tar.gz
+Emacs Info:	ftp://ftp.cygnus.com/pub/xconq/xconq-7.2-info.tar.gz
+HTML:		ftp://ftp.cygnus.com/pub/xconq/xconq-7.2-html.tar.gz
+
+Mac projects:	ftp://ftp.cygnus.com/pub/xconq/xconq-7.2projs.cpt.hqx
+
+This file:	ftp://ftp.cygnus.com/pub/xconq/README
+News file:	ftp://ftp.cygnus.com/pub/xconq/NEWS
+
+To see recent snapshots of progress on the next version (which may or
+may not work - no guarantees!), look in pub/xconq/Snapshots.
+
+[Last updated June 30, 1998]

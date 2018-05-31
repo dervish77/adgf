@@ -1,0 +1,37 @@
+README for $PROJHOME/srclist
+------------------------------------------
+
+This directory contains source branch list files for use in performing
+nightly merge/builds for SMM project from ClearCase.
+
+------------------------------------------
+
+File Format:
+
+The source branch list file is used by the "ccnightly.pl" script
+when performing automated feature branch merges executed from a 
+cron job.  The file has a specific format as shown below.  The source
+branches are listed one per line using the keyword "branch" at the
+start of each line.  The keyword "email" is used on all remaining
+lines to indicate who should receive email notification of both
+success and failure messages.
+
+example:
+
+	branch <src_branch_1>
+	branch <src_branch_2>
+	.
+	.
+	.
+	branch <src_branch_N>
+	email <email_address_1>
+	email <email_address_2>
+	.
+	.
+	.
+	email <email_address_M>
+
+
+-------------------------------------------
+last updated:
+Nov 04, 1998

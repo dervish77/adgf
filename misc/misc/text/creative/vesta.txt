@@ -1,0 +1,191 @@
+				Notes on Vesta
+				--------------
+
+
+Titles
+------
+	"Transie!"		favored so far
+	"Swift Justice"
+	"Lost Off Vesta"
+	"Adrift Near Vesta"
+
+
+Setting
+-------
+
+Approximately 50 to 100 years in the future, man has begun to colonize and
+mine the asteroids within our solar system.  Most of the early colonies
+began on the larger asteroids like Ceres, Vesta, etc.  But eventually many
+asteroids, large and small, had been explored by scout ships and the most 
+promising ones had been claimed by large mining conglomerates.  These 
+conglomerates ran each of their facilities as semi-independant nation-states.
+The processed materials are shipped to Mars for further processing on Deimos 
+and Phobos, before being shipped to Earth/Luna.  Several of the mining 
+conglomerates were controlled/owned by industrial companies on Mars.
+
+It soon became apparent that people's behavior mirrored that on Earth.  Crime
+remained a problem.  The conglomerates didn't want to have to maintain jails
+at each of their facilities.  So a few of the "tapped-out" asteroids were 
+converted into penal colonies where prisoners were forced to perform mining
+labor while serving their sentences.  Though incidents of prisoner abuse
+were small, some examples had been reported.
+
+Several freelance "transport" agents sprang up to portage sentenced criminals 
+from the mining colonies to the penal colonies.  Most of the people who worked
+as transport agents had to supply their own ship, usually a cheap, unreliable,
+discarded mining scout.  These ships usually only require a crew of one, but 
+can actually carry 3 to 4 people on board total.  Most could only travel about 
+100,000 km per day.  The prisoners are usually tranquilized for the duration 
+of the trip.
+
+Though weapons on the mining colonies had been banned years ago, a thriving 
+black market exists selling cheap projectile weapons, etc.  Knives have never 
+been banned.  There have been many incidents where a projectile weapon pierced 
+the hull of a ship or bulkhead and caused many deaths due to asphyxiation.  There are stiff sentences for weapons violations.
+
+
+Ceres
+
+The largest of the asteroids and the first colony to be established some fifty
+years ago.  Tomac Industries controls Ceres and several other asteroids, making 
+it the richest mining conglomerate in the belts.  They are constantly trying
+to ursurp the mining rights of other companies.  They have been known to employ
+both legal and illegal means to get what they want.
+
+
+Vesta
+
+Vesta was converted into a penal colony some thirty years ago, after most
+of the richest ores had been depleted.  Vesta was by far the largest of the 
+penal asteroids.  With such a large prisoner population and the amount
+of remaining ores, Vesta still turned a tidy profit for its operators.  Vesta
+had earned a reputation for being the best place to secure the more serious 
+offenders.  Smaller penal colonies usually handled the less-violent prisoners.
+
+
+Scout Ship
+
+The typical scout ship consists of one main oblong shaped hull, which has 
+three main compartments inside.  The forward compartment is the ship's
+"bridge" or control section, usually allowing room for only one or two 
+individuals.  The middle compartment is normally used as living/sleeping 
+space by a prospector.  When used by transies, the middle section is outfitted 
+with additional sleep tubes for use in storing the prisoners during the 
+transports.  The aft section houses the Kepler drive.  There is little 
+spare room around the drive housing.  
+
+Kepler drives were once considered state of the art.  They provided considerable
+thrust and didn't require much maintenance.  But after twenty or thirty 
+years of service they had begun to fail.  About five years ago, newer ship 
+drives have been developed making them obsolete.  Repair parts have become
+increasingly difficult to obtain.  The newer drives cannot be retro-fitted 
+into the older ships.
+
+
+
+Characters
+----------
+
+Samuel Buckholt
+
+Samuel has been a freelance transport agent ("transie") for the last twenty 
+years (he is in his late forties).  He was born on Earth, but moved to the 
+Mars colony fairly young.  He originally wanted to be a prospector, but he 
+wasn't a natural born belter, so he couldn't get licensed and couldn't get 
+any financing.  The belters take care of their own first.  He always been 
+bitter about this.
+
+Now he has almost paid-off his scout ship, the Swift Justice, as he has 
+christined it, (only one more payment), and is looking forward to finally 
+getting his prospecting career off the ground.  His ship may need some 
+upgrading, since it has become noticeably more unreliable of late.
+
+He was married once, back on Mars, but had to get divorced after only three 
+years, since she didn't want to leave Mars.  He has been reluctant to get 
+involved with other women ever since.
+
+Though they are illegal, he does own a small projectile weapon for his own
+protection.  In all his years of being a transie, he has never had to use
+it.  He also has never had a prisoner escape.  
+
+
+Tyra Jackson
+
+A 42 year old black male, who was born a belter and has worked off and on at 
+various mining colonies, but has always seeked the easy way out.  He has 
+often been in trouble with the law, and has most recently was convicted
+of murdering another man over a game of blackjack.  He has never appreciated 
+the advantages he has had by being a natural born belter, and he still shares 
+in the prejudice against non-belters.  He was sentenced to 20 years to life 
+on a penal asteroid.
+
+
+Virginia Lopez
+
+A 28 year old white woman (partly hispanic), who was also born a belter 
+and was convicted of possession of a projectile weapon and sentenced to 
+10 years.  She had bought the weapon originally to protect herself against 
+her jealous boyfriend.  He died a few months ago in a mining accident.  She 
+forgot she had the weapon until someone found it and turned her in for the 
+reward money.  She has a broken arm from a fight while in lockup.
+
+
+Huang Dwen
+
+A 20 year old newcomer to the belts, born on Mars, who, on the surface (see 
+Backplot), seems to have gotten caught in a company sting operation looking 
+for employees who were selling portions of raw titanium ore to pirate 
+smelters.  He didn't even know that what he had been told to do was against 
+company policies.  They sentenced him to three years, but he probably will 
+only end up serving one year.
+
+He had come to the belts seeking wealth and had dreams of being a prospector
+like his grandfather.  His naivete was his biggest downfall.  Samuel can't 
+help but to have sympathy for him.
+
+
+
+Backplot
+--------
+
+Huang Dwen is actually the nephew of Lee Wong, the owner of one of the 
+larger mining conglomerates based on Mars.  Huang was sent in to infiltrate
+Tomac Industries in an effort to learn of newly discovered asteroids so that
+Wong's company could usurp Tomac's claims.  But Huang got caught in the 
+sting operation by mistake (or maybe not).  It's possible that Tomac found
+out who Huang was and framed him just to get rid of him.  Understandably
+Wong wants him freed, and learns of when and how Huang will be transported
+to the penal colony.  Wong hires a team to intercept Samuel's ship and free
+Huang.
+
+
+Plot
+----
+
+Samuel has picked up his latest load of prisoners from Ceres and is about 
+three-quarters of the way to Vesta to drop off Tyra Jackson.  He would then
+proceed to Charlies Rock to drop off the other two prisoners.
+
+While performing normal scans, something hits the ships or the ship hits
+something.  The ship's drive is disabled and communications are knocked out.
+
+Luckily he has the repair parts on board, however it will take two people to
+make the repair while EVA'ing.  He reluctantly revives his prisoners to 
+get two of them to make the repair while he and the other one observes.
+Virginia must remain on board due to her broken arm.
+
+During the repair, Huang loses his grip and drifts out into space.  Tyra
+is powerless to help the poor lad.  The surviving prisoners blame Samuel for 
+Huang's death.  
+
+Samuel is forced into having to trust Virginia, while he and Tyra EVA to 
+finish the repair job.  Once back inside, Tyra continues to harass Samuel
+about Huang's death.  They eventually struggle and fight.  Samuel pulls
+his weapon and fires three shots.  Two shots hit and kill Tyra, but the 
+third pierced the hull of the ship and they will slowly loose oxygen.
+
+Samuel and Virginia must don EVA suits and proceed to Vesta hoping to get 
+there before the air runs out.
+
+They make it only after a Vesta patrol ship picks up their ship's automated 
+distress call.  They are both nearly dead, but can recover.

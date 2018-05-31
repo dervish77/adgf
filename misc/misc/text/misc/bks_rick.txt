@@ -1,0 +1,65 @@
+			SF and Fantasy Booklist
+			-----------------------
+
+Author			Title					Keys
+------			-----					----
+
+Asimov, Isaac		The Caves of Steel			SF
+			I, Robot				SF, ssc
+
+Baxter, Stephen		Anti-Ice				SF
+
+Card, Orson Scott	Ender's Game				SF,Hg,Nb
+			Treason					SF
+
+Clement, Hal		Mission of Gravity			SF
+
+Dick, Philip K.		Do Androids Dream of Electric Sheep?	SF,cyb
+
+Farmer, Philip Jose	To Your Scattered Bodies Go		SF,Hg
+
+Gardner, Craig Shaw	A Malady of Magicks			F
+
+Gibson, William		Neuromancer				SF,Hg,Nb,cyb
+
+Goldman, William	The Princess Bride			F
+
+Haldeman, Joe		The Forever War				SF,Hg,Nb
+			Tools of the Trade			SF
+
+Heinlein, Robert	Friday					SF
+			Starship Troopers			SF,Hg
+			Time for the Stars			SF,Y
+			Tunnel in the Sky			SF,Y
+
+Holdstock, Robert	Mythago Wood				F
+
+King, Stephen		'Salem's Lot				H
+
+Leiber, Fritz		Swords and Deviltry			F,ssc,Hg
+			Swords Against Death			F,ssc
+
+Niven, Larry		The Hole In Space			SF,ssc
+			Neutron Star				SF,ssc
+			Ringworld				SF,Hg,Nb
+
+Pohl, Frederick		Gateway					SF,Hg,Nb
+			Man Plus				SF,Nb
+
+Rucker, Rudy		The Hacker and the Ants			SF
+
+Stephenson, Neil	Snow Crash				SF,cyb
+
+Swann, S. Andrew	Forests of the Night			SF
+			Emperors of the Twilight		SF
+			Spectres of the Dawn			SF
+
+Tolkien, J. R. R.	The Hobbit				F,Y
+			The Lord of the Rings			F
+
+Keys:
+
+cyb	- cuberpunk			F	- fantasy
+H	- horror			Hg	- Hugo winner	
+Nb	- Nebula winner			SF	- science fiction
+ssc	- short story collection	Y	- young adult

@@ -1,0 +1,397 @@
+[ Version 4.0 ]    maintained by vgriscep@wam.umd.edu
+This document is available on the World Wide Web at:
+http://www.wam.umd.edu/~vgriscep/lists/intellivision
+/- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\
+|   KEY:                                                                  |
+|                                                                         |
+|     Cpt:   Hardware compatibility                                       |
+|            + = compatible with everything                               |
+|            v = needs IntelliVoice                                       |
+|            c = needs Intellivision Computer Adaptor                     |
+|            m = needs Intellivision Computer Adaptor & Music Synthesizer |
+|            2 = needs Intellivision II (or modified Intellivision I)     |
+|            C = won't work with Intellivision Computer Adaptor           |
+|            @ = won't work with Intellivision II                         |
+|                                                                         |
+|     Rarity:  C  = common             Everyone has it;  most people      |
+|                                       have several duplicates.          |
+|              U  = uncommon           At a flea market, you'll usually   |
+|                                       encounter a few of these.         |
+|              R  = rare               Hardly ever see more than one in   |
+|                                       a single day of hunting.          |
+|              ER = extremely rare     A definite score.                  |
+|              UR = unbelievably rare  Worth bragging about!              |
+|              NR = never released     Ultra-rare.  (My policy is simple: |
+|                                       things are only nonexistent until |
+|                                       someone finds one.)               |
+|                                                                         |
+|              [ All rarity ratings are based on Eastern US               |
+|               occurrences.  Hey, I can't be everywhere. ]               |
+|                                                                         |
+|                  Gr (graphics rating):  1 = poor graphics               |
+|                                         2 = reasonable graphics         |
+|                                         3 = decent graphics             |
+|                                         4 = good graphics               |
+|                                         5 = excellent graphics          |
+|                                                                         |
+|                  Pl (playability):      1 = tedious                     |
+|                                         2 = dry;  brief enjoyment       |
+|                                         3 = worth playing               |
+|                                         4 = fun                         |
+|                                         5 = irresistible                |
+|                                                                         |
+|    (These are all subjective, of course.  If you see something with     |
+|         which you don't agree, I hope you'll let me know!)              |
+|                                                                         |
+|           Man?, Have? :  indicates whether I (VGR) own                  |
+|                            instructions or game itself,                 |
+|                            respectively                                 |
+|           Ovly :         indicates number of keypad overlays I have,    |
+|                            or N if no overlays exist                    |
+|                                                                         |
+|                          To remove these so you can put in your         |
+|                          own indicators of which games you own,         |
+|                          use the Unix command:                          |
+|                                                                         |
+|                            sed 's/|[A-Z].*$/|/' vgrlist > mylist        |
+|                                                                         |
+|                                                                         |
+|                                                                         |
+\- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -/
+
+
+
+
+
+***********************************************************************
+*     Mattel Electronics                                              *
+***********************************************************************
+
+
+Name                          Mattel  INTV  Cpt Rarity Gr  Pl  Man?  Ovly Have?
+                            Model No.
+
+Auto Racing                      1113  Y    +   U             |Yes   2    Yes
+NHL Hockey                       1114       +   C             |No    0    No
+Las Vegas Roulette               1118  Y    +   U             |No    0    No
+ABPA Backgammon                  1119  Y    +   R             |No    0    No
+Checkers                         1120       +   R             |Yes   0    Yes
+Draughts                         1120       +   ER            |No    0    No
+Armor Battle                     1121  Y    +   C      3   4  |Yes   2    Yes
+The Electric Company Word Fun    1122       +   R             |No    1    Yes
+Horse Racing                     1123  Y    +   U             |No    0    No
+NASL Soccer                      1683       +   U             |No    0    No
+Tennis                           1814  Y    +   C             |No    0    No
+PGA Golf                         1816  Y    +   C             |No    0    No
+U.S. Ski Team Skiing             1817  Y    +   C             |Yes   4    Yes
+Sea Battle                       1818  Y    +   C             |No    2    No
+Boxing                           1819  Y    +   U             |No    0    No
+NFL Football                     2610       +   C             |Yes   2    Yes
+Las Vegas Poker & Blackjack      2611       +   C             |Yes   2    Yes
+Space Battle                     2612  Y    +   U      3   4  |Yes   1    Yes
+The Electric Company Math Fun    2613       +   R             |No    1    No
+Major League Baseball            2614       +   C             |Yes   2    Yes
+NBA Basketball                   2615       +   U             |No    0    No
+IntelliVoice                     3330       +   U             |No    N    Yes
+PBA Bowling                      3333       +   C             |No    0    No
+Sub Hunt                         3408  Y    +   C             |Yes   1    Yes
+Advanced Dungeons & Dragons      3410  Y    +   U      3   5  |Yes   3    Yes
+Advanced Dungeons & Dragons:  Cloudy Mountain
+                                 3410       +   NR     3   5  |No    0    No
+Motocross                        3411  Y    +   U      4   3  |Yes   2    Yes
+USCF Chess                       3412  Y    +   R             |Yes   2    Yes
+Space Spartans                   3416       v   U      3   3  |Yes   2    Yes
+Astrosmash                       3605       +   U             |Yes   4    Yes
+Snafu                            3758       +   C      2   3  |Yes   1    Yes
+Space Armada                     3759  Y    +   C      3   3  |Yes   2    Yes
+Triple Action                    3760  Y    +   C      3   3  |Yes   2    Yes
+Bomb Squad                       3883       v   U      3   5  |Yes   2    Yes
+B-17 Bomber                      3884       v   U      4   4  |Yes   2    Yes
+Computer Module                  4187       2   R      -   4  |No    N    Yes
+Music Synthesizer                4188       c   ER     -   4  |No    N    Yes
+System Changer                   4189       2   UR            |No    N    No
+Mission X                        4437  Y    +   U      4   4  |Yes   2    Yes
+Buzz Bombers                     4436       +   R      3   3  |No    0    Yes
+Loco-Motion                      4438  Y    +   U      3   4  |Yes   2    Yes
+Mystic Castle                    4469       +   NR     5   3  |No    0    No
+Thunder Castle                   4469  Y    +   ER     5   3  |No    0    Yes
+Mind Strike                      4531       c   ER            |No    0    No
+Scooby Doo's Maze Chase          4533       c   ER     5   3  |Yes   2    Yes
+Mr. Basic Meets Bits 'n Bytes    4536       c   ER     4      |Need! Need Yes
+World Series Major League Baseball
+                                 4537       cv  ER     5   5  |Yes   2    Yes
+Melody Blaster                   4540       m   ER            |No    0    No
+The Jetsons' Way With Words      4543       c   ER     5   4  |Yes   2    Yes
+BurgerTime                       4549       +   U      3   4  |Yes   2    Yes
+Kool-Aid Man                     4675       +   R      3   3  |Need! Need Yes
+Bump 'n' Jump                    4688       +   U      4   5  |No    0    Yes
+Masters of the Universe:  The Power of He-Man
+                                 4689  Y    +   U      4   3  |No    2    Yes
+Space Hawk                       5136  Y    +   U      3   4  |Yes   2    Yes
+Utopia                           5149  Y    +   C      4   5  |Yes   2    Yes
+Star Strike                      5161  Y    +   C      4   3  |Yes   2    Yes
+Advanced Dungeons & Dragons:  Treasure of Tarmin
+                                 5300  Y    +   U      4   5  |Yes   2    Yes
+Frog Bog                         5301  Y    +   U      4   5  |Yes   2    Yes
+Royal Dealer                     5303       +   C             |No    0    No
+Reversi                          5304  Y    +   U             |No    1    Yes
+Night Stalker                    5305  Y    +   C      3   4  |Yes   2    Yes
+Pinball                          5356  Y    +   U      4   5  |Yes   0    Yes
+Shark!  Shark!                   5387  Y    +   R      3   5  |Xerox 0    Yes
+TRON Deadly Discs                5391       +   C      4   4  |Yes   1    Yes
+TRON II                          5392       +   NR     3   3  |No    0    No
+TRON Maze-A-Tron                 5392       +   R      3   3  |Yes   2    Yes
+TRON Solar Sailer                5393       v   R      4   2  |Yes   2    Yes
+Lock 'n' Chase                   5637  Y    +   C      3   3  |Yes   0    Yes
+Sharp Shot                       5638       +   R             |No    0    No
+Vectron                          5788  Y    +   R      3   3  |Yes   2    Yes
+World Championship Baseball      5789       +   U             |Yes   0    Yes
+Super NFL Football               ????       c   NR            |No    0    No
+Rocky & Bullwinkle               ????       c   UR            |No    0    No
+
+
+
+
+
+***********************************************************************
+*     INTV Corporation                                                *
+***********************************************************************
+
+
+Name                             INTV    CPT   Rarity  Gr  Pl  Man?  Ovly Have?
+                               Model No.
+
+Big League Baseball              2614                         |No    0    No
+Pac-Man                          8000     C    ER      4   4  |No    N    Yes
+World Cup Soccer                 8100          ER             |No    0    No
+Super NASL Soccer                8100          NR             |No    0    No
+Championship Tennis              8200          ER      4   4  |Yes   2    Yes
+Thin Ice                         8300     +    ER      4   5  |No    N    Yes
+Super Pro Football               8400          ER             |Yes   0    Yes
+Hover Force                      8500     +    ER      5   4  |Xerox N    Yes
+Tower of Doom                    8600     +    ER      5   5  |Need! 0    Yes
+Triple Challenge                 8700          ER             |No    0    No
+Diner                            8800     +    ER      5   5  |Yes   N    Yes
+Chip Shot Super Pro Golf         8900          ER             |No    0    Yes
+Commando                         9000          ER             |No    0    No
+Slam Dunk Super Pro Basketball   9001          ER             |No    0    Yes
+Learning Fun Album I             9002          ER             |No    0    No
+Slap Shot Super Pro Hockey       9003          ER             |No    0    No
+Pole Position                    9004          ER             |No    0    No
+Dig Dug                          9005          ER      3   4  |No    N    No
+Learning Fun Album II            9006          ER             |No    0    No
+Mountain Madness Super Pro Skiing
+                                 9007          ER             |No    0    Yes
+Super Pro Decathlon              9008          ER             |No    0    No
+Body Slam Super Pro Wrestling    9009          ER             |Yes   0    Yes
+Stadium Mud Buggies              9100          ER             |No    0    No
+Spiker Super Pro Volleyball      9102                         |No    0    No
+Space Shuttle                    ????          NR             |No    0    No
+Speed Freak                      ????          NR             |No    0    No
+Defender                         ????          ER             |No    0    No
+Frogger                          ????          ER             |No    0    No
+
+
+
+
+
+***********************************************************************
+*     Activision                                                      *
+***********************************************************************
+
+
+Name                               Activision  Rarity  Gr  Pl  Man?  Ovly Have?
+                                    Model No.
+
+Stampede                        M-001-04       U              |No    0    No
+Pitfall!                        M-002-04       U       4   4  |No    1    Yes
+Happy Trails                    M-003-04       R              |No    0    No
+The Dreadnaught Factor          M-004-04       R       4   5  |Yes   2    Yes
+Beamrider                       M-005-02       R       4   5  |No    0    No
+Worm Whomper                    M-006-03       R       3   4  |Yes   2    Yes
+River Raid                      M-007-03       R              |No    0    No
+Space Shuttle                   M-???-??       ER             |No    0    No
+
+
+
+
+
+***********************************************************************
+*     Atarisoft                                                       *
+***********************************************************************
+
+
+Name                             Atari   Cpt   Rarity  Gr  Pl  Man?  Ovly Have?
+                              Model No.
+
+Pac-Man                          70251    C    R       4   4  |Yes   N    Yes
+Defender                         70252         R       3   4  |Yes   N    Yes
+Centipede                        70254         R       3   4  |No    N    Yes
+Dig Dug                          ?????         ER             |No    N    No
+Pole Position                    ?????         ER             |No    N    No
+
+
+
+
+
+***********************************************************************
+*     CBS                                                             *
+***********************************************************************
+
+
+Name                                 CBS       Rarity  Gr  Pl  Man?  Ovly Have?
+                                     Model No.
+
+Blueprint                                      ER             |No    0    No
+Lady Bug                         4L-2246       ER             |No    0    No
+
+
+
+
+
+***********************************************************************
+*     Coleco                                                          *
+***********************************************************************
+
+
+Name                           Coleco    Cpt   Rarity  Gr  Pl  Man?  Ovly Have?
+                             Model No.
+
+Donkey Kong                      2471     @    C       3   3  |Yes   N    Yes
+Turbo                            2473     +                   |No    0    No
+Venture                          2477     +    C       3   3  |No    0    Yes
+Mouse Trap                       2479     @                   |No    0    No
+Lady Bug                         2483     +    U       3   4  |Yes   N    Yes
+Cosmic Avenger                   2484     +                   |No    0    No
+Smurf                            2485     +                   |No    0    No
+Zaxxon                           2487     +    R              |No    0    No
+Carnival                         2488     @    C       3   3  |Yes   N    Yes
+Donkey Kong Junior               2671     +    R       3   3  |Yes   N    Yes
+Illusions                        7760          NR             |No    0    No
+
+
+
+
+
+***********************************************************************
+*     Imagic                                                          *
+***********************************************************************
+
+
+Name                                 Imagic    Rarity  Gr  Pl  Man?  Ovly Have?
+                                     Model No.
+
+Demon Attack                     700005        U       3   4  |Yes   1    Yes
+Atlantis                         700006        U       4   4  |No    0    Yes
+Beauty & the Beast               700007        U       3   3  |Yes   0    Yes
+Swords & Serpents                720009        ER      3   2  |Xerox 1    Yes
+Dragonfire                       700010        U       4   4  |No    0    Yes
+Ice Trek                         710012        R       4   4  |Yes   2    Yes
+Microsurgeon                     720013        U       4   4  |Yes   3    Yes
+Tropical Trouble                 700017        ER      4   3  |No    0    Yes
+Tropical Paradise                700017        NR      4   3  |No    0    No
+Dracula                          700018        ER      4   3  |Yes   2    Yes
+Nova Blast                       700022        U       4   3  |Yes   2    Yes
+Truckin'                         710023        ER      5   4  |Yes   Need Yes
+White Water!                     700024        ER      4   3  |No    0    Yes
+Safecracker                      710025        R       5   4  |Yes   2    Yes
+Fathom                           720026        ER      4   3  |No    0    Yes
+Moonsweeper                      7?00??        ER             |No    0    No
+Beezor                           7?00??        NR             |No    0    No
+Flap!                            7?00??        NR             |No    0    No
+Wing War                         7?00??        NR             |No    0    No
+Shootin' Gallery                 7?00??        NR             |No    0    No
+
+
+
+
+
+***********************************************************************
+*     Interphase                                                      *
+***********************************************************************
+
+
+Name                                Interphase Rarity  Gr  Pl  Man?  Ovly Have?
+                                     Model No.
+
+Blockade Runner                  8010001       R              |No    0    No
+Sewer Sam                        8010002       R       4   3  |Yes   1    Yes
+
+
+
+
+
+***********************************************************************
+*     Parker Bros.                                                    *
+***********************************************************************
+
+
+Name                              Parker Bros. Rarity  Gr  Pl  Man?  Ovly Have?
+                                    Model No.
+
+Star Wars:  The Empire Strikes Back
+                                 6050          U       3   2  |Yes   N    Yes
+Frogger                          6300          C       3   3  |No    N    Yes
+Super Cobra                      6320          ER             |No    N    No
+Tutankham                        6340          ER             |No    N    No
+Q*bert                           6360          C       3   3  |Yes   N    Yes
+Popeye                           6370          ER             |No    N    No
+James Bond 007 As Seen in Octopussy
+                                 ????                         |No    N    No
+Star Wars: Revenge of the Jedi: Game I
+                                 ????          NR             |No    N    No
+
+
+
+
+
+***********************************************************************
+*     Sears                                                           *
+***********************************************************************
+
+
+Name               Mattel          Sears       Rarity  Gr  Pl  Man?  Ovly Have?
+                   equivalent      Model No.
+
+Armor Battle       Armor Battle                    R              |No    0    No
+Auto Racing        Auto Racing                     U              |No    0    No
+Backgammon         APBA Backgammon                 R              |No    0    No
+Baseball           Major League Baseball           U              |No    0    No
+Basketball         NBA Basketball                  U              |No    0    No
+Bowling            PBA Bowling                     R              |No    0    No
+Boxing             Boxing                          R              |No    0    No
+Checkers           Checkers                        R              |No    0    No
+Football           NFL Football                    U              |No    0    No
+Frog Bog           Frog Bog                        U              |No    0    No
+Golf               PGA Golf                        U              |No    0    No
+Hockey             NHL Hockey                      R              |No    0    No
+Horse Racing       Horse Racing                    R              |No    0    No
+Las Vegas Poker & Blackjack
+                   Las Vegas Poker & Blackjack     U              |No    0    No
+Las Vegas Roulette Las Vegas Roulette              U              |No    0    No
+Night Stalker      Night Stalker   49 75236        R              |No    0    No
+Sea Battle         Sea Battle                      U              |No    0    No
+Skiing             US Ski Team Skiing              R              |No    0    No
+Soccer             MLSA Soccer                     R              |No    0    No
+Space Armada       Space Armada    49 75226        R              |No    0    No
+Space Battle       Space Battle    49 75212        R              |No    0    No
+Space Hawk         Space Hawk                      R              |No    0    No
+Star Strike        Star Strike     49 75231                       |No    0    No
+Sub Hunt           Sub Hunt        49 75225                       |No    0    No
+Tennis             Tennis                          R              |No    0    No
+Utopia             Utopia                          U              |No    0    No
+
+
+
+
+
+
+***********************************************************************
+*     Sega                                                            *
+***********************************************************************
+
+
+Name                            Sega     Cpt   Rarity  Gr  Pl  Man?  Ovly Have?
+                             Model No.
+
+Congo Bongo                     006-06    C    R       4   4  |Yes   N    Yes

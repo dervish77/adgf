@@ -1,0 +1,287 @@
+
+                                  Mini-FAQ
+     _________________________________________________________________
+   
+   Please note that some of the following questions and their answers
+   have been abbreviated from their full form in the complete FAQ. This
+   portion of the alt.horror.cthulhu FAQ was brought to you by Donovan K.
+   Loucks (dloucks@primenet.com). This document was last updated on June
+   18, 1997.
+     _________________________________________________________________
+   
+     * Q: How do I get a copy of the entire FAQ?
+       A: There are several ways to obtain the FAQ, including:
+          + Anonymous FTP: Using anonymous FTP lets you access Primenet's
+            FTP server directly--this is where the FAQ is kept. It can be
+            found in the "users/d/dloucks/ahc" directory and is stored in
+            9 parts. Here are the details:
+              Machine: ftp.primenet.com
+                Login: anonymous
+             Password: <your e-mail address>
+            Directory: users/d/dloucks/ahc
+                Files: all files beginning with "ahcfaq":
+            ahcfaq0.txt_Mini-FAQ    The Mini-FAQ
+            ahcfaq1.txt_About       About, Sections,Credits
+            ahcfaq2.txt_General     Newsgroup, Cthulhu, HPL, Addresses
+            ahcfaq3.txt_Writings    Stories, Letters, Mags, Biblio.
+            ahcfaq4.txt_Movies_TV   Movies, Television, Books Regarding
+            ahcfaq5.txt_Games       Board/Card, Roleplaying,Magazines
+            ahcfaq6.txt_Other_Media Radio, Books on Tape, Music, Comics
+            ahcfaq7.txt_Internet    Newsgroups, FTP, WWW, MOO/MUD/MUSHs
+            ahcfaq8.txt_Mythos_Lore Locales, Entities, Tomes, Timeline
+            Also, a ZIPped file called "ahcfaq.zip" contains all 9 parts.
+          + The World Wide Web: Any web browswer can be used to access
+            the FAQ. You may either use your web browser to obtain the
+            FAQ via FTP, or you may access it via The H.P. Lovecraft
+            Archive.
+            FTP site:
+            ftp://ftp.primenet.com/users/d/dloucks/ahc
+            WWW site:
+            http://www.primenet.com/~dloucks/hpl/internet/ahcfaq
+          + E-mail Bots: For those who don't have FTP or WWW access, you
+            can have portions of the FAQ e-mailed to you automatically by
+            my e-mail bots. This process only requires that you send me
+            (dloucks@primenet.com) an e-mail message with a particular
+            Subject line. When your incoming message is detected by my
+            e-mail bot, it will e-mail the appropriate section of the FAQ
+            to you, and discard your message. With that in mind, don't
+            bother sending any messages with contents, because I'll never
+            get it. Also, since the mailbot handles everything
+            automatically, don't hesitate to request all the parts of the
+            FAQ. Here's a list of the exact Subject lines and what each
+            gets you:
+            Subject       What it gets you
+            FAQ: Part 0   Answers to the top questions asked
+            FAQ: Part 1   About the FAQ (outline and credits)
+            FAQ: Part 2   General (Cthulhu, Lovecraft, addresses)
+            FAQ: Part 3   Written Works (stories, biblio, bio, letters)
+            FAQ: Part 4   Motion Pictures and Television
+            FAQ: Part 5   Games (board, card, role-playing, computer)
+            FAQ: Part 6   Other Media (radio, tape, music, comics, etc.)
+            FAQ: Part 7   Internet (newsgroups, FTP, WWW, MUDs)
+            FAQ: Part 8   Mythos Lore (towns, entities, tomes, timeline)
+            FAQ: Mini-FAQ Answers to the top questions asked
+     * Q: What is Cthulhu?
+       A: The best answer to this question is found in Lovecraft's tale
+       "The Call of Cthulhu". Cthulhu is a monstrous entity who lies
+       "dead but dreaming" in the city of R'lyeh, a place of
+       non-Euclidean madness presently (and mercifully) sunken below the
+       depths of the Pacific Ocean. Cthulhu appears in various monstrous
+       and demonic forms in early myths of the human race. Racial memory
+       preserves Him as humanity's most basic nightmare. Cthulhu is the
+       high priest of the Great Old Ones, unnatural alien beings who
+       ruled the Earth before humanity formed, worshipped as gods by some
+       misguided people. It is said that They will return, causing
+       worldwide insanity and mindless violence before finally displacing
+       humanity forever.
+     * Q: How is "Cthulhu" pronounced?
+       A: There are basically three different pronunciations that I have
+       heard, other pronunciations being slight modifications on these.
+       The most commonly heard pronunciation is that suggested by
+       Chaosium, makers of the "Call of Cthulhu" roleplaying game. On the
+       back of many of their gaming products is printed the phrase, "Can
+       you say kuh-THOOL-hoo?".
+       Another pronunciation is that used by several Lovecraftian
+       scholars. This form is based on Lovecraft's revision tales where
+       Cthulhu is often referred to as "Clooloo" or "Clulu".
+       Unfortunately, this form does not have a sound representing the
+       "th" combination.
+       The pronunciation that I prefer is a compromise between these two.
+       The "h" sounds are aspirated, thus the "th" is not as in "them" or
+       "thin", but two separate sounds. The first four letters of the
+       word are run together in something like a sneezing sound,
+       "K't'hoo-lhoo".
+       According to H.P. Lovecraft:
+       "The actual sound - as nearly as human organs could imitate it or
+       human letters record it - may be taken as something like
+       Khlul'-hloo, with the first syllable pronounced gutturally and
+       very thickly."
+       "The best approximation one can make is to grunt, bark, or cough
+       the imperfectly formed syllables Cluh-Luh with the tip of the
+       tongue firmly affixed to the roof of the mouth. That is, if one is
+       a human being. Directions for other entities are naturally
+       different."
+       From these quotes (taken from Lovecraft's letters), one might
+       conclude that the second pronunciation mentioned above is the most
+       correct of the three.
+     * Q: Who is H.P. Lovecraft?
+       A: Howard Phillips Lovecraft was a writer of weird fiction who
+       wrote most of his tales during the 1920s and 1930s. He was born on
+       August 20, 1890 in Providence, Rhode Island, where he spent most
+       of his life. He was briefly married and lived in Brooklyn for two
+       years. After this he returned to Providence where he died on March
+       15, 1937.
+     * Q: Where is H.P. Lovecraft buried?
+       A: Lovecraft is buried in Swan Point Cemetery, Providence, R.I.,
+       which is just northeast of the Brown University and College Hill
+       area. He and his parents are in the plot belonging to his maternal
+       grandfather, Whipple Van Buren Phillips. Once you enter the
+       cemetery, follow Holly Avenue straight back to Junction Avenue,
+       where you make a left. Soon after this, Pond Avenue curves off to
+       the right. Follow Pond until it intersects Avenue B. The family
+       plot is on the east side of the intersection of these two avenues.
+       Lovecraft's grave was unmarked until the mid-1970s when fans
+       raised funds for a tombstone. Prior to that, the only indication
+       that he was buried there was his name inscribed on the back of the
+       large family monument. On his tombstone is inscribed:
+       
+                              HOWARD PHILLIPS
+                                 LOVECRAFT
+                              AUGUST 20, 1890
+                               MARCH 15, 1937
+                                -----------
+                             'I AM PROVIDENCE'
+       The "I am Providence" quote is from a letter he wrote to James F.
+       Morton dated May 16, 1926.
+     * Q: What are the addresses of the various companies or
+       organizations which are mentioned throughout this FAQ?
+       A: The following address list is presented because folks have
+       found it difficult to pick and choose addresses from within the
+       FAQ. Also, due to repeated mentionings of various companies and
+       organizations, this list will prevent having multiple postings of
+       their addresses.
+          + Arkham House Publishers, Inc.
+            P.O. Box 546
+            Sauk City, WI 53583 USA
+          + Chaosium, Inc.
+            950-A 56th Street
+            Oakland, CA 94608-3129 USA
+            Phone: (800)213-1493 or (510)547-7681
+            Fax: (510)547-2651
+            E-mail: chaosium@aol.com or chaosium@netcom.com
+          + Fedogan & Bremer
+            3721 Minneahaha Avenue South
+            Minneapolis, MN 55406 USA
+            Phone: (612) 721-8848
+            Fax: (612) 721-9491
+            E-mail: fedbrem@visi.com
+          + Necronomicon Press
+            P.O. Box 1304
+            West Warwick, RI 02893 USA
+            E-mail: necropress@ids.net
+            WWW: http://www.necropress.com
+            Phone: (401) 828-7161
+            Fax: (401) 826-1151
+          + Pagan Publishing
+            5536 25th Ave. NE
+            Seattle, WA 98105-2415 USA
+            Phone: (206) 528-7665
+            Fax: (206) 528-0199
+            E-mail: rev@tccorp.com
+            WWW: http://www.tccorp.com/pagan
+     * Q: What stories should I begin with?
+       A: Bob Cannard (BobTheMigo@aol.com) conducted a poll to determine
+       which tales would be best for new readers. The top five suggested
+       tales were:
+         1. The Call of Cthulhu
+         2. The Shadow over Innsmouth
+         3. The Dunwich Horror
+         4. At the Mountains of Madness
+         5. Pickman's Model
+       However, I felt that "At the Mountains of Madness" was a bit of a
+       read for those just being introduced to Lovecraft. This anomaly
+       might be due to the small number of voters involved (12). As such,
+       I would recommend "The Haunter of the Dark" in its place (which
+       received fairly high marks in the poll).
+     * Q: Where can I find Lovecraftian fiction and articles?
+       A: The most accessible versions of Lovecraft's tales are paperback
+       editions by Ballantine/Del Rey. They are very inexpensive and are
+       available in most large bookstores.
+       The definitive versions of H.P. Lovecraft's stories (as well as
+       Mythos fiction by other authors) are available in hardback from
+       Arkham House Publishers, Inc. They include:
+       The Dunwich Horror and Others                (037-8) $19.95
+       At the Mountains of Madness and Other Novels (038-6) $19.95
+       Dagon and Other Macabre Tales                (039-4) $19.95
+       The Horror in the Museum and Other Revisions (040-8) $19.95
+       The prices listed include shipping and handling and these books
+       can be ordered directly from Arkham House. S.T. Joshi's index to
+       the tales collected above is available from Necronomicon Press.
+       Paperback anthologies from other publishers can be found in many
+       bookstores. Other important publishers of Lovecraftiana are:
+          + Necronomicon Press
+          + Pagan Publishing
+          + Fedogan & Bremer
+          + Borgo Press
+          + Chaosium (their '6000' series of products)
+     * Q: Why is Volume III of Lovecraft's letters so hard to find?
+       A: Volume III of Arkham House's Selected Letters is long out of
+       print, as is volume I. Here's the publication history of these
+       five volumes:
+       Book                 1st Edition  2nd Edition  Total
+       Selected Letters I   2,504 (1965) 3,000 (1974) 5,504
+       Selected Letters II  2,482 (1968) 3,000 (1974) 5,482
+       Selected Letters III 2,500 (1971)     ---      2,500
+       Selected Letters IV  5,000 (1976)     ---      5,000
+       Selected Letters V   5,000 (1976)     ---      5,000
+       As you can see, Arkham House reprinted volumes I and II in 1974
+       and probably intended to simply delay reprinting volume III until
+       after volumes IV and V came out. I've seen copies of volume III
+       sell for anywhere from $80 to $400.
+     * Q: What Lovecraft information is available at World Wide Web
+       sites?
+       A: There are dozens of Lovecraft-related pages dotting the web.
+       Many of them consist of nothing but collections of links, but
+       those in the list below provide their own unique information.
+          + "The H.P. Lovecraft Archive" (Donovan Loucks)
+               o The URL is: http://www.primenet.com/~dloucks/hpl
+               o Maintained by Donovan K. Loucks (dloucks@primenet.com),
+                 the keeper of this FAQ.
+               o Includes over 30 photographs of Lovecraftian locations
+                 in New England!
+          + Chaosium's Page
+               o The URL is: http://www.sirius.com/~chaosium
+          + "De Web Mysteriis" (Laurent Alquier)
+               o The URL is: http://www.eerie.fr/~alquier/cthulhu.html.
+          + Necronomicon Press Page
+               o The URL is: http://www.necropress.com.
+               o Maintained by Marc Michaud (necropress@ids.net)
+          + The NetherReal Cyberzine
+               o A very thorough site devoted to the fiction and art of
+                 H.P. Lovecraft and the "Cthulhu Mythos".
+               o The URL is http://www.geocities.com/Area51/Vault/4657/
+               o Maintained by Jim Hawley (rupickman@geocities.com)
+     * Q: Where can I get a copy of the Necronomicon?
+       A: "The" Necronomicon, i.e. the book written about by Lovecraft,
+       cannot be found anywhere because it was never written - anyone who
+       disagrees with this statement is invited to produce a copy.
+       Several commercial Necronomicons have been published. The easiest
+       to find is the Avon paperback by Simon, which is mainly a re-hash
+       of Sumerian mythology with a few Mythos names dropped in; some
+       practitioners of magick consider it useful, but it has very little
+       to do with Lovecraft's creation.
+       The 1973 Owlswick Press edition, prefaced by L. Sprague de Camp,
+       is reputedly a facsimile of an old manuscript but actually
+       contains only 8 pages of Arabic text repeated over and over again.
+       "H. R. Giger's Necronomicon" is a collection of that gentleman's
+       art; if you are not familiar with his work, watch the "Alien"
+       movie.
+       "The Necronomicon: The Book of Dead Names" by Colin Wilson et al
+       claims to be the rediscovered work.
+       There are many known library references to the Necronomicon by
+       Abdul Alhazred, Michael Tice's entry at UCLA being perhaps the
+       most notorious; these are pranks engineered by students or
+       librarians. The newsgroups alt.necromicon and alt.necronomicon are
+       suggested for those who wish to discuss the historical
+       authenticity, translations and publications of this tome.
+     * Q: What is the etymology of the word "Necronomicon"?
+       A: Lovecraft himself provides us a translation in a letter to
+       Harry O. Fischer dated late February, 1937: "The name Necronomicon
+       (necros, corpse; nomos, law; eikon, image = An Image [or Picture]
+       of the Law of the Dead) occurred to me in the course of a dream,
+       although the etymology is perfectly sound."
+       Some will argue that this etymology is not perfectly sound, but
+       since Lovecraft invented the book, I feel his etymology is the
+       correct one. However, for those interested in a more correct
+       translation, the following was provided by S. A. T. Haldane
+       (sah@dl.ac.uk):
+       Nekros/nekr-o- (noun) 'dead (person)'
+       nomos/nom-o- (noun) 'law', 'custom'
+       -ikos/-ike/-ikon (adjectival suffix) 'to do with', 'concerning',
+       hence nekr-o- + nom-o- + -ikos > nekronomikos (adjective)
+       concerning the customs of the dead'. Functioning as a noun in the
+       neutral gender, to Nekronomikon '(The Thing) Concerning the
+       Customs of the Dead'.
+     _________________________________________________________________
+   
+   End of Part 0 of the alt.horror.cthulhu FAQ, "Mini-FAQ".

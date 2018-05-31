@@ -1,0 +1,55 @@
+				Magazine Cross Reference 
+				------------------------
+
+
+				Requested	Received
+Magazine Name		Class	Guide	Sample	Guide	Sample	Editor Name
+-------------		-----	-----	------	-----	------	-----------
+
+Absolute Magnitude	SF	no	no		yes	Warren Lapine
+
+Argonaut		SF	yes	yes	yes	yes	Michael Ambrose
+
+MZB's Fantasy		F	yes	yes	yes	yes	Marion Zimmer Bradley
+
+Dagger of the Mind	FH	no	no			Arthur William Lloyd Breach
+
+Deathrealm		H	no	no		yes	Stephen Mark Rainey
+
+Dreams & Nightmares	SFFHP	no	no			David C. Kopaska-Merkel
+
+Eldritch Tales		FH	no 	yes		no	Crispin Burnham
+
+Gaslight		H	yes 	yes	yes	yes	Melissa Gish
+
+Grue Magazine		H	no	no			Peggy Nadramia
+
+Into the Darkness	H	no	no		yes	David G. Barnett
+
+The Leading Edge	SFF	no	no			Alex Grover
+
+Lore			H	yes	yes	yes	yes	
+
+Lost Worlds		SFF 	no	no			Holley B. Drye
+
+NeuroNet		SF	no	no			Glenda Woodrum
+
+Offworld		SFF	no	no			Arnaldo Lopez
+
+Pirate Writings		SFFH	yes	yes	yes	yes	Edward J. McFadden
+
+Shadow Sword		F	yes	yes	yes	yes	Glenda Woodrum
+
+Starquest 		SF	no	no			B. Joseph Fekete
+
+Terminal Fright		H	no	yes	yes	yes	Ken Abner
+
+Thin Ice		FH	no	no			Kathleen Jurgens
+
+Tomorrow		SF	no	no		yes	Algis Budrys
+
+2 AM Magazine		FH	yes	yes	yes	yes	Gretta M. Anderson
+
+Weirdbook		FH	yes	yes	yes	yes	W. Paul Ganley
+
+Worlds of F & H		FH	no	no 			Darrell Schweitzer

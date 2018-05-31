@@ -1,0 +1,354 @@
+
+                                  General
+     _________________________________________________________________
+   
+   This portion of the alt.horror.cthulhu FAQ was brought to you by
+   Donovan K. Loucks (dloucks@primenet.com). This document was last
+   updated on June 18, 1997.
+     _________________________________________________________________
+   
+     * Q: What is this newsgroup about?
+       A: The group is specifically about the creatures, people, places
+       and legends of the Cthulhu Mythos (or Cthulhu Cycle) as reported
+       in the fiction of Howard Phillips Lovecraft and numerous other
+       authors. More generally, the newsgroup also covers other aspects
+       of H.P. Lovecraft's life and work, works by other authors of
+       related style and content, and Mythos-related organizations and
+       products (real or fictional) such as Miskatonic University, music,
+       games, tee shirts, and posters.
+     * Q: What is Cthulhu?
+       A: The best answer to this question is found in Lovecraft's tale
+       "The Call of Cthulhu". Cthulhu is a monstrous entity who lies
+       "dead but dreaming" in the city of R'lyeh, a place of
+       non-Euclidean madness presently (and mercifully) sunken below the
+       depths of the Pacific Ocean. Cthulhu appears in various monstrous
+       and demonic forms in early myths of the human race. Racial memory
+       preserves Him as humanity's most basic nightmare. Cthulhu is the
+       high priest of the Great Old Ones, unnatural alien beings who
+       ruled the Earth before humanity formed, worshipped as gods by some
+       misguided people. It is said that They will return, causing
+       worldwide insanity and mindless violence before finally displacing
+       humanity forever.
+     * Q: How is "Cthulhu" pronounced?
+       A: There are basically three different pronunciations that I have
+       heard, other pronunciations being slight modifications on these.
+       The most commonly heard pronunciation is that suggested by
+       Chaosium, makers of the "Call of Cthulhu" roleplaying game. On the
+       back of many of their gaming products is printed the phrase, "Can
+       you say kuh-THOOL-hoo?".
+       Another pronunciation is that used by several Lovecraftian
+       scholars. This form is based on Lovecraft's revision tales where
+       Cthulhu is often referred to as "Clooloo" or "Clulu".
+       Unfortunately, this form does not have a sound representing the
+       "th" combination.
+       The pronunciation that I prefer is a compromise between these two.
+       The "h" sounds are aspirated, thus the "th" is not as in "them" or
+       "thin", but two separate sounds. The first four letters of the
+       word are run together in something like a sneezing sound,
+       "K't'hoo-lhoo".
+       According to H.P. Lovecraft:
+       "The actual sound - as nearly as human organs could imitate it or
+       human letters record it - may be taken as something like
+       Khlul'-hloo, with the first syllable pronounced gutturally and
+       very thickly."
+       "The best approximation one can make is to grunt, bark, or cough
+       the imperfectly formed syllables Cluh-Luh with the tip of the
+       tongue firmly affixed to the roof of the mouth. That is, if one is
+       a human being. Directions for other entities are naturally
+       different."
+       From these quotes (taken from Lovecraft's letters), one might
+       conclude that the second pronunciation mentioned above is the most
+       correct of the three.
+     * Q: Who is H.P. Lovecraft?
+       A: Howard Phillips Lovecraft was a writer of weird fiction who
+       wrote most of his tales during the 1920s and 1930s. He was born on
+       August 20, 1890 in Providence, Rhode Island, where he spent most
+       of his life. He was briefly married and lived in Brooklyn for two
+       years. After this he returned to Providence where he died on March
+       15, 1937.
+     * Q: Where is H.P. Lovecraft buried?
+       A: Lovecraft is buried in Swan Point Cemetery, Providence, R.I.,
+       which is just northeast of the Brown University and College Hill
+       area. He and his parents are in the plot belonging to his maternal
+       grandfather, Whipple Van Buren Phillips. Once you enter the
+       cemetery, follow Holly Avenue straight back to Junction Avenue,
+       where you make a left. Soon after this, Pond Avenue curves off to
+       the right. Follow Pond until it intersects Avenue B. The family
+       plot is on the east side of the intersection of these two avenues.
+       Lovecraft's grave was unmarked until the mid-1970s when fans
+       raised funds for a tombstone. Prior to that, the only indication
+       that he was buried there was his name inscribed on the back of the
+       large family monument. On his tombstone is inscribed:
+       
+                              HOWARD PHILLIPS
+                                 LOVECRAFT
+                              AUGUST 20, 1890
+                               MARCH 15, 1937
+                                -----------
+                             'I AM PROVIDENCE'
+       The "I am Providence" quote is from a letter he wrote to James F.
+       Morton dated May 16, 1926.
+     * Q: Where does August Derleth stand in all this?
+       A: August Derleth was one of H.P. Lovecraft's friends and fans. He
+       was directly responsible for preventing Lovecraft's works from
+       falling into oblivion, and co-founded Arkham House for that
+       purpose; for this we owe him a zillion kudos. He wrote many tales
+       within the Cthulhu Mythos; some of these are based on outlines or
+       fragments by Lovecraft, such as "The Lurker at the Threshold".
+       The controversy over Derleth is that in his tales he adds a number
+       of concepts to the Cthulhu Mythos which appear to be at odds with
+       Lovecraft's conception. He introduced the Elder Gods,
+       ultra-powerful beings who had imprisoned the Great Old Ones and
+       who protect the human race from their machinations. He also turned
+       the Great Old Ones into elemental beings, contrary to Lovecraft's
+       concept of them as unnatural alien invaders, and raising awkward
+       questions such as "If Cthulhu is a water elemental, why is he
+       imprisoned by the sea?" Whereas Lovecraft depicted the Mythos
+       creatures as horrible, alien, and incomprehensible, Derleth
+       sometimes made them understandable and almost likeable -- contrast
+       Lovecraft's "The Shadow over Innsmouth" with Derleth's "The Seal
+       of R'lyeh".
+       While Derleth deserves praise for his promotion of Lovecraft, his
+       guardianship of the Lovecraft canon was not without its problems.
+       Derleth set out to control not only the publication of Lovecraft's
+       work (a move of dubious legality), but also the printing of
+       Cthulhu Mythos stories, Lovecraft criticism, and other articles
+       about HPL. For this reason, many Lovecraft scholars have become
+       vocal opponents of August Derleth and his policies toward
+       Lovecraft. Although Derleth's ideas are anathema to many Lovecraft
+       purists, his contribution to and influence over the development of
+       the Cthulhu Mythos has been immense and ongoing.
+     * Q: Does anyone actually take Lovecraft or Mythos fiction as fact?
+       A: This is a loaded question. To answer it, I will assume that
+       Lovecraft (et al) created the core of the Mythos, as well as
+       numerous tomes, but mixed in a generous helping of real-life
+       people, places, and things. As an example, "The Golden Bough" is a
+       real book (in fact I own a copy of this, IMHO, boring text), but
+       the Necronomicon is not. So, though Lovecraft (et al) used "The
+       Golden Bough" in their stories, this answer has nothing to do with
+       whether or not anyone believes that the book exists. It does deal
+       with those who believe that things like the Necronomicon exist,
+       (as well as any ficticious race, place, tome, etc).
+       To move on to the answer: Yes. Some folks take this fiction as
+       'fact'. Here are the examples we have thus far:
+          + The Church of Satan -- Although they don't proclaim to
+            believe in "The Old Ones" (per se), they do believe in the
+            symbology of "Cthulhu" as something worth basing two of their
+            rituals upon. Said rituals are found in The Satanic Rituals,
+            by Anton Szandor LaVey (Avon Books).
+          + The Necronomicon Anti-FAQ by Colin Low -- Written in the same
+            spirit as Lovecraft's own "History of the Necronomicon", but
+            in much greater detail, this document has caused a
+            considerable amount of confusion amongst those not "in the
+            know". Colin Low refers to this as an Anti-FAQ, does not
+            claim that it is someting to be believed, and openly admits
+            that it is a hoax. It's at least worth a read-through for its
+            application to the game "Call of Cthulhu" (see the "Games"
+            part of this FAQ). It may be found at:
+            http://www.digital-brilliance.com/necron/necron.htm
+          + "The Oldest History of the World" by Benny Evangelist (1936)
+            -- "The author of this book was found decapitated in his
+            Detroit home on July 3, 1929, near the murdered remains of
+            his family. Investigation revealed that Benny was the leader
+            of a secretive cult, and had left behind a manuscript which
+            he claimed to have been divinely inspired. The first part of
+            this manuscript was later published. Yes, it sounds like your
+            standard Mythos story, but this one really happened.
+            "Anyway, the book above actually has little to do with the
+            Mythos. I am noting it because at three points in the text, a
+            book of black magic which is titled "Necromicon" or
+            "Necronemicon" turns up. I haven't read it, so I can't say
+            whether it's any good. I got that last bit of information
+            from Colin Wilson's novel The Philosopher's Stone. Since
+            Wilson claims not to make anything up, and since History
+            wasn't his invention, I don't think it would hurt to tell you
+            about this one, too." - Daniel Harms
+            (harmsdm@ctrvax.vanderbilt.edu)
+          + "Secrets of Atlantis" by Gabriel Guenon (1941) -- "Secrets
+            was written shortly before its author's death. According to
+            Wilson, it attempts to prove that Lovecraft was writing about
+            things which really existed. Unfortunately, a brief check
+            down at the ol' library has turned up the following
+            information:
+              a. It's not in print.
+              b. It's not available through inter-library loan.
+              c. The British Museum Library doesn't have it.
+            My guess is that it was published in a limited edition in
+            England, and never reached our shores. Or maybe all copies
+            were destroyed by an evil cult. Take your choice." - Daniel
+            Harms (harmsdm@ctrvax.vanderbilt.edu)
+          + "The Satanic Lays" -- Contain 2 ceremonies to raise the Great
+            Old Ones. The German ritual on electricity seems to allude to
+            Lovecraft's quotes about the Old Ones, as well as to the
+            Hounds of Tindalos.
+          + Kenneth Grant:
+               o "Aleister Crowley and the Hidden God" by Kenneth Grant
+               o "Man, Myth and Magic". Kenneth Grant has a 2 page
+                 article in the appendices. "Grant believes that
+                 Lovecraft was in touch with Cthulhu & Co., who prompted
+                 him to write his stories. He then cites other
+                 cross-cultural influences which seem to point toward
+                 this conclusion. Unfortunately, the man's an awful
+                 Lovecraftian scholar, and his stuff's filled with
+                 mistakes" - Daniel Harms (harmsdm@ctrvax.vanderbilt.edu)
+          + The Esoteric Order of Dagon -- The following is the last
+            public announcement I am aware of by the Esoteric Order of
+            Dagon. It is posted with the permission of Ms. Crummett:
+            STATEMENT OF THE YADDITH LODGE
+            The Yaddith Lodge is at this time the only genuine and active
+            Lodge of the Esoteric Order of Dagon (E.'.O.'.D.'.) and is
+            entrusted to protect the reputation and integrity of the EOD
+            during its present Period of Silence.
+            The only members of the Yaddith Lodge are the three former
+            Directors of the EOD.
+            Any person not a member of the Yaddith Lodge claiming to be a
+            member, to represent a Lodge, or to be the Director of the
+            EOD is either self-deluded or consciously misleading and
+            manipulating the uninformed.
+            When the Period of Silence has ended the Yaddith Lodge will
+            appoint a new Director and this person will then be
+            authorized to open other authentic Lodges and confirm
+            membership in the EOD.
+            - Issued by the Yaddith Lodge, Vernal Equinox, 1993 e.v.
+            (Signed) Steven Greenwood, Nina Crummett, Peter Smith
+            The Esoteric Order of Dagon is therefore inactive at this
+            time. I must stress that this organization is not to be
+            confused with the amateur press association of the same name.
+            [Contributed by: David Smith (EsoOrDagon@aol.com)]
+          + The Miskatonick Society -- There is another group called the
+            Miskatonick (sic) Society which has some overlap with the
+            above group but is not a "magick" group. They publish a
+            journal called 'The Silver Key' which is free to members.
+            There are no dues or fees to belong to the Miskatonick
+            Society but membership is by invitation only and limited.
+            There is a branch in England as well as the U.S. I am not a
+            member of this group but know many of the American members.
+            They do not engage in graverobbing or acts of violence and
+            only want to correspond with sane, rational, literate
+            scholars of Lovecraftian/fringe subjects.
+            These include Lovecraft, Machen, Kenneth Grant's books and
+            theories, UFO cults and cranks, especially in relationship to
+            Lovecraftian themes, the Jungian transpersonal forces of the
+            unconscious as the "Great Old Ones', etc.
+            Writers and artists interested in joining should enquire and
+            perhaps include an example of their work (with SASE if they
+            want it returned.) [Contributed by: David Smith
+            (EsoOrDagon@aol.com)]
+     * Q: What are the addresses of the various companies or
+       organizations which are mentioned throughout this FAQ?
+       A: The following address list is presented because folks have
+       found it difficult to pick and choose addresses from within the
+       FAQ. Also, due to repeated mentionings of various companies and
+       organizations, this list will prevent having multiple postings of
+       their addresses.
+          + Arkham House Publishers, Inc.
+            P.O. Box 546
+            Sauk City, WI 53583 USA
+          + BAKKA
+            282 Queen St. West
+            Toronto, Ontario Canada
+          + Borgo Press
+            P.O. Box 2845
+            San Bernardino, CA 92406-2845 USA
+          + Caliber Comics
+            11904 Farmington Rd.
+            Livonia, MI 48150 USA
+          + Chaosium, Inc.
+            950-A 56th Street
+            Oakland, CA 94608-3129 USA
+            Phone: (800)213-1493 or (510)547-7681
+            Fax: (510)547-2651
+            E-mail: chaosium@aol.com or chaosium@netcom.com
+            WWW: http://www.sirius.com/~chaosium/chaosium.html
+          + Cinefex
+            P.O. Box 20027
+            Riverside, CA 92516 USA
+            Phone: (909) 781-1917
+          + Dark House
+            RR1, Box 149
+            Millville, MN 55957-9741 USA
+          + The Darkest of the Hillside Thickets
+            261 W. 22nd Ave.
+            Vancouver, BC, V5Y 2G3, Canada
+            WWW: http://www.holycow.com/thickets
+          + Deadline Press
+            P.O. Box 2808
+            Apache Junction, AZ 85220 USA
+          + Fedogan & Bremer
+            3721 Minneahaha Avenue South
+            Minneapolis, MN 55406 USA
+            Phone: (612) 721-8848
+            Fax: (612) 721-9491
+            E-mail: fedbrem@visi.com
+          + Jay Gregory
+            5643 Mosholu Ave.
+            Riverdale, NY 10471 USA
+          + Landfall Productions
+            120 Bentworth Road
+            London
+            W12 7AH U.K.
+            or
+            19 Nascot Street
+            London
+            W12 0HE U.K.
+          + The Magickal Childe Bookstore
+            35 West 19th Street
+            New York, NY 10011 USA
+            Phone: (212) 242-7182
+          + The Miskatonick Society
+            P.O. Box 5301
+            Eugene, Oregon 97405 USA
+          + Miskatonic Univeristy Press
+            P.O. Box 796
+            Rockport, MA 01966-0996 USA
+          + Mythos Books
+            19057 First Street
+            Eagle River, AK 99577-8352 USA
+          + Necronomicon Press
+            P.O. Box 1304
+            West Warwick, RI 02893 USA
+            E-mail: necropress@ids.net
+            WWW: http://www.necropress.com
+            Phone: (401) 828-7161
+            Fax: (401) 826-1151
+          + Pagan Publishing
+            5536 25th Ave. NE
+            Seattle, WA 98105-2415 USA
+            Phone: (206) 528-7665
+            Fax: (206) 528-0199
+            E-mail: rev@tccorp.com
+            WWW: http://www.tccorp.com/pagan
+          + Pharaoh Audiobooks
+            P.O. Box 10393
+            Sedona, AZ 86339 USA
+          + RAFM Co., Inc.
+            20 Parkhill Rd. East
+            Cambridge, Ontario, N1R 1P2 Canada
+          + Starlog Press
+            475 Park Avenue South
+            New York, NY 10016 USA
+          + Starry Wisdom
+            1903 Harmon St.
+            Berkeley, CA 94703 USA
+          + Sunset Productions
+            369 Montezuma, Suite 416
+            Santa Fe, NM 87501 USA
+            Phone: 1-800-829-5723
+          + Tsathoggua Press
+            6442 Pat Ave.
+            West Hills, CA 91307 USA
+            E-mail: Perry Grayson (am119@lafn.org)
+            WWW:
+            http://www.creative.net/~alang/lit/horror/tsathoggua_press.sh
+            t
+          + Wizard's Attic
+            P.O. Box 718
+            Hayward, CA 94543-0718 USA
+            Phone: 1-800-213-1493 (USA)
+            Phone: 510-547-2158 (Europe)
+          + Yith Press
+            1051 Wellington Road
+            Lawrence, KS 66049 USA
+     _________________________________________________________________
+   
+   End of Part 2 of the alt.horror.cthulhu FAQ, "General".

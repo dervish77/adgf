@@ -1,0 +1,14 @@
+In this directory there are five files correpsonding to
+a 20 by 20 by 20 cube with decomposition factors of 0, 0.25, 0.5, 0.75 and 1.0
+for solution by four processors.
+
+The format of each file is
+
+n		; size of puzzle (number of cubes per edge)
+prcoessors	; number of processors
+l1		; number of cubes to be sent to processor 1
+l2		; number of cubes to be sent to processor 2
+l3		; number of cubes to be sent to processor 3
+l4		; number of cubes to be sent to processor 4
+list of cubes	; format is top surface, bottom, fron, back, left and right
+		; NOTE the cube may be rotated.

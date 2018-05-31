@@ -1,0 +1,58 @@
+
+Reference card template for 3x5 index card notes
+______________________________________________________________________
+
+	+-----------------------------------------------------------+
+	| Category					Price Range |
+	|    Subcategory                                            |
+	|                                                           |
+	|                                                           |
+	|    Item name                                              |
+	|                                                           |
+	|                                                           |
+	|                                                           |
+	|    Description                                            |
+	|                                                           |
+	|                                                           |
+	|                                                           |
+	|    Source of info (included page number)                  |
+	|                                                           |
+	+-----------------------------------------------------------+
+
+
+Example 1:
+
+	+-----------------------------------------------------------+
+	| Book					          $3 - $12  |
+	|    Softcover - By Lovecraft                               |
+	|                                                           |
+	|                                                           |
+	|    The Best of HP Lovecraft: Bloodcurdling Tales of       |
+	|        Horror and the Macabre                             |
+	|                                                           |
+	|                                                           |
+	|    Del Rey, Ballantine Books, October 1982, 1st edition   |
+	|        375 pgs, intro by Robert Bloch                     |
+	|                                                           |
+	|                                                           |
+	|    Copy of book, retail store                             |
+	|                                                           |
+	+-----------------------------------------------------------+
+
+
+Example 2:
+
+	+-----------------------------------------------------------+
+	| Gaming                                      $8.95, $2.95  |
+	|    Card Games                                             |
+	|                                                           |
+	|                                                           |
+	|    Mythos: The Collectable Card Game                      |
+	|                                                           |
+	|                                                           |
+	|    set of 400 cards with starter sets and three boosters  |
+	|                                                           |
+	|                                                           |
+	|    Copy of card set, Chaosium home page                   |
+	|                                                           |
+	+-----------------------------------------------------------+

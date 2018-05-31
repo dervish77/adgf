@@ -1,0 +1,1678 @@
+[ Version 9.0 ]    maintained by vgriscep@wam.umd.edu
+This document is available on the World Wide Web at:
+http://www.wam.umd.edu/~vgriscep/lists/atari
+/- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\
+|   KEY:                                                                  |
+|     Rarity:  C  = common             Everyone has it;  most people      |
+|                                       have several duplicates.          |
+|              U  = uncommon           At a flea market, you'll usually   |
+|                                       encounter a few of these.         |
+|              R  = rare               Hardly ever see more than one in   |
+|                                       a single day of hunting.          |
+|              ER = extremely rare     A definite score.                  |
+|              UR = unbelievably rare  Worth bragging about!              |
+|              NR = never released     Ultra-rare.  (My policy is simple: |
+|                                       things are only nonexistent until |
+|                                       someone finds one.)               |
+|                                                                         |
+|              [ All rarity ratings are based on Eastern US               |
+|               occurrences.  Hey, I can't be everywhere. ]               |
+|                                                                         |
+|                  Gr (graphics rating):  1 = poor graphics               |
+|                                         2 = reasonable graphics         |
+|                                         3 = decent graphics             |
+|                                         4 = good graphics               |
+|                                         5 = excellent graphics          |
+|                     (Note that those mean different things for a        |
+|                      7800 game than they do for a 2600 game.)           |
+|                                                                         |
+|                  Pl (playability):      1 = tedious                     |
+|                                         2 = dry;  brief enjoyment       |
+|                                         3 = worth playing               |
+|                                         4 = fun                         |
+|                                         5 = irresistible                |
+|                                                                         |
+|    (These are all subjective, of course.  If you see something with     |
+|         which you don't agree, I hope you'll let me know!)              |
+|                                                                         |
+|                  Man?, Have?:   indicates whether I (VGR) own           |
+|                                   instructions or game itself,          |
+|                                   respectively                          |
+|                                                                         |
+|                          To remove these so you can put in your         |
+|                          own indicators of which games you own,         |
+|                          use the Unix command:                          |
+|                                                                         |
+|                            sed 's/|[A-Z].*$/|/' vgrlist > mylist        |
+|                                                                         |
+|                                                                         |
+|                                                                         |
+\- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -/
+
+
+
+
+
+***********************************************************************
+*     Atari                                                           *
+***********************************************************************
+
+
+Name                                       Atari     Rarity  Gr  Pl  Man? Have?
+					   Model No.
+
+Combat                                     CX2601        C   2   5  |Yes   Yes
+Air-Sea Battle                             CX2602        U   2   3  |Yes   Yes
+Space Mission                              CX2603        NR  2   4  |No    No
+Star Ship                                  CX2603        R   2   4  |Yes   Yes
+Space War                                  CX2604        U   1   4  |Yes   Yes
+Outlaw                                     CX2605        U   2   3  |Yes   Yes
+Slot Racers                                CX2606        U   1   3  |Yes   Yes
+Canyon Bomber                              CX2607        U   3   2  |Yes   Yes
+Super Breakout                             CX2608        U   3   4  |Yes   Yes
+Defender                                   CX2609        C   3   3  |Yes   Yes
+Warlords                                   CX2610        U   2   5  |Yes   Yes
+Indy 500                                   CX2611        U   3   4  |Yes   Yes
+Street Racer                               CX2612        U   2   3  |Yes   Yes
+Adventure                                  CX2613        C   3   5  |Yes   Yes
+Steeplechase (Sears only)                  CX2614        NR  2   3  |No    No
+Demons to Diamonds                         CX2615        U   3   3  |Yes   Yes
+Hot Rox                                    CX2615        NR  3   3  |No    No
+Pele's Soccer                              CX2616        C   2   3  |Yes   Yes
+(Pele's) Championship Soccer               CX2616        C   2   3  |Yes   Yes
+Backgammon                                 CX2617        U   3   4  |Yes   Yes
+3-D Tic-Tac-Toe                            CX2618        U   3   5  |Yes   Yes
+Stellar Track (Sears only)                 CX2619        NR  2   3  |No    No
+Basic Programming                          CX2620        R   4   3  |Yes   Yes
+Video Olympics                             CX2621        C   2   4  |Yes   Yes
+Breakout                                   CX2622        C   3   4  |Yes   Yes
+Homerun                                    CX2623        C   3   3  |Yes   Yes
+Basketball                                 CX2624        C   3   4  |Yes   Yes
+Football                                   CX2625        C   2   4  |Yes   Yes
+Miniature Golf                             CX2626        U   2   3  |Yes   Yes
+Human Cannonball                           CX2627        U   2   3  |Yes   Yes
+Bowling                                    CX2628        C   2   3  |Yes   Yes
+Sky Diver                                  CX2629        U   2   3  |Yes   Yes
+Circus Atari                               CX2630        C   3   5  |Yes   Yes
+Superman                                   CX2631        C   3   3  |Yes   Yes
+Space Invaders                             CX2632        C   3   4  |Yes   Yes
+Night Driver                               CX2633        C   2   3  |Yes   Yes
+Golf                                       CX2634        C   3   3  |Yes   Yes
+Maze Craze                                 CX2635        U   3   5  |Yes   Yes
+Video Checkers                             CX2636        R   2   4  |Yes   Yes
+Dodge 'Em                                  CX2637        U   2   4  |Yes   Yes
+Missile Command                            CX2638        C   4   4  |Yes   Yes
+Othello                                    CX2639        R   3   4  |Yes   Yes
+RealSports Baseball                        CX2640        U   4   4  |Yes   Yes
+Surround                                   CX2641        C   1   3  |Yes   Yes
+Hunt & Score                               CX2642        C   3   3  |Yes   Yes
+A Game of Concentration                    CX2642        C   3   3  |No    No
+Code Breaker                               CX2643        U   2   3  |Yes   Yes
+Flag Capture                               CX2644        U   2   3  |Yes   Yes
+Video Chess                                CX2645        U   2   4  |Yes   Yes
+Pac-Man                                    CX2646        C   2   2  |Yes   Yes
+Submarine Commander (Sears only)           CX2647        NR  3   3  |No    No
+Video Pinball                              CX2648        U   2   3  |Yes   Yes
+Asteroids                                  CX2649        C   3   5  |Yes   Yes
+Berzerk                                    CX2650        C   2   2  |Yes   Yes
+Blackjack                                  CX2651        R   2   2  |Yes   Yes
+Casino                                     CX2652        U   2   3  |Yes   Yes
+Slot Machine                               CX2653        R   2   2  |Yes   Yes
+Haunted House                              CX2654        C   2   4  |Yes   Yes
+Yars' Revenge                              CX2655        C   3   5  |Yes   Yes
+Swordquest Earthworld                      CX2656        C   3   2  |Yes   Yes
+Swordquest Fireworld                       CX2657        C   2   2  |Yes   Yes
+Math Gran Prix                             CX2658        C   2   3  |No    Yes
+Raiders of the Lost Ark                    CX2659        C   3   5  |Yes   Yes
+Star Raiders                               CX2660        U   4   5  |Yes   Yes
+Fun With Numbers                           CX2661        C   1   3  |No    Yes
+Basic Math                                 CX2661        C   1   3  |Yes   Yes
+Hangman                                    CX2662        U   2   2  |Yes   Yes
+Road Runner                                CX2663        ER  4   4  |Yes   Yes
+Brain Games                                CX2664        U   2   3  |Yes   Yes
+Frog Pond                                  CX2665        UR         |No    No
+RealSports Volleyball                      CX2666        U   3   4  |Yes   Yes
+RealSports Soccer                          CX2667        U   3   4  |Yes   Yes
+RealSports Football                        CX2668        C   3   4  |Yes   Yes
+Vanguard                                   CX2669        C   3   3  |Yes   Yes
+Atari Video Cube                           CX2670        R   3   3  |Yes   Yes
+Swordquest Waterworld                      CX2671        UR  2   3  |Yes   Yes
+Swordquest Airworld                        CX2672        NR         |No    No
+Phoenix                                    CX2673        C   3   3  |Yes   Yes
+E.T. The Extra-Terrestrial                 CX2674        C   3   2  |Yes   Yes
+Ms. Pac-Man                                CX2675        C   4   5  |Yes   Yes
+Centipede                                  CX2676        C   3   3  |Yes   Yes
+Dig Dug                                    CX2677        U   3   4  |Yes   Yes
+Dukes of Hazzard                           CX2678        UR  3   2  |No    Yes
+RealSports Basketball                      CX2679        NR         |No    No
+RealSports Tennis                          CX2680        U   3   3  |Yes   Yes
+Battlezone                                 CX2681        U   5   4  |Yes   Yes
+Krull                                      CX2682        R   4   3  |Yes   Yes
+Crazy Climber                              CX2683        ER  3   4  |No    Yes
+Galaxian                                   CX2684        U   3   3  |Yes   Yes
+Gravitar                                   CX2685        U   3   3  |Yes   Yes
+Quadrun                                    CX2686        ER  4   4  |No    Yes
+Tempest                                    CX2687        NR         |No    No
+Jungle Hunt                                CX2688        U   3   4  |Yes   Yes
+Kangaroo                                   CX2689        U   2   3  |Yes   Yes
+Pengo                                      CX2690        ER  3   4  |No    Yes
+Joust                                      CX2691        C   2   3  |Yes   Yes
+Moon Patrol                                CX2692        U   4   4  |Yes   Yes
+Food Fight                                 CX2693        NR         |No    No
+Pole Position                              CX2694        C   4   4  |Yes   Yes
+Xevious                                    CX2695        UR         |No    No
+Asterix                                    CX2696        ER  2   3  |No    No
+Mario Bros.                                CX2697        U   3   2  |Yes   Yes
+Rubik's Cube                               CX2698        ER  3   3  |No    Yes
+Taz                                        CX2699        R   2   3  |Yes   Yes
+					   CX26100
+Oscar's Trash Race                         CX26101       R          |Yes   Yes
+Cookie Monster Crunch                      CX26102       R   3   3  |Yes   Yes
+Alpha Beam with Ernie                      CX26103       R   4   3  |Yes   Yes
+Big Bird's Egg Catch                       CX26104       R   3   4  |Yes   Yes
+3-D Asteroids                              CX26105       NR         |No    No
+Grover's Music Maker                       CX26106       UR         |No    No
+Snow White                                 CX26107       NR         |No    No
+Donald Duck's Speedboat                    CX26108       ER  4   3  |No    Yes
+Sorcerer's Apprentice                      CX26109       R   3   2  |Yes   Yes
+Crystal Castles                            CX26110       U   2   3  |Yes   Yes
+Snoopy and the Red Baron                   CX26111       R   3   3  |No    Yes
+Good Luck, Charlie Brown                   CX26112                  |No    No
+Miss Piggy's Wedding                       CX26113       UR         |No    No
+Pigs in Space                              CX26114       ER  3   3  |Yes   Yes
+Dumbo's Flying Circus                      CX26115       UR         |No    No
+Galaga                                     CX26116       NR         |No    No
+Obelix                                     CX26117       ER  3   3  |No    Yes
+Millipede                                  CX26118       R   4   4  |No    Yes
+Saboteur                                   CX26119       NR         |No    No
+Stargate                                   CX26120       U   4   4  |No    Yes
+Defender II                                CX26120       R   4   4  |Yes   No
+Zookeeper                                  CX26121       NR         |No    No
+Sinistar                                   CX26122       UR  3   3  |No    Yes
+Jr. Pac-Man                                CX26123       U   4   4  |Yes   Yes
+Choplifter!                                CX26124       NR         |No    No
+Track & Field (label says CX26127)         CX26125       R   5   5  |No    Yes
+Elevator Action                            CX26126       NR         |No    No
+Gremlins                                   CX26127       ER  4   4  |No    Yes
+Boing                                      CX26128       NR         |No    No
+Midnight Magic                             CX26129       R   4   5  |Yes   Yes
+Honker Bonker                              CX26130       NR         |No    No
+Monstercise                                CX26131       UR         |No    No
+Garfield                                   CX26132       NR         |No    No
+The A-Team                                 CX26133       UR  3   2  |No    Yes
+The Last Starfighter                       CX26134       NR         |No    No
+Star Raiders II                            CX26134       NR         |No    No
+RealSports Boxing                          CX26135       U          |No    No
+Solaris                                    CX26136       U   5   5  |Yes   Yes
+Peek-A-Boo                                 CX26137       UR         |No    No
+Super Soccer                               CX26138       NR         |No    No
+Crossbow                                   CX26139       U   4   3  |Yes   Yes
+Desert Falcon                              CX26140       C   3   2  |No    Yes
+Motor Psycho                               CX26141       NR         |No    No
+Crack'ed                                   CX26142                  |No    No
+Donkey Kong                                CX26143       U   2   3  |No    No
+Donkey Kong Jr.                            CX26144       R   2   3  |No    No
+Venture                                    CX26145       R   3   3  |No    No
+Mousetrap                                  CX26146       R   3   3  |No    No
+Frogger                                    CX26147       NR  4   5  |No    No
+Turbo                                      CX26148       NR         |No    No
+Zaxxon                                     CX26149       NR  2   3  |No    No
+Q*bert                                     CX26150       R   3   4  |No    No
+Dark Chambers                              CX26151       U   3   4  |No    Yes
+Super Baseball                             CX26152       U   4   3  |No    No
+					   CX26153
+Super Football                             CX26154       U   4   3  |No    No
+Sprintmaster                               CX26155       R   3   4  |Yes   Yes
+					   CX26156
+					   CX26157
+					   CX26158
+Double Dunk                                CX26159       R          |No    No
+					   CX26160
+					   CX26161
+Fatal Run                                  CX26162       UR         |No    No
+32 in 1                                    CX26163       ER  3   4  |No    Yes
+					   CX26164
+Jinks                                      CX26165       NR         |No    No
+					   CX26166
+Street Fight                               CX26167                  |No    No
+Off the Wall                               CX26168       ER  4   3  |Yes   Yes
+					   CX26169
+Secret Quest                               CX26170       R   3   4  |Yes   Yes
+Motorodeo                                  CX26171       UR         |No    No
+Xenophobe                                  CX26172       ER         |No    No
+					   CX26173
+					   CX26174
+					   CX26175
+Radar Lock                                 CX26176       R   5   4  |Yes   Yes
+Ikari Warriors                             CX26177       R          |No    No
+					   CX26178
+					   CX26179
+					   CX26180
+					   CX26181
+					   CX26182
+Sentinel                                   CX26183       R   4   4  |Yes   Yes
+White Water Madness                        CX26184       UR         |No    No
+					   CX26185
+					   CX26186
+					   CX26187
+					   CX26188
+					   CX26189
+BMX Airmaster                              CX26190       ER  4   5  |No    No
+					   CX26191
+KLAX                                       CX26192       ER  4   5  |Yes   Yes
+Centipede                                  CX7801        R   4   5  |Yes   Yes
+Asteroids                                  CX7802        R   5   4  |No    Yes
+Dig Dug                                    CX7803        R   4   3  |Yes   Yes
+Food Fight                                 CX7804        R   4   4  |No    Yes
+Galaga                                     CX7805        R   3   2  |Yes   Yes
+Joust                                      CX7806        R   5   5  |Yes   Yes
+Ms. Pac-Man                                CX7807        U   5   4  |Yes   Yes
+Pole Position II                           CX7808        C   5   4  |Yes   Yes
+Robotron:  2084                            CX7809        U   4   5  |Yes   Yes
+Xevious                                    CX7810        U   5   5  |Yes   Yes
+Desert Falcon                              CX7811        R   5   2  |No    Yes
+					   CX7812
+					   CX7813
+					   CX7814
+Ballblazer                                 CX7815        R   5   5  |Yes   Yes
+Rescue on Fractalus                        CX7816        UR         |No    No
+					   CX7817
+					   CX7818
+					   CX7819
+					   CX7820
+Choplifter!                                CX7821        U   4   3  |Yes   Yes
+Karateka                                   CX7822        U   3   1  |Yes   Yes
+Touchdown Football                         CX7823        U   4   4  |Yes   Yes
+One-on-One Basketball                      CX7824        U   4   4  |Yes   Yes
+					   CX7825
+Summer Games                               CX7826        R   5   4  |Yes   Yes
+					   CX7827
+Super Huey UH-IX                           CX7828        U   5   4  |Need! Yes
+Hat Trick                                  CX7829        U   5   3  |No    Yes
+					   CX7830
+Winter Games                               CX7831        U   5   4  |No    Yes
+Impossible Mission                         CX7832        R   4   3  |Xerox Yes
+					   CX7833
+RealSports Baseball                        CX7834        U   3   4  |No    Yes
+					   CX7835
+Crack'ed                                   CX7836        R   4   4  |No    Yes
+Dark Chambers                              CX7837        U   3   3  |No    Yes
+Commando                                   CX7838        R   5   4  |No    No
+					   CX7839
+					   CX7840
+					   CX7841
+					   CX7842
+					   CX7843
+Crossbow                                   CX7844        U   4   3  |No    Yes
+					   CX7845
+Ace of Aces                                CX7846        R          |No    No
+Mean 18 Golf                               CX7847        R          |No    No
+Donkey Kong                                CX7848        R   3   3  |Yes   Yes
+Donkey Kong Junior                         CX7849        R   4   4  |Yes   Yes
+Mario Bros.                                CX7850        R   4   5  |Yes   Yes
+Fight Night                                CX7851        R   5   4  |Need! Yes
+Motor Psycho                               CX7852        R   5   4  |Yes   Yes
+					   CX7853
+Fatal Run                                  CX7854        R   4   4  |Yes   Yes
+Alien Brigade                              CX7855        R   5   4  |Yes   Yes
+Tower Toppler                              CX7856        R   5   4  |Yes   Yes
+Nebulus                                    CX7856        NR  5   4  |No    No
+Jinks                                      CX7857        R   4   4  |Yes   Yes
+Xenophobe                                  CX7858        R   4   4  |Yes   Yes
+Barnyard Blaster                           CX7859        R   4   4  |Yes   Yes
+					   CX7860
+					   CX7861
+Ikari Warriors                             CX7862        R   5   5  |No    No
+Mat Mania Challenge                        CX7863        R          |No    No
+White Water Madness                        CX7864        ER         |No    No
+					   CX7865
+					   CX7866
+					   CX7867
+Planet Smashers                            CX7868        R   3   5  |Yes   Yes
+Sentinel                                   CX7869        UR         |No    No
+Ninja Golf                                 CX7870        R   5   5  |Yes   Yes
+					   CX7871
+					   CX7872
+					   CX7873
+					   CX7874
+Meltdown                                   CX7875        R   4   4  |Yes   Yes
+					   CX7876
+					   CX7877
+					   CX7878
+Scrapyard Dog                              CX7879        R   5   5  |Yes   Yes
+Basketbrawl                                CX7880        R   4   4  |Yes   Yes
+					   CX7881
+					   CX7882
+					   CX7883
+					   CX7884
+					   CX7885
+					   CX7886
+					   CX7887
+					   CX7888
+Midnight Mutants                           CX7889        R   4   4  |Yes   Yes
+
+28 in 1                                    CX26??        NR         |No    No
+30 in 1                                    CX26??        NR         |No    No
+Bionic Breakthrough                        CX26??        UR         |No    No
+Bugs Bunny                                 CX26??        UR         |No    No
+Caverns of Mars                            CX26??        NR         |No    No
+Challenger                                 CX26??        NR         |No    No
+Children's Introduction to Programming     CX26??        NR         |No    No
+Coke-Pepsi                                 CX26??        UR         |No    No
+Coke Wins!                                 CX26??        UR         |No    No
+Combat II                                  CX26??        NR         |No    No
+Donkey Kong (for My First Computer)        CX26??        NR         |No    No
+Fail Safe                                  CX26??        NR         |No    No
+Family Finances                            CX26??        NR         |No    No
+Foxbat                                     CX26??        NR         |No    No
+Holy Moley                                 CX26??        UR         |No    No
+Mickey and the Beanstalk                   CX26??        NR         |No    No
+Mickey and the Great Outdoors              CX26??        NR         |No    No
+Polo                                       CX26??        UR         |No    No
+Popeye                                     CX26??        NR         |No    No
+Preppie                                    CX26??        NR         |No    No
+Qix                                        CX26??        NR         |No    No
+Rally-X                                    CX26??        NR         |No    No
+Robotron: 2084                             CX26??        NR         |No    No
+Rocky & Bullwinkle                         CX26??        NR         |No    No
+Round-Up                                   CX26??        NR         |No    No
+Saving Mary                                CX26??        NR         |No    No
+Scooby Doo                                 CX26??        NR         |No    No
+Shooting Gallery                           CX26??        UR         |No    No
+Super Stunt Cycle                          CX26??        NR         |No    No
+The Adventures of Max                      CX26??        NR         |No    No
+Typo Attack                                CX26??        NR         |No    No
+Battlezone (Voice Controller)              CX26??        NR         |No    No
+Berzerk (Voice Controller)                 CX26??        NR         |No    No
+RealSports Baseball (Voice Controller)     CX26??        NR         |No    No
+Star Raiders (Voice Controller)            CX26??        NR         |No    No
+
+Electro Cop                                CX78??        NR         |No    No
+Gato                                       CX78??        NR         |No    No
+Gauntlet                                   CX78??        NR         |No    No
+KLAX                                       CX78??                   |No    No
+Lode Runner                                CX78??        NR         |No    No
+Night of the Ninja                         CX78??        NR         |No    No
+Pyromania                                  CX78??        NR         |No    No
+Quest for Quintana Roo                     CX78??        NR         |No    No
+Sky Fox                                    CX78??        NR         |No    No
+Super Mario Brothers                       CX78??        NR         |No    No
+Tank Command                               CX78??        NR         |No    No
+The Eidilon                                CX78??        NR         |No    No
+Wood and Water Rage                        CX78??        NR         |No    No
+AtariLab (for Computer Module)             CX78??        NR         |No    No
+BASIC (for Computer Module)                CX78??        NR         |No    No
+Crystal Castles (for Computer Module)      CX78??        NR         |No    No
+Elevator Action (for Computer Module)      CX78??        NR         |No    No
+Gremlins (for Computer Module)             CX78??        NR         |No    No
+Hobgoblin (for Computer Module)            CX78??        NR         |No    No
+Jr. Pac-Man (for Computer Module)          CX78??        NR         |No    No
+Pole Position II (for Computer Module)     CX78??        NR         |No    No
+The Final Legacy (for Computer Module)     CX78??        NR         |No    No
+The Last Starfighter (for Computer Module) CX78??        NR         |No    No
+Track & Field (for Computer Module)        CX78??        NR         |No    No
+Typing Tutor (for Computer Module)         CX78??        NR         |No    No
+
+
+
+
+
+
+***********************************************************************
+*     Sears                                                           *
+***********************************************************************
+
+Name                  Sears Model No.       Atari equivalent         Rarity
+	       "6"/no prefix   "49" prefix
+
+Tank Plus           99801       75124       Combat                      U
+Target Fun          99802       75102       Air-Sea Battle              C
+Outer Space         99803       75601       Star Ship                   U
+Speedway II         99804       75103       Street Race                 U
+Blackjack           99805       75602       Blackjack                   R
+Pong Sports         99806       75104       Video Olympics              C
+Chase               99807       75105       Surround                    C
+Math                99808                   Basic Math                  C
+Spelling            99811                   Hangman                     R
+Space Combat        99812       75106       Space War                   U
+Breakaway IV        99813       75107       Breakout                    C
+Memory Match        99814                   Hunt & Score                U
+Code Breaker        99815                   Codebreaker                 R
+Poker Plus          99816       75151       Casino                      C
+Video Chess         99817       75181       Video Chess                 R
+Brain Games         99818                   Brain Games                 R
+Baseball            99819       75125       Homerun                     C
+Race                99821       75149       Indy 500                    C
+Gunslinger          99822       75109       Outlaw                      U
+Slots               99823       75111       Slot Machine                R
+Capture             99824       75122       Flag Capture                R
+Maze                99825       75112       Slot Racer                  C
+Basketball          99826       75113       Basketball                  U
+Football            99827       75114       Football                    C
+Canyon Bomber       99828       75115       Canyon Bomber               R
+Arcade Golf         99829       75116       Miniature Golf              U
+Cannon Man          99841                   Human Cannonball            ER
+Bowling             99842       75117       Bowling                     R
+Dare Diver          99843       75118       Sky Diver                   ER
+Superman            99845       75152       Superman                    ER
+Backgammon          99848       75183       Backgammon                  ER
+Night Driver                    75119       Night Driver                U
+Golf                            75121       Golf                        C
+Circus                          75122       Circus Atari                C
+3-D Tic-Tac-Toe                 75123       3-D Tic-Tac-Toe             ER
+Steeplechase                    75126       Steeplechase                R
+Warlords                        75127       Warlords                    U
+Math Gran Prix                  75128       Math Gran Prix              R
+Demons to Diamonds              75140       Demons to Diamonds          ER
+Haunted House                   75141       Haunted House               R
+Submarine Commander             75142       Submarine Commander         ER
+Space Invaders                  75153       Space Invaders              C
+Adventure                       75154       Adventure                   U
+Soccer                          75155       Pele's Championship Soccer  U
+Checkers                        75156       Video Checkers              ER
+Maze Mania                      75157       Maze Craze                  C
+Dodger Cars                     75158       Dodge 'Em                   ER
+Stellar Track                   75159       Stellar Track               R
+Arcade Pinball                  75161       Video Pinball               R
+Othello                         75162       Othello                     R
+Asteroids                       75163       Asteroids                   U
+Super Breakout                  75165       Super Breakout              C
+Missile Command                 75166       Missile Command             R
+Yars' Revenge                   75167       Yars' Revenge               U
+Berzerk                         75168       Berzerk                     R
+Pac-Man                         75185       Pac-Man                     C
+Defender                        75186       Defender                    C
+Star Raiders                    75187       Star Raiders                U
+
+
+
+
+
+
+
+
+***********************************************************************
+*     Activision                                                      *
+***********************************************************************
+
+Name                                       Activision        Gr  Pl  Man? Have?
+					   Model No.   Rarity
+
+Dragster                                   AG-001        U   3   3  |Yes   Yes
+Boxing                                     AG-002        U   2   3  |Yes   Yes
+Checkers                                   AG-003        ER  3   3  |No    Yes
+Fishing Derby                              AG-004        U   3   3  |Yes   Yes
+Skiing                                     AG-005        U   3   5  |Yes   Yes
+Bridge                                     AX-006        U   2   4  |Yes   Yes
+Tennis                                     AG-007        C   3   3  |Yes   Yes
+Laser Blast                                AG-008        C   3   2  |Yes   Yes
+Freeway                                    AG-009        U   3   4  |Yes   Yes
+Kaboom                                     AG-010        U   3   5  |Yes   Yes
+Stampede                                   AG-011        U   3   4  |Yes   Yes
+Ice Hockey                                 AX-012        U   3   3  |Yes   Yes
+Barnstorming                               AX-013        U   4   4  |Yes   Yes
+Grand Prix                                 AX-014        U   3   3  |Yes   Yes
+Chopper Command                            AX-015        U   3   4  |Yes   Yes
+Starmaster                                 AX-016        U   5   5  |Yes   Yes
+Megamania                                  AX-017        U   3   5  |Yes   Yes
+Pitfall                                    AX-018        C   4   5  |Yes   Yes
+Sky Jinks                                  AG-019        R   3   4  |Yes   Yes
+River Raid                                 AX-020        U   5   5  |Yes   Yes
+Spider Fighter                             AX-021        U   3   4  |Yes   Yes
+Seaquest                                   AX-022        R   3   2  |Yes   Yes
+Oink!                                      AX-023        R   5   5  |Yes   Yes
+Dolphin                                    AX-024        R   3   4  |Yes   Yes
+Keystone Kapers                            AX-025        U   4   4  |Yes   Yes
+Enduro                                     AX-026        U   4   4  |Yes   Yes
+Plaque Attack                              AX-027        R   3   3  |Yes   Yes
+Robot Tank                                 AZ-028        R   5   5  |Yes   Yes
+Crackpots                                  AX-029        R   4   3  |No    Yes
+Decathlon                                  AZ-030        R   4   3  |Yes   Yes
+Frostbite                                  AX-031        R   4   4  |Yes   Yes
+Pressure Cooker                            AZ-032        R   4   5  |No    Yes
+Space Shuttle                              AZ-033        R   5   5  |Yes   Yes
+Private Eye                                AG-034-04     R   4   3  |No    Yes
+Pitfall II: Lost Caverns                   AB-035-04     R   5   4  |Yes   Yes
+H.E.R.O.                                   AZ-036-04     R   4   5  |Yes   Yes
+Beamrider                                  AZ-037-04     R   5   5  |Yes   Yes
+Cosmic Commuter                            AG-038        R   4   4  |No    Yes
+Kung Fu Master                             AX-039        R   5   4  |Xerox Yes
+Contenders                                 AK-041        R          |No    No
+Commando                                   AK-043        R   5   4  |Yes   Yes
+Fighter Pilot                              AK-046        UR         |No    No
+River Raid II                              AK-048-04     ER  4   4  |Yes   Yes
+Rampage                                    AK-049        R          |No    No
+Double Dragon                              AK-050-04     R          |No    No
+Ghostbusters                               AZ-108-04     R   3   3  |Yes   Yes
+
+Ghostbusters II                            ??-???        ER  4   4  |No    No
+Dreadnaught Factor                         ??-???        NR         |No    No
+Wing War                                   ??-???        ER         |No    No
+Zenji                                      ??-???        NR         |No    No
+Kung Fu Master (7800)                      AM-039        ER  5   4  |No    No
+Rampage (7800)                             AM-049-03     R   4   4  |Yes   Yes
+Double Dragon (7800)                       AM-050-04     R   5   4  |Yes   Yes
+
+
+
+
+***********************************************************************
+*     Absolute Entertainment                                          *
+***********************************************************************
+
+Name                                       Abs. Ent.  Rarity Gr  Pl  Man? Have?
+					   Model No.
+
+Title Match Pro Wrestling                  AG-041        R   5   4  |Yes   Yes
+Skateboardin'                              AG-042        R   4   5  |Yes   Yes
+Pete Rose Baseball                         AK-045        R          |No    No
+Tomcat F-14 Flight Simulator               AK-046        ER         |No    No
+My Golf                                    ??-???        ER         |No    No
+
+Title Match Pro Wrestling (7800)           AV-041-04     R   5   3  |No    Yes
+F-18 Hornet (7800)                         AP-044-04     R   5   4  |No    Yes
+Pete Rose Baseball (7800)                  AV-045-04     R   3   3  |No    Yes
+Tomcat F-14 Flight Simulator (7800)        AV-046-04     R   5   4  |Yes   Yes
+Super Skateboardin' (7800)                 AV-047-04     R   5   5  |Yes   Yes
+
+
+
+
+
+
+***********************************************************************
+*     Apollo                                                          *
+***********************************************************************
+
+Name                                       Apollo     Rarity Gr  Pl  Man? Have?
+					   Model No.
+
+Skeet Shoot                                AP 1001       R   3   3  |No    Yes
+Spacechase                                 AP 2001       U   3   2  |Yes   Yes
+Space Cavern                               AP 2002       U   3   3  |Yes   Yes
+Racquetball                                AP 2003       U   4   3  |Yes   Yes
+Lost Luggage                               AP 2004       U   3   4  |Yes   Yes
+Lochjaw                                    AP 2005       ER  3   2  |No    Yes
+Shark Attack                               AP 2005       U   3   2  |Yes   Yes
+Infiltrate                                 AP 2006       U   2   2  |Yes   Yes
+Kyphus                                     AP 2007       R          |No    No
+Guardian                                   AP 2008       R   3   2  |No    Yes
+Final Approach                             AP 2009       R   2   3  |No    Yes
+Wabbit                                     AP 2010       R   3   3  |Yes   Yes
+Pompeii                                    AP 2011       R          |No    No
+Squoosh                                    AP 2012       R          |No    No
+Blue Angels                                AP ????       NR         |No    No
+
+
+
+
+
+***********************************************************************
+*     Bit Corp.                                                       *
+***********************************************************************
+
+Name                                       Bit Corp.  Rarity Gr  Pl  Man? Have?
+					   Model No.
+
+Sea Monster                                PG201         R          |No    No
+Space Tunnel                               PG202         R   2   2  |No    No
+Phantom Tank                               PG203         R          |No    No
+Open Sesame                                PG204         R          |No    No
+Dancing Plate                              PG205         R   3   3  |No    No
+Bobby Is Going Home                        PG206         R   3   2  |No    No
+Mission 3000 A.D.                          PG207         R          |No    No
+Snail Against Squirrel                     PG208         R          |No    No
+Mr. Postman                                PG209         R   3   2  |No    No
+
+
+
+
+
+***********************************************************************
+*     CBS Electronics                                                 *
+***********************************************************************
+
+Name                                       CBS        Rarity Gr  Pl  Man? Have?
+					   Model No.
+
+Wizard of Wor                              M8774         R   3   4  |Yes   Yes
+Gorf                                       M8793         U   3   3  |No    Yes
+Blueprint                                  4L-2486-5000  U   4   3  |Yes   Yes
+Solar Fox                                  4L-2487-5000  U   3   5  |Yes   Yes
+Tunnel Runner                              4L-2520-5000  R   4   3  |No    Yes
+Omega Race                                 4L-2737-0000  U   3   4  |Yes   Yes
+Mountain King                              4L-2738-0000  R   3   5  |Yes   Yes
+Wings                                      ??            UR         |No    No
+Domino Man                                 ??            NR         |No    No
+Kickman                                    ??            NR         |No    No
+Maddenness                                 ??            NR         |No    No
+Stomp It                                   ??            NR         |No    No
+Targ                                       ??            NR         |No    No
+
+
+
+
+
+***********************************************************************
+*     Coleco                                                          *
+***********************************************************************
+
+Name                                       Coleco     Rarity Gr  Pl  Man? Have?
+					   Model No.
+
+Donkey Kong                                2451          C   2   3  |Yes   Yes
+Zaxxon                                     2454          U   3   3  |Yes   Yes
+Turbo                                      2455          NR         |No    No
+Venture                                    2457          C   2   3  |Yes   Yes
+Mouse Trap                                 2459          U   3   3  |Yes   Yes
+Lady Bug                                   2463          UR         |No    No
+Cosmic Avenger                             2464          UR         |No    No
+Smurf: Rescue in Gargamel's Castle         2465          U   3   4  |Yes   Yes
+Carnival                                   2468          U   3   4  |Yes   Yes
+Smurfs Save the Day                        2511          UR         |No    No
+Rocky Battles the Champ                    2652          NR         |No    No
+Donkey Kong Junior                         2653          R   2   3  |No    Yes
+Looping                                    2654          NR         |No    No
+Pepper II                                  2655          UR         |No    No
+Mr. Do!                                    2656          R   3   2  |No    Yes
+Berenstein Bears                           2658          UR         |No    No
+Wild Western                               2660          NR         |No    No
+Smurfette's Birthday                       2661          NR         |No    No
+Tarzan                                     2662          NR         |No    No
+Time Pilot                                 2663          R   3   3  |No    Yes
+Front Line                                 2665          R   3   2  |No    Yes
+Roc 'n Rope                                2667          R   3   3  |Yes   Yes
+Mr. Do's Castle                            2695          ER         |No    No
+The Sword and the Sorceror                 291905        NR         |No    No
+
+Cabbage Patch Kids                         ??            NR         |No    No
+Dragon's Lair                              ??            NR         |No    No
+Frenzy                                     ??            NR         |No    No
+One Fish, Two Fish by Dr. Seuss            ??            NR         |No    No
+Papa Smurf's Treasure Hunt                 ??            NR         |No    No
+
+
+
+
+
+***********************************************************************
+*     CommaVid                                                        *
+***********************************************************************
+
+Name                                       CommaVid   Rarity Gr  Pl  Man? Have?
+					   Model No.
+
+MagiCard                                   CM-001        UR         |No    No
+Video Life                                 CM-002        UR         |No    No
+Cosmic Swarm                               CM-003        R   2   3  |No    Yes
+Room of Doom                               CM-004        ER         |No    Yes
+Mines of Minos                             CM-005        ER         |No    Yes
+Cakewalk                                   CM-008        ER         |No    No
+Stronghold                                 CM-009        ER         |No    No
+Mission Omega                              CM-010        NR         |No    No
+Rush Hour                                  ??            NR         |No    No
+Underworld                                 ??            NR         |No    No
+
+
+
+
+
+***********************************************************************
+*     Data Age                                                        *
+***********************************************************************
+
+Name                                       Data Age   Rarity Gr  Pl  Man? Have?
+					   Model No.
+
+Encounter at L-5                           DA 1001       U   2   3  |No    Yes
+Warplock                                   DA 1002       C   2   2  |Yes   Yes
+Sssnake                                    DA 1003       C   2   1  |No    Yes
+Airlock                                    DA 1004       C   3   3  |Yes   Yes
+Bugs                                       DA 1005       U   2   3  |Yes   Yes
+Journey Escape                             112-006       C   3   3  |Yes   Yes
+Rock 'n Roll Escape                        112-006       R   3   3  |Yes   Yes
+Bermuda Triangle                           112-007       R   3   4  |Yes   Yes
+Frankenstein's Monster                     112-008       R   3   4  |No    Yes
+Metamorphosis                              ??            NR         |No    No
+Mr. Bill's Neighborhood                    ??            NR         |No    No
+Mr. T                                      ??            NR         |No    No
+Secret Agent                               ??            UR         |No    No
+Smokey Bear                                ??            NR         |No    No
+
+
+
+
+
+***********************************************************************
+*     Froggo                                                          *
+***********************************************************************
+
+Name                                       Froggo     Rarity Gr  Pl  Man? Have?
+					   Model No.
+
+Karate                                     FG 1001       R   3   2  |Yes   Yes
+Spiderdroid                                FG 1002       R   2   1  |Yes   Yes
+Task Force                                 FG 1003       R   3   3  |Only  No
+Cruise Missile                             FG 1007       R   2   2  |No    No
+Sea Hawk                                   FG 1008       R   2   2  |Yes   Yes
+Sea Hunt                                   FG 1009       R   3   2  |Xerox Yes
+Water Ski (7800)                           FG 2002       ER  2   3  |No    Yes
+Tank Command (7800)                        FG 2003       ER         |No    No
+Night of the Ninja (7800)                  ??            NR         |No    No
+Pyromania (7800)                           ??            NR         |No    No
+Scorpion Squad (7800)                      ??            NR         |No    No
+Scrapper Story (7800)                      ??            NR         |No    No
+UFO (7800)                                 ??            NR         |No    No
+
+
+
+
+
+***********************************************************************
+*     Imagic                                                          *
+***********************************************************************
+
+Name                                       Imagic     Rarity Gr  Pl  Man? Have?
+					   Model No.
+
+Trick Shot                                 IA3000        R   3   3  |Yes   Yes
+Demon Attack                               IA3200        C   3   5  |Yes   Yes
+Star Voyager                               IA3201        C   5   5  |Yes   Yes
+Atlantis                                   IA3203        U   4   4  |Yes   Yes
+Cosmic Ark                                 IA3204        U   3   4  |Yes   Yes
+No Escape!                                 IA3312        R   3   3  |No    Yes
+Fire Fighter                               IA3400        R   3   3  |Yes   Yes
+Aerial Ace                                 IA3409        ER         |No    No
+Shootin' Gallery                           IA3410        ER  3   4  |Yes   Yes
+Riddle of the Sphinx                       IA3600        U   3   4  |Yes   Yes
+Dragonfire                                 IA3611        C   5   4  |Yes   Yes
+Fathom                                     O3205         R   3   4  |Yes   Yes
+Solar Storm                                O3206         R   3   4  |Yes   Yes
+Moonsweeper                                O3207         U   4   4  |Yes   Yes
+Laser Gates                                O3208         U   3   4  |No    Yes
+Quick Step                                 O3211         R   3   3  |Need! Yes
+Subterranea                                O3213         R   4   4  |No    Yes
+Flap!                                      EIZ-002-041   NR         |No    No
+Wing War                                   EIZ-002-041   ER         |No    No
+Cubicolor                                  ??            ER  3   4  |Yes   Yes
+Escape from Argos                          ??            NR         |No    No
+Hop to It                                  ??            NR         |No    No
+Ice Trek                                   ??            NR         |No    No
+Microsurgeon                               ??            NR         |No    No
+Nova Blast                                 ??            NR         |No    No
+Safecracker                                ??            NR         |No    No
+Sky Patrol                                 IA3409        NR         |No    No
+
+
+
+
+
+***********************************************************************
+*     M Network (Mattel)                                              *
+***********************************************************************
+
+Name                                       Mattel     Rarity Gr  Pl  Man? Have?
+					   Model No.
+
+Star Strike                                MT4313        R   4   3  |No    No
+Adventures of Tron                         MT4317        U   3   4  |Yes   Yes
+Computer Revenge                           MT4318        NR         |No    No
+Masters of the Universe:  The Power of He-Man
+					   MT4319        R   2   3  |No    Yes
+Loco-Motion                                MT4323        NR  3   5  |No    No
+XIV Winter Olympics                        MT4324        NR         |No    No
+AD&D: Treasure of Tarmin                   MT4325        UR      4  |No    No
+Burgertime                                 MT4518        R   3   3  |Yes   Yes
+Tron Deadly Discs/Adventures of Tron       MT4609        UR  3   3  |No    No
+In Search of the Golden Skull              MT4627        NR         |No    No
+Kool-Aid Man                               MT4648        U   2   4  |Yes   Yes
+Super Challenge Football                   MT5658        C          |No    No
+Space Attack                               MT5659        C   3   4  |Yes   Yes
+Armor Ambush                               MT5661        C   3   3  |Yes   Yes
+Tron Deadly Discs                          MT5662        U   3   3  |No    Yes
+Lock 'n Chase                              MT5663        C   3   3  |Yes   Yes
+Frogs and Flies                            MT5664        U   3   4  |Yes   Yes
+Super Challenge Baseball                   MT5665        C          |No    No
+Astroblast                                 MT5666        U   3   4  |Yes   Yes
+Dark Cavern                                MT5667        U   3   4  |Yes   Yes
+International Soccer                       MT5687        U          |No    No
+Air Raiders                                MT5861        R   5   4  |Yes   Yes
+Bump 'n' Jump                              MT7045        R   4   3  |Yes   Yes
+AD&D: Tower of Mystery                     MT7175        NR         |No    No
+
+Advanced Dungeons & Dragons                MT????        NR         |No    No
+High Seas                                  MT????        NR         |No    No
+Mission X                                  MT????        NR         |No    No
+Mystic Castle                              MT????        NR         |No    No
+Rocky & Bullwinkle                         MT????        NR         |No    No
+Scooby Doo                                 MT????        NR         |No    No
+Sea Battle                                 MT????        NR         |No    No
+The Flintstones                            MT????        NR         |No    No
+
+
+
+
+
+
+***********************************************************************
+*     Mystique                                                        *
+***********************************************************************
+
+Name                                       Mystique   Rarity Gr  Pl  Man? Have?
+					   Model No.
+
+Custer's Revenge                           1001          ER  3   2  |Yes   Yes
+Bachelor Party                             1002          ER  2   3  |No    Yes
+Beat 'em and Eat 'em                       1003          ER  3   4  |No    No
+Bachelorette Party                         1004          ER  2   3  |No    No
+Gigolo                                     1009          ER         |No    No
+Jungle Fever                               1011          ER  3   3  |No    No
+Burning Desire                             ??            ER  3   3  |No    No
+Cathouse Blues                             ??            ER  3   3  |No    No
+Knight on the Town                         ??            ER  3   3  |No    No
+Lady in Wading                             ??            ER  3   3  |No    No
+Philly Flasher                             ??            ER  3   4  |No    No
+
+
+
+
+
+***********************************************************************
+*     Panda Inc.                                                      *
+***********************************************************************
+
+Name                                       Panda Inc. Rarity Gr  Pl  Man? Have?
+					   Model No.
+
+Space Canyon                               100           R   2   2  |No    Yes
+Tank Brigade                               101           R          |No    No
+Scuba Diver                                104           R          |No    No
+Stuntman                                   105           R          |No    No
+Dice Puzzle                                106           R          |No    No
+Sea Hawk                                   108           R   2   2  |No    Yes
+Exocet                                     109           R   2   2  |No    Yes
+Harbor Escape                              110           R          |No    No
+Baseball                                   ??            NR         |No    No
+Conservation:  The Watt Way                ??            NR         |No    No
+Forest                                     ??            NR         |No    No
+Galactic Invaders                          ??            NR         |No    No
+Midnight Rider                             ??            NR         |No    No
+
+
+
+
+
+***********************************************************************
+*     Parker Bros.                                                    *
+***********************************************************************
+
+Name                                       Parker Bros.      Gr  Pl  Man? Have?
+					   Model No.   Rarity
+
+Star Wars: Jedi Arena                      PB5000        R   3   4  |Yes   Yes
+Star Wars: The Empire Strikes Back         PB5050        C   4   3  |Yes   Yes
+Star Wars: Return of the Jedi: Death Star Battle
+					   PB5060        R   4   3  |No    Yes
+Star Wars: Return of the Jedi: Ewok Adventure
+					   PB5065        UR         |No    No
+Gyruss                                     PB5080        R   5   4  |No    Yes
+James Bond 007                             PB5110        R   3   3  |No    Yes
+Frogger                                    PB5300        C   4   5  |Yes   Yes
+Amidar                                     PB5310        U   2   3  |Yes   Yes
+Super Cobra                                PB5320        U   3   3  |Yes   Yes
+Reactor                                    PB5330        U   3   4  |Yes   Yes
+Tutankham                                  PB5340        U   3   4  |Yes   Yes
+Sky Skipper                                PB5350        R   3   4  |Yes   Yes
+Q*bert                                     PB5360        C   4   5  |Yes   Yes
+Popeye                                     PB5370        C   3   3  |Yes   Yes
+Star Wars: The Arcade Game                 PB5540        ER  5   4  |Yes   Yes
+Q*bert's Qubes                             PB5550        ER         |No    No
+Frogger II: Threedeep!                     PB5590        ER  4   3  |Yes   Yes
+Circus Charlie                             PB5750                   |No    No
+Montezuma's Revenge: Starring Panama Joe   PB5760        ER  4   5  |No    Yes
+Mr. Do's Castle                            PB5820        ER         |No    No
+Spider-Man                                 PB5900        R   3   3  |Yes   Yes
+Strawberry Shortcake: Musical Match-ups    PB5910        U   4   3  |Yes   Yes
+G.I. Joe: Cobra Strike                     PB5920        U   3   3  |No    Yes
+Action Force                               PB5920        ER  3   3  |No    No
+The Incredible Hulk                        PB5940        NR         |No    No
+The Lord of the Rings: Journey to Rivendell
+					   PB????        UR         |No    No
+Astrochase                                 PB????        NR         |No    No
+McDonald's                                 PB????        UR         |No    No
+James Bond 007 As Seen In Octopussy        PB????        NR         |No    No
+Jaws                                       PB????        NR         |No    No
+Star Wars: Revenge of the Jedi: Game II    PB????        NR         |No    No
+
+
+
+
+***********************************************************************
+*     Playaround                                                      *
+***********************************************************************
+
+Name                                      Playaround  Rarity Gr  Pl  Man? Have?
+					   Model No.
+
+/Philly Flasher                            201           ER  3   4  |Yes   Yes
+\Cathouse Blues                            201           ER  3   3  |Yes   Yes
+/Bachelorette Party                        202           ER  2   3  |Yes   Yes
+\Burning Desire                            202           ER  3   3  |Yes   Yes
+/Knight on the Town                        203           ER  3   4  |Yes   Yes
+\Jungle Fever                              203           ER  3   3  |Yes   Yes
+/Beat 'em and Eat 'em                      204           ER  3   4  |Yes   Yes
+\Lady in Wading                            204           ER  3   4  |Yes   Yes
+/Bachelor Party                            205           ER  2   3  |No    No
+\Gigolo                                    205           ER         |No    No
+/General Retreat                           206           ER         |No    No
+\Westward Ho                               206           ER         |No    No
+
+
+
+
+
+***********************************************************************
+*     Rainbow Vision                                                  *
+***********************************************************************
+
+Name        Original name    Original  Rainbow Vision Rarity Gr  Pl  Man? Have?
+			     Maker         Model No.
+
+Pac-Kong    King Kong        Tigervision   55-003                   |No    No
+Netmaker    Amidar           Parker Bros.  55-006                   |No    No
+Mafia                                      55-010                   |No    No
+Hey! Stop!  Keystone Kapers  Activision    55-012                   |No    No
+Bi! Bi!     Sea Hunt         Panda         55-013                   |No    No
+Catch Time  Plaque Attack    Activision    55-015                   |No    No
+Boom Bang   Crackpots        Activision    55-016            4   3  |No    No
+Mariana     Seaquest         Activision    55-017                   |No    No
+Curtiss     Atlantis         Imagic        55-019                   |No    No
+Tuby Bird   Dolphin          Activision    55-020                   |No    No
+Tomboy      Pitfall!         Activision    55-???                   |No    No
+
+
+
+
+
+***********************************************************************
+*     Sega                                                            *
+***********************************************************************
+
+Name                                       Sega       Rarity Gr  Pl  Man? Have?
+					   Model No.
+
+Tac-Scan                                   001-01        U   3   4  |No    Yes
+Sub Scan                                   002-01        U   3   3  |Yes   Yes
+Thunderground                              003-01        R   3   3  |No    Yes
+Star Trek Strategic Operations Simulator   004-01        R   4   5  |Yes   Yes
+Buck Rogers: Planet of Zoom                005-01        U   4   4  |Yes   Yes
+Congo Bongo                                006-01        R   3   3  |Yes   Yes
+Star Trek III: The Search For Spock        007-01        NR         |No    No
+Up 'n Down                                 009-01        ER  4   4  |No    Yes
+Tapper                                     010-01        ER  4   4  |Yes   Yes
+Spy Hunter                                 011-02        ER  4   4  |No    Yes
+Airplane                                   ???-??        NR         |No    No
+Buck Rogers: Caverns of Zagreb             ???-??        NR         |No    No
+Buck Rogers: Marathon of Zenda             ???-??        NR         |No    No
+Buck Rogers: Secret of Sabar               ???-??        NR         |No    No
+Dragonslayer                               ???-??        NR         |No    No
+Escape From Alcatraz                       ???-??        NR         |No    No
+48 Hours                                   ???-??        NR         |No    No
+Friday the 13th                            ???-??        NR         |No    No
+Marathon Man                               ???-??        NR         |No    No
+Marathon of Zenda                          ???-??        NR         |No    No
+Mission Impossible                         ???-??        NR         |No    No
+Muffett                                    ???-??        NR         |No    No
+Star Trek II: The Wrath of Khan            ???-??        NR         |No    No
+Subterfuge                                 ???-??        NR         |No    No
+War of the Worlds                          ???-??        NR         |No    No
+
+
+
+
+
+***********************************************************************
+*     Spectravision                                                   *
+***********************************************************************
+
+Name                                       Spectravision     Gr  Pl  Man? Have?
+					   Model No.   Rarity
+
+Gangster Alley                             SA-201        R   3   3  |Yes   Yes
+Planet Patrol                              SA-202        R   3   4  |Yes   Yes
+Cross Force                                SA-203        R   3   4  |Yes   Yes
+Tape Worm                                  SA-204        R          |Yes   Yes
+China Syndrome                             SA-205        R   3   4  |Yes   Yes
+The Challenge of.....Nexar                 SA-206        R   4   3  |Yes   Yes
+Protobob                                   SA-209        NR         |No    No
+Master Builder                             SA-210        R          |No    No
+Glactic Tactic                             SA-211        R          |No    No
+Mangia'                                    SA-212        R          |No    No
+Time Scape                                 SA-213        NR         |No    No
+Drive 'Em Crazy                            SA-216        NR         |No    No
+Gas Hog                                    SA-217        ER         |No    No
+Bumper Bash                                SA-218        ER         |No    No
+Sector Alpha                               SA-220        NR         |No    No
+Eagle Mountain                             SA-221        NR         |No    No
+Master Cylinder                            SA-222        NR         |No    No
+Romper Room #1: Do Bee's First Alphabet    SA-224        NR         |No    No
+Romper Room #2: Countdown to Fun           SA-225        NR         |No    No
+Romper Room #3: The Street Where You Live  SA-226        NR         |No    No
+Vortex                                     SA-???        NR         |No    No
+Vertinko                                   SA-???        NR         |No    No
+Save the Whales                            SA-???        UR         |No    No
+Cave-In                                    SA-???        UR         |No    No
+Chase the Chuck Wagon                      SA-???        UR  3   3  |No    Yes
+CompuMate                                  SV-010        UR  5   5  |Yes   Yes
+
+
+
+
+
+***********************************************************************
+*     Starpath                                                        *
+***********************************************************************
+
+Name                             "Large"   Starpath   Rarity Gr  Pl  Man? Have?
+				    No.    Model No.
+
+Phaser Patrol                        1     AR-4000       R   5   4  |Yes   Yes
+Communist Mutants from Space         2     AR-4101       R   4   4  |No    Yes
+Suicide Mission                      4     AR-4102       R   5   4  |Yes   Yes
+Killer Satellites                    7     AR-4103       R   5   3  |Yes   Yes
+Rabbit Transit                       8     AR-4104       ER         |Only  No
+Frogger                              9     AR-4105       ER         |No    No
+Escape From the Mindmaster           5     AR-4200       ER  5   5  |Yes   Yes
+Sword of Saros                       11    AR-4201       ER         |Yes   Copy
+Fireball                             3     AR-4300       R   4   5  |Yes   Yes
+Party Mix                            10    AR-4302       ER         |No    No
+Excalibur                            6     AR-4400       NR  4   5  |No    No
+Dragonstomper                        6     AR-4400       ER  4   5  |Yes   Yes
+Survival Island                      12    AR-4401       R   4   4  |Yes   Copy
+Clone Attack                         ?     AR-4???       NR         |No    No
+Frantic                              ?     AR-4???       NR         |No    No
+Jungle Raid                          ?     AR-4???       NR         |No    No
+Labyrinth                            ?     AR-4???       NR         |No    No
+Last Line of Defense                 ?     AR-4???       NR         |No    No
+Sweat!                               ?     AR-4???       UR         |No    No
+
+
+
+
+
+
+
+***********************************************************************
+*     Telegames                                                       *
+*     (Note:  Telegames is authorized to MANUFACTURE these games,     *
+*     and as of 1993 they are still producing them!)                  *
+***********************************************************************
+
+Name                                       Telegames  Rarity Gr  Pl  Man? Have?
+					   Model No.
+
+Glacier Patrol (Sunrise)                   5667 A106     R   2   4  |Yes   Yes
+Bogey Blaster                              5861 A030     R          |No    No
+Quest For Quintana Roo (Sunrise)           6057 A227     ER  3   4  |Yes   Yes
+Universal Chaos                            7062 A305     R          |No    No
+
+Adventures on GX-12 (M Network's Adventures of Tron)
+					   ??            U   3   4  |No    No
+Air Raiders (M Network)                    ??            R   5   4  |No    No
+Armor Ambush (M Network)                   ??            U   3   3  |No    No
+Astroblast (M Network)                     ??            U   3   4  |No    No
+Bobby's Cosmic Adventure                   ??                       |No    No
+Burgertime (M Network)                     ??            U   3   3  |No    No
+Bump 'n' Jump (M Network)                  ??            R   4   3  |No    No
+Deadly Discs (M Network's Tron's Deadly Discs)
+					   ??            U   3   3  |No    No
+Dungeon Masters                            ??                       |No    No
+Frogs and Flies (M Network)                ??            R   3   4  |No    No
+In Search of the Golden Skull (M Network)  ??            NR         |No    No
+International Soccer (M Network)           ??            U          |No    No
+Kung Fu Superkicks (Xonox)                 ??            R   3   2  |No    No
+Lock 'n Chase (M Network)                  ??            U   3   3  |No    No
+Night Stalker (M Network)                  ??            R   4   3  |No    No
+Space Attack (M Network)                   ??            U   3   4  |No    No
+Star Strike (M Network)                    ??            U   4   3  |No    No
+Super Challenge Baseball (M Network)       ??            U          |No    No
+Super Challenge Football (M Network)       ??            U          |No    No
+
+
+
+
+
+***********************************************************************
+*     Telesys                                                         *
+***********************************************************************
+
+Name                                       Telesys    Rarity Gr  Pl  Man? Have?
+					   Model No.
+
+Coco Nuts                                  1001          R   3   3  |No    Yes
+Cosmic Creeps                              1002          R   3   3  |Yes   Yes
+Fast Food                                  1003          R   3   4  |No    Yes
+Ram It                                     1004          ER         |No    No
+Star Gunner                                1005          ER  2   4  |No    Yes
+Demolition Herby                           1006          ER  2   3  |No    Yes
+Baby Boom Boom                             ??            NR         |No    No
+Bouncing Baby Monkeys                      ??            UR         |No    No
+Brain Ball                                 ??            NR         |No    No
+The Impossible Game                        ??            UR         |No    No
+Space Maze                                 ??                       |No    No
+Up & Atom                                  ??            NR         |No    No
+			    
+
+
+
+***********************************************************************
+*     Tigervision                                                     *
+***********************************************************************
+
+Name                                       Tigervision       Gr  Pl  Man? Have?
+					   Model No.   Rarity
+
+King Kong                                  7-001         R   3   2  |Yes   Yes
+Jawbreaker                                 7-002         R   3   4  |No    Yes
+Threshold                                  7-003         R   4   4  |Yes   Yes
+River Patrol                               7-004         ER         |No    No
+Marauder                                   7-005         ER  2   4  |No    Yes
+Springer                                   7-006         ER  3   3  |Yes   Yes
+Polaris                                    7-007         ER  3   4  |No    Yes
+Miner 2049er                               7-008         ER  4   2  |Yes   Yes
+Intuition                                  7-009         ER         |No    No
+Scraper Caper                              7-010         ER         |No    No
+Miner 2049er Volume II                     7-011         ER  4   3  |No    Yes
+Espial                                     7-012         ER  4   4  |Yes   Yes
+Changes                                    7-013         NR         |No    No
+Sky Lancer                                 7-014         NR         |No    No
+Super Crush                                7-015         NR         |No    No
+Condor Attack                              7-???         NR         |No    No
+B.C.'s Quest For Tires                     7-???         NR         |No    No
+B.C.'s Quest For Tires II: Grog's Revenge  7-???         NR         |No    No
+
+
+
+
+
+
+***********************************************************************
+*     20th Century Fox Video Games                                    *
+***********************************************************************
+
+Name                                       Fox        Rarity Gr  Pl  Man? Have?
+					   Model No.
+
+Worm War I (Sirius)                        11001         U   2   4  |Yes   Yes
+Beany Bopper (Sirius)                      11002         R   3   4  |Yes   Yes
+Fast Eddie (Sirius)                        11003         U   3   3  |Yes   Yes
+Deadly Duck (Sirius)                       11004         R   3   4  |Yes   Yes
+Mega Force                                 11005         R   4   3  |Yes   Yes
+Alien                                      11006         R   4   3  |No    Yes
+Turmoil                                    11007         U   3   5  |Yes   Yes
+Fantastic Voyage                           11008         R   3   3  |No    Yes
+Crypts of Chaos                            11009         R   3   4  |Yes   Yes
+M*A*S*H                                    11011         U   3   3  |Yes   Yes
+Bank Heist                                 11012         R   3   4  |Yes   Yes
+Porky's                                    11013         R   4   3  |Need! Yes
+Flash Gordon                               11015         R   4   5  |No    Yes
+Revenge of the Beefsteak Tomatoes          11016         R   3   4  |No    Yes
+The Fall Guy                               11018         NR         |No    No
+The Earth Dies Screaming                   11020         R   3   4  |No    Yes
+SpaceMaster X-7                            11022         ER  4   4  |No    Yes
+Meltdown                                   11029         ER         |No    No
+Crash Dive                                 11031         ER  4   3  |Need! Yes
+Alligator People                           ??            NR         |No    No
+Butch Cassidy and the Sundance Kid         ??            NR         |No    No
+Entity                                     ??            NR         |No    No
+M*A*S*H II                                 ??            NR         |No    No
+9 to 5                                     ??            NR         |No    No
+Pick Up                                    ??            NR         |No    No
+Save the Whales                            ??            NR         |No    No
+Six Pack                                   ??            NR         |No    No
+Surfing                                    ??            NR         |No    No
+The Day the Earth Stood Still              ??            NR         |No    No
+The Entity                                 ??            NR         |No    No
+The St. Valentine's Day Massacre           ??            NR         |No    No
+Voyage to the Bottom of the Sea            ??            NR         |No    No
+
+
+
+
+
+
+***********************************************************************
+*     U.S. Games                                                      *
+***********************************************************************
+
+Name                                       U.S. Games        Gr  Pl  Man? Have?
+					   Model No.   Rarity
+
+Space Jockey (Vidtec)                      VC 1001       C   3   3  |Yes   Yes
+Sneak 'n Peek (Vidtec)                     VC 1002       R   3   3  |Yes   Yes
+Word Zapper (Vidtec)                       VC 1003       U   3   3  |Yes   Yes
+Commando Raid (Vidtec)                     VC 1004       R   3   2  |Yes   Yes
+"Name This Game"                           VC 1007       R   3   2  |Yes   Yes
+Octopus                                    VC 1007       ER  3   2  |No    No
+Towering Inferno                           VC 1009       U   3   3  |Yes   Yes
+M.A.D.                                     VC 1012       R   3   3  |Yes   Yes
+Gopher                                     VC 2001       R   3   4  |No    Yes
+Squeeze Box                                VC 2002       ER  3   4  |Yes   Yes
+Eggomania                                  VC 2003       R   3   4  |Yes   Yes
+Catch the Fly                              VC 2004       NR  3   3  |No    No
+Picnic                                     VC 2004       ER  3   3  |No    Yes
+Piece o' Cake                              VC 2005       ER  3   3  |No    Yes
+Raft Rider                                 VC 2006       ER  3   3  |No    Yes
+Entombed                                   VC 2007       ER  3   4  |Yes   Yes
+Darts                                      VC ????       NR         |No    No
+Trail of the Pink Panther                  VC ????       NR         |No    No
+
+
+
+
+
+***********************************************************************
+*     Xonox                                                           *
+***********************************************************************
+
+Name                                       Xonox      Rarity Gr  Pl  Man? Have?
+					   Model No.
+
+/ Ghost Manor                              6002          ER  3   3  |Yes   No
+\ Chuck Norris Superkicks                  6002          ER  3   2  |No    No
+/ Chuck Norris Superkicks                  6003          R   3   2  |No    No
+\ Spike's Peak                             6003          R   3   3  |Yes   No
+/ Ghost Manor                              6004          ER  3   3  |Yes   No
+\ Artillery Duel                           6004          ER  3   2  |Yes   No
+/ Ghost Manor                              6210          U   3   3  |Yes   Yes
+\ Spike's Peak                             6210          U   3   3  |Yes   Yes
+/ Robin Hood                               6220          R   3   3  |No    Yes
+\ Sir Lancelot                             6220          R   3   3  |No    Yes
+/ Artillery Duel                           6230          R   3   2  |Yes   Yes
+\ Chuck Norris Superkicks                  6230          R   3   2  |No    Yes
+/ Artillery Duel                           7210          ER  3   2  |Yes   Yes
+\ Spike's Peak                             7210          ER  3   3  |Yes   Yes
+Spike's Peak                               99001         ER  3   3  |Yes   No
+Ghost Manor                                99002         ER  3   3  |Yes   Yes
+Chuck Norris Superkicks                    99003         ER  3   2  |No    Yes
+Artillery Duel                             99004         ER  3   2  |Yes   No
+Robin Hood                                 99005         ER  3   3  |No    No
+Sir Lancelot                               99006         ER  3   3  |No    No
+Tomarc the Barbarian                       99007         R   3   4  |Yes   Yes
+Motocross Racer                            99008         R          |No    No
+/Chuck Norris Superkicks                   X202X         NR  3   2  |No    No
+\Hercules                                  X202X         NR         |No    No
+/Thundarr the Barbarian I                  X404X         NR         |No    No
+\Thundarr the Barbarian II                 X404X         NR         |No    No
+/Chuck Norris Superkicks                   ??            ER  3   2  |No    No
+\Robin Hood                                ??            ER  3   3  |No    No
+
+
+
+
+
+***********************************************************************
+*     brandless                                                       *
+***********************************************************************
+I don't know just what to call these.  "The 2600 Connection" has referred
+to some games as being made by "Puzzy."  The boxes are quite generic-looking,
+though they do have art, which is also on the label;  however, there is abso-
+lutely no brand name on the box.  There is, however, a sticker on the box
+which reads "MADE IN TAIWAN."  Of course, practically all cartridges were 
+probably assembled in Taiwan.  There are no instruction booklets in these boxes.
+The only instructions of any sort are on the back of the box, in "pigeon
+English" (i.e. bad English;  'course, being unilingual myself, I can't make
+fun).  I consider them all to have a rarity of "ER", though of course if
+you're in Asia that may not apply.  A number in brackets, like "[1]", means
+there's a comment about the cartridge at the end of this section.
+
+Cartridge               |------ Pirated Game's: ------|
+Name                    Name            Maker           Gr  Pl      Box   Have?
+
+Seesaw                  Circus Atari    Atari           3   5      |No    No
+Football                Football        Atari           2   4      |No    No
+Earth Attack            Defender        Atari           3   3      |No    No
+Puzzled World           Maze Craze      Atari           3   5      |No    No
+Chess [1]               Othello         Atari           3   4      |No    No
+Boom Bang               Crackpots       Activision      4   3      |Yes   Yes
+Pitfall                 Pitfall!        Activision      4   5      |No    No
+Spider                  Spider Fighter  Activision      3   4      |Yes   Yes
+Tennis                  Tennis          Activision      3   3      |No    No
+Pyramid War [2]         Chopper Command Activision      3   4      |Yes   Yes
+Bobby Is Going Home     Bobby Is Going Home
+					Bit Corp.       3   2      |Yes   Yes
+Mr. Postman             Mr. Postman     Bit Corp.       3   2      |Yes   Yes
+Space Tunnel            Space Tunnel    Bit Corp.       2   2      |Yes   Yes
+Fancy Car               Bank Heist      Fox Video Games 3   4      |No    No
+My Way                  My Way          Funvision       2   4      |Yes   Yes
+S.O.S.                  Fire Fighter    Imagic          3   3      |No    No
+Frogger                 Frogger         Parker Bros.    4   5      |No    No
+Fishing                 Sea Hunt        Sancho          3   2      |No    No
+Cross Force             Cross Force     Spectravision   3   4      |No    No
+Farmer Dan              Gopher          U.S. Games      3   4      |No    No
+Dancing Plate           Dishaster       Zimag           3   3      |Yes   Yes
+Valleyball              ??              ??                         |No    No
+Little Bear             ??              ??                         |No    No
+
+Comments:
+[1] That's right:  the game's called "Chess," but it's really Othello.  And to
+    get even stranger, the box art (and the identical cartridge label art) are
+    unquestionably a depiction of 3-D Tic-Tac-Toe.  Somebody was obviously
+    confused.
+[2] The graphics bitmaps are different, but the game and the program are
+    identical, as are the colors.  The word "Activision" has been removed from
+    the bottom of the screen, but the Copyright notice still scrolls slowly up
+    every few seconds.)
+
+
+
+
+
+
+
+
+
+
+
+***********************************************************************
+*     Miscellaneous                                                   *
+***********************************************************************
+
+Name                       Maker           Model No. Rarity Gr  Pl  Man? Have?
+
+Crab Control               Action Hi-Tech  605077        UR         |No    No
+F-18 Vs. Aliens            Action Hi-Tech  ??            UR         |No    No
+Galaxy Invader             Action Hi-Tech  ??            UR         |No    No
+Space Grid                 Action Hi-Tech  ??            UR         |No    No
+Tank City                  Action Hi-Tech  ??            UR         |No    No
+War Zone                   Action Hi-Tech  ??            UR         |No    No
+Tax Avoiders               American Videogame            R   3   3  |Yes   Yes
+Power Module 3-D Ghost Attack/Depth Charge
+			   Amiga           1100          NR         |No    No
+Power Module Scavenger Hunt
+			   Amiga           2100          NR         |No    No
+Power Module SAC Alert     Amiga           2105          NR         |No    No
+Power Module 3-D Havoc     Amiga           2110          NR         |No    No
+Power Module Strafe        Amiga           2115          NR         |No    No
+Power Module Mogul Maniac  Amiga           3105          NR         |No    No
+Power Module Surf's Up     Amiga           3110          NR         |No    No
+Power Module Off Your Rocker
+			   Amiga           3115          NR         |No    No
+Mogul Maniac               Amiga           3120          ER  4   3  |No    Yes
+Surf's Up                  Amiga           3125          ER         |No    No
+Off Your Rocker            Amiga           3130          ER  3   4  |No    Yes
+Power Module SAC Alert     Amiga           3135          NR         |No    No
+Power Play Arcade 1        Amiga           ????          NR         |No    No
+Power Play Arcade 2        Amiga           ????          NR         |No    No
+Power Play Arcade 3        Amiga           ????          NR         |No    No
+Power Play Arcade 4        Amiga           ????          NR         |No    No
+Power Play Arcade 5        Amiga           ????          NR         |No    No
+Androman                   Androbot        ??            NR         |No    No
+Malagai                    Answer Software ASC1001       UR         |No    No
+Gauntlet                   Answer Software  (nothing like the 4-player classic)
+					   ASC1002       UR         |No    No
+Confrontation              Answer Software ASC2001       UR         |No    No
+Personal Game Programmer   Answer Software PGP-1         UR         |No    No
+Space Robot                Artic           SM8001        UR         |No    No
+Astrowar                   Artic           SM8002        UR         |No    No
+Death Trap                 Avalon Hill     50010         UR         |No    No
+London Blitz               Avalon Hill     50020         ER  5   4  |Xerox Yes
+Wall Ball                  Avalon Hill     50030         ER  5   4  |Only  No
+Shuttle Orbiter            Avalon Hill     50040         UR         |No    No
+Out of Control             Avalon Hill     50050         UR         |No    No
+Shooting Arcade            Axlon           ??            UR         |No    No
+Assault                    Bomb            CA281         ER         |No    No
+Great Escape               Bomb            CA282         ER         |No    No
+Z-Tack                     Bomb            CA283         ER         |No    No
+Wall Defender              Bomb            CA285         ER         |No    No
+Splendour                  Bomb            ??            NR         |No    No
+Solo                       Broderbund      ??            NR         |No    No
+Sky Blazer                 Broderbund      ??            NR         |No    No
+Picnic                     Carrere Video   USC 2004      ER         |No    No
+Bear Jam                   Chalkboard Inc. ??                       |No    No
+Leonardo's Logo            Chalkboard Inc. ??                       |No    No
+Leo's 'Lectric Paintbrush  Chalkboard Inc. ??                       |No    No
+Leo's Links                Chalkboard Inc. ??                       |No    No
+Logic Master               Chalkboard Inc. ??                       |No    No
+Micro Maestro              Chalkboard Inc. ??                       |No    No
+Music Math                 Chalkboard Inc. ??                       |No    No
+Pogoman                    Computer Magic  ??            ER         |No    No
+Atom Smasher               Cumma           ??                       |No    No
+Look Ahead                 Cumma           ??                       |No    No
+Poltergeist                Cumma           ??                       |No    No
+Donkey Kong                Dactar          0001-50       ER         |No    No
+Tooth Protectors           DSD/Camelot     ??            UR  3   3  |No    Yes
+SoundX                     Ed Federmeyer   ??            ER         |No    No
+Edtris                     Ed Federmeyer   ??            ER         |No    No
+I Want My Mommy            Emag            GN-010        ER         |No    No
+Dishaster                  Emag            GN-020        ER  3   3  |No    No
+Tanks But No Tanks         Emag            GN-030        ER         |No    No
+Cosmic Corridor            Emag            GN-040        ER  2   2  |No    No
+Pizza Chef                 Emag            GN-050        ER         |No    No
+Immies & Aggies            Emag            GN-060        ER         |No    No
+A Mysterious Thief         Emag            GN-070        ER         |No    No
+Fire Spinner               Emag            GN-080        ER         |No    No
+Beginning Algebra          Entex           ??            NR         |No    No
+Beginning Math             Entex           ??            NR         |No    No
+Home Finance               Entex           ??            NR         |No    No
+Logo                       Entex           ??            NR         |No    No
+Number Games               Entex           ??            NR         |No    No
+Speed Reading              Entex           ??            NR         |No    No
+Spelling Games             Entex           ??            NR         |No    No
+Touch Typing               Entex           ??            NR         |No    No
+Word Games                 Entex           ??            NR         |No    No
+Summer Games               Epyx            80561-00250   R   5   4  |Yes   Yes
+Winter Games               Epyx            80561-00251   R   5   4  |Yes   Yes
+California Games           Epyx            80561-00286   R   5   5  |No    Yes
+Super Cycle                Epyx            ??                       |No    No
+Exus Health Cycle Program  Exus            ??                       |No    No
+Foor Craz Control          Exus            ??                       |No    No
+Video Jogger               Exus            ??                       |No    No
+Video Reflex               Exus            ??                       |No    No
+Boing!                     First Star Software
+					   ??            ER  3   4  |Yes   Yes
+Space Monster              Funvision       F2001                    |No    No
+Bowling                    Funvision       ??                       |No    No
+Chess                      Funvision       ??                2   4  |No    No
+Football                   Funvision       ??                3   4  |No    No
+My Way                     Funvision       ??                2   4  |No    No
+Ocean City Defender        Funvision       ??            ER  4   4  |No    No
+Pac-Kong                   Funvision       ??                       |No    No
+Pele's Soccer              Funvision       ??                2   3  |No    No
+Seesaw                     Funvision       ??                3   5  |No    No
+Deep Throat                Games People Play
+					   ??            NR         |No    No
+Jungler                    Gakken          ??            ER         |No    No
+Pooyan                     Gakken          ??            ER         |No    No
+Strategy X                 Gakken          ??            ER         |No    No
+Gamma Attack               Gammation       ??            UR         |No    No
+Sea Monster                Goliath         ??            ER         |No    No
+Time Machine               Goliath         ??            ER         |No    No
+Family Feud                Great Game Co.  ??                       |No    No
+Jeopardy                   Great Game Co.  ??                       |No    No
+Joker's Wild               Great Game Co.  ??                       |No    No
+Password                   Great Game Co.  ??                       |No    No
+The Price is Right         Great Game Co.  ??                       |No    No
+Tic-Tac-Dough              Great Game Co.  ??                       |No    No
+$25,000 Pyramid            Great Game Co.  ??                       |No    No
+Wheel of Fortune           Great Game Co.  ??                       |No    No
+Challenge                  Home Entertainment Suppliers      2   4  |No    No
+Hot Action Pak             Home Entertainment Suppliers             |No    No
+Mega Fun Pak               Home Entertainment Suppliers             |No    No
+My Golf                    Home Entertainment Suppliers             |No    No
+Pigs N Wolf                Home Entertainment Suppliers             |No    No
+Rad Action Pak             Home Entertainment Suppliers             |No    No
+Smash Hit Pak              Home Entertainment Suppliers             |No    No
+Sports Action Pak          Home Entertainment Suppliers             |No    No
+Star Warrior               Home Entertainment Suppliers             |No    No
+Super Action Pak           Home Entertainment Suppliers             |No    No
+Super Hit Pak              Home Entertainment Suppliers             |No    No
+Wall Defender              Home Entertainment Suppliers             |No    No
+Robot Fight                Homevision      1                        |No    No
+War 2000                   Homevision      2                        |No    No
+Gogo? Home Monster         Homevision      3                        |No    No
+World? Trap?               Homevision      9                        |No    No
+Asteroid Fire              Homevision      11                       |No    No
+Sky Alien                  Homevision      12                       |No    No
+Base Attack                Homevision      13                       |No    No
+Wall Break                 Homevision      14                       |No    No
+Lilly Adventure            Homevision      17                       |No    No
+Col 'N'                    Homevision      ??                       |No    No
+Cosmic War                 Homevision      ??                       |No    No
+Frisco                     Homevision      ??                       |No    No
+IQ 180                     Homevision      ??                       |No    No
+Magic Carpet               Homevision      ??                       |No    No
+Panda Chase                Homevision      ??                       |No    No
+Parachute                  Homevision      ??                       |No    No
+Plate Mania                Homevision      ??                       |No    No
+Racing Car                 Homevision      ??                       |No    No
+Repro Cart                 Homevision      83014                    |No    No
+Tanks War                  Homevision      ??                       |No    No
+Teddy Apple                Homevision      ??                       |No    No
+Tennis                     Homevision      ??                       |No    No
+Topsy                      Homevision      ??                       |No    No
+Zoo Fun                    Homevision      ??                       |No    No
+128 in 1                   Hozer Video     ??            ER         |No    No
+Blockade Runner            Interphase      ??                       |No    No
+Sewer Sam                  Interphase      ??                       |No    No
+Meteor Defense            ITT Family Games 554-33391                |No    No
+Pooyan                     Konami          001           ER  3   3  |No    Yes
+Strategy X                 Konami          010           ER  3   3  |No    Yes
+Marine Wars                Konami          011           ER         |No    No
+Super Scramble             Konami          ??            NR         |No    No
+Star Trek                  Milton Bradley  3500          NR         |No    No
+Scramble                   Milton Bradley  3501          NR         |No    No
+Survival Run               Milton Bradley  4362          R   4   3  |No    Yes
+Spitfire Attack            Milton Bradley  4363          U   3   2  |Yes   Yes
+Battle of the Sexes        Multivision     ??            NR         |No    No
+Getcha                     Multivision     ??            NR         |No    No
+Harem                      Multivision     ??            NR         |No    No
+Harem 1                    Multivision     ??            NR         |No    No
+Harem 2                    Multivision     ??            NR         |No    No
+Heartbreak                 Multivision     ??            NR         |No    No
+The Rescue of Emmanuelle   Multivision     ??            NR         |No    No
+Tic-Tac-Strip              Multivision     ??            NR         |No    No
+Sorcerer                   Mythicon        MA-1001       U   1   1  |Yes   Yes
+Fire Fly                   Mythicon        MA-1002       U   1   1  |Yes   Yes
+Star Fox                   Mythicon        MA-1003       U   1   1  |No    Yes
+Splendour                  On Base Co.     ??                       |No    No
+Fire!                      Palmex          ??            UR         |No    No
+Pink Panther               Probe 2000      ??            UR         |No    No
+Power Lords                Probe 2000      ??            NR         |No    No
+War Room                   Probe 2000      ??            NR         |No    No
+Lord of the Dungeon        Probe 2000      ??            NR         |No    No
+Glib                       QDI             87            UR         |No    No
+Ripley's Believe It or Not Roklan          ??            NR         |No    No
+Acid Drop                  Salu            ??            ER  2   4  |Yes   Yes
+Ghostbusters II            Salu            ??            ER  4   4  |Yes   Yes
+Pick 'n Pile               Salu            ??            ER  3   5  |Yes   Yes
+Exocet                     Sancho          TEC001        ER  2   2  |No    No
+Sea Hawk                   Sancho          TEC002        ER  2   2  |No    No
+Skin Diver                 Sancho          TEC003        ER         |No    No
+Nightmare                  Sancho          TEC004        ER         |No    No
+Dice Puzzle                Sancho          TEC005        ER         |No    No
+Forest                     Sancho          TEC006        ER         |No    No
+Glib                       Selchow&Righter ??            UR         |No    No
+Eli's Ladder               Simage          ??            UR         |No    No
+Squish 'em                 Sirius          ??            NR         |No    No
+Music Machine              Sparrow         GCG 1001T     UR         |No    No
+Football Fanatic           Sports Comp-U-Stat
+					   ??            NR         |No    No
+Knight Rider               Studio Games    ??            NR         |No    No
+Magnum PI                  Studio Games    ??            NR         |No    No
+Quest for Quintana Roo     Sunrise         1603          ER  3   4  |No    No
+Snowplow                   Sunrise         ??            ER         |No    No
+Glacier Patrol             Sunrise         ??            ER  2   4  |No    No
+Noah and the Ark           Sunrise         ??                       |No    No
+Time Race                  Suntek          1             ER         |No    No
+Galactic                   Suntek          2             ER         |No    No
+Pac-Kong                   Suntek          3             ER         |No    No
+Pyramid War                Suntek          4             ER  3   4  |No    No
+Netmaker                   Suntek          6             ER         |No    No
+Bermuda                    Suntek          9             ER         |No    No
+Relax                      Synapse         ??            NR         |No    No
+Kamikaze Saucers           Syncro          ??                       |No    No
+Video Fitness              System Garden   ??                       |No    No
+Adventures of GX-12        Technovision    ??                3   4  |No    No
+Flipper                    Technovision    ??                       |No    No
+Formula I                  Technovision    ??                       |No    No
+Jungle Jim                 Technovision    ??                       |No    No
+Laser Raid                 Technovision    ??                       |No    No
+Moon Base                  Technovision    ??                       |No    No
+Motor Mouth                Technovision    ??                       |No    No
+Mouse Highway              Technovision    ??                       |No    No
+Nuts                       Technovision    ??                       |No    No
+Pharoah's Curse            Technovision    ??                       |No    No
+Save Our Ship              Technovision    ??                       |No    No
+Silly Safari               Technovision    ??                       |No    No
+Shoot-Out                  Technovision    ??                       |No    No
+Stone Age                  Technovision    ??                       |No    No
+Tachyon Beam               Technovision    ??                       |No    No
+Jumbo Jet Pilot            Thorn EMI       ??            UR         |No    No
+BMX Airmaster              TNT Games       26192         ER  4   5  |Yes   Yes
+Spider Kong                Ultravision     1006                     |No    No
+Quest for the Idol         Ultravision     1007                     |No    No
+Condor Attack              Ultravision     1043                     |No    No
+Air-Sea Attack             Ultravision     ??                       |No    No
+Astro-Battle               Ultravision     ??                       |No    No
+B-52 Bomber                Ultravision     ??                       |No    No
+Baseball Best              Ultravision     ??                       |No    No
+Chips                      Ultravision     ??                       |No    No
+Dare Diver                 Ultravision     ??                       |No    No
+Emergency!                 Ultravision     ??                       |No    No
+Karate                     Ultravision     ??                       |No    No
+Quest For the Idol         Ultravision     ??                       |No    No
+Sabotage                   Ultravision     ??                       |No    No
+Space Robot                Ultravision     ??                       |No    No
+Space War                  Ultravision     ??                       |No    No
+Spider Kong                Ultravision     ??                       |No    No
+Swimming Meet              Ultravision     ??                       |No    No
+Unexpected Dangers         Ultravision     ??                       |No    No
+BASIC                      Unitronics      ??            NR         |No    No
+Dazzler                    Unitronics      ??            NR         |No    No
+X-Man                      Universal Gamex GX-001        UR  2   3  |No    Yes
+Rescue Terra I             Venture Vision  VV2001        ER         |No    No
+Inner Space                Venture Vision  ??                       |No    No
+Solar Defense              Venture Vision  ??            NR         |No    No
+Missile Control            Video Gems      ??            ER         |No    No
+Misison Survive            Video Gems      ??            ER         |No    No
+Steeple Chase              Video Gems      ??            ER         |No    No
+Surfer's Paradise: But Danger Below!
+			   Video Gems      ??            ER         |No    No
+Treasure Below             Video Gems      ??            ER         |No    No
+Color Bar Generator        Videosoft       VS1008        UR         |No    No
+Texas Chainsaw Massacre    Wizard Video    008           ER  3   2  |No    Yes
+Halloween                  Wizard Video    007           ER  3   3  |No    Yes
+Flesh Gordon               Wizard Video    ??            NR         |No    No
+Tanks But No Tanks         Zimag           707-111       R   2   2  |No    Yes
+Cosmic Corridor            Zimag           708-111       R   2   2  |No    No
+I Want My Mommy            Zimag           710-111       ER  3   3  |No    Yes
+Dishaster                  Zimag           711-111       R   3   3  |No    Yes
+Pizza Chef                 Zimag           ???-111       ER         |No    No
+Mr. Postman                Brasur, Pat     ??                       |No    No
+Nerd Alert                 ??              ??            NR         |No    No
+Dragon Defender            ??              TP-605        ER         |No    No
+Hole Hunter                ??              TP-606        ER         |No    No
+Farmyard Fun               ??              TP-617        ER         |No    No
+16 Games in One            ??              ??            ER         |No    No
+Brick Kick                 ??              ??            ER         |No    No
+Challenge                  ??              ??            ER  2   4  |No    No
+Clown Down Town            ??              ??            ER         |No    No
+Criminal Pursuit           ??              ??            ER         |No    No
+Dragon Treasure            ??              ??            ER         |No    No
+Frontline                  ??              ??            ER  2   5  |No    No
+Inca Gold                  ??              ??            ER         |No    No
+Laser Volley               ??              ??            ER         |No    No
+Lie Low                    ??              ??            ER         |No    No
+Lost and Found             ??              ??            ER         |No    No
+Missile Attack             ??              ??            ER         |No    No
+Oops                       ??              ??            ER         |No    No
+Planet Protector           ??              ??            ER         |No    No
+Radar                      ??              ??            ER         |No    No
+Ski Hunt                   ??              ??            ER         |No    No
+Ski Runner                 ??              ??            ER         |No    No
+Time Warp                  ??              ??            ER         |No    No
+Tom Boy                    ??              ??            ER         |No    No
+Treasure Island            ??              ??            ER         |No    No
+UFO Patrol                 ??              ??            ER         |No    No
+Wolf Fighting              ??              ??            ER         |No    No

@@ -1,0 +1,46 @@
+# .xinitrc - OpenWindows startup script.
+
+if [ -f $HOME/.Xdefaults ]; then
+    xrdb $HOME/.Xdefaults		# Load Users X11 resource database
+else
+    xrdb $OPENWINHOME/lib/Xdefaults 	# Load Default X11 resource database
+fi
+
+# (commented below because not using this X server)
+#$OPENWINHOME/lib/openwin-sys		# OpenWindows system initialization
+
+# Install function key "F1" as an Open Look "Help" key
+# This precludes its use by applications
+# If your applications use F1 for anything else, comment out the following line
+#xmodmap -e 'keysym F1 = Help'
+
+eval `svenv -env`			# SunView binary compatibility
+#olwm -3 &				# OpenLook Window Manager (3-D look)
+
+# Give the  window manager time to come up
+sleep 5 & pid=$!
+#/tools/teleuse/TeleUSE/bin/mwm & wmpid=$!
+fvwm & wmpid=$!
+wait $pid
+
+
+# Set root window attributes
+xsetroot -solid blue3 -cursor_name left_ptr
+
+# My applications
+xconsole -geometry 300x70-0-0 &
+xbiff -geometry 50x70+0+0 &
+xterm -T "`uname -nr`" -n "`uname -nr`" -geometry 80x40 -fn 9x15 -sb &
+xterm -T "`uname -nr`" -n "`uname -nr`" -geometry 80x40 -fn 9x15 -sb &
+xterm -T "`uname -nr`" -n "`uname -nr`" -geometry 80x40 -fn 9x15 -sb &
+xterm -T "`uname -nr`" -n "`uname -nr`" -geometry 80x40 -fn 9x15 -sb &
+xclock -geometry 100x100-0+0 &
+
+# Set the security to this host
+# xhost +`hostname`
+
+# Don't exit until the window manager is finished
+wait $wmpid
+
+
+

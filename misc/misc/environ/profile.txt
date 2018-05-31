@@ -1,0 +1,120 @@
+#
+# @(#)profile_template	1.7 94/02/04 11:38:48
+# Template for Login Init file for Korn Shell environment
+#
+
+# do not limit size of dumpfile to 0 blocks
+# ulimit -c 0
+
+# save the name of the OS
+uname=`uname -s`
+# if input device is a terminal, set terminal options
+tty -s
+if [ $? = 0 ]
+then
+	#stty crt
+	if [ -x /usr/ucb/tset ]
+	then 	/usr/ucb/tset -I
+	fi
+fi
+
+
+if [[ $TERM = dialup || $TERM = unknown ]] 
+then
+	if [ -x /usr/ucb/tset ]
+	then	set -f     # disable pathname expansion  (noglob)
+		eval `/usr/ucb/tset -Q -m 'dialup:?vt100'`
+		set +f     # enable pathname expansion
+	fi
+	print TERM=$TERM
+elif [[ $TERM != sun && $TERM != sun-cmd ]]
+then
+	if [ -x /usr/ucb/tset ]
+	then	set -f     # disable pathname expansion  (noglob)
+		eval `/usr/ucb/tset -sQ`
+		set +f     # enable pathname expansion
+	fi
+	print TERM = $TERM
+fi
+
+# set up additional path locations here, using a MY_PATH
+# environment variable
+# the common profile will append this to the path it sets up
+export MY_PATH=$HOME/bin
+
+#setup the directory path for the common project files and
+# execute the baseline common project login file
+
+# IF it doesnt exist execute the old profile instead
+export IATC_LOCAL=/iatc/setup
+if [ -r ${IATC_LOCAL}/common_profile ]
+then	. ${IATC_LOCAL}/common_profile
+
+# choose your editor gentlemen
+#set -o vi
+#set -o emacs
+
+############################################################
+ 
+# User specific environment variables
+
+export LPDEST=mar313354lp1
+export PRINTER=mar313354lp1
+
+# add useful directories to CDPATH for use by cd
+export CDPATH=.:$HOME
+
+# disable control-d exit
+set -o ignoreeof
+
+# examples of local functions
+
+# function to give a sun window a label
+function label
+{
+  # put the escape character into a variable to avoid messing up
+  # more'ing of this file
+  esc=""
+  print -n "${esc}]l$*${esc}\\"
+  print -n "${esc}]L$*${esc}\\"
+}
+
+# function to give an xterm a label
+function xlabel
+{
+  # put the escape character into a variable to avoid messing up
+  # more'ing of this file
+  esc=""
+  print -n "${esc}]0;$*"
+}
+
+
+# MOST IMPORTANT to cause .kshrc to be sourced now and by subsequent ksh
+export ENV=$HOME/.kshrc
+
+# IF console then start up X
+if [ `tty` = /dev/console ]
+then
+#print A
+	case $uname in
+
+	SunOS) 
+        export ABHOME=/tools/answerbook
+        export OPENWINHOME=/usr/openwin 
+	export FONTPATH=$ABHOME/lib/fonts
+        export HELPPATH=$ABHOME/lib/help
+        export PATH=$PATH:$ABHOME/bin
+        exec $OPENWINHOME/bin/openwin
+	;;
+
+	*)
+	print "Need to modify $HOME/.profile for $uname OS"
+	;;
+	esac
+
+fi
+
+# /iatc/setup stuff does not exist
+elif [ -r $HOME/.profile.old ]
+then	. $HOME/.profile.old
+fi

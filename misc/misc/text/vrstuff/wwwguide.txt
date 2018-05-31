@@ -1,0 +1,1807 @@
+
+Entering the World-Wide Web: A Guide to Cyberspace
+
+------------------------------------------------------
+By Kevin Hughes
+Enterprise Integration Technologies
+May 1994
+------------------------------------------------------
+
+
+Table of Contents
+~~~~~~~~~~~~~~~~~
+
+* What is the World-Wide Web?
+* What is hypertext and hypermedia?
+* What is the Internet?
+* How was the Web created?
+* How popular is the Web?
+  * A Case Study - Honolulu Community College
+  * The Popularity of Other Web Sites
+  * Who Travels the Web?
+  * Why Is The Web So Popular?
+* What does the Web look like?
+* What is Mosaic?
+* What can Mosaic do?
+* What is available on the Web?
+* How does the Web work?
+  * HTML - The Hypertext Markup Language
+  * About Uniform Resource Locators
+* What software is available?
+* How can I get more information?
+  * Browsers Accessible by telnet
+  * General Web Information
+  * Information on HTML and HTTP
+  * Information and Reports on Multimedia and Hypermedia
+  * Obtaining Web Browsers and Servers
+* Interesting Places on the Web
+  * Commercial Sites
+  * Country Sites
+  * Educational Sites
+  * Interactive Sites
+  * Legal Information and Government Sites
+  * Literature
+  * Museums and Art
+  * Music and Audio
+  * Organizations
+* Appendix A: A Hypermedia Timeline
+* Index/Glossary
+
+------------------------------------------------------
+
+"The problem with the future is that it usually arrives before we're ready
+for it."
+
+Thanks go to Ken Hensarling and Evan Tector, who helped with the first
+version in Hawaii, William Wong for EIT nitpicking, Roy Fielding for
+tightening up my writing, and Tim Berners-Lee for clarifying that the
+World-Wide Web is not the Internet!
+
+Version 1.0: August 1993
+Version 4.0: September 21, 1993
+Version 5.0: October 9, 1993
+Version 6.0: March 18, 1994
+Version 6.1: May 20, 1994
+Version 6.1 text-only: May 20, 1994
+
+The opinions stated in this document are solely those of the author and do
+not necessarily represent the views of Enterprise Integration Technologies.
+
+This document is Copyright (c) 1994 by Kevin Hughes. It may be freely
+distributed in any format as long as this disclaimer is included and the
+textual and graphic contents are not altered. Text-only distribution is
+permitted. A PostScript copy of this document can be obtained by FTP'ing to
+ftp.eit.com. Log in as anonymous and go to the /pub/web.guide directory.
+Comments, questions, corrections, and suggestions relating to this guide are
+welcomed and can be sent to kevinh@eit.com.
+
+Enterprise Integration Technologies
+459 Hamilton Avenue
+Palo Alto, CA 94301
+Information: (415) 617-8000
+Fax: (415) 617-8019
+World-Wide Web: http://www.eit.com/
+
+------------------------------------------------------
+
+
+What is the World-Wide Web?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+For fifty years, people have dreamt of the concept of a universal database of
+knowledge - information that would be accessible to people around the world
+and link easily to other pieces of information so that any user could quickly
+find the things most important to themselves. It was in the 1960's when this
+idea was explored further, giving rise to visions of a "docuverse" that
+people could swim through, revolutionizing all aspects of human-information
+interaction. Only now has the technology caught up with these dreams, making
+it possible to implement them on a global scale.
+
+The World-Wide Web is officially described as a "wide-area hypermedia
+information retrieval initiative aiming to give universal access to a large
+universe of documents". What the World-Wide Web (WWW, W3) project has done is
+provide users on computer networks with a consistent means to access a
+variety of media in a simplified fashion. Using a popular software interface
+to the Web called Mosaic, the Web project has changed the way people view and
+create information - it has created the first true global hypermedia network.
+
+The earliest visions of such systems had as their goal the advancement of
+science and education. Although the World-Wide Web project has the potential
+to make a significant impact in these areas, it is poised to revolutionize
+many elements of society, including commerce, politics, and literature.
+
+
+What is hypertext and hypermedia?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The operation of the Web relies mainly on hypertext as its means of
+interacting with users. Hypertext is basically the same as regular text - it
+can be stored, read, searched, or edited - with an important exception:
+hypertext contains connections within the text to other documents.
+
+For instance, suppose you were able to somehow select (with a mouse or with
+your finger) the word "hypertext" in the sentence before this one. In a
+hypertext system, you would then have one or more documents related to
+hypertext appear before you - a history of hypertext, for example, or the
+Webster's definition of hypertext. These new texts would themselves have
+links and connections to other documents - continually selecting text would
+take you on a free-associative tour of information. In this way, hypertext
+links, called hyperlinks, can create a complex virtual web of connections.
+
+  [image] Figure 1. How hypertext works.
+
+Hypermedia is hypertext with a difference - hypermedia documents contain
+links not only to other pieces of text, but also to other forms of media -
+sounds, images, and movies. Images themselves can be selected to link to
+sounds or documents. Hypermedia simply combines hypertext and multimedia.
+Here are some simple examples of hypermedia:
+
+     * You are reading a text on the Hawaiian language.
+       You select a Hawaiian phrase, then hear the phrase as
+       spoken in the native tongue.
+       
+     * You are a law student studying the California Revised
+       Statutes. By selecting a passage, you find precedents
+       from a 1920 Supreme Court ruling stored at Cornell.
+       Cross-referenced hyperlinks allow you to view any one of
+       520 related cases with audio annotations.
+
+     * Looking at a company's floor plan, you are able to select
+       an office by touching a room. The employee's name and picture
+       appears with a list of their current projects.
+
+     * You are a scientist doing work on the cooling of steel
+       springs. By selecting text in a research paper, you are
+       able to view a computer-generated movie of a cooling spring.
+       By selecting a button you are able to receive a program which
+       will perform thermodynamic calculations.
+       
+     * A student reading a digital version of an art magazine can
+       select a work to print or display in full. Rotating movies of
+       sculptures can be viewed. By interactively controlling the movie,
+       the student can zoom in to see more detail.
+       
+The Web, although still in its infancy, has already enabled many of these
+examples. It facilitates the easy exchange of hypermedia through networked
+environments from anything as small as two Macintoshes connected together to
+something as large as the global Internet.
+
+
+What is the Internet?
+~~~~~~~~~~~~~~~~~~~~~
+
+The Internet is the catch-all word used to describe the massive world-wide
+network of computers. The word "internet" literally means "network of
+networks". In itself, the Internet is comprised of thousands of smaller
+regional networks scattered throughout the globe. On any given day it
+connects roughly 20 million users in over 50 countries. The World-Wide Web is
+mostly used on the Internet; they do not mean the same thing. The Web refers
+to a body of information - an abstract space of knowledge, while the Internet
+refers to the physical side of the global network, a giant mass of cables and
+computers.
+
+  [image] Figure 2. The countries in black have Internet
+                    connectivity. The number of people with Internet
+                    access in these countries varies widely, however.
+                    Countries in white may have access to email, local
+                    isolated networks, or no connectivity at all.
+                    Statistics available by FTP from ftp.cs.wisc.edu.
+
+Nobody "owns" the Internet - although there are companies that help manage
+different parts of the networks that tie everything together, there is no
+single governing body that controls what happens on the Internet. The
+networks within different countries are funded and managed locally according
+to local policies.
+
+Having access to the Internet usually means that one has access to a number
+of basic services: electronic mail, interactive conferences, access to
+information resources, network news, and the ability to transfer files.
+
+The World-Wide Web uses the Internet to transmit hypermedia documents between
+computer users internationally. Much in the same way, nobody "owns" the
+World-Wide Web. People are responsible for the documents they author and make
+available publicly on the Web. Via the Internet, hundreds of thousands of
+people around the world are making information available from their homes,
+schools, and workplaces.
+
+It's possible to use World-Wide Web software without having to use the
+Internet. But Internet access is necessary in order to make full use of and
+participate in the World-Wide Web. To get more information on the Internet,
+how to obtain Internet access, and how to use the Internet, see the section
+"How can I get more information?"
+
+
+How was the Web created?
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+The World-Wide Web began in March 1989, when Tim Berners-Lee of the European
+Particle Physics Laboratory (known as CERN, a collective of European
+high-energy physics researchers) proposed the project to be used as a means
+of transporting research and ideas effectively throughout the organization.
+Effective communications was a goal of CERN's for many years, as its members
+were located in a number of countries.
+
+The initial project proposal outlined a simple system of using networked
+hypertext to transmit documents and communicate among members in the
+high-energy physics community. There was no intention of adding sound or
+video, and the capability to transmit images was not considered.
+
+By the end of 1990, the first piece of Web software was introduced on a NeXT
+machine. It had the capability to view and transmit hypertext documents to
+other people on the Internet, and came with the capability to edit hypertext
+documents on the screen. Demonstrations were given to CERN committees and
+seminars, and a demonstration was given at the Hypertext '91 conference.
+
+Throughout 1992 Tim continued to speak on and evangelize the project, as
+small handfuls of developers began to volunteer their time into working on
+small pieces of the World-Wide Web puzzle.
+
+Since then hundreds of people throughout the world have contributed their
+time writing Web software and documents or telling others about the Web. In a
+way never envisioned by the original project group, the project has reached
+global proportions. In the first four months of 1994 alone, the World-Wide
+Web has been mentioned by CNN, the Wall Street Journal, the Economist,
+Fortune magazine, the New York Times, and dozens of computer publications.
+
+
+How popular is the Web?
+~~~~~~~~~~~~~~~~~~~~~~~
+
+From January to December 1993, the amount of network traffic (in bytes)
+across the National Science Foundation's (NSF's) North American network
+attributed to Web use multiplied by 187 times. In December 1993 the Web was
+ranked 11th of all network services in terms of sheer byte traffic - just
+twelve months earlier, its rank was 127.
+
+  [image] Figure 3. World-Wide Web growth. Statistics available
+                    by FTP from nic.merit.edu.
+
+In June 1993, Matthew Gray at MIT ran a small program which automatically
+travels links within the Web network to try to determine just how many sites
+there are that offer information over the World-Wide Web. His small
+"World-Wide Web Wanderer" found around 100 sites that month and over two
+hundred thousand documents. In March 1994 his robot found over 1,200 unique
+sites. Even though the robot's programming was improved somewhat, and a
+number of factors may have affected the final count, the growth rate of the
+Web from the last half of 1993 throughout the first half of 1994 is amazing
+and continues to increase.
+
+Brian Pinkerton at the University of Washington has been maintaining a
+similar program called the "WebCrawler". Its last run in mid-May 1994 found
+over 3,800 unique Web sites.
+
+Given that many sites are private (hidden behind corporate firewalls or not
+connected to the public Internet), it can be safely stated that, as of May
+1994, there are at least 4,500 hypertext Web servers in use throughout the
+world.
+
+Based on Web site statistics, estimates of the number of knowledgeable Web
+users in the world has been as large as two million. However, considering the
+number of hosts that frequent the most populated areas of the Web, it is safe
+to say that there are around 250,000 to 500,000 current active Web users
+today.
+
+
+A Case Study - Honolulu Community College
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Honolulu Community College officially announced the opening of their
+hypermedia site - the first Web site in Hawaii and the first hypermedia
+campus-wide information system on the Web - at the end of May 1993. A campus
+dinosaur exhibit, interactive map, movies, and publications were offered
+there and immediately attracted an international audience.
+
+By September of that year (after 105 days of service), they had received over
+23,000 requests for documents and over 112,000 requests for graphics and
+other media from nearly 5,000 separate hosts on the network. Today, the site
+receives about 7,000 requests per day on average, a large majority of which
+comes from outside Hawaii.
+
+Since the site's opening, HCC has received virtual visitors from Xerox,
+Digital Equipment Corporation, Apple Computer, Cray, IBM, MIT's Media Lab,
+NEC, Sony, Fujitsu, Intel, Rockwell, Boeing, Honeywell, and AT&T (which has
+been one of the most frequent visitors), among hundreds of other corporate
+sites on the Internet.
+
+Collegiate visitors have originated from campuses such as Stanford, Harvard,
+Carnegie-Mellon, Cornell, MIT, Michigan State, Rutgers, Purdue, Rice, Georgia
+Tech, Columbia, University of Texas, and Washington University, as well as
+other campuses in the United Kingdom, Germany, and Denmark, to name but a
+few.
+
+Governmental visitors have come from various departments in NASA, including
+their Jet Propulsion Laboratories, Lawrence Livermore National Laboratories,
+the National Institute of Health, the Superconducting Supercollider project,
+and the USDA, as well as government sites in Singapore and Australia. A few
+dozen Army and Navy sites throughout the world also visited the site.
+
+Because HCC's service began operation when there were relatively few such
+sites in the world, and in part due to its popularity, their growth in
+traffic has closely reflected the growth of the Web.
+
+
+The Popularity of Other Web Sites
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The Global Network Navigator is an electronic magazine published by O'Reilly
+and Associates over the World-Wide Web. It offers news, a calendar of
+Internet events, and a virtual marketplace in which companies can advertise
+their services. It has roughly 12,000 registered subscribers and receives
+about 150,000 to 200,000 requests for documents and media per week from
+people all over the Internet.
+
+Perhaps the best example of the growth in Web usage can be seen at the
+National Center for Supercomputing Applications (NCSA). The NCSA produces a
+number of popular software products for World-Wide Web use and their Web site
+is used as documentation for their products as well as a repository for
+announcements of new events on the Web. In July 1993 NCSA's site received
+roughly 100,000 requests per week. Currently it receives at least one million
+requests per week and its traffic continues to increase.
+
+
+Who Travels the Web?
+~~~~~~~~~~~~~~~~~~~~
+
+An informal comparison of host statistics from 15 government, research,
+educational, and corporate Web sites in March 1994 shows that the people
+roaming the World-Wide Web follow the makeup of the Internet fairly well.
+
+Shown are the top five Web users by domain and the average percentage of
+total hosts each Web site received. Next to these statistics is the estimated
+percentage of total hosts on the Internet for these domains.
+
+Table 1: Top Five World-Wide Web Users, by Domain
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------------
+Domain                   Percent of Web Traffic   Percent of Internet Hosts*
+----------------------------------------------------------------------------
+U.S. Educational (.edu)           49%                       27%
+
+U.S. Commercial (.com)            20%                       26%
+
+U.S. Government (.gov)             9%                        6%
+
+United Kingdom (.uk)               7%                        5%
+
+Canada (.ca)                       5%                        4%
+----------------------------------------------------------------------------
+
+* From January 1994 Stanford Research Institute (SRI International)
+  statistics, available by FTP from nic.merit.edu.
+  
+In January 1994, James Pitkow (pitkow@cc.gatech.edu) and Mimi Recker at the
+Georgia Institute of Technology held the first World-Wide Web user survey.
+Out of 1,300 valid responses, the results indicated the following statistics
+about the respondents:
+
+     * 56% were between the ages of 21 and 30,
+
+     * 94% were male,
+
+     * 69% were located in North America, and
+
+     * 45% described themselves as professionals and 
+       22% as graduate students.
+
+Although it is impossible to know for sure, it can be guessed that 
+the largest segment roaming the World-Wide Web consists of 
+four-year campus populations within the United States.
+
+
+Why Is The Web So Popular?
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The Web offers a very simple-to-use interface to the traditionally
+hard-to-master resources on the Internet. It is probably this ease of use as
+well as the popularity of many graphical interfaces to the Web that caused
+the explosion of Web traffic in 1993.
+
+The potential of using networked hypertext and multimedia has prompted many
+users to create and explore countless innovative applications on the
+Internet. It is perhaps no surprise that more educational users are on the
+Web than would be expected.
+
+
+What does the Web look like?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The World-Wide Web exists virtually - there is no standard way of viewing it
+or navigating around it. However, many software interfaces to the Web have
+similar functions and generally work the same way no matter what computer or
+type of display is used. In fact, many users navigate around the Web using
+text-only interfaces and are able to see all of the textual information a
+user with a graphic display would.
+
+Below is a picture of the typical graphical World-Wide Web interface that you
+would see on a computer screen. It may be black or white or in color. In this
+example the interface - called a Web browser - works in a window and may be a
+software program on any computer with a graphic interface, such as a
+Macintosh or an IBM-compatible computer with Microsoft Windows.
+
+  [image] Figure 4. A typical Web browser for a graphic
+                    user interface.
+
+The browser has a menu bar on top, where the user can quit, get help on using
+the program, and change certain display characteristics such as the screen
+font size, the background color, etc.
+
+A scroll bar allows the user to scroll the document page up and down. Because
+there is no limit to how wide or small a hypermedia document can be, scroll
+bars are often needed in case the document is larger than the viewing window.
+
+Although there are many different ways to represent a document on the screen,
+it is often called a page. Usually, those responsible for creating a given
+collection of interrelated documents also create a special document which is
+intended to be viewed first - one that contains introductory information
+and/or a master menu of documents within that collection. This type of
+document is called a home page and is generally associated with a particular
+site, person, or named collection. The example shows the Flower Shop's home
+page.
+
+This document has a picture of a flower, text in a bold font ("Welcome to the
+Flower Shop!") and hypertext in which a single word is underlined. This word
+("link") is a hyperlink (or link) - typically, clicking on it with a mouse
+will cause another document to appear on the screen, which may hold more
+images and hyperlinks to other places. There is no one way to represent text
+that is linked to other things - some browsers underline, others use special
+colors, and many give the user a variety of options.
+
+Images such as the flower picture which are part of the document and are
+displayed within the page are called inline images.
+
+Often users create their own personal documents with collections of their
+favorite links or biographical information and make them publicly available.
+Although these pages are also called home pages (they are a virtual "home"
+for the user), they may be called "personal pages" or "hyplans" (hypermedia
+plans).
+
+At the bottom of the screen is a set of navigation buttons - because a user
+might go to many different screens by selecting links in hypertext, there
+needs to be some method of retracing one's steps and reviewing the documents
+that have been explored. The back button shows the previously viewed
+document. The forward button would show the pages in the order the user
+previously viewed them.
+
+An open button allows the user to connect to other documents and networked
+resources by specifying the address of the document or resource to connect
+to. The user might be able to connect to a document stored locally on the
+same machine being used or one stored somewhere in another country.
+Typically, such a document would be transferred over the Internet in its
+entirety.
+
+The print button allows the user to print out the document seen on the
+screen. The user may be given the choice of printing the document with images
+and formatting as seen on the screen or as a text-only document.
+
+The page lists an email address - webmaster@flowers.com. A convention on the
+Web is to name the person in charge of administrating a World-Wide Web site a
+"webmaster" - any problems with the hyperlinks, images, documents, or
+questions about the site should be mailed to a webmaster address.
+
+
+What is Mosaic?
+~~~~~~~~~~~~~~~
+
+Months after CERN's original proposal, the National Center for Supercomputing
+Applications (NCSA) began a project to create an interface to the World-Wide
+Web. One of NCSA's missions is to aid the scientific research community by
+producing widely available, non-commercial software. Another of its goals is
+to investigate new research technologies in the hope that commercial
+interests will be able to profit from them. In these ways, the Web project
+was quite appropriate. The NCSA's Software Design Group began work on a
+versatile, multi-platform interface to the World-Wide Web, and called it
+Mosaic.
+
+In the first half of 1993, the first version of NCSA's Web browser was made
+available to the Internet community. Because earlier beta versions were
+distributed, Mosaic had developed a strong following by the time it was
+officially released. Because it allowed documents with images to be viewed
+and new media formats such as video and sound to be transferred over the
+Internet and pointed to by documents, it became the Web browser of choice for
+those working on computers with graphics capability. In 1993 NCSA's Mosaic
+products won the Internet Multicasting Service's yearly Ima award for the
+Most Innovative Application and the InfoWorld Industry Achievement award.
+
+Because of the number of traditional services it could handle, and due to its
+easy, point-and-click hypermedia interface, Mosaic soon became the most
+popular interface to the Web. Currently versions of Mosaic can run on
+UNIX-based machines such as Sun, Silicon Graphics, and DEC workstations as
+well as IBM-compatibles running Microsoft Windows and Macintosh computers.
+
+  [image] Figure 5. NCSA's Mosaic for X Windows.
+
+
+What can Mosaic do?
+~~~~~~~~~~~~~~~~~~~
+Mosaic has the following features:
+
+     * A consistent mouse-driven graphical interface.
+
+     * The ability to display hypertext and hypermedia 
+       documents.
+
+     * The ability to display electronic text in a variety of 
+       fonts.
+
+     * The ability to display text in bold, italic, or 
+       strikethrough styles.
+
+     * The ability to display layout elements such as 
+       paragraphs, lists, numbered and bulleted lists, and 
+       quoted paragraphs.
+
+     * Support for sounds (Macintosh, Sun audio format, 
+       and others).
+
+     * Support for movies (MPEG-1 and QuickTime).
+
+     * The ability to display characters as defined in the 
+       ISO 8859 set (it can display languages such as 
+       French, German, and Spanish).
+
+     * Interactive electronic forms support, with a variety of 
+       basic forms elements, such as fields, check boxes, 
+       and radio buttons.
+
+     * Support for interactive graphics (in GIF or XBM 
+       format) of up to 256 colors within documents.
+
+     * The ability to make basic hypermedia links to and 
+       support for the following network services: FTP, 
+       gopher, telnet, NNTP, WAIS.
+
+     * The ability to extend its functionality by creating 
+       custom scripts (comparable to XCMDs in HyperCard 
+       on Macintosh computers).
+
+     * The ability to have other applications control its 
+       display remotely.
+
+     * The ability to broadcast its contents to a network of 
+       users running multiplatform groupware such as 
+       NCSA's Collage.
+
+     * Support for the current standards of HTTP and 
+       HTML.
+
+     * The ability to keep a history of travelled hyperlinks.
+
+     * The ability to store and retrieve a list of viewed 
+       documents for future use.
+
+
+What is available on the Web?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Currently the Web offers the following through a hypertext, and in some
+cases, hypermedia interface:
+
+     * Anything served through Gopher
+
+     * Anything served through WAIS (Wide-Area 
+       Information Servers)
+
+     * Anything served through anonymous FTP sites
+
+     * Full Archie services (a FTP search service)
+
+     * Full Veronica services (a Gopher search service)
+
+     * Full CSO, X.500, and whois services (Internet phone 
+       book services) 
+
+     * Full finger services (an Internet user lookup 
+       program) 
+
+     * Anything on Usenet 
+
+     * Anything accessible through telnet 
+
+     * Anything in hytelnet (a hypertext interface to telnet) 
+
+     * Anything in techinfo or texinfo (forms of campus-
+       wide information services) 
+
+     * Anything in hyper-g (a networked hypertext system 
+       in use throughout Europe) 
+
+     * Anything in the form of man pages 
+
+     * HTML-formatted hypertext and hypermedia 
+       documents 
+
+
+How does the Web work?
+~~~~~~~~~~~~~~~~~~~~~~
+
+Web software is designed around a distributed client-server architecture. A
+Web client (called a Web browser if it is intended for interactive use) is a
+program which can send requests for documents to any Web server. A Web server
+is a program that, upon receipt of a request, sends the document requested
+(or an error message if appropriate) back to the requesting client. Using a
+distributed architecture means that a client program may be running on a
+completely separate machine from that of the server, possibly in another room
+or even in another country. Because the task of document storage is left to
+the server and the task of document presentation is left to the client, each
+program can concentrate on those duties and progress independently of each
+other.
+
+Because servers usually operate only when documents are requested, they put a
+minimal amount of workload on the computers they run on.
+
+Here's an example of how the process works:
+
+1.       Running a Web client, the user selects a hyperlink
+     in a piece of hypertext connecting to another document
+     - "The History of Computers", for example.
+     
+2.       The Web client uses the address associated with that
+     hyperlink to connect to the Web server at a specified
+     network address and asks for the document associated
+     with "The History of Computers". 
+     
+3.       The server responds by sending the text and any other
+     media within that text (pictures, sounds, or movies)
+     to the client, which the client then renders for
+     presentation on the user's screen.
+
+  [image] Figure 6. A typical transaction between Web
+                    servers and clients.
+     
+The World-Wide Web is composed of thousands of these virtual transactions
+taking place per hour throughout the world, creating a web of information
+flow.
+
+Future Web servers will include encryption and client authentication
+abilities - they will be able to send and receive secure data and be more
+selective as to which clients receive information. This will allow freer
+communications among Web users and will ensure that sensitive data is kept
+private. It will be harder to compromise the security of commercial servers
+and educational servers which wish to keep information local. Improvements in
+security will facilitate the idea of "pay-per-view" hypermedia, a concept
+which many commercial interests are pursuing.
+
+The language that Web clients and servers use to communicate with each other
+is called the Hypertext Transfer Protocol (HTTP). All Web clients and servers
+must be able to speak HTTP in order to send and receive hypermedia documents.
+For this reason, Web servers are often called HTTP servers.
+
+The phrase "World-Wide Web" is often used to refer to the collective network
+of servers speaking HTTP as well as the global body of information available
+using the protocol.
+
+
+HTML - The Hypertext Markup Language
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The standard language the Web uses for creating and recognizing hypermedia
+documents is the Hypertext Markup Language (HTML). It is loosely related to,
+but technically not a subset of, the Standard Generalized Markup Language
+(SGML), a method of representing document formatting languages. Languages
+such as HTML which follow the SGML format allow document writers to separate
+information from document presentation - that is, documents containing the
+same information can be presented in a number of different ways. Users have
+the option of controlling visual elements such as fonts, font size and
+paragraph spacing without changing the original information.
+
+HTML is widely praised for its ease of use. Web documents are typically
+written in HTML and are usually named with the suffix ".html". HTML documents
+are nothing more than standard 7-bit ASCII files with formatting codes that
+contain information about layout (text styles, document titles, paragraphs,
+lists) and hyperlinks.
+
+Free conversion software is available for translating documents from many
+other formats into HTML. Filters exist that can convert files in RTF (Rich
+Text Format), WordPerfect and FrameMaker as well as man pages, mail archives,
+and text-only documents.
+
+The current HTML standard supports basic hypermedia document creation and
+layout, but is limited in its capability to support many complex layout
+techniques found in traditional document publishing. A new version of HTML,
+called HTML+, is under development and should be completed by the end of
+1994. When completed, HTML+ will be backwards compatible with HTML and will
+support interactive forms, defined "hot spots" in images, more versatile
+layout and formatting options and styles, and formatted tables.
+
+  [image] Figure 7. HTML-formatted documents allow images
+                    and hyperlinks to be displayed in documents.
+
+
+About Uniform Resource Locators
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The World-Wide Web uses what are called Uniform Resource Locators (URLs) to
+represent hypermedia links and links to network services within HTML
+documents. It is possible to represent nearly any file or service on the
+Internet with a URL.
+
+The first part of the URL (before the two slashes) specifies the method of
+access. The second is typically the address of the computer the data or
+service is located. Further parts may specify the names of files, the port to
+connect to, or the text to search for in a database. A URL is always a single
+unbroken line with no spaces.
+
+Sites that run World-Wide Web servers are typically named with a www at the
+beginning of the network address.
+
+Here are some examples of URLs:
+
+     * file://www.hcc.hawaii.edu/sound.au - 
+       Retrieves a sound file and plays it.
+
+     * file://www.eit.com/picture.gif - 
+       Retrieves a picture and displays it, either in a 
+       separate program or within a hypermedia document. 
+
+     * file://www.eff.org/directory/ - Displays a 
+       directory's contents. 
+
+     * http://www.hcc.hawaii.edu/directory/
+       book.html - Connects to an HTTP server and 
+       retrieves an HTML file.
+
+     * ftp://www.xerox.com/pub/file.txt - 
+       Opens an FTP connection to www.xerox.com and 
+       retrieves a text file.
+
+     * gopher://www.hcc.hawaii.edu - Connects to 
+       the Gopher at www.hcc.hawaii.edu.
+
+     * telnet://www.hcc.hawaii.edu:1234 - 
+       Telnets to www.hcc.hawaii.edu at port 1234.
+
+     * news:alt.hypertext - Reads the latest Usenet 
+       news by connecting to a user-specified news 
+       (NNTP) host and returns the articles in the 
+       alt.hypertext newsgroup in hypermedia format.
+
+Most Web browsers allow the user to specify a URL and connect to that
+document or service. When selecting hypertext in an HTML document, the user
+is actually sending a request to open a URL. In this way, hyperlinks can be
+made not only to other texts and media, but also to other network services.
+Web browsers are not simply Web clients, but are also full-featured FTP,
+Gopher, and telnet clients.
+
+HTML+ will include an email URL, so hyperlinks can be made to send email
+automatically. For instance, selecting an email address in a piece of
+hypertext would open a mail program, ready to send email to that address.
+
+
+What software is available?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+World-Wide Web clients (browsers) are available for the following platforms
+and environments:
+
+* Text-only browsers:
+
+     * Dumb terminal, nearly any UNIX platform
+     
+     * Text-only using curses (vt100 emulation), for SunOS 4.1.x,
+       IBM AIX, DEC OSF/1, DEC Ultrix, and VAX Multinet.
+       
+     * Macintosh text-only, for Mac SE's and above with System 7.x.
+
+     * Browsers written in perl are available.
+     
+     * Browsers written for the emacs environment are available.
+
+* Browsers with graphical interfaces:
+
+     * Sun 4/Sun OS 4.1.x
+     
+     * Silicon Graphics IRIX 4.x
+     
+     * VMS
+     
+     * Linux
+     
+     * DEC MIPS Ultrix, DEC Alpha AXP, OSF/1
+     
+     * IBM RS/6000, AIX 3.2
+     
+     * HP 9000/700, HP/UX 9.x
+     
+     * NeXT, NeXTStep 3.0
+     
+     * Commodore Amiga, AmigaOS 3.0
+     
+     * IBM compatibles, 80386 and above with 4 MB RAM,
+       under Windows 3.1 in enhanced mode
+       
+     * Macintosh computers, System 7.x, 68020 and above or
+       Power Macintosh.
+
+World-Wide Web servers are available for the following platforms and
+environments:
+
+     * Most flavors of UNIX
+     
+     * HP, SGI, and SUN systems
+     
+     * DEC MIPS Ultrix, DEC Alpha AXP
+     
+     * Perl
+     
+     * Macintosh, 68020 or better, Power Macintosh, System 7.x
+     
+     * NeXTStep
+     
+     * VM, VM/CMS, VM/XA, VMS
+     
+     * Windows 3.1 and Windows NT
+     
+For details on how to obtain Web client and server software, refer to the
+next section "How can I get more information?"
+
+
+How can I get more information?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Most of this information is available on the Internet. In order to access
+resources specified by a URL, you may need to use a Web browser or connect to
+a telnet site that provides a public-access browser. Enter the URL as one
+unbroken line without spaces or carriage returns.
+
+The best way to get general information on the Web without a browser is to
+telnet info.cern.ch or gopher info.cern.ch. Information on how to obtain
+software can also be found there.
+
+If you don't know how to use FTP, Gopher, or telnet, there are dozens of good
+books available on how to get on and use the Internet. Although there are too
+many introductory books to list, here are a few mentioned by the Unofficial
+Internet Book List (to receive the list, send email to savetz@rahul.net).
+
+The Internet Guide for New Users
+  Daniel P. Dern, McGraw-Hill, ISBN: 0-07-016511 (paperback)
+
+The Internet Starter Kit for the Macintosh
+  Adam Engst, Hayden Books, ISBN: 1-56830-064-6
+
+The Internet Unleashed
+  Martin Moore, others, Sams Publishing, ISBN: 0-672-30466-X
+
+PC Internet Tour Guide
+  Michael Fraase, Ventana Press, ISBN: 1-56604-084-1
+
+The Whole Internet User's Guide and Catalog
+  Ed Krol, O'Reilly and Associates, ISBN: 1-56592-025-2
+
+Zen and the Art of Internet
+  Brendan Kehoe, Prentice Hall, ISBN: 0-13-010778-6
+
+
+Browsers Accessible by telnet
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This list is from the comprehensive list of telnet-accessible clients at
+http://info.cern.ch/hypertext/WWW/FAQ/Bootstrap.html:
+
+telnet info.cern.ch (or telnet 128.141.201.74)
+
+  This is CERN's text-only Web browser. The site is in Geneva,
+  Switzerland.
+  
+telnet ukanaix.cc.ukans.edu
+
+  This University of Kansas site uses the text-only Lynx
+  browser, which works best on terminals with vt100 emulation.
+  Log in as www.
+
+telnet www.njit.edu
+
+  Log in as www. This is the New Jersey Institute of Technology's
+  text-only browser.
+
+telnet vms.huji.ac.il (or telnet 128.139.4.3)
+
+  This text-only browser at the Hebrew University of Jerusalem
+  in Israel works off a dual-language Hebrew/English database.
+
+telnet sun.uakom.cs
+
+  This site in Slovakia has a slow connection and should be used
+  locally only.
+
+telnet fserv.kfki.hu
+
+  This site in Hungary has a slow connection and should be used
+  locally only. Log in as www.
+
+telnet info.funet.fi (or telnet 128.214.6.100)
+
+  This site is in Finland.
+
+
+General Web Information
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Main CERN World-Wide Web page
+
+  http://info.cern.ch/hypertext/WWW/TheProject.html
+
+Main NCSA Mosaic page
+
+  http://www.ncsa.uiuc.edu/SDG/Software/Mosaic/Docs/mosaic-docs.html
+
+Information on WWW
+
+  http://www.bsdi.com/server/doc/web-info.html
+
+A list of World-Wide Web clients at CERN
+
+  http://info.cern.ch/hypertext/WWW/Clients.html
+
+The "official" list of World-Wide Web servers at CERN
+
+  http://info.cern.ch/hypertext/DataSources/WWW/Servers.html
+
+The comp.infosystems.www FAQ (Frequently Asked Questions) file
+
+  http://siva.cshl.org/~boutell/www_faq.html
+
+
+Usenet Newsgroups
+-----------------
+
+For general discussion:
+
+  comp.infosystems.www
+
+For announcements:
+
+  comp.infosystems.announce
+
+Other Web-related newsgroups:
+
+  http://info.cern.ch/hypertext/WWW/Newsgroups.html
+
+
+Mailing Lists
+-------------
+
+For general discussion and announcements:
+
+  send email to listserv@info.cern.ch, with
+  "subscribe www-announce your name" as the body.
+
+For developers and technical discussion:
+
+  send email to listserv@info.cern.ch, with
+  "subscribe www-talk your name" as the body.
+  Hypertext archives are available at
+  http://gummo.stanford.edu/html/hypermail/archives.html.
+
+For HTML-related discussion:
+
+  send email to listserv@info.cern.ch, with
+  "subscribe www-html your name" as the body.
+
+Other lists at CERN:
+
+  http://info.cern.ch/hypertext/WWW/Administration/Mailing/Overview.html
+
+World-Wide Web courseware:
+
+  send email to www-courseware-request@eit.com, with
+  "subscribe" as the body.
+  Hypertext archives are available at
+  http://www.eit.com/mailinglists/www-courseware/www-courseware.index.html.
+
+World-Wide Web literature:
+
+  send email to www-literature-request@eit.com, with
+  "subscribe" as the body. Hypertext archives are available at
+  http://www.eit.com/mailinglists/www-literature/www-literature.index.html.
+
+World-Wide Web library resource management:
+
+  send email to listserv@library.berkeley.edu, with
+  "SUB Web4Lib your name" as the body.
+
+
+Local groups
+------------
+
+The Austin, Texas World-Wide Web Users' Group (AWWWUG) - send email to
+combs.quadralay.com for information.
+
+The World-Wide Web Special Interest Group (SIGWEB), located in California.
+Email mcrae@ora.com for information.
+
+
+Lists of tools and convertors
+-----------------------------
+
+  http://info.cern.ch/hypertext/WWW/Tools/Overview.html
+
+  http://www.ncsa.uiuc.edu/SDG/Software/Mosaic/Docs/faq-software.html
+
+
+How to write Web gateways and servers
+-------------------------------------
+
+  http://info.cern.ch/hypertext/WWW/Daemon/Overview.html
+
+
+Information on HTML and HTTP
+----------------------------
+
+How to write HTML
+
+  http://www.ncsa.uiuc.edu/General/Internet/WWW/HTMLPrimer.html
+
+HTML Tutorials
+
+  http://curia.ucc.ie/info/net/htmldoc.html
+
+  http://fire.clarkson.edu/doc/html/htut.html
+
+HTML Style Guides
+
+  http://www.willamette.edu/html-composition/strict-html.html
+
+  http://bookweb.cwis.uci.edu:8042/Staff/StyleGuide.html
+
+  http://info.cern.ch/hypertext/WWW/Provider/Style/Overview.html
+
+HTML FAQ
+
+  http://www.umcc.umich.edu/~ec/www/html_faq.html
+
+HTML Quick Reference
+
+  http://www.ncsa.uiuc.edu/General/Internet/WWW/HTMLQuickRef.html
+
+HTML official specifications
+
+  http://info.cern.ch/pub/www/doc/html-spec.multi
+
+The Annotated HTML DTD (Document Type Definition)
+
+  http://info.cern.ch/hypertext/WWW/MarkUp/HTML.dtd.html
+
+HTML+ DTD
+
+  ftp://15.254.100.100/pub/htmlplus.dtd.txt
+
+The Latest HTML+ Draft
+
+  ftp://ds.internic.net/internet-drafts/draft-raggett-www-html-00.*
+
+HTTP Specifications
+
+  http://info.cern.ch/hypertext/WWW/Protocols/HTTP/HTTP2.html
+
+
+Information and Reports on Multimedia and Hypermedia
+----------------------------------------------------
+
+Index to multimedia resources
+
+  http://cui_www.unige.ch/Chloe/MultimediaInfo/index.html
+
+SIGLINK Newsletter
+
+  http://www.cs.bgsu.edu/SIGLINK/HomePage.html
+
+"State of the Art Review on Hypermedia Issues And Applications", March 1994
+
+  http://www.csi.uottowa.ca/~dduchier/misc/hypertext_review/
+
+"Computer Supported Cooperative Work Report", July 1993
+
+  ftp gorgon.tft.tele.no, in directory /pub/groupware
+
+  This is a comprehensive list of all known collaborative
+  software packages and projects currently in use or under
+  development.
+
+"Network Access to Multimedia Information", June 1993
+
+  ftp ftp.ed.ac.uk, in directory /pub/mmaccess
+
+  This report summarizes the requirements of academic
+  and research users for network access to multimedia
+  information.
+
+"Hypermedia and Higher Education", April 1993
+
+  gopher lewsun.idlw.ucl.ac.be, the /digests/IPCT menu.
+
+  IPCT, Interpersonal Computing and Technology, is an excellent
+  journal exploring the boundaries of education and high technology.
+
+alt.hypertext Frequently Asked Questions list
+
+  This list contains dozens of pointers to mailing lists,
+  people, Internet sites, groups, books, periodicals, bibliographies,
+  and software related to hypertext.
+
+ The new FAQ is still under construction. For more details,
+ email dhirmes@hamp.hampshire.edu.
+
+
+Obtaining Web Browsers and Servers
+----------------------------------
+
+ftp info.cern.ch, in directory /pub/www
+
+  CERN's simple text-only browser, as well as the CERN HTTP server.
+
+ftp ftp2.cc.ukans.edu, in directory /pub/WWW/lynx
+
+  Distribution for Lynx, a text-only browser.
+
+ftp ftp.ncsa.uiuc.edu, in directory /Mosaic
+
+  Mosaic distribution, as well as the NCSA HTTPD server. This site contains the
+  Mosaic browser for Macintosh, Windows, and X.
+
+ftp ftp.law.cornell.edu, in /pub/LII/Cello/
+
+  Distribution for Cello, a Windows browser.
+
+ftp max.physics.sunysb.edu, in /pub/amosaic
+
+  Distribution for Amiga Mosaic browser.
+
+ftp ftp.omnigroup.com, in /pub/software/
+
+  Distribution for OmniWeb, a NeXTStep browser that does not require X Windows.
+
+ftp ftp.cs.unlv.edu, in /pub/chimera
+
+  Distribution for Chimera, a simple browser for X Windows.
+
+ftp oac.hsc.uth.tmc.edu, in /public/mac/MacHTTP/
+
+  Distribution for MacHTTP, a Macintosh WWW server.
+
+gopher hopf.math.nwu.edu
+
+  Distribution for GN, an HTTP server that acts as a Gopher server and a
+  World-Wide Web server simultaneously.
+
+ftp austin.bsdi.com, in /plexus
+
+  Distribution for Plexus, a perl-based WWW server.
+
+ftp emwac.ed.ac.uk, in /pub/https
+
+  Distribution for HTTPS, a Windows NT server.
+
+A more extensive list of browsers can be found at
+http://info.cern.ch/hypertext/WWW/Clients.html, and a list of servers can be
+found at http://info.cern.ch/hypertext/WWW/Daemon/Overview.html.
+
+
+Interesting Places on the Web
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+NCSA's Demonstration Page
+
+  http://www.ncsa.uiuc.edu/demoweb/demo.html
+
+Internet Resources Meta-Index
+
+  http://www.ncsa.uiuc.edu/SDG/Software/Mosaic/MetaIndex.html
+
+Internet Resources List
+
+  http://www.eit.com/web/netservices.html
+
+
+Commercial Sites
+----------------
+
+Wired Magazine
+
+  http://wired.com/
+
+MTV
+
+  http://mtv.com/
+
+CommerceNet
+
+  http://www.commerce.net/
+
+Global Network Navigator
+
+  http://nearnet.gnn.com/GNN-ORA.html
+
+Silicon Graphics
+
+  http://www.sgi.com/
+
+KKSF-FM Radio
+
+  http://kksf.tbo.com/
+
+
+Country Sites
+-------------
+
+Guide to Australia
+
+  http://life.anu.edu.au/education/australia.html
+
+U.K. and Ireland Web Sites
+
+  http://www.cs.ucl.ac.uk/misc/uk/intro.html
+
+Spain Web Sites
+
+  http://www.uji.es/spain_www.html
+
+
+Educational Sites
+-----------------
+
+Honolulu Community College
+
+  http://www.hcc.hawaii.edu/
+
+La Trobe University, Australia
+
+  http://www.latrobe.edu.au/
+
+The University of Notre Dame
+
+  http://www.nd.edu/
+
+The Chinese University of Hong Kong
+
+  http://www.cuhk.hk/
+
+
+Interactive Sites
+-----------------
+
+Michigan State University Weather Movies
+
+  http://rs560.cl.msu.edu/weather
+
+Xerox PARC (Palo Alto Research Center) Interactive Map
+
+  http://pubweb.parc.xerox.com:80/
+
+Interactive Geographical Index
+
+  http://www.hcc.hawaii.edu/htbin/plotd
+
+Interactive World Map Interface
+
+  http://wings.buffalo.edu/world
+
+Live Television Sources and Games at MIT
+
+  http://tns-www.lcs.mit.edu/vs/demos.html
+
+
+Legal Information and Government Sites
+--------------------------------------
+
+Legal Information at Cornell
+
+  http://www.law.cornell.edu/lii.table.html
+
+U. S. Bureau of the Census
+
+  http://www.census.gov/
+
+U.S. Department of Commerce
+
+  http://www.doc.gov/
+
+National Aeronautics and Space Administration (NASA)
+
+  http://hypatia.gsfc.nasa.gov/NASA_homepage.html
+
+The City of Palo Alto, CA
+
+  http://www.city.palo-alto.ca.us/home.html
+
+
+Literature
+----------
+
+English Server at Carnegie-Mellon
+
+  http://english-server.hss.cmu.edu/
+
+Internet Book Information Center
+
+  http://sunsite.unc.edu/ibic/IBIC-homepage.html
+
+
+Museums and Art
+---------------
+
+San Francisco's Exploratorium
+
+  http://www.exploratorium.edu/
+
+The Krannert Art Museum
+
+  http://www.ncsa.uiuc.edu/General/UIUC/KrannertArtMuseum/KrannertArtHome.html
+
+University of California Museum of Paleontology
+
+  http://ucmp1.berkeley.edu/
+
+EXPO
+
+  http://sunsite.unc.edu/expo/ticket_office.html
+
+Collaborative Art
+
+  http://cui_www.unige.ch/Chloe/OtisCrosswire/
+
+International Interactive Genetic Art
+
+  http://porsche.boltz.cs.cmu.edu:8001/htbin/mjwgenform
+
+
+Music and Audio
+---------------
+
+Internet Music Resources
+
+  http://www.music.indiana.edu/misc/music_resources.html
+
+Internet Underground Music Archives
+
+  http://sunsite.unc.edu/ianc/index.html
+
+Internet Talk Radio
+
+  http://www.cmf.nrl.navy.mil/radio/radio.html
+
+
+Organizations
+-------------
+
+Electronic Frontier Foundation
+
+  http://www.eff.org/
+
+The Association for Computing Machinery
+
+  http://info.acm.org/
+
+The World Health Organization
+
+  http://www.who.ch/
+
+
+Appendix A: A Hypermedia Timeline
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1945
+
+Vannevar Bush (The Science Advisor to President Roosevelt during World War
+II) proposes MEMEX, a conceptual machine that can store vast amounts of
+information, in which users have the ability to create information trails,
+links of related texts and illustrations, which can be stored and used for
+future reference. 
+
+1965
+
+Ted Nelson coins the word "hypertext".
+
+1967
+
+Andy van Dam and others build the Hypertext Editing System. 
+
+1968
+
+Doug Engelbart demonstrates NLS, a hypertext system. 
+
+1975
+
+ZOG (now KMS), a distributed hypermedia system, debuts at Carnegie-Mellon. 
+
+1978
+
+The Aspen Movie Map, the first hypermedia videodisc, demonstrated by MIT's
+Architecture Machine Group. 
+
+1981
+
+Ted Nelson conceptualizes "Xanadu", a central, pay-per-document hypertext
+database encompassing all written information. Read the Xanadu FAQ at
+http://jolt.mpx.com.au:70/0h/faq.html.
+
+1984
+
+Telos introduces Filevision, a hypermedia database for the Macintosh.
+
+1985
+
+Janet Walker creates the Symbolics Document Examiner.
+
+1985 
+
+Intermedia, a hypermedia system, is conceived at Brown University by Norman
+Meyrowitz and others. 
+
+1986 
+
+OWL introduces GUIDE, a hypermedia document browser. 
+
+1987
+
+Apple Computers introduces HyperCard, the first widely available personal
+hypermedia authoring system. 
+
+1987
+
+The Hypertext '87 Workshop is held in North Carolina.
+
+1989
+
+Autodesk, a major CAD software manufacturer, takes on Xanadu as a project.
+
+1989
+
+Tim Berners-Lee proposes the World-Wide Web project. 
+
+1990
+
+ECHT (European Conference on Hypertext). 
+
+1992
+
+Autodesk drops the Xanadu project. 
+
+1993
+
+A Hard Day's Night becomes the first full-length movie to be transcribed into
+a hypertext format and distributed via compact disc.
+
+April 1993
+
+International Workshop on Hypermedia and Hypertext Standards, Amsterdam.
+
+June 1993
+
+NCSA Mosaic 1.0 for X Windows released by the National Center for
+Supercomputing Applications.
+
+August 1993
+
+First World-Wide Web developers' conference in Cambridge, Massachusetts.
+
+November 1993
+
+Hypertext Conference in Seattle, Washington. Ted Nelson speaks as the guest
+of honor.
+
+March 1994
+
+World-Wide Web byte traffic surpasses Gopher traffic on the NSFnet.
+
+May 1994
+
+First International World-Wide Web Conference in Geneva.
+
+Jim Clark and Marc Andreessen form Mosaic Communications Corporation.
+
+June 1994
+
+World Conference on Educational Multimedia and Hypermedia in Vancouver,
+Canada.
+
+For information email aace@virginia.edu.
+
+September 1994
+
+European Conference on Hypermedia Technology in Edinburgh, Scotland.
+
+For information email echt94@inesc.pt.
+
+
+Index/Glossary
+~~~~~~~~~~~~~~
+
+A
+
+Archie
+
+  A network service that searches FTP sites for files.
+
+B
+
+browser
+
+  Software that provides an interface to the World-Wide Web.
+
+C
+
+CERN
+
+  The European collective of high-energy physics researchers (European
+  Organization for Nuclear Research).
+
+client
+
+  A computer or program requests a service of another computer or program.
+
+client-server architecture
+
+  A structure in which programs use and provide distributed services.
+
+CSO
+
+  Central Services Organization. A service which facilitates user and address
+  lookup in databases.
+
+D
+
+Doug Engelbart
+
+  The inventor of many common devices and ideas used in computing today,
+  including the mouse.
+
+F
+
+File Transfer Protocol (FTP)
+
+  A common method of transferring files across networks.
+
+finger
+
+  A service that responds to queries and retrieves user information remotely.
+
+G
+
+Gopher
+
+  A versatile menu-driven information service.
+
+Graphics Interchange Format (GIF)
+
+  A commonly used graphics format which compresses the image and stores color
+  information within the file.
+
+H
+
+home page
+
+  The default document World-Wide Web users see when connecting to a Web server
+  for the first time.
+
+HTML+
+
+  The latest version of HTML.
+
+HyperCard
+
+  A personal hypermedia/multimedia creation system for use on Apple Computers.
+
+hyper-g
+
+  A distributed hypertext system mostly popular in Europe.
+
+hyperlink
+
+  A connection between hypermedia or hypertext documents and other media.
+
+hypermedia
+
+  Hypertext that includes or links to other forms of media.
+
+hypertext
+
+  Text that, when selected, has the ability to present connected documents.
+
+Hypertext Markup Language (HTML)
+
+  The standard language used for creating hypermedia documents within the
+  World-Wide Web.
+
+Hypertext Transmission Protocol (HTTP)
+
+  The standard language that World-Wide Web clients and servers use to
+  communicate.
+
+hytelnet
+
+  A hypertext interface to telnet.
+
+I
+
+inline image
+
+  A graphic within a hypermedia document that is displayed on the same page as
+  text.
+
+Internet
+
+  The global collective of computer networks.
+
+ISO 8859
+
+  A character set defined by international standards that includes accented
+  letters and symbols.
+
+M
+
+man page
+
+  Manual page. Online documentation that commonly comes bundled with computers
+  running the UNIX operating system.
+
+MEMEX
+
+  A conceptual machine that could show the trails of information that its users
+  viewed.
+
+menu bar
+
+  A common element in graphic computer interfaces that allows users to select
+  options from menus.
+
+Mosaic
+
+  A mouse-driven interface to the World-Wide Web developed by the NCSA.
+
+Motion Pictures Entertainment Group (MPEG)
+
+  A consortium of experts in the entertainment industry that developed the MPEG
+  standard format for digital video and audio.
+
+N
+
+National Center for Supercomputing Applications (NCSA)
+
+  A federally-funded organization whose mission is to develop and research
+  high-technology resources for the scientific community.
+
+National Science Foundation (NSF)
+
+  A federally-funded organization that manages the NSFnet, which connects every
+  major research institution and campus in the United States.
+
+navigation buttons
+
+  Elements within a graphic computer World-Wide Web interface that allow users
+  to review the information they have previously seen in a number of ways.
+
+NCSA Collage
+
+  Collaborative (shared whiteboard) software developed by the NCSA.
+
+Network News Transfer Protocol (NNTP)
+
+  A common method by which articles over Usenet are transferred.
+
+P
+
+page
+
+  A hypermedia document as viewed through a World-Wide Web browser.
+
+Q
+
+QuickTime
+
+  A digital video format developed by Apple Computer that integrates
+  synchronized video and audio with compression techniques.
+
+R
+
+Rich Text Format (RTF)
+
+  A common interchange format for the exchange of electronic documents between
+  computers.
+
+S
+
+scroll bar
+
+  A graphic computer interface element that allows the user to scroll
+  electronic documents on the computer screen.
+
+server
+
+  A program which provides a service to other client programs.
+
+T
+
+techinfo
+
+  A common campus-wide information system developed at MIT.
+
+Ted Nelson
+
+  The inventor of many common ideas related to hypertext, including the word
+  "hypertext" itself.
+
+telnet
+
+  A program which allows users to remotely use computers across networks.
+
+texinfo
+
+  A common campus-wide information system.
+
+Tim Berners-Lee
+
+  The inventor of the World-Wide Web.
+
+U
+
+Uniform Resource Locator (URL)
+
+  A standardized way of representing different documents, media, and network
+  services on the World-Wide Web.
+
+Usenet
+
+  The global news-reading network.
+
+V
+
+Vannevar Bush
+
+  Originator of the concept of hypertext.
+
+Veronica
+
+  A network service that allows users to search Gopher systems for documents.
+
+W
+
+webmaster
+
+  The administrator responsible for the management and often design of a
+  World-Wide Web site.
+
+whois
+
+  A name lookup service.
+
+Wide-Area Information Servers (WAIS)
+
+  A service which allows users to intelligently search for information among
+  databases distributed throughout the Internet.
+
+World-Wide Web
+
+  (World-Wide Web project) The initiative to create a universal,
+  hypermedia-based method of access to information. Also used to refer to the
+  Internet.
+
+X
+
+X bitmap (XBM)
+
+  A standard two-color bitmap image format supported by the X Windows system.
+
+X.500
+
+  A standard which defines electronic mail directory services. Mostly used in
+  Europe.
+
+Xanadu
+
+  A client-server system based on networked hypertext that emphasizes
+  electronic publishing and commerce.
+
+XCMD
+
+  A program module that extends HyperCard by giving it new functionality.
+
+
+About the Author
+~~~~~~~~~~~~~~~~
+
+Kevin Hughes was a student systems administrator, webmaster, and World-Wide
+Web lecturer at Honolulu Community College when he originally wrote this
+paper. He now designs hypermedia products at Enterprise Integration
+Technologies (EIT) and has done "look and feel" work for CommerceNet,
+Internet Shopping Network, and other educational and corporate Web sites.

@@ -1,0 +1,527 @@
+
+
+			Native American Languages
+
+
+
+At the time of first European contact, probably close to 1,000 American Indian
+languages were spoken in North, Central, and South America. Although the number
+of languages in daily use has steadily declined because of persecution and
+pressures on the Indians to adopt English, Spanish, and other originally
+European languages, well over 700 different American Indian--or, as they are
+sometimes called, Amerindian or Native American--languages are spoken today.
+
+In the United States many of the most famous linguists of the early 20th
+century--among them Franz BOAS, Leonard BLOOMFIELD, and Edward
+SAPIR--transcribed and analyzed North American Indian languages. Many
+descriptions of Indian languages are important in the literature of the
+linguistic school known as American structuralism.
+
+Today interest in Native American Indian languages is increasing, and
+Americanists, as those who study the languages are called, hold regular
+meetings to report on their findings. Current research on the native languages
+of the Americas is published in several periodicals, notably the International
+Journal of American Linguistics.
+
+The great diversity of Indian languages, however, has thus far prevented proof
+of common origin, and most Americanists favor more conservative classifications
+of the languages into a number of distinct groups.
+
+Only a few Native American Indian languages have a written history; therefore,
+comparative study must be based upon quite recent sources. Following the
+traditional principles of historical linguistics, words from Indian languages
+believed to be related are subjected to minute comparison, in a search for
+regular correspondences of sound and meaning.
+
+Regularity is the key: thus, while Luiseno paa-la, Papago wa-, and Aztec a-tl,
+all meaning "water," do not immediately appear similar, the words are seen to
+be cognate (derived from the same word in the ancestor language) when other
+sets such as Luiseno pe-t, Papago woog, and Aztec o-tli, all meaning "road,"
+are considered, since Luiseno initial p and Papago initial w regularly
+correspond to the lack of any initial consonant sound in Aztec.
+
+When such correspondences are discovered, the languages being compared are
+judged to have a historical connection, either genetic--because of descent from
+a common ancestor--or through language contact and the consequent "borrowing"
+of words. As genetic relationships are discovered, languages are grouped into
+families, which then are often compared themselves. Related families can be
+classified in turn into larger groups called phyla (singular, phylum) or
+stocks, or into even broader groupings known as macrophyla or superstocks.
+
+On the basis of the Luiseno, Papago, and Aztec words cited above, linguists
+have proposed the reconstruction of initial p sound in the words for "water"
+and "road" in the Proto-Uto-Aztecan ancestor of the three languages in
+question. The sounds systems and vocabulary of the ancestors of a number of
+different American Indian language families have been partially reconstructed
+through similarly detailed analysis by linguists. Comparison of these
+reconstructed protolanguages leads to more informed conjecture about earlier
+connections between the ancestor languages and the peoples who spoke them.
+
+Language Names
+
+Names for Native American Indian languages can be confusing. Some names are
+chosen politically rather than linguistically: for instance, Creek and Seminole
+are mutually intelligible Muskogean languages but are traditionally treated as
+separate because the tribes who use them are different. Many Native American
+Indian tribes use the word for "people" as the meaning of their nation.
+
+Often Indian groups come to be known by a foreign term, such as the English
+names Dogrib and Yellowknife for Athabascan tribes in the Northwest or the
+naming of most Coastal California languages for the nearest Spanish mission
+(Luiseno was the Uto-Aztecan language spoken around Mission San Luis Rey, for
+example, and the Chumash language Obispeno was named for Mission San Luis
+Obispo). Some other designations, occasionally derogatory, originated with
+other Indians--the name Comanche, for example, is from Southern Paiute
+kimantsi, "stranger." Both languages are Uto-Aztecan.
+
+In some cases the same name has been used for two or more distinct languages.
+For instance, there are two languages in Central America called "Chontal," one
+Hokan and one Mayan.
+
+The names of linguistic families and stocks are usually coined by linguists,
+often by adding -an to the name of a representative language. The Yuman family,
+for example, is named for the language Yuma.
+
+Languages of Canada and the United States
+
+Perhaps 300 languages were spoken in Canada and the United States when the
+first Europeans arrived, and about 200 are still spoken by some 300,000 people.
+The American explorer and ethnologist John Wesley POWELL presented the first
+comprehensive classification of the languages north of Mexico in 1891, dividing
+them into 58 families. Various scholars have subsequently proposed
+consolidation of Powell's families into a smaller number of phyla, with the
+most influential of these classifications credited to Edward Sapir. C.F. and
+F.M. Voegelin introduced the most widely accepted modern classification of
+American Indian languages, grouping most of the languages of the United States
+and Canada into seven macrophyla, with a few families and language isolates
+left unclassified (Table 1).
+
+One phylum, American Arctic-Paleosiberian, includes both Eskimo-Aleut, spoken
+from Alaska to Greenland, and the Chukchi-Kamchatkan family of Siberia. This
+phylum is the only American language family to have an accepted connection with
+a non-American language group.
+
+Meso-American Languages
+
+Recent estimates place the number of Meso American Indian languages at about
+70, with at least 5 million speakers. Of course, language boundaries and
+political boundaries do not coincide. The Hokan and Aztec-Tanoan phyla of North
+America also include a number of Central or Meso-American languages, and some
+South American groups have outlying representatives in Central America. Many of
+the groupings in Table 2 are still highly controversial.
+
+South American Languages
+
+Linguistic diversity is greatest in South America, where many languages spoken
+in remote jungle and mountain regions remain unrecorded and unclassified. There
+are probably over 500 different languages still spoken, with perhaps 14 million
+speakers. The various languages of the Quechua group alone have 5 million
+speakers.
+
+Broader classifications of the more than 80 South American language families
+into a smaller number of macrophyla have been proposed by Joseph Greenberg,
+Morris Swadesh, Cestmir Loukotka, and others. Because these South American
+stocks have not as yet been fully documented with lists of cognate sets, they
+are not accepted by all specialists.
+
+Recent Controversy
+
+Current scholarly approaches to Native American Indian language classification
+are polarized. Most Americanists accept only certain parts of the Voegelin
+classification, while rejecting others, with the Macro-Penutian and Hokan phyla
+of North America receiving most challenges. Joseph Greenberg recently proposed
+a new classification, with just three groups of languages: Eskimo-Aleut,
+Na-Dene, and a third stock, Amerind, which includes all the other languages of
+North, Central, and South America. Although some mainstream Americanists find
+this proposal intriguing, they have criticized Greenberg's research for its
+methodology and data, and the theory is not widely accepted.
+
+GRAMMATICAL STRUCTURE
+
+The grammatical structure--phonology, or sound system; morphology, or word
+structure; and syntax, or sentence structure--of Native American Indian
+languages varies considerably, but none of the languages can be called
+primitive.
+
+Phonology Though some Indian languages have a simple phonological structure
+(the Arawakan language Campa, for instance, has only 17 contrastive speech
+sounds, or phonemes), the phonology of others is very complex. Certain sounds,
+many of which are articulated toward the back of the vocal tract, have been
+cited as characteristic of the American Indian languages, but none of these
+occur in all the languages. The glottal stop, made by briefly closing the vocal
+cords, as in the middle of the English word uh-oh, is a common sound. Many
+languages have glottalized consonants, made with a glottal stop produced
+simultaneously with another consonant sound. For instance, Navajo ts'in,
+meaning "bone," has a glottalized ts sound (represented by ts'), while tsin,
+"tree" has a plain ts. Another common sound is a back k sound, normally written
+q, articulated not at the velum, as is English k, but rather in the postvelar
+or uvular region. Many languages contrast k and q in words like Cahuilla
+(Uto-Aztecan) neki, "my house," versus neqi, "by myself."
+
+Vowel systems also vary considerably. Quite a few American Indian languages
+have nasalized vowels. Nasalization is represented by a tilde symbol in
+Chickasaw, for example. The use of pitch accent or tonal systems (as in
+Chinese) to differentiate words is more common in the Americas than the use of
+contrastive stress like that found, for example, in English import, pronounced
+im-port' as a verb and im'-port as a noun.
+
+Morphology and Syntax
+
+The most commonly cited trait of American Indian languages is
+polysynthesis--the expression of complicated ideas within a single word
+containing many separate meaningful elements, or morphemes. The use of verbs
+with attached subject and object indicators (most often prefixes) is common; in
+many languages adverbial and other elements may also be attached to the verb,
+forming complex single-word sentences, like the Lakota (Siouan)
+wica-yuzaza-ma-ya-khiya-pi-kte, "you all will make me wash them," which
+includes the component morphemes them + wash + me + you + make + plural +
+future.
+
+While most languages have accusative case systems like that of English
+(opposing grammatical categories of subject and object), active systems in
+which the same morpheme is used to indicate the object of a transitive verb and
+the subject of a stative verb are not uncommon. For example, the prefix ma-,
+"me" in the Lakota example just presented means "I" in a sentence like
+ma-s'amna, "I stink. "
+
+Many languages use unmarked verbs for the third person. Thus Chickasaw hita can
+mean either "to dance" or "he dances." Possessive and locational indicators are
+often attached to nouns, as in Yup'ik Eskimo anya-a-ni (boat + his + in), which
+means "in his boat." Gender distinctions like those of the Indo-European
+languages are found in only a few languages, such as Garifuna (Arawakan), in
+which halau, "chair," is masculine, but muna, "house," feminine. More languages
+make a grammatically comparable distinction between animate, or living, and
+inanimate nouns. Alienable possession or ownership is often indicated
+differently from inalienable possession of items such as kinship terms and body
+parts. Reduplication--the doubling of all or part of a word, usually to
+indicate plurality or intensity--is common, as in Barbareno Chumash ma,
+"jackrabbit," ma ma, "jackrabbits."
+
+The arrangement of words into sentences also varies from language to language.
+While the most common basic word order is Subject-Object-Verb,
+Subject-Verb-Object is used in many languages, and the rarer word orders
+Verb-Subject-Object, Verb-Object-Subject, and Object-Verb-Subject are also
+found.
+
+Many Native American Indian languages make use of special syntactic patterns to
+distinguish among third-person participants in a sentence. Obviation (in the
+Algonquian languages) and the use of the so-called fourth person (in
+Athabascan) allow one participant to be coded as more important or interesting
+than another. Switch-reference is the name given to an unusual grammatical
+device that allows a speaker to specify whether the subject of one clause is
+the same as or different from that of another clause. The English sentence "he
+knows he's fat" is ambiguous. If the first "he" is known to refer to Tom, for
+instance, the sentence has one meaning. If the second "he" also refers to Tom
+("Tom is fat and he knows it") and another if the second "he" refers to, say,
+Bill ("Bill is fat and Tom knows it"). Although the Mojave (Yuman) sentences
+isay-k suupaw-pc (fat + same know + perfective) and isay-m suupaw-pc (fat +
+different know + perfective) both translate as "he knows he's fat," they are
+not ambiguous: the first implies that the knower is fat, while the second means
+that someone else is.
+
+The Whorfian Hypothesis
+
+Because of different cultural needs, American Indian vocabulary structure
+varies greatly, and some of the semantic concepts and sentence patterns often
+seem unfamiliar to those who have not grown up speaking the languages. The
+American linguist Benjamin Lee WHORF argued that the differences in semantic
+and syntactic organization of languages as diverse as English and Hopi were
+correlated with differences in thought processes. The so-called Whorfian
+(sometimes Whorf-Sapir) hypothesis that grammatical structure reflects
+cognitive structure is not widely accepted among linguists but has been
+influential in other social sciences.
+
+LANGUAGE CONTACT
+
+Unrelated languages whose speakers are in daily contact often come to share
+various grammatical traits, which can then be called areal features of the
+region. In the Pacific Northwest, for instance, there are several unrelated
+genetic groups with strikingly similar, unusually complex consonant systems.
+Many languages of the Tupian family of South America have nasalization as an
+attribute, not just of vowels or consonants, but of whole syllables, and this
+feature has been borrowed by some unrelated neighboring languages.
+
+Loanwords can reveal the prior history of a linguistic group. Alaskan languages
+and some as far south as California have Russian loans, for instance, dating
+from the time of extensive trade with Russia, and borrowings from Spanish are
+common throughout California, the Southwest, and, of course, Latin America.
+Borrowed words are often changed to fit the structure of the borrowing
+language--Spanish caballo ("horse") was borrowed into Tubatulabal (Uto-Aztecan)
+as kawaayu, for example, because all Tubatulabal words have final stress and
+the language has no bilabial v or b sound. Indian words have also been borrowed
+into English and and other European languages. The words moccasin, squash,
+squaw, and toboggan, like the majority of Indian loans into English, are from
+Algonquian languages; chocolate, from Aztec, tobacco, from Taino (an extinct
+Arawakan language), and condor, from Quechua, are examples of words that were
+borrowed first into Spanish and then into English. The names of thousands of
+places throughout the Americas are of Indian origin.
+-------------------------------------------------------------------------------
+
+North, South and Central American Documents
+
+-------------------------------------------------------------------------------
+
+1ST_NAT.TXT Trusteeship and Self-Determination - Submitted to the UN by The
+Coalition of First Nations & IITC
+
+94-12919.TXT***Statements by Ecuador and Panama re: Draft Declaration at 12th
+Session of UNWGIP - June 1994
+
+20POINTS.TXT rail of Broken Treaties 20 Points for Renewal of Contracts --
+Reconstruction of Indian Contracts and Securing an Indian Future in America!
+
+ABOR_SOV.TXTAboriginal Rights and the Sovereignty of Countries (including a
+case study of the Canadian Arctic) by Marc Denhez, Inuit Tapirisat of Canada
+
+AILAC.TXT Initial Report of the American Indian Leaders Advisory Council to the
+incumbent Reagan Administration.
+
+AIM-UN94.TXTState of the International Confederation of Autonomous Chapters of
+the American Indian Movement at the UNWGIP 12th Session, 27 July 1994
+
+ALGONQIN.TXTThe Algonquin Nation's Presentation to the Members Committee to
+Examine Matters Relating to the Accession of Quebec to Sovereignty
+
+ANTI-IND.TXTTreaty Rights and Responding to Anti-Indian Activity by Zoltan
+Grossman
+
+ALCATRAZ.TXTThe 1969 Indians of All Nations Alcatraz Proclamation to the Great
+White Father and His People
+
+ARCTIC.TXT Science and the Indigenous Arctic - Legal basis for Inuit
+Sovereignty in the Circumpolar Region by Charles Etok Edwardsen, Jr.
+
+BILLPART.TXTPetition and Bill of Particulars on the Establishment of
+Negotiations Between Indian Nations in Canada and the Gov't of Canada to
+Resolve Outstanding Differences Prior to the Patriation of the Canadian
+Constitution
+
+BILPART2.TXTPetition and Bill of Particulars on the Political Standing of
+Indigenous Tribes and Bands Under the Protection of the British Gov't in the
+Face of Impending Canadian Independence
+
+BREAKPT.TXTReview and Analysis of "Break Point" Actions and Strategies by
+Rudolph C. Ryser 1/5/81 -- Repatriation of Canadian Constitution
+
+CANADA11.TXTCanada's Statement at the 11th Session of the UNWGIP
+
+CANADA94.TXTCanada's Statement at the 12th Session of the UNWGIP - July 1994
+
+CENTENAL.TXT Centennial Accord Between the Federally Recognized Indian Tribes
+in Washington State and the State of Washington
+
+CHIPTRT1.TXT Treaty with the Ottawa, Chippewa, etc. - March 28, 1836
+
+CHIPTRT2.TXT Treaty with the Chippewa - July 29, 1837
+
+CHIPTRT3.TXT Treaty with the Chippewa - October 4, 1842
+
+CHIPTRT4.TXT Treaty with the Chippewa - September 30, 1854
+
+CIGA_CON.TXT Confederation of Indigenous Governments Constitution
+
+CIVIL.TXT U.S. Commission on Civil Rights: Constitutional Status of American
+Indians. March 1973.
+
+COLUMBIA.TXT Territory, Environment and Development in the Pacific Coastal
+Region of Columbia, by the Indigenous Community Organizations of the Choco
+
+CREE.TXT Grand Council of the Crees (of Quebec) Submission to the UN Commission
+on Human Rights July 1985 -- James Bay Hydroelectric
+
+EDHATCH.TXT Information on Eddie Hatcher - Native American Political Prisoner
+in North Carolina
+
+EDHATCH3.TXT ***A Message From Eddie Hatcher - September 1994 (Contains new
+address for Eddie)
+
+ENV_MOU.TXT Memorandum of Understanding Between Federally Recognized Tribes of
+Wash. State and the State of Washington -- Environmental Protection
+
+ELDERUN.TXT The Statement of the Sto:Lo Nation's Elders to the UN General
+Assembly 8/29/82
+
+FISHRITE.TXT Tough Questions on Indian Fishing -- by The Northwest Indian
+Fisheries Commission
+
+FLATHEAD.TXT Racism on the Flathead Reservation by Velda Friedlander-Shelby,
+Kootenai Nation
+
+GAMBLE.TXT "Sovereignty and Common Sense" by Oren Lyons and John Mohawk
+
+GAMBLING.TXT The Onondaga Council of Chiefs Memorandum on Tribal Sovereignty
+
+HIGHLAW.TXT Indian Government and Canada's Reform Constitution: Indian Inherent
+Rights and Reserve Powers
+
+IAA.TXT Constitutional Exclusion Leaves Us No Choice by the Indian Association
+of Alberta
+
+IGAWS.TXT Indian Governments & Washington State: An Examination of the
+Similarities & Differences in Their Positions Concerning Tribal-State Relations
+
+ILM.TXT Terms of Reference for the Royal Commission on Aboriginal Peoples -
+Issues which must be addressed if the R.C. is hopeful of productive results
+
+INDCITZN.TXT Indian Nations, the United States and Citizenship by John Mohawk
+
+INDGOVT.TXT "Who Will Govern Indian Country" by Rudolph C. Ryser
+
+INTCAN.TXT Toward an International Recognized Political Status: Indigenous
+National Coexistence With the State of Canada CWIS 3/18/83
+
+INTRNLAW.TXT Indian Sovereignty and International Law
+
+ITCAPLAN.TXT International Tribunal on Genocide in Central America. Planning
+Doc. 1: Draft Plan of Action
+
+ITSG_2.TXT Inter-Tribal Study Group on Tribal/State Relations - Taxation by
+Indian Tribes
+
+ITSG-CIT.TXT Inter-Tribal Study Group on Tribal/State Relations - A Separate
+People: Tribal People's Citizenship Within the U.S.
+
+JOE.TXT Presidential Address by Joe DeLaCruz to NCAI -- "Defending Our
+Inalienable Rights: We Cannot Fail Our Children"
+
+JOE_PAP.TXT Indian Self-Determination the Ideal and Indian Self-Governance the
+Reality - by President Joe DeLaCruz, Quinault Indian Nation
+
+JOE_REMK.TXT Indian Governments and Neighboring Governments: Sovereign Equality
+and Standards of Conduct Within the Context of Govt-to-Govt Relations, Joe
+DeLaCruz
+
+LILLOOET.TXT The Stl'atl'imx Nation's submission for membership into the United
+Nations
+
+LLAQTA.TXT A hilarious diatribe by the Llaqta School of Journalism of Cusco
+against the First World Congress of Indian People ("Yankee Imperialists")
+
+MACAS.TXT Fueling Destruction in the Amazon - an Interview with Dr. Luis Macas,
+President of the Confederation of Indigenous Nationalities of Ecuador (CONIE)
+
+MANIFEST.TXT Reflections on Race and Manifest Destiny by Thomas Jimson
+
+MAPUCHE.TXT Report on the Present Situation of the Mapuche in Chile - Presented
+to the UNWGIP, 27 July 1984
+
+MISKITO.TXT Statement by MISURASATA in Spanish and English to the Sandinistas
+in 1985
+
+MORRIS.TXT Statement by Prof. Glenn T. Morris to UNWGIP on topic of standard
+setting -- Religious Freedom
+
+NEWEPLAN.TXT Newe Sogobia & the U.S.A.: Renewal of International Relations on
+the Basis of Government-to-Government Respect
+
+NEO-TERM.TXT Neo-Termination and the Reagan Administration: U.S. Assimilation
+Policy with a New Label - NCAI analysis paper by Rudolph C. Ryser
+
+NFC_JOE.TXT Keynote Address by Joe DeLaCruz to the National Fisheries
+Conference, Union of British Columbia Indian Chiefs National Indian Brotherhood
+5/20/80
+
+NICAR-RE.TXT Nicaragua and the Indian Revolution by Professor Bernard Q.
+Nietschmann
+
+NICWAR.TXT Indian War in Nicaragua, Rivera Peace Initiative by Rudolph C. Ryser
+
+NISGAA.TXT Negotiating Nisga'a Rights - an Interview with Joseph Gosnell,
+Executive Chair of the Nisga'a Tribal Council
+
+NISHNAWB.TXT Declaration of Nishnawbe-Aski by the Ojibway-Cree Nation of Treaty
+No. 9 to the people of Canada delivered by the Chiefs of Grand Council Treaty
+No. 9
+
+NUXALK.TXT Statement of the Nuxalk Nation to the UN on the Definition of
+"Indigenous Populations"
+
+NWBRNSWK.TXT Union of New Brunswick Indians Presentation on Indigenous
+Populations, Palais Des Nations, August 1-5, 1988, by Graydon Nicholas,
+President
+
+OAXTEPEC.TXT Second Summit Meeting of Indigenous Peoples Oaxtepec Declaration,
+Oaxtepec, Mexico - October 1993
+
+PELTIER.TXT Leonard Peltier's pre-sentencing statement to the court, June 1,
+1977 - Fargo, North Dakota
+
+QUINTRET.TXT The Quinault River Treaty signed July 1, 1855
+
+RECOGNIZ.TXT NCAI paper on the controversy in Indian Country over federal
+recognition of non-recognized tribes.
+
+RWAIN.TXT Competing Sovereignties in North America and the Right-Wing and
+Anti-Indian Movement: Preliminary Findings of the RWAIN Project, January, 1988
+
+SCALP.TXT 21 Ways to Scalp an Indian
+
+SELFGOVT.TXT American Indian Self-Government: Fact, Fantasy and Prospects for
+the Future by Ward Churchill
+
+SKOK.TXT Memorandum of Understanding Between the Skokomish Tribe and Mason
+County, Washington
+
+SWIN-SKG.TXT Memorandum of Understanding for Establishing Procedures for the
+Administration of a Cooperative Land Use Planning Prgram between Swinomish &
+Skagit County, WA
+
+SWINOMSH.TXT Memorandum of Understanding for Establishing a Coordinated
+Tribal/County Regional Planning Program Between the Swinomish Indian Tribe &
+Skagit County, Wa
+
+STEER-09.TXT Report of the 9th Meeting of the Conference of Tribal Governments
+Steering Committee
+
+STOWW.TXT Small Tribes Organization of Western Washington Draft Plan of
+Operation
+
+TCHTHNKS.TXT Teaching About Thanksgiving 2nd Edition -- a teaching manual
+created by Highline School District
+
+TREATY6.TXT Statement by the Confederacy of Treaty 6 First Nations at the 12th
+Session of the UNWGIP - July 1994
+
+TRIBFRNT.TXT Introductory Chapter to _Anti-Indian Movement on the Tribal
+Frontier, 2nd Revised Edition_ by Rudolph C. Ryser, Chairman, Center For World
+Indigenous Studies
+
+TS.TXT Indian Nations & Washington State: Forming a Basis for Intergovernmental
+Relations. Discussion Paper: State Policy & Indian National Policy
+
+UBCIC.TXT Union of B.C. Indian Chiefs Aboriginal Title and Rights Position
+Paper, Ratified at the UBCIC 17th Annual General Assembly
+
+UNION_BC.TXT Remarks of the Union of British Columbia Indian Chiefs before the
+5th Session of the UN Working Group on Indigenous Populations 8/3/87
+
+UNN_C-31.TXT The United Native Nations Presentation to the Parliamentary
+Standing Cmt. on Indian Affairs Respecting Bill C-31
+
+WHITELIE.TXT The Canadian Government and the Great White Lie -- Canadian
+Constitutional repatriation issues.
+
+WISEUSE.TXT The Anti-Indian Movement in the Wise Use Movement: Threatening the
+Cultural and Biological Diversity of Indian Country by Rudolph C. Ryser,
+Chairman of CWIS
+
+WSNC_1.TXT Statement by the Western Shoshone National Council at UNWGIP 12th
+Session on Agenda Item #5
+
+WSNC_2.TXT Statement by the Western Shoshone National Council at UNWGIP 12th
+Session on Agenda Item #6
+
+WW_CHRON.TXT Treaty Rights Workshop Chronologies for Western Washington Tribes
+-- Timeline of Wa. history, treaty relations, and Gov. Issac Stevens
+
+YANOMAMI.TXT Yanomami in Peril - An Interview with Davi Kopenawa Yanomami
+
+YATAMA.TXT The YATAMA/Nicaragua Accord - Basic Preliminary Accords Between the
+Government of Nicaragua and the Organization YATAMA February 2, 1988
+-------------------------------------------------------------------------------
+
+Source: Native Net Lists
+-------------------------------------------------------------------------------
+[ ]  Return to NativeWeb
+Glenn Welker gwelker@mail.lmi.org
+Last Updated: May 9, 1995

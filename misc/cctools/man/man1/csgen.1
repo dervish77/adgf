@@ -1,0 +1,84 @@
+.ad l
+.TH CSGEN 1 "07 May 1999" "3Com"
+.SH NAME
+csgen - generate config spec templates for ClearCase.
+
+.SH SYNOPSIS
+.B "csgen" \fI<type>\fP [\fI<branch|release>\fP \fI<label|bp|cvsbr>\fP]
+
+.SH DESCRIPTION
+The "csgen" command generates config spec templates that are compatible
+with using the "mkv" command to create views.  
+.PP
+The first parameter \fI<type>\fP is used to indicate the type 
+of config spec to be generated (see FIELDS).
+.PP
+The second parameter \fI<branch|release>\fP is used in the config 
+spec file name as -- "smm_<branch|release>.cs".  The file is 
+output to the current directory.
+.PP
+The third parameter \fI<label>\fP usage depends upon which type
+of config spec is being generated.
+
+.SH FIELDS
+.TP 5
+.B "<type>" - type of config spec.
+
+Valid types are -- REL, DEV, INT, BUG, or ER.
+
+.TP 5
+.B "<branch|release>"
+
+Branch name for DEV, INT, BUG, and ER types, release label for REL type.
+
+.TP 5
+.B "<label>"
+
+Release label for ER type.
+
+.SH EXAMPLES
+.PP
+To create config spec for a release, use
+.PP
+.B
+    csgen REL REL_SMM_PROD_01.00.00
+.PP
+To create config spec for a new development feature, use
+.PP
+.B
+    csgen DEV dev_ne_feature
+.PP
+To create config spec for a new development feature, use
+.PP
+.B
+    csgen INT int_ne_smm_beta_01.03.00
+.PP
+To create config spec for a bug fix view, use
+.PP
+.B
+    csgen BUG dev_ne_mr225
+.PP
+To create config spec for a new engineering release, use
+.PP
+.B
+    csgen ER smm_er_01.05.00 REL_SMM_PROD_01.05.00
+
+.SH ENVIRONMENT
+The following environment variables are used by the script.
+.PP
+PROJECT
+    Variable defines current project.
+
+.SH SEE ALSO
+mkv(1), cleartool man config_spec
+
+.SH FILES
+/millenniumvobs/smm_root/cctools/bin/smm_csgen.pl
+.PP
+/millenniumvobs/smm_root/cctools/config.spec/*.cs
+
+.SH COPYRIGHT
+Copyright 1999 3Com Corporation.
+
+.SH AUTHORS
+Brian Lingard, 3Com Corporation.

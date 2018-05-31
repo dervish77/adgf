@@ -1,0 +1,78 @@
+                   [Image]  [Image] [Image] [Image]  [Image]
+
+-------------------------------------------------------------------------------
+
+Mythos Solo Rules: Alpha Version
+
+The basic play of the Solo game is to complete Adventures and retain as much
+Sanity as possible. You play out of a Mythos deck with the Monsters and Events
+removed. These are placed in the Threat Deck, and attack you at specific points
+during the Solo game. All other parts of the game remain exactly like the
+regular game rules unless otherwise noted.
+
+First you choose your investigator normally. The Hobo may not be used. Then you
+build the two decks under the following constraints.
+
+The Mythos Deck
+
+Adventure Cards: Must have at least 10 points of Adventures and no more than
+30.
+
+Allies: You must have 3 Allies for every full 5 points of Adventures.
+
+Artifacts: You must have 1 Artifact for every full 5 points of Adventures.
+
+Locations: You must have the same number of locations as points of Adventures.
+All locations must be different and you are limited to 1 Sanitarium for every
+full 10 Adventure points.
+
+Spells: You must have 1 Spell for every full 5 points of Adventures.
+
+Tomes: You must have 1 Tome for every full 5 points of Adventures.
+
+The Threat Deck
+
+Monsters: You must have a number of Monsters whose point value totals to two
+times your number of Adventure points. So a Mythos deck with 13 points of
+adventures would need a Threat deck with 26 points of Monsters. Standard card
+uniqueness rules apply (red dot means only one, no more than 4 of each).
+Additionally, for every full 10 points of Adventure cards you must add one
+Great Old One or Outer God.
+
+Events: You should take one of each Event you have available and shuffle them.
+Then add to your Threat deck 3 Events for every full 5 points of Adventures. In
+addition, you must have one day and one night event for every full 10 points of
+adventures.
+
+Basic Rules
+
+Play the game as if playing an opponent. However, whenever you play an new
+location you flip a card from the Threat deck and apply it to you. Monsters
+attack with any abilities listed on their card in the way which would cause you
+the most Sanity loss. You may block with allies or use spells and artifacts
+like normal combat. Events also affect you in the worst way possible (pretend
+you are your opponent choosing what to affect). If an Event does not make sense
+(such as Travel by Car) in the Solo game then it counts as no attack or effect
+that turn.
+
+When you have run out of cards to play you must pass. Passing also causes the
+Threat deck to flip one card for immediate effect. Play then continues as
+normal. When the Threat deck runs out reshuffle and start again.
+
+You win if you complete all your Adventures before going insane. You also want
+to have the highest Sanity possible remaining, so to complete all your
+Adventures and end with 20 Sanity would be the best you could possibly do.
+
+Notes: If you wish to play Adventure cards with Monsters or Events needed you
+must put one of each needed card in your Mythos deck. For any Monsters, you
+must place an identical card in the Threat deck. Now, when you play a Monster
+or Event, it is like playing a location, and a card from the Threat deck is
+flipped. If you have a Monster out now, it can also defend, but only for this
+combat, after which it is buried.
+
+If any effects don't make sense or seem strange, either don't use the card or
+rule that it works in the way which affects you the worst.
+-------------------------------------------------------------------------------
+                                [Image] [Image]
+
+Go to top of page

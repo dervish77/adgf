@@ -1,0 +1,79 @@
+README for $PROJHOME/rc 
+---------------------------------
+
+This directory contains an archive of the site specific environment
+set up files for the SMM project.
+
+
+Contents:
+
+	mw.smmrc		- Midwest's .smmrc file
+	
+	sd.smmrc		- San Diego's .smmrc file
+
+	ne.smmrc		- Northeast's .smmrc file
+
+	install.sh		- installation script
+
+--------------------------------------------------------------------
+
+Installation:
+
+These files must be copied to $CCHOME at each site.  A symbolic link
+should be created to point to the appropriate file for that site.
+
+For example in Northeast (i.e. Westboro):
+
+	.smmrc -> ./ne.smmrc
+
+
+Thus for all sites each developer's .cshrc file only needs to source 
+the .smmrc file as
+
+	source $CCHOME/.smmrc
+
+where $CCHOME is defined by each site in the .cmsrc file.
+
+--------------------------------------------------------------------
+
+Site Specific Customization:
+
+The following variables must be set correctly for each site:
+
+	SITE			two letter site abbreviation, currently
+
+					dv	Denver
+					ie	Ireland (Dublin)
+					mw	Midwest (Mt. Prospect)
+					ne	Northeast (Westboro)
+					sc	Santa Clara
+					sd	San Diego
+
+	PROJHOME		points to location of "cctools", this is
+				expected to be a view extended path name
+				of a view of "smm_main" branch
+
+	PROJECT_SERVERS		see next section
+
+--------------------------------------------------------------------
+
+Notes on View Servers:
+
+Site		Server				Disks
+----		------				-----
+Dublin		setanta.eur.3com.com		ccview
+
+Midwest 	view1-mp.it.usr.com		u01, u02, u03, u04, u05, u06
+		ripley.alien.usr.com		???
+		bishop.alien.usr.com		???
+
+San Diego	dilbert.eng.priacc.com		viewstore, eng8
+		wildcat.eng.priacc.com		eng12
+
+Northeast	panzer.mass-usr.com		vol01, vol02, vol03, vol04
+		pershing.mass-usr.com		vol01, vol02, vol03, vol04
+
+--------------------------------------------------------------------
+
+last updated:
+March 09, 1999 - BSL

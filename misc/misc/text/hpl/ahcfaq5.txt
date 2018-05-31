@@ -1,0 +1,1052 @@
+
+                                   Games
+     _________________________________________________________________
+   
+   This portion of the alt.horror.cthulhu FAQ was brought to you by
+   Donovan K. Loucks (dloucks@primenet.com). This document was last
+   updated on March 15, 1997.
+     _________________________________________________________________
+   
+     * Q: What board/card games are available based on Lovecraft or the
+       Mythos?
+       A: Although the "Call of Cthulhu" role-playing game is the primary
+       form of Lovecraftian gaming, HPL's influence has crept into other
+       forms of games.
+          + "Arkham Horror" (Chaosium 1050). Arkham Horror (sometimes
+            referred to as the "board game version of Call of Cthulhu")
+            is a game for 1 to 8 players who move about the streets and
+            buildings of Arkham, Mass., trying to close 'gates' that are
+            opening in the space/time continuum. The catch is that
+            monsters are pouring through those gates, making the streets
+            particularly dangerous. Plus, closing gates requires the
+            player to go through the gate (into some dangerous 'outer
+            world'), survive for 2 turns, return, and physically and/or
+            magically blast the gate closed (sometimes tough).
+            Although Arkham Horror was an overnight success, Chaosium has
+            chosen to turn its back on this game. It is out of print, and
+            Chaosium has no plans to bring it back, even though people
+            are asking for it to be reprinted. Chaosium is also flatly
+            rejecting any submissions for 'expansions' to Arkham Horror,
+            even though (at least) two have been completely developed and
+            submitted.
+          + "Creatures & Cultists" (Pagan Publishing PAG2000). Includes
+            128 cards, 8 play sheets, and is for 3 to 5 players. "Our
+            furiously fuggly card game is now available everywhere-fast,
+            funny, and full of Cthulhoid delights! From 3-5 players take
+            the roles of Cthulhu cultists, bent on world domination. Each
+            player sends out their thugs, sorcerers, and monsters to
+            obliterate the enemy. Special event cards like Suck The
+            Presidents Brain and the notorious Girl Scout Raid add to the
+            wacko mix" - Taken from the Pagan Publishing Catalog
+          + "Dark Cults" (Dark House Publishing). This is a storytelling
+            card game from 1983, written by Kenneth Rahman. The game is
+            moody, and light on mechanics. The fantastic black and white
+            artwork on the cards is also by Rahman (using the pseudonym
+            "Eymoth") and is worth the cost of the game itself. The logo
+            for Dark House bears more than a passing resemblance to that
+            of Arkham House.
+          + "Illuminati" (Steve Jackson). Illuminati is a table top card
+            game based around the concept of secretive illuminati groups
+            plotting world domination. One of the standard illuminati
+            groups are "The Servants of Cthulhu", their objective being
+            to destroy 8 'regular' (non-illuminati) groups.
+          + "Illuminati: New World Order" (Steve Jackson Games)
+          + "Macho Women with Guns" (Blacksburg Tactical Research
+            Center). Role-playing table-top board wargame (huh?). Perhaps
+            the ultimate spoof game, it includes dread Bthulhu
+            (illustrated wearing shorts & shades, & carrying a surfboard
+            - horrifying!) and the fearsome Isaac Azathoth as monsters. A
+            supplement includes a scenario in which the heroines are
+            transported to Ryleh [sic - I think I got that right] and
+            must fight their way back to the beach without being turned
+            into Monster Chow (TM) or - horror of horrors - chipping
+            their nail-polish.
+          + "Mythos" (Chaosium). Mythos is Chaosium's venture into the
+            collectible card game market. Just as Arkham Horror is
+            considered the "board game version of Call of Cthulhu",
+            Mythos is the card game version. Cards are distributed in
+            60-card starter decks and 13-card booster packs. The starter
+            decks are formed from a 200-card starter set of cards, while
+            the boosters are formed from a combination of the starter set
+            and the booster sets. The three booster sets are titled
+            Expeditions of Miskatonic University, Cthulhu Rising, and
+            Legends of the Necronomicon. An independent set of cards, The
+            Dreamlands, will also be available.
+     * Q: What role-playing games are available based on Lovecraft or the
+       Mythos or have incorporated specific names/elements of the Mythos
+       into the game?
+       A: Several role-playing games have Lovecraftian elements
+       incorporated into them, but only one, "Call of Cthulhu", centers
+       itself in Lovecraft's dark universe. Many of the games and
+       supplements below can be had for sale or auction in the
+       rec.games.frp.marketplace newsgroup.
+          + "Call of Cthulhu" (Chaosium) - Call of Cthulhu is the only
+            'role-playing' game devoted to the mythos. There are
+            primarily 3 time frames that this game is set in (depending
+            on your preference):
+            1890's - "Cthulhu by Gaslight" or just "Gaslight"
+            1920's - "Call of Cthulhu" (the original game)
+            1990's - "Cthulhu Now"
+            In addition, there is one other 'setting' which is used (not
+            in time, but in place):
+            "Dreamlands" - based upon the dreamlands setting created by
+            Lovecraft, et al.
+            The basic premise of this game is that players act out
+            (verbally, in general; some interactive role-playing might be
+            used) the parts of "investigators" in a world where cults of
+            evil humans, and strange monsters of both indigenous and
+            outer-worldly origin are trying to bring about the
+            re-emergence of the imprisoned Old Ones (or Great Old Ones).
+            The actions of all game elements, besides those of the
+            players, are controlled by the "Keeper of Arcane Secrets" (or
+            "Keeper"). The ultimate goal of the investigators is to
+            discover, and thwart, the evil minions of the Old Ones,
+            without dying a horribly mutilating death, or going
+            irrevocably insane.
+          + 6070 - GURPS ("Generic Universal RolePlaying System")
+            CthulhuPunk (Steve Jackson Games) - A supplement called
+            'CthulhuPunk' was released in late March of 1995. It is a
+            cross between "Call of Cthulhu" and GURPS Cyberpunk, using
+            the GURPS system. Chapters include "The Cthulhu Mythos", "The
+            CthulhuPunk World", "Characters", "The CthulhuPunk Campaign",
+            "Investigators", "Cultists", "Mythos Bestiary", "Adventure
+            Seeds", and "Conversions".
+          + Advanced Dungeons and Dragons (TSR) - AD&D is not devoted to
+            the Cthulhu Mythos, but rather to fantasy/medieval
+            adventuring. However, their first printing of a book called
+            "Deities and Demigods" contained AD&D game statistics for the
+            "Cthulhu Mythos". While the list is pretty inconsistent with
+            what Call of Cthulhu players (and Lovecraft readers in
+            general) feel, it is still interesting for some DMs to throw
+            a "shoggoth" into the forray on occasion, to keep players on
+            their toes.
+          + "Toon" (Steve Jackson) - The "Tooniversal Tour Guide" (Steve
+            Jackson Games, supplement to TOON cartoon role-playing game)
+            contains 21 pages on "The Crawl of Catchoolu", the rules for
+            an extremely silly Mythos spoof, where one can find such
+            horrible tomes as "The Pop-Up Book of Forbidden Knowledge"
+            and "The Necronomicomizomicon". Also included are details of
+            Mousekatonic University in Darkham, MA; horrible creatures
+            such as "Yu-Go, the Fungi from Cleveland", "Deep Clowns",
+            "Crisponians" and "The Insanity Loss Results Table" which
+            includes such dire consequences as "Become an accountant" or
+            even "Take up wargaming".
+     * Available for Call of Cthulhu
+          + Chaosium:
+            g = For Cthulhu by Gaslight
+            n = For Cthulhu Now
+            d = For (or containing 1 or more adventures set in)
+            Dreamlands
+            Some of the following aren't really game materials, but are
+            included as a possible interest to people who play Call of
+            Cthulhu (The 2 Field Guides actually are, IMHO, great game
+            materials).
+               o Runequest - The Gateway Bestiary (June, 1980). This
+                 supplement included "Additional Monsters for Runequest",
+                 and was written by Sandy Petersen. It included a chapter
+                 of "H.P. Lovecraft Creations" including Deep Ones, Great
+                 Race, Mi-Gos, Nightgaunts, Old Ones, Shoggoths, and
+                 Spawn of Yog-Sothoth.
+               o 2009-X - Call of Cthulhu, first edition.
+               o 2009-DX - Call of Cthulhu, Designer's Edition.
+               o 2009-X? - Call of Cthulhu, second edition.
+               o 2010 - Shadows of Yog-Sothoth, first edition (1982). A
+                 campaign scenario including the following chapters: "The
+                 Hermetic Order of the Silver Twilight", "Look to the
+                 Future", "The Coven of Cannich", "Devil's Canyon", "The
+                 Worm that Walks", "The Watchers of Easter Island", and
+                 "The Rise of R'lyeh". Two bonus scenarios, "The People
+                 of the Monolith" and "The Warren" are included as well.
+                 [NOTE: This campaign was reprinted in Cthulhu Classics
+                 (3301).]
+               o 2012 - The Asylum.
+               o 2301-X - Call of Cthulhu, third edition (1983, boxed).
+                 Includes the second edition rulebook, "A Sourcebook For
+                 the 1920's", and a folded world map. Brief scenarios
+                 include "The Haunted House", "The Madman", and "The
+                 Brockford House".
+               o 2302 - Shadows of Yog-Sothoth, second edition.
+               o 2303 - The Asylum and Other Tales (1983). Scenarios
+                 include "The Auction", "The Madman" (not the same
+                 scenario that appeared in the second edition rules
+                 book), "Black Devil Mountain", "The Asylum", "The
+                 Mauretania", "Gate From the Past", and "Westchester
+                 House".
+               o 2304 - Cthulhu Companion (1983). Scenarios include
+                 "Paper Chase", "The Mystery of Loch Feinn", "The
+                 Rescue", and "The Secret of Castronegro". Articles
+                 include "The Cthulhu Mythos in Mesoamerican Religion",
+                 "Further Notes on the Necronomicon", "Sourcebook
+                 Additions", "Rulesbook Additions", "Excerpts and
+                 Prayers", "Poetry", and "Sanity Quiz".
+               o 2305 - The Fungi From Yuggoth (1984). A campaign
+                 scenario including the following chapters: "The
+                 Dreamer", "The Thing in the Well", "Castle Dark", "Sands
+                 Of Time", "Mountains of the Moon", "By The Bay: Part I",
+                 "By The Bay: Part II", and "Day of the Beast". Two
+                 optional scenes, "Halls Of Celaeno" and "Voice Out of
+                 Time" are included as well.
+               o 2306 - Curse of the Cthonians (1984). Scenarios include
+                 "Dark Carnival", "The Curse of Chaugnar Faugn", "Thoth's
+                 Dagger", and "The City Without a Name". Also included is
+                 the article, "The Kabbalistic Science of Gematria".
+               o 2307-X - Masks of Nyarlathotep, first printing (1984,
+                 boxed). A campaign scenario that includes the following
+                 chapters in individual books: "New York", "London",
+                 "Cairo", "Kenya", and "Shanghai".
+               o 2308 - Trail of Tsathogghua (1984). Scenarios include
+                 "The Trail of Tsathogghua" and "The Curse of
+                 Tsathogghua" (both form a mini-campaign), as well as
+                 "The Haunted House" (not the same scenario that appeared
+                 in the second edition rules book).
+               o 2309 - Keeper's Screen, first edition (1985).
+               o 2310 - Fragments of Fear (1985). Scenarios include "The
+                 Underground Menace" and "Valley of the Four Shrines".
+                 Articles include "Call of Cthulhu Questions", "Ritual
+                 Curses", "Mythos Comparitive Sizes", "On the Ubiquity of
+                 Cthulhu", "Innsmouth Map", "Extract: Edward Mordake", "A
+                 Cthulhu Grimoire", "Lions and Tigers and Bears, etc.",
+                 "Nemesis", "Size Comparisons", "Size Comparisons
+                 Fold-Out", and "New Mythos Deities, Races, and
+                 Monsters".
+               o 2311 - Alone Against the Wendigo (1985). This is a
+                 "Solitaire Adventure in Canada's Wilds".
+               o 2312 - Alone Against the Dark (1985). This is a
+                 globe-spanning solitaire adventure.
+               o 2313 - Terror From the Stars (1986). Scenarios include:
+                 "The Pits of Bendal Dolum", "The Temple of the Moon",
+                 "Theron Marks Manual".
+               o 2314-X - Cthulhu by Gaslight (g), first edition (1986,
+                 boxed). Includes "A Sourcebook for the 1890s", "The
+                 Yorkshire Horrors", and a map of London.
+               o 2315-X - H.P. Lovecraft's Dreamlands (d), first edition
+                 (1986, boxed). Includes "The Dreamlands", "Dream
+                 Journeys" and a map of the Dreamlands. Scenarios
+                 included in "Dream Journeys" include "To Sleep,
+                 perchance to Dream", "Captives of Two Worlds",
+                 "Pickman's Student", "Season of the Witch", "Lemon
+                 Sails", and "The Land of Lost Dreams".
+               o 2316-X - Spawn of Azathoth (d), first edition (1986,
+                 boxed). A campaign scenario that includes three books,
+                 "From Beyond The Grave", "The Spawn Approaches", and
+                 "The Azathoth Papers". "From Beyond The Grave" contains
+                 the first scenario, "Providence, R.I.", while "The Spawn
+                 Approaches" contains the remaining scenarios,
+                 "Garrison", "St. Augustine", "The Andaman Islands",
+                 "Ulthar and Beyond", "The Eternal Quest", and "The Spawn
+                 of Azathoth".
+               o 2317-H - Call of Cthulhu, third edition (1986, hardback;
+                 includes 2304, Cthulhu Companion).
+               o 2318 - Statue of the Sorceror/Vanishing Conjurer (with
+                 Games Workshop). Includes two independent scenarios.
+               o 2319 - Terror Australis (1987). Articles include "The
+                 Nation", "Australian Language", "The New Ghosts", "1920s
+                 Timeline for Australia", "The Aboriginals", and
+                 "Creatures From the Dreamtime". Scenarios include "Pride
+                 of Yirrimburra", "Old Fellow that Bunyip", and "City
+                 Beneath the Sands".
+               o 2320 - Green and Pleasant Land (1987, with Games
+                 Workshop). Sourcebook for early 20th-century Britain.
+                 Scenarios include "The Horror of the Glen", "Death in
+                 the Post", and "The Shadow over Darkbank". Also includes
+                 a short story by Brian Lumley, "The Running Man".
+                 [Contributed by: Ed Pflager (epflager@aol.com)]
+               o 2321 - The Great Old Ones (1989). Scenarios include "The
+                 Spawn", "Still Waters", "Tell Me, Have You Seen the
+                 Yellow Sign?", "One in Darkness", "The Pale God", and
+                 "Bad Moon Rising".
+               o 2322 - Cthulhu Now! (n), first edition (1987). Articles
+                 include "Contemporary Investigators", "New Equipment",
+                 "Firearms", "Forensic Pathology", and "Hit Locations".
+                 Scenarios include "The City in the Sea", "Dreams Dark
+                 and Deadly", "The Killer Out of Space", and "The Evil
+                 Stars".
+               o 2323 - Keeper's Screen, second edition (1988).
+               o 2324 - Call of Cthulhu, fourth edition (1989, softback).
+               o 2325 - Arkham Unveiled (1990). Articles include
+                 "Orientation", "A Brief History of Arkham", "Town
+                 Directory", and "A Guide to Arkham". Scenarios include
+                 "A Little Knowledge", "The Hills Rise Wild", "The
+                 Condemned", "Dead of Night". Also included is a fold-out
+                 map of Arkham and a copy of the "Arkham Advertiser"
+                 dated Thursday, Oct. 11, 1928.
+               o 2326 - At Your Door (n) (1990). Scenarios include "Full
+                 Wilderness", "Landscrapes", "Dawn Biozyme", "No Pain, No
+                 Gain", "Where A God Shall Tread", and "After The Big
+                 One".
+               o 2327 - Mansions of Madness (1990). Scenarios include
+                 "Mr. Corbitt", "The Plantation", "Crack'd and Crook'd
+                 Manse", "The Sanatorium", and "Mansion of Madness".
+               o 2328 - Fatal Experiments (1990). Scenarios include
+                 "Tatterdemalion", "The Songs of Fantari", and "The
+                 Lurker in the Crypt". Also included is the article, "New
+                 Weapons for Call of Cthulhu".
+               o 2329 - Blood Brothers (1990). Scenarios include "Uncle
+                 Timothy's Will", "Oath of Blood", "Nemesis Strikes!",
+                 "The Land That Time Ignored", "The Mummy's Bride", "The
+                 Dollmaker", "Ancient Midget Nazi Shamans", "Honeymoon in
+                 Hell", "Dead On Arrival", "The Swarming", "Spawn of the
+                 Deep", "Trick or Treat", and "Horror Planet".
+               o 2330 - Return to Dunwich (1991). Articles include
+                 "Welcome To Dunwich", "Secrets of Dunwich", "The
+                 Village", "A Guidebook To Dunwich Environs", "The
+                 Underground", "The Dunwich Horror" and "Secrets,
+                 Mysteries, Legends, & Rumours". The only scenario
+                 included is "Return To Dunwich", although there is
+                 sufficient material throughout the book for several
+                 scenarios. Also included is a fold-out map of the
+                 Dunwich area.
+               o 2331 - Horror on the Orient Express (1991, boxed). An
+                 enormous campaign scenario that includes the following
+                 individual books: "Campaign Book", "Through The Alps",
+                 "Italy & Beyond", "Constantinople & Consequences",
+                 "Strangers On The Train", and player handouts. The
+                 contents of each book includes:
+                    # Campaign Book: "The Orient Express",
+                      "Simplon-Orient Express Operations", and "The
+                      Campaign".
+                    # Through the Alps: "Dancers in an Evening Fog", "The
+                      Doom Train", "Les Fleurs du Mal", "Nocturne", and
+                      "Note for Note".
+                    # Italy and Beyond: "Death (and Love) in a Gondola",
+                      "Cold Wind Blowing", "In a City of Bells and
+                      Towers", and "Little Cottage in the Wood".
+                    # Constantinople & Consequences: "Repossession", "By
+                      the Skin of the Teeth", "Blue Train, Black Night",
+                      and "The Fog Lifts".
+                 Also included is a map showing "Routes of the Orient
+                 Express", passports, luggage stickers, "The Scroll of
+                 the Head", "The Sedefkar Simulacrum", an Orient Express
+                 poster, and 4 sheets showing the plans of 12 train cars.
+               o 2332 - Dark Designs (1991, g). Scenarios include "Eyes
+                 for the Blind", "The Menace from Sumatra", and "Lord of
+                 the Dance".
+               o 2333 - Kingsport (1991). Articles include "Welcome to
+                 Kingsport", "A Town History", "The Kingsport Cult", "A
+                 Kingsport Chronology", "A Guidebook to Kingsport
+                 Environs", and "Plagued by Dreams". Scenarios include
+                 "The House on the Edge", "Dreams & Fancies", and "Dead
+                 in the Water". Also included are two fold-out maps of
+                 Kingsport; one remains in the book, one is to be
+                 removed.
+               o 2334 - Tales of the Miskatonic Valley (1991). Scenarios
+                 include "Freak Show", "Regiment of Dread", "A Painted
+                 Smile", "Watcher in the Valley", "Fade to Grey", and
+                 "Trail of Yig".
+               o 2335 - Fearful Passages (1992). Scenarios include "Fear
+                 of Flying", "The Iron Ghost", "Furious Driving", "Rigid
+                 Air", "Crash Dive", "Slow Boat", "Armored Angels",
+                 "Along the Indus", and "Sleigh Ride". Also included is
+                 the article "Automobile Chase Rules".
+               o 2336 - Call of Cthulhu, fifth edition (1992, softback).
+                 Chapters include "Investigators", "Keeper's Section",
+                 "Reference Section", and "Resources Section".
+               o 2337 - The Stars are Right! (n) (1990).
+               o 2338 - Escape from Innsmouth (1992). Articles include
+                 "Mysterious Innsmouth", "Welcome to Innsmouth", "The
+                 Shadow Over Innsmouth", "A Guidebook to Innsmouth &
+                 Environs", and "Sinister Seeds". Scenarios include
+                 "Escape from Innsmouth" and "The Raid on Innsmouth".
+                 This latter scenario has six parts: "Project Covenant",
+                 "The Esoteric Order of Dagon", "The Marsh Mansion", "The
+                 Smuggler's Tunnels", "Devil Reef", and "Y'ha-nthlei".
+               o 2339 - The Thing at the Threshold (1992). Scenarios
+                 include "The Inheritor", "The Benighted", and "The Dead
+                 Sea".
+               o 2340 - Blood Brothers 2 (1992). Scenarios include
+                 "Nightmare in Silence", "Chateau of Blood", "An Alien
+                 Kicked Sand in My Face", "Alive and Kicking", "El Tigre,
+                 y la Pir mede de Destrucci›n", "The Evil Gun", "Dead On
+                 Arrival 2", "Carnival Knowledge", and "Simply Red".
+               o 2342 - Adventures in Arkham Country (1993). Scenarios
+                 include "A Happy Family", "The Whore of Baharna", "Bless
+                 the Beasts and Children", "The Dark Wood", and "With
+                 Malice Aforethought".
+               o 2343 - 1920s Investigators' Companion, Volume I (1993).
+                 Sections include "The Roaring Twenties", "Research &
+                 Resources", "Transport & Travel", and "Equipment &
+                 Arms".
+               o 2344 - Keeper's Compendium (1993). Chapters include
+                 "Forbidden Books", "Secret Cults", "Alien Races", and
+                 "Mysterious Places".
+               o 2345 - Sacraments of Evil.
+               o 2346 - Investigator's Companion, Volume II: Occupations
+                 and Skills (1994).
+               o 2347 - The London Guidebook (1996).
+               o 2348 - King of Chicago (1994). Articles include "The
+                 Role of Prohibition" and "An Economy of Crime".
+                 Scenarios include "The King of Chicago" and "The Secret
+                 of Marseilles".
+               o 2349 - Ye Booke of Monstres.
+               o 2350 - Call of Cthulhu, fifth edition, (1993, hardback).
+                 Previously available only from Wizard's Attic.
+               o 2351 - The Cairo Guidebook (1995). Chapters include
+                 "Going to Cairo", "Welcome", "The Sights of the City",
+                 "Excursions from Cairo", "People in Egypt", and "Gods of
+                 Ancient Egypt".
+               o 2352 - Miskatonic University (1995).
+               o 2353 - Strange Aeons (1995).
+               o 2354 - Taint of Madness (1995).
+               o 2355 - 1990's Handbook (1996).
+               o 2356 - The Compact Arkham Unveiled (1996).
+               o 2357 - In the Shadows (1996).
+               o 2358 - Ye Booke of Monstres II (1996).
+               o 2359 - Horror's Heart
+               o 2360 - Utatti Asfet.
+               o 2361 - The Complete Masks of Nyarlathotep.
+               o 2362 - The Compact Trail of Tsathoggua.
+               o 3301 - Cthulhu Classics (1989). Scenarios include
+                 "Shadows of Yog-Sothoth", "The Warren", "The Pits of
+                 Bendal-Dolum", "The Temple of the Moon", "Dark
+                 Carnival", "The Secret of Castronegro".
+               o 3302 - H.P. Lovecraft's Dreamlands (d), second edition
+                 (1988, softback).
+               o 3303 - Cthulhu by Gaslight (g), second edition (1988,
+                 softback).
+               o 3304 - Masks of Nyarlathotep (second printing, 1989,
+                 softback).
+               o 3305 - Cthulhu Casebook (1990). Most of the contents
+                 were taken from "The Asylum" and "Curse of the
+                 Cthonians". Scenarios include "The Auction", "The
+                 Madman" (not the same scenario that appeared in the
+                 second edition rules book, "Black Devil Mountain", "The
+                 Asylum", "The Mauretania", "Gate From the Past",
+                 "Westchester House", "The Curse of Chaugnar Faugn", and
+                 "Thoth's Dagger". Articles include "The Ten Commandments
+                 of Cthulhu Hunting", "Sinister Seeds", "Death Reports",
+                 and "Insta-Plots".
+               o 3306 - Curse of Cthulhu (1990). Most of the contents
+                 were taken from "Fungi from Yuggoth" and "Trail of
+                 Tsathogghua".
+               o 3307 - Cthulhu Now! (n), second edition (1992,
+                 softback).
+               o 3308 - H.P. Lovecraft's Dreamlands (d), second edition
+                 (1992, softback).
+               o 5101 - Miskatonic U. Graduate Kit (1987). Items include
+                 a course catalog from the School of Medieval
+                 Metaphysics, a presentation diploma, a diploma frame
+                 (cardboard), a student body card, a student ID card, an
+                 alumni association card, a restricted stacks library
+                 pass, a cafeteria card, a "Cthulhu is Coming" button
+                 blank, a parking sticker, a school map place mat, a
+                 bumper sticker (possibly inspired by yours truly!), a
+                 rear window sticker, and a notepad from Pickman Hall.
+               o 5101-M - Master of Arts Diploma.
+               o 5101-D - Doctoral Diploma.
+               o 5102 - Investigator's Kit.
+               o 5105 - S. Peterson's Field Guide to Cthulhu Monsters
+                 (1988). 27 different monsters are illustrated, a
+                 relative size chart is given, and a "Scientific Key"
+                 allows you to determine the identity of a monster
+                 through a series of questions.
+               o 5106 - Cthulhu Covers.
+               o 5107 - S. Peterson's Field Guide to Creatures of the
+                 Dreamlands (1989). 31 different monsters are
+                 illustrated, maps of the Dreamlands are included, and a
+                 "Scientific Key" allows you to determine the identity of
+                 a monster through a series of questions.
+               o 5108 - Keeper's Kit (1990).
+               o 5110 - Keeper's Kit, fifth edition (1993).
+               o 5111 - Investigator Sheets.
+               o 5112 - Dire Documents (1993).
+               o ? - The Occult.
+               o ? - Beyond the Mountains of Madness.
+               o ? - Goatswood and Less Pleasant Places (?). This
+                 supplement is based on Ramsey Campbell's mythos tales
+                 and focuses on the Severn Valley in England. It was due
+                 out in Spring 1993...
+               o ? - Arkham Now!
+          + Citadel Miniatures:
+               o ???? - Call of Cthulhu miniatures
+          + Games Workshop (Nottingham, UK):
+               o MM1 01029 - Trail of the Loathsome Slime (1985).
+               o MM3 01031 - Nightmare in Norway (1985).
+               o 4450 - Green and Pleasant Land (1987, with Chaosium).
+               o 10176 - Statue of the Sorceror/Vanishing Conjurer (1986,
+                 with Chaosium).
+               o 10247 - Call of Cthulhu, third edition.
+          + Grenadier Games (Pennsylvania, USA):
+               o 701 - Horrible Secret of Monhegan Island (1984).
+               o 6501 - Adventurers (12 CoC adventurers, minatures).
+               o 6502 - Creatures (10 CoC monsters, miniatures).
+          + Hero Games (California, USA):
+               o ???? - Trail of the Golden Spike (1984)
+               o ???? - Lands of Mystery (1985)
+          + Pagan Publishing:
+               o 1000 - Alone on Haloween (1992). Includes "Alone on
+                 Halloween" and "The Old Dark House".
+               o 1001 - Devil's Children (1993). Includes "Salem 1692"
+                 and "Arkham 1992".
+               o 1002 - Walker in the Wastes (1994). Includes
+                 "Resources", "The Dead of Winter", "Into the Realm of
+                 the Wind-Walker", "Onward to Endurance", "Secrets of the
+                 Kuriles", "Chirihoi", "The Camden Project", "The Osbrook
+                 House", "Camden's Dark Twin", "The Flight North", "A
+                 Time for Decisions", "The Monolith", "Incident in Iraq",
+                 "Seizing the Tablets", "Day of Reckoning", and
+                 "Miscellany".
+               o 1003 - Coming Full Circle (1995) Includes scenarios
+                 "Cold Spot", "Remains to be Seen", "The Whitewood
+                 Horror", and "Full Circle".
+               o 1004 - The Golden Dawn (1996). Includes scenarios "The
+                 Room Beyond", "Hell hath No Fury", "La Musique de la
+                 Nuit", and "Sheela-na-gig". Also includes 12 chapters
+                 with resource materials on the occult order of The
+                 Golden Dawn.
+               o ???? - End Time (A seperate roleplaying game from CoC;
+                 stands alone; due out 94/95)
+               o 2100 - The Resurrected, Volume One: Grace Under
+                 Pressure.
+               o 2101 - The Resurrected, Volume Two: Of Keys And Gates
+                 (1994). Includes "The Travesty", "The House on Stratford
+                 Lane", "Within You Without You".
+               o ???? - Courting Madness.
+               o ???? - Stark Raving Mad!
+          + RAFM - Miniatures
+               o 2011 - Great Cthulhu
+               o 2012 - Lovecraft Country
+               o 2901 - Doctor (male), sane & insane (3)
+               o 2902 - Professor (male) (3)
+               o 2903 - Dilettante (female) (3)
+               o 2904 - Student Investigator (male) (3)
+               o 2905 - Parapsychologist (female) (3)
+               o 2906 - Journalist (male) (3)
+               o 2907 - Priest/Exorcist (3)
+               o 2908 - Holy Sisters (3)
+               o 2909 - Thugs (3)
+               o 2910 - Private Investigators (3)
+               o 2911 - Soldiers (3)
+               o 2912 - Gangsters (3)
+               o 2913 - Scotland Yard Trio
+               o 2914 - Sinister Scientists
+               o 2915 - Crazed Clergy
+               o 2916 - Servants and Staff
+               o 2917 - Townsfolk
+               o 2918 - Police
+               o 2921 - Nightgaunt Demonic Servito
+               o 2922 - Deep Ones Mutant Fishermen (3)
+               o 2923 - Dimensional Shamblers (3)
+               o 2924 - Great Race of Yith Alien Being
+               o 2925 - Servitors of the Outer God
+               o 2926 - Cthonian Giant Worm
+               o 2927 - Shoggoth Protoplasmic Horror
+               o 2928 - Flying Polyp Aerial Horror
+               o 2929 - Formless Spawn of Tsuthoggua
+               o 2930 - Dark Young of Shub-Niggurath
+               o 2931 - Ghouls (varied transformations) (3)
+               o 2932 - Byakhee - Hybrid Winged Thing
+               o 2933 - Hounds of Tindalos
+               o 2934 - Nyarlathotep
+               o 2935 - Elder Thing
+               o 2936 - Tsathoggua
+               o 2937 - Cultists (3)
+               o 2938 - Maniacs (3)
+               o 2939 - Mi-Go
+               o 2940 - Hunting Horror
+               o 2941 - Moon Beast
+               o 2942 - Ghasts (2)
+               o 2943 - Serpentmen (3)
+               o 2944 - Sand Dwellers (3)
+               o 2945 - Yig
+               o 2946 - Gug
+               o 2947 - Lesser Other Gods
+               o 2948 - Y'Golonac Great Old One
+               o 2949 - Leng Spider
+               o 2950 - Tcho Tcho People
+               o 2951 - Wapir?
+               o 2952 - King in Yellow
+               o 2970 - MU Expedition to Egypt
+               o 2971 - MU Expedition to Antartica
+               o 2972 - MU Expedition to the Amazon
+               o 2973 - MU Expedition up the Mekong
+          + Theatre of the Mind Enterprises (TOME):
+               o T-1 - The Arkham Evil. Includes three "interlocking
+                 campaigns": "The Throat of the Beast", "The Wanderer",
+                 and "And the Dogs Shall Know You".
+               o T-2 - Death In Dunwich (1983). Includes a map of Dunwich
+                 and a Keeper's screen. [Contributed by: Ed Pflager
+                 (epflager@aol.com)]
+               o T-3 0983 - Pursuit to Kadath. The All Seeing Eye of The
+                 Alskali.
+               o T-4 128304 - Whispers from the Abyss, and other tales.
+                 Includes "On the Wings of Madness", "De Schip Zonder
+                 Schaduw", and "Whispers from the Abyss".
+               o T-5 070584 - Glozel Est Authentique!. Secrets of the
+                 Kremlin.
+               o ?????? - The Toy Shop (published ???)
+          + Triad Entertainments:
+               o 0001 - Lurking Fears (1990). Scenarios include "Rise of
+                 the Sleeper", "Caller in the Desert", "The Sundial of
+                 Amen-Tet", "Sorrow's Glen", "The Starshrine", and "The
+                 Devourer".
+               o 0002 - Grimrock Isle. "A Chilling Solo Adventure and
+                 Campaign Book in One". Although a solitare adventure, a
+                 "Group Scenario Book" is included to allow for group
+                 play.
+               o 0003 - Whispers in the Dark
+               o 0004 - Dwellers in the Shadow
+               o 0005 - The End of the World
+     * Q: What articles have been printed in gaming magazines, which
+       cover the Call of Cthulhu game?
+       A: In the list below the following abbreviations may be used:
+       CBG: Cthulhu by Gaslight
+       CN: Cthulhu Now
+       GPL: Green and Pleasant Land
+          + Adventurer (???)
+               o #1 - "White Fire" (??, pp 28-34), Scenario: 1920's/ 30's
+                 England
+               o #3 - "Mylakhrion the Immortal" (Brian Lumley, pp 38-40),
+                 Fiction; "Horrific Routes in Role Playing" (Dave Lock,
+                 p41), Article: Horror writers (including Lovecraft,
+                 Clark Ashton Smith, M.R. James etc); "Whiplash" (Warren
+                 Ellis, Stewart Johnson, pp 55-57), Comic strip; "Cults
+                 of Cthulhu" (AJ Bradbury, pp 60-62), Article: Setting up
+                 cults in CoC; "Beyond the Facade" (AJ Bradbury, p63),
+                 Article: Sample cult and scenario cameo
+               o #6 - "Whiplash" (Warren Ellis, Stewart Johnson, pp
+                 54-56), Comic strip
+               o #7 - "Religion in Fantasy Gaming" (Robert Blinkhorn, pp
+                 34-35), Article: Religions in CoC; "Return to Arkham"
+                 (Brian Lumley, Carl Ford, pp 52-55), Comic strip
+               o #11 - "Whiplash" (Warren Ellis, Stewart Johnson, pp
+                 52-54), Comic strip
+          + Adventures Unlimited
+               o #2
+               o #3
+               o #4
+               o #5
+          + Challenge (GDW)
+               o #?? - "Cthulhu: 1889", Article: rules for CoC/ Space
+                 1889 crossover
+               o #46 - "The Space Eaters" (FP Kiesche III, pp 76-79),
+                 Article: Stats for `The Space Eaters' (lesser indep
+                 race) from Frank Belknap Long's story of same name, "The
+                 Horror Out of Partridgeville" (FP Kiesche III, pp
+                 80-84), Scenario: 1920, US (uses `The Space Eaters').
+               o #48 - "The Bayou Ritual" (James L Cambais, pp 68-70),
+                 Scenario: Louisiana, 1920's/ 30's
+               o #56 - "The Horror on the Borderland" (Jane M Lindskold,
+                 pp 60-64), Scenario: Ireland, any period. Based on
+                 William Hope Hodgson's "The House on the Borderland"
+               o #58 - "Ghost Writer" (James L. Cambias, pp 48-54),
+                 Scenario: Boston, 1925
+               o #61 - "Video Nightmare" (Patrick Sheats, pp 62-67),
+                 Scenario: CN, urban environment
+               o #62 - "Dark Side of the Force" (Marcus L Rowland, pp
+                 40-43), Scenario: CN, London (or any large city)
+               o #63 - "From the Trenches" (Adam Geibel, pp 60-63),
+                 Scenario: 1920's Arkham
+               o #64 - "Valley of Twisted Apes" (Paul Sudlow, pp 28-31),
+                 Scenario: CBG/ 1920's Java
+               o #65 - "Curse of the Centuries" (JB Hill, pp 52-55),
+                 Scenario: 1920's/ any
+               o #66 - "Cthaat Aquadingen" (Keith M Frye, pp 74-77),
+                 Article: MS description; spell info; adventure ideas
+               o #67 - "Death on the Docks" (Robert James Christensen, pp
+                 72-78), Scenario: CBG, London
+          + Chaosium Digest (Shannon Appel) - This is a weekly e-mail
+            digest for people to exchange ideas on all of Chaosium's
+            games. See the "Internet" part of this FAQ for details on
+            subscribing.
+          + Different Worlds (Chaosium)
+               o #35 - Special Horror Issue: "More Magic for Call of
+                 Cthulhu", "Blame it on Cthulhu", "Death Scenes" - This
+                 article, written by Sandy Petersen, was later
+                 incorporated into the "Cthulhu Companion" by Chaosium,
+                 "????" - A Super-hero adventure against a Dhole
+               o #41 - "Dreamworld", "Losing Your Marbles in Call of
+                 Cthulhu"
+          + Dragon Magazine (TSR)
+               o #95 - "Prices for the Roaring 20's" (2 pages) - Prices
+                 for miscellaneous things in the 1920's, from clothing to
+                 hardware; from kitchen gadgets to camping gear.
+               o #126 - "A Ghastly Grimoire" (3 pages) - New spells for
+                 CoC: Activate Eidolon, Blur Form, Brew Anagathic,
+                 Earthquake, Horror Stench, Suspend Animation, Terror
+                 Wail, Yellow Sign
+               o #139 - "Speaking with the Spirits" (5 pages) - Outlines
+                 rules for 'more mundane occult practices', like seances,
+                 possession, exorcism. Originally part of the
+                 'Spiritualist' section of 'Cthulhu by Gaslight', it was
+                 cut due to space restrictions.
+               o #150 - "The Well Rounded Monster Hunter" (4 pages) - New
+                 skills for CoC: Fine Art Knowledge, Cryptography,
+                 Drafting, Impersonation, Mathematics, Painting,
+                 Philosophy, Play Instrument, Sculpture, Specialization.
+                 "Unspeakable Secrets Made Easy" (4 pages) - Six new
+                 Mythos Tomes for CoC: Book of Elder Aeons, El Codigo de
+                 Uxmal, The Uxmal Codes, Demon Gods of Mu, Magic and
+                 Mystery of Mu, Mu: Lost Land of the Pacific
+               o #158 - "Role Playing Reviews" (7 pages) - A review of
+                 CoC fourth edition, and a review of the re-prints of old
+                 favorite modules
+               o #186 - "Role Playing Reviews" (1 page) - A review of CoC
+                 fifth edition
+               o #198 - "The Dragon Project: Mr. Josh Wellmeat" (4 pages)
+                 - A CoC adventure, with the loose concept of a 'dragon'
+                 introduced into the game. More of a character sketch
+                 than a detailed module, but still very interesting.
+               o #223 - "The Right Monster For the Right Adventure", by
+                 Gregory W. Detwiler. Contains a list of creatures from
+                 the COC fifth Edition rulebook and gives suggestions for
+                 scenarios appropriate to each.
+          + Fantasy Chronicles (???)
+               o #5 - "The Word Stones" (Pete Tamlyn, Graeme Davis, pp
+                 13-16), Scenario: 1926, England; "You'll Soon Be Better"
+                 (Marcus L Rowland, pp 19-20), Article: Insanity in CoC;
+                 "Sister City" (Brian Lumley, pp 27-32), Fiction
+               o #8 - "The House of Cthulhu" (Brian Lumley, pp 29-32),
+                 Fiction
+          + Games Master International (???)
+               o #10, May '91 - "Kick Off" (Steve Hatherley, pp 42-46),
+                 Article: Starting off adventures
+               o #12, July '91 - "Snakes Alive" (Lucya Szachowski, pp
+                 52-54), Article: Snakes in RPGs
+               o #13, August '91 - ?? (Lucya Szachowski, pp ??), Article:
+                 Rules for using snakes in RPGs
+               o #15, October '91 - "The Reptile House" (Lucya
+                 Szachowski, pp 28-33), Scenario: 1920's/ 30's America
+                 (uses info in #12-13)
+          + Gamesman (???)
+               o #6 - "Vanishing Point" (??, pp 62-65), Scenario: Generic
+                 sci-fi horror game, but uses the Cthulhu Mythos
+          + Imagine (TSR/UK)
+               o #13 - Horror Special
+               o #28 - "The Masked Avengers" (Paul Mason, pp 2-3),
+                 Article: Intro to Pulp RPGs; "The Cthulhu Mythos" (David
+                 Hill, pp 20-23), Article: Intro to the Mythos (covering
+                 Lovecraft and other contributors); "A Nice Night for
+                 Screaming" (Marcus L Rowland, pp 25-), Scenario: ???;
+                 "The English Daredevil" (Chris Felton, pp 34-35),
+                 Article: 1920's/ 30's British characters (not
+                 specifically CoC).
+          + The Last Province (???)
+               o #1 - "Angular Dreams" (Angus Boylan, pp 36-48),
+                 Scenario: CN
+               o #3 - "Kastajhan's Carpet" (Steve Hatherley, pp 49-51),
+                 Scenario: multi-system cameo
+               o #5 - "Getting the Creeps" (Caroline Dunford, pp 48-52),
+                 Article: Building and maintaining atmosphere in Horror
+                 games.
+          + Polyhedron Magazine (TSR)
+               o #44 - "Playing the Alien" (2 pages) - Covers the very
+                 interesting idea of having one of your players be
+                 'dislodged' by a Great Race of Yith. Lots of information
+                 in these 2 pages.
+          + Pyramid (Steve Jackson Games)
+               o #1 - "Voodoo" (Derek Pearcy, pp 37-45), Article: Voodoo
+                 in RPGs (not specifically CoC)
+          + Red Giant (???)
+               o #1 - "Mummerset Revisited" (Marcus L Rowland, pp 18-23),
+                 Article: 1920's/ 30's British slang (see the article in
+                 White Dwarf #90).
+               o #2 - "Money, Money, Money" (Jim Webster, pp 59-60),
+                 Article: Sources of income for investigators, with cameo
+                 scenario.
+          + Role Player Independent (Symbiosis Publishing)
+               o Volume 1, #1, December '92 - "Absolute and Utter
+                 Cthulhu" (Jim Johnston, pp 10-16), Article: CoC scenario
+                 generator
+               o Volume 1, #2 - "Cthulhu Punk" (Darren Graham, pp 13-17),
+                 Article: Using the Cthulhu Mythos in Cyperpunk games;
+                 "The Taint of Dracula" (Jim Johnston, Colin Thompson,
+                 31-38), Scenario: 1920's/ 30's. 3 part scenario covers
+                 the survival of Dracula, and his revenge on his
+                 attackers. Adventure sites in England, Paris,
+                 Transylvania.
+               o Volume 1, #3 - "Lord Arthur Godalming's Crime"
+                 (Johnston, Thompson, 31-38), Scenario: continuation of
+                 "The Taint of Dracula" in #1(2); "French Justice" (J
+                 Johnston, C Thompson, p45), Article: Description of the
+                 French Judicial System, for use in the above (Dracula)
+                 scenario.
+               o Volume 1, #4 - "The Dead Travel Fast" (J Johnston, C
+                 Thompson, pp 31-39), Scenario: Final part of Dracula
+                 scenario in #1(2-3).
+               o Volume 1, #5 - "The MoonLens" (James Brunton, pp 19-23),
+                 Scenario: 1920's/ 30's England
+               o Volume 1, #7 - "The Persian Club" ?? (Neal Coates ??, pp
+                 ??), Article: A sample cult for CoC ??
+               o Volume 1, #10 - "Let Me Introduce You " (Neal Coates, pp
+                 8-10), Scenario ideas for the Persian Club in #1(7);
+                 "Catching Jack" (Peter Brown, pp 18-21), Scenario: CBG
+                 London (Jack the Ripper)
+               o Volume 1, #12 - "The Old Serpent" (J Johnston, C
+                 Thompson, pp 29-36), Scenario: Part 1 (of 3); 1939, many
+                 adventure sites
+               o Volume 2, #1 - "The Old Serpent" (J Johnston, C
+                 Thompson, pp 29-33), Scenario: Part 2; 1939 (see #1(12))
+          + The Scream Factory (Deadline Press)
+               o #12 - Issue on Call of Cthulhu
+               o #13 - Press release announcing "Cthulhupunk"
+          + Shadis
+               o #13
+               o #17
+               o #20.5
+               o #26
+               o #27
+          + Spacegamer (???)
+               o Oct/Nov 1989 - "Faulty Magic in Call of Cthulhu" (1
+                 page, large print)
+          + The Unspeakable Oath (Pagan Publishing) - Since this magazine
+            is dedicated to the Call of Cthulhu game, it is probably safe
+            to say any issue is full of articles pertaining to the game.
+            The information below comes from both the digital versions of
+            TUO, and the Pagan Pub catalog. Issues 5-9 are 80 pages each.
+               o #5. A special British issue whose contents include:
+                 Columns: "The Dread Page of Azathoth", "Scream and
+                 Scream Again", "A Tale of Terror: Scarlet Fever", "The
+                 Paranoia Files", "Mysterious Manuscripts", "The Eye of
+                 Light and Darkness", "The Case of Mark Edward Morrison",
+                 "A Tale of Terror: Something In Stone", and "Message in
+                 a Bottle".
+                 Articles: "European Automobiles, 1893-1940", "Prices on
+                 the Orient Express", "The Dark Streets of London",
+                 "Gaslight Ghouls", "Mysteries of Ancient Britain", "It's
+                 Badlam In Here!", and "Leather On Willow".
+                 Scenarios: "The Beast in the Abbey" and "The Lambton
+                 Worm".
+                 Written almost entirely by British authors. Gives good
+                 ideas about running CoC in Great Britain. Topics include
+                 ley lines, barrow mounds, the Ottery Tar Barrels. 2
+                 scenarios and a Great Britain map.
+               o #6. Contents include:
+                 Columns: "The Dread Page of Azathoth", "Scream and
+                 Scream Again", and "Message in a Bottle".
+                 Also included is a special "Call of Cthulhu 5-1/2"
+                 section with additions to the fifth edition of CoC.
+                 Sections include: "Introduction", "Creation", "Skills",
+                 "Sanity", "Lunatic Asylums In the Twenties", and
+                 "Spells"
+                 A campaign using "The Randolph Pierce Foundation" and a
+                 scenario entitled "Blood on the Tracks" are also
+                 included.
+               o #7
+                    # Lengthy addtion to Randolph Pierce Foundation
+                    # Detailed look at The Last Dawn
+                    # Modern-day Cyberpunk/Call of Cthulhu crossover
+                      adventure
+               o #8/#9. Contents of this double issue include:
+                 Columns: "The Dread Page of Azathoth", "Scream and
+                 Scream Again", "The Paranoia Files", "The Case of Mark
+                 Edward Morrison", "Mysterious Manuscripts", "The Eye of
+                 Light & Darkness", "A Tale Of Terror: Dreamfires", "A
+                 Tale Of Terror: Headaches", and "Message In A Bottle".
+                 Articles: "Loathsome Lead", "Jacob's Forge", "CoC5®:
+                 Resources", and "The Randolph Pierce Foundation".
+                 Scenarios: "Fear of Falling", "Dark Harvest", "Albert
+                 Pitler", and "What Goes Around, Comes Around".
+                 April Fools Special - The Unmentionable Odor: "How To Be
+                 a Cultist", "The Paranoid Guy", "The Cthulhu Encounter
+                 Problem-Solver", "R'lyeh", and "I Was A Teenage Cthulhu
+                 Chaser!".
+                 Other Special Features: "Bitter Bones & Horrors" and
+                 "Mythos Mail Order".
+               o #10. Contents include:
+                 Columns: "The Dread Page of Azathoth", "Scream and
+                 Scream Again", "The Paranoia Files", "The Case of Mark
+                 Edward Morrison", "The Eye of Light & Darkness", "A Tale
+                 Of Terror: The Specimen", "Mysterious Manuscript: The
+                 Voynich Manuscript", "A Tale Of Terror: Natasha",
+                 "Mysterious Manuscript: The Testament of Fascination &
+                 Survival", and "Message In A Bottle".
+                 Interview: "Call of Cthulhu's High Priest of Fear: Keith
+                 Herber".
+                 Features: "The Crucifix & The Crucible", "Trouble in
+                 Budapest", "Esoterica: What The Deities Mean", and
+                 "Quirk Skills".
+                 Scenarios: "All Good Children" and "In Media Res".
+               o #11. Contents include:
+                 Columns: "The Dread Page of Azathoth", "Scream and
+                 Scream Again", "The Paranoia Files", "The Case of Mark
+                 Edward Morrison", "The Eye of Light & Darkness",
+                 "Mysterious Manuscript: The Lost Notebook of Diedrich
+                 Knickerbocker", "A Tale Of Terror: Babysitter Wanted, No
+                 Experience Necessary", "Mysterious Manuscript: Terror of
+                 the Old Ones", "A Tale Of Terror: The Author", and
+                 "Message In A Bottle".
+                 Features: "Esoterica: Nan Matol", "HPL On Film", "Horror
+                 101: Five Fave Flicks To Make You A Better Keeper", "In
+                 Media Res: Live-Action RPG Report".
+                 Scenarios: "Cold War" and "Two Minutes On High".
+          + Vortex (???)
+               o #8 - "Adding Depth to the Illusion" (D Hanse, pp 4-9),
+                 Article: Creating and using props for modern
+                 investigative games (not specifically CoC, but
+                 especially relevant to Cthulhu Now); "Burnout" (??, pp
+                 10-11), Article: Enchanted braziers for CoC
+          + White Dwarf (Games Workshop)
+               o July 83, #42 - "Cthulhu Now!" (Marcus L Rowland, pp
+                 10-11), Article: CoC in the 1980's, Pt 1: skills and
+                 weapons
+               o August 83, #43 - "Cthulhu Now!" (Marcus L Rowland, pp
+                 10-11), Article: CoC in the 1980's (see #42), Pt 2: mini
+                 scenario outlines
+               o February 84, #50 - "The Watchers of Walberswick (Jon
+                 Sutherland, pp 20-22), Scenario: England (east coast),
+                 1934
+               o August 84, #56 - "The Last Log", Adventure set in the
+                 23rd century. Well detailed, but designing future events
+                 & adventures will place a burden on a Keeper who wants
+                 to run a campaign.
+               o December 84, #60 - "The Bleeding Stone of Iphtah",
+                 Adventure. Leaves many details up to the Keeper, but
+                 does give ideas for expansion.
+               o February 85, #62 - "Crawling Chaos (ed Marc Gascoigne)
+                 (Peter Gilham, p39), Article: stats for Bokrug (lesser
+                 indep race) and Thuun'ha (lesser servitor race) from
+                 Lumley's "Beneath the Moors"
+               o March 85, #63 - "Draw the Blinds on Yesterday" (Marcus L
+                 Rowland, pp 26-32), Scenario: CN, England
+               o April 85, #64 - "Bearers of the Mark" (Steve Williams,
+                 Mike White, p43), Article: secret marks (administered by
+                 a cult to control members and attack enemies), "Tabletop
+                 Heroes" (Joe Dever, Gary Chald, pp 44-45), Article:
+                 painting ideas for CoC monster figures
+               o May 85, #65 - "Tabletop Heroes" (Joe Dever, Gary Chalk,
+                 pp 44-45), Article: painting ideas for CoC monster &
+                 char figs
+               o June 85, #66 - "Once Risen, Twice Shy" (Steve Williams,
+                 Barney Stone, p17), Article: PC handouts for Lovecraft's
+                 "The Lurking Fear", "The Horse of the Invisible" (AJ
+                 Bradbury, pp 22-26), Scenario: 1920's/30's England,
+                 based on William Hope Hodgson story of same name.
+               o July 85, #67 - "Haunters of the Dark" (Graeme Davis, pp
+                 6-8), Article: Ghosts in CoC
+               o August 85, #68 - "Haunters of the Dark" (Graeme Davis,
+                 p18), Article: Mechanics for Hypnotism and Exorcism.
+                 Clergymen in CoC
+               o September 85, #69 - "The Surry Enigma" (Marcus L
+                 Rowland, pp 22-26), Scenario: 1923, England
+               o October 85, #70 - "The Price is Right" (Marcus L
+                 Rowland, p13), Article: prices in 1920's Britain
+               o November 85, #71 - "Cults of the Dark Gods" (Andy
+                 Bradbury, pp 16-17), Article discussing actual cults and
+                 groups in historical terms, interpreting them a la
+                 Cthulhu.
+               o December 85, #72 - "Fear of Flying" (Marcus L Rowland,
+                 pp 15-17), Scenario: 1920's England. (This is the
+                 original version of that in Fearful Passages).
+                 "Recommended Reading" (JG Cadera, p39), Article:
+                 Gemhetep Papyrus, Sphingien MS
+               o January 86, #73 - "Cults of the Dark Gods" (Andy
+                 Bradbury, pp 40-41), Article: pseudo history of Templar
+                 Descendents - Freemasons, Illuminati etc. (see #71)
+               o February 86, #74 - "Gentlemen and Players" (Chris
+                 Elliot, Richard Edwards, pp42-), Article: British PCs
+                 for 1920's/ 30's (updated in GPL).
+               o March 86, #75 - "The Heart of the Dark", Adventure.
+                 Covers three locations- London, Arkham, and
+                 Transylvania. Gives three possible endings, depending on
+                 the nature of the campaign run and the whim of the
+                 Keeper.
+               o May 86, #77 - "The Cars that Ate Sanity" (Marcus L
+                 Rowland, p50), Article: Mechancs for 1920's/ 30's car
+                 chases
+               o July 86, #79 - "Ghost Jackal Kill" (Graeme Davis, pp
+                 29-35), Scenario: San Fransisco, 1924 (offers prequel to
+                 "The Statue of the Sorceror", GW) NB: The Brabin House
+                 is in SF, not LA (correction in #82)
+               o August 86, #80 - "Things Ancient and Modern" (Graham
+                 Staplehurst, pp 27-37), Scenario: 1920's/ 30's and AD&D
+                 (pt 1)
+               o September 86, #81 - "Things Ancient and Modern" (Graham
+                 Staplehurst, pp 19-24), Scenario: 1920's/ 30's and AD&D
+                 (pt 2), "The Sorceror's Book" (Brian Lumley, pp 26-30),
+                 Fiction
+               o November 86, #83 - "And then Everything went Black..."
+                 (Marcus L Rowland, p37), Article: Stuns/Knockouts in CoC
+               o February 87, #86 - "Curse of the Bone" (Marcus L
+                 Rowland, pp 8-15), Scenario: CN, London
+               o March 87, #87 - "With a Pinch of Salt" (Marcus L
+                 Rowland, pp 18-21), Article: Zombies in CoC
+               o April 87, #88 - "The Paddington Horror" (Marcus L
+                 Rowland, pp 12-15), Scenario: 1920's London
+               o May 87, #89 - "Be Afraid ... Be VERY Afraid" (Carl
+                 Sargent, pp 12-14), Article: Additional phobias
+               o June 87, #90 - "Green and Pleasant Language" (Marcus L
+                 Rowland, pp 12-13), Article: 1920's/ 30's British Slang
+                 (Missing from GPL), "The Ley of the Land" (Graham
+                 Staplehurst, pp 58-62), Article: An investigation of
+                 ancient monuments (Multi-system, including CoC)
+               o July 87, #91 - "Ghosties and Ghoulies and ... Squid?"
+                 (Nicholson, pp 12-14), Article: General info on
+                 Lovecraft and Cthulhu Mythos, "A Hard Act to Follow"
+                 (Mark Lee, pp 56-57), Article: Public Order in 1920's/
+                 30's Britain
+               o September 87, #93 - "Letters from a Foreign Land"
+                 (Graham Staplehurst, pp 58-68), Scenario: 1920's
+                 Roumania (for CoC; also for MERP and WFRP)
+               o October 87, #94 - "Situations Vacant" (Robert Avery,
+                 Phil Roe, pp 43-46), Article: new investigator careers
+               o January 86, #99 - "Spirit of the Mountain" (Graeme
+                 Davis, pp 43-54), Scenario: CBG or 1920's/ 30's Arizona
+          + White Wolf (???)
+               o #12 - "The Knocking Box" (Michael de Wolfe, pp 4-8),
+                 Scenario: 1920's, train journey
+               o #28 - "The Key and the Gate" (J Tweet, M Rein Hagen, pp
+                 19-26), Scenario: 1920's/30's Arkham
+               o #29 - "All Horror is Mythos Horror" (S John Ross, pp
+                 6-7), Article: Using traditional horror elements in CoC;
+                 "Scope of Magic" (Wayne Ligon, pp 8-12), Article: New
+                 spells and items
+     * Q: What computer games are available based on Lovecraft or the
+       Mythos?
+       A: A few computer text and graphic adventures have been based on
+       Lovecraft's works.
+          + Alone In the Dark (I-Motion/Interplay) - This is a graphic
+            adventure made by a French company that recently made its way
+            over here. It says on the box: "A virtural adventure inspired
+            by the works of H.P. Lovecraft". Set in the 20s at a haunted
+            house in Louisiana (!). Very well done and quite creepy! Its
+            sequel, "Alone in the Dark 2", is not based on any
+            Lovecraftian elements.
+            "I've got them both [Lurking Horror and Alone in the Dark],
+            and think they are VERY good at evoking the mood of a
+            mythos-based story. I highly recommend them both to any HPL
+            fan." - Jeff (jeffo@INTERNIC.NET)
+          + Daughter of Serpents (Millennium Interactive Limited) -
+            Although the box to this game never mentions Lovecraft, the
+            instruction manual states: "Daughter of Serpents was written
+            as an original contribution to the Cthulhu Mythos." The game
+            is very attractive, although the storyline is a bit forced.
+            It was designed by the same team that made "The Hound of
+            Shadow", but is far more sophisticated.
+          + The Hound of Shadow (Eldritch Games, Ltd.) - Published in
+            England, distributed by Electronic Arts. Graphic/text
+            adventure set in 1920's. Specifically mentions "the sinister
+            world of H.P. Lovecraft".
+          + The Lurking Horror (Infocom) - An all-text adventure set in
+            the present at a university inspired both by Miskatonic
+            University and the Massachusetts Institute of Technology. It
+            is available in "The Lost Treasures of Infocom" collections.
+            "I've got them both [Lurking Horror and Alone in the Dark],
+            and think they are VERY good at evoking the mood of a
+            mythos-based story. I highly recommend them both to any HPL
+            fan." - Jeff (jeffo@INTERNIC.NET)
+          + Prisoner of Ice (I-Motion/Infogrames) - Like its predecessor,
+            "Shadow of the Comet", this graphic adventure game is
+            licensed through Chaosium. It takes place in the Antarctic
+            and has elements reminiscent of At the Mountains of Madness.
+            The game supports SVGA (640x480x256) and has some very
+            attractive animations.
+          + Quake (id) -- Quake has a number of Lovecraftian influences,
+            including such creatures as Shub-Niggurath. Sandy Petersen,
+            the creator of the "Call of Cthulhu" role-playing game, is a
+            developer at id.
+          + Shadow of the Comet (I-Motion/Infogrames) - Licensed through
+            Chaosium, this graphic adventure game takes place in the town
+            of "Illsmouth", and plays like a CoC adventure. Occasionally,
+            there are flaws in the game design (like forcing the player
+            to use the keyboard when they've been using the mouse
+            throughout the game thus far), but it's still a very
+            entertaining game.
+     * Q: Are any Call of Cthulhu games available vie the internet (PBEM,
+       MOO, MUSH, etc)?
+       A: See the "Internet" part of this FAQ.
+     * Q: What music do Call of Cthulhu Keepers recommend as background
+       music for playing Call of Cthulhu?
+       A: See the "Other Media" part of this FAQ.
+     _________________________________________________________________
+   
+   End of Part 5 of the alt.horror.cthulhu FAQ, "Games".

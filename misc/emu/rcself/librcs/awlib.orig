@@ -1,0 +1,419 @@
+#include <X11/Xlib.h>
+#include <X11/Xutil.h>
+#include <X11/keysym.h>
+#include "librcs.h"
+
+#ifdef WIN32
+rcs_Display disp;
+
+int _rcs_isBitmap(rcs_Window w) {
+  int i;
+  if (disp.numPixmaps==0) return FALSE;
+  for (i=0;i<disp.numPixmaps;i++)
+    if (disp.pixmapIDs[i]==w) return TRUE;
+  return FALSE;
+  }
+
+LRESULT CALLBACK rcs_WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam) {
+  switch (message) {
+        case WM_DESTROY:PostQuitMessage(0);
+                          break;
+      default:return DefWindowProc(hWnd, message, wParam, lParam);
+    }
+  return 0;
+  }
+void rcs_initWin32(HINSTANCE hInstance) {
+    WNDCLASSEX wcex;
+  disp.hInstance=hInstance;
+  strcpy(disp.className,"rcsawlib");
+  disp.numPixmaps=0;
+  disp.pixmapIDs=NULL;
+
+    wcex.cbSize = sizeof(WNDCLASSEX);
+
+    wcex.style          = CS_HREDRAW | CS_VREDRAW;
+    wcex.lpfnWndProc    = (WNDPROC)rcs_WndProc;
+    wcex.cbClsExtra     = 0;
+    wcex.cbWndExtra     = 0;
+    wcex.hInstance      = hInstance;
+    wcex.hIcon          = NULL;
+    wcex.hCursor        = LoadCursor(NULL, IDC_ARROW);
+    wcex.hbrBackground  = (HBRUSH)(COLOR_WINDOW+1);
+    wcex.lpszMenuName   = NULL;
+    wcex.lpszClassName  = disp.className;
+    wcex.hIconSm        = NULL;
+
+    RegisterClassEx(&wcex);
+  }
+#endif
+
+void rcs_setWindowName(rcs_Display* d,rcs_Window w,char* name) {
+  XTextProperty text;
+  XStringListToTextProperty(&name,1,&text);
+  XSetWMName(d,w,&text);
+  }
+
+
+void rcs_background(rcs_Display* d,rcs_GC gc,
+                    unsigned long red,unsigned long green,unsigned long blue) {
+  XColor clr;
+  clr.red=red; clr.green=green; clr.blue=blue;
+  XAllocColor(d,DefaultColormap(d,DefaultScreen(d)),&clr);
+  XSetBackground(d,gc,clr.pixel);
+  }
+
+void        rcs_closeDisplay(rcs_Display* display) {
+  XCloseDisplay(display);
+  }
+
+void rcs_closeFont(rcs_Display* d,rcs_Font font) {
+  XUnloadFont(d,font);
+  }
+
+void rcs_closeGC(rcs_Display* d,rcs_GC gc) {
+  XFreeGC(d,gc);
+  XFlush(d);
+  }
+
+void rcs_closeWindow(rcs_Display* d,rcs_Window win) {
+  XDestroyWindow(d,win);
+  XFlush(d);
+  }
+
+void rcs_copyArea(rcs_Display* d,rcs_Window src,rcs_Window dest,rcs_GC gc,
+                  int sx,int sy,int w,int h,int dx,int dy) {
+  XCopyArea(d,src,dest,gc,sx,sy,w,h,dx,dy);
+  XFlush(d);
+  }
+
+rcs_Pixmap rcs_createPixmap(rcs_Display* d,rcs_Window win,int x,int y) {
+  rcs_Pixmap ret;
+  XWindowAttributes attr;
+  XGetWindowAttributes(d,win,&attr);
+  ret=XCreatePixmap(d,win,x,y,attr.depth);
+  return ret;
+  }
+
+rcs_Window  rcs_createWindow(rcs_Display* d,rcs_Window parent,
+                             int x,int y,int width,int height) {
+  rcs_Window ret;
+  unsigned long mask;
+  XSetWindowAttributes attr;
+  attr.background_pixel=WhitePixel(d,DefaultScreen(d));
+  mask=CWBackPixel;
+  ret=XCreateWindow(d,parent,x,y,width,height,1,
+                       CopyFromParent,
+                       CopyFromParent,
+                       CopyFromParent,
+                       mask,&attr);
+  XSelectInput(d,ret,ExposureMask | ButtonPressMask | ButtonReleaseMask |
+               ButtonMotionMask | KeyPressMask | KeyReleaseMask);
+  return ret;
+  }
+
+void rcs_drawCircle(rcs_Display* d,rcs_Window win,rcs_GC gc,
+                   int x,int y,int w,int h) {
+  XDrawArc(d,win,gc,x,y,w,h,0,23040);
+  XFlush(d);
+  }
+
+void rcs_drawFilledBox(rcs_Display* d,rcs_Window win,rcs_GC gc,
+                  int x,int y,int w,int h) {
+  XFillRectangle(d,win,gc,x,y,w,h);
+  XFlush(d);
+  }
+
+void rcs_drawFilledCircle(rcs_Display* d,rcs_Window win,rcs_GC gc,
+                   int x,int y,int w,int h) {
+  XFillArc(d,win,gc,x,y,w,h,0,23040);
+  XFlush(d);
+  }
+
+void rcs_drawLine(rcs_Display* d,rcs_Window win,rcs_GC gc,
+                  int x1,int y1,int x2,int y2) {
+  XDrawLine(d,win,gc,x1,y1,x2,y2);
+  XFlush(d);
+  }
+
+void rcs_drawBox(rcs_Display* d,rcs_Window win,rcs_GC gc,
+                  int x,int y,int w,int h) {
+  XDrawRectangle(d,win,gc,x,y,w,h);
+  XFlush(d);
+  }
+
+void rcs_drawPoint(rcs_Display* d,rcs_Window win,rcs_GC gc,int x,int y) {
+  XDrawPoint(d,win,gc,x,y);
+  XFlush(d);
+  }
+
+void rcs_drawString(rcs_Display* d,rcs_Window win,rcs_GC gc,int x,int y,
+                    char* buffer) {
+  XDrawString(d,win,gc,x,y,buffer,strlen(buffer));
+  XFlush(d);
+  }
+
+void rcs_foreground(rcs_Display* d,rcs_GC gc,
+                    unsigned long red,unsigned long green,unsigned long blue) {
+  XColor clr;
+  clr.red=red; clr.green=green; clr.blue=blue;
+  XAllocColor(d,DefaultColormap(d,DefaultScreen(d)),&clr);
+  XSetForeground(d,gc,clr.pixel);
+  }
+
+void rcs_closePixmap(rcs_Display* d,rcs_Pixmap p) {
+  XFreePixmap(d,p);
+  }
+
+void rcs_hideWindow(rcs_Display* d,rcs_Window win) {
+  XUnmapWindow(d,win);
+  XFlush(d);
+  }
+
+void rcs_lowerWindow(rcs_Display* d,rcs_Window win) {
+  XLowerWindow(d,win);
+  XFlush(d);
+  };
+
+void rcs_moveWindow(rcs_Display* d,rcs_Window win,int x,int y) {
+  XMoveWindow(d,win,x,y);
+  XFlush(d);
+  }
+
+void rcs_namedForeground(rcs_Display* d,rcs_GC gc,char* color) {
+  XColor clr,exact;
+  XAllocNamedColor(d,DefaultColormap(d,DefaultScreen(d)),color,
+                   &clr,&exact);
+  XSetForeground(d,gc,clr.pixel);
+  }
+
+void rcs_namedBackground(rcs_Display* d,rcs_GC gc,char* color) {
+  XColor clr,exact;
+  XAllocNamedColor(d,DefaultColormap(d,DefaultScreen(d)),color,
+                   &clr,&exact);
+  XSetBackground(d,gc,clr.pixel);
+  }
+
+rcs_Display *rcs_openDisplay(char* display_name) {
+  return XOpenDisplay(display_name);
+  }
+
+rcs_Font rcs_openFont(rcs_Display* d,char* font) {
+  return XLoadFont(d,font);
+  }
+
+rcs_GC rcs_openGC(rcs_Display* d,rcs_Window win) {
+  unsigned long mask;
+  XGCValues     values;
+  mask=0;
+  mask=GCForeground | GCBackground;
+  values.foreground=BlackPixel(d,DefaultScreen(d));
+  values.background=WhitePixel(d,DefaultScreen(d));
+  return XCreateGC(d,win,mask,&values);
+  }
+
+void rcs_raiseWindow(rcs_Display* d,rcs_Window win) {
+  XRaiseWindow(d,win);
+  XFlush(d);
+  }
+
+void rcs_resizeWindow(rcs_Display* d,rcs_Window win,int w,int h) {
+  XResizeWindow(d,win,w,h);
+  XFlush(d);
+  }
+
+rcs_Window rcs_rootWindow(rcs_Display* d) {
+  return DefaultRootWindow(d);
+  }
+
+void rcs_setFont(rcs_Display* d,rcs_GC gc,rcs_Font font) {
+  XSetFont(d,gc,font);
+  }
+
+void rcs_showWindow(rcs_Display* d,rcs_Window win) {
+  XMapWindow(d,win);
+  XFlush(d);
+  }
+
+rcs_Pixmap rcs_xpmToPixmap(rcs_Display* d,rcs_Window win,char** data) {
+  rcs_Pixmap ret;
+  int        sizeX,sizeY,numColors;
+  int        x,y,i;
+  char       index,temp;
+  char       buffer[80];
+  char       nbuffer[8];
+  char       *pChar;
+  XWindowAttributes attr;
+  unsigned long red,green,blue;
+  XColor     colors[255];
+  GC         gc;
+  XGetWindowAttributes(d,win,&attr);
+  sscanf(data[0],"%d %d %d %d",&sizeX,&sizeY,&numColors,&x);
+  for (x=1;x<=numColors;x++) {
+    sscanf(data[x],"%c %c %s",&index,&temp,buffer);
+    if (buffer[0] != '#') {
+      XAllocNamedColor(d,DefaultColormap(d,DefaultScreen(d)),buffer,
+                       &colors[index],&colors[0]);
+      } else {
+      for (i=0;i<4;i++) nbuffer[i]=buffer[i+1];
+      nbuffer[4]=0;
+      sscanf(nbuffer,"%x",&red); colors[index].red=red;
+      for (i=0;i<4;i++) nbuffer[i]=buffer[i+5];
+      nbuffer[4]=0;
+      sscanf(nbuffer,"%x",&green); colors[index].green=green;
+      for (i=0;i<4;i++) nbuffer[i]=buffer[i+9];
+      nbuffer[4]=0;
+      sscanf(nbuffer,"%x",&blue); colors[index].blue=blue;
+      XAllocColor(d,DefaultColormap(d,DefaultScreen(d)),&colors[index]);
+      }
+    }
+  ret=XCreatePixmap(d,win,sizeX,sizeY,attr.depth);
+  gc=XCreateGC(d,ret,0,NULL);
+  for (y=0;y<sizeY;y++)
+    for (x=0;x<sizeX;x++) {
+      index=data[y+numColors+1][x];
+      XSetForeground(d,gc,colors[index].pixel);
+      XDrawPoint(d,ret,gc,x,y);
+      }
+      
+  return ret;
+  }
+
+void  rcs_drawPixmap(rcs_Display* d,rcs_Window win,rcs_GC gc,int dx,int dy,char** data) {
+  int        sizeX,sizeY,numColors;
+  int        x,y,i;
+  char       index,temp;
+  char       buffer[80];
+  char       nbuffer[8];
+  char       *pChar;
+  int        none;
+  XWindowAttributes attr;
+  unsigned long red,green,blue;
+  XColor     colors[255];
+  none=-1;
+  sscanf(data[0],"%d %d %d %d",&sizeX,&sizeY,&numColors,&x);
+  for (x=1;x<=numColors;x++) {
+    sscanf(data[x],"%c %c %s",&index,&temp,buffer);
+    if (buffer[0] != '#') {
+      if (strcmp(buffer,"None")==0) none=index;
+      XAllocNamedColor(d,DefaultColormap(d,DefaultScreen(d)),buffer,
+                       &colors[index],&colors[0]);
+      } else {
+      for (i=0;i<4;i++) nbuffer[i]=buffer[i+1];
+      nbuffer[4]=0;
+      sscanf(nbuffer,"%x",&red); colors[index].red=red;
+      for (i=0;i<4;i++) nbuffer[i]=buffer[i+5];
+      nbuffer[4]=0;
+      sscanf(nbuffer,"%x",&green); colors[index].green=green;
+      for (i=0;i<4;i++) nbuffer[i]=buffer[i+9];
+      nbuffer[4]=0;
+      sscanf(nbuffer,"%x",&blue); colors[index].blue=blue;
+      XAllocColor(d,DefaultColormap(d,DefaultScreen(d)),&colors[index]);
+      }
+    }
+  for (y=0;y<sizeY;y++)
+    for (x=0;x<sizeX;x++) {
+      index=data[y+numColors+1][x];
+      if (index != none) {
+        XSetForeground(d,gc,colors[index].pixel);
+        XDrawPoint(d,win,gc,x+dx,y+dy);
+        }
+      }
+      
+  }
+
+void  rcs_drawSubPixmap(rcs_Display* d,rcs_Window win,rcs_GC gc,int dx,int dy,char** data,int sx,int sy,int w,int h) {
+  int        sizeX,sizeY,numColors;
+  int        x,y,i;
+  char       index,temp;
+  char       buffer[80];
+  char       nbuffer[8];
+  char       *pChar;
+  int        none;
+  XWindowAttributes attr;
+  unsigned long red,green,blue;
+  XColor     colors[255];
+  none=-1;
+  sscanf(data[0],"%d %d %d %d",&sizeX,&sizeY,&numColors,&x);
+  for (x=1;x<=numColors;x++) {
+    sscanf(data[x],"%c %c %s",&index,&temp,buffer);
+    if (buffer[0] != '#') {
+      if (strcmp(buffer,"None")==0) none=index;
+      XAllocNamedColor(d,DefaultColormap(d,DefaultScreen(d)),buffer,
+                       &colors[index],&colors[0]);
+      } else {
+      for (i=0;i<4;i++) nbuffer[i]=buffer[i+1];
+      nbuffer[4]=0;
+      sscanf(nbuffer,"%x",&red); colors[index].red=red;
+      for (i=0;i<4;i++) nbuffer[i]=buffer[i+5];
+      nbuffer[4]=0;
+      sscanf(nbuffer,"%x",&green); colors[index].green=green;
+      for (i=0;i<4;i++) nbuffer[i]=buffer[i+9];
+      nbuffer[4]=0;
+      sscanf(nbuffer,"%x",&blue); colors[index].blue=blue;
+      XAllocColor(d,DefaultColormap(d,DefaultScreen(d)),&colors[index]);
+      }
+    }
+  for (y=sy;y<sy+h;y++)
+    for (x=sx;x<sx+w;x++) {
+      index=data[y+numColors+1][x];
+      if (index != none) {
+        XSetForeground(d,gc,colors[index].pixel);
+        XDrawPoint(d,win,gc,x+dx-sx,y+dy-sy);
+        }
+      }
+      
+  }
+
+rcs_Event rcs_getEvent(rcs_Display* d) {
+  rcs_Event ret;
+  XEvent event;
+  KeySym key;
+  XComposeStatus status;
+  char tmp[10];
+  XNextEvent(d,&event);
+  switch (event.type) {
+    case MotionNotify:ret.type=EVENT_MOTION;
+                      ret.d2=event.xmotion.x;
+                      ret.d3=event.xmotion.y;
+                      ret.window=event.xmotion.window;
+                      break;
+    case ButtonPress:ret.type=EVENT_BUTTON_PRESS;
+                     ret.window=event.xbutton.window;
+                     ret.d1=event.xbutton.button;
+                     ret.d2=event.xbutton.x;
+                     ret.d3=event.xbutton.y;
+                     break;
+    case ButtonRelease:ret.type=EVENT_BUTTON_RELEASE;
+                     ret.window=event.xbutton.window;
+                     ret.d1=event.xbutton.button;
+                     ret.d2=event.xbutton.x;
+                     ret.d3=event.xbutton.y;
+                     break;
+    case Expose:ret.type=EVENT_EXPOSE;
+                ret.window=event.xexpose.window;
+                ret.d1=event.xexpose.x;
+                ret.d2=event.xexpose.y;
+                ret.d3=event.xexpose.width;
+                ret.d4=event.xexpose.height;
+                ret.d5=event.xexpose.count;
+                break;
+    case KeyPress:ret.type=EVENT_KEY_PRESS;
+                  ret.window=event.xkey.window;
+                  XLookupString((XKeyEvent*)&event,tmp,10,&key,&status);
+                  ret.d1=key;
+                  switch (ret.d1) {
+                    case XK_Return:ret.d1=13; break;
+                    case XK_Escape:ret.d1=27; break;
+                    }
+                  break;
+    }
+  return ret;
+  }
+
+rcs_Event rcs_pollEvent(rcs_Display* d) {
+  rcs_Event ret;
+  if (XPending(d)>0) return rcs_getEvent(d);
+  ret.type=EVENT_NONE;
+  return ret;
+  }
+

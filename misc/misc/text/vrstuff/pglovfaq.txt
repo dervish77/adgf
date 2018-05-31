@@ -1,0 +1,1089 @@
+{PowerGlove FAQ}
+
+Forward
+
+Mattel PowerGlove FAQ version 0.3, [date].
+
+Written by jet@well.sf.ca.us (j. eric townsend).
+
+Significant help and input from:
+
+Randy Shedden (randysh@microsoft.com), Linda Jacobson
+(lindaj@well.sf.ca.us),lots of people on the WELL, sci.virtual-worlds, and of
+course, the glove-list.
+
+The FAQ is still in a very rough state. Please send changes/adds/deletes to
+jet@well.sf.ca.us.
+
+All sorts of product names are probably trademark by the appropriate vendors.
+
+Comments in the form of [DO YOU UNDERSTAND THIS? -JET] are notes to myself, let
+me know if you have something to replace the note with.
+
+A current version of this file can be obtained from ~jet/public on the WELL or
+netcom. It will also be posted to USENET's sci.virtual-worlds, the WELL's vr
+conference and various mailing lists at sporadic intervals.
+
+If you are reading this via a World Wide Web (WWW) client here might be an
+interesting place.
+
+This is probably the last version of the PowerGlove-specific FAQ. It will
+probably be consumed by a HomeBrew VR FAQ, if things go well. (I recently (Jul
+94) changed jobs. Much of my free time is consumed with work here at General
+Magic, Inc., making the world a safer place for personal communicators.)
+
+DISCLAIMER
+
+This document does not constitute an endorsement of any of the products,
+services or groups listed.
+
+It's not my fault if you get hurt, suffer loses, or get into trouble because of
+anything you read in this document.
+
+Please read the distribution restrictions in the Introduction.
+
+Introduction
+
+This document assumes you have a basic familiarity with the terms and concepts
+related to virtual reality and also with USENET and the Internet with its
+related tools (telnet, ftp, mail).
+
+This document is written in TeXinfo, which means it is equally easy to read in
+source form or print out a nicely formatted copy. But wait, there's more! You
+could convince your site admin to install the powerglove faq into the emacs
+info database, and read it with emacs info or xinfo! If you don't want/can't
+info or print this document, you'll be able to read through with little, if
+any, difficulty. (For more information on texinfo, poke around in GNU emacs or
+ftp the texinfo package from /pub/gnu on prep.ai.mit.edu.)
+
+This document is copyrighted by J. Eric Townsend as documented on the opening
+pages and cover. Permission is given to non-profit corporations to redistribute
+this document in electronic or printed form as long as the document is
+distributed in its entirety. Permission is given to online services such as the
+WELL, Mindvox, and others to store this document for distribution to
+subscribers only if equal access to this document is provided to
+non-subscribers. (See the WELL's gopher server for an example, where this
+document can be accessed by gopher from systems the WELL does not own or
+control.) Permission is also given for USENET sites to redistribute this
+document to other USENET sites.
+
+Any for-profit distribution of this document is strictly prohibited, including
+CD-ROM compilations or inclusion in any other published work where a fee is
+charged.
+
+What is a PowerGlove?
+
+In 1989 Mattel (yes, the toy company) introduced the PowerGlove, a handtracking
+device based on a glove. The PowerGlove was intended to work with the Nintendo
+Entertainment System (NES) in place of a regular controller. The PowerGlove can
+track motion of the glove in three-space, finger position, and has a set of
+buttons/switches on the top of the wrist.
+
+It has two modes "hires" and "lores". In "hires" mode, the PG reports the
+position in threespace, the roll, and configuration of fingers along with the
+SELECT, START, A, B, CENTER and ARROW CLUSTER switches (which are a part of the
+NES standard controller). In lores mode the glove reports position on the hand
+on the x and y axis and the buttons (thus emulating a NES controller completely
+and allowing one to use the glove with non-glove-specific games).
+
+The lores mode also allows the users to select one of fourteen (?) built-in
+programs that associate different sets of motions with the NES controller
+outputs of up/down/left/right/select/start/A/B. Each program also has its own
+translation of finger movements to control inputs.
+
+Why use a PowerGlove instead of <foo>glove
+
+PowerGloves originally cost around $100, if you're lucky these days you can
+find them usually under $30 at a Toys R' Us on the remaindered rack. Most of
+the gloves on the shelves have been bought up, some by speculators. (I keep
+hearing rumors of people with 40-50 gloves in a closet who trickle them out a
+few at a time.) If you don't know what a Dataglove costs, you probably can't
+afford it.
+
+What are the big problems?
+
+Several problems face you if you want to use a PowerGlove as a VR input device.
+These aren't technical problems (although there are those as well), mind you,
+but real-world problems.
+
+There is no official hardware or software support from Mattel, and the gloves
+are no longer being produced. Of course, there is no official hardware or
+software support from any third party companies either.
+
+Contact Nintendo for information if you like, but the person who answers the
+phone probably won't even know what a PowerGlove is.
+
+On the up side, everything you will use was probably written or designed by a
+fellow hacker.
+
+What are the technical problems?
+
+The ultrasonic sensing is done with inexpensive microphones so it is difficult
+to place the sensing array directly on a computer monitor and get a clean
+signal. A somewhat common fix is to hang the sensing "array" on a wall that has
+a low ultrasonic reflection rate. People are using anything from towels to
+ultrasonic anechoic foam to dampen the noise.
+
+This detailed list of problems is from Randy Shedden:
+
+  1.  In order register your hand position, you must point your knuckles at the
+     receiver array. It gets tiring holding your hand up for extended periods.
+
+  2.  The only information about hand orientation that get is rotation. (This
+     is also called roll.) In flight technology, if you raise one wing while
+     you lower the other, this is called rolling the plane. Ascribing this
+     behavior to your hand, if you raise your little finger while lowering your
+     thumb, this would also be called roll. If a plane moves it's nose to the
+     left while the tail moves to the right, the plane is said to yaw. If you
+     do the same thing with your hand, the ultrasonic transmitters would point
+     away from the sensor array and you would lose all orientation information.
+     If a plane lowers it's nose while the tail is raised, the plane is said to
+     pitch. If you do the same thing with your hand, again you lose all
+     orientation information. So, while the VPL DataGlove can track yawl, pitch
+     and roll. The PG can only track roll (commonly called rotation).
+
+  3.  The information about how your hand is configured is not very accurate.
+     As mentioned above, the material that covers the thumb and fingers has
+     different electrical resistance depending on how much it is flexed. So,
+     when you have a finger fully extended, the material is not flexed at all.
+     When you have a finger fully clenched, the material is flexed to it's
+     functional limits. This is expressed in terms of a degree of flexure
+     (bentness) for each digit. This degree is one of 4 integer values.
+
+     0 means the digit is fully extended.
+
+     1 means the digit is a little bent
+
+     2 means the digit is more bent than straight and
+
+     3 means the digit is fully bent.
+
+  4.  For each digit, this resolution isn't very good. Aside from that, it is
+     hard to flex the material to reproduce the desire degree of flexature. For
+     instance, it is not a trivial matter to do a gesture that requires that
+     the ring finger be at state 1 (a little bent). This digital (no pun
+     intended) value is also hard to maintain once you have it, because moving
+     the neighboring digits can have an effect on the flexure of the digit in
+     question. Try bending your middle finger without also bending your ring
+     finger. Additionally, Only the thumb and THREE of your fingers are tracked
+     at all. For some reason, the PG doesn't keep track of your pinky. In
+     comparison, the VPL DataGlove gives much better resolution on ALL of your
+     digits and material (a small fiber optic cable) is much easier to use than
+     the bulky PG material.
+
+Resources
+
+If you are interested in the various mailing lists, you'll want to grab the
+canonical list of mailing lists from news.answers on USENET. (Or, failing that,
+from the author arielle@taronga.com. Don't bother her unless you need to, she's
+very busy and too nice to bother with trivial problems.)
+
+The PowerGlove mailing list
+
+The PowerGlove mailing list is dead. (It fell on its head.)
+
+Modulo buying/selling used gloves, there was no glove-related traffic. I'll
+attempt to put *every* bit of knowledge in this and future versions of the FAQ.
+Once I've cleaned out the huge amount of crud from the archives, I'll put a
+condensed version of them out for FTP. (The raw archives will be available for
+those masochists who want to do a statistical analysis of "unsubscribe me from
+this list" messages from various domains.)
+
+sci.virtual-worlds (sci.v-r)
+
+(From Bob Jacobson, past moderator of sci.v-r and the current moderating
+staff.)
+
+sci.virtual-worlds and its sibling, sci.virtual-worlds.apps, are newsgroups on
+the USENET covering developments in the field of virtual worlds technology and
+applications, respectively. These newsgroups, now three years old, serve an
+international community of over 15,000 regular participants with news,
+technology highlights and developments, scientific and philosophical issues,
+and discussions of how virtual worlds (also known as "virtual reality") are or
+will be used in various commercial and social settings.
+
+Newsgroup submissions should be sent to: <scivw@hitl.washington.edu> Questions
+or comments should be sent to: <scivw-request@hitl.washington.edu>
+
+The sci.virtual-worlds Moderating Group:
+
+MICHAEL ALMQUIST <squish@hitl.washington.edu> - Michael Almquist (aka.
+"squish") has been hanging out at the HITLab for over two years now after
+obtaining a BS in Computer Science.
+
+TONI EMERSON <temerson@hitl.washington.edu> - Toni is Coordinator of the HITL
+Knowledge Base Project and Manager of the sci.virtual-worlds Moderating Group.
+
+DANIEL PIRONE <cocteau@hitl.washington.edu> - Daniel Pirone has a BS in
+Computer & Information Science. He is a HITL staff member, part of the Software
+Group.
+
+JERRY PROTHERO <prothero@hitl.washington.edu> - Jerry is a Research Assistant
+at the HITLab, currently finishing his master's in Industrial Engineering.
+
+AARON KALEVA PULKKA <pulkka@cs> - Aaron earned his B.S. in Computer Engineering
+at the University of Washington, where he is currently pursuing a Ph.D. in
+Computer Science & Engineering.
+
+MARK TAKACS <tak@hitl.washington.edu> - Mark has just finished his master's
+thesis (Prolix: A text based participant system for VR) and spends more time
+than he can spare exploring the internet and programming Muds.
+
+A mailing list is kept by Prof. Greg Newby at the University of Illinois for
+those who cannot directly access s.v-w and s.v-w.a via the USENET. Requests to
+be added to this list should be sent to:
+
+gbnewby@uxh.cso.uiuc.edu
+
+This is not an automatic operation; please be patient while Greg makes the
+necessary additions.
+
+The newsgroups are also featured on CompuServe, in the Arts Section, in
+abbreviated form; excerpts also appear on GEnie, BIX, and the WELL (in its vr
+conference). Welcome!
+
+The FAQ for s.v-w is at ftp.u.washington.edu, ./public/virtual-worlds/Meta-FAQ.
+The FAQ is posted monthly on the 13th.
+
+VRASP
+
+VRASP is an organization that you probably want to belong to. They are putting
+out quality information at a reasonable cost. Plus, it's tax deductible.
+(e-flyer courtesy of Mark Pflaging.)
+
+VRASP
+
+The Virtual Reality Alliance of Students and Professionals is a support network
+and educational forum dedicated to increasing public knowledge of virtual
+reality applications, and to furthering the development of VR technology as a
+whole. Our membership is global and diverse, and includes both lay- and
+professional programmers, researchers, inventors, graphic artists, writers,
+promoters, film-makers and philosophers.
+
+We are presently functioning as a resource bank and referral network for those
+seeking information on VR and the VR community, distributing research and
+development findings as well as product and promotional information. We hold
+our own educationally-oriented meetings and events at which VRASP members get
+to socialize "ftf", sharing their eclectic knowledge and cooperatively pursuing
+a future where Virtual Reality is a Reality.
+
+We are also the publishers of "PIX-Elation"; a bi-monthly 'zine featuring
+product surveys, event and convention reviews, lecture transcriptions, scanned
+and rendered graphics, an industry networking page and a calendar of upcoming
+industry events, as well as interviews with leading researchers, groundbreaking
+artists, and proponents of "homebrew" VR. "PIX" is written primarily by VRASP
+members, all of whom are invited to submit their articles, graphics, and
+findings.
+
+MEMBERSHIP Individual member dues are $30 per year inside the US. All other
+countries: $40. This includes bimonthly issues of PIX-Elation, regular
+admission to VRASP Chats and discounts at VRASP lectures and workshops. For
+special Business and Institutional Member Rates, please contact us.
+
+Volunteerism is strongly encouraged and will be rewarded by a special
+"Contributing Member" designation. This status will entitle you to special
+privileges, such as networking opportunities and the ability to hold office in
+the organization, as well as public acknowledgment in the newsletter and at
+conferences.
+
+CONTACT INFORMATION:
+
+Karin August President, VRASP Publisher, PIX-Elation PO Box 4139 Highland Park,
+NJ 08904-4139 Voice: (908) 463-VRVR Fax: (908) 580-0092 Internet:
+kaugust@caip.rutgers.edu
+
+Tod Foley Director, VRASP Senior Editor, PIX-Elation 8055 Wakefield Ave
+Panorama City, CA 91402 Voice: (818) 786-6318 Fax/Modem: call to arrange
+
+Internet: asif@well.sf.ca.us random@cyberden.sf.ca.us random@phantom.com
+
+Amiga and VR mailing list
+
+Ethan Dicks has set up a discussion list for topics related to using the Amiga
+for VR. To subscribe, send mail to amigavr-list-request@kumiss.cmhnet.org.
+
+trackers mailing list
+
+The trackers list usually covers 3d-related issues. Requests go to
+trackers-request@qucis.queensu.ca. [1NOV93 I recieved email that this list is
+dead. Anyone confirm/deny? -eric]
+
+WTK list
+
+From Terry Fong:
+
+The WorldToolKit Users' Group is intended to provide a contact point for users
+of Sense8 Corp.'s "WorldToolKit" to discuss and exchange information on a
+variety of topics. Among these are:
+
+   * 3D objects: modeling, importing/exporting to WTK NFF, sharing
+   * sensor drivers: development, reducing lag & latency
+   * managing user interaction
+   * efficient development of virtual environments with WTK
+   * distribution and sharing of virtual environments
+   * improving simulation performance (e.g., frame rate, quality)
+   * platform specific issues (e.g., GL queues on SGI machines)
+   * advocating WTK improvements/changes to Sense8
+
+The group has a mailing list which forwards email messages:
+sig-wtk@ptolemy.arc.nasa.gov. Anyone interested in joining the sig-wtk list
+should send email to: terry@ptolemy.arc.nasa.gov
+
+Terry Fong NASA Ames Research Center
+
+REND386 mailing list
+
+REND386 mailing list. rend386 is a great rendering package for the 386, PG can
+be used as an input device (@pxref {REND386}).
+
+Contact: rend386-request@sunee.uwaterloo.ca
+
+ftp sites
+
+A good FTP site for general VR information is
+ftp.u.washington.edu:/pub/user-supported/virtual-worlds. This site is
+maintained by the folks who do sci.v-r on usenet.
+
+schmidt@cogsci.uwo.ca has offered the use of cogsci.uwo.ca as a PowerGlove
+related ftp site. Check: /pub/vr for a variety of glove-list related stuff.
+
+Someone at Apple has started a VR section at ftp.apple.com:/pub/VR. This site
+contains Jon Blossom's Gossamer along with other goodies for the Apple Mac.
+
+Please note that karazm.math.uh.edu is no longer the PowerGlove ftp site.
+
+PCVR Magazine
+
+From the PCVR electronic flyer:
+
+PCVR, a new Virtual Reality publication, introduces high-tech Virtual Reality
+equipment, theories, and software to the layperson by simplifying procedures,
+languages, and materials. The equipment necessary for a Virtual Reality system
+usually costs over $25,000 and is primarily available to universities and
+businesses. PCVR changes this situation by bringing the technology into the
+home through tutorials and do-it-yourself projects. Through step-by-step
+articles, a complete Virtual Reality system can be built for under $3000
+including the personal computer necessary to execute the system.
+
+For $26 a year, subscribers receive 6 issues which contain; editorials,
+thought-provoking columns, hardware/software topics, tutorials, and
+do-it-yourself projects. We also include a disk as a convenience to the reader,
+which contains all the software discussed in the articles.
+
+The hardware projects have covered connecting the Sega 3D glasses and Mattel
+Powerglove to an IBM personal computer, building a head mounted display, and
+constructing a head tracker device. These do-it-yourself projects use
+off-the-shelf components which enables a non-technical person access to Virtual
+Reality equipment in their own home.
+
+The tutorials explain the major technical areas of Virtual Reality without the
+jargon usually associated with industry journals.
+
+PCVR intends to bring Virtual Reality out of science laboratories and into the
+general computer community.
+
+Subscription Information (6 Issues): $26.00 US/Canada, $38.00 Overseas. Back
+Issues- All Are Available 1-9: $4.50 US/Canada, $6.50 Overseas Payment: Check
+or Money Order drawn on US bank in US dollars. VISA, Mastercard and American
+Express
+
+Issue Themes:
+
+   * Issue 1 - Theme: PowerGlove Interface - 28 Pages
+   * Issue 2 - Theme: PowerGlove Software - 35 Pages
+   * Issue 3 - Theme: Head Mounted Display and Sega 3D Glasses - 36 Pages
+   * Issue 4 - Theme: Rend386 Rendering Software - 45 Pages
+   * Issue 5 - Theme: Head Tracking - 36 Pages
+   * Issue 6 - Theme: 3D Sound - 36 Pages
+   * Issue 7 - Theme: VR Motion - 36 Pages
+   * Issue 8 - Theme: PCVR Renderer - 40 Pages
+   * Issue 9 - Theme: Build Your Own Head Mounted Display for $450 40 Pages
+   * Issue 10- Theme: Voice Recognition 40 Pages
+   * Issue 11- Theme: VR Connectivity 52 Pages
+   * Issue 12- Theme: Input Devices 64 Pages
+   * Issue 13- Theme: Head Tracking (27Dec1993) 64 Pages
+
+PCVR can be contacted at: PCVR; PO Box 475; Stoughton, WI 53589; Phone/FAX:
+(608) 877 - 0909; EMAIL: pcvr@fullfeed.com
+
+Other Power Glove people / Previous Works
+
+This is sort of a history, I'm not sure of the exact order, but the facts are
+sort of correct.
+
+First, there's the history of the PowerGlove itself. Rich Gold, in CyberArts
+writes: [INSERT TEXT FROM CYBERARTS]
+
+   *  Howard Eglowstein (sp?) had an article in the July 1990 issue of Byte
+     showing how to hook the PG to an IBM PC's parallel port and decoding the
+     lores mode. ("Reach out and touch your data", BYTE Vol 15, No 7 (July
+     1990) pp283-290)
+
+   *  Mike Cargal and Paul King built a cable and wrote a driver to interface
+     the glove in lores to the Amiga via the mouseport, this combo was called
+     "PowerMouse". Work was done in 1990 and published in the 1991 issue of
+     Amazing Computing's Tech magazine. The code is in Modula-2 and has
+     shareware status.
+
+   *  Greg Newby posted his results of decoding hires mode in sci.electronics.
+
+   *  Manfred Krauss figured out the timing of hires mode and wrote some code
+     to run hires on an Atari ST.
+
+   *  Dave Stampe added some de-glitching and hysteresis code.
+
+   *  Several people are using it as a MIDI input device. PCVR has released a
+     racketball game based on rend386 that uses the PG and the Sega 3D glasses.
+
+Hardware Interfaces
+
+AGE box
+
+AGE built a serial interface device and sold them to a few universities. They
+aren't generally available and have an almost mythical status.
+
+Gold Brick
+
+Many users on the glove-list have used this box. Charlie S.Lindahl
+(lindahl@cse.uta.edu) comments:
+
+I have done a lot of hacking around with the Transfinite Systems box on the
+Mac. Two points:
+
+  1.  The PG sample code which comes with the box is not great (stylistically)
+     and is written in MPW C. After much struggling I finally managed to
+     extract the position sensing code into a standalone THINK C program.
+
+  2.  As it currently stands, the TRANSFINITE stuff only works consistently
+     with system 6 of the MacOS. It DOES work with system 7, if you turn off
+     32-bit addressing and virtual memory. I've coaxed the assembly source code
+     for the GOLDBRICK driver from Transfinite to try to port to sys7, but
+     haven't had the time to hack it out yet.
+
+This information is taken from a flyer from Transfinite:
+
+GOLDBRICK: The Cyperspace Interface (tm)
+
+Summary: The Gold Brick (tm) is a device that connects the Apple Destop Buss
+(tm) to most controllers compatible with and to the Nintendo Entertainment
+System (tm). It allows you input from Broderbund UFORCE (tm), floor pad input
+from the Nintendo Power Pad(tm), tilt sensing with the Enteractive (tm)
+Roll&Rocker(tm), and POSITION SENSING WITH THE MATTEL POWER GLOVE (tm).
+
+With Macintosh support software (system 6.0.5 or later), Gold Brick can
+translate controller input into 2 or 3 dimensional motion and/or keystores as
+specified by the user.
+
+The controller and game deck interfaces are generally compatible with those of
+the Motorola SPI, National Semiconductor Microwire (R), and Signetics I2C type.
+
+According to the manufacturer the Gold Brick is already being used in the
+following systems: - controlling intractive multi-media - playing virtual
+instruments - giving audio feedback to speech-impaired infants - allowing
+viewers to walk through computer-deisgn structures - transforming inputs on a
+power pad to English sentences and music
+
+There are a number of models available depending on your needs and budget. They
+are summarized as follows:
+
+THE GOLD BRICK COMPARISON CHART:
+
+                        MODEL 1                         MODEL 2
+
+                    | Release 1 (1) | Release 2     | Release 1    |
+--------------------|---------------|---------------|--------------|
+Part Number, Retail | GBC-1, $195   | GBC-2, $245   | GBN-1, $169  |
+--------------------+---------------+---------------+--------------|
+Controllers support |               |               |              |
+ * Standard         | Yes           | Yes           | Yes          |
+ * Power Pad        | Yes           | Yes           | Yes          |
+ * "Unknown" type   | Yes           | Yes           | Yes          |
+ * UFORCE           | Yes           | Yes           | Yes          |
+ * POWER GLOVE      | No            | YES           | YES          |
+--------------------+---------------+---------------+--------------|
+Status Lights       | Three         | Three         | None         |
+--------------------+---------------+---------------+--------------|
+ADB Through port (2)| Yes           | Yes           | No           |
+--------------------+---------------+---------------+--------------|
+Game Deck Cable     | Yes           | Yes           | No           |
+--------------------+---------------+---------------+--------------|
+Technical Manual (3)| Yes           | Yes           | No           |
+--------------------+---------------+---------------+--------------|
+Upgradeable (4)     | Yes           | Yes           | No           |
+--------------------------------------------------------------------
+
+Footnotes:
+(1) No longer available
+(2) Permits additional apple desktop bus devices to be attatched
+(3) Limited tech. doc. was included in GBC-1. A software tech. manual
+    (REF-1), available separately, is included in GBC-2
+(4) Uses a socketed single chip microprocessor that can be replaced with
+    later versions.
+
+ORDERING INFORMATION: Transfinite Systems Company, Inc.; PO BOX N, MIT Branch
+Post Office; Cambridge, MA 02139, USA; Tel: (617) 969-9570; Applelink: D2002
+
+Menelli box
+
+Ron Menelli built a 68HC11-based box that duplicates the AGE box. The
+schematics and code available via ftp at cogsci. They are available from the
+glove-list archive server as pg-hc11.zoo and pg-hc11.tar.Z.
+
+Several problems exist with building this box: 68HC11's aren't easy to come buy
+unless you're ordering a few thousand and two of the parts for the Menelli box
+will *not* be found a Radio Shack or Fry's, one will have to go mail order to
+some place such as DigiKey.
+
+PGSI
+
+The PGSI (PowerGlove Serial Interface) is a project from UIUC and promises to
+be the bestest cheapest way to use the PowerGlove with nearly any computer. The
+PGSI FAQ is maintained by Ben Gross (pgsi@uiuc.edu) and can be ftp'd from
+FTP.cso.uiuc.edu (128.174.5.59) in /ACM/PGSI as PGSI.FAQ. Like most FAQs, it is
+irregularly posted to various newsgroups and mailing lists.
+
+The first batch of orders were shipped in mid 1993. There is talk of another
+production run, the PGSI FAQ should be checked for the latest data.
+
+Software
+
+[IF YOU'RE USING A SPECIFIC PACKAGE, AND HAVE COMMENTS, LET ME KNOW. -JET]
+
+Amiga Software
+
+The Amiga has the worst software selection at this time. There are only a
+handful of basic packages for getting glove data into the Amiga via the
+parallel port. Both packages work only on the A500/A2000 units. The author
+strongly advises anyone interested in doing glove-work on the Amiga to go to a
+serial-port based device such as the PGSI.
+
+'amigahires.lzh' contains code to drive the glove in hires mode and grab
+packets from the parallel port.
+
+'gt.lzh' contains code to grab data from a glove attached to a parallel port
+and dumps it out a port. Whiles this is The Right Way to do things on an Amiga,
+the code only runs correctly on 68000 based machines.
+
+'glovetest.lha' (also 'gt.lzh') is a useful diagnostic tool that includes the
+above gt.
+
+Mac Software
+
+Jon Blossom's 'gossamer' package is available from ftp.apple.com.
+
+The "Max" package for the Mac has support for the Gold Brick. It is a
+development environment, so you will have to write code that translates glove
+movements into the actions you want from Max. Max is produced by Opcode,
+opcode@well.sf.ca.us.
+
+PC Software
+
+O2GLOVE is a set of sources from VRASP ([CROSS REFERENCE]) to help you write
+your own PowerGlove applications for the PC.
+
+REND386 is a PC-based rendering library that supports the PG. Demo available by
+FTP from sunee.uwaterloo.ca:/pub/rend386/demo4.zip Source/developer's kit in
+/pub/rend386/devel4.zip
+
+O2GLOVE is well suited for serious glove use and programming. If you are more
+interested in producing VR environments and less interested in programming,
+REND386 is probably the way to go.
+
+REND386
+
+From the rend386 distribution:
+
+REND386 -- A 3-D Polygon Rendering Package for the 386 and 486 Written by Dave
+Stampe and Bernie Roehl
+
+DEMO4 Documentation Version 4.10 - August 1992
+
+This document describes how to use the new REND386 demo, called "demo4.exe".
+
+To run the demo, just type "demo4" or "demo4 filename" where 'filename' is the
+name of a .plg file, a .fig file, or a .wld file you want to have loaded.
+
+The demo4.exe program is designed to illustrate some of the capabilities of
+REND386, a polygon rendering library for 386 and 486 systems with VGA displays.
+
+The libraries are available for free; the only reason for making the demo a
+separate set of files is to give people who aren't interested in writing
+software a chance to see just what can be done on widely-available hardware.
+
+The system is fast. How fast, you ask? Well, speed is not a straightforward
+thing to measure. There is a relationship between the speed of the processor,
+the complexity of the scene, and the number of frames per second.
+
+With this software, a 512-polygon scene can be rendered at speeds up to 15
+frames/second on a 486/25; this corresponds to a speed of over 7000
+polys/second. If you have a 486/33, it'll go slightly faster; if you have a
+386/33, it'll go slightly slower. You get the idea. If you want more
+frames/second, use a simpler scene (i.e. fewer polygons).
+
+To use this demo, you MUST have a 386 or 486; it will not run at all on a 286
+or below. You must also have a standard VGA display.
+
+This version now support stereoscopic viewing; the assumption is that you have
+the Sega 3D glasses and the interface described in sega.txt installed.
+
+O2GLOVE
+
+From the O2GLOVE distribution:
+
+Object Glove is an object oriented driver for Mattel's Nintendo Power Glove
+connected to the parallel port of a PC. It is written in C++ for Borland C++
+3.1. The code has many features that make it accessible, extensible, and easy
+to incorporate into existing applications. First, it runs on a wide variety of
+PCs, from '286s to '486s, without modification. Second, it is interrupt driven,
+which means the sampling takes place at regular intervals without requiring any
+attention from the application program. Thirdly, the programming interface is
+extremely simple. Since the program is object oriented, any future improvements
+to the driver would be transparent to the applications that use it. More
+advanced processing of the glove input can be handled by deriving classes from
+the main driver class. Lastly, the code is Windows compatible.
+
+Object Glove supports the simultaneous use of two gloves. (Support for more
+gloves is possible but not planned.) Object Glove is the only publicly
+available product with this capability.
+
+There are several programs that make use of Object Glove. Included is a demo
+program that displays a line drawing of a hand. The hand moves around on the
+screen based on the movements of the Power Glove. There are two versions of the
+demo program, one for DOS and one for Windows. In the DOS version, user
+definable gestures are displayed on the screen when they are recognized. In the
+Windows version, gesture recognition can be associated with system sounds.
+These sounds are played through the Windows 3.1 Multimedia Interface, thus the
+sounds are also user-definable. Also, a version of Rend386 has been included
+that utilizes Object Glove. Rend386 is a freeware "virtual reality" program
+that allows navigation though a three dimensional world. Rend386 is
+customizable and allows the creation of new virtual worlds. Rend386 was written
+by Dave Stampe and Bernie Roehl.
+
+Court Jesture, supplied with Object Glove, is a gesture recognition system. It
+operates in real time, allows definition of gestures by the end user, and
+dispenses the gestures selectively to application objects in an object-oriented
+way. Gestures can be grouped into "sets" and gesture sets can be activated and
+deactivated dynamically by the application. When two gloves are used, each
+glove can have separate gesture sets or the same gesture sets. As with Object
+Glove, it works under DOS and Windows and has been combined with Rend386.
+
+Summary of features:
+
+   *  Object Oriented C++
+   *  Access one or two Power Gloves on one PC parallel port
+   *  Works under DOS and Windows, and with Rend386
+   *  Features gesture recognition
+   *  Comes with several sample applications
+   *  Available as a library or as source code
+   *  Includes over 60 pages of printed documentation
+   *  Low cost with no runtime fee, multi-user packs available
+
+This product is available through VRASP, the Virtual Reality Alliance of
+Students and Professionals. VRASP also has Power Gloves, PC-to-Power Glove
+connectors, and other low-cost Virtual Reality items for sale. VRASP is a
+non-profit, educational organization devised to increase public knowledge of
+virtual reality and further the development of VR technology. Membership in
+VRASP includes six issues of our popular newsletter Pix-Elation, containing a
+wealth of "inside" VR information and insightful articles.
+
+A comprehensive demo program is available on the Internet. The demo includes
+DOS and Windows executables, and a version of Rend386 that supports two gloves
+and gesture recognition. You can use glove gestures to fly around in worlds.
+The demo also includes a Windows program to move the "mouse" cursor with a
+glove. Instructions for building a one or two glove connector are included.
+Some sample source code is included, but in order to fully compile the demo
+programs you need to buy the library. To get the demo program, anonymous FTP as
+follows: Host name: sunee.uwaterloo.ca Directory: /pub/glove File name:
+objglv.exe The file is a self-extracting archive. It is advisable to transfer
+this file in the evening when net traffic is low. Make sure to use BINARY mode!
+
+Unix
+
+With the general availability of the PGSI, we'll probably see more codes for
+the PowerGlove on UNIX platforms. There exist a couple of packages for older
+NeXT computers and SGI's, but they require more hardware than just a serial
+port.
+
+Getting Started
+
+With any platform, your basic steps are going to be:
+
+  1.  Figure out what platform you're going to use.
+  2.  Decide which interface for the glove you're going to use and what
+     software. Your choices might be limited due to the platform you're using,
+     your programming skills, and available hardware.
+  3.  Plug everything together.
+
+This section is intended for rough instructions for various platforms. It's
+going to be empty the longest, simply because I don't have access to lots of
+different hardware. If you'd like to submit some guidelines/instructions for a
+specific platform, feel free.
+
+Amiga Setup
+
+options:
+
+   *  hires via parallel
+        o  hack a cable
+        o  use glovetest/amigahires
+        o  timing problems on A3000 series, and probably the A1200/4000 series
+          make it easier to use a PGSI or a menelli box.
+   *  hires via serial/PGSI|Menelli box
+   *  lores via joystick port. can use any nintendo controller as well, since
+     lores just mimics the controller.
+
+Mac Setup
+
+   *  Gold Brick
+   *  PGSI
+
+PC Setup
+
+whole list of possibilities:
+
+   *  PCVR instructions
+   *  BYTE article
+   *  hires via roll-your-own parallel
+   *  hires via serial box
+   *  lores via joyport.
+
+Unix Box Setup
+
+   *  PGSI|Menelli on serial.
+   *  write your own UNIX device driver.
+
+Related homebrew stuff
+
+PowerGlove NES games
+
+The following games were produced for use with the PowerGlove on the NES: Bad
+Street Brawler, Glove Pilot, SuperGloveBall, Manipulator, Maze Ball.
+SuperGloveBall is supposedly the game to have for the 8bit NES.
+
+Sega glasses
+
+Sega had a game that competed with the NES called "Sega Master system". One of
+the neat doodads Sega made was a set of LCD shutter glasses, similar to Haitex
+goggles (and the shutter glasses many SGI visualization tools support). They
+are discontinued, and don't seem to be in most stores. SEGA used to sell
+refurbished units, but they're out as well.
+
+Toshiba goggles
+
+supposedly better than sega. [FIND OUT FROM alt.3d?]
+
+UForce controller
+
+Broderbund makes/sells a NES-controller compatible 3space sensor. Two plates at
+right angles contain a set of infrared emitters and detectors. It has an
+NES-controller-mode and (yet another) "analog" mode. No one has decoded the
+analog information and made it available to the net. The UForce is currently
+available.
+
+This is Ethan Dicks' UForce FAQ:
+
+Ethan Dicks <erd@kumiss.cmhnet.org> Version 1.0 24-Mar-1992
+
+"Uforce 101..."
+
+The Uforce has 9 total IR emitters and detectors of which 8 may be active at
+any given time. The four configuration switches are divided into two functional
+groups. The first three select a sample mode which determines how the Uforce
+will present the data to the host and the last switch selects which of two
+particular sensors is active. Seven of the eight possible arrangements of the
+first three config switches places the Uforce into "Threshold mode" wherin the
+device compares the values of the various sensors against known thresholds in
+ROM and provides the host with a standard NES 8 bit packet containing
+up/down/left/right/select/start/A/B information. When all three switches are
+down, the Uforce is placed into "Analog mode" wherin a multi-byte packet with
+raw information about each IR sensor is provided to the host. The format is as
+follows... (all values in hex)
+
+ Flag      S 7     S 6     S 5     S 4     S 3     S 2      S 1     S 0
+FC-FF*    01-FB    01-FB    01-FB    01-FB    01-FB    01-FB    01-FB    01-FB
+
+FF = no buttons pressed
+FE = START pressed
+FD = SELECT pressed
+FC = START & SELECT pressed
+
+The flag byte is easy to spot because it is always over FC. If 00 is ever read,
+it should be discarded because the Uforce is still aquiring data (this can take
+up to 10 milliseconds to complete); 00 is never valid data. There must be a 150
+microsecond delay between bytes; this is an NES restriction. Any routine which
+is able to read in a single byte from a standard NES controller can be used to
+read the Uforce in Analog mode; unlike the PowerGlove in hires mode, the Uforce
+uses fairly standard techniques for sending data back to the host.
+
+The sensor map is arranged as follows...
+
+    +------ 0 ------+
+    |   2       1   |
+    |               |
+    |   3       5   |
+    +---------------+
+    |   4           |
+    |               |
+    |   7       6   |
+    +------ 5 ------+
+
+Sensor 5 is controlled by the right most config switch (#4)
+
+Supplies/Mail Order
+
+Hacking PowerGloves requires access to information and supplies that aren't
+found in obvious locations.
+
+Scrounging
+
+Scrounging is probably your best bet for things like PowerGloves, UForces
+controllers, and other goodies. The San Francisco bay area and greater Houston
+areas each sport one or more computer junk stores. In San Jose, try "Wierd
+Stuff Warehouse" and "HalTed Electronics". In Houston, try "EDS", on the west
+side.
+
+Generic resale/thirft shops such as Salvation Army aren't always worth the
+trouble, as they tend to toss things out that they can't obviously test or that
+have no obvious function. They're also wise to corporations trying to 'donate'
+broken junk. Good place to get clothes to be cut up and modified for input
+gear.
+
+Garage sales are another big win. I was having horrible luck finding anything
+other than broken lawn furniture until a neighbor explained the 'right way' to
+garage sale: check ads in the paper the day before, start early enough that you
+hit several sales as they start and remember that you can probably talk down
+people on their prices. Most importantly, don't let on that the PowerGlove
+they're asking $10 for usually goes for more than $30.
+
+If nothing else, it won't hurt to post to sci.v-r, the glove-list or related
+groups your "want list".
+
+Mail Order
+
+DigiKey (XXX-XXX-XXXX) is a popular mail-order house with many homebrew folks.
+They stock a large selection of components and whatnot. [ANYONE HAVE THEIR
+NUMBER HANDY? -ERIC]
+
+FringeWare does mailorder of lots of stuff. [INSERT REFERENCE. -ERIC]
+
+Nintendo extension cables are available from MCM Electronics; 650 Congress Park
+Drive; Dayton, Ohio; 45459-9955; 800.543.4330. The cable is called a "Nintendo
+Type Joystick Extension Cable", part# 83-0325.
+
+If you're short an L-bar, you can order one from Mattel: Mattel Toys; 7676
+Reinhold Road; Cincinatti, OH; 45237.
+
+Stores
+
+Fry's is a large chain of stores that try to be to electronics what
+supermarkets are to food. Fry's in the SF Bay area usually carry: Macs, PCs,
+EO's, Newtons, Zoomers, home entertainment, electronic components, tools,
+software, magazines, personal hygene supplies and junk food. (Great prices on
+soda by the case.)
+
+Radio Shack is still in business, regardless of their best attempts to do
+otherwise. Their prices are outrageous compared to larger PC chains like Fry's,
+even for things like a handful of resistors. They'll do anything to get your
+name and address so they can kill trees to send you ads for stuff you don't
+want. Don't bother with Radio Shack unless you have no other choice.
+
+Feel free to submit information on your local electronics supplier.
+
+Wierd Info, Trivia, References
+
+Time to get obscure. Thanks to all who provided information and ideas.
+
+The PG was designed by Chris Gentile (the "G" of AGE) and someone named "Novak"
+at Mattel. If you meet either of them, do whatever it takes to ply their brains
+for all the information you can get.
+
+The finger sensors are made by Amtec International 3653 West 1987 South Salt
+Lake City, UT 84104 USA Tel. (801) 977-0359
+
+PowerGloves are becoming hard to find. You might want to try looking at Toys R'
+Us immediately, but you're probably too late. After that, hit any chain that
+ever sold Nintendo gear (see section Supplies/Mail Order).
+
+The coolest thing thus far is the original, official, PowerGlove carrying case.
+Found for around $12 (half what a glove usually costs) at a Toys R' Us in Los
+Angeles area.
+
+References
+
+A variety of references on PowerGloves and homebrew VR. If you have more to
+add, or corrections, please submit. (Also, if you know a good way to use BiBTeX
+with texinfo, let me know that as well.)
+
+A whole slew of homebrew-style VR books have hit the shelves from mass-market
+publixhers (like Sams). I hope to have some references for these in the next
+version of the FAQ.
+
+- Gardner, Dana L.  "The Power Glove", Design News. 4-Dec-89 pp63-68
+  (history of design and marketing of the PG, not very technical.)
+
+- Jacobson, Linda. _CyberArts_ [COMPLETE CITATION]
+
+- Jacobson, Linda. (new book on garage VR)
+
+- Pausch, R.  "Virtual Reality on Five Dollars a Day".
+  Proceedings of ACM SIGCHI Human Factors in Computer Systems
+  Conference, New Orleans April 1991. Text file might be available for
+  FTP from HITL: milton.u.washington.edu, in /public/virtual-worlds/papers
+
+- "VPL Virtually Gone. (VPL Research loses control of its patents to
+  Thomson CSF)", MacUser.  March, 1993, v9(n3). p45(1).
+
+- Zimmerman, Thomas G. et al.  "A Hand Gesture Interface Device".
+  Proceedings of CHI+GI '87, ACM 1987. pp190-192.
+  (really about the prototype of the DataGlove, but also discusses
+  a cheaper "Z-Glove" [Zimmerman Glove?] that used ultrasonics for
+  tracking and was used with a CBM64 computer.  Probably the "original" PG.)
+
+- Zimmerman, Thomas G and Lanier, Jaron Z.  "Computer Data Entry and
+  Manipulation Apparatus and Method", VPL Research Inc.
+  US Patent 4,988,981.  Redwood City, CA (USA). Jan 29 1991.
+
+- Zimmerman, Thomas G.  "Optical Flex Sensor", Sept 17 1985
+  US Patent 4,542,291
+
+Legal Issues
+
+THE AUTHOR IS NOT A LAYWER. THIS IS NOT LEGAL ADVICE.
+
+That being said, there's not much you have to worry about while hacking the
+PowerGlove. As long as you use other people's software with respect to their
+copyright and licensing agreement and give people credit where it's due, you
+should be in the clear legally.
+
+If you decide, however, to build stuff from scratch, you should be aware of
+existing patents on hardware/software.
+
+Patents
+
+It is the personal opinion of the author that vaguely stated patents covering
+broad areas hinder the virutal reality industry more than help it. That being
+said, the following are some important patents you should take a look at.
+
+In particular, VPL (or whomever owns them this week) owns a patent covering the
+'manipulation of virtual objects in a computer system' (see below).
+
+VPL sued Jim Kramer of Virtual Technologies over a glove input device that
+competed with the DataGlove. VPL lost the suit and Virtual Technologies
+continues to produce their gloves. (The author does not know why the suit was
+lost, if VPL retracted, or the current status of the patent.)
+
+Selected patents:
+
+   *  US Patent 3,022,878 'Communication device'
+
+     Patented Feb. 27, 1962 Robert Seibel, Putnam Valley, Nathaniel Rochester
+     IBM
+
+     A further object of this invention is to provide a keyboard into which the
+     hand is inserted, much as the hand is inserted into a glove. Such a
+     keyboard is adaptable to being fitted into a glove.
+
+   *  US Patent 4,414,537 'Digital data entry glove interface device'
+
+     Patented Nov. 8, 1983 Gary J.Grimes, Bell Telephone Lab. Inc
+
+     A man-machine interface is disclosed for translating discrete hand
+     positions into electrical signals representing alpha-numeric characters
+
+   *  US Patent 4,542,291 'Optical flex sensor'
+
+     Patented Sep. 17, 1985 Thomas G. Zimmerman. VPL Research Inc.
+
+     The instant invention relate generally to position detectors and more
+     specifically it relates to an optical flex sensor that produces an output
+     signal in response to bending
+
+     A further object is to provide an optical flex sensor that uses
+     inexpensive common materials and is assembled either by hand or with
+     simple tools.
+
+   *  US Patent 4,988,981 'Computer data entry and manipulation apparatus and
+     methods'
+
+     Patented Jan. 29, 1991 Thomas G.Zimmerman, Jaron Z.Lanier VPL Research
+     Inc.
+
+     Apparatus is disclosed for generating control signals for the manipulation
+     of virtual objects in a computer system according to the gesture and
+     position of an operator's hand or other body part. The apparatus includes
+     a glove worn on the hand which includes sensors for detecting the gestures
+     of the hand, as well as hand position sensing means coupled to the glove
+     and to the computer system for detecting the position of the hand with
+     respect to the system.
+
+League for Programming Freedom
+
+The League for Programming Freedom is dedicated to ending software patents and
+user interface copyrights. They have lots of docs here. The following is from
+one of their electronic fliers:
+
+Ten years ago, programmers were allowed to write programs using all the
+techniques they knew, and providing whatever features they felt were useful.
+This is no longer the case. New monopolies, known as software patents and
+interface copyrights, have taken away our freedom of expression and our ability
+to do a good job.
+
+"Look and feel" lawsuits attempt to monopolize well-known command languages;
+some have succeeded. Copyrights on command languages enforce gratuitous
+incompatibility, close opportunities for competition, and stifle incremental
+improvements.
+
+Software patents are even more dangerous; they make every design decision in
+the development of a program carry a risk of a lawsuit, with draconian pretrial
+seizure. It is difficult and expensive to find out whether the techniques you
+consider using are patented; it is impossible to find out whether they will be
+patented in the future.
+
+The League for Programming Freedom is a grass-roots organization of professors,
+students, businessmen, programmers and users dedicated to bringing back the
+freedom to write programs. The League is not opposed to the legal system that
+Congress intended--copyright on individual programs. Our aim is to reverse the
+recent changes made by judges in response to special interests, often
+explicitly rejecting the public interest principles of the Constitution.
+
+The League works to abolish the new monopolies by publishing articles, talking
+with public officials, boycotting egregious offenders, and in the future may
+intervene in court cases. On May 24, 1989, the League picketed Lotus
+headquarters on account of their lawsuits, and then again on August 2, 1990.
+These marches stimulated widespread media coverage for the issue. We welcome
+suggestions for other activities, as well as help in carrying them out.
+
+For more information, send email to league@prep.ai.mit.edu or physical mail to:
+
+    League for Programming Freedom
+    1 Kendall Square #143
+    P.O.Box 9171
+    Cambridge, Massachusetts 02139
+
+Other Gloves
+
+Maybe you've got enough of a budget that you don't want to bother with hacking
+PowerGloves. The following are other glove options that I'm aware of and
+information I've received from those companies as of this writing.
+
+CyberGlove (TM)
+
+The CyberGlove features include:
+
+   *  Up to 22 sensors, three flex sensors and abduction per finger, plus thumb
+     cross-over, palm arch, wrist flexion and abduction
+   *  Sensor output depends only on true angle of finger joints and is
+     independent of joint radius or curvature.
+   *  Sample at 100Hz or poll for input.
+   *  Glove material is nylon/lycra blend, fingers and palm are removed for
+     typing ease.
+
+Virtual Technologies 2175 Park Blvd Palo Alto, CA 94306 USA 415.321.4900
+
+Exos
+
+Exos produces an exo-skeleton glove. [ANYONE HAVE CONTACT INFO? -ERIC]
+
+VPL DataGlove
+
+Yeah, like you can afford one.

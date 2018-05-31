@@ -1,0 +1,60 @@
+Questions for Tech:
+------------------
+
+1) What percentage of tool development work would there be?  
+
+   Would it be more than 50%?  
+
+   Or would more than 50% of the time be spent dealing with vendor issues
+   for CAD and software tools?  
+
+
+2) Would the opportunity to develop tools be across multiple platforms 
+   (specifically for Unix and Win95/NT)?
+
+
+3) Would I have opportunity to apply such technologies as Tcl/Tk, Java, Perl, 
+   C++, Visual C++, GUI front-ends to (vendor and custom) tools, and scripting?
+
+
+4) Is there a desire to provide on-line documentation (via HTML pages) for 
+   the various tools used by the organization?  
+
+   Or even HTML pages that would contain user comments/problems/solutions?
+
+
+5) Would I be involved in the development of standardized software development
+   methodologies?  
+
+   Would this process be documented in paper form or via on-line methods?  
+
+   Would there be a similar effort for hardware development?
+
+
+6) Other than determining what the best solution is for software configuration 
+   management, how much time would I be expected to devote to the day to day
+   running of the system?  
+
+   Or would that be someone else's responsibility?
+
+
+7) Are there any Unix system administration responsibilities involved with
+   the position?
+
+
+8) How much opportunity is there for growth into more of a (diagnotics)
+   development role?  
+
+   What are the responsibilities of a such a role?
+
+__________________________________________________________________________
+
+Questions for HR:
+
+1) My son has Hydronephrosis (water on kidney due to blockage), will the
+   medical plan cover this (i.e. pre-exisiting) condition?
+
+2) Vacation and sick time policies?
+
+3) Education reimbursement, and support for conferences?
+

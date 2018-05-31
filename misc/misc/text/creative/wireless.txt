@@ -1,0 +1,21 @@
+				Wireless
+
+			 by Brian Scott Lingard
+
+
+Notes
+-----
+
+Background:
+
+People in the near future (~50 yrs) have brain implants connected to wireless
+transmitters, which hook into a global network (like a WAN).  This is what
+the Internet has evolved into.  People spend much of their of time in
+cyberspace, working, playing, etc.  
+
+The effect of the system is very much like what it would be like if everyone
+actually had psionic abilities.  People could transmit their thoughts, 
+control objects, read other people's thoughts, etc.  Of course, thoughts
+can be transmitted in private via secure channels over the network using
+some kind of access code scheme.
+

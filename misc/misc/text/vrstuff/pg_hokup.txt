@@ -1,0 +1,205 @@
+Here's the summary of how to hook up the PG to a PC that I promised I'd
+post.
+ 
+Included:
+ 
+1.  How to hook them up using an external power source
+        A.  parts and aprox cost
+        B.  circuit diagram
+2.  How to hook them up using power from the PC
+        A.  parts and aprox cost
+        B.  circuit diagram
+ 
+ 
+Not Included:
+ 
+1.  Required software information
+         maybe a second document when I get that far, unless someone
+         else wants to write it up before I start asking a bunch of
+         questions again - any volunteers?  :-)   Wouldn't it be nice
+         if we clearly documented our work so that newcomers could
+         quickly and easily be brought up to speed without having to
+         take up a lot of everyone's time and net bandwidth?
+ 
+ 
+Obligatory Disclaimer:
+ 
+I am not an electronics expert of any kind.  I don't understand most of
+what is included in this summary.  This is only a summary of replies I
+got to several questions I asked on this particular topic as well as some
+information obtained from an article in Byte (July, 1990).  I assume no
+responsibility for anything that happens if you attempt to use any of the
+information in this post.  I don't care if you distribute, alter, copy,
+etc anything in this post.  It would be nice though if you made your
+additions, alterations, comments, etc available to the glove mailing list
+at glove-list@karazm.math.uh.edu.  Also, the contents of this post do
+not reflect any opinions other than my own, especially GE's.
+ 
+ 
+Introduction
+ 
+There may be many ways to hook a PowerGlove to a PC/clone.  The following
+discussion describes two possibilities.  I used the first method and it
+seems to work.  A number of others have reported using the second method
+which is simpler and apparently works just as well.  There may be errors
+in the methods, but I've tried to faithfully reproduce what I've done and
+what has been reported by others.
+ 
+The second method is the easier and cheaper of the two.  However, it
+requires you to use another port on your PC (in addition to the printer
+port that both methods require) or tapping unused power and ground
+lines somewhere in your PC.  That's no big deal if you know what you're
+doing and have an extra port or power source to tap.
+ 
+The first method requires no PC modifications.  It only uses the printer
+port.  However, it requires an external 5v power supply.  The discussion
+in that method assumes you have a power supply, but that it isn't 5v.
+ 
+The aproximate prices shown are about what I paid at my local Radio
+Shack, execept for the glove and extension cable.  You might be able
+to beat these prices by shopping around or rummaging through your
+basement.
+ 
+1.  Hooking them together using an external power supply
+ 
+    Needed:
+ 
+        Nintendo PowerGlove
+                US$20-50
+        power supply (ac/dc, battery pack, etc) that produces in the
+        range of 7 - 9 volts at around 300mA
+                I bought one with adjustable settings at Radio Shack
+                for about $13.  I use the 7.5v setting.  You might be
+                able to get by with a 6v source, but the 7805 regulator
+                might not produce a steady 5v unless you give it at
+                least 7v.  You might be able to get by OK with 9v or
+                12v, but you may need a heat sink at higher voltages.
+        (2) 0.1 mF capacitors
+                less than US$1 for ceramic
+        7805 +5vdc voltage regulator
+                about US$1.25
+        DB25 connector and cover
+                about US$3.50
+        heat shrink tubing and/or electrical tape
+        soldering iron, heat sink, and solder
+        wire
+ 
+    Optional
+ 
+        extension cable for the PowerGlove
+                A package of two Curtis Super Extendo cables costs just
+                under US$10.  The only reason to get these is so that
+                you can modify an extension cable instead of the one
+                attached directly to the glove hardware.  They also give
+                you some extra length, if that matters.  I think Nintendo
+                makes extension cables, too, but I don't know what they
+                cost.
+        2 female and 1 male connector
+                My power supply had 1/8" (3.5mm) male phone jack connector
+                on it.  I mounted a female connector on a small box to
+                plug the power supply into.  I also used a pair of the
+                connectors at the output side of the box so I could
+                disconnect the box easily from the modified glove cable.
+                I didn't want to chop up the power supply's cable, so
+                the first connector seems like a good idea.  The others
+                are completely unnecessary.  I only used this type of
+                connector because my power supply came with one.  The
+                connectors cost me about US$3.00.
+        box to house completed circuit
+                Mine cost about US$1.75.
+ 
+ 
+    The circuit:
+ 
+ 
+ 
+                                                            box
+                                                 +----------------------------+
+    +-----------+    male connector, tip - ?v    | female, outside, ground    |
+    |  7 - 9v   |    outside - ground            | +-------------+            |
+    |  power    |====================||||---     ]]] __          |            |
+    |  supply   |                                ||___|-----+    |            |
+    +-----------+                                | female,  |    |            |
+                                                 | inside,  |    |            |
+                                                 | ?v       |    |            |
+                                                 |          |    |            |
+                                                 |          |    |            |
+                                                 |          +-||-+ 0.1 mF     |
+                                                 | +------+ |    |            |
+                                                 | |   in +-+    |            |
+                                                 | |      |      |            |
+                                                 | | grnd +------+            |
+                                                 | |      |      |            |
+                                                 | |  out +-+    |            |
+                                                 | +------+ |    |            |
+                                                 |   7805   |    |            |
+                                                 |          |    |            |
+                                                 |          +-||-+ 0.1 mF     |
+                                male connector   |          |    |            |
+                                tip - 5v,        |          |    | ground     |
+                                outside - ground | +--------|----+            |
+                        +====+=======||||---     ]]] __     |                 |
+                        |    |                   ||___|     | 5v              |
+                 ground |    | 5v                |  +-------+                 |
+                        |    |                   +----------------------------+
+                        |    |
+                        |    |
+                        |    +---- to glove pin 7 ---+
+     DB25 pin 18 -------+--------- to glove pin 1    |
+     DB25 pin 2  ----------------- to glove pin 2    |======== to glove box
+     DB25 pin 3  ----------------- to glove pin 3    |
+     DB25 pin 13 ----------------- to glove pin 4 ---+
+ 
+    NOTE:  Connect the capacitors within about 1/4" of the 7805 for best
+           results
+ 
+              glove connector pin numbers
+ 
+                  /--------+
+                 /     o 1 |
+                | o 7  o 2 |
+                | o 6  o 3 |
+                | o 5  o 4 |
+                +----------+
+ 
+ 
+glove pin number      nintendo wire color    curtis wire color
+       1 ground            black                  orange
+       2 data clock        orange                 red
+       3 latch             yellow                 brown
+       4 data out          green                  black
+       5 unused
+       6 unused
+       7 5v                red                    white
+ 
+ 
+DB25 pins
+  2 data clock
+  3 latch
+ 13 data in
+ 18 ground
+ 
+ 
+2.  Hooking them together using power from the PC
+ 
+    Ignore the circuit that provides the 5v and ground lines above.  Instead,
+    get the 5v and ground from either:
+         1.  an unused disk drive cable in your PC or
+         2.  5v from pin 5 on a keyboard port and ground from pin 4 of the
+             same keyboard port
+    All the other connections from the glove cable to the DB25 are the same,
+    including the ground connection.
+ 
+ 
+    keyboard connector           -----
+                               /       \
+                           1  | o     o | 3
+                            4  \ o o o / 5
+                                 -----
+                                   2
+ 
+ 
+Hope this helps.  Feel free to add to and/or correct this information.
+ 
+Bill       wgerlt@atl.ge.com      12/20/91
+ 

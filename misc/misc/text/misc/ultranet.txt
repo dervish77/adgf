@@ -1,0 +1,257 @@
+From daemon@ultra.net Wed May 24 15:10:50 1995
+Date: Wed, 24 May 1995 15:10:58 -0400
+To: lingard@tif623.ED.RAY.COM
+X-Loop-Detect: info@ultra.net
+Subject: Information you requested about UltraNet
+From: UltraNet Communications InfoBot <daemon@smtp.ultra.net>
+
+
+			UltraNet Communications, Inc.
+		       910 Boston Post Road, Suite 220
+			   Marlborough, MA  01752
+
+			    (Office) 508-229-8400
+			    (Office) 800-763-8111 
+			       (FAX) 508-229-2375
+	                     
+
+UltraNet Communications Inc. is dedicated to providing high quality, 
+high speed Internet access at very affordable rates.  UltraNet is based 
+in Marlboro, MA and provides service for a large portion of the 508 and 617
+area codes within Massachusetts.  We also offer service in Pelham, NH.  More
+information on our calling area is provided below.
+
+UltraNet believes that connecting to the Internet should be made as easy as 
+possible.  To achieve that goal, UltraNet has created a software kit which
+is customized for your PC which will allow it to directly connect to 
+the Internet via a modem.  This allows you to use your friendly Windows
+interface to browse the Internet, instead of having to learn an 
+(unfriendly) Unix command line interface or someone's idea of a menu 
+interface.  More information about the kit is provided later in this 
+document.
+
+In order to provide very high quality service, UltraNet utilizes state-of-
+the-art, high quality, low cost communication and computer systems.  
+UltraNet uses redundant 150 MHz Digital Alpha computer systems as servers.
+There's no need to worry about slow response times or system failures.  
+We have over 20 GB of high speed disk which is used for news, mail, and 
+World Wide Web page retention.  All of this is backed up nightly and is 
+protected by multiple layers of surge protectors and uninterruptible power
+supplies.
+
+UltraNet is connected to the Internet via multiple T1s (1,544,000 bps).
+Should any of these backbones go down, your Internet traffic will be
+transparently redirected over the remaining connections.
+
+UltraNet uses very high quality US Robotics modems.  Unlike some other
+services, there's no additional surcharge for 28,800 bps access.  We
+guarantee a user to modem ratio of no more than 10 to 1, which is much
+better than the national average.  This ratio should allow you to get a
+modem any time you dial in.  Dedicated dial-up lines are available for an
+additional startup charge.
+  
+For customers requiring high bandwidth, Ultranet provides highly-competitive
+ISDN, Frame Relay or DDS leased line connections at speeds up to 1.544 Mbps.
+Contact us directly for pricing information, as it is location sensitive.
+
+UltraNet is a commercial Web server providing advertising for New England
+based businesses.  We have extensive experience designing HyperText pages
+for business use.  Let us show you how you can advertise your business on
+the Internet for relatively little money.
+
+
+* * * * * * * * * * * *  C a l l i n g   A r e a   * * * * * * * * * * * * 
+
+We are currently providing 28.8 Kbps dial-in access from Clinton (508-365-5691),
+Framingham (508-370-0137), Littleton (508-952-6420), Lowell (508-453-0103),
+Marlboro (508-229-0775), New Bedford (508-992-4617), Pelham NH
+(603-635-2617), Waltham (617-672-8900), Worcester (508-798-1980) and
+Westboro (508-870-1585).
+
+These numbers provide local access to the following communities:  Abington*,
+Acton, Acushnet, Andover, Arlington*, Ashland, Avon*, Auburn, Ayer, Berlin,
+Bolton, Boxboro, Billerica, Bellingham*, Belmont, Boston Central*, Boylston,
+Brighton*, Brookline*, Brockton*, Burlington*, Cambridge*, Canton*,
+Charlestown*, Chelsea, Chelmsford, Clinton, Cohasset*, Concord, Dartmouth,
+Dedham*, Dorchester*, Dover*, Dracut, East Boston*, Everett*, Fall River,
+Fairhaven, Framingham, Freetown, Grafton, Groton, Harvard, Holliston,
+Hopkinton, Hudson, Holden, Hyde Park*, Jamaica Plain*, Lancaster, Lawrence,
+Leicester, Lexington, Lincoln, Littleton, Leominster, Lowell, Lynn*,
+Lynnfield*, Marlboro, Mattapoisett, Maynard,  Malden, Marblehead*,
+Medfield*, Medford*, Melrose*, Millbury, Milton*, Nahant, Nashua NH, Natick,
+Northboro, Needham*, Norwell*, Norwood*, New Bedford, Newton, Oakham,
+Oxford, Paxton, Peabody*, Pelham NH, Quincy*, Reading*, Revere*, Rochester,
+Rockland*, Roxbury*, Rutland, Saugus*, Sharon*, Shrewsbury, Situate*,
+Somerville*, South Boston*, Southboro, Spencer, Stoneham*, Sutton, Sudbury,
+Stow, Swampscott*, Tyngsboro, Tewksbury, Upton, Wakefield*, Waltham,
+Walpole*, Watertown, Wayland, Wellesley, West Boylston, Westboro, Westford,
+WestPort, Weston, Westwood*,  Wilmington, Winchester*, Winthrop*, Woburn*,
+and Worcester.
+
+Additional calling plans are available on a community by community
+basis which may allow you direct access to one of our sites.  Please 
+contact NYNEX for details.  (* = extended calling plan).
+
+* * * * * * * * * * * * *    P R I C I N G    * * * * * * * * * * * * * * *
+
+In order to provide access at virtually any budget or usage rate, we have 
+developed the following commercial and consumer rate schedule.  These rates
+are effective as of April 17, 1995.
+
+		Cost            Hours           Addt'l
+Plan            Month           Included        Hours
+
+Low-End         $5                2             $2.50
+Economy         $10               5             $2.00
+Value           $20              20             $1.00
+Heavy           $30              60             $0.50
+Power User      $50             200             $0.25
+Unlimited       $100            Unlimited       $0.00
+
+Unlike our competitors, there are NO STARTUP FEES!  
+
+One of the best things about our plan is that the rate is self-adjusting.
+As you use more, your rate decreases.  As soon as you spend an amount
+equivalent to the next rate plan, your rate drops to that amount for
+additional hours.  For example, if you signed up for the $10 plan, and spent
+15 hours on line, your first 10 hours would be billed at $2 per hour.  At
+that point you would have spent $20, and your next 5 hours would be billed
+at $20 rate, which is $1.00 per hour, etc.
+
+Your maximum bill will be $100 no matter what plan you sign up for or how 
+much time you use.
+
+We know that there are other Internet providers out there charging less.
+Some of them have slapped a couple of PCs together and claim to be an
+Internet provider.  Some of these same folks use 56 Kbps circuits to tie
+their equipment together.  Well, you get what you pay for.  If cost is
+the most important factor, go with them.  If your time and the quality
+of the service and support is worth anything, you'll find that UltraNet
+offers the best deal around.
+
+You may pay for your usage by having us bill your charge card on a monthly
+basis.  We accept Mastercard, Visa, Discover and POs.  Optionally direct 
+billing is available on $20+ accounts for an additional $2.00 per month
+which offsets our handling expenses.  
+
+Optionally, you can save money by prepaying for 11 months and receiving the
+12th month free.
+
+		* * * * * Additional Fees * * * * * 
+
+Dedicated line:  Startup fee = $100 + one of the following:
+                               $150 for 14,400 bps USR Sportster (yours at end)
+			       $225 for 28,800 bps USR Sportster (yours at end) 
+                                 $0 you supply a   USR Sportster
+
+			Or     $100 startup fee + $125/month for an unlimited
+				    account and a dedicated 28.8 USR Sportster
+
+Domain name registration or service: One time fee of $40.00.
+
+Additional mail accounts: One time setup fee of $5.00 and $5.00 per month.
+
+Multiple systems on a LAN:
+
+                                            Additional percentage
+ 	Number of systems                   of base rate 
+        -----------------                   ---------------------
+               2                                     25%
+               3                                     50%
+               4                                     75%
+               5                                    100%
+               6                                    120%
+               7                                    140%
+               8+                                   150%
+
+* * * * * * * * * * * *   S I G N - U P   * * * * * * * * * * * * * * * *
+
+It's easy to sign up with us.  To sign up via modem, use a terminal emulator
+program to call any of the sites listed under "Calling Area"   (8 bits, 1
+stop bit, no parity), or telnet to ultranet.com, and enter
+
+		new
+
+at the Login: prompt.  You'll be prompted for information about yourself, 
+your computer system, and your modem.  You'll then get to pick which plan 
+you want and how you want to be billed.  
+
+Alternately you can call our office in Marlboro at 508-229-8400 and speak 
+with one of our friendly representatives.  For those not local to Marlboro, 
+our toll-free number is 800-763-8111.
+
+Within a few days you'll get a package from us with information about your 
+account, and if you selected it, a set of diskettes containing the Internet 
+tools.  Install it, and you'll be on your way!
+
+
+
+* * * * * * * * I N T E R N E T   T O O L S   K I T  * * * * * * * * * * * 
+
+As mentioned earlier, UltraNet provides an Internet Software Startup
+kit which provides everything that you need to get started on the
+Internet.  Ultranet charges $5 to provide the kit to cover the cost of the
+diskettes and mailing.  Note that some of the products included are shareware, 
+and you should reimburse the authors as described within the kit.
+
+This kit includes the following shareware and freeware programs:
+
+Netscape -      Provides a point and click interface which will allow you 
+		to easily peruse the information on 6,000,000+ computers on 
+		the Internet.  UltraNet provides our own "home page" which 
+		will greatly aid you in locating information.  We also 
+		include all of the software necessary to display still 
+		or motion video, or to play sound files.
+
+Mail -          Allows you to send or receive electronic mail from around 
+		the world at no additional cost.
+
+News Reader -   Provides a very nice interface for reading the 6,000+ news 
+		forums located on the Internet.  UltraNet provides a news 
+		server which retains over 2 GB of news articles.
+
+File Transfer - Also know as FTP.  This easy-to-use interface makes easy 
+		work of transferring files between your machine and remote 
+		systems.
+
+Gopher -        An information retrieval system.  Mosaic provides a Gopher
+		interface, but for those people who want a stand-alone 
+		version, here it is!
+
+SLIP or PPP -  Communication software which allows your PC or Mac to 
+		actually become a node on the Internet.  
+
+Telnet -        A network terminal emulator which allows you to log into 
+		remote computer systems.
+
+Ping & HopCheck - Tools for the more technically inclined to check the 
+		availability of remote systems and to trace the path to 
+		remote systems.
+
+
+* * * * * * * * * *  Training and Community Service  * * * * * * * * * * * * 
+        
+
+UltraNet holds semi-monthly user meetings at our facility to help users 
+understand how to get the most out of the Internet.  These meetings
+include demonstrations and hands-on activities.  User meetings are announced
+via electronic mail to our subscribers.  A nominal fee of $5 is charged to
+cover the cost of the meeting facilities.
+
+UltraNet can provide installation and on-site training for customers.
+Please contact us with your requirements.
+
+UltraNet wants to work with local government and civic groups.  We will
+provide free or very low cost access for your group.  Please call or stop
+by to discuss how we can help our communities.
+
+UltraNet has its own local news groups which can be used to exchange
+suggestions or gripes with the system administrators.
+
+
+--
+  UltraNet InfoBot <daemon@ultra.net>          (data) 508-229-8111
+  UltraNet Communications, Inc.               (voice) 508-229-8400
+  910 Boston Post Road Suite 220                 Marlboro MA 01752
+
+

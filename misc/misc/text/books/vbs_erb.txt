@@ -1,0 +1,569 @@
+Virtual Book Shop's Searchable Catalog
+
+-------------------------------------------------------------------------------
+Enter keyword(s) to search catalog:
+-------------------------------------------------------------------------------
+
+     103 Titles found for keyword: edgar rice burroughs
+
+   * Burroughs, Edgar Rice - DEPUTY SHERIFF OF COMANCHE COUNTY
+          Burroughs, Tarzana,CA 1940, 1st Fine in a very fine dust jacket.
+          (#FW879) $450.00
+   * Burroughs, Edgar Rice - ESCAPE ON VENUS
+          Burroughs, Tarzana,CA 1946, 1st Fine in a fine dust jacket with a few
+          very light smuges. (#FW881) $250.00
+   * Burroughs, Edgar Rice - GODS OF MARS
+          Burroughs, Tarzana,CA 1948 Reprint Fine in fine dust jacket, with
+          light rubbing. Light wear to edges of dust jacket. Bookplate neatly
+          affixed to front free endpaper. Illustrated by Frank E.Schoon over.
+          (#FW882) $65.00
+   * Burroughs, Edgar Rice - LAND THAT TIME FORGOT
+          Doubleday, Garden City, NY 1946, 1st Thus Fine in a fine dust jacket.
+          (#FW884) $10.00
+   * Burroughs, Edgar Rice - LLANA OF GATHOL
+          Burroughs, Tarzana,CA 1948, 1st Very fine in a very fine dust jacket.
+          (#FW885) $275.00
+   * Burroughs, Edgar Rice - MASTER MIND OF MARS
+          Burroughs, Tarzana,CA 1948 Reprint Fine in fine dust jacket, with
+          light wear. Small chip from bottom of spine panel. Bookplate neatly
+          affixed to front free endpaper. Illustrated by J.Allen St.John.
+          (#FW886) $65.00
+   * Burroughs, Edgar Rice - MONSTER MEN
+          Canaveral, New York 1962, 1st Canaveral Very fine in a very fine dust
+          jacket. (#FW889) $45.00
+   * Burroughs, Edgar Rice - MOON MEN
+          Canaveral, New York 1975, 1975 Canaveral Fine in a fine dust jacket
+          with light scuffing and moderate sun fading to the spine panel.
+          (#FW890) $30.00
+   * Burroughs, Edgar Rice - PRINCESS OF MARS
+          Methuen, London 1930, 1930 Edition Very good without dust jacket. A
+          later printing. (#FW894) $15.00
+   * Burroughs, Edgar Rice - RETURN OF TARZAN
+          Whitman, Wi 1967, reprint Fine without dust jacket, as issued. Young
+          readers edition. (#FW895) $10.00
+   * Burroughs, Edgar Rice - SAVAGE PELLUCIDAR
+          Canaveral Press, New York, 1963, 1st Fine in fine dust jacket. Small
+          chip to upper spine panel. (#FW897) $95.00
+   * Burroughs, Edgar Rice - SWORDS OF MARS
+          Burroughs, Tarzana,CA 1948 Reprint Fine in fine dust jacket. Small
+          thumb nail chip from bottom of spine panel of dust jacket. Bookplate
+          neatly affixed to front free endpaper. (#FW899) $65.00
+   * Burroughs, Edgar Rice - SWORDS OF MARS
+          Burroughs, Tarzana,CA 1948, 1948 Edition Fine in a very good tape
+          reinforced dust jacket. (#FW898) $45.00
+   * Burroughs, Edgar Rice - SYNTHETIC MEN OF MARS
+          Burroughs, Tarzana,CA 1948 Reprint Fine in fine dust jacket.
+          Bookplate neatly affixed to front free end- paper. (#FW900) $65.00
+   * Burroughs, Edgar Rice - TALES OF THREE PLANETS
+          Canaveral, New York 1964, 1st Very fine in a very fine dust jacket.
+          (#FW901) $175.00
+   * Burroughs, Edgar Rice - TARZAN & THE ANT MEN
+          Methuen, London 1925, 1st British Very good without dust jacket. Text
+          taken from original pulp magazines, and differs from corrected novel
+          text. (#FW902) $85.00
+   * Burroughs, Edgar Rice - TARZAN & THE FORBIDDEN CITY
+          Whitman, WI 1952, 1952 Edition Very good in a very good dust jacket.
+          (#FW903) $30.00
+   * Burroughs, Edgar Rice - TARZAN & THE FOREIGN LEGION
+          Burroughs, Tarzana,CA 1947, 1st Fine in a near fine dust jacket, two
+          small chips and a small tear to dust jacket. (#FW904) $65.00
+   * Burroughs, Edgar Rice - TARZAN & THE FOREIGN LEGION
+          Burroughs, Tarzana,CA 1947, 1st Very fine in a fine dust jacket.
+          (#FW905) $85.00
+   * Burroughs, Edgar Rice - TARZAN & THE GOLDEN LION
+          Methuen, London 1924, 1st British very good without dust jacket.
+          (#FW906) $60.00
+   * Burroughs, Edgar Rice - TARZAN AND THE CITY OF GOLD
+          Burroughs, Tarzana,CA 1948 Reprint Fine in fine dust jacket, small
+          closed tear to top back of dust jacket. Bookplate neatly affixed to
+          front free endpaper. Illustrated by J.Allen S t. John. (#FW907)
+          $65.00
+   * Burroughs, Edgar Rice - TARZAN AND THE LOST EMPIRE
+          Burroughs, Tarzana,CA 1948, Reprint Fine in fine dust jacket, with
+          light rubbing. Illustrated by A.W. Sperry. (#FW909) $65.00
+   * Burroughs, Edgar Rice - TARZAN AT EARTH'S CORE
+          Canaveral, New York 1962, 1st Thus Very fine in a very fine dust
+          jacket (illustrated by Frazetta). (#FW910) $85.00
+   * Burroughs, Edgar Rice - TARZAN KING OF THE APES
+          Random House, New York 1983, 1st Thus Fine without dust jacket as
+          issued. A children's adaptaion by Joan D. Vinge. (#FW911) $10.00
+   * Burroughs, Edgar Rice - TARZAN LORD OF THE JUNGLE
+          Grosset & Dunlap, New York 1943, 1943 Edition Fine in a fine dust
+          jacket. (#FW912) $40.00
+   * Burroughs, Edgar Rice - TARZAN OF THE APES
+          Whitman, Racine,WI., 1964, 1st thus Fine without dust jacket, as
+          issued. Authorized Unabridged Edition prepared especially for young
+          readers. With an Official Ape-English Dictionary. (#F W913) $25.00
+   * Burroughs, Edgar Rice - TARZAN THE MAGNIFICENT
+          Burroughs, Tarzana,CA 1948, Reprint Fine in fine dust jacket. Small
+          closed tear to top of dust jacket, and small chip to top back edge of
+          spine panel. Bookplate neatly affixed to front, free endpaper.
+          Illustrated by John Coleman Burroughs. (#FW914) $65.00
+   * Burroughs, Edgar Rice - TARZAN THE TERRIBLE
+          Grosset & Dunlap, New York, reprint Good in Very good dust jacket.
+          Moderate wear to book, previous owners name stamped on title page and
+          on bottom of book pages. (#FW916) $20.00< /b>
+   * Burroughs, Edgar Rice - TARZAN THE TERRIBLE
+          McClurg, Chicago,IL 1921, 1st Very good without dust jacket. (#FW915)
+          $160.00
+   * Burroughs, Edgar Rice - TARZAN THE UNTAMED
+          Grosset & Dunlap, New York circa 1960, OPHC Near fine in a very good
+          dust jacket with light wear and chipping. (#FW917) $20.00
+   * Burroughs, Edgar Rice - TARZAN'S QUEST
+          Burroughs, Tarzana,CA 1948 Reprint Fine in fine dust jacket.
+          Bookplate neatly affixed to front free end- paper. Illustrated by
+          J.Allan St.John. (#FW918) $65.00
+   * Burroughs, Edgar Rice - THUVIA, MAID OF MARS
+          Burroughs, Tarzana,CA 1948 Reprint Near fine in Good-Very Good dust
+          jacket, with major chipping to top of spine panel, chip to upper
+          right corner, and lower right edge of dust jacket. Sma ll chipping to
+          bottom of spine panel. Moderately worn, and light water stain to
+          bottom spine panel, with corresponding stain to book spine. Previous
+          owners stamp to front free endpaper. (#FW919) $35.00
+   * Burroughs, Edgar Rice - WARLORD OF MARS
+          Grosset & Dunlap, New York 1920, 1920 Edition Very good in a fair
+          partial dust jacket with tape reinforcement. (#FW921) $25.00
+   * Burroughs,Edgar R.; Fenton,Robert W. - BIG SWINGERS,A BIOGRAPHY
+          Prentice Hall, Englewood Cliffs,NJ 1967, 1st Fine in a fine dust
+          jacket. Burroughs, Edgar Rice (#FW924) $65.00
+   * Burroughs,Edgar R.; Fenton,Robert W. - BIG SWINGERS,A BIOGRAPHY
+          Prentice Hall, New Jersey 1967, 2nd Very fine in a very fine dust
+          jacket. Burroughs, Edgar Rice (#FW923) $25.00
+   * Burroughs, Edgar Rice - A FIGHTING MAN OF MARS
+          ERB, INC., 1948, FN Book in a FN D.J. (#JG29) $65
+   * Burroughs, Edgar Rice - ESCAPE ON VENUS
+          ERB,INC., FN Book, VG-FN Dust Jacket (#JG18) $75
+   * Burroughs, Edgar Rice - TARZAN TRIUMPHANT
+          ERB, INC., VG Book, FN-Dust Jacket (#JG17) $195
+   * Burroughs, Edgar Rice - TARZAN AND THE ANT MEN
+          McClurg, VG-FN (#JG14) $90
+   * Burroughs, Edgar Rice - TARZAN THE TERRIBLE
+          McClurg VG-FN book (tape on front inside hinge) very nice book
+          (#JG13) $105
+   * Burroughs, Edgar Rice - THE BEASTS OF TARZAN
+          1927 1st G&D; VG Book; FN DJ (sm spine chip) (#JG20) $50
+   * Burroughs, Edgar Rice - THE CAVE GIRL IN ALL-STORY
+          Aug. 1913 VG-FN, The 14th ERB Pulp (#JG19) $225
+   * Burroughs, Edgar Rice - THE CHESSMAN OF MARS
+          ERB, INC., 1948, FN Book in a FN D.J. (#JG30) $75
+   * Burroughs, Edgar Rice - THE MAD KING
+          1927 1st G&D, Frontispiece, FN Book in a FN-D.J. (#JG32) $95
+   * Burroughs, Edgar Rice - THE MAD KING
+          very nearly fine; very nice book (true 1st ed book, correct points on
+          p.12 and 92) in a kodak repro of the 1st DJ (#JG12) $185
+   * Burroughs, Edgar Rice - THE RETURN OF TARZAN
+          A.L. Burt; FN-Book; VG Dust Jacket(missing bottom 2 inches of front
+          panel) (#JG21) $40
+   * Burroughs, Edgar Rice - THE RETURN OF TARZAN
+          G&D Madison Square, FN Book, VG-FN DJ (#JG22) $20
+   *  Burroughs, Edgar Rice. - AT THE EARTH'S CORE
+          Chicago: A. C. McClurg & Co., 1922 First edition. 17,000 copies
+          printed. nine inserted plates with illustrations by J. Allen St.
+          John, original gray-green cloth, front and spine panel s stamped in
+          black. A fine copy in near fine four-color pictorial dust jacket
+          reproducing painting by J. Allen St. John on front panel with rubbing
+          to portions of four letters in title on front panel, hint of wear at
+          corners, two closed tears at head of sp ine panel, 15mm an (#MF620)
+          $4,500
+   *  Burroughs, Edgar Rice. - AT THE EARTH'S CORE
+          Chicago: A. C. McClurg & Co., 1922 First edition. 17,000 copies
+          printed. nine inserted plates with illustrations by J. Allen St.
+          John, original gray-green cloth, front and spine panel s stamped in
+          black. A very good, bright copy. An attractive copy of this book.
+          (#MF621) $350
+   *  Burroughs, Edgar Rice. - BACK TO THE STONE AGE
+          Tarzana, California: Edgar Rice Burroughs, Inc. Publishers, [1937].
+          First edition. The fifth Pellucidar novel. seven inserted plates with
+          illustrations by John Coleman Burroughs, or iginal pebbled blue
+          cloth, front and spine panels stamped in orange, top edge stained
+          red. Penciled tics against list of books by Burroughs on recto of
+          advertising leaf following page 318, a fine copy in fine first state
+          (laminated) pictorial dust jacket. An excellent copy and scarce thus.
+          (#MF622) $650
+   *  Burroughs, Edgar Rice. - THE BANDIT OF HELL'S BEND.
+          London: Methuen & Co. Ltd., 1926 First British edition. original
+          orange cloth, front and spine panels stamped in black. A fine copy.
+          Scarce in this condition. (#MF623) $350
+   *  Burroughs, Edgar Rice. - CARSON OF VENUS
+          Tarzana, California: Edgar Rice Burroughs, Inc. Publishers, [1939].
+          First edition. _the third and by far the finest book in the series
+          [of Venus novels].- Survey of Science Fiction Litera ture I, pp.
+          298-302. cloth. A fine copy in fine first state (laminated) dust
+          jacket. A very sharp copy. (#MF624) $500
+   *  Burroughs, Edgar Rice. - THE CHESSMEN OF MARS
+          Chicago: A. C. McClurg & Co., 1922 First edition. 12,500 copies
+          printed. Fifth book of the Mars series. eight inserted plates with
+          illustrations by J. Allen St. John, original red cl oth, front and
+          spine panels stamped in black. Endpapers age-darkened and foxed,
+          slight spine roll, a very good copy in very good four-color pictorial
+          dust jacket (reproducing painting by J. Allen St. John on front
+          panel) with several short closed tears, so me dust soiling,
+          principally along spine and (#MF625) $3,750
+   *  Burroughs, Edgar Rice. - THE ETERNAL LOVER
+          Chicago: A. C. McClurg & Co., 1925 First edition. 5000 copies
+          printed. inserted frontispiece with illustration by J. Allen St.
+          John, original blue cloth, front and spine panels stamped in black. A
+          fine copy in near fine four-color pictorial dust jacket (reproducing
+          painting by J. Allen St. John on front panel) with several faint damp
+          stains at top edges of front and rear flaps and top of rear panel,
+          some shelf wear at upper spine folds a nd upper (#MF626) $3,750
+   *  Burroughs, Edgar Rice. - THE ILLUSTRATED TARZAN BOOKS NO. 1
+          New York: Grosset & Dunlap Publishers, [1929]. First edition, first
+          printing. 300 illustrations by Harold Foster, original pictorial
+          boards with green cloth shelf back. A fine copy in fine pictorial
+          dust jacket with tiny V-chip at head of spine panel replaced in
+          facsimile and several tiny tears closed by a professional paper
+          conservator. An excellent copy in the rarely encountered dust jacket
+          with illustration by Foster (#MF628) $2,250
+   *  Burroughs, Edgar Rice. - THE ILLUSTRATED TARZAN BOOKS NO. 1
+          New York: Grosset & Dunlap Publishers, [1929]. First edition, first
+          printing. 300 illustrations by Harold Foster, original pictorial
+          boards with green cloth shelf back. Lower front and rear corners of
+          boards worn where gnawed by a tiny creature (slight loss, but not
+          serious), otherwise a near fine, bright copy in similar pictorial
+          dust jacket with matching defects at lower corners. A nice copy of a
+          book generally found i (#MF629) $650
+   *  Burroughs, Edgar Rice. - JOHN CARTER OF MARS.
+          Racine, Wisconsin: Whitman Publishing Company, [1940]. First edition.
+          Written largely (and perhaps totally) by John Coleman Burroughs, who
+          also did the art for it as well. Issued as The Better Little Book
+          1402. This is a condensed version of John Carter and the Giant of
+          Mars, but with a new ending. pictorial boards. 15mm and 25mm splits
+          to outer hinges at head of spine panel (repairable) and some wear to
+          binding extremities, mostly he ad and tail of spine panel and
+          corners, else a very good copy. (#MF630) $85
+   *  Burroughs, Edgar Rice. - JUNGLE TALES OF TARZAN
+          Chicago: A. C. McClurg & Co., 1919 First edition, first printing,
+          first binding with publisher's imprint on spine panel set on three
+          lines. Total of 63,000 copies printed. There we re multiple
+          printings, probably four, all dated 1919. five inserted plates with
+          illustrations by J. Allen St. John and twelve full-page St. John
+          illustrations in the text, original orange cloth, front and spine
+          panels stamped in black. A fine copy in near fine four-color
+          pictorial dust jacket (reproducing painting by J. Allen St. John on
+          front panel) with 40mm closed tear at top of front flap fold, 15mm
+          tear at rear spine fold with shallow associated chips, and touch of
+          shelf wear at co (#MF631) $2,500
+   *  Burroughs, Edgar Rice. - THE LAD AND THE LION
+          Tarzana, California: Edgar Rice Burroughs, Inc. Publishers, [1938].
+          First edition. five inserted plates with illustrations by John
+          Coleman Burroughs, original pebbled blue cloth, fro nt and spine
+          panels stamped in orange, top edge stained red. A fine copy in about
+          fine first state (laminated) pictorial dust jacket with several tiny
+          closed tears at bottom edge of front panel, some shallow fraying and
+          minute chip from head of spine panel , professionally laid down on
+          Japanese rice paper. Overall, (#MF632) $600
+   *  Burroughs, Edgar Rice. - LAND OF TERROR
+          Tarzana, California: Edgar Rice Burroughs, Inc. Publishers, [1944].
+          First edition. cloth. A fine copy in fine dust jacket. (#MF633) $550
+   *  Burroughs, Edgar Rice. - THE LAND THAT TIME FORGOT
+          Chicago: A. C. McClurg & Co., 1924 First edition. 10,000 copies
+          printed. four inserted plates with illustrations by J. Allen St.
+          John, original green cloth, front and spine pane ls stamped in black.
+          Bookplate on front paste-down, touch of shelf wear to cloth at head
+          and tail of spine panel and corners, some light age darkening to
+          spine panel, a very good copy. Above average condition for this book.
+          (#MF634) $300
+        o  Burroughs, Edgar Rice. - THE LAND THAT TIME FORGOT
+               Chicago: A. C. McClurg & Co., 1924 First edition. 10,000 copies
+               printed. four inserted plates with illustrations by J. Allen St.
+               John, original green cloth, front and spine pane ls stamped in
+               black. Some foxing to edges of text block and light
+               age-darkening of free endpapers, two tiny imperfections to
+               cloth, one on front panel, the other on spine panel, pictorial
+               portion of front panel of dust jacket affixed to rear free
+               endpaper, a near fine, bright (#MF635) $250
+        o  Burroughs, Edgar Rice. - THE MAD KING
+               Chicago: A. C. McClurg & Co., 1926 First edition, first state
+               with textual errors (later corrected with cancel leaves). 5000
+               copies printed. inserted frontispiece with illustration by J.
+               All en St. John, original dark blue cloth, front panel stamped
+               in orange and blind, spine panel stamped in orange. Penciled
+               inscription erased from front free endpaper, else a fine copy.
+               Scarce. (#MF636) $275
+        o  Burroughs, Edgar Rice. - THE MASTER MIND OF MARS
+               Chicago: A. C. McClurg & Co., 1928 First edition. 5000 copies
+               printed. Sixth book of the Mars series. five inserted plates
+               with illustrations by J. Allen St. John, original orange cloth,
+               front and spine panels stamped in black. A fine copy in very
+               good four-color pictorial dust jacket (reproductiing painting by
+               J. Allen St. John on front panel) with considerable internal
+               tape reinforcement along top and bottom edges, flap folds, an d
+               front spine fold and external tape reinforceme (#MF637) $2,750
+        o  Burroughs, Edgar Rice. - THE MOON MAID
+               Chicago: A. C. McClurg & Co., 1926 First edition. 5000 copies
+               printed. inserted frontispiece with illustration by J. Allen St.
+               John, original blue cloth, front and spine panels stamped in b
+               rown. Tiny marginal damp stain to bottom edge of rear endpapers
+               and last leaf of text, a near fine copy in good four-color
+               pictorial dust jacket (reproducing painting by J. Allen St. John
+               on front panel) with several splits along rear flap fold (100mm)
+               and spin (#MF638) $2,750
+        o  Burroughs, Edgar Rice. - THE MOON MAID
+               Chicago: A. C. McClurg & Co., 1926 First edition. 5000 copies
+               printed. inserted frontispiece with illustration by J. Allen St.
+               John, original blue cloth, front and spine panels stamped in b
+               rown. Hint of rubbing to cloth at head and tail of spine panel
+               and corners, touch of foxing to top and fore-edges of text
+               block, neat owner's name of front free endpaper, a near fine,
+               bright copy. (#MF639) $275
+        o  Burroughs, Edgar Rice. - THE NEW ADVENTURES OF TARZAN POP-UP
+               Chicago: Pleasure Books, Inc., [1935]. First edition.
+               illustrated by Stephen Slesinger, Inc. of New York City with
+               three color pop-ups and other black and white illust rations in
+               the text, original four-color pictorial boards. Brilliant, as
+               new copy with pop-ups in perfect condition and binding unrubbed
+               and very bright. Rare in this condition. (#MF640) $1,000
+        o  Burroughs, Edgar Rice. - PELLUCIDAR
+               Chicago: A. C. McClurg & Co., 1923 First edition. 10,000 copies
+               printed. Second book of the Pellucidar series. four inserted
+               plates with illustrations by J. Allen St. John, one map,
+               original r ed cloth, front and spine panels stamped in black.
+               Shelf wear to cloth at head and tail of spine panel and corners,
+               else a very good copy. (#MF641) $150
+        o  Burroughs, Edgar Rice. - A PRINCESS OF MARS
+               Chicago: A. C. McClurg & Co., 1917 First edition. 10,200 copies
+               printed. First book of the Mars series. five inserted plates
+               with illustrations by Frank E. Schoonover, original dark br own
+               cloth, front and spine panels stamped in orange. Neat owner's
+               name in ink at top of front free endpaper, a fine copy. (#MF642)
+               $1,250
+        o  Burroughs, Edgar Rice. - A PRINCESS OF MARS.
+               Chicago: A. C. McClurg & Co., 1917 First edition. 10,200 copies
+               printed. First book of the Mars series. five inserted plates
+               with illustrations by Frank E. Schoonover, original dark b rown
+               cloth, front and spine panels stamped in orange. Some
+               age-darkening to edges of text block, some foxing to endpapers,
+               neat owner's name in ink on front free endpaper. Generally, a
+               very good or slightly better copy with no binding wear and
+               bright, inta ct orange chalk stamping on front and spine panels.
+               A (#MF643) $750
+        o  Burroughs, Edgar Rice. - SWORDS OF MARS
+               Tarzana, California: Edgar Rice Burroughs, Inc. Publishers,
+               [1936]. First edition. Eighth book of the Mars series. five
+               inserted plates with illustrations by J. Allen St. John,
+               original bl ue cloth, front and spine panels stamped in red. A
+               fine copy in about fine first state (laminated) dust jacket with
+               clipped price, 20mm closed tear at top of rear spine fold, and
+               touch of shelf wear at head of spine panel and lower corners.
+               Overall, a very attractive example of the dust jacket with four
+               (#MF645) $750
+        o  Burroughs, Edgar Rice. - TANAR OF PELLUCIDAR
+               New York: Metropolitan Books Publishers, [1930]. First edition.
+               Third book of the Pellucidar series. inserted frontispiece with
+               illustration by Paul F. Berdanier, original blue cloth, front
+               and spine panels stamped in black. A fine copy in fine dust
+               jacket. (#MF647) $1,750
+        o  Burroughs, Edgar Rice. - TARZAN AND THE ANT-MEN.
+               London: Methuen & Co. Ltd., [1925]. First British edition, first
+               printing. 8-page publisher's catalogue dated 1124 at base of
+               page 8 inserted at rear. This edition follows the tex t of the
+               original magazine version of the novel published as a serial in
+               Argosy All-Story Weekly, 2 February 1924-15 March 1924. original
+               decorated light brown cloth, front and spine panels stamped in
+               black. A fine copy. Scarce. (#MF648) $350 < /b>
+        o  Burroughs, Edgar Rice. - TARZAN AND THE FORBIDDEN CITY
+               Tarzana, California: Edgar Rice Burroughs, Inc. Publishers,
+               [1938]. First edition. five inserted plates with illustrations
+               by John Coleman Burroughs, original pebbled blue c loth, front
+               and spine panels stamped in orange, top edge stained red. DAW
+               ink-stamp on rear free endpaper, small ink-stamps of Doc Savage
+               Club and member John O'Grady at top corner of front free
+               endpaper, a fine copy in fine first state (laminated) pictori al
+               dust jacket with some minor fraying and peeling along top edge,
+               (#MF649) $500
+        o  Burroughs, Edgar Rice. - TARZAN AND THE GOLDEN LION
+               New York: Grosset & Dunlap, [1927]. Photoplay edition. Later
+               printing listing Tarzan, Lord of the Jungle and The Master Mind
+               of Mars (both 1929 Grosset & Dunlap titles) on page [335]. four
+               inserted plates with film stills, original orange cloth, front
+               and spine panels stamped in black. A very good copy in good
+               later printing four-color pictorial dust jacket with shelf wear
+               at edges, chipping at head and tail of spine panel and c orners,
+               and some internal and external tape reinforcement. (#MF650) $125
+        o  Burroughs, Edgar Rice. - TARZAN AND THE LEOPARD MEN
+               Tarzana, California: Edgar Rice Burroughs, Inc. Publishers,
+               [1935]. First edition. four inserted plates with illustrations
+               by J. Allen St. John, original pebbled blue cloth, fr ont and
+               spine panels stamped in orange, top edge stained orange. A fine
+               copy in a fine first state (laminated) four-color pictional dust
+               jacket reproducing wraparound painting by J. Allen St. John.
+               This book is rarely encounted with a perfect dust jacket.
+               (#MF651) $850
+        o  Burroughs, Edgar Rice. - TARZAN LORD OF THE JUNGLE
+               Chicago: A. C. McClurg & Co., 1928 First edition, first
+               printing. Total of 7500 copies printed. Four printings, second
+               through fourth so marked on verso of title leaf. five inse rted
+               plates with illustrations by J. Allen St. John, one map,
+               original green cloth, front and spine panels stamped in brown. A
+               fine copy in fine four-color pictorial dust jacket reproducing
+               painting by J. Allen St. John on front panel. An uncommon
+               McClurg book; rare in this condition. (#MF652) $4,500
+        o  Burroughs, Edgar Rice. - TARZAN LORD OF THE JUNGLE
+               Chicago: A. C. McClurg & Co., 1928 First edition, first
+               printing. Total of 7500 copies printed. Four printings, second
+               through fourth so marked on verso of title leaf. five inse rted
+               plates with illustrations by J. Allen St. John, one map,
+               original green cloth, front and spine panels stamped in brown.
+               Some shelf wear to cloth at lower edge, mostly at tail of spine
+               panel and front corner, text paper lightly age-darkened (a fault
+               co mmon to this book), a near fine, bright copy in fine
+               four-color pictorial dust jacket (reproducing painting by J.
+               Allen St. (#MF653) $3,500
+        o  Burroughs, Edgar Rice. - TARZAN LORD OF THE JUNGLE
+               Chicago: A. C. McClurg & Co., 1928 First edition, first
+               printing. Total of 7500 copies printed. Four printings, second
+               through fourth so marked on verso of title leaf. five inse rted
+               plates with illustrations by J. Allen St. John, one map,
+               original green cloth, front and spine panels stamped in brown.
+               Hint of fading to cloth at head and tail of spine panel, else
+               fine copy in fine four-color pictorial dust jacket reproducing
+               painti ng by J. Allen St. John on front panel. An uncommon
+               McClurg book. (#MF654) $450
+        o  Burroughs, Edgar Rice. - TARZAN OF THE APES.
+               Chicago: A. C. McClurg & Co., 1914 First edition, first printing
+               with W. F. Hall Printing Co. / Chicago set in Old English type
+               on two lines on verso of title leaf, first binding with out
+               acorn device on spine panel. Total of 10,000 copies printed (two
+               printings, probably 5000 each). The author's first book.
+               original red cloth, front panel stamped in gold and blind, spine
+               panel stamped in gold. Minor foxing to fore edge of text block,
+               a n about fine, bright copy with no binding wear, bright gold
+               lettering, and perfect inner hinges. A tight, attractive copy-
+               about as nice as they come- except in dust jacket. (#MF655)
+               $4,250
+        o  Burroughs, Edgar Rice. - TARZAN THE INVINCIBLE
+               Tarzana, California: Edgar Rice Burroughs, Inc. Publishers,
+               [1931]. First edition. Fifteenth Tarzan book (sixteenth if The
+               Eternal Lover is counted) and the first book to be publish ed by
+               Burroughs's publishing company. inserted frontispiece with
+               illustration by Studley O. Burroughs, original blue cloth, front
+               and spine panels stamped in orange. Neat contemporary gift
+               inscription on front free endpaper, a fine copy in fine
+               pictorial d ust jacket. (#MF656) $650
+        o  Burroughs, Edgar Rice. - TARZAN THE UNTAMED
+               Chicago: A. C. McClurg & Co., 1920 First edition, first
+               printing. Total of 77,000 copies printed. There were multiple
+               printings, at least two, last dated 1921. nine inserted plates
+               wit h illustrations by J. Allen St. John, original olive-green
+               cloth, front and spine panels stamped in brown. Lower front
+               corner bruised, else a fine copy. (#MF657) $350
+        o  Burroughs, Edgar Rice. - THE WAR CHIEF.
+               Chicago: A. C. McClurg & Co., 1927 First edition. 6000 copies
+               printed. original orange cloth, front panel stamped in brown and
+               blind, spine panel stamped in brown. A fine copy. (#MF658) $275
+        o  Burroughs, Edgar Rice. - THE WARLORD OF MARS
+               Chicago: A. C. McClurg & Co., 1919 First edition, first printing
+               with W. F. Hall imprint on verso of title leaf and A. C. /
+               McCLURG / & CO. set on three lines at base of spine panel. Total
+               of 20,000 copies printed. There were multiple printings, at
+               least two. Third book of the Mars series. inserted frontispiece
+               with illustration by J. Allen St. John, original red cloth,
+               front and spine panels stamped in gold. Lower rear corner
+               bruised, some age-darkening to edges of text block and recto of
+               title leaf, else an about fine, bright copy in correct first
+               printing four-color pictorial dust jacket reproducing painting
+               by J. Allen St. John on front panel (the first pr (#MF659) $4,25
+               0
+        o  Burroughs, Edgar Rice. - THE WARLORD OF MARS
+               Chicago: A. C. McClurg & Co., 1919 First edition, first printing
+               with W. F. Hall imprint on verso of title leaf and A. C. /
+               McCLURG / & CO. set on three lines at base of spine panel. Total
+               of 20,000 copies printed. There were multiple printings, at
+               least two. Third book of the Mars series. inserted frontispiece
+               with illustration by J. Allen St. John, original red cloth,
+               front and spine panels stamped in gold. Tail of spine panel
+               bruise d, else a fine copy. (#MF660) $425
+        o  Burroughs, Edgar Rice. - THE WARLORD OF MARS
+               Chicago: A. C. McClurg & Co., 1919 First edition, first printing
+               with W. F. Hall imprint on verso of title leaf and A. C. /
+               McCLURG / & CO. set on three lines at base of spine panel. Total
+               of 20,000 copies printed. There were multiple printings, at
+               least two. Third book of the Mars series. inserted frontispiece
+               with illustration by J. Allen St. John, original red cloth,
+               front and spine panels stamped in gold. Binding slightly askew,
+               so me dust soiling to cloth, owner's inscription in pencil on
+               front free endpaper, a very good copy. (#MF661) $150
+        o  (Burroughs, Edgar Rice) Lupoff, Richard A. (editor). - THE READER'S
+          GUIDE TO BARSOOM AND AMTOR
+               [New York: Richard A. Lupoff, 1963.] First edition. 500 copies
+               printed, this issue being one of 200 copies with limitation
+               statement on verso of title leaf numbered and signed by David G.
+               Van Arnam. Contains an introduction by Donald A. Wollheim, a
+               preface, afterword and essay by Lupoff, two essays by van Arnam,
+               and one by Larry Ivie. folding chart of Barsoom, 2 plates, one
+               an illustrat ion by Roy G. Krenkel, the other an illustration by
+               Al Williamson, loose sheets as issued. This copy has been
+               stapled with several leaves out of order; plate by Krenkel
+               preceding title leaf, unnumbered leaf headed Lagniappe:
+               Mapmaker's Introduction followi ng page 46. A fine copy (#MF665)
+               $200
+        o  Kline, Otis Adelbert. - THE PRINCE OF PERIL
+               Chicago: A. C. McClurg & Co., 1930 First edition. The second of
+               the three Grandon of Venus Novels. Sword-play and fantastic
+               adventure in bad imitation of Edgar Rice Burroughs. First pu
+               blished as a serial in Argosy, 2 August-6 September 1930.
+               original decorated green cloth, front panel stamped in brown and
+               blind, spine panel stamped in brown. Top edge of sheets foxed,
+               else a fine copy in near fine four-color pictorial dust jacket
+               with li ght shelf wear at corners and along top edge of rear
+               panel, two closed tears at top edge of rear panel, 18mm and 14mm
+               respectively, and considerable scattered (#MF1886) $250
+        o Burroughs, Edgar Rice - BACK TO THE STONE AGE (DJ ONLY)
+               1st edition dust jacket, mint, unused, has never been folded
+               (#VI227) $260
+        o Burroughs, Edgar Rice - CARSON OF VENUS (DJ ONLY)
+               1st edition dust jacket, mint, unused, has never been folded
+               (#VI224) $200
+        o Burroughs, Edgar Rice - CANCELED CHECK
+               This is a good way to get Burroughs signature. (#VI228) $125
+        o Burroughs, Edgar Rice - DEPUTY SHERIFF OF COMANCHE COUNTY (DJ ONLY)
+               1st edition dust jacket, mint, unused, has never been folded
+               (#VI226) $125
+        o Burroughs, Edgar Rice - PIRATES OF VENUS (DJ ONLY)
+               1st edition dust jacket, mint, unused, has never been folded
+               (#VI225) $150
+        o Burroughs, Edgar Rice - SYNTHETIC MEN OF MARS (DJ ONLY)
+               1ST EDITION DUST JACKET, MINT, UNUSED, HAS NEVER BEEN FOLDED
+               (#VI221) $125
+        o Burroughs, Edgar Rice - TARZAN & THE FORBIDDEN CITY (DJ ONLY)
+               1st edition dust jacket, mint, unused, has never been folded
+               (#VI222) $125
+        o Burroughs, Edgar Rice - TARZAN & THE FORBIDDEN CITY (DJ ONLY)
+               1st edition dust jacket, unused, small chip at top of cover
+               (#VI223) $110
+        o Burroughs, Edgar Rice - TARZAN AND THE LOST EMPIRE
+               1951 Dell paperback (mapback #536), good with slight bend in
+               cover (#VI1007) $25
+        o Burroughs, Edgar Rice - TARZAN AND THE LOST EMPIRE
+               1st 1929 Metropolitan, Frontispiece, good with spine slightly
+               faded (#VI1006) $75
+        o Burroughs, Edgar Rice - TARZAN AND THE LOST SAFARI
+               2nd 1966 Whitman, pictorial cover, authorized (#VI1005) $15
+        o Burroughs, Edgar Rice - TARZAN OF THE APES
+               A. C. McClurg & Co., 1914 First edition, first printing with W.
+               F. Hall Printing Co. / Chicago set in Old English type, first
+               binding without acorn logo on spine. Total of 10,000 copies prin
+               ted, red cloth, front panel and spine stamped in gold. This is a
+               very worn and poor to fair condition only. The front endpapers
+               have been replaced, otherwise it is all intact, major foxing on
+               spine ends, spine cloth very worn. Title, author and publisher l
+               ettering dull, but readable. No dust jacket. Not the best, but
+               if you don't have one... (#VI7) $350
+        o Burroughs, Edgar Rice - TARZAN THE UNTAMED
+               1st 1920 A.C. McClurg, 77000 copies printed, 9 plates,
+               fair-good, spine bent, water stained around bottom (#VI1003) $50
+        o Burroughs, Edgar Rice - THE CAVE GIRL
+               2nd 1926 Grosett/Dunlap, Frontispiece (#VI1001) $10
+        o Burroughs, Edgar Rice - TARZAN CLANS OF AMERICA
+               1st edition, 1939 pamphlet, approx. 119 copies, originally
+               distributed for $1.00 with your selection of 1 of 4 signed 1st
+               editions: Tarzan and the Forbidden City, Lad and the Lion, Tarz
+               an the Magnificent, or Carson of Venus. Very scarce. 10 percent
+               discount on this if you subscribe to 'The Burroughs Bulletin'.
+               This is mint, unused, never read, and in original shipping
+               envelope. You will never find a finer copy at this price!
+               (#VI229) $425
+
+         -------------------------------------------------------------------
+                             Virtual Book Shop - Order Form

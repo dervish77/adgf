@@ -1,0 +1,63 @@
+# mailtool defaults from prop sheet
+# PLEASE MAKE ALL YOUR CHANGES ABOVE THESE 2 LINES
+set retrieveinterval='300'
+set bell='1'
+set flash='0'
+set headerlines='15'
+set toolcols='80'
+set nosuppressautoretrieve
+set noshowto
+#-button 1 0 "Done" done
+#-button 1 1 "Next" nextMessage
+#-button 1 2 "Delete" deleteMessage
+#-button 1 3 "Reply" replyMenu
+set popuplines='30'
+set printmail='lp -s'
+ignore 'x-lines' 'email-version' 'transport-options' 'expires' 'x-mailer' 'errors-to' 'x-zippy' 'lines' 'priority' 'newsgroups' 'auto-forward-count' 'default-options' 'ua-message-id' 'message-version' 'followup-to' 'approved' 'x-face' 'message-service' 'message-id' 'message-type' 'content-type' 'end-of-header' 'sender' 'report-version' 'path' 'message-protocol' 'submitted-by' 'posting-number' 'X-Priority' 'x-postmark' 'posted-date' 'organization' 'apparently-to' 'x-sun-charset' 'keywords' 'return-receipt-to' 'summary' 'in-reply-to' 'sent-by' 'distribution' 'reply-to' 'company' 'x-sequence' 'mts-message-id' 'references' 'via' 'content-charset' 'X-Attribution' 'status' 'ua-content-id' 'confirmed-by' 'content-length' 'auto-forwarded-from' 'Content-Transfer-Encoding' 'end-of-protocol' 'received' 'return-path' 'precedence'
+set indentprefix='> '
+set norecord
+set nodontlogmessages
+set noexpert
+set nohideattachments
+set additionalfields=''
+set folder='MailFiles'
+set filemenusize='10'
+set filemenu2=''
+set templates='calendar:$OPENWINHOME/share/xnews/client/templates/calendar.tpl signature:/home/hki020hk/lingard/.signature signature\ external:/home/hki020hk/lingard/.signature-ext signature\ fun:/home/hki020hk/lingard/.signature-fun signature\ internal:/home/hki020hk/lingard/.signature-int'
+#-clearaliases
+alias VR distributed-vr@csh.rit.edu
+alias VRML www-vrml@wired.com
+alias Web-hack webhackers@cygnus.com
+alias alan_aremberg aremburg@leds.enet.qntm.com
+alias ann_diep ann@xyvision.com
+alias ann_laviolette ann_laviolette@ccmail.res.ray.com
+alias bob_liscoe robert_w_liscoe@ccmail.res.ray.com
+alias brian_lingard lingard@iatc.ed.ray.com
+alias bruce Bruce_E_Letendre@ccmail.RES.RAY.COM
+alias carl_day carl@claircom.com
+alias carl_morth Carl_A_Morth@ccmail.RES.RAY.COM
+alias celeste celeste@xyvision.com
+alias chris_mahoney mahoney@aaec.com
+alias dave_macanucco dmac@camb-lads.loral.com
+alias ed_murphy emurphy@viewlogic.com
+alias fdd_team maryw@tif623, sicree@tif623, rrf@tif623, jclee@tif623, briskie@tif623, yu@tif623, lingard@tif623
+alias flow_team maryw@tif623, lingard@tif623, jclee@tif623, yu@tif623, briskie@tif623, purvi@tif623, coakley@tif623
+alias humor_list jclee@tif623, sicree@tif623, kjarnold@intrinsix.com, kkasregis@ccmail.viewlogic.com, paulu@ilogix.com
+alias jim_lindsey jim_lindsey@bose.com
+alias jmorrissey jmorrissey@steinbrecher.com
+alias john_zawada john@ics.com
+alias keith_kasregis kkasregis@ccmail.viewlogic.com
+alias kent_arnold kjarnold@intrinsix.com
+alias larry_black lawrence_w_black@ccmail.res.ray.com
+alias mark_buser buser@tartan.com
+alias paul_urban paulu@ilogix.com
+alias ray_ro ray_ro@ccmail.res.ray.com
+alias rick_daviau rdaviau@mass-usr.com
+alias tom_harmon harmon@ecadhp3.ed.ray.com
+alias tom_quinn tom_f_quinn@msn.com
+alias walter_ching n1hbr@mmra.org
+alias walter_ng wng@cadence.com
+set nometoo
+set noallnet
+set nottlock
+# end mailtool defaults from prop sheet

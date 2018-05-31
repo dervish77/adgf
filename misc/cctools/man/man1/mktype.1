@@ -1,0 +1,77 @@
+.ad l
+.TH MKTYPE 1 "07 May 1999" "3Com"
+.SH NAME
+mktype - make data type in ClearCase.
+
+.SH SYNOPSIS
+.B "mktype" \fI<type>\fP \fI<comment>\fP \fI<name>\fP
+
+.SH DESCRIPTION
+The "mktype" command makes new data types for a user.  These data 
+types are branch, label, and attribute.  The new data type is created
+in each VOB as specified by the environment variable CLEARCASE_AVOBS.
+
+All types are created without the replace option, thus if a specified 
+\fI<name>\fP already exists, the command will fail and exit.
+
+Attribute and label types will be created as shared.  Attribute types will
+be created as integer values, with no default value specified.
+
+.SH FIELDS
+.TP 5
+.B "<type>" - data type to make.
+
+Valid types are -- br[anch], la[bel], or at[tribute].
+
+.TP 5
+.B "<comment>" - comment option.
+
+Valid comment strings are -- -c "string", -cfile <file_name>, or -nc
+
+.TP 5
+.B "<name>" - name for data type.
+
+Name of the branch, label, or attribute.
+
+.SH EXAMPLES
+.PP
+To create a new development branch type, use
+.PP
+.B
+     mktype br -nc dev_ne_feature
+.PP
+To create a new integration branch type, use
+.PP
+.B
+     mktype br -nc int_ne_smm_beta_01.03.00
+.PP
+To create a new label type, use
+.PP
+.B
+     mktype la -c "release for FCS" REL_SMM_PROD_01.05.00
+.PP
+To create a new attribute type, use
+.PP
+.B
+     mktype at -nc mrnum
+
+.SH ENVIRONMENT
+The following environment variables are used by the script.
+.PP
+CLEARCASE_AVOBS
+    Variable defines which VOBs are in the "ALL" VOBs set.
+.PP
+PROJECT
+    Variable defines current project.
+
+.SH SEE ALSO
+cleartool man mkbrtype, cleartool man mklbtype, cleartool man mkattype
+
+.SH FILES
+/net/fridge/sun4/usr/cctools/bin/mktype.pl
+
+.SH COPYRIGHT
+Copyright 1999 3Com Corporation.
+
+.SH AUTHORS
+Brian Lingard, 3Com Corporation.

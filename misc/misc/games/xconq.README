@@ -1,0 +1,21 @@
+Xconq 7.0 has now been released to the general public.
+
+Xconq is an Empire-type strategy game, where each player contests for
+domination of a simulated world.  However, unlike most empire-building
+games, it features a programming language that game designers can use
+to build a wide variety of games.  Games already in the distribution's
+library include everything from simple combat, to elaborate world
+models, to silly but fun games, with time periods ranging from ancient
+history into the distant future.
+
+Xconq runs on many different systems; it includes graphical interfaces
+for X11, curses, and Macintosh(tm).  The X11 interface allows for
+multiple human players, each on a different display.  The game design
+mechanism includes the ability to add new color and monochrome imagery
+for games.
+
+The first version of Xconq was released by Stan Shebs in 1987.  His
+latest release prior to 7.0 was 5.5, in 1992; a number of other
+developers have released their own versions as well, both before and
+after 5.5.  Version 7 is a major rewrite and expansion of 5.5, and
+includes many more capabilities; see the file NEWS for a summary.

@@ -1,0 +1,342 @@
+#ifdef MSDOS
+#include <dos.h>
+#endif
+
+#include "librcs.h"
+
+#define CGALO 1
+#define CGAHI 2
+
+struct AWWINSTACK* _VisibleWindows=NULL;
+      
+#ifdef MSDOS
+void _plot(int x,int y,int c,int t) {
+  int p,m;
+  switch (t) {
+    case CGALO:if (x<0 || x>319 || y<0 || y>199) return;
+               p=((y&1)==1)?8192:0;
+               y&=0xfffe;
+               p+=((y<<5)+(y<<3))+(x>>2);
+               m=6-(2*(x&3));
+               c=(c&3)<<m;
+               m=3<<m;
+               pokeb(0xb800,p,peekb(0xb800,p)&(~m)|c);
+               break;
+    case CGAHI:if (x<0 || x>639 || y<0 || y>199) return;
+               p=((y&1)==1)?8192:0;
+               y&=0xfffe;
+               p+=((y<<5)+(y<<3))+(x>>3);
+               c=(c&1)<<(7-(x&7));
+               pokeb(0xb800,p,peekb(0xb800,p)&(~c)|c);
+               break;
+    }
+  }
+
+void _hline(int x1,int x2,int y,unsigned long c,int t) {
+  int i,p1,p2,m,mask;
+  if (x2<x1) { i=x1; x1=x2; x2=i; }
+  switch (t) {
+    case CGALO:if (y<0 || y>199) return;
+               if (x1<0) x1=0;
+               if (x2>319) x2=319;
+               c&=3;
+               p1=((y&1)==1)?8192:0;
+               y&=0xfffe;
+               p1+=((y<<5)+(y<<3));
+               p2=p1;
+               p1+=(x1>>2);
+               p2+=(x2>>2);
+               m=c | (c<<2) | (c<<4) | (c<<6);
+               for (i=p1+1;i<p2;i++)
+                 pokeb(0xb800,i,m);
+               switch (x1&3) {
+                 case 0:pokeb(0xb800,p1,(peekb(0xb800,p1)&0x00) | c | (c<<2) |
+                              (c<<4) | (c<<6));
+                        break;
+                 case 1:pokeb(0xb800,p1,(peekb(0xb800,p1)&0xc0) | c | (c<<2) |
+                              (c<<4));
+                        break;
+                 case 2:pokeb(0xb800,p1,(peekb(0xb800,p1)&0xf0) | c | (c<<2));
+                        break;
+                 case 3:pokeb(0xb800,p1,(peekb(0xb800,p1)&0xfc) | c);
+                        break;
+                 }
+               switch (x2&3) {
+                 case 0:pokeb(0xb800,p2,(peekb(0xb800,p2)&0x3f) | (c<<6));
+                        break;
+                 case 1:pokeb(0xb800,p2,(peekb(0xb800,p2)&0x0f) | (c<<6) |
+                              (c<<4));
+                        break;
+                 case 2:pokeb(0xb800,p2,(peekb(0xb800,p2)&0x03) | (c<<6) |
+                              (c<<4) | (c<<2));
+                        break;
+                 case 3:pokeb(0xb800,p2,(peekb(0xb800,p2)&0x00) | (c<<6) |
+                              (c<<4) | (c<<2) | c);
+                        break;
+                 }
+    }
+  }
+
+void _line(int x1,int y1,int x2,int y2,unsigned long c,int t) {
+  int xdif,ydif,xdir,ydir,pos;
+  if (y1==y2) {
+    _hline(x1,x2,y1,c,t);
+    return;
+    }
+  xdif=x2-x1;
+  ydif=y2-y1;
+  if (xdif>0) xdir=1;
+    else if (xdif<0) xdir=-1;
+      else xdir=0;
+  if (ydif>0) ydir=1;
+    else if (ydif<0) ydir=-1;
+      else ydir=0;
+  pos=0;
+  xdif=abs(xdif);
+  ydif=abs(ydif);
+  if (xdif>=ydif) {
+    while (x1!=x2) {
+      _plot(x1,y1,c,t);
+      x1+=xdir;
+      pos+=ydif;
+      if (pos>=xdif) {
+        y1+=ydir;
+        pos-=xdif;
+        }
+      }
+    } else {
+    while (y1!=y2) {
+      _plot(x1,y1,c,t);
+      y1+=ydir;
+      pos+=xdif;
+      if (pos>=ydif) {
+        x1+=xdir;
+        pos-=ydif;
+        }
+      }
+    }
+ _plot(x1,y1,c,t);
+  }
+#endif
+  
+struct AWWINDOW* _getWindow(AWDisplay* disp,AWWindow win) {
+#ifdef X
+  return NULL;
+#else
+  int count;
+  struct AWWINSTACK* stack;
+  stack=disp->windows;
+  count=0;
+  while (stack!=NULL) {
+    if (win==count) return stack->window;
+    count++;
+    stack=stack->next;
+    }
+  return NULL;
+#endif
+  }
+
+void AWCloseDisplay(AWDisplay* display) {
+#ifdef MSDOS
+  struct REGPACK regs;
+  AWFree(display);
+  regs.r_ax=0x0003;
+  intr(0x10,&regs);
+#endif
+#ifdef X
+  XCloseDisplay(display);
+#endif
+  }
+
+AWGC AWCreateGC(AWDisplay* disp,AWWindow win,unsigned long mask,AWGCValues* v) {
+#ifdef X
+  return XCreateGC(disp,win,mask,v);
+#else
+  AWGC ret;
+  if (mask&AWGCForeground) {
+    ret.foreground=v.foreground;
+    } else ret.foreground=0xffffff;
+  if (mask&AWGCBackground) {
+    ret.background=v.background;
+    } else ret.background=0x000000;
+  if (mask&AWGCLineWidth) {
+    ret.line_width=v.line_width;
+    } else ret.line_width=1;
+  if (mask&AWGCLineStyle) {
+    ret.line_style=v.line_style;
+    } else ret.line_style=0;
+  if (win==AWRootWindow) ret.type=disp->type;
+    else {
+    }
+  return ret;
+#endif
+  }
+
+AWWindow AWCreateWindow(AWDisplay* disp,AWWindow parent,
+                             int x,int y,int w,int h) {
+#ifdef X
+  XSetWindowAttributes attr;
+  return XCreateWindow(disp,parent,x,y,w,h,1,
+                       CopyFromParent,
+                       CopyFromParent,
+                       CopyFromParent,
+                       0,&attr);
+#else
+  struct AWWINDOW* win;
+  struct AWWINSTACK* stack;
+  struct AWWINDOW* dwin;
+  AWWindow         win_num;
+  if ((win=(struct AWWINDOW*)malloc(sizeof(struct AWWINDOW)))==NULL)
+    return -1;
+  win->x=x;
+  win->y=y;
+  win->w=w;
+  win->h=h;
+  win->visible=0;
+  win_num=0;
+  stack=disp->windows;
+  if (stack==NULL) {
+    stack=(struct AWWINSTACK*)malloc(sizeof(struct AWWINSTACK));
+    stack->window=win;
+    stack->next=NULL;
+    disp->windows=stack;
+    } else {
+    win_num++;
+    while (stack->next!=NULL) {
+      stack=stack->next;
+      win_num++;
+      }
+    stack->next=(struct AWWINSTACK*)malloc(sizeof(struct AWWINSTACK));
+    stack->next->window=win;
+    stack->next->next=NULL;
+    
+    }
+  if (parent!=AWRootWindow) {
+    dwin=_getWindow(disp,parent);
+    if (dwin!=NULL) {
+      stack=(struct AWWINSTACK*)malloc(sizeof(struct AWWINSTACK));
+      stack->window=win;
+      stack->next=dwin->children;
+      dwin->children=stack;
+      }
+    }
+  return win_num;
+#endif
+  }
+  
+void AWDrawLine(AWDisplay* disp,AWWindow win,AWGC gc,int x1,int y1,
+                int x2,int y2) {
+#ifdef X
+  XDrawLine(disp,win,gc,x1,y1,x2,y2);
+#else
+  struct AWWINDOW* dwin;
+  int wx,wy,w,h,i;
+  if (win==AWRootWindow) {
+    _line(x1,y1,x2,y2,gc.foreground,gc.type);
+    } else {
+    dwin=_getWindow(disp,win);
+    if (dwin==NULL) return;
+    if (dwin->visible!=1) return;
+    wx=dwin->x; wy=dwin->y;
+    h=dwin->h; w=dwin->w;
+    if (clip(&x1,&y1,&x2,&y2,0,0,w,h)) {
+      x1+=wx; x2+=wx;
+      y1+=wy; y2+=wy;
+      _line(x1,y1,x2,y2,gc.foreground,gc.type);
+      }
+    }
+#endif
+  }
+
+void AWDrawPixel(AWDisplay* disp,AWWindow win,AWGC gc,int x,int y) {
+#ifdef X
+  XDrawPoint(disp,win,gc,x,y);
+#else
+  struct AWWINDOW* dwin;
+  int wx,wy,w,h,i;
+  if (win==AWRootWindow) {
+    _plot(x,y,gc.foreground,gc.type);
+    } else {
+    dwin=_getWindow(disp,win);
+    if (dwin==NULL) return;
+    if (dwin->visible!=1) return;
+    wx=dwin->x; wy=dwin->y;
+    h=dwin->h; w=dwin->w;
+    if (x<w && y<h) {
+      _plot(x+wx,y+wy,gc.foreground,gc.type);
+      }
+    }
+#endif
+  }
+
+void AWDrawRectangle(AWDisplay* disp,AWWindow win,AWGC gc,
+                     int x,int y,int w,int h) {
+  AWDrawLine(disp,win,gc,x,y,x+w,y);
+  AWDrawLine(disp,win,gc,x+w,y,x+w,y+h);
+  AWDrawLine(disp,win,gc,x,y+h,x+w,y+h);
+  AWDrawLine(disp,win,gc,x,y,x,y+h);  
+  }
+
+void AWFillRectangle(AWDisplay* disp,AWWindow win,AWGC gc,
+                     int x,int y,int w,int h) {
+  int i;
+  for (i=y;i<y+h;i++)
+    AWDrawLine(disp,win,gc,x,i,x+w,i);
+  }
+        
+void AWFree(void* ptr) {
+  free(ptr);
+  }
+
+void AWMapWindow(AWDisplay* disp,AWWindow win) {
+#ifdef X
+  XMapRaised(disp,win);
+#else
+  struct AWWINDOW* dwin;
+  struct AWWINSTACK* stack;
+  int x,y,w,h,i;
+  dwin=_getWindow(disp,win);
+  if (dwin==NULL) return;
+  if (dwin->visible!=0) return;
+  stack=(struct AWWINSTACK*)malloc(sizeof(struct AWWINSTACK));
+  stack->window=dwin;
+  stack->next=disp->windows;
+  x=dwin->x; y=dwin->y;
+  h=dwin->h; w=dwin->w;
+  _line(x-1,y-1,x+w+2,y-1,0xffffffff,disp->type);
+  _line(x-1,y+h+2,x+w+2,y+h+2,0xffffffff,disp->type);
+  _line(x-1,y-1,x-1,y+h+2,0xffffffff,disp->type);
+  _line(x+w+2,y-1,x+w+2,y+h+2,0xffffffff,disp->type);
+  for (i=y;i<y+h;i++)
+    _line(x,i,x+w,i,0,disp->type);
+  dwin->visible=1;
+#endif
+  }
+
+AWDisplay *AWOpenDisplay(char *display) {
+#ifdef MSDOS
+  AWDisplay* ret;
+  struct REGPACK regs;
+  ret=(AWDisplay*)malloc(sizeof(AWDisplay));
+  regs.r_ax=0x0003;
+  if (strcmp(display,"cgalo1")==0) {
+    regs.r_ax=0x0004;
+    ret->type=CGALO;
+    }
+  if (strcmp(display,"cgalo2")==0) {
+    regs.r_ax=0x0005;
+    ret->type=CGALO;
+    }
+  if (strcmp(display,"cgahi")==0) {
+    regs.r_ax=0x0006;
+    ret->type=CGAHI;
+    }
+  ret->windows=NULL;
+  intr(0x10,&regs);
+  return ret;
+#endif
+#ifdef X
+  return XOpenDisplay(display);
+#endif
+  }
+

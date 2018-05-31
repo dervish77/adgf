@@ -1,0 +1,79 @@
+.ad l
+.TH MKV 1 "07 May 1999" "3Com"
+.SH NAME
+mkv - make a view for ClearCase.
+
+.SH SYNOPSIS
+.B "mkv" \fI<viewname>\fP 
+
+.SH DESCRIPTION
+The "mkv" command creates a ClearCase view using the 
+specified \fI<viewname>\fP parameter as a portion of the ClearCase 
+view tag as follows -- <username>_<project>_<viewname>.  
+
+A config spec with the file name "hdm_<viewname>.cs" is automatically
+associated with the new view.  This config spec must exist in one of the
+following directories -- $CCHOME/config.spec, $PROJHOME/config.spec, or
+$HOME/config.spec.  If no matching config spec is found in the listed 
+directories, the command fails and exits.
+
+Once created, the new view is accessed using the "sv" command, and can be
+removed using the "rv" command.
+
+.SH FIELDS
+.TP 5
+.B "<viewname>" - view name.
+
+View name is a portion of the full ClearCase view tag having the 
+format <username>_<project>_<viewname>.
+
+.SH EXAMPLES
+.PP
+To create a view for main LATEST, use
+.PP
+.B
+     mkv main
+.PP
+To create a view for a development branch, use
+.PP
+.B
+     mkv dev_ne_feature
+.PP
+To create a view for an integration branch, use
+.PP
+.B
+     mkv int_ne_smm_beta_01.03.00
+.PP
+To create a view for a bug fix branch, use
+.PP
+.B
+     mkv dev_ne_mr225
+.PP
+To create a view for an engineering release branch, use
+.PP
+.B
+     mkv smm_er_01.05.00
+
+.SH ENVIRONMENT
+The following environment variables are used by the script.
+.PP
+CCHOME
+    Variable defines primary location for config specs.
+.PP
+PROJHOME
+    Variable defines secondary location for config specs.
+.PP
+HOME
+    Variable defines tertiary location for config specs.
+
+.SH SEE ALSO
+sv(1), rv(1), cleartool man mkview
+
+.SH FILES
+/net/fridge/sun4/usr/cctools/bin/mkv.pl
+
+.SH COPYRIGHT
+Copyright 1999 3Com Corporation.
+
+.SH AUTHORS
+Brian Lingard, 3Com Corporation.

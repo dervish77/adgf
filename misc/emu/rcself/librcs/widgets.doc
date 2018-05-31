@@ -1,0 +1,121 @@
+Widget system functions:
+-----------------------------------------------------------------
+Init                  Initialize widgets.  Required.
+void widgets.Init(Display* disp,int screen)
+
+Destroy               Remove all widget controls. Required at end.
+void Destroy()
+
+CheckEvent            Check for widget events
+int CheckEvent(void (*fail)(XEvent))
+  fail         Procedure to call when event is not for any widget
+
+Widget creation functions:
+-----------------------------------------------------------------
+Note: All creation functions return a value of type Window.  This
+is the widget id number used for all widget functions.
+
+NewWindow             Create a new window.
+Window NewWindow(Window par,int sx,int sy,int swidth,int shight,
+           long fore,long back,char* name,
+           void (*pevent)(XEvent),void (*revent)(XEvent),
+           void (*mevent)(XEvent),void (*devent)(XEvent),
+           void (*fevent)(XEvent));
+
+NewButton             Create a new momentary button.
+Window NewButton(Window parent,int x,int y,int width,int height,
+          long foreclr,long backclr,char* text,
+          void (*pevent)(XEvent),void (*revent)(XEvent))
+  pevent       Procedure to call when button is pressed
+  revent       procedure to call when button is released
+
+NewToggle             Create a new toggle button.
+Window NewToggle(Window parent,int x,int y,int width,int height,
+          long foreclr,long backclr,char* text,
+          void (*pevent)(XEvent),void (*revent)(XEvent))
+  pevent       Procedure to call when button is pressed
+  revent       procedure to call when button is released
+
+NewHscroll            Create horizontal scroll bar.
+Window NewHscroll(Window parent,int x,int y,int width,int height,
+           long foreclr,long backclr,int minval,int maxval,
+           void (*pevent)(XEvent), void (*revent)(XEvent),
+           void (*mevent)(XEvent))
+  minval       Minimum value of scrollbar (far left value)
+  maxval       Maximum value of scrollbar (far right value)
+  pevent       Procedure to call when button is pressed
+  revent       procedure to call when button is released
+  mevent       Procedure to call when mouse is moved while pressed
+
+NewVscroll            Create vertical scroll bar.
+Window NewVscroll(Window parent,int x,int y,int width,int height,
+           long foreclr,long backclr,int minval,int maxval,
+           void (*pevent)(XEvent), void (*revent)(XEvent),
+           void (*mevent)(XEvent))
+  minval       Minimum value of scrollbar (far top value)
+  maxval       Maximum value of scrollbar (far bottom value)
+  pevent       Procedure to call when button is pressed
+  revent       procedure to call when button is released
+  mevent       Procedure to call when mouse is moved while pressed
+
+NewLabel              Create a new text label.
+Window NewLabel(Window parent,int x,int y,int width,int height,
+                long foreclr,long backclr,char* text,int modes)
+  modes        How to place text, 1=left, 2=right, 3=center
+
+NewMenu               Create a new menu.
+Window NewMenu(Window parent,int x,int y,int width,int height,
+               long foreclr,long backclr,char* title,
+               void (*revent)(XEvent))
+  revent       procedure to call when button is released
+
+Widget functions:
+-----------------------------------------------------------------
+note:  All widget functions are still called from the main widget
+ojbect, and not for individual widgets.
+
+Move                  Move widget to new location
+void Move(Window widget,int x,int y)
+
+Size                  Change size of a widget
+void Size(Window widget,int width,int height)
+
+AutoSize              Auto size a menu widget
+void AutoSize(Window widget)
+
+Hide                  Hide a widget
+void Hide(Window widget)
+
+Show                  Show a widget
+void Show(Window widget)
+
+Value                 Change position of a scrollbar
+void Value(Window widget,int x)
+
+Text                  Change text of butons, labels, or menu titles
+void Text(Window widget,char* newtext)
+
+Push                  Push a button from a program call
+void Push(Window widget);
+
+Release               Release a button from a program call
+void Release(Window widget);
+
+IsPressed             See if a button is pressed
+int IsPressed(Window widget)
+
+Clear                 Clear all entries from a menu
+void Clear(Window widget)
+
+AddEntry              Add entry to a menu
+void AddEntry(Window widget,char* entry)
+
+GetSelection          Get selected entry from a menu
+int GetSelection(Window widget)
+
+GetSelectionText      Get text from selected menu item
+void GetSelectionText(Window widget,char* dest)
+
+Delete                Delete a widget
+void Delete(Window widget)
+

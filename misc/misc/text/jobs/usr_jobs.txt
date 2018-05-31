@@ -1,0 +1,311 @@
+     [Main Page]   [Headquarters]   [Employment]   [Location]   [Support]
+                               [USRobotics Logo]
+                                  [Main Page]
+
+This page was last updated:
+Fri May 31 08:46:58 EDT 1996
+
+Entry Level Hardware Engineer
+     Senior Technician responsible for supporting all of the day to day
+     activities pertaining to the branch office development organization.
+     Responsibilities include LAB support, system debug/test, rework, building
+     test modules, etc. Working closely with the hardware and software
+     engineers is a key element of the job.
+
+Entry Level Software Engineer
+     Support, maintain, and upgrade Switched Ethernet LAN installation
+     including support and configuration of LAN switches, routers, dial-in
+     access routers, and gateways.
+
+Entry Level Software Engineer
+     Provide desktop systems support and/or server support for an R&D group.
+     The position entails software purchasing, software installation ,
+     configuration, system installation, and overall user support.
+
+Junior Diagnostics Engineer
+     Diagnostic software development for embedded LAN switching products.
+     Primary responsibility will focus on the development of manufacturing
+     diagnostics for an existing Switching product. Longer term
+     accountabilities will include the transition of the technology to other
+     product families and a move to more automated board level manufacturing
+     diagnostic capabilities.
+
+Junior Embedded Software Engineer
+     Software development engineer responsible for the complete design,
+     development, and test for the Router module drivers as part of the next
+     generation branch office product. Primary responsibilities will be writing
+     a design specification, coding, unit test and integration test for all of
+     the driver code. Close interaction with the hardware board designer is
+     required.
+
+Junior Software Engineer
+     Software Development on IP protocol stack and IP router implementation.
+     Design, develop and maintain various protocol software for remote access
+     router products. Includes IP v4 and v6, UDP, TCP, Telnet, FTP, TFTP, RIP,
+     OSPF, BGP, RSVP and DVMRP.
+
+Junior Software Engineer
+     Software development of embedded network management components including
+     but not limited to, SNMP agent, configuration management, command line
+     interface or HTML agent software.
+
+Junior Software Engineer
+     Software engineer responsible for the design, development, and test of LAN
+     Switching Products. Primary responsibilities will include the introduction
+     of Switching products into manufacturing, followed by the development of
+     new modules and features across both switching and hub domains.
+
+Junior Software Engineer
+     Software engineer responsible for the design, development and test of ATM
+     Products. Primary responsibility is the development of a new product area,
+     but support for existing products may occur as necessary. The focus for
+     the position is the realtime embedded environment
+
+Mid-Level Embedded Software Engineer
+     Software development engineer responsible for the design, development, and
+     test of LAN Switching Products. Primary responsibility will be the
+     enhancement of an existing product line, with future accountability
+     focusing on the integration of switching technology into additional
+     product families.
+
+Mid-Level Embedded Software Engineer
+     Enhance and provide new functionality for our LAN Switching product line.
+     Be a significant contributor to the continued development of core
+     switching and network management technology for all switching platforms.
+
+Mid-Level Embedded Software Engineer
+     Software development engineer responsible for the complete design,
+     development, and test for the initialization/POST software located on the
+     Router module as part of the next generation branch office product.
+     Primary responsibilities include writing a design specification, coding,
+     unit test and integration test for all of the Router initialization code.
+     A close working relationship with the Router hardware engineer is
+     required.
+
+Mid-Level Embedded Software Engineer
+     Software development engineer responsible for the complete design,
+     development, and test for the initialization/POST software located on the
+     Modem Expansion module as part of the next generation branch office
+     product. Primary responsibilities include writing a design specification,
+     coding, unit test and integration test for all of the Modem Expansion
+     initialization code. A close working relationship with the Modem Expansion
+     hardware engineer is required.
+
+Mid-Level Embedded Software Engineer
+     Software engineer responsible for driver, SNMP and system level simulation
+     for next generation branch office product. Primary responsibilities
+     involve the creation of a simulation strategy, identifying the appropriate
+     development environment and execution of the strategy via
+     simulation/modelling. The system model will be used to verify
+     interoperability for all new modules which are part of the branch office
+     product line.
+
+Mid-Level Hardware Engineer
+     Hardware engineer responsible for the complete design, development, and
+     test of a Router module for a next generation branch office product.
+     Primary responsibilities involve writing a design specification, board
+     design, schematic capture and complete testing for the module. The Router
+     module will include both LAN & WAN interfaces and protocols. State of the
+     art tools and design methodologies will be used.
+
+Mid-Level Hardware Engineer
+     Hardware engineer responsible for the complete design, development, and
+     test of the ASIC utilized on a Router module for the next generation
+     branch office product. Primary responsibilities involve writing a
+     Functional specification, ASIC design (using VHDL code), simulation and
+     complete testing of the ASIC as part of the Router module. State of the
+     art tools and design methodologies will be used.
+
+Mid-Level Hardware Engineer
+     Hardware engineer responsible for the complete design, development, and
+     test of a Modem Expansion module for a next generation branch office
+     product. Primary responsibilities involve writing a design specification,
+     board design, schematic capture and complete testing for the module. State
+     of the art tools and design methodologies will be used.
+
+Mid-Level Hardware Engineer
+     Hardware engineer responsible for ASIC/board/system level simulation for
+     next generation branch office product. Primary responsibilities involve
+     the creation of a simulation strategy, identifying the appropriate
+     development environment and execution of the strategy via
+     simulation/modelling. The system model will be used to verify
+     interoperability for all new modules which are part of the branch office
+     product line.
+
+Mid-Level Hardware Engineer
+     Hardware design and development of USR's next generation digital modem
+     products for the Enterprise Network Hub
+
+Mid-Level Software Engineer
+     Software engineer responsible for the software system test strategy and
+     execution of the strategy for the next generation Branch Office product.
+     Primary responsibilites include writing the software system test strategy,
+     leading the entire system test development/setup, and execution of the
+     software system test strategy. The test execution involves automated
+     tools, stress testing and interoperability testing prior to the quality
+     assurance team. Close interaction with the Software project leader and
+     engineering management required.
+
+Mid-Level Software Engineer
+     Software Development on IPX protocol stack. Design, develop and maintain
+     software to support Novel IPX software for remote access router products.
+     Includes IPX routing protocols, RIP, SAP, NLSP and modem sharing
+     capabilities over a Novel network.
+
+Mid-Level Software Engineer
+     Embedded kernel software development on router platform. Design, code,
+     test and maintain real time kernel and device driver for remote access
+     router products.
+
+Mid-Level Software Engineer
+     Pariticpate in dial-in access router system test and QA effort. Design,
+     develop and perform quality assurance and performance tests.
+
+Mid-Level Software Engineer
+     Sustaining engineer for multi-protocol access router and terminal server
+     software.
+
+Mid-Level Software Engineer
+     Sustaining engineer for multi-protocol access router and terminal server
+     software.
+
+Mid-Level Software Engineer
+     Software Development on IP protocol stack and IP router implementation.
+     Design, develop and maintain various protocol software for remote access
+     router products. Includes IP v4 and v6, UDP, TCP, Telnet, FTP, TFTP, RIP,
+     OSPF, BGP, RSVP and DVMRP.
+
+Mid-Level Software Engineer
+     Software Development on IPX protocol stack. Design, develop and maintain
+     software to support Novel IPX software for remote access router products.
+     Includes IPX routing protocols, RIP, SAP, NLSP and modem sharing
+     capabilities over a Novel network.
+
+Mid-Level Software Engineer
+     Design, code, debug , test and maintain AppleTalk routing software for
+     remote access router products.
+
+Mid-Level Sustaining Engineer
+     Software engineer responsible for sustaining all software components for
+     the entire branch office product line. Responsibilities include product
+     enhancements, bug fixes, performance improvements and product support for
+     the other organizations within USRobotics. Periodic customer support /
+     visits would also be a key aspect of the job.
+
+Senior Diagnostics Engineer
+     Develop and execute QA processes, procedures and tests for ATM and LAN
+     Switching products. Work closely with Development and Engineering Services
+     to provide a smooth transition of products through the organization.
+     Provide techical leadership for less senior SQA engineers.
+
+Senior Diagnostics Engineer
+     Diagnostics and tools project lead to support of the development of USR's
+     next generation digital modem products for the Enterprise Network Hub
+
+Senior-Level Embedded Software Engineer
+     Software development engineer responsible for the complete architecture,
+     design, development, and test pertaining to the embedded network
+     management for the next generation branch office product. Primary
+     responsibilities involve writing a system functional specification,
+     leading the complete embedded network management development / testing and
+     coding a key piece of the system. A close working relationship with the
+     hardware project leader , engineering management and marketing is
+     required.
+
+Senior-Level Embedded Software Engineer
+     Software development engineer responsible for the design, development, and
+     test as part of the next generation branch office product. Primary
+     responsibilities include the system routing design and leading the design
+     effort for the porting/integrating of the inhouse router software onto the
+     next generation router module. A knowledge of LANs, WANs and routing
+     protocols required.
+
+Senior-Level Hardware Engineer
+     Hardware engineer responsible for the complete design, development, and
+     test of a LAN Distribution module for a next generation branch office
+     product. Primary responsibilities involve the architecture, design
+     specification, board design, schematic capture and complete testing for
+     the module. State of the art tools and design methodologies will be used.
+
+Senior-Level Hardware Engineer
+     Hardware engineer responsible for sustaining the hardware components for
+     the entire branch office product line. Responsibilities include product
+     enhancements, bug fixes, cost reductions and product support for the other
+     organizations within USRobotics. Periodic customer support / visits would
+     also be a key aspect of the job.
+
+Senior-Level Hardware Engineer
+     Hardware architecture and design of USRs next generation access hub
+     products.
+
+Senior-Level Hardware Engineer
+     Hardware architecture and design of USRs next generation access hub
+     products.
+
+Senior-Level Hardware Engineer
+     Hardware design of USRs next generation access hub products.
+
+Senior-Level Hardware Engineer
+     Hardware design of USRs next generation access hub products.
+
+Senior-Level Hardware Engineer
+     Hardware design of USRs next generation access hub products.
+
+Senior-Level Hardware Engineer
+     Hardware design of USRs next generation access hub products.
+
+Senior-Level Software Engineer
+     Software development engineer responsible for the entire software
+     architecture pertaining to the next generation branch office product.
+     Responsiblities include writing a system functional specification and
+     overseeing the entire software design, development and testing. The job
+     involves a close interaction with the hardware project leader, engineering
+     management and marketing.
+
+Senior-Level Software Engineer
+     Software architecture and design of USRs next generation access hub
+     products.
+
+Senior-Level Software Engineer
+     Lead the development of IP routing protocols for remote access router
+     products. This includes working with product marketing to define
+     appropriate requirements. Track IETF initiatives and represent U.S.
+     Robotics interests at these forums. Help determine long term product
+     strategy and provide technical leadership, guidance and education to other
+     members of the router development group.
+
+Senior-Level Software Engineer
+     Software architecture and design of USRs next generation access hub
+     products.
+
+Junior Level Diagnostic Engineer
+     Test Engineer responsible for the manufacturing test plan and execution of
+     the plan for the Modem Expansion module as part of the next generation
+     branch office product. Primary responsibilities include writing a test
+     plan, test creation/unit test and product support during pilot
+     builds/manufactuing ramp-up. A close working relationship with the Modem
+     Expansion hardware engineer and manufacturing required.
+
+Mid-Level Diagnostic Engineer
+     Test Engineer responsible for the manufacturing test plan and execution of
+     the plan for the Router module as part of the next generation branch
+     office product. Primary responsibilities include writing a test plan, test
+     creation/unit test and product support during pilot builds/manufactuing
+     ramp-up. A close working relationship with the Router hardware engineer
+     and manufacturing required.
+
+Mid-Level Test Software Engineer
+     Test Engineer responsible for the manufacturing system test strategy and
+     execution of the strategy for the entire next generation branch office
+     product. Primary responsibilities include writing a system test plan,
+     leading the entire test development/execution and product support during
+     pilot builds/manufactuing ramp-up. A close working relationship with the
+     hardware project leader, manufacturing and engineering management
+     required.
+
+Software Tools Engineer
+     Build and maintain the tools used by a development team as well as
+     maintain the source code repository for the development team. The tools
+     with be of three categories: purchased, freely available on the internet
+     (GNU tools) and home grown tools. The engineer should expect to write some
+     of those tools.

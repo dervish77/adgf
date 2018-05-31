@@ -1,0 +1,246 @@
+             [[Table of contents]][[Sun's homepage]][[Next story]]
+
+                                    [[News]]
+
+                               Sun goes Hollywood
+
+                     117 SPARCstations render "Toy Story,"
+                the first feature-length computer-animated film
+
+By Jeff Ubois
+
+    ------------------------------------------------------------------------
+
+Advertisement
+
+                          [[RDI - 100% Sun]] [Image]
+         [[HAL Computer Systems introduces 64-bit SPARC workstation]]
+    ------------------------------------------------------------------------
+
+
+This fall, the most ambitious collaboration between Hollywood and Silicon
+Valley to date will hit the screens in the world's first feature-length
+computer-animated film, "Toy Story."
+
+Marketed and financed by Disney, "Toy Story" (see the sidebar for a plot
+synopsis) was written, produced, and directed by Pixar Animation Studios in
+Point Richmond, Calif., formerly a unit of LucasFilm, and now 75 percent owned
+by Apple co-founder Steve Jobs, who is also the film's executive producer.
+
+Pixar is best known by many in the graphics community for its RenderMan
+ToolKit, used to create the dinosaurs in "Jurassic Park" and the liquid metal
+cyborg in "Terminator 2," and its Typestry software package (see Pixar's
+RenderMan and Typestry sidebar). But the company has also won numerous Academy
+Awards and Clio Awards for its short films and commercials.
+
+With "Toy Story," the company began an odyssey into territory owned by
+Hollywood. "There are two ways to look at the film: one is that it is the
+culmination of 20 years of research that have brought us to this point," said
+Pixar founder and chief technical officer Ed Catmull. "The other is that this
+is a whole new way of making feature animated films, and with this technology
+we are at the start of a long period of improved productivity and quality."
+
+"Toy Story" is also something of a coup for Sun Microsystems. The movie's final
+image rendering was accomplished on a "farm" of 87 dual-processor and 30
+quad-processor 100-MHz SPARCstation 20s -- representing more computing power
+than 300 Cray 1's. "There is more computer power applied to this film than [to]
+any film in history," Catmull said.
+
+Even with that, rendering the film's 110,000 frames required the equivalent of
+46 days of continuous processing; put another way, rendering each frame took
+one to three hours of SPARC processor time. "We could use 1,000 times more
+power, and we know exactly how we'd use it -- we're limited by the budget, not
+our appetite," Catmull said. "It's not like someone who is doing a spreadsheet
+and wants two or three times more power for faster turnaround but isn't going
+to do anything fundamentally different."
+
+Why Sun?
+Silicon Graphics has the dominant mind share among animators, film, and video
+producers, and has some important graphics software tools not yet ported to
+other platforms. For "Toy Story," SGIs were used to handle modeling, animation,
+shading, and lighting. But SPARCstation 20s offered a clear price/performance
+win.
+
+Using data from a series of typical pictures, Pixar developed its own
+benchmark, called a rendermark, to measure the rendering performance of
+different hardware running Pixar's RenderMan software. "We evaluated the
+different platforms on the list price per rendermark, and Sun was less
+expensive than anybody else by almost a factor of two," Catmull said.
+
+"Sun was very smart in its pricing of multiprocessor technology -- most
+companies make you pay a premium for it, so there's no saving from sharing
+power supplies and other common elements," Catmull said. "Sun's four-processor
+versions are much cheaper per processor."
+
+The SPARCstations also had a size advantage. "The SPARCstation 20s with four
+processors are lot cheaper and in a small package, so you've got more
+processing per cubic foot, which is an odd way to measure it, but it turns out
+to be important," Catmull said.
+
+In a sense, Pixar has come full circle. Back in the LucasFilm days, what is now
+Pixar wrote the first operating system Sun used. "The very first Suns that were
+delivered ran a version of Unix that we wrote for them, and for the first year
+of Sun's existence, this group was their largest customer," Catmull recalls.
+
+Down on the CPU farm
+The farm itself is essentially a wall with 117 SPARCstations configured as
+headless servers, each with 192 to 384 megabytes of RAM (each processor has an
+average of 96 megabytes of RAM) and three to five gigabytes of local disk
+storage. The local disks hold a copy of Solaris, some proprietary job control
+software, and Pixar's RenderMan. "There has to be a huge swap space, and space
+to download models," said David Ching, Pixar's manager of computer operations.
+
+Jobs are fed to each SPARCstation from a SPARCserver 1000e, which contains the
+basic information -- models, textures, shaders -- needed to complete the
+rendering of the frame. Pixar's propriety job control software feeds the frames
+one at a time to each workstation, and ensures an even distribution of work.
+
+The SPARCstations are connected to the server though Grand Junction hubs, which
+connect to 24 of the SPARCstations via 10BaseT, and to the SPARCserver 1000e
+via a 100 megabyte 100BaseT link. The SPARCserver 1000e is connected to the
+rest of the company's network, comprised mostly of SGIs, via 10BaseT, and via
+FDDI to SGI Challenges and Indigo 2s that act as master servers. The master
+servers store models of different objects, these are retrieved as needed by the
+SPARCserver 1000e.
+
+"Essentially the SPARCstations, when they need to refer to a model, get it from
+the 1000e, which gets the model from the master servers," Ching said. Pixar
+calls its collection of modelling data its "digital back lot."
+
+Shifting around the terabytes of data generated during the course of production
+is enough to stress any network. To improve performance, Pixar initially
+considered placing each SPARCstation on its own Ethernet segment, and other
+more exotic high speed technologies, but economic considerations ruled those
+choices out.
+
+Ching said the company is now looking to go to 100BaseT connections throughout.
+"HIPPI and FibreChannel are too expensive -- we really didn't want to look at
+having to pay for more than 100 high-speed interfaces," Ching said. "Of course,
+if we had had gobs of money, we would have done fiber or 100BaseT, but back in
+January, that wasn't economical."
+
+Pixar has two large disk farms, an SGI Challenge with 144 gigabytes, and a Sun
+array of 108 gigabytes. Both together aren't enough to hold an entire movie, so
+images that have been "finalled" (received final approval from the director)
+are recorded onto film and backed up to an 8mm Exabyte tape drive.
+
+But because the rendered data is essentially generated on the Suns, working
+data is not backed up. "We only back up important data that can't be replaced;
+the rest can always be re-rendered," Ching said. "We had one power outage that
+cost us some data, but the truth is the data was replaced within a day."
+
+For the future, Pixar is planning a number of improvements. "We're looking at
+automated cartridge back-up systems that can handle 100 gigs of data very
+quickly," Ching said. "We'd also like to know more about ATM, we'd like to have
+switching hubs and maybe a video server."
+
+ATM and the switching hubs will be used to improve network performance, while
+the video server will speed movie production more directly by letting animators
+do their work more interactively and efficiently. Rather than having to wait
+and view their work in a special light room, the video server will allow them
+to view clips right at their desks.
+
+Plot line and subject matter aside, "Toy Story" marks a departure into a brand
+new world of movie making. With the computer industry eager for new business,
+the studios desire to cut costs (and those annoying percentages out of the
+gross now going to top actors), and with Steve Jobs' arrival on the Hollywood
+scene, graphics geeks can rest assured that world domination is only a matter
+of time.
+
+What did you think of this article?
+-Excellent! -Okay -Poor [-----] -Too long -Just right -Too short
+
+                               [[Feedback Form]]
+             [[Table of contents]][[Sun's homepage]][[Next story]]
+
+    ------------------------------------------------------------------------
+
+
+[[Also this month...]]
+
+Get free updates to SunWorld Online.
+Ten things you need to know about capacity planning.
+Windows 95 networking secrets.
+Security column: `Is there a fox in your hen-house?'
+
+    ------------------------------------------------------------------------
+
+
+Resources related to this story
+
+     Pixar's home page http://www.pixar.com/
+     Disney's "Toy Story" home page http://www.toystory.com/
+
+    ------------------------------------------------------------------------
+
+
+                          [[Sidebar]][[Back to story]]
+
+                             The "Toy Story" story
+
+Positioned as Disney's Christmas mega-movie, "Toy Story" is a comedy/adventure
+in which toys take on a life of their own when no one is watching.
+
+"Toy Story" features the voices of Tom Hanks as Woody, a pull-string talking
+cowboy doll, and Tim Allen as Buzz Lightyear, a superhero space action figure.
+The two learn to put aside their rivalry and work together when they become
+separated from their owner, a boy named Andy.
+
+These and other characters will be reincarnated in an interactive CD being
+produced by Pixar, in numerous licensing deals for toys, and a joint marketing
+campaign with Burger King arranged by Disney. Other well known toys, from Mr.
+Potato Head (with the voice of Don Rickles) to Slinky Dog (with the voice of
+Jim Varney), also make appearances.
+
+Four years in the making, "Toy Story" is directed by John Lasseter, who also
+directed Pixar's "Tin Toy," a seminal computer animation short made in 1988
+about living toys. "Tin Toy" was the first computer animated film to win an
+Academy Award, and "Toy Story" is very much a descendent of that film, many
+doublings of computer power later.
+
+                          [[Sidebar]][[Back to story]]
+
+    ------------------------------------------------------------------------
+
+
+    ------------------------------------------------------------------------
+
+
+                          [[Sidebar]][[Back to story]]
+
+                         Pixar's RenderMan and Typestry
+
+In addition to movies, Pixar also sells two software packages, RenderMan and
+Typestry.
+
+RenderMan runs on Sun, Silicon Graphics, Macintosh, and other computers, and
+produces photo-realistic 3-D images in TIFF, PICT, EPS or TGA formats from
+mathematical models for shapes, shading, texture, and lighting. Like a digital
+camera that controls focus, exposure, viewing angle, level of detail, RenderMan
+computes the final image.
+
+Partly because it has been on the market since the late 1980s, and partly
+because it runs on so many platforms, a raft of third-party
+RenderMan-compatible programs are available. In fact, for any real production,
+third-party products are necessary, because RenderMan doesn't do modeling or
+animation.
+
+Among RenderMan's credits are the dinosaurs in Jurassic Park, the cyborg in
+Terminator 2, the water creatures in The Abyss, and images in Tin Toy, Free
+Willy, Cliffhanger, and Casper.
+
+Pixar's Typestry lets users create three-dimensional type, and manipulate it in
+a variety of ways, wrapping text around a sphere or tube, or onto a rubber
+sheet. It also supports animation, changes the appearance of type surfaces, and
+even handles particle emissions from type surfaces.
+
+                          [[Sidebar]][[Back to story]]
+
+    ------------------------------------------------------------------------
+
+
+                   [[(c) Copyright 1995 Web Publishing Inc.]]
+
+If you have problems with this magazine, contact webmaster@sunworld.com
+URL: http://www.sun.com/sunworldonline/swol-11-1995/swol-11-pixar.html
+Last updated: 1 November 1995

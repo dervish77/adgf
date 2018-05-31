@@ -1,0 +1,150 @@
+
+FTP Guide to VR sites
+HIT Lab 
+Toni Emerson
+diderot@hitl.washington.edu
+last update: May 2, 1993
+
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+
+Note: This list is a compilation from sources: _What is Virtual
+Reality? A Hombrew Introduction_ by Jerry Isdale *, _Virtual
+Realities: Industry and Culture, A Guide to the Literature_ by Tim
+Anderson of Carnegie Mellon, the file <vr_sites> by Bill Cockayne at
+<ftp.apple.com>, readme files and my information gathering on the
+Internet.  Corrections and additions are welcomed.  This is a first
+draft and by no means complete.
+
+* _What is Virtual Reality?  A Homebrew Introduction_ is available via
+ftp at <sunsite.unc.edu> (152.2.22.81).  Directory path:
+/pub/academic/computer-science/virtual-reality/papers, filename
+<whatisvr.txt> or <whatisvr.zip>.  This is an excellent resource,
+check section _9.3.  Internet FTP Sites_
+
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+
+FTP site at <ftp.apple.com> (130.43.2.3) This site is the repository
+for information on Macintosh VR applications.  Directory path is
+pub/vr.  Questions and suggestions should be directed to Bill
+Cockayne, <billc@apple.com>.  This site includes a list of FTP sites
+filename <vr_sites>.
+
+FTP site at <ftp.u.washington.edu> (128.95.136.1) Directory path:
+/public/virtual-worlds.  Sci.virtual-worlds archive, information
+include _TheRealFaq_.  The faq is old and is in revision.  New VEOS
+code will be added in May, 1993 as well...it will be in a new
+directory, /public/HITLab.  Techical reports from the HIT Lab will
+also be uploaded.  *Warning* this is in progress and NOT available
+yet.
+
+FTP site at <karazm.math.uh.edu> (129.7.128.1).  Files include code
+for power gloves, etc.  Directory path: /pub/VR.  Note: as of May 2,
+1993...this directory is gone.  I ftp'ed to this site and in the pub
+directory, there was no subdirectory of VR.  I checked all directories
+under /pub and found no mention of vr, except in the Incoming
+directory in which someone has uploaded the <whatisvr.txt>.
+
+FTP site at <sugrfx.acs.syr.edu> (128.230.24.1).  Syracuse, NY:
+Syracuse University.  Files include virtual reality demonstrations,
+Iris information and mirrors some of sci.virtual-worlds site at
+University of Washington.
+
+FTP site at <sunee.uwaterloo.ca> (129.97.50.50).  Waterloo, Ontario,
+Canada: University of Waterloo.  Site contains freeware REND386 in
+freeware VR -- directory path: /pub/rend386.
+
+Excerpt from readme file <WHATS_WHAT.README>:
+
+pub/glove contains files related to the PowerGlove
+pub/netgame contains ideas related to networked games and shared VR's
+pub/raytracers contains a selection of raytracing graphics packages
+pub/rend386 contains Dave Stampe and Bernie Roehl's fast screen renderer
+pub/sound contains C source for playing soundfiles on a PC
+pub/vgif contains a GIF viewer
+pub/vr contains miscellaneous files related to Virtual Reality
+
+In the pub/vr directory there are: /demos and /documents.  /demos
+contains a wireframe object-viewer, a SuperScape demo, the UltraForce
+demo, the REND386 demo, and the Virtual Reality Studio demo.
+/documents holds <whatisvr.txt>, Jerry Isdale's "What Is VR?"
+document, a description of Sense8's "nff" file format, a document on
+DIS, paper on GAlilean anti-aliasing and OFF specs.
+
+FTP site at <avalon.chinalake.navy.mil> (129.131.31.11).  This site is
+now mirrored on ftp.kpc.com (144.52.120.9) in /pub/mirror/avalon.  The
+Avalon site was created to be THE Internet 3D object repository.  3D
+object files are archived in various formats, utilities to convert
+between the different formats and documents explaining the file
+formats.
+
+Directory paths: all under /pub (excerpt from README file):
+
+        pub/FAQs          FAQ documents from the comp.graphics newsgroups
+        pub/format_specs  Documents that explain the different 3D object
+                          file formats available.
+        pub/incoming      Directory for incoming stuff. See below.
+        pub/misc          Anything that doesn't belong anyplace else.
+        pub/objects       3D object files. Subdirectories exist for
+                          different formats.
+        pub/utils         Any utilities that help manipulate, view or
+                          convert between the different object formats.
+
+FTP site at <sunsite.unc.edu> (152.2.22.81) This is an "information
+gather's heaven" site.  A wealth of information,
+/pub/academic/computer-science/virtual-reality the directory contains
+VR demos, partial mirror of sci.virtual-worlds and glove-list, papers,
+articles, and much, much more.
+
+Excerpt from INDEX file:
+
+3d --  Images and software related to 3D viewing 
+general --  Files that don't fit anywhere else
+glove-list --  Partial mirror of the Powerglove Mailing list archive
+ibm --  VR programs for use with MSDOS computers
+irc -- Papers and logs concering the Internet Relay Chat network
+sgi --  Various graphic and powerglove programs for the SGI Iris workstation
+papers --  Research and Newspaper articles 
+powerglove --  Software and information for the PowerGlove
+rend386 -- A fast MSDOS VR rendering package (Mirror of sunee.uwaterloo.ca)
+standards --  Proposed standards for file formats, network protocols
+uforce --  Software for the nintendo Uforce
+virtual-worlds --  Mirror of the sci.virtual-worlds archive
+
+FTP site at <src.doc.ic.ac.uk> (146.169.2.1).  Site contains usenet
+archives from sci.virtual-worlds and comp.sys.isis.  Directory path is
+/usenet/comp.archives/auto/comp.sys.isis
+/usenet/comp.archives/auto/sci.virtual-worlds
+
+FTP site at <wuarchive.wustl.edu> (128.252.135.4) This site is a
+complete mirror of the usenet group <sci.virtual-worlds>.  There is
+also a graphics archive with graphics related information and source
+in /graphics.
+
+FTP site at <parcftp.xerox.com> Site of the great MOO Mud. Directory
+path: /pub/MOO/papers.  Directory contains are reports and other
+papers written on the subject of mudding.
+
+Excerpt of README file:
+
+   _Mudding: Social Phenomena in Text-Based Virtual Realities_
+   _MUDs Grow Up: Social Virtual Reality in the Real World_
+   _Better Living Through Language: The Communicative Implications of a
+         Text-Only Virtual Environment, or, Welcome to LambdaMOO!_
+   _Conversational Structure and Personality Correlates
+         of Electronic Communication_.
+   _Electropolis: Communication and Community on Internet Relay Chat_
+   _Virtual Reality: Reflections of Life, Dreams, and Technology
+         An Ethnography of a Computer Society_
+    _Identity Workshop: Emergent Social and Psychological Phenomena
+         in Text-Based Virtual Reality_
+
+
+Telnet site at <phantom.com> (38.145.218.22) MindVox system.  Telnet
+to phantom.com and login as 'guest'.  You will be charged a fee if you
+decide to become a user.
+
+ 
+
+

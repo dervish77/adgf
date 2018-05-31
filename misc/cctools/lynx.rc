@@ -1,0 +1,93 @@
+#!/bin/csh
+##############################################################################
+# lynx.rc  - set up the user environment for lynxos development.
+#
+# This script sets up the user environment for LynxOS development.
+# It should be sourced prior to running any makefiles under 
+# $(ENV_PREFIX)/src.
+#
+# Usage:
+#
+# csh$ source lynx.rc
+#
+##############################################################################
+
+
+
+## Do not change this unless directed to do so
+setenv REVA_PREFIX /millenniumvobs/smm_root/reva
+setenv FADS_PREFIX /millenniumvobs/smm_root/fads
+
+
+
+##############################################################################
+
+
+
+## Do not change this unless directed to do so
+setenv ENV_PREFIX /millenniumvobs/lynx/ppc
+
+
+## Do not change this unless directed to do so
+setenv TOOLS_PREFIX /net/smelt/export/tools/opt/lynx/3.0.1/ppc
+
+
+
+##############################################################################
+
+
+setenv PROJECT_DIR $REVA_PREFIX/proj
+setenv PROJECT_DIR_PORT $REVA_PREFIX/proj/common
+setenv BSP_DIR $REVA_PREFIX/sys/bsp.mpc860t_reva
+
+
+##############################################################################
+
+
+setenv LYNXTARGET 	ppc
+setenv OBJSFORMAT 	xcoff
+
+
+##############################################################################
+
+
+setenv HOST_OS_REVISION 	`uname -r`
+
+setenv HOST_OS 			sunos
+						
+setenv HOST_OS_TYPE 		solaris
+
+
+##############################################################################
+
+
+setenv HPATH $TOOLS_PREFIX/cdk/$HOST_OS-$OBJSFORMAT-$LYNXTARGET
+
+if ("`echo $path | fgrep $HPATH/usr/bin`" == "" ) then
+    set path=($HPATH/bin $HPATH/usr/bin $TOOLS_PREFIX/usr/tools $path)
+endif	
+
+if ("`echo $MANPATH | fgrep $TOOLS_PREFIX/usr/man`" == "" ) then
+    setenv MANPATH "$TOOLS_PREFIX/usr/man:${MANPATH}"
+endif
+
+if ( ! $?LM_LICENSE_FILE ) then 
+  setenv LM_LICENSE_FILE $TOOLS_PREFIX/license/license.dat
+else
+  if ("`echo $LM_LICENSE_FILE | fgrep $TOOLS_PREFIX/license/license.dat`" == ""  ) then 
+    setenv LM_LICENSE_FILE "$TOOLS_PREFIX/license/license.dat:${LM_LICENSE_FILE}"
+  endif
+endif
+
+
+set PW_CSH=($TOOLS_PREFIX/usr/tools/pw.csh)
+
+if ( -f $PW_CSH ) then
+  source $PW_CSH
+endif
+
+
+##############################################################################
+
+## we're done here!
+setenv LYNXRC 1 

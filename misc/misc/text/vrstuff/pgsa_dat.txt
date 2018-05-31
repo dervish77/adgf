@@ -1,0 +1,342 @@
+From newstand.syr.edu!psinntp!rpi!batcomputer!cornell!uw-beaver!news.u.washington.edu!milton.u.washington.edu!hlab Sat Apr 25 00:14:58 EDT 1992
+Article: 3739 of sci.virtual-worlds
+Newsgroups: sci.virtual-worlds
+Path: newstand.syr.edu!psinntp!rpi!batcomputer!cornell!uw-beaver!news.u.washington.edu!milton.u.washington.edu!hlab
+From: jlb31348@uxa.cso.uiuc.edu (Jim Brain)
+Subject: TECH: PowerGlove Serial Adapter II data sheet!!
+Message-ID: <1992Apr23.061414.18252@u.washington.edu>
+Originator: hlab@milton.u.washington.edu
+Sender: news@u.washington.edu (USENET News System)
+Organization: University of Illinois at Urbana
+Date: Wed, 22 Apr 1992 14:37:17 GMT
+Approved: cyberoid@milton.u.washington.edu
+
+
+
+Here is the data sheet I worked up for what we have so far.  I need someone 
+to tell me if the sega glasses will work off 5 volts rather than 12.
+
+The below information is given out on the basis that many people requested it
+for their curiosity and they wanted to start writing code.  This is NOT for 
+people to reverse engineer.  I say this because a lot of time and effort went
+into getting this project this far, and we intend to use this project to
+fund more such small projects (aka, no profit will be made, just fundraising).
+With that said, I hereby give this information to the Sci.Virtual-Worlds
+newsgroup for enjoyment and possible code development.  Nothing in this sheet
+is final, so feel free to email me with questions, concerns, questions, or 
+objections.  (however, I am in school and it is close to finals, so be 
+patient).
+
+I hope to have alpha version ready in two weeks (linmited capability), and 
+betas ready by the beginning of summer.  I hope you all can wait that long.  
+I thought I might have jumped the gun about telling you when the delivery is 
+so far off, but I thought everyone would be interested in getting in on the 
+ground floor of this project with ideas.  I hope I am not wrong about this.  
+Standard Disclaimers apply, as this info is NOT final, but is tentative.  
+(.... Jim, quit talking and let them see the goodies!  Yes, Mom...)  Here it 
+is:
+
+P.S. I hope someone can put this at karazm for me!  I do not have time right 
+now.
+
+Here is the definitive list of Commands for the upcoming PGSA II Box.  This
+converter box will supercede all version of the original PGSA converter box
+from Abrahms Gentile Entertainment Incorporated (AGE).  This new box will also
+emulate the Commands found in Ron Minelli's 6811 Converter box project.  There
+are tricky things to show here, so if you do not understand anything, please
+send me email.
+
+Jim Brain
+brain@cs.uiuc.edu
+jlb31348@uxa.cso.uiuc.edu
+
+
+The PowerGlove Serial Adapter II  Command Set:
+
+        The PGSA II is designed to provide errorless communication with the 
+Mattel PowerGlove.  Also, this box was designed to allow users of programs
+written for either AGE's original PGSA or Ron Minelli's Converter Box ]
+Project to reuse their software without changes.  The emulation mode
+assumes that the program attempting to use the converter will start
+execution by putting the box into the appropriate mode (request or
+continuous) and will set the emulation mode accordingly.  I encourage people
+to write interrupt driven routines for platfroms other than the IBM PC, 
+since I already have a source for that platform.  I would also like to 
+gain the privilege of distributing these drivers to people who buy this box
+for their own use.
+
+Minelli Emulation:
+
+        This emulation mode will enable use of the PGSA II as an equivalent
+to the project box described by Ron Minelli.  The project is described in
+detail in a file on karazm.math.edu entitled PGHC11. The commands used by 
+this emulation mode are as follows:
+
+'C'     this command sent to the PGSA II will enable continuous download
+        mode, where a new packet is sent out right after it is received from
+        the PowerGlove.
+
+'R'     This command sent to the PGSA II will enable Request mode, where
+        a new packet is only sent when asked for one.
+
+'?'     This command will request a packet in request mode.  It has no
+        effect in continuous mode.
+
+'+'     This command will enable the Deglitching filter as written by
+        Dave Stamp.  It will deglitch the X and Y coordinates at this
+        point.
+
+'-'     This command will disable the deglitching filter.
+
+
+The packet sent out in Minelli mode looks like the following:
+
+        In continuous mode, the packets have the following data in them
+
+   01 02 03 04 05       06   07
+   A0 X  Y  Z  rotation flex switch 
+
+Where:
+        A0 is the start byte (A0 hex)
+        X  is the X coordinate
+        Y  is the Y coordinate
+        Z  is the Z coordinate
+        rotation gives the angle of rotation divided by 30 degrees
+        flex gives the values for the finger positions
+        switch gives a value for what key is being pressed on the PG keypad
+
+Flex is one byte divided as follows:
+
+        7:6   5:4  3:2    1:0 
+        Thumb Fore Middle Ring
+
+where each finger can have 4 positions:
+
+00b     fully extended
+01b     partially extended
+10b     partially closed
+11b     fully closed
+
+In request mode, the packet is sent the same way, but the A0 byte is left off.
+Therefore the packet length is 6 bytes.
+
+
+The commands 'C', 'R', and '?' will put the PGSA II into this emulation mode.
+The commands '+', and '-' will leave the PGSA II in its current emulation mode.
+
+
+AGE Emulation:
+
+        The AGE emulation mode will enable use of the PGSA II as the equivalent
+to the AGE original PGSA.  In this mode the following commands apply:
+
+0x01    This command will put the PGSA II in continuous mode.  It will send a
+        packet as soon as it is received from the PowerGlove.
+
+0x02    This command will put the PGSA II in request mode AND send out one
+        packet of information.  To request another packet, one merely sends
+        another 0x02.
+
+0x04    This command will resend the default initialization template to
+        the glove.  This template determines the resolution.
+
+0x07    This command will reset the box to the following defaults:
+        
+        Deglitching: ON
+        Rotation filter: ON
+        Emulation: AGE
+
+0x08    This command will turn on the rotation filter designed to smooth
+        out the inherent twitching of the rotation value.
+
+0x09    This command will turn off the rotation filter
+
+
+
+The packet sent out in AGE mode looks like the following:
+
+        In continuous mode, the packets have the following data in them
+
+   01 02 03 04 05  06       07   08     09     10     11
+   5F 5F X  Y  Z   rotation flex switch GSTAT1 GSTAT2 Receiver values
+
+Where:
+        
+        5F 5F is the start string
+        X  is the X coordinate
+        Y  is the Y coordinate
+        Z  is the Z coordinate
+        rotation gives the angle of rotation divided by 30 degrees
+        flex gives the values for the finger positions
+        switch gives a value for what key is being pressed on the PG keypad
+        GSTAT1 is (was) for future use
+        GSTAT2 is (was) for future use
+        Receiver values gives the status of receivers getting signals
+
+
+Flex is one byte divided as follows:
+
+        7:6   5:4  3:2    1:0
+        Thumb Fore Middle Ring
+
+where each finger can have 4 positions:
+
+00b     fully extended
+01b     partially extended
+10b     partially closed
+11b     fully closed
+
+
+GSTAT2 is always zero (as far as I can tell), but GSTAT1 takes the value 01h
+when the glove has not been calibrated (immediately after pwerup or reset, when
+the fingers still need to be trained) and takes the value 00h otherwise.
+
+In request mode, the packet is sent the SAME EXACT WAY, including the two
+5fH characters at the beginning. Note this.
+
+
+The commands 0x01 and 0x02 will put the PGSA II in AGE emulation mode.
+All other commands will leave the PGSA in the same mode.
+
+Use of The Box:
+
+        The PGSA II is designed to allow users of existing programs designed wit
+h either the PGSA or the Minelli Project to operate flawlessly.  This provides t
+he backward compatibility.  However, there are a few guidelines to follow:
+
+1:      Programs that put the box in strange modes will work fine, but the box
+        may need to be reset before operating another program.   This is only 
+        applicable to programs that do not put the PGSA II back into the same
+        satate it was in when the program started.  Example.  Program A puts the
+        PGSA II in request AGE mode and then exits without changing back to
+        continuous mode. Program B starts, expecting to be getting continuous 
+        data (because that is the default state for the PGSA) and hangs because
+        the box is inrequest mode.  This can be fixed by manually resetting or
+        by sending the continuous command manually.
+
+2:      Programs that expect the Box to emulate Minelli's Code immediately after
+        reset will not work, since the PGSA II starts up in AGE emulation and
+        needs a command to know what to switch to.  Solution.  Manually send the
+        C or R commands.
+
+As other potential problems arise, I will solve them.  At the moment, the
+distribution disk will have a little program to send the commands without 
+needing a terminal program.  It will also have command switches for the commands
+on the comand line.  I LOVE C.
+
+
+        AS with most new products building on the laurels of older compatible 
+products, the PGSA II has a few new commands.  They are still being added, but 
+here is a tentative list:
+
+0x0A    Change baud rate. You must send a second byte with this to tell what
+        baud rate to change to.  Max is 9600 now, but will hopefully be 38400
+        by the time this gets released.
+
+0x11-1A These commands are to control a second PowerGlove.  You are on your
+or      own to find a left handed glove.  I have no idea how to handle both
+0x81-8A PGs operating in continuous mode, but I will figure it out.  This mode
+        will not have corresponding Minelli command sequences.
+
+0x0B    This command will flip the SEGA glasses to the left eye.  I will try
+        to make this work for all such glasses (Nintendo...)
+
+0x0C    This command will flip the glasses to the right eye.  Same as above.
+
+0x0D    This command will flip glasses to opposite eye.
+ 
+0x0E-0F These are up for grabs.
+
+
+Notice to those who write new programs:
+
+        New programs written for either of the two boxes we intend to emulate,
+or the PGSA II, should follow these general rules:
+
+1:      Reset the box after finished using it.  This can be accomplished by
+        sending the reset command on the PGSA and PGSA II boxes, or by putting
+        the Minelli Box in Continuous mode with deglitching on.
+
+2:      Have a menu to let users select which box they own.  At least provide
+        command line switches to enable stuff for another box.
+
+3:      Write programs that call one function to set the box into the mode you
+        want and one function to get the data back.  That way, users can port \
+        code from platform to another without major headaches.  We will be
+        distributing code for many platforms to do this with instructions.
+        (In C and Assembly, of course).
+
+4:      If you write your own polling routine, be sure to escape out if
+        you do not receive a valid data string in, say, 5 seconds.  This way,
+        your code will not hang if a user forgets to put his box into the port
+        or puts it into the wrong port.
+
+5:      And this is a big one.  make sure you support all applicable RS-232
+        ports.  I hate to grope around the back of my machine to rearrange
+        cables,  and I hate to have two versions of the same program just to
+        use either port.  We will let you specify th com port to use, but it
+        is up to the author of the program to make this switch available to the
+        end user.
+
+6:      If you do data cruching or something else like that on the raw data,
+        please make it disableable at the command prompt.  Things like
+        extra smoothing of data should be able to be disabled if possible (
+        This one is not as critical as the other ones
+
+
+
+Possible other stuff:
+
+        I have had some interest in implementing Data Glove Emulation in the
+Box.  This is not definite, but is being looked into.
+
+
+Alpha Test Boxes:
+
+        I am trying to finalize enough of the design so that alpha boxes will
+be available in a few weeks.  However, for those who want one, I am warning you
+ahead of time:  I need drivers for these boxes.  I will be much more inclined
+to distribute boxes to those people who will write drivers for various platforms
+ and will do so in an orderly fasihion.  This is not discrimination (Well, it
+isn't meant to be), it is a fact of life.  People who write drivers will be the
+only one who can use the boxes since I have an IBM driver only for the box as 
+of now.  I am eager to get the stuff on the market, but will not do it without
+drivers.  Help me out.  If you can write drivers ahead of time for me.  I may
+scrap this plan.  There are a few people whom I will distribute alpha boxes
+to that will not be writing code.  These are peoople I want to test the 
+emulation modes of the PGSA II.  I do not mean for this paragraph to sound
+mean.  I just hope everyone knows what I intended to say in this paragraph, and
+not what I actually said.  Anyway, son't get upset at me.  This is my first
+attempt at being legislative.
+
+The alpha test boxes will look somewhat like the real thing.  If you have
+Ron Minelli's box and want to try my code.  E-mail me.  We can do your
+existing box.  However, I must warn everyone:
+
+        The code will not be public domain.  I DID get the rights from all those
+people on the header of Ron Minelli's code, but the AGE stuff is not available
+for the public.  (Not my decision, but their's) Anyway, if I rework
+your box, I must have your word that you will not try to pry the code out.
+This is a trust thing.  I am willing if the VR community is willing.  This might
+allow some people to get working boxes before we manufacture them, but there
+are these strings attached.
+
+        I am quitting now. I will revise this and put it up a Karazm sometime
+soon, but just remember:
+        
+        I am just a college student, so be patient and have a long temper (-:
+
+
+Jim Brain
+Project Leader of the PwerGlove project of SIGARCH at UIUC.
+Mike Schaffstein: Chairman
+Mike Stangel: Vice Chair
+
+The commands '+', and '-' will leave the PGSA II in its current emulation mode.
+
+-- 
+Nothing is better than Eternal Happiness.             jlb31348@uxa.cso.uiuc.edu
+A ham sandwich is better than nothing.                                Jim Brain
+Therefore, a ham sandwich is better than eternal happiness.
+
+

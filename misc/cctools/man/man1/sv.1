@@ -1,0 +1,63 @@
+.ad l
+.TH SV 1 "07 May 1999" "3Com"
+.SH NAME
+sv - set to a view in ClearCase.
+
+.SH SYNOPSIS
+.B "sv" \fI<viewname>\fP 
+
+.SH DESCRIPTION
+The "sv" command sets the user's context to a ClearCase view 
+specified by the \fI<viewname>\fP parameter.  The \fI<viewname>\fP
+parameter is a portion of the full ClearCase view tag having the 
+format -- <username>_<project>_<viewname>.  
+
+The "sv" commands assumes that the view was created by using 
+the "mkv" command.  
+
+.SH FIELDS
+.TP 5
+.B "<viewname>" - view name.
+
+View name is a portion of the full ClearCase view tag having the 
+format <username>_<project>_<viewname>.
+
+.SH EXAMPLES
+.PP
+To set a view for main LATEST, use
+.PP
+.B
+     sv main
+.PP
+To set a view for a development branch, use
+.PP
+.B
+     sv dev_ne_feature
+.PP
+To set a view for an integration branch, use
+.PP
+.B
+     sv int_ne_smm_beta_01.03.00
+.PP
+To set a view for a bug fix branch, use
+.PP
+.B
+     sv dev_ne_mr225
+.PP
+To set a view for an engineering release branch, use
+.PP
+.B
+     sv smm_er_01.05.00
+
+
+.SH SEE ALSO
+mkv(1), rv(1), cleartool man setview
+
+.SH FILES
+/net/fridge/sun4/usr/cctools/bin/setview.pl
+
+.SH COPYRIGHT
+Copyright 1999 3Com Corporation.
+
+.SH AUTHORS
+Brian Lingard, 3Com Corporation.

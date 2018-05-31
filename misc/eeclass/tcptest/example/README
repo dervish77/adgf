@@ -1,0 +1,38 @@
+README for example TCP client/server programs
+__________________________________________________
+
+
+Files:
+	client.c	- client program
+
+	server.c	- server daemon
+
+__________________________________________________
+
+
+To build:
+
+	cd example
+	make
+
+
+To cleanup:
+
+	cd example
+	make clean
+or
+	make realclean
+
+__________________________________________________
+
+
+Usage on single machine, type:
+
+	server 50001&			- to start server daemon
+
+	client localhost 50001		- to run client
+
+
+The client will attempt to connect to the server and send 5 request 
+messages.  The server should respond with 5 result messages.  There
+are some delays built in to simulate data processing.

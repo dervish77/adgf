@@ -1,0 +1,1 @@
+cube -s -n 4 -p 1 -l s1log.out &

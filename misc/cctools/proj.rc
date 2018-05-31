@@ -1,0 +1,152 @@
+#!/bin/csh
+#
+#  .projrc
+#
+#  Project specific setup for SMM.  Contains additional environment
+#  variables, new paths, manpath changes, and aliases for SMM related
+#  scripts.
+#
+#  Notes:
+#	- assumes SWT's ClearCase setup file .cmsrc has been sourced
+#	- assumes PROJECT variable has been defined
+#	- assumes PROJHOME variable has been defined
+#	- assumes SITE variable has been defined
+#
+#  Revisions:
+#	bsl	05/18/99	added a few new admin aliases
+#	bsl	03/15/99	temporarily changed "ci" alias
+#	bsl	01/25/99	updated for /millenniumvobs path
+#	bsl	11/04/98	copied from HDM project and modified
+#
+
+
+#
+# Define SMM specific environment variables.
+#
+setenv MAKETOOL		"make"
+
+setenv SMMROOT		'/millenniumvobs/smm_root'
+
+setenv SMMCCTOOLS	${PROJHOME}
+
+
+#
+#  Add SMM specific tools to PATH variable
+#
+set path = ($path ${PROJHOME}/bin )
+
+if (${SITE} == "ne") then
+  set path = ($path /export/tools/tools/vslick/bin )
+  set path = ($path /net/smelt/export/tools/opt/glimpse/bin )
+endif
+
+
+#
+#  Add man pages for SMM scripts to MANPATH variable.
+#  	First add site independant man pages to MANPATH.
+#	Second add site dependant man pages to MANPATH.
+#
+if (${?MANPATH}) then
+  if ("`echo $MANPATH | fgrep /usr/openwin/man`" == "" ) then
+    setenv MANPATH "${MANPATH}:/usr/openwin/man"
+  endif
+  if ("`echo $MANPATH | fgrep /opt/gnu/man`" == "" ) then
+    setenv MANPATH "${MANPATH}:/opt/gnu/man"
+  endif
+  if ("`echo $MANPATH | fgrep ${PROJHOME}/man`" == "" ) then
+    setenv MANPATH "${MANPATH}:${PROJHOME}/man"
+  endif
+
+  if (${SITE} == "ne") then
+    if ("`echo $MANPATH | fgrep /net/smelt/export/tools/opt/glimpse/man`" == "" ) then
+      setenv MANPATH "${MANPATH}:/net/smelt/export/tools/opt/glimpse/man"
+    endif
+  endif
+
+  if (${SITE} == "wb") then
+    if ("`echo $MANPATH | fgrep /net/fridge/hdm/man`" == "" ) then
+      setenv MANPATH "${MANPATH}:/net/fridge/hdm/man"
+    endif
+  endif
+endif
+
+
+#
+# Define global aliases.
+#
+alias myviews		'cleartool lsview | grep ${USER}'
+alias myco		'cleartool lsprivate -co -sh'
+
+alias update		'cleartool findmerge . -flatest -merge -graphical'
+alias scan		'cleartool findmerge . -flatest -print'
+
+alias edit		'textedit \!^ &'
+alias psgrep 		'ps -aux | grep \!^ | sort'
+
+
+#
+# Define aliases for LynxOS related commands.
+#
+#alias golynx		'source ${PROJHOME}/lynx.rc'
+
+source ${PROJHOME}/lynx.rc
+
+
+#
+# Define aliases for USER type commands.
+#
+
+alias mkv		'mkv.pl'
+alias sv		'setview.pl'
+alias rv		'rmview.pl'
+
+alias ccbuild		'smm_ccbuild.sh'
+alias fm		'smm_fm.sh'
+
+#alias ci		'smm_ci.pl'
+alias ci		'cleartool ci'
+
+alias smmroot		'cd /millenniumvobs/smm_root'
+alias smmsc		'cd /millenniumvobs/smm_sc'
+alias smmsw		'cd /millenniumvobs/smm_sw'
+alias lynx		'cd /millenniumvobs/lynx'
+alias 3party		'cd /millenniumvobs/3party'
+
+alias tools		'cd /millenniumvobs/smm_root/tools'
+alias fads		'cd /millenniumvobs/smm_root/fads'
+alias reva		'cd /millenniumvobs/smm_root/reva'
+alias proj		'cd /millenniumvobs/smm_root/reva/proj'
+alias cctools		'cd /millenniumvobs/smm_root/cctools'
+
+alias vs                '/export/tools/vslick/bin/vs'
+
+#
+# Define aliases for ADMIN type commands.
+#
+
+alias csgen		'smm_csgen.pl'
+
+alias mktype		'mktype.pl'
+
+alias labelview		'smm_labelview.sh'
+alias labelvob		'smm_labelvob.sh'
+
+alias createbranch	'smm_createbranch.sh'
+
+alias newcs		'smm_newcs.sh'
+alias newfile		'smm_newfile.sh'
+alias newdir		'smm_newdir.sh'
+
+alias lockbranch	'smm_lock_branch.sh'
+alias unlockbranch	'smm_unlock_branch.sh'
+
+alias locklabel		'smm_lock_label.sh'
+alias unlocklabel	'smm_unlock_label.sh'
+
+alias importfile	'smm_importfile.sh'
+
+
+#
+# we're done!
+#
+setenv PROJRC 	1	# processed this file successfully

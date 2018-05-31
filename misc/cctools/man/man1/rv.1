@@ -1,0 +1,65 @@
+.ad l
+.TH RV 1 "07 May 1999" "3Com"
+.SH NAME
+rv - removes a view from ClearCase.
+
+.SH SYNOPSIS
+.B "rv" \fI<viewname>\fP 
+
+.SH DESCRIPTION
+The "rv" command removes a ClearCase view specified by 
+the \fI<viewname>\fP parameter.  The \fI<viewname>\fP
+parameter is a portion of the full ClearCase view tag having the 
+format -- <username>_<project>_<viewname>.  
+
+Note that you must either check in all checked out files or 
+cancel them using the "unco" command prior to removing the view.
+
+The "rv" commands assumes that the view was removed by using 
+the "mkv" command.  
+
+.SH FIELDS
+.TP 5
+.B "<viewname>" - view name.
+
+View name is a portion of the full ClearCase view tag having the 
+format <username>_<project>_<viewname>.
+
+.SH EXAMPLES
+.PP
+To remove a view for main LATEST, use
+.PP
+.B
+     rv main
+.PP
+To remove a view for a development branch, use
+.PP
+.B
+     rv dev_ne_feature
+.PP
+To remove a view for an integration branch, use
+.PP
+.B
+     rv int_ne_smm_beta_01.03.00
+.PP
+To remove a view for a bug fix branch, use
+.PP
+.B
+     rv dev_ne_mr225
+.PP
+To remove a view for an engineering release branch, use
+.PP
+.B
+     rv smm_er_01.05.00
+
+.SH SEE ALSO
+mkv(1), sv(1), cleartool man rmview
+
+.SH FILES
+/net/fridge/sun4/usr/cctools/bin/rmview.pl
+
+.SH COPYRIGHT
+Copyright 1999 3Com Corporation.
+
+.SH AUTHORS
+Brian Lingard, 3Com Corporation.

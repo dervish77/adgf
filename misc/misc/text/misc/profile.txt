@@ -1,0 +1,122 @@
+			EMPLOYEE PROFILE
+
+Name:            	Brian S. Lingard		Date:  May 16, 1996
+Position Title:  	Senior Engineer
+Organization/Location:  Software Engineering Laboratory/Hager
+
+		Service Date:  June 13, 1985  	    Salary Grade: 10
+
+
+			BUSINESS EXPERIENCE
+
+CURRENT POSITION	Date Started:  3/95		Manager:  Ray Gingras
+
+Primary Responsibilities:  
+
+	Software development, integration and fixing software problems for 
+	the Flight Data Display(FDD) on Hong Kong IATC.
+
+Significant Accomplishments:  
+
+ Tasks completed:
+		
+	Terminal Air Traffic Flow Mangement Software System (user interfaces)
+	Flight Data Display Operational Software System (user interfaces)
+
+ Work included experience in:  
+
+	X(-Windows), Motif, GUI builder
+
+
+PREVIOUS POSITION	Title:   Senior Engineer	Dates: 6/90 - 3/95
+			Manager: Larry Black (CDL)
+
+Primary Responsibilites:  
+
+	Hardware development on various custom computer products  and radar
+	systems for defense and non-defense customers.
+
+Significant Accomplishments:
+
+ Tasks completed:
+	
+	IR400 Remote Command Interpreter Software for Iridium program
+	CES Simulator Instrument Driver Software for Iridium program
+
+	FAST PN IBI module design for FEWS program
+	DR11 controller module design for FEWS program
+	FAST PN RVP IOCU CCA design for FEWS program
+
+	BITE Mux CCA design for SPS-49 program
+
+	Serial Interface CCA design for MKXV program
+
+	Event Buffer Address Generator CCA for GBRX program
+
+ Work included experience in:  
+
+	VHDL, FPGAs, logic modeling, logic synthesis, logic simulation, 
+	LabVIEW, GPIB, VXIbus, test instrumentation, VME
+
+
+OTHER PREVIOUS POSITIONS 	(Most Recent Listed First)
+
+Title: Engineer		Organization: CDL	 	Dates: 6/89 - 6/90
+
+Title: MTS		Organization: CDL	 	Dates: 6/85 - 6/89
+
+
+EDUCATION
+
+School			Degree		Major Field	Dates
+
+Worcester Polytechnic	Masters of	Electrical	1987-1995
+Institute		Science		Engineering
+
+Worcester Polytechnic	Bachelor of	Electrical	1981-1985
+Institute		Science		Engineering
+		
+
+OTHER RELATED TRAINING
+	
+	Raytheon in house courses:
+
+		Introduction to Programming in C
+		Unix Systems Programming
+			
+	Self-taught in use of Unix make, GNU compilers, and Unix shell programming
+
+
+PREFERRED NEXT ASSIGNMENT
+
+[First Choice] 					When?	ASAP
+Qualifications:
+
+	Would like to work more directly in X-windows/Motif programming
+	and/or Open-GL programming.
+
+Additional experience/training that will help you prepare:
+
+	Self-taught Open-GL, 2D and 3D graphics programmer.
+
+
+[Alternate Choice]				When?
+Qualifications:
+
+	Would like to work on the area of the Network Operating System (NOS)
+	and Communication System Areas.
+
+Additional experience/training that will help you prepare:
+
+	Developed graduate school projects using Unix socket programming.
+
+
+PERSONAL CONSIDERATIONS
+
+Indicate items such as geographic preferences, interests in overseas 
+assignment, etc.
+
+
+ 	Prefer Massachusetts locations.
+
+     

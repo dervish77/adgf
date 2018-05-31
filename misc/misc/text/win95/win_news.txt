@@ -1,0 +1,279 @@
+From: tomh@metrics.com (Tom Haapanen)
+Reply-To: tomh@metrics.com
+Newsgroups: comp.os.ms-windows.pre-release,comp.os.ms-windows.win95.setup,comp.os.ms-windows.win95.misc,comp.os.ms-windows.apps.winsock.mail,comp.os.ms-windows.apps.winsock.news,comp.os.ms-windows.apps.winsock.misc
+Followup-To: poster
+Subject: INFO: A guide to the Windows newsgroups [FAQ]
+Date: Mon, 22 Jan 1996 05:01:58 GMT
+Organization: Software Metrics Inc.
+Message-ID: <Guide.w4-96-01-22@metrics.com>
+
+Archive-name: ms-windows/newsgrp.guide
+Last-modified: 1996-01-01
+
+
+This is a regularly scheduled weekly posting, which explains the purpose
+of the usenet newsgroups for Microsoft Windows.  Please follow these
+guidelines when posting your articles, and make life easier for all of 
+us.
+
+NOTE: Binary files (whether programs, bitmaps or others) are not to be
+      posted to any of the groups listed below, with the exception of
+      comp.binaries.ms-windows.
+
+
+These are the current Windows newsgroups:
+
+SETUP AND INSTALLATION -- WINDOWS 95 AND WINDOWS 3.x:
+    comp.os.ms-windows.setup.win3x
+	    Questions and problems with setting up and configuring Windows 3.x
+    comp.os.ms-windows.setup.win95
+	    Questions and problems with setting up and configuring Windows 95
+
+GENERAL -- WINDOWS 95 AND WINDOWS 3.x:
+    comp.os.ms-windows.advocacy    
+	    Comparisons, discussion and arguments about Windows 3.x and Windows
+	    95 vs other operating systems.
+    comp.os.ms-windows.announce   
+	    MODERATED.  Announcements and news about Windows applications,
+	    drivers, events etc.
+    comp.os.ms-windows.pre-release
+	    Discussion about unreleased and future versions of Windows
+    comp.os.ms-windows.video      
+	    Video display cards, drivers and monitors for use with Windows
+    comp.os.ms-windows.misc       
+	    All other Windows 3.x discussions (except advocacy with other
+	    operating systems) not covered by other specific newsgroups.
+    comp.os.ms-windows.win95.misc
+	    All other Windows 95 discussions (except advocacy with other
+	    operating systems) not covered by other specific newsgroups.
+
+GENERAL -- WINDOWS NT-SPECIFIC:
+    comp.os.ms-windows.nt.admin.networking
+	    Windows NT network administration, management and security issues
+    comp.os.ms-windows.nt.admin.misc       
+	    Windows NT administration issues, except for networking
+    comp.os.ms-windows.nt.advocacy         
+	    Comparisons and arguments about Windows NT vs other OSs
+    comp.os.ms-windows.nt.announce         
+	    MODERATED.  Announcements and news about Windows NT applications,
+	    drivers, events etc.
+    comp.os.ms-windows.nt.pre-release      
+	    Discussion about unreleased and future versions of Windows NT
+    comp.os.ms-windows.nt.setup.hardware   
+	    Setting up and configuring hardware for Windows NT 
+    comp.os.ms-windows.nt.setup.misc       
+	    Setting up and configuring Windows NT, except hardware issues
+    comp.os.ms-windows.nt.misc             
+	    All other Windows NT-specific discussions except programming and
+	    advocacy
+
+APPLICATION SOFTWARE -- WINDOWS 3.x, 95 AND NT:
+    comp.os.ms-windows.apps.comm         
+	    Communications and fax applications
+    comp.os.ms-windows.apps.financial    
+	    Financial applications
+    comp.os.ms-windows.apps.utilities.win3x
+	    Utilities, desktops and accessories for Windows 3.x
+    comp.os.ms-windows.apps.utilities.win95
+	    Utilities, desktops and accessories for Windows 95
+    comp.os.ms-windows.apps.word-proc    
+	    Word processing and desktop publishing
+    comp.os.ms-windows.apps.misc         
+	    Miscellaneous Windows 3.x, 95 & NT applications
+
+WINSOCK-BASED TCP/IP APPLICATION SOFTWARE -- WINDOWS 3.x, 95 AND NT:
+    comp.os.ms-windows.apps.winsock.mail 
+	    Winsock-based electronic mail applications and utilities
+    comp.os.ms-windows.apps.winsock.news 
+	    Winsock-based Usenet news readers and servers
+    comp.os.ms-windows.apps.winsock.misc 
+	    Winsock-based applications other than news and email
+
+SOFTWARE -- WINDOWS NT-SPECIFIC:
+    comp.os.ms-windows.nt.software.backoffice
+	    Microsoft BackOffice (SMS, SQL Server, Exchange, SNA Server, 
+	    Internet Information Server)
+    comp.os.ms-windows.nt.software.services     
+	    System services software for Windows NT, including daemons,
+	    servers and background processes; not intended for general
+	    desktop application discussions.
+
+SOFTWARE -- COMPATABILITY ISSUES:
+    comp.os.ms-windows.apps.compatibility.win95
+	    Compatibility issues with Win16 and MS-DOS applications on Win95.
+    comp.os.ms-windows.nt.software.compatibility
+	    Compatibility issues with Win16 and MS-DOS applications on NT.
+
+NETWORKING -- WINDOWS 3.x, 95 AND NT:
+    comp.os.ms-windows.networking.ras    
+	    Use of Remote Access Services (RAS) dial-up networking
+    comp.os.ms-windows.networking.tcp-ip 
+	    TCP/IP-based networking for Windows, includign NFS and apps
+    comp.os.ms-windows.networking.windows
+	    Windows' native networking: WFWG, NT, NTAS and LAN Manager
+    comp.os.ms-windows.networking.win95
+	    Windows 95-specific networking issues
+    comp.os.ms-windows.networking.misc   
+	    All other networks, such as Netware, Banyan Vines and LANtastic
+
+PROGRAMMING AND SOFTWARE DEVELOPMENT -- TECHNIQUES:
+    comp.os.ms-windows.programmer.controls  
+	    Using controls, custom controls, VBXs, OCXs and dialogs
+    comp.os.ms-windows.programmer.graphics  
+	    Graphics and GDI programming in Windows
+    comp.os.ms-windows.programmer.memory    
+	    Memory and process management, threads and IPC in Windows
+    comp.os.ms-windows.programmer.multimedia
+	    Development of multimedia and video applications
+    comp.os.ms-windows.programmer.networks  
+	    Network-specific application development for Windows
+    comp.os.ms-windows.programmer.ole       
+	    Creating OLE, COM and DDE-based applications
+    comp.os.ms-windows.programmer.win32     
+	    Developing for the Win32 API (including NT and Win32s)
+    comp.os.ms-windows.programmer.winhelp   
+	    Developing WinHelp and Multimedia Viewer files and applications
+    comp.os.ms-windows.programmer.misc      
+	    All other Windows programming and development discussions
+
+PROGRAMMING AND SOFTWARE DEVELOPMENT -- DEVELOPMENT TOOLS:
+    comp.os.ms-windows.programmer.tools.mfc    
+	    Microsoft Foundation Classes (MFC) class library-specific discussion
+    comp.os.ms-windows.programmer.tools.owl    
+	    ObjectWindows Library (OWL) class library-specific discussion
+    comp.os.ms-windows.programmer.tools.winsock
+	    Developing Winsock-based TCP/IP applications
+    comp.os.ms-windows.programmer.tools.misc   
+	    Windows development tools, class libraries and compilers
+	    except for OWL and MFC
+
+PROGRAMMING AND SOFTWARE DEVELOPMENT -- DEVICE DRIVERS:
+    comp.os.ms-windows.programmer.nt.kernel-mode 
+	    Development of Windows NT kernel-mode drivers
+    comp.os.ms-windows.programmer.vxd            
+	    Development of VxDs and Windows 3.x and 95 device drivers
+
+VISUAL BASIC AND DELPHI GROUPS:
+    comp.lang.basic.visual.database
+	    Database access and development
+    comp.lang.basic.visual.3rdparty	
+	    Third-party tools
+    comp.lang.basic.visual.announce
+	    MODERATED.  Announcements only
+    comp.lang.basic.visual.misc		
+	    Other Visual Basic discussions
+
+    comp.lang.pascal.delphi.controls	
+	    Using controls in Delphi
+    comp.lang.pascal.delphi.database	
+	    Delphi database development
+    comp.lang.pascal.delphi.misc	
+	    Other Delphi discussions
+
+OTHER RELATED GROUPS:
+    comp.apps.spreadsheets        
+	    Spreadsheets and related applications, including Excel, Quattro
+	    and 1-2-3.
+    comp.databases.ms-access      
+	    Using and programming Microsoft's Access database package
+    comp.databases.ms-sqlserver
+	    Using and programming Microsoft SQL Server
+    comp.os.msdos.mail-news       
+	    Administering mail and news software on Windows and MS-DOS.
+    comp.binaries.ms-windows      
+	    MODERATED.  Shareware, freeware, drivers and other binary files.
+    comp.protocols.tcp-ip.ibmpc   
+	    Discussions about the use of TCP/IP on PC systems
+    bit.listserv.win3-l           
+	    This newsgroup is a copy of the BITNET WIN3-L mailing list for
+	    all Windows discussions
+
+GENERAL -- REGIONAL GROUPS:
+    uk.comp.os.win95	
+	    Any and all Windows 95 related issues, including, and not limited
+	    to, hardware and software selection, setup, Internet access and
+	    hardware compatibility.  Intended principally for UK based users.
+
+OBSOLETE GROUPS: (Superseded by other newsgroups)
+    comp.os.ms-windows.setup       
+	    Windows 3.x setup and installation
+    comp.os.ms-windows.win95.setup 
+	    Windows 95 setup and installation
+    alt.winsock                    
+	    Winsock applications and stacks (TCP/IP)
+    alt.winsock.programmer         
+	    Winsock application development (TCP/IP)
+
+NON-WINDOWS NEWSGROUPS: (Do not use for Windows-specific topics!)
+    comp.lang.visual   
+	    Visual programming languages, *not* Visual Basic or Visual C++
+    comp.lang.pascal.* 
+	    The Pascal language itself; not appropriate for Windows topics
+    comp.lang.c        
+	    The C language itself; not appropriate for Windows topics
+    comp.lang.c++      
+	    The C++ language itself; not appropriate for Windows topics
+    comp.windows.news  
+	    For the NeWS windowing system, not Microsoft Windows
+    comp.windows.misc  
+	    For other windowing systems, not Microsoft Windows
+
+MAILING LISTS:
+    MFC-L mailing list
+	    The mfc-l mailing list is a moderated mailing list intended for
+	    intermediate and advanced MFC programmers.  People may subscribe
+	    to this list by sending a note to listserv@netcom.com with the line
+		subscribe mfc-l
+	    in the body.
+    OWL-LIST mailing list
+	    The owl-list mailing list is a moderated mailing list intended for
+	    intermediate and advanced OWL programmers.  People may subscribe
+	    to this list by sending a note to majordomo@netlab.cs.rpi.edu with
+	    the line
+		subscribe owl-list <address>
+	    in the body.
+
+	 
+GENERAL GUIDELINES:
+    Please try to post to the appropriate newsgroup, and try to avoid
+    crossposting whenever possible. This makes it easier for everyone
+    to find the information they are looking for without wading through
+    irrelevant articles.
+
+    Second, please do not get involved in arguments about Windows vs.
+    OS/2 vs. Macintosh vs. NeXTSTEP *except* in the .advocacy groups.
+    Don't post any comparison or argument, and if someone else posts one
+    -- don't post a followup! Ignore this flamebait, and help increase
+    the signal-to-noise ratio of the newsgroups.
+
+SUBSCRIBING AND UNSUBSCRIBING:
+    To subscribe to a Usenet newsgroup, you can use the "gnewsgroupname"
+    command at the newsgroup level in rn, trn and strn.  To unsubscribe,
+    hit "u" while in that newsgroup, if you are using rn, trn or strn.
+    If you're using a Windows-based newsreader, please consult the
+    documentation for instructions on subscribing and unsubscribing.
+
+    To subscribe to a LISTSERV mailing list, send a mail message to the
+    LISTSERV at the mailing list address (ie LISTSERV@uicvm.bitnet for the
+    WINHLP-L@uicvm.bitnet list) containing just the text "SUBSCRIBE listname"
+    in the body.  To unsubscribe, send mail to that same LISTSERV with the
+    body "UNSUBSCRIBE listname" or "SIGNOFF listname".
+
+WINDOWS FAQS:
+    The Windows FAQs are available by anonymous ftp from ftp.metrics.com and
+    other sites; see the companion posting "How to get ..." posted simulta-
+    neously with this one for further details.
+
+MICROSOFT FTP SITE:
+    Microsoft also maintains an ftp site (ftp.microsoft.com) with drivers,
+    patches and utilities on it for all of Microsoft's operating systems,
+    including Windows, Windows for Workgroups and Windows NT.
+
+MORE INFORMATION:
+    If you have questions about these guidelines, you can email to Tom
+    Haapanen (maintainer of the FAQ, tomh@metrics.com) or Sean Graham
+    (moderator of the .announce groups, sgraham@shiloh.nimh.nih.gov).
+-- 
+[ /tom haapanen -- tomh@metrics.com -- software metrics inc -- waterloo, ont ]
+[ "you see things; and you say 'why?'; but i dream                           ]
+[  things that never were, and i say 'why not?'       -- george bernard shaw ]

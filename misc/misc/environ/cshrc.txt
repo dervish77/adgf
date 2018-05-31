@@ -1,0 +1,171 @@
+
+# @(#)cshrc_template	1.4 94/02/04 11:38:50
+# Author S. Winter
+#
+# .cshrc file template
+# sourced by C shell at login and start of each subsequent csh
+
+##########################################################################
+
+# set up local path to be appended to PATH by the common_cshrc
+# setenv MY_PATH $HOME/bin
+setenv MY_PATH /tools/teleuse/TeleUSE/bin:/bin/X11:${HOME}/bin
+
+# Source the common cshrc file
+# IF it doesnt exist source the old cshrc file
+setenv IATC_LOCAL /iatc/setup
+if ( -r ${IATC_LOCAL}/common_cshrc ) then
+  source ${IATC_LOCAL}/common_cshrc
+else if ( -r $HOME/.cshrc.old ) then
+  source $HOME/.cshrc.old
+endif
+
+
+##########################################################################
+## User specific .cshrc variables go here
+
+set path = (. ~/bin ~/run_tools $path /usr/lang /tools/frame/bin /stp/hong_kong/tools/bin /ams/bin /tools/frame/bin /usr/local/smartstar/bin /opt/totalview/bin)
+
+setenv PATH /opt/SUNWspro/bin:/usr/bin/X11:${PATH} 
+setenv MANPATH ${MANPATH}:/tools/teleuse/TeleUSE/man:/tools/ixi/IXImfdoc/man:/tools/newsprint:/opt/totalview/man:/home/hki020hk/lingard/man
+setenv LD_LIBRARY_PATH .:/usr/openwin/lib:/usr/X11R5/lib:/tools/teleuse/TeleUSE/lib:/opt/totalview/lib:/nfs/hki020/usr/UconX/api
+#                      /usr/X11R5/lib:             
+setenv PRINTER hk
+setenv LPDEST $PRINTER
+setenv TeleUSE /tools/teleuse/TeleUSE
+setenv maker /tools/frame/maker
+setenv XAPPLRESDIR ./
+setenv USEIXIADDS 0
+
+setenv PATH "${PATH}:/nfs/hki020/opt/hark/bin"
+setenv LM_LICENSE_FILE /nfs/hki020/opt/SUNWspro/SunTech_License/license.dat
+
+# setting the file name fill
+set filec
+
+# proxies for www access of relay.ray.com
+setenv http_proxy http://gatekeeper.ray.com:81/
+setenv ftp_proxy http://gatekeeper.ray.com:82/
+setenv gopher_proxy http://gatekeeper.ray.com:83/
+setenv no_proxy .ray.com
+
+alias lpr	'lp -d hk'
+alias lpr2	'lp -d mar323625lp1'
+alias lpdbl	'enscript -2r -fcourier8 -Phk'	# double page printing
+alias lpdbl2	'enscript -2r -fcourier8 -Pmar323625lp1' # double page printing
+alias lpland	'enscript -r -Phk'
+
+alias lpdbl_10	'enscript -2r -fcourier10 -Phk'	# double page printing
+alias lpdbl2_10	'enscript -2r -fcourier10 -Pmar323625lp1' # double page printing
+
+alias lpq2	'lpq -Pmar323625lp1'
+
+alias edit	'textedit'
+alias ed	'textedit'
+alias file	'filemgr'
+
+alias fmaker	'$FMHOME/bin/maker &'
+
+alias gv	'ghostview \!^ &'
+
+alias earth 'xearth -nomarkers -label -wait 60 -day 85 -mag .4 -pos "fixed 30 -90" -fork'
+
+alias rm 	'rm -i'
+alias ls 	'ls -F'
+alias ll	'ls -al | grep lr'
+alias fgate	'ftp gatekeeper'
+alias tgate	'telnet gatekeeper'
+alias heieval	'telnet heieval'
+alias ecadsu3	'telnet ecadsu3'
+
+alias congrep	'contents | grep' 
+
+alias psgrep	'ps -aef | grep'
+alias psa	'ps -aef'
+alias psu	'ps -af'
+alias cd	'chdir \!* ; echo $cwd'
+alias passwd	'passwd $USER'
+alias vt100	'setenv TERM_PREV $TERM; setenv TERM vt100; echo TERM=$TERM'
+alias unvt100	'setenv TERM $TERM_PREV; unsetenv TERM_PREV; echo TERM=$TERM'
+
+alias hk_idd	'cd /nfs/tif396/disk15/hk/req0/doc_files/idd.ui'
+alias india_idd	'cd /nfs/tif396/india3/india/req0/doc_files/idd.ui'
+alias auto_idd	'cd /nfs/tif396/disk2/local/stp/autotrac/req0/doc_files/idd.ui'
+
+
+alias flow	'cd /home/hki020hk/lingard/work/hk/flow'
+alias fdd 	'cd /home/hki020hk/lingard/work/hk/fdd'
+
+alias libsx	'cd /home/hki020hk/lingard/misc/src/libsx'
+alias srgp	'cd /home/hki020hk/lingard/misc/src/SRGP_DISTRIB'
+
+alias vrweb	'/home/hki020hk/lingard/misc/src/vrweb/VRweb &'
+
+#
+# Mosaic specific setup
+#
+# setenv NNTPSERVER news.ed.ray.com
+alias mosaic	'Mosaic -home http://www.ed.ray.com -ngh &'
+alias bmosaic	'Mosaic -home file://localhost/home/hki020hk/lingard/misc/html/index.html -ngh &'
+alias cmosaic	'Mosaic -home http://ecadwww.ed.ray.com/user/lingard/www/cpdhome/index.html -ngh &'
+alias smosaic 	'Mosaic -home http://ecadwww.ed.ray.com/user/lingard/www/simtug/index.html -ngh &'
+
+#
+# alias for NetScape web browser
+#
+alias netsc	'ns &'
+alias bnetsc	'ns file://localhost/home/hki020hk/lingard/misc/html/index.html &'
+alias netman	'/home/matsbd81/lammi/tmp/netman &'
+
+
+#
+# setup for using SBROWSER
+#
+setenv SBROWSER tif686
+
+# 
+# TeleUSE specific setup
+#
+# setenv TeleUSE /tools/teleuse/TeleUSE
+# setenv PATH /tools/teleuse/TeleUSE/bin:$PATH
+# alias tl	'/tools/teleuse/TeleUSE/bin/teleuse &'
+# alias vip	'/tools/teleuse/TeleUSE/bin/vip &'
+# alias tif187	'rlogin tif187'
+# alias xtif187	'xhost +tif187'
+
+#
+# aliases for building and compiling
+#
+alias localcompile	'build -Lc'
+alias locallibrary	'build -LDf -w30 -r prg'
+alias build_script	'bld.script | awk -f $HOME/bin/D_filter.awk'
+alias build_fof		'build_fof.script | awk -f $HOME/bin/D_filter.awk'
+alias build_fih		'build_fih.script | awk -f $HOME/bin/D_filter.awk'
+alias build_fok		'build_fok.script | awk -f $HOME/bin/D_filter.awk'
+alias build_fow		'build_fow.script | awk -f $HOME/bin/D_filter.awk'
+alias build_fon		'build_fon.script | awk -f $HOME/bin/D_filter.awk'
+alias build_fdd		'build_fdd.script | awk -f $HOME/bin/D_filter.awk'
+alias build_flow	'build_flow.script | awk -f $HOME/bin/D_filter.awk'
+alias build_fdps	'build_fdps.script | awk -f $HOME/bin/D_filter.awk'
+alias build_rdps	'build_rdps.script | awk -f $HOME/bin/D_filter.awk'
+
+#
+# VMS look alikes
+#
+alias del	'rm -i'
+alias dir	'ls -F'
+alias run	"\!*"
+alias print	'lp'
+
+#
+# misc stuff
+#
+set history=20
+set savehist=20
+umask 022
+limit coredumpsize 0
+
+tty -s
+if (! $status ) then
+   stty erase ^h 
+endif 

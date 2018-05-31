@@ -1,0 +1,15 @@
+README for $PROJHOME/config.spec
+----------------------------------------------
+
+This directory contains ClearCase config spec templates for 
+the SMM project.  Note that these files are maintained by the
+release engineer for the SMM project.
+
+Any global or more permanent config specs should go into 
+"$CCHOME/config.spec".  See a software tools group representative
+for help.
+
+----------------------------------------------
+
+last updated:
+Nov 04, 1998

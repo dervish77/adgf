@@ -1,0 +1,92 @@
+README for $PROJHOME/bin -- "cctools" 
+-------------------------------------
+
+This directory should contain only those scripts related to ClearCase.
+
+
+Contents:
+
+User scripts:
+
+	smm_ccbuild.sh		- build script for ClearCase
+
+	smm_ci.pl		- check in script for ClearCase
+
+	smm_fm.sh		- merge script for ClearCase
+
+
+Admin scripts:
+
+	smm_createbranch.sh	- shell script to create new branches
+
+	smm_csgen.pl		- Perl script for generating config specs
+
+	smm_labelview.sh	- label view script
+
+	smm_newcs.sh		- copy new config spec into VOB
+
+	smm_newdir.sh		- create new directory in ClearCase
+
+	smm_newfile.sh		- create new file in ClearCase
+
+	label.sh		- wrapper script for hdm_labelview.sh
+
+
+Nightly build scripts:
+
+	ccnightly.pl		- Perl script for nightly builds/merges
+
+	smm_crontab.sh		- cron job script for nightly builds
+
+	nite.sh			- nitely build wrapper used in hdm_crontab.sh
+
+--------------------------------------------------------------------
+
+Notes:
+
+1) The nightly build scripts are designed to be executed via a cron job
+running on a viewserver.  The nightly builds should be run by the 
+user "TBD".  The file "smm_crontab.sh" should contain one invocation
+of "nite.sh" for each branch that is to be built.  
+
+2) If additional processing is required after a build (i.e. checking
+for files changes, check in comments, etc.), the script "nite.sh" should
+be modified to perform those functions.
+
+3) The scripts "csgen" and "newcs" are designed to be used together.  The
+script "csgen" simply generates a new config spec template in the current
+directory.  The script "newcs" copies the template from $HOME to the correct
+place within the SMM root VOB.
+
+When generating new config specs, follow this procedure:
+
+	sv main
+	cd $HOME
+	csgen <type> [<branch|release> <label|bp|cvsbr>]
+	newcs <cs_file_name>
+	exit
+
+4) The script "createbranch" will create the branch type in ClearCase
+and also the necessary config spec template in the current directory.  It
+is assumed that "newcs" will be used to get template into the VOB.
+
+When creating new branches, follow this procedure:
+
+	sv main
+	cd $HOME
+	createbranch <type> <branch> [<label>]
+	newcs <cs_file_name>
+	exit
+
+5) The script "newdir" will always create the new directory on the branch
+"/main/LATEST".  The directory is not branched to any other branch.
+
+6) The script "newfile" will create the new file as an empty file, then
+branch that empty file to both "smm_main" and "smm_main_dev".  It is up 
+to the developer who requested the new file to check it out and replace
+the contents with something real.
+
+--------------------------------------------------------------------
+
+last updated:
+Nov 09, 1998

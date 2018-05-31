@@ -1,0 +1,1599 @@
+                  [Free Speech Online Blue Ribbon Campaign]
+
+I have shorter, more interesting information on classic video games.
+
+-------------------------------------------------------------------------------
+
+            The Classic Video Game Book & Periodical List
+
+      Compiled & maintained by Lee K. Seitz (lkseitz@iquest.com)
+
+                             Version 0.7
+                     Last Updated 9 October 1995
+
+                  Copyright 1994, 1995 Lee K. Seitz
+      Notes on books are copyrighted by the individual authors.
+       All video games are trademarked by their manufacturers.
+
+------------------------------
+
+Subject: 1. DISCLAIMER
+
+This list is Copyright 1995 by Lee K. Seitz.  It may be freely
+redistributed in whole or in part, provided that this copyright notice
+is not removed.  It may not be sold for profit or incorporated in
+commercial documents without the written permission of the copyright
+holder.  Permission is expressly granted for this document to be made
+available for file transfer from installations offering unrestricted
+file transfer on the Internet.  This list is provided as is without
+any express or implied warranty.
+
+Ordering information for certain books or periodicals should not be
+taken as an endorsement of that item's quality or content.  Lee K.
+Seitz has no affiliation with any of the publishers listed, nor does
+he have any affiliation with any video game manufacturer.  All video
+games and systems listed are trademarked by their manufacturers.  Use
+of these trademarks is not intended to challenge said ownership.
+Opinions presented within the notes section of any entry belong to the
+author of the note.  They should in no way be construed as those of
+Lee K. Seitz or other note authors, unless otherwise indicated.  I
+hope you have enjoyed reading this disclaimer.
+
+------------------------------
+
+Subject: 2. TABLE OF CONTENTS
+
+        1. DISCLAIMER
+        2. TABLE OF CONTENTS
+        3. BRIEF HISTORY
+        4. WHAT THIS DOCUMENT IS, ISN'T, AND WILL BE
+        5. WHERE TO GET THIS DOCUMENT
+        6. FORMAT OF ENTRIES
+        7. ABBREVIATIONS
+        8. BOOKS
+        9. PERIODICALS
+        10. THANKS
+
+------------------------------
+
+Subject: 3. BRIEF HISTORY
+
+I had been planning on starting a list like this for a few months when
+Galen Komatsu posted a message titled "Classics of Western
+Literature^H^H^H^H^H^H^H^H^H^HGaming!" to rec.games.video.classic on
+24 Oct 1994.  He wanted to start such a list himself.  E-mail was
+exchanged and Galen graciously allowed me to have the job of
+maintaining this list.  At the same time, Gregg Woodcock sent messages
+to both Galen & I with his list of a large number of classic video
+game books, most of which he owns!  This document started largely as
+an outgrowth of Gregg's original list.  Special thanks to Gregg &
+Galen and everyone else who has contributed to this list.
+
+------------------------------
+
+Subject: 4. WHAT THIS DOCUMENT IS, ISN'T, AND WILL BE
+
+The purpose of this document is manyfold.  If you wish to start a
+collection of classic video game literature, but don't know what there
+is, here's all the information you could want (hopefully).  If you
+wish to port your favorite classic to another platform, find the
+book(s) that cover it and use them for reference.  If you just found
+that much-desired cartridge for your classic home system, but seem to
+be having problems playing it, seek out a book here that covers it.
+If you think you have a complete run of a classic video game magazine,
+but aren't quite sure, check here.  [Note:  At the moment, magazine
+information is sketchy.  Please help me complete it.]
+
+Due to the fact that classic video games are from a bygone age, most of
+the books & periodicals in this list are out of print.  If one happens
+to be in print or back issues of it are available, that information
+will be noted in all caps.
+
+This list does not include periodicals that only featured occasional
+articles on classic video games.  Such a list would be nearly
+impossible to compile and incredibly long.  This list also does not
+include books and periodicals related to Nintendo, Sega, etc.  Despite
+much debate, I do not consider the NES or SMS to be classic systems.
+I also feel this document is long enough as it is, and including them
+would make it at least twice as long.  Finally, this list does not
+include literature related solely to classic computer systems and
+games.  That, too, would only double the length of this document.   I
+have made an exception or two for books that cover several games that
+were ported to classic systems (e.g. Summer Games by Epyx).
+
+This list is rather U.S.-centric at the moment.  If there is
+sufficient demand AND information, Canadian, British, and Australian
+information will be added.  (I would prefer to limit this list to
+English language publications.)
+
+With version 2.0, I will start adding information on the appearance of
+the cover and spines of books.  This information will be designed to
+help people find certain books at used book stores.  If you have any
+ideas for the format of this information, please e-mail me.
+
+If you have any additions, corrections, or suggestions for this
+list, please e-mail lkseitz@iquest.com.  Please allow one week for
+responses.  I particularly need notes for most of the literature,
+including some that already has notes.  I don't own most of these
+books and magazines, and don't claim to have read from cover to cover
+all the ones I do have.  (One of the frustrating things about buying
+classic video game literature is you want to go play the games after
+you read it.  There is currently nowhere I can go to play most classic
+arcade games.)  I would also like to hear from you if you make this
+list available at an ftp or WWW site.
+
+------------------------------
+
+Subject: 5. WHERE TO GET THIS DOCUMENT
+
+This document is posted monthly to rec.games.video.classic.  It will
+sometimes be cross-posted to rec.games.video.arcade.collecting,
+alt.atari.2600, alt.atari2600vcs, alt.atari.2600.vcs, and
+alt.games.video.classic, depending on my mood at the time.  The latest
+version will also be available on the World Wide Web at the URL:
+        http://iquest.com/~lkseitz/videogames/vglit.html
+
+If you do not have access to the WWW, you may receive this document by
+sending e-mail to:
+        server@mail.w3.org
+with the BODY containing the line:
+        send http://iquest.com/~lkseitz/videogames/vglit.html
+The subject line is not important and can be left blank.  Please note
+that I have no affiliation with this service and it could go down at
+any time, for all I know.  Also, keep in mind this document is
+currently about 80k and over 1600 lines.
+
+If you have an anonymous ftp site that this document could call home,
+please contact me!
+
+------------------------------
+
+Subject: 6. FORMAT OF ENTRIES
+
+Book entries are in alphabetical order by author.  The format is as
+follows:
+        Author; _Title_; ISBN; Publisher; Date; Cover Price (in $US);
+Pages; Format (see abbreviations).
+Arcade:  List of games covered.
+Home:  List of systems covered (see abbreviations) (note 1).
+Notes:  Notes from people who have read it, indicated by user name
+(see thanks at end).
+
+(Note 1:  The "Home" section is listed only if no specific games are
+covered or the specific games covered are not known.  If they are
+known, the entry will read something like:
+2600:  KABOOM!, PAC-MAN, PITFALL!.
+INTV:  B-17 BOMBER, PITFALL!.)
+
+The names of all games are in ALL CAPS the *first* time they are
+referenced in connection to a book.  This keeps users from worrying
+about mixed case when searching the document.  This is also true of
+home systems that are not referenced often enough to have an
+abbreviation.  Home system abbreviations are also in ALL CAPS.
+
+Periodicals are in alphabetical order by title.  The format is as
+follows:
+        _Title_; ISSN; Publisher; First Issue (date)-Last Issue
+(date); Frequency; Cover Price (in $US); Pages; Format (see
+abbreviations).
+Covers:  ARCADE, HOME, COMPUTER, and/or HANDHELD.
+Notes:  Notes from people who have read it, indicated by user name
+(see thanks at end).
+
+First and last issue numbers will be listed as they are in the
+periodical.  This means either number (e.g. 1-20) or volume and issue
+number (e.g. v1n1-v2n8).  If only issue numbers are used, this usually
+means that the entire run of the periodical is considered "volume 1."
+In such cases, if the periodical were to be cancelled and restarted,
+that would usually be considered "volume 2."  Other publishers consider
+each year the periodical is published to be a separate volume.
+
+------------------------------
+
+Subject: 7. ABBREVIATIONS
+
+Formats (refers to the size and binding, not the content):
+COL     Coloring book
+COM     Comic book
+HC      Hard cover (usually larger than a PB and smaller than a TPB)
+MAG     Magazine
+NEWS    Newsletter (no cover or spine)
+PAM     Pamphlet (approx. PB size, but no flat spine; staples instead)
+PB      Standard-sized paperback (or close to it)
+TPB     Trade paperback (larger than a PB)
+
+Home Systems:
+2600    Atari 2600              5200    Atari 5200
+7800    Atari 7800              CHNF    Channel F
+CLCO    ColecoVision            INTV    Intellivision
+OD^2    Odyssey^2               PONG    Any of many dedicated pong systems
+VECT    Vectrex
+
+------------------------------
+
+Subject: 8. BOOKS
+
+        Albin, Len; _Secrets of the Video Game Super Stars_;
+0-380-80614-2; Avon Books; 1982; $2.50; 186p; PB.
+Arcade:  ARMOR ATTACK, ASTEROIDS, ASTEROIDS DELUXE, BATTLEZONE,
+BERZERK, CENTIPEDE, CRAZY CLIMBER, DEFENDER, DONKEY KONG, FROGGER,
+GALAXIAN, GALAGA, GORF, MISSILE COMMAND, MONACO G.P., MOON CRESTA,
+MOUSETRAP, OMEGA RACE, PAC-MAN, PHOENIX, QIX, SCRAMBLE,
+SPACE INVADERS, STARGATE, SUPER COBRA, TEMPEST.
+Notes:  B&W illustrations of varying quality, but most are quite good.
+Each chapter is based on hints from a person somewhere in the U.S.
+who had a world record on the game or close to it.  The final chapter
+has short discussion on what's available for the home market and what
+new games are coming (such as Sub-Roc 3-D and the Atari 5200).  Also
+mentions the unique arcade game, OOPS! by Larry Rosenthal and the
+introduction has some tips on WIZARD OR WOR. (lkseitz)
+        Albano, John; _Ms.  Pac-Man's Prize Pupil; 0-307-11791-X;
+[Publisher?]; 1983; $1.25; [?]p; [Format?].
+Arcade:  BABY PAC-MAN, MS. PAC-MAN.
+Notes:  A Golden Look-Look Book.  Mazes, cartoons, story.  Kid's book,
+but a neat item for a collection.  Cover picture of Ms.  Pac-Man
+pushing Baby Pac-Man in cart near tree. (jmcdonald)
+        Albano, John; _Pac-Man and the Ghost Diggers_; 0-307-11790-1;
+[Publisher?]; 1983; $1.25; [?]p; [Format?].
+Arcade:  BABY PAC-MAN, PAC-MAN.
+Notes:  A Golden Look-Look Book.  Mazes, cartoons, kid story.  Still a
+neat item for a collection.  Blue cover.  Pac-Man pulling Baby Pac-Man
+in wagon. (jmcdonald)
+        Alpert, Stephen P. & Kenneth E.  Smith; _Video Arcade,
+Pinball, Slot Machine, and Other Amusement Tokens of North America_;
+[ISBN?] (LCCN 85-115285); Amusement Token Collectors Association; 1984;
+$[?]; 254p; [Format?].
+Notes:  [Info?]
+        Amis, Martin; _Invasion of the Video Invaders_; 0-890-87351-8;
+Celestial Arts; 1982; $[?]; 127p; [Format?].
+Notes:  B&W and some color illustrations.  [Info?]
+        Baker, Mark; _I Hate Videots:  Today the Arcade, Tomorrow the
+World_; 0-671-45688-1; Simon & Schuster (Fireside); 1982; $3.95; 96p; PB.
+Notes:  Illustrations by Greg Crawford.  Humor.  Includes sections on
+a history of famous video game dates from 1900 B.C. to A.D. 1982,
+tell-tale signs of a videot, and deprogramming a videot.
+        Beamer, Charles; _Video Fever_; 0-840-75831-6; Nelson; 1982;
+$3.95; 143p; PB.
+Notes:  Illustrated.  Psychological & social study.  [Info?]
+        Berry, Joy Wilt; _[What to do when your mom or dad says--]
+"Don't Overdo with Video Games"_; 0-941-51025-5; Living Skills Press;
+1983; $3.95; 48p; [Format?].
+Notes:  Juvenile literature.  Discusses the negative aspects of
+playing too many video games and how to schedule your free time to
+include other activities.  Part of "the Survival Series for Kids."
+        Berry, Joy Wilt; _So What's Wrong with Playing Video Games?_;
+0-849-98169-7; Word; 1982; $2.95; 48p; PB.
+Notes:  Appears to be the same book as his other on your list [_Don't
+Overdo with Video Games_] based on your description as it discussing
+negative parts of playing too many games and also how to schedule your
+time and money around other activities. (aadavis)
+Pictures by Bartholomew.  Juvenile literature.
+        Birkner, John & Jim Sykora; _The Video Master's Guide to
+Pac-Man_; 0-553-22959-1; Bantam; 1982; $1.95; 84p; HC.
+Arcade:  PAC-MAN.
+Notes:  Illustrated.  [Info?]
+        Blanchet, Micheal; _How to Beat Atari, Intellivision, and
+Other Home Video Games_; 0-671-45909-0; Simon & Schuster (Fireside);
+1982; $4.95; 128p; PB.
+2600:  ASTEROIDS, BARNSTORMING, CHOPPER COMMAND, DEMON ATTACK,
+THE EMPIRE STRIKES BACK, FREEWAY, GRAN PRIX, KABOOM!, PAC-MAN,
+SPACE CHASE, STAR MASTER, STAR VOYAGER.
+INTV:  ARMOR BATTLE, ASTRO SMASH, SPACE ARMADA.
+OD^2:  FREEDOM FIGHTERS!, HELICOPTER RESCUE!, K.C.  MUNCHKIN!,
+MONKEY SHINES!, OUT OF THIS WORLD!, UFO!
+Notes:  Illustrated by R.B. Backhaus.
+Also contains a chapter on "Converting the Atari Joystick for
+Left-Handed Use." (mvcooley)
+        Blanchet, Michael; _How to Beat the Video Games_; 0-671-45375-0;
+Simon and Schuster (Fireside); 1982; $3.95; 112p; TPB.
+Arcade:  ASTEROIDS, BATTLEZONE, BERZERK, CENTIPEDE, DEFENDER,
+DONKEY KONG, ELIMINATOR, GALAGA, GALAXIAN, GORF, MAKE TRAX, MOUSETRAP,
+OMEGA RACE, PAC-MAN, QIX, SCRAMBLE, SPACE INVADERS, STAR CASTLE,
+STARGATE, TEMPEST.
+Notes:  This book has some abstract B&W illustrations.
+        Bloom, Steve; _Video Invaders_; 0-668-05518-9 (HC),
+0-668-05520-0 (TPB); Arco; 1982; $11.95 (HC), $5.95 (TPB); 220p; HC,
+TPB.
+Notes:  I remember hearing an Atari Games employee rag on [this] book,
+though, claiming that a lot of stuff was wrong and that Donna Taylor
+wasn't really the driving force behind Centipede. (junkster) Author
+was editor of _Video Games_ (see periodicals).  Illustrated.  Juvenile
+literature.  Discusses the immensely popular video game which resulted
+from the marriage of the computer and the television.
+        Blumenthal, Howard J.; _The Complete Guide to Electronic
+Games_;  0-722-11762-0; New American Library; 1981; $3.95?; 214p; PB.
+Home:  2600, INTV, OD^2.
+Notes:  Concentrates on hand-held videogames as well as home systems
+such as the Atari 2600, Intellivision, Odyssey, APF, etc. (rbarbaga)
+The ISBN, page count, and format are from the UK/Australian edition.
+(J.Yeates)
+The U.S. price is an estimate from the UK (1.75 pounds) and Australian
+($5.95) prices. (lkseitz, J.Yeates)
+        Blumenthal, Howard J.; _The Media Room:  Creating Your Own
+Home Entertainment and Information Center; 0-140-46538-3; Penguin Books;
+1983; $9.95; 184p; TPB.
+Arcade:  PONG.
+Home:  2600, 5200, CLCO, INTV, PONG, OD^2.
+Notes:  Contains a single chapter on "Videogames" [sic], although
+there are other mentions throughout the book.  This chapter gives a
+very brief history of video games, starting with coin-op Pong and
+quickly switching to home systems.  It concentrates on the 2600 and
+Intellivision, although the recently released 5200 and ColecoVision
+are also mentioned.  Also contains some nice B&W pictures of the 2600,
+Intellivision, and 5200. (lkseitz)
+        Broomis, Nick; _The Video Master's Guide to Defender_;
+0-553-22980-X; Bantam; 1982; $1.95; 79p; PB.
+Arcade:  DEFENDER.
+Notes:  Lots of hand-drawn B&W illustrations.
+        Buchsbaum, Walter H. & Robert Mauro; _Electronic Games:
+Design, Programming, and Troubleshooting_; 0-070-08721-0; McGraw-Hill;
+1979; $17.50; 335p; HC.
+Arcade:  TIC TAC QUIZ, FONZ.
+Home:  2600, CHNF, PONG.
+Notes:  It deals primarily with various pong-type games at the
+HARDWARE level; it is essentially a textbook.  The final chapter
+contains photos and technical information/specifications on the
+following systems:  Odyessy 2000,3000,4000; RCA STUDIO II; Fairchild
+Channel F; Atari 2600 (no technical info) COLECO TELSTAR ARCADE (no
+technical info but 3 screen shots), and some other primative arcade
+console games. (davidson)
+Everything you ever need to know to get a game machine built and games
+programmed.  Plenty of schematics and stuff.  Also examines Pong
+systems, RCA STUDIO II, Fairchild Channel F, 2600, Telstar Arcade, Tic
+Tac Quiz (arcade) and Fonz (arcade), with tech info and block
+diagrams. (atariman)
+Illustrated.  Includes index.
+        Buchsbaum, Walter H. & Robert Mauro; _Microprocessor-Based
+Electronic Games_; 0-07-008722-9; McGraw-Hill; 1983; $9.95; 293p; PB.
+Arcade:  BOSCONIAN, FROGGER, PAC-MAN, ZAXXON.
+Home:  2600, CLCO, INTV, OD^2.
+Notes:  Updated version of Electronic Games, with focus on doing the
+same things, but with microprocessors.  Also examines Odyssey^2, 5200,
+Intellivision, Colecovision, handhelds, Coleco's Pac-Man standalone,
+and from the arcade, Bosconian, Pac-Man, Frogger, and Zaxxon, with
+tech info and such stuff. (atariman)
+        Buckwalter, Len; _Video Games_; 0-448-14138-8; Grosset & Dunlap;
+1977; $1.95; 158p; PB.
+Notes:  Unknown relation between this book and the next.
+        Buckwalter, Len; _Video Games_; 0-448-14345-3; Grosset & Dunlap;
+1977; $6.95; 158p; TPB.
+Home:  CHNF, RCA STUDIO II, Magnavox ODYSSEY, PONG.
+Notes:  B&W photos of lots of pre-Atari 2600 home systems, including
+Fairchild Video Entertainment System (Channel F), RCA Studio II,
+Coleco Telstar, Atari Pong, Atari Super Pong, and Magnavox Odyssey.
+Consumer guide in back lists approximately four dozen systems,
+including six models of the Odyssey. (lkseitz)
+        Clark, James I.; _A Look Inside Video Games_; 0-817-21410-0;
+Raintree Publishers; 1985; $15.50; 48p; [Format?].
+Notes:  Juvenile literature.  Illustrated, some in color.  Explains
+how video games work, traces their history, and speculates on their
+future.
+        Cohen, Daniel; _Video Games_; 0-671-45872-8; Pocket Books;
+1982; $1.95; 120p; PB.
+Home:  2600, CLCO, INTV, OD^2.
+Arcade:  PAC-MAN, various.
+Notes:  Adolescent level book that discusses how video games work and
+their history.  Contains lots of nice B&W photos of arcade games, home
+game consoles, some Intellivision screen shots (from before the games
+were officially named), and more. (lkseitz)
+        Cohen, Daniel & Susan; _The Kid's Guide to Home Computers_;
+0-671-49361-2; Pocket Books; 1983; $1.95; 118p; PB.
+Home:  2600, INTV, CLCO, OD^2.
+Notes:  Though this book would seemingly be only about computers, it
+contains a fair amount of video game information also.  Contains
+several B&W system and game photos of several systems (INTV, Odyssey,
+Coleco, Adam, Aquarius, 800, Apple, C-64, Vic 20, etc.)!  Also
+contains some INTV computer system game shots of these unreleased
+games:  Number Jumbler, Flinstones:  Keyboard Fun, Game Maker and
+Basic Programmer.  Also contains a section on peripherals that covers
+joysticks (Spectravideo, Coleco Super Action), printers, monitors,
+etc.  (APDF35D)
+Has a "turn your game system into a computer" section, which features
+a brief discussion of ADAM, Aquarius, INTV and 2600 computer add-ons,
+as well as a mention of an INTELLIVISION-III (not the INTV-III) with
+battery operated controls and built-in speech synth.  Interesting.
+(jmcdonald)
+        Cohen, Daniel & Susan; _The Kid's Guide to Home Video_;
+0-671-52731-2; [Publisher?]; [Date?]; $[?]; [?]p; [Format?].
+Notes:  [Info?]
+        Cohen, Scott; _Zap!  The Rise and Fall of Atari_;
+0-070-11543-5; McGraw-Hill; 1984; $14.95; 177p; HC.
+Notes:  This book tells the tale of the early video games industry,
+focusing on the trials and tribulations of Atari.  Read this book and
+find out everything you would want to know about the history of Atari
+up through 1984. (woodcock)
+A good read and believable from someone at the competition (INTV).
+(sroney)
+Bibliography, index.
+        Consumer Guide; _The Complete Book of Video Games_;
+0-446-84449-3; Warner Books; 1977; $1.75; 222p; PB.
+Home:  2600, CHNF, PONG.
+Notes:  Lots of B&W photos.  Focuses mainly on dedicated (or
+"pong-type") systems, but does include photos and articles on the
+original ODYSSEY and Fairchild.  A mention of the "soon to be
+released" Atari VCS.  This is a great book for those who collect
+dedicated systems.  The most comprehensive list with photos I have
+seen. (jmcdonald)
+        Consumer Guide; _How to Win at Donkey Kong_; 0-671-45840-X;
+Pocket Books; 1982; $1.95; 32p; PAM.
+Arcade:  DONKEY KONG.
+Notes:  Basically an expanded version of the Donkey Kong section from
+Consumer Guides' _How to Win at Video Games_ (0-517-381192).  Color
+illustrations.  Has nice section on "Donkey Kong Grandstanding"
+describing hard-to-impossible to do tricks. (lkseitz)
+        Consumer Guide; _How to Win at E.T., the Video Game_;
+0-440-13767-5; Dell; 1983; $2.50; 32p; PAM?.
+2600:  E.T.
+Notes:  Color.  [Info?]
+        Consumer Guide; _How to Win at Pac-Man_; 0-671-45361-0; Pocket
+Books; 1982; $2.25; 32p; PAM?.
+Arcade:  PAC-MAN.
+Notes:  Color.  [Info?]
+        Consumer Guide; _How to Win at Video Games_; 0-517-38119-2;
+Publications International, Ltd.; 1982; $3.95; 64p; TPB.
+Arcade (main):  ASTEROIDS, CENTIPEDE, DEFENDER, DONKEY KONG, FROGGER,
+MISSILE COMMAND, MS. PAC-MAN, OMEGA RACE, PAC-MAN, PHOENIX, QIX,
+TEMPEST, TURBO.
+Arcade (secondary):  ELIMINATOR, HYPERBALL, MAKE TRAX, MOUSETRAP,
+STARGATE, VANGUARD.
+Home:  2600, 5200, INTV, OD^2.
+Notes:  Title is in the same style as the subtitle on early issues of
+_JoyStik_.  The two have the same publisher.  Color photos of all
+cabinets.  Color illustrations of each main game.  Each main game also
+has a section on the home version, if it existed at the time.  Those
+that didn't have a home version talk about some other "similar" home
+game.  Each main game, except Frogger, Missile Command, Ms. Pac-Man,
+and Turbo, ends with a short section summarizing bonus, popularity,
+location, enemies, approachability, sex appeal, age appeal, control
+comfort, skill vs. strategy, clocked or not, special effects, value
+for money, pros, and cons.  Has one page for "up-and-coming"
+(secondary) games and another page for home systems, including the then
+unreleased Atari Video System X, which became known as the Atari 5200.
+(lkseitz)
+        Consumer Guide; _How to Win at Video Games_; 0-517-42470-3;
+Publications International, Ltd.; 1983; $[?]; 64p; TPB (spiral bound).
+Arcade:  [?].
+Notes:  17 arcade games, most with great color pictures, plus tricks
+and settings sections.  Also includes a picture of Eric Ginner, [who
+later became the] designer of Trevor McFur in the Crescent Galaxy on
+the Atari Jaguar. (atariman)
+        Consumer Guide; How to Win at Video Games; 0-88176-111-7;
+Publications International, Ltd.; $[?]; 64p; TPB (staple bound).
+Arcade:  [?].
+Notes:  Same contents as spiral bound book (ISBN 0-517-42470-3), with
+small changes in the publisher info.  This version seems to be more
+rare - my findings are 7 spiral to 1 staple. (atariman)
+        Consumer Guide; _How to Win Video Games_; 0-671-45841-8;
+Publications International Ltd.; 1982; $2.95; 96p; PB[?].
+Arcade:  ASTEROIDS, CENTIPEDE, DEFENDER, DONKEY KONG, FROGGER,
+MISSILE COMMAND, MS. PAC-MAN, OMEGA RACE, PAC-MAN, PHOENIX, QIX,
+TEMPEST, TURBO.
+Notes:  Has a chapter on Vital Video Statistics, which ranks each game
+except Frogger, Missile Command, Ms. Pac-Man, and Turbo, in the
+following categories:  Bonus, Popularity, Enemies, Approachability,
+Sex Appeal, Age Appeal, Skill vs.  Strategy, Pros, and Cons.  Also
+contains a chapter on Up-and-Coming Games, which refers to ELIMINATOR,
+HYPERBALL, MOUSETRAP, and STARGATE. (mvcooley)
+Seems to be VERY similar, but not identical, to _How to Win at Video
+Games_ (0-517-381192). (lkseitz)
+        Costello, Matthew J.; _The Greatest Games of All Time_;
+[ISBN?]; John Wiley & Sons; 1991; $[?]; [?]p; [Format?].
+Home:  [Info?]
+Notes:  [Does this cover any classic games?]
+        Craven, Robert R.; _Billiards, Bowling, Table Tennis, Pinball,
+and Video Games:  A Bibliographic Guide_; 0-313-23462-0; Greenwood
+Press; 1983; $[?]; 163p; [Format?].
+Notes:  Includes indexes.
+        Creative Strategies Inc.; _Consumer Microelectronics:
+Electronic Video Games_; [Publisher?]; Creative Strategies; 1976;
+$[?]; 60p; [Format?].
+Notes:  Illustrated.
+        Digital Press; _The Collector's Guide_ (third edition); NO
+ISBN; Digital Press; 1994?; $15; 130p; [Format?].
+Home:  2600, 5200, 7800, Emerson ARCADIA 2001, Bally ASTROCADE, CLCO,
+CHNF, INTV, OD^2, VECT.
+Notes:  STILL IN PRINT.  The Collector's Guide is 130 pages of
+information about classic systems (pre-Nintendo), including complete
+lists, values, and insider information.  The Guide is $15.  Make
+checks payable to Joe Santulli at:
+Digital Press
+44 Hunter Place
+Pompton Lakes, NJ 07442
+(digitpress)
+Most regular posters to rec.games.video.classic consider the prices to
+be too high.  They also warn that expect up to an eight week wait
+after you order.  It is also known that the guide is not complete nor
+100% correct, but it still considered a very good reference tool.  You
+may contact Digital Press at digitpress@aol.com. (lkseitz)
+        Dionne, Roger; _A Buyer's Guide to Home Video Game_; [ISBN?];
+Banbury Books; [Date?]; $[?]; [?]p; [Format?].
+Notes:  I don't know if this was ever released.  The author wrote of
+his experience writing the book in _Video Games_ magazine (see
+periodicals). (lkseitz)
+        Ditlea, Steve; _The Digital Deli_; [Publisher?]; 1984; $[?];
+[?]p; [Format?].
+Notes:  He summarizes much of the history of computers in easy-to-read
+vignettes, discusses pros and cons of cutting-edge technology such as
+the Commodore 64, the TS-1000 and the line of Apple IIs, and basically
+is a great read.  He also writes that the first guy to create Pong was
+Willy Higinbotham in 1958, who "developed a method for simulating
+tennis" on an analog computer and oscilloscope screen.  He writes
+about the Baer and Bushnell stuff too, but hails Higinbotham as "the
+grandfather of video games."  I'd recommend the book. (nueb0001)
+        Dodd, John Carroll; _A Study of the Toy Market, Videogame
+[sic] Industry, Pysychological Role of Toys, and Toy Construction in
+Relation to a Proposed Promotion Campaign for Mattel Electronics
+Intellivision Video System_; NO ISBN; NO PUBLISHER; 1982; NO PRICE;
+56p; bound photocopy.
+Home:  INTV
+Notes:  Okay, so it isn't a book.  It's a School of Art honors paper
+at Kent State University.  It was too good to pass up.  If anyone goes
+to K.S.U. to look it up, I'd appreciate a photocopy. (lkseitz)
+        Dubren, Ron; _The Video Master's Guide to Centipede_;
+0-553-22966-4; Bantam; 1982; $1.95; 140p; PB.
+Arcade:  CENTIPEDE.
+Notes:  Many illlustrations and great Centipede tricks and patterns!
+(jmcdonald)
+Illustrations are all black and white, and many screenshots are on grid.
+(sroney)
+        Electronic Games; _The Player's Strategy Guide to Atari VCS
+Home Video Games_; 0-440-17068-3; Dell; 1982; 223p; $2.95; PB.
+2600:  ADVENTURE, AIR-SEA BATTLE, ASTEROIDS, BACKGAMMON, BARNSTORMING,
+BASKETBALL, BOWLING, BOXING, BRAIN GAMES, BREAKOUT, BRIDGE, CASINO,
+CHAMPIONSHIP SOCCER, CHECKERS, CIRCUS ATARI, CODEBREAKER, COMBAT,
+CONCENTRATION, DODGE 'EM, DRAGSTER, FISHING DERBY, FOOTBALL, FREEWAY,
+GOLF, GRAND PRIX, HANGMAN, HOME RUN, HUMAN CANNONBALL, ICE HOCKEY,
+INDY 500, KABOOM!, LASER BLAST, MAZE CRAZE, MISSILE COMMAND,
+NIGHT DRIVER, OTHELLO, OUTLAW, PAC-MAN, SKET SHOOT, SKIING, SKY DIVER,
+SLOT RACERS, SPACECHASE, SPACE INVADERS, SPACE WAR, STAMPEDE,
+STREET RACER, SUPER BREAKOUT, SUPERMAN, SURROUND, TENNIS,
+3-D TIC-TAC-TOE, VIDEO CHECKERS, VIDEO CHESS, VIDEO OLYMPICS,
+VIDEO PINBALL, WARLORDS.
+Notes:  It was put out by Electronic games and had input from their
+staff, but Arnie Katz wrote the reviews and Frank Tetro the "Tetros
+Tips" advice on how to play the game.  Had a suggested range for a
+given game (Beginner, Intermediate, Advanced).  Some were realistic,
+some not. (SMTC474)
+Cover says by the Editors of Electronic Games.  Title page says Arnie
+Katz, Bill Kunkel with strategy tips from "Video" Frank Tetro, Jr.
+(sroney)
+        Ellman, Hal; _Computer Basics_; 0-131-64574-9; Prentice-Hall;
+1983; $[?]; 48p; [Format?].
+Notes:  Illustrated.  Includes index.  Surveys the world of computers
+including industrial robots, personal computers, video games, and
+microprocessors and considers their effects on our daily lives.
+        Ferguson, Laren; _How to Win at Dragon's Lair_; 0-590-33258-9;
+Scholastic; 1984; $1.50; 35p; PAM.
+Arcade:  DRAGON'S LAIR.
+Notes:  Patterns for all Dragon's Lair screens and a bit on scoring.
+No pictures :-( (atariman)
+        Goodman, Robert L.; _How to Repair Video Games_; 0-830-69906-6
+(HC), 0-830-61028-6 (PB); Tab Books; 1978; $9.95 (HC), $7.95 (PB);
+270p; HC, PB.
+Notes:  Illustrated.  Includes index.
+        Graham, Ian; _Usborne Guide to Computer and Video Games_;
+0-86020-681-5; Usborne-Hayes; 1982; NO PRICE; 48p; PB.
+ARCADE:  COMPUTER SPACE.
+Notes:  Illustrated book about how video games work, from the chips
+up, from handhelds to arcade games.  Also includes playing tips on a
+number of arcade games.  While not labeled as such, most illustrations
+are obviously real game machines (2600, Odyssey^2 (OD^2), MICROVISION,
+many handhelds, computers, and arcade games).  Even has an
+illustration of a Computer Space machine, but it looks more like that
+Blob thing on the old Hanna-Barberra "Herculoids" cartoon. (atariman)
+There may also be a hard cover version of this book. (lkseitz)
+        Greenfield, Patricia Marks; _Mind and Media:  The Effects of
+Television, Video Games, and Computers_; 0-674-57620-9 (HC),
+0-674-57621-7 (PB); Harvard University Press, Cambridge; 1984; $[?]
+(HC), $[?] (PB); 210p; HC, PB.
+Notes:  Subjects:  mass media & children, television & children, video
+games, child development.  Summary:  Another psychological look at
+video games and other media on the developing child.
+        Gutman, Dan & Shay Adams; _The Greatest Games:  The 93 Best
+Computer Games of All Time_; 0-942386-95-7; Compute; 1985; $9.95;
+285p; TPB.
+Home:  2600 (sort of), 5200 (sort of), 7800 (sort of).
+Notes:  Although this is mainly a computer cartridge book, there are
+several video games listed and discussed in it.  Classic cart games
+listed:  One-on-One, Summer Games, Ballblazer, Miner 2049er, Popeye,
+Pole Position, Turbo, Oil's Well and Ms.  Pac-Man.  The rest of the
+list is mainly 800, Apple, C-64 and PC programs.  This book contains
+no creen shots, but has some really cool (not) blue line drawings
+(they look like a 2 year old drew them). (APDF35D)
+        Heiserman, David L.; _How to Design & Build Your Own Custom TV
+Games_; 0-8306-9859-0 (HC), 0-830-61101-0 (PB); Tab Books; 1978;
+$14.95 (HC), $9.95 (PB); 544p; HC, PB.
+Notes:  Pong Era; a virtual ECE textbook (woodcock)
+Illustrated.  Includes index.
+        Herman, Leonard; _Phoenix:  The Fall & Rise of Home
+Videogames_; 0-964-38488-4; Rolenta Press; 1994; $19.99; 296p;
+TPB.
+Home:  2600, 5200, 7800, CHNF, INTV, OD^2, PONG, VECT.
+Notes:  STILL IN PRINT.  Includes bibliography, subject index, and
+title index. (lkseitz)
+Published "underground" by the author after he was unable to sell the
+manuscript to any of the big boys. 296 pages of the BEST HISTORY
+you'll ever read!  It is my favorite in my entire collection and is
+bound to be a valuable item since it is already "out of print" and
+there may not be a second printing (or it may be bought up by a biggie
+and go "pro" for further printings). (woodcock)
+The book IS still available and anyone who wants information could
+write me at rolenta@aol.com or 72750.2244@compuserve.com. (rolenta)
+        Hirschfeld, Tom; _How to Master Home Video Games_;
+0-553-20195-6; Bantam; 1982; $2.95; 198p; PB.
+2600:  ADVENTURE, ASTEROIDS, COMBAT, DRAGSTER, FREEWAY, KABOOM!,
+LASER BLAST, MISSILE COMMAND, PAC-MAN, SPACE INVADERS, STAMPEDE,
+WARLORDS.
+INTV:  ARMOR BATTLE, ASTROSMASH, SEA BATTLE, SPACE ARMADA,
+SPACE BATTLE.
+Notes:  Each game is presented with a B&W illustration of the board
+with pointers to what each part of the screen represents and then has
+the following sections in outline format:  controls, scoring, dangers,
+observations, and strategies.  The following games also have a game
+variation matrix (in case you lose your manual, I guess):  Asteroids,
+Combat, Missile Command, Space Invaders, and Warlords.  Also includes
+sections on high scores, clubs, exact instructions on how to find the
+secret room in Adventure, some arcade games, and manufacturer
+addresses.  For the completist, the arcade games are DEFENDER,
+PAC-MAN, ASTEROIDS, CENTIPEDE, SCRAMBLE, PHOENIX, GORF, GALAXIAN,
+BERZERK, and ASTEROIDS DELUXE. (lkseitz)
+        Hirschfeld, Tom; _How to Master the Video Games_;
+0-553-20164-6; Bantam; 1981; $2.95; 177p; PB.
+Arcade:  ARMOR ATTACK, ASTEROIDS, ASTEROIDS DELUXE, ASTRO BLASTER,
+ASTRO FIGHTER, BATTLEZONE, BERZERK, CENTIPEDE, CRAZY CLIMBER,
+DEFENDER, GALAXIAN, GORF, MISSILE COMMAND, MONACO GP, MOON CRESTA,
+PAC-MAN, PHOENIX, PLEIADES, RALLY-X, SCRAMBLE, SKY RAIDER, SPACE FURY,
+SPACE INVADERS, SPACE INVADERS PART II, SPACE ODYSSEY, SPACE ZAP,
+STAR CASTLE, TARG, VENTURE, WIZARD OF WOR.
+Notes:  There are (at least) 5 variations of this book and all can be
+distinguished by the appearance of the cover.  The rarest version is
+the one that was published by Troll as indicated on the front cover
+and the spine (the indica says that it was published by Bantam,
+though); the other 4 were published by Bantam.  Two of the Bantam
+versions have a yellow triangle in the lower right corner of the front
+cover that says, "INCLUDES THE HOTTEST TIPS ON PAC-MAN" (the Troll
+version has this, too).  They differ in that one says "SPECIAL BOOK
+CLUB EDITION" in small letters to the right of the "HOW TO" portion of
+the title and the other does not.  The other two (non-"Pac-Man"
+Bantam) variations are identical except for the very top portion of
+the spine where the rooster can be either red or yellow.  There are
+other minor differences as well but the text content appears to be the
+same. (woodcock) Each game is presented with a B&W illustration of the
+board (WIZARD OF WOR includes a diagram of every maze) with pointers
+to what each part of the screen represents and then has the following
+sections in outline format:  controls, scoring, dangers, observations,
+and strategies.  This would be a good reference for anyone writing a
+computer version of these classics. (lkseitz)
+        Hoye, David; _The Family Playbook for Intellivision Games_;
+0-8065-0799-3; Citadel; 1982; $5.95; 188p; [Format?].
+Home:  INTV.
+Notes:  Early Intellivision titles, detailed info. (jlodoen)
+        Jaffe, Martin S.; _Regulating videogames_; NO ISBN; American
+Planning Association; 1982; $10.00 ($5.00 to subscribers); 30p; PB?.
+Notes:  Subject is Video games--Law and legislation--United States.
+Illustrated.  American Planning Association, Planning Advisory Service
+report no. 370.  Cover title:  "Regulating Videogames:  Mixed Results
+in the Courts (Reprinted from Land Use Law & Zoning Digest), by Edward
+H.  Ziegler, Jr":  p. 25-30.
+        Jennings, Gordon; _Repairing Your Home Video Game_;
+0-88190-277-2; Datamost; 1984; $9.95; 126p; PB.
+Home:  2600, 5200, INTV.
+Notes:  Covers basic electronics repair, logical troubleshooting, the
+repair of power adapters, joysticks, TV/Game switches, cartridges, and
+consoles for the following systems:  Atari 2600, Atari 2600A, Sears
+Telegames, Sears Video Arcade, Mattel Intellivision I, Tandyvision,
+Sears Super Video Arcade, and the Atari 5200.  5200 coverage is
+extremely minimal.  Good coverage on the 2600 models.  Contains a part
+number listing of frequent problem components as well as a list of
+suppliers for repair parts. (aadavis)
+        Koff, Richard M.; _The Whole Home Electronics Catalog_;
+0-8092-7093-5 (HC), 0-8092-7092-7 (TPB); Contemporary Books; 1979;
+$6.95 (TPB), $[?] (HC); 190p; TPB, HC.
+Home:  2600, INTV, PONG.
+Notes:  Pictures and blurbs on the latest and greatest in home
+electronics.  Included APF, 2600, MICROVISION, Intellivision (with
+original computer attachment), various Pong systems, and handhelds.
+(atariman)
+        Kordestani, Paul; _Gamester's Guide to Arcade Video Games_;
+0-8306-0181-3; Tab Books Inc.; 1983; $16.50; 376p; TPB.
+Arcade:  ASTEROIDS, ASTEROIDS DELUXE, BATTLEZONE, BERZERK,
+BURGER TIME, CENTIPEDE, DEFENDER, DIG DUG, DONKEY KONG,
+DONKEY KONG JR., FROGGER, FRONT LINE, GALAGA, GALAXIAN, JOUST,
+JUNGLE HUNT, MAKE TRAX, MISSILE COMMAND, MOON PATROL, MS.  PAC-MAN,
+PAC-MAN, PAC-MAN PLUS, PHOENIX, PLEIADES, POPEYE, Q*BERT, QIX,
+RED ALERT, RED BARON, ROBOTRON 2084, SCRAMBLE, SPACE DUEL, SPACE FURY,
+SPACE INVADERS, SPACE INVADERS DELUXE, STAR CASTLE, STARGATE,
+SUPER PAC-MAN, TEMPEST, TRON, ZAXXON,
+Notes:  B&W illustrations of each screen.
+        Kubey, Craig; _Scoring Big at Pac-Man:  How to Munch the
+Monsters_; 0-446-30507-3; Warner Books; 1982; $1.25; 46p; PAM.
+Arcade:  PAC-MAN.
+2600:  PAC-MAN.
+Notes:  B&W illustrations.  Only three patterns, each drawn entirely
+in one maze, reducing comprehension.  Chart showing board number,
+fruit, and number of seconds monsters will be blue.  No patterns for
+home version. (lkseitz)
+        Kubey, Craig; _The Winners' Book of Video Games_;
+0-446-37115-7; Warner Books; 1982; $5.95; 270p; TPB.
+Arcade:  ASTEROIDS, ASTEROIDS DELUXE, BERZERK, CARNIVAL, CENTIPEDE,
+COMPUTER SPACE, DEATH RACE, DEFENDER, DELUXE SPACE INVADERS,
+DONKEY KONG, ELIMINATOR, FROGGER, GALAGA, GALAXIAN, GORF,
+MISSILE COMMAND, MONACO GP, NIGHT DRIVER, PAC-MAN, PONG, QIX, RIP OFF,
+SCRAMBLE, SEA WOLF, SPACE INVADERS, SPACE WARS, SUPER COBRA, TEMPEST,
+TURBO.
+2600:  ADVENTURE, ASTEROIDS, BOWLING, BREAKOUT, CIRCUS ATARI, COMBAT,
+DEFENDER, INDY 500, MISSILE COMMAND, NIGHT DRIVER, PAC-MAN,
+SPACE INVADERS, VIDEO OLYMPICS, VIDEO PINBALL.
+INTV:  BLACKJACK, LAS VEGAS POKER, MAJOR LEAGUE BASEBALL,
+NFL FOOTBALL, SPACE BATTLE.
+OD^2:  ALIEN INVADERS--PLUS!, COMPUTER GOLF!, CRYPTO-LOGIC!,
+SPEEDWAY!, SPINOUT!, UFO!.
+Notes:  Includes a smattering of B&W photos and illustrations.  This
+includes photos of the controls of Asteroids, Defender, Pac-Man, and
+Missile Command, plus a photo of the never-released Keyboard Component
+for the Intellivision I.  Be warned that some of the home games listed
+are brief reviews as opposed to playing tips.  Also includes sections
+on "Great Video Game Arcades in the United States and Canada," "Video
+Game Etiquette," "Video Songs" (songs to play by, not generally
+specifically about video games), "The Future," "Videomedicine," "Video
+Reform," history & status of the coin-op and home industries, and a
+"Glossary of Video Slang," some of which I've never heard. (lkseitz)
+        LaMothe, Andre; _Teach Yourself Game Programming in 21 Days_;
+0-672-30562-3; SAMS Publishing; [Date?]; $[?]; [?]p; [Format?].
+2600:  ADVENTURE.
+Notes:  On page 799 he talks about ... you guessed it, Atari 2600
+Adventure, and how it "inspired" him to write the example game used in
+that chapter. (VGR)
+        Leder, Jane Mersky; _Video Games_; 0-896-86241-0; Baker Street
+Productions (Crestwood House); 1983; $[?]; 47p; [Format?].
+Notes:  Illustrated (some in color).  Juvenile.  A discussion of video
+games, focusing on their creation and manufacture.
+        Levy, Steven; _Hackers_; [ISBN?]; [Publisher?]; 1984; $[?];
+[?]p; [Format?].
+        Levy, Steven; _Hackers:  Heroes of the Computer Revolution_;
+0-385-31210-5; Delta Books; 1994; $12.95; [?]p; TPB?.
+Notes:  It's got a whole part dedicated to 'Game Hackers'.  And the
+new paperback has a followup on what the people in the book are doing
+today. (rbarbaga)
+        Loftus, Geoffrey R. & Elizabeth F.; _Mind at Play:  The
+Psychology of Video Games_; 0-465-04609-6; Basic Books, Inc.; 1983;
+$14.95, 191p; [Format?].
+Notes:  Subject:  Video games - Psychological aspects.  Includes
+bibliographical references and index.
+        Lowe Jr., Walter; _Playboy's Guide to Rating the Video
+Games_; 0-867-21212-8; Playboy Paperbacks; 1982; $2.95; 266p; PB.
+Arcade:  CENTIPEDE, DEFENDER, DIG DUG, DONKEY KONG, GALAGA,
+MS. PAC-MAN, PAC-MAN, ROBOTRON 2084, TRON, TURBO, TUTANKHAM, ZAXXON.
+2600:  ADVENTURE, AIR-SEA BATTLE, ASTEROIDS, BACKGAMMON, BASKETBALL,
+BERZERK, BOWLING, BREAKOUT, CASINO, COMBAT, HANGMAN, HAUNTED HOUSE,
+MAZE CRAZE, MISSILE COMMAND, NIGHT DRIVER, PAC-MAN, SPACE INVADERS,
+SUPER BREAKOUT, VIDEO CHECKERS, VIDEO CHESS, VIDEO OLYMPICS, WARLORDS,
+YARS' REVENGE.
+ASTROCADE:  280ZZZAP/DODGEM, AMAZING MAZE, ARTILLERY DUEL,
+ASTRO BATTLE, ASTROCADE PINBALL, BASEBALL, BLACKJACK/POKER/ACEY-DUCEY,
+BRICKYARD, CHECKMATE, CLOWNS, FOOTBALL, GALACTIC INVASION, GUNFIGHT,
+INCREDIBLE WIZARD, PIRATE'S CHASE, SCRIBBLING, SPACE FORTRESS,
+STAR BATTLE.
+CLCO:  COSMIC AVENGER, DONKEY KONG, VENTURE.
+INTV:  ASTROSMASH, BASEBALL, BOXING, ELECTRIC COMPANY MATH FUN,
+FOOTBALL, LAS VEGAS POKER AND BLACKJACK, MAJOR LEAGUE NASL SOCCER,
+NBA BASKETBALL, NFL NHL HOCKEY, PBA BOWLING, SEA BATTLE, SNAFU,
+SUB HUNT, TENNIS, US SKI TEAM SKIING, UTOPIA.
+OD^2:  FREEDOM FIGHTERS, GREAT WALL STREET FORTUNE HUNT.
+MONKEYSHINES, QUEST FOR THE RINGS, TAKE THE MONEY AND RUN, UFO,
+Notes:  16 pages of B&W photo quality illustrations (including
+standard marketing pseudo-screen-shots.  Contains price list for the
+five home systems (HW & SW). (sroney)
+        Lubar, David and Owen Linzmayer; _Guide to the Video Arcade
+Games_; [ISBN?]; Creative Computing; [Date?]; $3.95; [?]p; PB?.
+Arcade:  BATTLEZONE, BERZERK, CENTIPEDE, DONKEY KONG, ELIMINATOR,
+FROGGER, GORF, KICKMAN, LADYBUG, ASTEROIDS DELUXE, MISSILE COMMAND,
+MOUSETRAP, PAC-MAN, PHOENIX, QIX, SNAP JACK, STAR CASTLE, STARGATE,
+TEMPEST, VENTURE.
+Notes:  [Info?]
+        Maccarone, Grace; _TV Today_; 0-590-32815-8; Scholastic; 1983;
+$[?]; 103p; PB.
+Arcade:  PAC-MAN.
+Home:  2600, CLCO, INTV.
+Notes:  If you wade through the spectacular stuff about Amy Linker
+(?), Lee Curreri (??), Kathy Maisnik (???) and Stephen Collins (????),
+you'll find stuff on Pac-Man, the 2600, Intellivision, Colecovision,
+and even PlayCable, the ill fated Intellivision version of the Sega
+Channel Pac-Man graphic in lower right corner of front cover.
+(atariman)
+        Maggin, Elliot S! (writer) and Jose Luis Garcia Lopez
+(illustrator); _Star Raiders_; NO ISBN; DC Comics, Inc.; 1983; $5.95;
+64p; unique (graphic novel; approximately magazine size with square
+binding).
+Notes:  This graphic novel departs from the story in the ATARI FORCE
+mini-comic included with Star Raiders.  It features only a bare cameo
+of the Atari Force.  Otherwise, it is an entirely new cast plus many,
+many Hukkas.  This graphic novel was DC's first. (lkseitz)
+See also:  _Atari Force_ and _Atari Force Special_ in periodicals.
+        Manes, Stephen; _Video War_; 0-380-83303-4; Avon Books; 1983;
+$2.25; 249p; PB.
+Notes:  A teenage novel focusing on one town's efforts to ban video
+games and the group of teens that lead the fight against the proposed
+bill.  VANGUARD and GORF can be seen on the cover, behind all the
+people.  Numerous games are used in the book, although there are some
+fictional titles.  Fairly enjoyable read, even the sex chapter,
+"Screen 25" (Touch Here...  Insert Here...).  (atariman)
+        Marshall, Jo-Ann, Curt Weiss, & Stacy Sherman (writers) and
+James Sherman & Curt Weiss (art); _Donkey King Activity Book_ (_Donkey
+Kong Puzzles & Mazes_ on cover); NO ISBN; Modern
+Promotions/Publishers; 1982; $1.95; 64p; TPB.
+Arcade:  DONKEY KONG.
+Notes:  A juvenile activity book based on a Donkey Kong theme.
+Contains "crosswords, mazes, hidden words, matching, unscrambles, word
+spells, and more."  Uses Pauline as the fair damsel's name. (lkseitz)
+        Mayhem, Major; _The Complete Video Warrior_; 0-307-46600-0;
+Golden Press; 1982; $3.95; 123p; TPB.
+Arcade:  ASTEROIDS, BATTLEZONE, BERZERK, CENTIPEDE, DEFENDER, FROGGER,
+GALAXIAN, GORF, MISSILE COMMAND, PAC-MAN, PHOENIX, RED BARON,
+SCRAMBLE, SPACE INVADERS II (DELUXE), STAR CASTLE
+Notes:  Illustrations by Gary Tong.  Illustrations are gray scale with
+red.
+        Prager, Emily; _The Official I-Hate-Videogames Handbook_;
+0-671-45804-3; Pocket; 1982; $2.95; 93p;  TPB.
+Notes:  Humor.  Includes game parodies.  Illustrated by Frank Morris.
+        Renowden, Gareth; _Video:  The Inside Story_; 0-531-04584-6;
+Gloucester Press; 1982; $[?]; 37p; [Format?].
+Notes:  Some color illustrations.  Includes index.  Explains, using
+drawings and diagrams, some of the applications of video technology,
+including factory monitoring systems, video games, satellite
+broadcasting, television production, and flight simulation.
+        Robinson, John (writer) and Al Moraski (illustrator); _The
+Adventures of Q*Bert_; 0-910-31312-1; Parker Bros.; 1983; 26p;
+[Format?].
+Notes:  For 6-10 year-olds.  Q*BERT, who lives on the planet Qube,
+where nearly everything is cube-shaped, sets out to rid a magic
+mountain of monsters in order to make his planet a better place.
+        Rovin, Jeff; _The Complete Guide to Conquering Video Games:
+How to Win at Every Game in the Galaxy_; 0-020-29970-2 (TPB); Collier
+Books; 1982; $5.95 (TPB); 407p; TPB, HC.
+Arcade:  ARMOR ATTACK, ASTEROIDS, ASTRO FIGHTER, ASTRO INVADER,
+BATTLEZONE, BERZERK, CENTIPEDE, DEFENDER, GALAXIAN, GORF,
+MISSILE COMMAND, PAC-MAN, PHOENIX, PLEIADES, RALLY-X, RED ALERT,
+RED BARON, SCRAMBLE, SKY RAIDER, SPACE FURY, SPACE INVADERS,
+SPACE ZAP, STAR CASTLE, TARG, TEMPEST, WIZARD OF WOR.
+2600:  3-D TIC-TAC-TOE, ADVENTURE, AIR-SEA BATTLE, ASTEROIDS,
+BACKGAMMON, BASIC PROGRAMMING, BASKETBALL, BLACKJACK, BOWLING, BOXING,
+BRAIN GAMES, BREAKOUT, BRIDGE, CANYON BOMBER, CASINO, CHECKERS,
+CIRCUS ATARI, CODEBREAKER, COMBAT, DODGE 'EM, DRAGSTER, FISHING DERBY,
+FLAG CAPTURE, FOOTBALL, FREEWAY, FUN WITH NUMBERS,
+A GAME OF CONCENTRATION, GOLF, HANGMAN, HOME RUN, HUMAN CANNONBALL,
+ICE HOCKEY, INDY 500, KABOOM!, LASER BLAST, MAZE CRAZE,
+MINIATURE GOLF, MISSILE COMMAND, NIGHT DRIVER, OTHELLO, OUTLAW,
+PAC-MAN, PELE'S SOCCER, SKEET SHOOT, SKIING, SKY DIVER, SPACE CHASE,
+SPACE INVADERS, SPACE WAR, STAMPEDE, STAR RAIDERS, STARSHIP,
+STEEPLECHASE, STELLAR TRACK, STREET RACER, SUPER BREAKOUT, SUPERMAN,
+SURROUND, TENNIS, VIDEO CHECKERS, VIDEO CHESS, VIDEO OLYMPICS,
+VIDEO PINBALL, WARLORDS.
+INTV: ABPA BACKGAMMON, ARMOR BATTLE, ASTROSMASH, AUTO RACING,
+BASKETBALL, BOXING, CHECKERS, DUNGEONS AND DRAGONS,
+THE ELECTRIC COMPANY MATH FUN, THE ELECTRIC COMPANY WORD FUN,
+HORSE RACING, LAS VEGAS POKER AND BLACKJACK, LAS VEGAS ROULETTE,
+MAJOR LEAGUE BASEBALL, NASL SOCCER, NFL FOOTBALL, NHL HOCKEY,
+PBA BOWLING, PGA GOLF, SEA BATTLE, SNAFU, SPACE ARMADA, SPACE BATTLE,
+TENNIS, TRIPLE ACTION, U.S. SKI TEAM SKIING.
+OD^2: ALIEN INVADERS-PLUS, ALPINE SKIING, ARMORED ENCOUNTER, BASEBALL,
+BASKETBALL, BLOCKOUT, BOWLING, BREAKDOWN, BUZZWORD,
+CASINO SLOT MACHINE, COMPUTER GOLF, COMPUTER INTRO,
+CONQUEST OF THE WORLD, COSMIC CONFLICT, CRYPTO-LOGIC, DYNASTY, ECHO,
+ELECTRONIC TABLE SOCCER, FOOTBALL, THE GREAT WALL STREET FORTUNE HUNT,
+HELICOPTER RESCUE, HOCKEY, I'VE GOT YOUR NUMBER,
+INVADERS FROM HYPERSPACE, K.C.  MUNCHKIN, KEYBOARD CREATIONS,
+LAS VEGAS BLACKJACK, LOGIX, MATCHMAKER, MATH-A-MAGIC, MONKEYSHINES,
+OUT OF THIS WORLD, PACHINKO, POCKET BILLIARDS, QUEST FOR THE RINGS,
+SHOWDOWN IN 2100 A.D., SOCCER, SPEEDWAY, SPIN-OUT, SUB-CHASE,
+TAKE THE MONEY AND RUN, THUNDERBALL, UFO, VOLLEYBALL, WAR OF NERVES.
+ASTROVISION: AMAZING MAZE, ASTRO BATTLE, BALLY BASIC, BALLY PIN,
+BINGO MATH, BIORHYTHM, BLACKJACK/POKER/ACEY-DEUCEY, BRICKYARD,
+CHECKMATE, CLOWNS, COLORING BOOK, COSMIC RAIDERS, DEMOLITION DERBY,
+DODGEM, DOGPATCH, FOOTBALL, GALACTIC INVASION, GRAND PRIX, GUNFIGHTER,
+HANDBALL, HOCKEY, LETTER MATCH/SPELL 'N' SCORE/CROSSWORDS, MISSILE,
+MUNCHIE, MUSIC MAKER, PANZER ATTACK, PIRATE'S CHASE,
+QUEST FOR THE ORB, RED BARON, SCRIBBLE, SEAWOLF, SOLAR CONQUEROR,
+SPACE FORTRESS, SPEED MATH, STAR BATTLE, TENNIS, TIC-TAC-TOE,
+TORNADO BASEBALL, THE WIZARD, ZZZAP.
+Notes:  [Some of the above names might not be actual cartridges, but
+just some games from a cartridge, due to the way the book is
+organized.  If you see an entry that should be changed or entries that
+should be folded into one, please let me know. (lkseitz)]
+Includes index.  By the editor of and could order from _Videogaming
+Illustrated_ (see periodicals).  There also exists a hardback edition.
+It is labelled "special book club edition" on the inside flap of the
+dust cover.  Games were grouped by type (i.e.  Atari's Surround
+includes hints on Intellivision's Snafu and Bally's Checkmate) because
+the hints were virtually the same.  Each game types has the following
+sections:  object, rating, strategies, cross-references, and video
+originals.  Each game also has a simple cartoon/illustration to go
+with it.  Also includes chapters on taking care of your video games,
+computer games, the future of video gaming, and a glossary. (lkseitz)
+        Rubin, Michael, ed.; _Defending the Galaxy:  The Complete
+Guide to Videogaming_; 0-937-40417-9; Triad; 1982; $4.95; 224p; TPB.
+Arcade: ASTEROIDS, BATTLEZONE, BERZERK, CENTIPEDE, DEFENDER,
+DONKEY KONG, FROGGER, GALAGA, MISSILE COMMAND, MS. PAC-MAN, PAC-MAN,
+QIX, SPACE INVADERS, STAR CASTLE, STARGATE, TARG, TEMPEST, TRON,
+TURBO, ZAXXON.
+Notes:  Brief one-paragraph descrtiption of about 120 games (including
+some photos).  List of 18 books (including his own).  Chapter on
+"Gamers", another on "Video Wear".  Three pages of high scores (57
+titles); NINE pages of names and addresses of arcades.  Two page
+discussion of home games, with list of titles available.  Five page
+list of terms. (sroney)
+Michael Rubin, Carl Winefordner & Sam Welker, writers;
+illustrations by Jeff Webber and Rudy Young; photography by Michael
+Rubin.
+        Sanders, Steve; _The Video Master's Guide to Donkey Kong_;
+0-553-23072-7; Bantam; 1982; $1.95; 84p; PB.
+Arcade:  DONKEY KONG.
+Notes:  Contains complete directions for beating Donkey Kong.
+Contains several drawn (Donkey Kong's HILARIOUS!) maps to help you on
+your quest. (APDF35D)
+        Schuytema, Paul; _Microsoft Arcade:  The Official Strategy
+Guide_; 1-559-58724-5; Prima Publishing; 1995; $12.95; 182p;
+TPB.
+Arcade:  ASTEROIDS, BATTLEZONE, CENTIPEDE, MISSILE COMMAND, TEMPEST.
+Notes:  STILL IN PRINT.  I haven't bought it yet, but a quick glance
+shows B&W photos of the arcade games and Windows screenshots.  It also
+has some history in it.  Whether there is any information not covered
+in the software, I don't know. (lkseitz)
+        Schwarz, Haller; More Pac-Mania; 0-523-41993-7; Pinnacle
+Books, Inc.; 1982; $1.95; 94p; PB.
+Arcade:  PAC-MAN.
+Notes:  Yes, they're "Pac" for more of these awful cartoons begun in
+_Pac-Mania_.  Back cover has a picture of _Pac-Mania_ book that is
+different from the 2 variations I have seen (price and stuff moved).
+(atariman)
+        Schwarz, Haller; _Pac-Mania_; 0-523-41925-2; Pinnacle Books,
+Inc.; 1982; $1.95; 94p; PB.
+Arcade:  PAC-MAN.
+Notes:  Cover has a super-title saying "The Official Pac-Man Joke
+Book." (woodcock)
+Each page is a single, labelled, B&W illustration, such as "Paccoon"
+or "Pac-Man solving the Rubik's Cube."  I think _The Pac-Man Riddle &
+Joke Book_ by Thaler is slightly more original, if you have to choose
+between the two. (lkseitz)
+There are two versions of this book:
+1) $1.95 in dark yellow print in upper right.
+2) Bigger $1.95 in black, towards lower right, below Pac-Man.
+Otherwise, they're identical.  BTW, Haller Schwarz is not a person,
+but a group of people. [This is true, I had just neglected to mention
+it. (lkseitz)] (atariman)
+        Sheff, David; _Game Over:  How Nintendo Zapped an American
+Industry, Captured Your Dollars, and Enslaved Your Children_;
+0-679-40469-4; Random House; 1993; $25.00; 445p; HC.
+Arcade:  DONKEY KONG.
+Notes:  STILL IN PRINT.  [The following notes are excerpts from a post
+on rec.games.video.classic.  Things in quotes are chapter names.]  Very
+interesting novel about the history of Nintendo.  Went into great
+detail about the origin of the company in Japan (creating playing
+cards), all the way to about mid '92. "I, Mario" details key creative
+people, including Sigeru Miyamoto, the creator of Donkey Kong, which
+introduced the Mario character. "For A Fistful of Quarters" explored
+Nintendo of America's offering of a table top version of Donkey Kong
+in bars.  It goes into Sidney Sheinberg's lawsuit against NOA for the
+use of the King Kong character in the Donkey Kong game (the lawsuit
+failed). "Reversal of Fortune" goes into the history of Nolan
+Bushnell, and Atari's rise and fall. (jaime)
+        Sheff, David; _Game Over:  How Nintendo Conquered the World_;
+0-679-73622-0; Vintage Books; 1994; $13.00?; [?]p; PB.
+Arcade:  DONKEY KONG.
+Notes:  STILL IN PRINT.  There is supposed to be a significant
+difference between the hard cover and paperback.  Please submit more
+information if you have it.
+        Skelly, Timothy; _Shoot the Robot, Then Shoot Mom_;
+0-809-25541-3; Contemporary Books; 1983; $[?]; 106p; PB.
+Notes:  Cartoons.
+        Skurzynski, Gloria; _Know the Score:  Video Games in Your
+High-tech World_; 0-027-82922-7; Maxwell Macmillan International
+(Bradbury Press); 1994; $[?]; 64p; [Format?].
+Notes:  Color illustrations.  Includes bibliographical references and
+index.  May not contain any classic video game information.
+        Sobil, Keith and Kevin; _The Video Wizard's Handbook_; [ISBN?];
+The Video Wizard Co.; [Date?]; $5.95; [?]p; [Format?].
+Home:  SPACE INVADERS, ASTEROIDS, MISSILE COMMAND.
+Arcade:  Six games, including SPACE INVADERS and TEMPEST.
+Notes:  Self-published in San Francisco, CA.  Has typographical and
+printing errors.
+        Stanton, Jeffrey, Robert Wells, Ph.D, Sandra Rochowansky, &
+Michael Mellin, Ph.D; _The Book of Atari Software_; 0-912003-04-9; The
+Book Company; 1984; $19.95; 430p; PB.
+Home:  2600, 5200.
+Notes:  Reviews of Atari 8-bit computer software with many B&W
+screenshots comprise most of the book, with 4 pages on 5 5200 carts,
+28 pages on 54 2600 carts, and 4 pages on joysticks, 2 being pictures.
+(atariman)
+        Stern, Sydney Ladenshohn and Ted Schoenhaus; _Toyland:  The
+High-Stakes Game of the Toy Industry_; [ISBN?]; [Publisher?]; [Date?];
+$[?]; [?]p; [Format?].
+Home:  2600, CLCO, INTV.
+Notes:  It's a history on the toy industry with a great chapter on
+video games.  It's got detailed information on Atari's downfall but
+also quite a bit about Mattel and Coleco plus some stories about 3rd
+party developers.  Later in the book it focuses on the industry circa
+1988-9. (rbarbaga)
+        Stine, Bob; _Blips!:  The First Book of Video Game Funnies_;
+0-590-32721-6; Scholastic; 1983; $[?]; 80p; PB.
+Notes:  Illustrations by Bryan Hendrix.  Humor.  Includes "Video Games
+Hall of Fame", "Video Games That Didn't Go Over", and "How to Clean
+Your Video Game" (which shows the inside of a game cartridge as
+containing magnetic tape!). (rhino)
+There are at least 2 variations of this book:
+Front cover:
+1) Up left side "Scholastic 0-590-32721-6/$1.95 US/$2.50 CAN".
+2) Just the ISDN.
+Back cover:
+1) 1/4" of red, 1" yellow, 2-1/2" red, 1/2" yellow, rest white with
+big UPC ISBN, and Scholastic Inc.
+2) 1" red, same until bottom, which is red, no UPC, "cover
+illustration:  Bryan Hendrix"; Scholastic Book Services.
+Identical otherwise except for title page. (atariman)
+        Stovall, Rawson; _The Video Kid's Book of Home Video Games_;
+0-385-19309-2; Doubleday & Co. (Dolphin); 1984; $6.95; 140p; TPB?.
+Home:  2600, 5200, CLCO, INTV, OD^2, VECT.
+Notes:  The 11-year-old author reviews more than 80 video games
+available for the six different systems available at the time, and
+offers advice on strategy.
+        Sudnow, David; _Pilgrim in the Microworld_; 0-446-51261-3;
+Warner Books; 1983; $15.50; 227p; HC.
+Arcade:  MISSILE COMMAND.
+2600:  BREAKOUT, MISSILE COMMAND.
+Notes:  The author does a psychological case study on himself as he
+becomes addicted to Breakout.  Includes Sudnow's visit to Atari HQ to
+talk to the programmer, [Somebody?], but he had quit Atari by then so
+Sudnow spoke to [Somebody?], programmer of Super Breakout.  Also has
+some good tips on playing the 2600 version of Breakout. (lkseitz)
+        Sullivan, George; _How to Win at Video Games_; 0-590-32630-9;
+Scholastic; 1982; $1.95; 175p; PB.
+Arcade:  ASTEROIDS, ASTEROIDS DELUXE, BERZERK, CENTIPEDE, DEFENDER,
+DONKEY KONG, FROGGER, GALAXIAN, GORF, MISSILE COMMAND, MS.  PAC-MAN,
+PAC-MAN, SCRAMBLE, SPACE INVADERS, SPACE INVADERS II, TEMPEST.
+Home:  2600, INTV, OD^2, CHNF.
+Notes:  To emphasize the importance of Pac-Man on classic video games,
+note that each of the above games is a section of a single chapter,
+except Pac-Man and Ms.  Pac-Man, which are contained within their own
+chapter.  It also covers the Atari 2600 Pac-Man and the Coleco
+table-top.  Each games is described with a B&W illustration (not to
+scale), a brief description, and sections on the controls, scoring,
+and strategy & tactics.  There is also a chapter on home systems,
+listing "the five companies that offer home video games" (Atari VCS,
+Intellivision, Odyssey^2, ActiVision [sic], and Channel F).  Another
+on handheld and table-model games, and finally "Great Dates in Video
+Games", which includes the Arkie awards up to 1982, and a brief
+glimpse of the future. (lkseitz)
+        Sullivan, George; _Screen Play:  The Story of Video Games_;
+0-723-26251-9; F.  Warne; 1983; $10.95; 88p; [Format?].
+Notes:  Juvenile literature.  Includes index.  Traces the development
+of video games since 1966 when an electronics engineer named Ralph
+Baer invented and marketed the Odyssey home game system.
+        Thaler, Mike; _The Pac-Man Riddle and Joke Book_;
+0-671-46185-0; Pocket Books; 1982; $1.95; 122p; PB.
+Arcade:  PAC-MAN.
+Notes:  By "America's Riddle King."  Children's book with simple black
+and white illustrations. (lkseitz)
+        Uston, Ken; _Ken Uston's Guide to Buying and Beating Home
+Video Games_; 0-451-11901-0; Signet; 1982; $3.95; 675p; PB.
+Home:  2600 (76 games), ASTROCADE, CHNF, INTV, OD^2.
+Notes:  Covers 180 games total.
+        Uston, Ken; _Ken Uston's Home Video '83_; 0-451-12010-8;
+Signet; 1982; $2.95; 210p; PB.
+2600:  ASTEROIDS, ASTROBLAST, DEFENDER, FROGGER, MEGAMANIA, PITFALL!,
+PLANET PATROL, SPACE ATTACK, SUPER CHALLENGE BASEBALL,
+SUPER CHALLENGE FOOTBALL, SWORDQUEST, THRESHOLD, WORD ZAPPER.
+5200:  GALAXIAN, MISSILE COMMAND, PAC-MAN, SPACE INVADERS.
+CLCO:  COSMIC AVENGER, DONKEY KONG, LADY BUG, VENTURE.
+INTV:  ASTROSMASH, B-17 BOMBER, MAJOR LEAGUE BASEBALL, PITFALL!,
+SPACE BATTLE, SPACE HAWK, SPACE SPARTANS.
+OD^2:  THE GREAT WALL STREET FORTUNE HUNT.
+Notes:  The first chapter compares the home systems of the time:
+Atari VCS, Intellivision, ASTROCADE, Odyssey^2, Channel F (CHNF),
+ARCADIA-2001, ColecoVision, and Atari 5200.  The second chapter rates
+*every* cartridge available for these systems at the time.  This is
+done with charts listing the title, number of players possible, and
+manufacturer of each game, plus rating from 1 to 5 of "hand-eye
+coordination" and "mental challenge."  The third chapter covers "The
+20 Best New Games."  Given for each game are "evaluation and basic
+objective," "scenario", "the boards," "controls," "facts you should
+know," and "strategies."  The fourth chapter covers "The 5 Classic
+Games" in the same format as the third. (lkseitz)
+        Uston, Ken; _Mastering Pac-Man_; 0-451-11758-1; Signet; 1981;
+$1.95; 128p; PB.
+Arcade:  MAZEMAN, PAC-MAN, PUC-ONE.
+Notes:  All about Pac-Man.  B&W diagrams and seven patterns.  Has one
+chapter on Puc-One and Mazeman, which were (illegal?)  Pac-Man
+rip-offs, but no patterns for them.  Also has one chapter on the
+Coleco table-top version, with patterns. (lkseitz)
+A special edition also exists.  The differences are as follows:  No
+ISBN; no price; on front cover, below Pac-Man it reads in bold yellow
+print "Exclusive Sunset House Edition".  Contents same as original
+_Mastering Pac-Man_ - this is not the revised edition. (atariman)
+        Uston, Ken; _Mastering Pac-Man_ (revised edition);
+0-451-11899-5; Signet; 1982; $2.50; 157p; PB.  Arcade:  PAC-MAN.
+Notes:  Ken Uston's Pac-Man book, in an earlier edition, gave a
+standard Pac-Man pattern that does not work on the 7th and 8th key
+boards on an 'easy' machine, because the red monster is too fast then
+and moves far enough ahead to break the pattern.  A later edition
+corrected this with what looked like an obviously hastily-added note.
+(arromdee)
+There are also copies (well, at least one) that say "special edition
+revised edition" on the cover.  Shane Shaffer (atariman) says, "my
+guess is that this was a book club edition of the book, so they just
+slapped a few words on the cover.  (I have lots of non-game books that
+say stuff like 'X Book Club Edition'.)  Seems to be more rare - I've
+found well over a dozen each of the original and the revised edition,
+but only one special edition.  Actually, I found mine by accident."
+Shane later found the following additional differences between the two
+editions:
+1) Revised edition:  Cover, upper right corner reads "Signet blah blah
+$2.95".
+Special edition:  Same place just says "$2.95".
+2) Revised edition:  5 pages of ads for other Signet or Ken Uston
+products.
+Special edition:  Those 5 pages are blank.
+(atariman)
+        Uston, Ken; _Score!  Beating the Top 16 Video Games_;
+0-451-11813-8; Signet; 1982; $2.50; 191p; PB.
+Arcade:  ASTEROIDS, CENTIPEDE, DEFENDER, DONKEY KONG, FROGGER, GALAGA,
+GALAXIAN, MAKE TRAX, MS.  PAC-MAN, PAC-MAN, QIX, SCRAMBLE,
+SPACE INVADERS, STAR CASTLE, STARGATE, TEMPEST.
+Notes:  Has the following on each game:  B&W illustrations of the
+controls and screen(s); basic objective; scenario; novice, good, and
+expert scores; controls; the board; characteristics, strategies, and
+other versions (if any at the time), which includes arcade sequels
+such as SPACE INVADERS PART II and ASTEROIDS DELUXE.  Also has a very
+brief section on home systems and table-tops.  This book is full of
+details on each game! (lkseitz)
+        Video Game Books, Inc; _Playing Donkey Kong to Win_;
+0-346-12584-7; Cornerstone Library; 1982; $2.50; 32p; PAM.
+Arcade:  DONKEY KONG.
+Notes:  Color illustrations.  Contents same as any other how to win at
+Donkey Kong book. (atariman)
+        Video Game Books, Inc; _Playing Ms.  Pac-Man to Win_;
+0-671-45759-4; Wallaby Books; 1982; $2.25; 32p; PAM.
+Arade:  MS. PAC-MAN.
+Notes:  Color illustrations.  Brief notes on each level.  Patterns
+drawn in parts on separate mazes to help comprehension.  Includes
+seconds monsters stay blue on each board.  Has very, very basic
+description of algorithm used for monsters & fruit movement that might
+be useful if it's true. (lkseitz)
+        Weyn, Suzanne (writer) and Don Bluth Studios (illustrator);
+_Dragon's Lair Presents "Dirk the Daring Battles the Black Knight"_;
+0-87135-003-3; Marvel Books; 1984; $0.99; COL?.
+Arcade:  DRAGON'S LAIR.
+Notes:  A Marvel Coloring and Activity book.  Great addition to a
+collection.  Red cover. (jmcdonald)
+        Williams, Sally; _The Video Game Scorebook_; 0-425-05859-X;
+Berkely Books; 1982; no cover price; 78p; PB.
+Notes:  This skinny paperback doesn't have much to it.  It's just a
+collection of different charts and such to fill in about your arcade
+exploits.  Includes scores to beat; daily, weekly, and monthly score
+log; record of on-going competition; strategy charts; and total games
+played. (lkseitz)
+        Worley, Joyce; _Video Games_; [ISBN?]; Dell Publishing Co.,
+Inc.; 1982; $0.69; 64p; PAM?.
+Arcade:  ASTEROIDS DELUXE, BERZERK, CENTIPEDE, DEFENDER, DONKEY KONG,
+FROGGER, GALAXIAN, PAC-MAN, SCRAMBLE, SPACE INVADERS, TEMPEST,
+WIZARD OF WOR.
+Home:  2600, ASTROCADE, CLCO, INTV, OD^2.
+Notes:  Contains instructions for playing arcade games as well as some
+hints on how to beat them (this is bottom of the barrel stuff here).
+Takes 3 pages out for home video game systems (basically just to say
+buy one if you like playing these kinds of games).  No ISBN number,
+but it's #9280 in the series. (APDF35D)
+        Zavisca, Ernest, Ph.D. and Gary Beltowski; _Be A Home Video
+Game Superstar:  Secrets To The Best Games For Your Atari VCS_;
+0-516-08984-6 (cover), 0-832-62262-1 (title page); Delair
+Publishing, Inc.; 1983; no cover price; 247p; HC.
+2600:  ADVENTURE, ASTEROIDS, BARNSTORMING, BERZERK, CHOPPER COMMAND,
+COMBAT, DEFENDER, DEMON ATTACK, DODGE 'EM, FREEWAY, GRAND PRIX,
+KABOOM!, MEGAMANIA, MISSILE COMMAND, PAC-MAN, PITFALL!, PLANET PATROL,
+SPACE CAVERN, SPACE INVADERS, STAMPEDE, STARMASTER, SUPER BREAKOUT,
+WARLORDS, YAR'S REVENGE.
+Notes:  This illustrated tome covers strategies, hints and solutions
+for games from Atari, Activision, Apollo, Imagic, and Spectravision.
+(sydtech)
+        Zavisca, Ernest, Ph.D. and Gary Beltowski; _Break a Million at
+Pac-Man_; 0-8326-2257-5; Delair; 1982; $1.75; 64p; PB.
+Arcade:  MS. PAC-MAN, PAC-MAN.
+Notes:  Republished in hard cover as _Win at Pac-Man_.
+        Zavisca, Ernest, Ph.D and Gary Beltowski; _Win at Pac-Man_;
+0-517-388820; Greenwich House; 1982; $[?]; 64p; HC.
+Arcade:  MS.PAC-MAN, PAC-MAN
+Notes:  Originally published as _Break a Million! at Pac-Man_.
+(atariman)
+        [Author?] (writer) and Don Bluth Studios (illustrator);
+_Dragon's Lair presents "Dirk the Daring Battles the Crypt Creeps"_;
+[ISBN?]; Marvel Books; 1984; $0.99; [?]p; COL?.
+Arcade:  DRAGON'S LAIR.
+Notes:  Marvel coloring and activity book.
+See also:  Suzanne Weyn.
+        [Author?] (writer) and Don Bluth Studios (illustrator);
+_Dragon's Lair presents "Dirk the Daring Battles the Giddy Goons"_;
+[ISBN?]; Marvel Books; 1984; $0.99; [?]p; COL?.
+Arcade:  DRAGON'S LAIR.
+Notes:  Marvel coloring and activity book.
+See also:  Suzanne Weyn.
+        [Author?] (writer) and Don Bluth Studios (illustrator);
+_Dragon's Lair presents "The Magic Sword"_; [ISBN?]; Marvel Books;
+1984; $0.99; [?]p; COL?.
+Arcade:  DRAGON'S LAIR.
+Notes:  Marvel coloring and activity book.
+See also:  Suzanne Weyn.
+        [Author?] (writer) and [Author?] (illustrator); _Warlords_;
+[ISBN?]; DC Comics, Inc.; [Date?]; $[?]; [?]p; unique (graphic novel;
+approximately magazine size with square binding).
+Notes:  It is currently unknown whether this graphic novel has any
+relation to the Atari arcade and home games of the same name.
+        NO AUTHOR; _Atari Video Computer System Log Book_; NO ISBN;
+Atari Corp.; [Date?]; FREE; [?]p; [Format?].
+Home:  2600.
+Notes:  Available only by sending in registration card for Atari VCS
+(2600).
+        NO AUTHOR; _The Big Book of Kids' Lists_; 0-911-81866-9; World
+Almanac Publications (Ballantine Books); 1985; $[?]; 278p; [Format?].
+Notes:  Illustrated.  Includes index.  Over 250 lists provide
+miscellaneous information about topics from freckles to video games,
+amusement parks to breakfast cereals.
+        NO AUTHOR; _Compute!'s First Book of Atari_; [ISBN?]; Small
+System Services, Inc.; 1981; $[?]; 188p; [Format?].
+Notes:  Illustrated.  May not have any classic video game information.
+        NO AUTHOR; _Pac-Man:  An Activity Book_; [ISBN?]; Whitman;
+1982; $0.99; [?]p; COL?.
+Arcade:  PAC-MAN.
+Notes:  Coloring, mazes, cut-outs, etc.  A neat item.  Cover is
+Pac-Man playing a Pac-Man arcade machine. (jmcdonald)
+        NO AUTHOR (prepared by Market Research Division); _Personal
+Electronics_; NO ISBN; Fairchild Publications; 1983; $[?]; 59p;
+[Format?].
+Notes:  Chiefly tables.
+        NO AUTHOR; _Q*Bert and His Friends Coloring Book_; [ISBN?];
+Parker Brothers; 1983; $[?]; [?]p; COL?.
+Arcade:  Q*BERT.
+Notes:  Green cover with large "Q" on front. (jmcdonald)
+        NO AUTHOR; _Q*Bert's Quazy Questions:  A Riddle Book to Make
+You Laugh_; [ISBN?]; Parker Brothers; 1983; $[?]; [?]p; [Format?].
+Arcade:  Q*BERT.
+Notes:  Blue; large "Q" on front; top is round like the "Q".
+(jmcdonald)
+        NO AUTHOR; _Video Game Operator's Handbook_; [ISBN?]; Atari
+Corporation; [Date?]; $[?]; 80+p; [Format?].
+Notes:  (25 Apr 1995) Published by Atari and distributed exclusively
+through Atari Innovative Leisure, the "VIDEO GAME OPERATOR'S HANDBOOK"
+describes in 80+ pages how to understand and trouble shoot classic
+video games.  This book was written to help amusement operators when
+video gaming was in its infancy AND assumes the reader has NO
+technical knowledge, NO test equipment and VERY FEW tools!  Filled
+with great "tricks".  High Quality, bound reprint $27.50 post paid by
+priority mail.  Order from:
+E.W.Saunders
+P.O. Box 825
+Tucker, GA 30085-0825
+(twobitkid)
+        NO AUTHOR; _Video Games and Human Development:  A Research
+Agenda for the 80's:  Papers and Proceedings of a Symposium Held at
+the Harvard Graduate School of Education, Cambridge, Massachusetts,
+May 22-24, 1983_; 0-943-48401-4; Monroe C.  Gutman Library, Harvard
+Graduate School of Education; 1983; $[?]; 72p; [Format?].
+Notes:  [Info?]
+
+------------------------------
+
+Subject: 9. PERIODICALS
+
+        _2600 Connection, The_; NO ISSN; Tim Duarte; 1 (summer
+1990)-present; bimonthly; $6.00/yr; [?]p; NEWS.
+Covers:  HOME (2600).
+Notes:  STILL IN PRINT.  BACK ISSUES AVAILABLE FROM PUBLISHER.
+From the Classic Atari Game Systems FAQ:
+The 2600 Connection is an excellent source of information about Atari
+video game collecting in general, including news, game reviews,
+interviews, and entertaining anecdotes.  Rare and collectible games
+are frequently discussed.  Classified ads in the Connection are
+relevant to all Atari game machines.  Subscription price is $6 for a
+year's worth of bi-monthly issues.  To subscribe send a check payable
+to Timothy Duarte to:
+The 2600 Connection
+c/o Tim Duarte
+8 Jenna Drive
+Fairhaven, MA 02719-5123
+For information on getting back issues, e-mail tduarte@umassd.edu.
+        _Activisions_; [ISSN?]; Activision; 1 ([Date?])-[Issue?]
+([Date?]); quarterly; free; [?]p; NEWS.
+Covers:  HOME (2600, [more?]).
+Notes:  Ran through at least #7 (Fall 1983).
+        _Arcade_; [ISSN?]; [?]; 1 (Summer 1982)-[Issue?] (Jul 1983);
+[Frequency?]; $[?]; [Format?].
+Covers:  Arcade, [Info?].
+Notes:  Might begin Feb 1983 instead.  Name changed to _Electronic
+Entertainment_ in Sep 1983.
+        _Atari Age_; [ISSN?]; Atari Corporation?; v1n1 (May/Jun
+1982)-[Issue?] ([Date?]); bimonthly; $[?]; [?]p; NEWS?.
+Covers:  HOME (2600).
+Notes:  Ran through at least v2n5 (Mar/Apr 1984).
+        _Atarian_; [ISSN?]; Atari Corporation?; v1n1 (Jun 1989)-v1n3
+(Oct 1989); bimonthly; $1.95; 30p?; MAG.
+Covers:  HOME (2600, 7800, XE).
+Notes:  It's a pretty cool magazine that focuses on the 2600, 7800,
+and XE.  There are interviews with Nolan Busnell and Gary Kitchen.
+Reviews of Secret Quest, Karateka, Dark Chambers, and lots of other
+games. (slam)
+        _Atari Force_; NO ISSN; DC Comics, Inc.; 1 (Jan 1984)-20 (Aug
+1985); monthly; $0.75; 32p; COM.
+Covers:  ATARI FORCE.
+Notes:  Comic book based on the five original Atari Force mini-comics
+packaged in certain Atari 2600 cartridges.  It takes place
+approximately 20 years later.  It features two children of the
+original Atari Force, Martin Champion from the original team, several
+aliens, and the Dark Destroyer in a more human form as the villain.
+(lkseitz)
+See also:  _Atari Force Special_ (periodical) and _Star Raiders_ by
+Elliot S! Maggin (book).
+        _Atari Force Special_; NO ISSN; DC Comics, Inc.; 1 (1986);
+one-shot; $2.00; 48p; COM.
+Covers:  ATARI FORCE.
+Notes:  See _Atari Force_ above.
+See also:  _Atari Force_ (periodical) and _Star Raiders_ by Elliot S!
+Maggin (book).
+        _Blip_; NO ISSN; Marvel Comics Group; 1 (Feb 1983)-7 (Aug
+1983); monthly; $1.00; 32p; COM.
+Covers:  ARCADE, HOME.
+Notes:  Marvel tried to get in on the video game fad.  As you can see,
+it didn't last long.  Despite the size, this was a magazine and not a
+comic book.  It was aimed more at younger readers than adult, but is
+still enjoyable.  It also has some good cartoons. (Did you know that
+all Donkey Kong wanted was for someone to scratch behind his ears? 8-)
+(lkseitz)
+        _Colecovision Experience_; [ISSN?]; Coleco[?]; v1n1
+(Fall/Winter 1983)-[Issue?] ([Date?]); [Frequency?]; $[?]; 16p;
+[Format?].
+Notes:  Avaliable only by joining club.  Also came with two schoolbook
+covers, an 8 1/2 by 11 sheet containing assorted stickers, a t-shirt
+iron on, a score sheet, and a club card with a neato moving display!
+(gaglenn)
+        _Computer Entertainer_; [ISSN?]; [Publisher?]; [Issue?] (Apr
+1984)-[Issue?] (Jul 1990); [Frequency?]; $[?]; [?]p; [Format?].
+Covers:  COMPUTER.
+Notes:  Was _The Video Game Update_.
+        _Computer Entertainment_; 0730-6687; Reese Publishing Co.;
+v3n5 (May 1985)-v3n8 (Aug 1985); monthly; $2.95; 84p (Jun 1985), 82p
+(all others); MAG.
+Covers:  ARCADE (one regular column), COMPUTER.
+Notes:  One issue has another article about arcade games that didn't
+make it. (sroney)
+Was _Electronic Games_, which was restarted in Oct 1992.
+        _Computer Fun_; 0746-0546; Fun & Games Publishing, Inc.; v1n1
+(Apr 1984)-v1n2 (May 1984); monthly; $2.50; 80p (Apr 1984), 88p
+(May 1984); MAG.
+Covers:  HOME, COMPUTER.
+Notes:  Primarily covers computer games, some reference to cartridges,
+especially 5200, but also 2600, CLCO, INTV (minimal, however).
+(sroney)
+Was _Electronic Fun with Computers & Games_.
+        _Computer Games_; NO ISSN; Carnegie Publications Corp.; v?n?
+([Date?])-[Issue?] ([Date?]); "six times a year"; $2.95 (Feb 1984),
+$3.00 (Jul/Aug 1984), $3.50 (Jan/Feb 1985); 76p (Feb 1984), 68p
+(Jul/Aug 1984 & Jan/Feb 1985); MAG.
+Covers:  ARCADE, COMPUTER.
+Notes:  Published through at least v3n5 (Jan/Feb 1985).  Some issues
+included and/or apparently used to be _Video Games Player_.  Feb 1984
+is v2n4; Jul/Aug 1984 is v3n3; Jan/Feb 1985 is v3n5.
+        _Creative Computing Video & Arcade Games_; [ISSN?];
+Ahl Computing, Inc.; v1n1 (Spring 1983)-[Issue?] ([Date?]); three
+times/year; $2.95; 128p; MAG.
+Covers:  ARCADE, HOME, [more?].
+Notes:  Lasted through at least v1n2 (Fall 1983).
+        _Digital Press_; NO ISSN; Digital Press; [Issue?]
+([Date?])-[Issue?] ([Date?]); bimonthly?; $10/6 issues; [?]p;
+[Format?].
+Covers:  HOME.
+Notes:  STILL IN PRINT.  A subscription (6 issues) to DP is $10.  Make
+checks payable to Joe Santulli at:
+Digital Press
+44 Hunter Place
+Pompton Lakes, NJ 07442
+You can contact Digital Press at digitpress@aol.com.
+        _Electronic Entertainment_; [ISSN?]; [Publisher?]; [Issue?]
+(Sep 1983)-[Issue?] (Mar 1984); [Frequency?]; $[?]; [?]p;
+[Format?].
+Covers:  [Info?]
+Notes:  From Playboy.
+        _Electronic Fun with Computers & Games_; 0746-0546; Fun & Games
+Publishing, Inc.; v1n1 (Nov 1982)-v2n5 (Mar 1984); monthly; $2.50; 80p
+(Mar 1984), 100p (all others); MAG.
+Covers:  ARCADE, HOME, COMPUTER, HANDHELD.
+Notes:  Name changed to _Computer Fun_ in Apr 1984.
+        _Electronic Games_; 0730-6687; Reese Publishing Co.; v1n1
+(Winter 1982)-v3n4 (Apr 1985); bimonthly (Winter 1982?-May 1982),
+monthly (Jun 1982-Dec 1983), bimonthly (Jan 1984-Sep 1984), monthly
+(Oct 1984-Apr 1985); $2.95; varied 82-138p; MAG.
+Covers:  ARCADE, HOME, COMPUTER, HANDHELD.
+Notes:  The very first video game magazine.  The name was changed to
+_Computer Entertainment_ with the May 1985 issue. (wal)
+_Electronic Games_ started out by covering "Videogames, Computer
+Games, Stand-Alone Games, and Arcades".  This held true for the
+majority of the its history, but the focus was almost strictly
+computer games during the last several issues.  Coverage of coin-op
+arcade games seems to have dropped off about half way into the history
+of the magazine. (blair)
+It is known that the Mar 1982 issue is vol. 1, no. 2.  _Electronic
+Games_ was restarted in Oct 1992.
+        _ENTER:  The World of Computers and Electronic Games_;
+8750-0450; Children's Television Workshop; v1n1 (Oct 1983)-[Issue?]
+(Mar 1985?); ten issues per year; $[?]; [?]p; MAG.
+Covers:  HOME, COMPUTER.
+Notes:  Beginning with March 1984 issue, name changes to _ENTER:  The
+World of Computers and New Technology_, although some non-computer
+home video game coverage continues.  While not as devoted to home
+games as other game specific mags of the time, I like this magazine.
+Lots of good pictures and interesting/fun articles. (jmcdonald)
+        _Hi-Res_; [ISSN?]; [Publisher?]; [Issue?] (Winter
+1983)-[Issue?] (May 1984); [Frequency?]; $[?]; [?]p; [Format?].
+Covers:  [Info?]
+Notes:  [Info?]
+        _Intellivision News_; NO ISSN; Mattel Electronics; 1
+(Spring 1982[?])-6 (Fall 1983); quarterly; came with Intellivision
+Game Club membership; 4p; unique (see below).
+Covered:  HOME (INTV).
+Notes:  1-3 are printed B&W on 11x17, non-glossy paper. (robinson)
+4-6 were one sheet of glossy paper, printed in color, 26x17, folded to
+6 1/2 x 8 1/2. (sroney)
+Winter 1983 was 4 and Fall 1983 was 6.
+        _JoyStik_; [ISSN?] (LCCN sf93-91365); Publications
+International, Ltd.; v1n1 (Sep 1982)-v2n3 (Dec 1983); "six times a
+year"; $2.95; 64p; MAG.
+Covers:  ARCADE, HOME, COMPUTER.
+Notes:  V2N3 is also my last issue.  I had a subscription and was
+still in the business at that time, so I think it probably folded.
+(sroney)
+Evidence (above) strongly suggests that v2n3 (Dec 1983) was the last
+issue.  Color.  Many screen shots.  By the same publisher who did the
+Consumer Guide books.
+        _Ken Uston's Newsletter on Video Games_; [ISSN?]; New American
+Library, Inc.; [Issue?] ([Date?])-[Issue?] ([Date?]); [Frequency?];
+$9.95/year; [?]p; NEWS.
+Covers:  [Info?]
+Notes:  Advertised in back of _Ken Uston's Home Video '83_ and
+_Score!_.  Unkown if it was ever actually published.
+        _The Logical Gamer_; [ISSN?]; Logical Gamer Publications; v1n1
+(Aug 1982[?])-[Issue?] ([Date?]); monthly; $1.50; 20p; unique
+(newsprint, double size).
+Covers:  HOME.
+Notes:  Lasted through at least v1n4 (Nov 1982).
+        _Numb Thumb News_; [ISSN?]; Imagic; 1 ([Date?])-[Issue?]
+([Date?]); [Frequency?]; $[?]; [?]p; NEWS.
+Covers:  HOME (2600), [others?].
+Notes:  Available only by joining club.  Lasted through at least #2.
+        _Odyssey^2 Adventure Magazine_; [ISSN?]; [Publisher?]; 1
+(Winter 1982)-[Issue?] ([Date?]); quarterly?; $[?]; [?]p; MAG?.
+Covers:  HOME (OD^2).
+Notes:  Possibly didn't last more than one issue.
+        _Play Meter_; [ISSN?]; [Publisher?]; [Issue?]
+([Date?])-[Issue?] ([Date?]); [Frequency?]; $$$[?]; [?]p; [Format?].
+Covers:  ARCADE.
+Notes:  Arcade industry trade magazine.
+        _RePlay_; [ISSN?]; [Publisher?]; [Issue?] ([Date?])-present;
+[Frequency?]; $$$[?]; [?]p; [Format?].
+Covers:  ARCADE.
+Notes:  STILL IN PRINT.  Arcade industry trade magazine.
+For subscription information, contact:
+Replay Magazine
+P.O. Box 2550
+Woodland Hills, CA 91365-9644
+(818) 347-3820
+        _Star Tech Journal_; [ISSN?]; [Publisher?]; [Issue?] ([Month?]
+1979)-present; monthly; $81/year; 24p; MAG?.
+Covers:  ARCADE.
+Notes:  STILL IN PRINT.  Star Tech Journal covers the coin-operated
+entertainment industry from a service/technical point of view.
+Published monthly since 1979, when electronics entered the coin-op
+game arcades, it is considered the operator's bible. (startech)
+        _Video & Arcade Games_ (see _Creative Computing Video & Arcade
+Games_).
+        _Video and Computer Gaming Illustrated_; 0739-4373; Ion
+International, Inc.; 13 (Jan 1984)-14 (Mar 1984); bimonthly; $2.95;
+82p; MAG.
+Covers:  ARCADE, COMPUTER, HOME.
+Notes:  Was _Videogaming Illustrated_.  [Info?]
+        _Video Entertainment_; [ISSN?]; [Publisher?]; [Issue?]
+([Date?])-[Issue?] ([Date?]); [Frequency?]; $[?]; [?]p; [Format?].
+Covers:  [Info?]
+Notes:  Formerly _Video Swapper_.  Oct 1982 issue exists.
+        _Video Games_; 0733-6780; Pumpkin Press Inc.; v1n1 (Aug
+1982)-v2n9[?] (Fall 1984); bimonthly (Aug 1982-Dec 1982), monthly (Jan
+1983-Mar 1984[?]), quarterly? ([Date?]); $2.50 (Summer/Fall 1984),
+$2.95 (all known others); 84p (Dec 1982), 106p (Feb 1983), 82p (all
+known others); MAG.
+Covers:  ARCADE, HOME, COMPUTER, HANDHELD.
+Notes:  This was a full color magazine.  In had many photos of
+cabinets, consoles, handhelds, and screens.  Beginning with the March
+1983 issue, the back page had stats on the best selling home games,
+top earning arcade games, and selected scores from the Twin Galaxies
+International Scoreboard.  This magazine is of no relation to the
+current _VideoGames_ (one word) magazine. (lkseitz)
+It is known that Mar 1984 is v2n6 (#18) and summer/fall 1984 is v2n9
+(#21).
+        _Video Games Player_; [ISSN?]; Carnegie Publications Corp;
+v1n1 (Fall 1982)-[Issue?] (1983?); "six times a year"; $2.95; 66p;
+MAG.
+Covers:  HOME, [more?].
+Notes:  Apparently became _Computer Games_.  Aug/Sep 1983 is v2n1.
+[Info?]
+        _Video Game Update, The_; [ISSN?]; No Hollywood; v1n1 (Apr
+1982)-v2n12 (Mar 1984); monthly[?]; $2.50; 16p; NEWS.
+Covers:  HOME, COMPUTER.
+Notes:  Name changed to _Computer Entertainer_ in Apr 1984.
+        _Videogaming Illustrated_; 0739-4373 (LCCN sn83-8303); Ion
+International, Inc.; Aug 1982-Dec 1983; "bimonthly in Feb, Apr, Jun,
+Aug, Oct, Dec"; $2.75 (Aug-Oct 1982), $2.95 (Feb 1983); 66p (Aug-Oct
+1982), 74p (Feb 1983); MAG.
+Covers:  ARCADE, HOME.
+Notes:  Color and B&W.  Name changed to _Video and Computer Gaming
+Illustrated_ in Jan 1984.
+        _Video Swapper_; [ISSN?]; [Publisher?]; [Issue?]
+([Date?])-[Issue?] ([Date?]); [Frequency?]; $[?]; [?]p; [Format?].
+Covers:  [Info?]
+Notes:  The Apr 1982 issue was either vol. 13 or #13.  Name changed to
+_Video Entertainment_ somewhere between Apr and Oct 1982.  [Was this
+magazine actually dedicated to video games?]
+        _Vidiot_; [ISSN?]; Creem Magazine; 1 (Sep/Oct 1982)-[Issue?]
+([Date?]); bimonthly?; $[?]; 50p; MAG?.
+Covers:  [Info?]
+Notes:  A "Creem special edition."  Lasted until at least the Jun/Jul
+1983 issue.  (Yes, the months don't work out correctly that way.
+Something happened between the Sep/Oct 1982 and Feb/Mar 1983 issues.)
+
+------------------------------
+
+Subject: 10. THANKS
+
+Thanks to Galen Komatsu for allowing me to take over, Gregg Woodcock
+for the tons of information he provided, Terry Carroll
+(carrollt@netcom.com) for allowing me to use a modified version of the
+wonderful disclaimer from the Copyright FAQ, Andrew K.  Heller
+(heller@akh104.rh.psu.edu) for allowing me to use the _2600
+Connection_ excerpt (written by Ted Drude) from the Classic Atari Game
+Systems FAQ, Leonard Herman (rolenta@aol.com) for publishing _Phoenix_
+with a bibliography from which I could get some information on
+periodicals, and the following for their contributions (whether they
+know it or not):
+
+aadavis         Alan Davis (aadavis@mindgames.com)
+APDF35D         Clint R. Dyer (APDF35D@prodigy.com)
+arromdee        Ken Arromdee (arromdee@blaze.cs.jhu.edu)
+atariman        Shane Shaffer (atariman@athena.mit.edu)
+blair           Ken Blair
+clint           Clint Cummins (clint@leland.Stanford.EDU)
+davidson        Jonathan H. Davidson (davidson@is.dal.ca)
+digitpress      Digital Press (digitpress@aol.com)
+gkomatsu        Galen Tatsuo Komatsu (gkomatsu@uhunix3.uhcc.Hawaii.Edu)
+gaglenn         Gordon Glenn (gaglenn@ix.netcom.com)
+jaime           Jaime Villacorte (jaime@tcville.es.hac.com, jaimev@netcom.com)
+jlodoen         Jeff M Lodoen (jlodoen@shell.portal.com)
+jmcdonald       Joey McDonald (Joey.McDonald@icon.genesplicer.org)
+junkster        James Hague (junkster@halcyon.com)
+J.Yeates        John Yeates (J.Yeates@susx.ac.uk)
+lkseitz         Lee K. Seitz (lkseitz@iquest.com)
+mvcooley        Matt Cooley (mvcooley@unity.ncsu.edu)
+nueb0001        Shawn Nuebel (nueb0001@maroon.tc.umn.edu)
+parrot          Thomas Edney (parrot@u.washington.edu)
+rhino           Ryan Evans (rhino@media.mit.edu)
+robinson        Keith Robinson
+rolenta         Leonard Herman (rolenta@aol.com)
+rbarbaga        Ralph A. Barbagallo III (rbarbaga@cs.uml.edu)
+slam            Michael Glicksman (slam@clark.net)
+SMTC474         Joshua See (SMTC474@uoft02.utoledo.edu)
+sroney          Stephen Roney (sroney@eworld.com)
+startech        Star Tech Journal (http://www.cyberenet.net/web/startech/)
+sydtech         Scott Butler (sydtech@winternet.com)
+twobitkid       (twobitkid@aol.com)
+VGR             VGR (Craig Pell) (vgriscep@wam.umd.edu)
+wal             William A Lucy (wal@netcom.com)
+woodcock        Gregg Woodcock (woodcock@bnr.ca)
+xtarelex        Tony Miller (xtarelex@powergrid.electriciti.com)
+
+-------------------------------------------------------------------------------
+   Return to Lee's classic video game info.
+lkseitz@iquest.com
+Last Modified: 23 Feb 1996

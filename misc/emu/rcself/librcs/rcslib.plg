@@ -1,0 +1,104 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: rcslib - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\WINDOWS\TEMP\RSP1273.TMP" with contents
+[
+/nologo /MT /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "RCSLIB_EXPORTS" /D "DLL" /Fp"Release/rcslib.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"M:\projects\windows\rcslib\xml.c"
+"M:\projects\windows\rcslib\complex.c"
+"M:\projects\windows\rcslib\date.c"
+"M:\projects\windows\rcslib\db.c"
+"M:\projects\windows\rcslib\file.c"
+"M:\projects\windows\rcslib\graph.c"
+"M:\projects\windows\rcslib\graph3d.c"
+"M:\projects\windows\rcslib\kernel.c"
+"M:\projects\windows\rcslib\math.c"
+"M:\projects\windows\rcslib\matrix.c"
+"M:\projects\windows\rcslib\mstring.c"
+"M:\projects\windows\rcslib\mterm.c"
+"M:\projects\windows\rcslib\options.c"
+"M:\projects\windows\rcslib\random.c"
+"M:\projects\windows\rcslib\rgb.c"
+"M:\projects\windows\rcslib\term.c"
+"M:\projects\windows\rcslib\vector.c"
+"M:\projects\windows\rcslib\vmem.c"
+"M:\projects\windows\rcslib\widgets.cpp"
+"M:\projects\windows\rcslib\xhelpers.c"
+"M:\projects\windows\rcslib\awlib.c"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSP1273.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSP1274.TMP" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /dll /incremental:no /pdb:"Release/rcslib.pdb" /machine:I386 /out:"Release/rcslib.dll" /implib:"Release/rcslib.lib" 
+.\Release\xml.obj
+.\Release\complex.obj
+.\Release\date.obj
+.\Release\db.obj
+.\Release\file.obj
+.\Release\graph.obj
+.\Release\graph3d.obj
+.\Release\kernel.obj
+.\Release\math.obj
+.\Release\matrix.obj
+.\Release\mstring.obj
+.\Release\mterm.obj
+.\Release\options.obj
+.\Release\random.obj
+.\Release\rgb.obj
+.\Release\term.obj
+.\Release\vector.obj
+.\Release\vmem.obj
+.\Release\widgets.obj
+.\Release\xhelpers.obj
+.\Release\awlib.obj
+]
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSP1274.TMP"
+<h3>Output Window</h3>
+Compiling...
+xml.c
+complex.c
+M:\projects\windows\rcslib\xml.c(27) : warning C4716: 'rcs_xmlAddNode' : must return a value
+date.c
+M:\projects\windows\rcslib\date.c(77) : warning C4244: 'return' : conversion from 'double ' to 'long ', possible loss of data
+db.c
+file.c
+graph.c
+graph3d.c
+M:\projects\windows\rcslib\graph3d.c(262) : warning C4244: 'function' : conversion from 'double ' to 'int ', possible loss of data
+M:\projects\windows\rcslib\graph3d.c(262) : warning C4244: 'function' : conversion from 'double ' to 'int ', possible loss of data
+M:\projects\windows\rcslib\graph3d.c(262) : warning C4244: 'function' : conversion from 'double ' to 'int ', possible loss of data
+M:\projects\windows\rcslib\graph3d.c(262) : warning C4244: 'function' : conversion from 'double ' to 'int ', possible loss of data
+kernel.c
+M:\projects\windows\rcslib\graph3d.c(262) : warning C4761: integral size mismatch in argument; conversion supplied
+M:\projects\windows\rcslib\graph3d.c(262) : warning C4761: integral size mismatch in argument; conversion supplied
+M:\projects\windows\rcslib\graph3d.c(262) : warning C4761: integral size mismatch in argument; conversion supplied
+M:\projects\windows\rcslib\graph3d.c(262) : warning C4761: integral size mismatch in argument; conversion supplied
+math.c
+matrix.c
+mstring.c
+mterm.c
+options.c
+random.c
+M:\projects\windows\rcslib\random.c(7) : warning C4244: '=' : conversion from 'int ' to 'float ', possible loss of data
+rgb.c
+term.c
+vector.c
+vmem.c
+widgets.cpp
+xhelpers.c
+awlib.c
+Linking...
+   Creating library Release/rcslib.lib and object Release/rcslib.exp
+
+
+
+<h3>Results</h3>
+rcslib.dll - 0 error(s), 11 warning(s)
+</pre>
+</body>
+</html>

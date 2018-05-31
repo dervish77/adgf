@@ -1,0 +1,314 @@
+
+                               About the FAQ
+     _________________________________________________________________
+   
+   This portion of the alt.horror.cthulhu FAQ was brought to you by
+   Donovan K. Loucks (dloucks@primenet.com). This document was last
+   updated on May 21, 1997.
+     _________________________________________________________________
+   
+     * Q: What is a FAQ?
+       A: A FAQ is a list of the "Frequently Asked Questions" for a
+       particular Usenet group on the Internet. It is set up like you see
+       here, with questions and answers, which basically prevent people
+       from having to repeatedly answer the Frequently Asked Questions
+       (by new users primarily).
+     * Q: How will this FAQ be organized?
+       A: Basically, this FAQ will be organized by subject matter, with
+       each subject being uploaded to the internet as an individual
+       posting. Thus, to get the whole FAQ you need to download each
+       part. This is to allow people to pick and choose those FAQ
+       subjects which interest them, and skip those which do not.
+       This FAQ is slightly different than others on the internet, in
+       that it contains MUCH more than just "Frequently Asked Questions".
+       It also contains lists of information which people familiar with
+       H.P. Lovecraft and the Cthulhu Mythos find interesting, thus
+       making it a fairly lengthy set of files.
+       Note: All addresses for companies or organizations are listed in
+       one question in the "General" part of the FAQ.
+       IMPORTANT
+       Anytime that a question mark (?) appears in the FAQ, that means
+       that the information has not been verified, or is somehow in
+       question. If you have verifiable info on anything tagged with a
+       '?', please e-mail that info to me, and I will try to fix it for
+       the next FAQ posting.
+     * Q: What are the sections of the FAQ?
+       A: The FAQ sections are:
+          + About the FAQ
+          + General
+          + Written Works
+          + Movies and Television
+          + Games
+          + Other Media
+          + Internet
+          + Mythos Lore
+     * Q: What questions are in the FAQ?
+       A: By section, the following questions are asked and answered in
+       the FAQ:
+          + About the FAQ
+               o What is a FAQ?
+               o How will this FAQ be organized?
+               o What are the sections of the FAQ?
+               o What questions are in the FAQ?
+               o How do I get a copy of the entire FAQ?
+               o Will you E-mail me the FAQ?
+               o Who contributed to this FAQ?
+               o Are all of the credited things above in this FAQ?
+               o What areas will be covered in the future?
+               o What subjects are unavailable at this time?
+          + General
+               o What is this newsgroup about?
+               o What is Cthulhu?
+               o How is "Cthulhu" pronounced?
+               o Who is H.P. Lovecraft?
+               o Where is H.P. Lovecraft buried?
+               o Where does August Derleth stand in all this?
+               o Does anyone actually take Mythos fiction as fact?
+               o What are the addresses of companies in the FAQ?
+          + Written Works
+               o What stories did Lovecraft write?
+               o Which of these are considered Mythos tales?
+               o What stories should I begin with?
+               o What other Mythos writers are there?
+               o What are the "posthumous collaborations"?
+               o Where can I find Lovecraftian fiction?
+               o Where can I find a bibliography of works?
+               o Where can I get Lovecraft's letters?
+               o Why is volume III so hard to get?
+               o Where can I find a biography of Lovecraft?
+               o What is the Lovecraft Transcription project?
+               o What magazines discuss Lovecraft and his writings?
+          + Movies and Television
+               o What Lovecraftian movies have been made?
+               o What television shows have Mythos references?
+               o What publications have descriptions of movies?
+          + Games
+               o What board/card games are available?
+               o What role-playing games are available?
+               o Available for Call of Cthulhu
+               o Game Magazines
+               o Computer Games
+               o Games on the Internet?
+               o Music for CoC
+          + Other Media
+               o What radio shows have included Lovecraft or the Mythos?
+               o What Lovecraft or Mythos stories are books on tape?
+               o What music is available with Mythos references?
+               o What music do Coc players recommend as background?
+               o What comic books have included Lovecraft stories?
+               o Fun merchandise
+          + Internet
+               o Newsgroups
+               o FTP sites
+               o World Wide Web Sites
+               o Mailing Lists
+               o IRC (Internet Relay Chat)
+               o Other Sources?
+               o Games on the Internet?
+          + Mythos Lore
+               o What towns did Lovecraft base his locations on?
+               o Who are the 'Great Old Ones'?
+               o What various manifestations has Nyarlathotep taken?
+               o Where can I get a copy of the Necronomicon?
+               o What is the etymology of the word "Necronomicon"?
+               o How about the Unaussprechlicken Kulten?
+               o What events occurred in the Mythos universe?
+     * Q: How do I get a copy of the entire FAQ?
+       A: There are several ways to obtain the FAQ, including:
+          + Anonymous FTP: Using anonymous FTP lets you access Primenet's
+            FTP server directly--this is where the FAQ is kept. It can be
+            found in the "users/d/dloucks/ahc" directory and is stored in
+            9 parts. Here are the details:
+              Machine: ftp.primenet.com
+                Login: anonymous
+             Password: <your e-mail address>
+            Directory: users/d/dloucks/ahc
+                Files: all files beginning with "ahcfaq":
+            ahcfaq0.txt_Mini-FAQ    The Mini-FAQ
+            ahcfaq1.txt_About       About, Sections,Credits
+            ahcfaq2.txt_General     Newsgroup, Cthulhu, HPL, Addresses
+            ahcfaq3.txt_Writings    Stories, Letters, Mags, Biblio.
+            ahcfaq4.txt_Movies_TV   Movies, Television, Books Regarding
+            ahcfaq5.txt_Games       Board/Card, Roleplaying, Magazines
+            ahcfaq6.txt_Other_Media Radio, Books on Tape, Music, Comics
+            ahcfaq7.txt_Internet    Newsgroups, FTP, WWW, MOO/MUD/MUSHs
+            ahcfaq8.txt_Mythos_Lore Locales, Entities, Tomes, Timeline
+            Also, a ZIPped file called "ahcfaq.zip" contains all 9 parts.
+          + The World Wide Web: Any web browswer can be used to access
+            the FAQ. You may either use your web browser to obtain the
+            FAQ via FTP, or you may access it via The H.P. Lovecraft
+            Archive.
+            FTP site:
+            ftp://ftp.primenet.com/users/d/dloucks/ahc
+            WWW site:
+            http://www.primenet.com/~dloucks/hpl/internet/ahcfaq
+          + E-mail Bots: For those who don't have FTP or WWW access, you
+            can have portions of the FAQ e-mailed to you automatically by
+            my e-mail bots. This process only requires that you send me
+            (dloucks@primenet.com) an e-mail message with a particular
+            Subject line. When your incoming message is detected by my
+            e-mail bot, it will e-mail the appropriate section of the FAQ
+            to you, and discard your message. With that in mind, don't
+            bother sending any messages with contents, because I'll never
+            get it. Also, since the mailbot handles everything
+            automatically, don't hesitate to request all the parts of the
+            FAQ. Here's a list of the exact Subject lines and what each
+            gets you:
+            Subject       What it gets you
+            FAQ: Part 0   Answers to the top questions asked
+            FAQ: Part 1   About the FAQ (outline and credits)
+            FAQ: Part 2   General (Cthulhu, Lovecraft, addresses)
+            FAQ: Part 3   Written Works (stories, biblio, bio, letters)
+            FAQ: Part 4   Movies and Television
+            FAQ: Part 5   Games (board, card, role-playing, computer)
+            FAQ: Part 6   Other Media (radio, tape, music, comics, etc.)
+            FAQ: Part 7   Internet (newsgroups, FTP, WWW, MUDs)
+            FAQ: Part 8   Mythos Lore (towns, entities, tomes, timeline)
+            FAQ: Mini-FAQ Answers to the top questions asked
+     * Q: Will you e-mail me the FAQ?
+       A: In general, no, due to time constraints. Anyone who has e-mail
+       access can obtain the FAQ using my e-mail bots. If you've tried
+       every other available method of getting the FAQ (FTP, WWW, e-mail
+       bots) and have still had no success, I'll e-mail you the FAQ.
+     * Q: Who contributed to this FAQ?
+       A: This is (to me) the most important answer in this whole FAQ. As
+       such, I hope to Cthulhu that I don't leave anyone out. If I do,
+       please shout at me and I will make a formal apology, as well as
+       righting the FAQ. I have tried to include everyone who gave input,
+       even if it was a repeat of other peoples stuff, or if I already
+       had the info. I feel that each effort deserves applause.
+       I've included only names in this list. If you want to know who
+       contributed what, e-mail me and request the more extensive list.
+       The contributors were (in alphabetical order):
+          + Alex (ez041349@judy.ucdavis.edu)
+          + Alligator Descartes (v@istellar.demon.co.uk)
+          + Shannon Appel (sappel@netcom.com)
+          + Ashton (ashton@netcom.com)
+          + Toren G. Atkinson (thickets@uniserve.com)
+          + Ian Ayliffe (Ian@directs.demon.co.uk)
+          + J.D. Bastow (jdbastow@csupomona.edu)
+          + Clark Battle (battlec@cs.rpi.edu)
+          + Kevin Blackburn (Kevin@fairbruk.demon.co.uk)
+          + Marv Boyes (mlboyes@orion.branch-co.lib.mi.us)
+          + Michael Rogero Brown
+          + Jeff Campbell (campbej@csos.orst.edu)
+          + Bob Cannard (mi_go@icx.com)
+          + Robert W. Chapman (Robert_Chapman@Brown.edu)
+          + Eric K. Cheung (undead@mcl.mcl.ucsb.edu)
+          + Chiaroscuro (msheahan@carroll1.cc.edu)
+          + Barbara F. Crooks (bcrooks@cwis.unomaha.edu)
+          + John Crowdis (crowdis@unixg.ubc.ca)
+          + Dave (The Kurgan) Croyle (jcd@taligent.com)
+          + CWM (cwm@india1.io.com)
+          + Donald G. Davis (dgdavis@nyx.cs.du.edu)
+          + David Ehs (f92-dah@nada.kth.se)
+          + Jose Baltran Escavy (upcf@fib.upc.es)
+          + Michael Thomas Fassbender (mfassben@nickel.ucs.indiana.edu)
+          + Michael Fefer (michael.fefer@canrem.com)
+          + James Fellrath (jfellrath@delphi.com)
+          + Dave Fischer (dave@cca.org)
+          + Andrew D. Gable (gable@redrose.net)
+          + Alan Glover (alan@pinesoft.demon.co.uk)
+          + John W. Goodrich (jgoodrich@nmsu.edu)
+          + Jack Graham (jacker@daneel.acns.nwu.edu)
+          + Perry Grayson (am119@lafn.org)
+          + Matt Grossman (mgrossman@hamp.hampshire.edu)
+          + Ramon Guerrero (girthlin@io.com)
+          + Jon Michael Hansen (jhansen@moe.coe.uga.edu)
+          + Ron Harding (rbhardin@undergrad.math.uwaterloo.ca)
+          + Daniel Harms (harmsdm@ctrvax.vanderbilt.edu)
+          + James Harris (jharrisb@cix.compulink.co.uk)
+          + Steven Harris (kayven@aol.com)
+          + Robin Hermance-Moore (rhm@oclc.org)
+          + David Hines (dzhines@midway.uchicago.edu)
+          + Franklin Hummel (hummel@netcom.com)
+          + Scott D. Hurley (sdh5@po.cwru.edu)
+          + Keith Ivey (kcivey@cpcug.org)
+          + Chris Jarocha-Ernst (cje@gandalf.rutgers.edu)
+          + Jonny Anonymous (myerswd@ctrvx1.vanderbilt.edu)
+          + William T. Joyce (w.joyce@ix.netcom.com)
+          + Jeff Katin (jkatin@pnet.com)
+          + Bill Keyes (bkeyes@lamar.colostate.edu)
+          + Seth King (ssk93@aber.ac.uk)
+          + Karl Kluge (kckluge@glasnost.eecs.umich.edu)
+          + Dimitris Kontoudis (kontoudi@ics.forth.gr)
+          + Jennifer Krause (jjkrause@indiana.edu)
+          + Steve Kudlak (chroma@armory.com)
+          + Dan Laufer (dan@coromir.demon.co.uk)
+          + Laura Lins (lins@u.washington.edu)
+          + Long Coat (longcoat@aol.com)
+          + Donovan K. Loucks (dloucks@primenet.com)
+          + Christopher R. Maden (crism@brownvm.brown.edu)
+          + Bart R. Mallio
+          + Ryan Mathieson (RyanM@renaissance.co.nz)
+          + Lisa Mesplay (lmm@netcom.com)
+          + Michael (grimjack@iastate.edu)
+          + Marc Michaud (necropress@ids.net)
+          + Rory Millard (millard@cs.uchicago.edu)
+          + Chris Miller (cmille1@freenet.grfn.org)
+          + Mr. Blue (tdriscol@illuminati.io.com)
+          + David C. Mudie (mudie@radon.eeds.berkeley.edu)
+          + Larry Mulcahy (larry@ambient.uucp)
+          + Kevin Oster (koster@netcom.com)
+          + Ed Pflager (BishopNovi@aol.com)
+          + Steve Phillips (sdpp@craysys.co.uk)
+          + J. J. Pierson (macleod@ritz.mordor.com)
+          + Jonathan Quincy (eaeu368@rigel.oac.uci.edu)
+          + Philip J. Rahman (rahma002@maroon.tc.umn.edu)
+          + Jack Reda (JackReda@aol.com)
+          + Clint Ruin (clint.ruin@utopia1.com)
+          + Chris Schaller (schaller@lpl.arizona.edu)
+          + David E. Schultz (dschultz@solaria.mil.wi.us)
+          + Andrew Seavy (aseavy@magnus.acs.ohio-state.edu)
+          + Shinobi2 (shinobi2@delphi.com)
+          + Sam Shirley (chaosium@aol.com)
+          + Christopher Wade Skinner (6500cws@ucsbuxa.ucsb.edu)
+          + Andrew Smith (a.smith02@ic.ac.uk)
+          + David Smith (EsoOrDagon@aol.com)
+          + Dru A. Smith (drusmith@magnus.acs.ohio-state.edu)
+          + Lance Smith (lsmith@cs.umn.edu)
+          + Ross Smith (alien@acheron.amigans.gen.nz)
+          + Guy B. Standen (gbs@ukc.ac.uk)
+          + Ronald J. Stelly (rjs5269@usl.edu)
+          + StoOdin (StoOdin101@aol.com)
+          + Stacy Stroud (s0hs@music.transy.edu)
+          + John Stuart (stuart@voltdirectory.com)
+          + Joe Tankovich (joe@vexcel.com)
+          + Christophe Thill (c_thill@worldnet.fr)
+          + Michael Tice (tice@physics.ucla.edu)
+          + John Tynes (rev@tccorp.com)
+          + Martin Veasey (martin@cheam.demon.co.uk)
+          + Brian Vickers (brian_vickers@isd.jpl.nasa.gov)
+          + Matthias Walder (mwalder@rzmain.rz.uni-ulm.de)
+          + Cameron Walker (crwal1@mfs01.cc.monash.edu.au)
+          + The Wandering Jew (ahasuer@clark.net)
+          + Mike Williams (debbiew@gwis.com)
+          + Colin J. Wynne (cwynne@liberty.uc.wlu.edu)
+          + Zane (zane@albnyvms.bitnet)
+     * Q: Are all of the credited things above in this FAQ?
+       A: If the appropriate section (i.e. General, Fiction, Movies,
+       etc.) has been posted, then that credit should be in there. If I
+       haven't finished the appropriate section yet, the credited item
+       will be contained within it.
+     * Q: What areas will be covered by future contributors?
+       A: I have received notes from people who are interested in doing
+       FAQ lists around specific areas of Lovecraft or Cthulhu stuff. I
+       will list only the topics, and not their potential contributors,
+       in case anyone is unable to contribute what they hoped to:
+          + Books by Lovecraft; Books by other authors
+          + Anthologies of short stories
+     * Q: What subjects have people asked to see, but are not available
+       at this time?
+       A: There are a few obscure items that seem to have been touched
+       upon, but not followed through. If anyone wants to tackle them,
+       I'd love to see it.
+          + Historical veracity and ficticious detailing of the numerous
+            tomes mentioned in Lovecraft (et al) stories.
+          + ISBN numbers of the books in the bibliographies
+          + Historical information on deities/locations (i.e. Stonehenge,
+            Easter Island, Nodens, etc) and the relation between reality
+            and their ficticious mentionings.
+          + Timeline (partially done)
+     _________________________________________________________________
+   
+   End of Part 1 of the alt.horror.cthulhu FAQ, "About the FAQ".

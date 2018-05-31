@@ -1,0 +1,79 @@
+.ad l
+.TH CCBUILD 1 "07 May 1999" "3Com"
+.SH NAME
+ccbuild - build script for SMM project under ClearCase.
+
+.SH SYNOPSIS
+.B "ccbuild" \fI<viewname>\fP [\fI<target> <level>\fP] [\fInomail\fP]
+
+.SH DESCRIPTION
+Performs build of the SMM code within a ClearCase view.  The specified
+\fI<viewname>\fP is verified to exist and that it matches the current view.
+Note that the view name parameter is only a portion of the full ClearCase
+view tag -- <username>_<project>_<viewname>.
+.PP
+The script produces a "make_log" and an "error_log" in the directory
+"/vobs/hdm_root".  The script also produces a "time_log" in the same 
+directory for timing the build process.
+.PP
+The \fI<target>\fP parameter specifies the build target as either "ALL" 
+or one of the standard make targets supported by the SMM code tree.  The
+\fI<level>\fP parameter specifies the level of the build, or which 
+directory is used like "root" or "reva/proj".
+.PP
+By default the script will email the "error_log" file to the user
+running the script.  This behavior can be stopped by using the optional
+parameter [\fInomail\fP].
+
+.SH FIELDS
+.TP 5
+.B "<viewname>" - view name.
+
+Name of a ClearCase view as specified by the "mkv" command.  Verified
+to exist and that it matches current view.
+
+.TP 5
+.B "<target>" - build target.
+
+Valid as "ALL", "DV", "SMM", or "TEST".
+Default is "SMM".
+
+.TP 5
+.B "<level>" - build level.
+
+Valid as "root", or "proj".
+Default is "root".
+
+.TP 5
+.B "[nomail]" - suppress email.
+
+Suppress mailing of "error_log" to user.
+
+.SH EXAMPLES
+.PP
+To perform build using defaults, use
+.PP
+.B
+     ccbuild dev_ne_switch
+.PP
+To perform build only at proj level, use
+.PP
+.B
+     ccbuild dev_ne_switch TEST proj
+.PP
+To suppress email, use
+.PP
+.B
+     ccbuild dev_ne_switch DV root nomail
+
+.SH SEE ALSO
+clearmake, gcc, ar, {GNU} make
+
+.SH FILES
+/millenniumvobs/smm_root/cctools/bin/smm_ccbuild.sh
+
+.SH COPYRIGHT
+Copyright 1999 3Com Corporation.
+
+.SH AUTHORS
+Brian Lingard, 3Com Corporation.

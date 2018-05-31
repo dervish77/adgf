@@ -1,0 +1,384 @@
+%!PS-Adobe-1.0
+%%DocumentFonts: Times-Roman Times-Bold Times-Italic Courier
+%%Pages: (atend)
+%%EndComments
+save
+/D {def} def
+/M {fnsiz mul xmargin add yp moveto} D
+/N {/yp yp fnsiz 2 add sub D xmargin yp moveto} D
+/S {show} D
+/SF {/fnsiz exch D findfont fnsiz scalefont setfont} D
+/TR {/Times-Roman} D
+/TB {/Times-Bold} D
+/TI {/Times-Italic} D
+/CR {/Courier} D
+/SP {showpage} D
+/NP {} D
+/xmargin 72 D /yp 720 D/fnsiz 0 D
+%%EndProlog
+%%Page: 1
+save
+N
+TI 12 SF
+TB 20 SF
+N
+0 M
+(A Beginner's Guide to URLs)S
+TR 12 SF
+N
+N
+0 M
+(What's a URL?  A URL is a )S
+TB 12 SF
+(Uniform Resource Locator)S
+TR 12 SF
+(.  Think of it as a)S
+N
+0 M
+(networked extension of the standard )S
+TI 12 SF
+(filename)S
+TR 12 SF
+( concept: not only can you point to a)S
+N
+0 M
+(file in a directory, but that file and that directory can exist on any machine on the)S
+N
+0 M
+(network, can be served via any of several different methods, and might not even)S
+N
+0 M
+(be something as simple as a file: URLs can also point to queries, documents)S
+N
+0 M
+(stored deep within databases, the results of a )S
+TI 12 SF
+(finger)S
+TR 12 SF
+( or )S
+TI 12 SF
+(archie)S
+TR 12 SF
+( command, or)S
+N
+0 M
+(whatever.  )S
+N
+N
+0 M
+(Since the URL concept really pretty simple \("if it's out there, we can point at)S
+N
+0 M
+(it"\), this beginner's guide is just a quick walk through some of the more common)S
+N
+0 M
+(URL types and should allow you to be creating and understanding URLs in a)S
+N
+0 M
+(variety of contexts very quickly.  )S
+TB 18 SF
+N
+N
+0 M
+(File URLs)S
+TR 12 SF
+N
+N
+0 M
+(Suppose there is a document called "foobar.txt"; it sits on an anonymous ftp)S
+N
+0 M
+(server called "ftp.yoyodyne.com" in directory "/pub/files".  The URL for this file)S
+N
+0 M
+(is then: )S
+CR 12 SF
+N
+N
+0 M
+(    file://ftp.yoyodyne.com/pub/files/foobar.txt)S
+TR 12 SF
+N
+N
+0 M
+(The toplevel directory of this FTP server is simply: )S
+CR 12 SF
+N
+N
+0 M
+(    file://ftp.yoyodyne.com/)S
+TR 12 SF
+N
+N
+0 M
+(The "pub" directory of this FTP server is then: )S
+CR 12 SF
+N
+N
+0 M
+(    file://ftp.yoyodyne.com/pub)S
+TR 12 SF
+N
+N
+0 M
+(That's all there is to it.  )S
+TB 18 SF
+N
+N
+0 M
+(Gopher URLs)S
+TR 12 SF
+N
+N
+0 M
+(Gopher URLs are a little more complicated than file URLs, since Gopher servers)S
+N
+0 M
+(are a little tricker to deal with than FTP servers.  To visit a particular gopher)S
+N
+0 M
+(server \(say, the gopher server on gopher.yoyodyne.com\), use this URL: )S
+CR 12 SF
+N
+N
+0 M
+(    gopher://gopher.yoyodyne.com/)S
+TR 12 SF
+N
+N
+0 M
+(Some gopher servers may reside on unusual network ports on their host)S
+N
+0 M
+(machines.  \(The default gopher port number is 70.\) If you know that the gopher)S
+N
+0 M
+(server on the machine "gopher.banzai.edu" is on port 1234 instead of port 70,)S
+SP
+restore
+%%Page: 2
+save
+N
+TR 12 SF
+0 M
+(then the corresponding URL would be: )S
+CR 12 SF
+N
+N
+0 M
+(    gopher://gopher.banzai.edu:1234/)S
+TB 18 SF
+N
+N
+0 M
+(News URLs)S
+TR 12 SF
+N
+N
+0 M
+(To point to a Usenet newsgroup \(say, "rec.gardening"\), the URL is simply: )S
+CR 12 SF
+N
+N
+0 M
+(    news:rec.gardening)S
+TR 12 SF
+N
+N
+0 M
+(Currently, network clients like )S
+(NCSA Mosaic)S
+( don't allow you to specify a news)S
+N
+0 M
+(server like you would normally expect \(e.g., )S
+CR 12 SF
+N
+0 M
+(news://news.yoyodyne.com/rec.gardening)S
+TR 12 SF
+(\); this may be coming)S
+N
+0 M
+(down the road but in the meantime you will have to specify your local news)S
+N
+0 M
+(server via some other method.  The most common method is to set the)S
+N
+0 M
+(environment variable )S
+CR 12 SF
+(NNTPSERVER)S
+TR 12 SF
+( to the name of your news server before you)S
+N
+0 M
+(start Mosaic.  )S
+TB 18 SF
+N
+N
+0 M
+(HTTP URLs)S
+TR 12 SF
+N
+N
+0 M
+(HTTP stands for HyperText Transport Protocol.  HTTP servers are commonly)S
+N
+0 M
+(used for serving hypertext documents, as HTTP is an extremely low-overhead)S
+N
+0 M
+(protocol that capitalizes on the fact that navigation information can be embedded)S
+N
+0 M
+(in such documents directly and thus the protocol itself doesn't have to support)S
+N
+0 M
+(full navigation features like the FTP and Gopher protocols do.  )S
+N
+N
+0 M
+(A file called "foobar.html" on HTTP server "www.yoyodyne.com" in directory)S
+N
+0 M
+("/pub/files" corresponds to this URL: )S
+CR 12 SF
+N
+N
+0 M
+(    http://www.yoyodyne.com/pub/files/foobar.html)S
+TR 12 SF
+N
+N
+0 M
+(The default HTTP network port is 80; if a HTTP server resides on a different)S
+N
+0 M
+(network port \(say, port 1234 on www.yoyodyne.com\), then the URL becomes: )S
+CR 12 SF
+N
+N
+0 M
+(    http://www.yoyodyne.com:1234/pub/files/foobar.html)S
+TB 18 SF
+N
+N
+0 M
+(Partial URLs)S
+TR 12 SF
+N
+N
+0 M
+(Once you are viewing a document located somewhere on the network \(say, the)S
+N
+0 M
+(document )S
+CR 12 SF
+(http://www.yoyodyne.com/pub/afile.html)S
+TR 12 SF
+(\), you can)S
+N
+0 M
+(use a )S
+TI 12 SF
+(partial)S
+TR 12 SF
+(, or )S
+TI 12 SF
+(relative)S
+TR 12 SF
+(, URL to point to another file in the same directory, on)S
+N
+0 M
+(the same machine, being served by the same server software.  For example, if)S
+N
+0 M
+(another file exists in that same directory called "anotherfile.html", then )S
+CR 12 SF
+N
+0 M
+(anotherfile.html)S
+TR 12 SF
+( is a valid partial URL at that point.  )S
+SP
+restore
+%%Page: 3
+save
+N
+TR 12 SF
+N
+0 M
+(This provides an easy way to build sets of hypertext documents.  If a set of)S
+N
+0 M
+(hypertext documents are sitting in a common directory, they can refer to one)S
+N
+0 M
+(another \(i.e., be hyperlinked\) by just their filenames -- )S
+TI 12 SF
+(however)S
+TR 12 SF
+( a reader got to)S
+N
+0 M
+(one of the documents, a jump can be made to any other document in the same)S
+N
+0 M
+(directory by merely using the other document's filename as the partial URL at)S
+N
+0 M
+(that point.  The additional information \(access method, hostname, port number,)S
+N
+0 M
+(directory name, etc.\) will be )S
+TI 12 SF
+(assumed)S
+TR 12 SF
+( based on the URL used to reach the first)S
+N
+0 M
+(document.  )S
+TB 18 SF
+N
+N
+0 M
+(Other URLs)S
+TR 12 SF
+N
+N
+0 M
+(Many other URLs are possible, but we've covered the most common ones you)S
+N
+0 M
+(might have to construct by hand.  At the top of each Mosaic document viewing)S
+N
+0 M
+(window is a text field called "Document URL"; if you watch the contents of that)S
+N
+0 M
+(as you navigate through information on the network, you'll get to observe how)S
+N
+0 M
+(URLs are put together for many different types of information.  )S
+N
+N
+0 M
+(The current IETF URL spec is )S
+(here)S
+(; more information on URLs can be found )S
+N
+0 M
+(here)S
+(.  )S
+TI 12 SF
+N
+N
+0 M
+(marca@ncsa.uiuc.edu )S
+SP
+restore
+%%Trailer
+restore
+%%Pages: 3
+

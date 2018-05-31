@@ -1,0 +1,56 @@
+#!/bin/csh
+#
+#  mw.smmrc
+#
+#  SMM project specific setup
+#
+#  Notes:
+#	- must be sourced after last sourcing of .setpath
+#	- must be modified for each site (even if on same project)
+#
+#  Revisions:
+#	lingard	01/25/99	Initial Release.
+#
+
+
+#
+# Source ClearCase setup
+#
+source /net/vob1-mp/opt/ccase_rls/cctools/.cmsrc
+
+
+#
+# Define global project environment variables.
+#
+setenv PROJECT		"smm"
+
+setenv SITE		"mw"
+
+setenv PROJHOME		"/view/swtadmin_smm_main/millenniumvobs/smm_root/cctools"
+
+# eg. setenv PROJECT_SERVERS	"server1,disk1:disk2:disk3,server2,disk3:disk4""
+setenv PROJECT_SERVERS	"view1-mp,u01:u02:u03:u04:u05:u06"
+
+setenv CLEARCASE_AVOBS	"/millenniumvobs/smm_root:/millenniumvobs/smm_sc:/millenniumvobs/smm_sw:/millenniumvobs/lynx:/millenniumvobs/3party"
+
+
+
+#
+# Source remaining project specific setup if logging into a viewserver
+#    (note: modify for each site's viewservers)
+#
+switch (`cat /etc/nodename`)
+  case view1-mp:
+#    echo "sourcing proj.rc"
+    source ${PROJHOME}/proj.rc
+  breaksw
+  default:
+    echo "got `cat /etc/nodename`"
+  breaksw
+endsw
+
+
+#
+# we're done!
+#
+setenv SMMRC 	1	# processed this file successfully

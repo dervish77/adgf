@@ -1,0 +1,235 @@
+From hub.ucsb.edu!ucsd!sdd.hp.com!decwrl!ogicse!unicorn!n8743196 Sun Sep 30 19:06:26 PDT 1990
+Article 155 of rec.games.mud:
+Path: hub.ucsb.edu!ucsd!sdd.hp.com!decwrl!ogicse!unicorn!n8743196
+>From: n8743196@unicorn.wwu.edu (jeff wandling)
+Newsgroups: rec.games.mud
+Subject: Answers to frequently asked questions. 2nd posting.
+Message-ID: <1990Sep25.182156.14916@unicorn.wwu.edu>
+Date: 25 Sep 90 18:21:56 GMT
+Reply-To: n8743196@unicorn.WWU.EDU (jeff wandling)
+Distribution: usa
+Organization: Western Washington Univ, Bellingham, WA
+Lines: 218
+Keywords: help, what is a mud?
+Summary: If you have something to add to this list, send me e-mail.
+
+This is a watered down version of what I consider frequently asked questions.
+
+Q: What is a 'MUD'?
+
+A: This has already been discussed but again, simply, it stands for 'Multi-
+User-Dungeon'. If you have heard of games like Dungeons & Dragons, Traveller,
+Hack, NetHack, Space Opera, Gamma-World, etc... then you have found a similar
+game in '*MUD'->  LPMUD, TinyMUD, UberMUD, etc... Then there is also a
+strain of 'muds' called TinyMuck. There are probably more. Don't flame if
+I forgot anyone *please*.
+    
+Q: How do I connect?
+
+A: The simplest way is to type 'telnet <site.name.edu.etc> <port #>'
+
+EXAMPLE:            telnet matia.wwu.edu 2000
+                    (this is just an example site, see the list for
+                     valid sites)
+
+Some listings of sites also include the IP (Internet Protocol) address. To
+use IP addressing type 'telnet <#.#.#.#> <port #>
+
+EXAMPLE:	    telnet 140.160.140.155 2000
+
+You may need to use the IP address if your system does not know the site by
+name.
+ 
+Q: Besides telnet how else can I get connected to a *MUD
+
+A: There are other programs like telnet that make interaction with the *MUD
+easier to read. My favorite is tinytalk. You can get it anonymous ftp
+from jaguar.cs.wisc.edu. *Sigh* Better explain this too: To get files from
+sites that allow anonymous ftp type 'ftp <site.name.edu.etc>'
+
+EXAMPLE:	    ftp jaguar.cs.wisc.edu
+
+Then the system there at jaguar.cs.wisc.edu will ask you for your user
+name. Type in 'anonymous'. For the password, type in your username including
+your address. Like this:
+
+blah...blah... username please:  anonymous
+blah...blah... password:  jeff@arthur.wwu.edu
+
+You are now connected. Look in the 'pub' directory. There you will find
+all the programs you will need. The site at jaguar.cs.wisc.edu is one site
+of many. I have no affiliation with jaguar.cs.wisc.edu.
+
+Use tinytalk the same way you would use telnet. The README file and docs
+included with tinytalk will explain more features of tinytalk and show
+how to use it's more robust commands. Oh by the way you will have to
+compile the code to actually get tinytalk working. The README file
+will explain how to do all this.
+
+ 
+Q: Once I am connected what do I do now?
+
+A: To get help type 'help'. Otherwise, what you do is your own business.
+It is virtual reality. So in some ways, there is virtually no limit to what
+you can accomplish. Of course you are limited to the confines (sp?) of the
+machine.
+
+#########################################################################
+I hope this helps. If any one has any thing to add to this, help yourself.
+If no one objects, I could repost this every so often (2,3,4 week intervals)?
+If you do add/change/whatever to this mail me what you have done.
+########################################################################
+
+The following list is the work of SOMEONE ELSE. I know his name is Bruce.
+I don't know his last name. Mabey if he reads this he can tell me his
+last name so I can get some 'retro-active' permission to post his work.
+I strongly suggest saving this file. The list below is really helpful.
+Good job Bruce (where-ever you are!)
+
+---------------------------- cut here ---------------------------------
+This is a quick reference list of those muds listed in the Mud Directory.
+For more detailed information, check that particular mud's entry.  They
+are grouped in categories:  TinyMUDs, TinyMUCKs, LPMUDs, AberMUDs, and Others.
+
+                                    TinyMUDs
+ NAME           | HostName                   | IP Address    |Port#| Software
+----------------|----------------------------|---------------|-----|----------
+DesertMUD       |hewy.cs.byu.edu             |128.187.2.32   | 4201| 1.5.4+
+DragonMUD       |naucse.cse.nau.edu          |134.114.64.1   | 4201| 1.5.4+
+Eden            |unicorn.wwu.edu             |140.160.240.10 | 4201| 1.5.3+
+FantaMUD        |sage.cc.purdue.edu          |128.210.10.6   | 5950| 1.5.3+
+Islandia        |fuzine.mt.cs.cmu.edu        |128.2.250.158  | 2323| 1.5.4+
+TinyHORNS       |phroed.cc.utexas.edu        |128.83.135.24  | 4201| 1.5.2
+TinySWAT        |masada.cs.swarthmore.edu    |130.58.68.9    | 4201| 1.5.3 ?
+TinyUSC         |coyote.usc.edu              |128.125.1.195  | 4201| 1.5.3+
+TinyWORLD       |banyan.ssc.gov              |134.3.2.1      | 6250| 1.5.4+
+----------------|----------------------------|---------------|-----|----------
+                                   TinyMUCKs 
+----------------|----------------------------|---------------|-----|----------
+Chaos           |uokmax.ecn.uoknor.edu       |129.15.22.2    | 6250| 2.1.1+
+ChupMUCK        |flounder.berkeley.edu       |128.32.152.10  | 4201| 2.2 alpha
+MbongoMUCK      |mbongo.ucsd.edu             |128.54.20.8    | 4201| 2.1.1+
+ (alternate)    |                            |132.239.17.1   | 4201|
+MedMUCK         |thesis2.hsch.utexas.edu     |129.106.7.4    | 7024| 2.1.1
+Pegasus         |l_cae05.icaen.uiowa.edu     |128.255.21.25  | 2001| 2.1.1+
+RivaMUCK        |nyssa.cs.orst.edu           |128.193.32.17  | 4201| 2.1.1
+RunaMUCK        |pegasus.cs.tulane.edu       |129.81.132.3   | 4201| 2.1.1+
+----------------|----------------------------|---------------|-----|----------
+                                     LPMUDs
+----------------|----------------------------|---------------|-----|----------
+Avalon          |el.ecn.purdue.edu           |128.46.153.43  | 2020| 2.1.4-A
+BATMAN          |batman.hut.fi               |130.233.40.33  | 2000| 2.2.0
+ (alternate)    |                            |130.233.200.101| 2000|
+DEATHMUD        |gauss.nmsu.edu              |128.123.9.5    | 2001| 1.4.1-A+
+Darker Realms   |ticsys.tamu.edu             |128.194.27.6   | 2000| 2.1.4-A
+Dartmouth LPMud |melchior.dartmouth.edu      |129.170.28.80  | 2000| 2.1.3-W
+Genesis         |milou.cd.chalmers.se        |129.16.48.2    | 2000| 2.2.1
+LPMUD           |uokmax.ecn.uoknor.edu       |129.15.20.2    | 2000| ?
+MatiaMud        |matia.wwu.edu               |140.160.140.155| 2000| 2.2.1-A 
+NannyMUD        |nanny.lysator.liu.se        |130.236.254.13 | 2000| 2.2.0
+The PIT         |mahogany.cis.pitt.edu       |130.49.254.97  | 2000| 2.2.0-A
+ (alternate)    |obie.cis.pitt.edu           |               | 2000|
+Sanctuary       |j.ms.uky.edu                |128.163.128.10 | 2000| 2.1.4
+Small Systems   |calvin.nmsu.edu             |128.123.35.150 | 2112| 2.2.1-W
+SunMUD          |einstein.mpccl.ksu.edu      |129.130.31.1   | 2056| 2.1.4-A+
+Third World     |hardy.u.washington.edu      |128.95.136.13  | 2000| 2.1.4-A
+UCR's LPMud     |ucrmath.ucr.edu             |192.31.146.1   | 2010| 2.1.1-W
+UCSB-GEOG LPMud |sherlock.geog.ucsb.edu      |128.111.104.28 | 2000| 2.1.4-A
+U Maine LPMud   |chevette.umcs.maine.edu     |130.111.112.11 | 2000| 2.1.4-A
+WARHAMMER MUD   |watnxt2.ucr.edu             |192.31.146.189 | 2102| 2.3.2-B
+Wash Yer Mud    |wucs1.wustl.edu             |128.252.123.12 | 2000| 1.4.1-A
+----------------|----------------------------|---------------|-----|----------
+
+
+                                    AberMUDs
+----------------|----------------------------|---------------|-----|----------
+IlliniMUD       |speedy.cs.uiuc.edu          |128.174.241.10 | 6715| 4.99.8
+LarsMUD         |lars.unik.no                |128.39.10.59   |     | 5.0
+SonyMUD         |psykoman.hut.fi             |130.233.40.40  |     | 4.9+
+The Underground |mole.ai.mit.edu             |128.52.46.33   | 6715| 4.100.3
+----------------|----------------------------|---------------|-----|----------
+                                     Others
+----------------|----------------------------|---------------|-----|----------
+AdaDUM          |gimli.cs.umu.se             |130.239.103.7  |     | DUM 1.0
+MOO alpha test  |belch.berkeley.edu          |128.32.152.202 | 7777| MOO
+SMUG            |lancelot.avalon.cs.cmu.edu  |128.2.242.79   | 4201| SMUG
+TinyMUSH        |sigh.berkeley.edu           |128.32.152.172 | 4201| TinyMUSH
+TinyTIM         |ftp.ecs.clarkson.edu        |128.153.13.200 | 6250| TinyMUSH
+Twilight Zone   |hpb.cis.pitt.edu            |130.49.6.51    | 6666| UberMUD
+----------------|----------------------------|---------------|-----|----------
+
+
+Appendix 2:  Unlisted Muds
+
+The following muds have no entry in the Mud Directory.  Some of them are up
+but simply do not have an entry, while others may be down, possibly for good.
+Any additional info on the status of these muds is appreciated.
+
+
+ NAME           | HostName                   | IP Address    |Port#| Software
+----------------|----------------------------|---------------|-----|----------
+ARCH-LPMud      |tssp.tcs.uh.edu             |129.7.3.9      | 2000|LPMUD
+Asylum          |ucunix.san.uc.edu           |129.137.32.116 | 4201|TinyMUD?
+ButlerMUD       |butler.tds.kth.se           |130.237.221.9  |     |AberMUD
+Club Mud        |milton.u.washington.edu     |128.95.136.1   | 1984|Other
+CMU MUD         |mole.andrew.cmu.edu         |128.2.35.172   | 7615|AberMUD
+MUDpitt         |mahogany.cis.pitt.edu       |130.49.254.97  | 4201|TinyMUD
+ (alternate)    |obie.cis.pitt.edu           |               | 4201|
+PolarMUD        |hstud1.uit.no               |128.39.60.86   |     |AberMUD
+TigerMUCK       |sun1.forestry.auburn.edu    |131.204.43.11  | 6250|TinyMUCK
+TroyMUCK        |pawl24.pawl.rpi.edu         |138.113.10.34  | 4201|TinyMUCK
+
+
+==============================================================================
+              Appendix 3:  Sources for MUD games and accessories
+==============================================================================
+
+        This is a listing where the currently known sources to MUD games and
+their accessories can be found via FTP (an Internet transmission protocol)
+
+==============================================================================
+       *variety*      *location*                     *directory*
+==============================================================================
+
+       TinyMUD         lancelot.avalon.cs.cmu.edu     /pub 
+                       nic.stolaf.edu                 /pub/mud/tinymud
+                        
+       TinyMUCK        belch.berkeley.edu             /pub 
+                       nic.stolaf.edu                 /pub/mud/tinymuck
+    
+       TinyMUSH        belch.berkeley.edu             
+ 
+       AberMUD (login) nic.stolaf.edu                 /pub/mud/abermud
+                       hayes.fai.alaska.edu           /pub/abermud
+               (port)  mail rassilon@eddie.mit.edu for more info.
+ 
+       LPMUD      
+               (HMC)   fenris.claremont.edu           /pub/lpmud
+                       nic.stolaf.edu                 /pub/mud/lpmud
+               (reg)   alcazar.cd.chalmers.se         /pub
+               (W)     wintermute.ics.uci.edu         /pub
+                       nic.stolaf.edu                 /pub/mud/lpmud
+
+       UberMUD         nic.stolaf.edu                 /pub/mud/ubermud
+                       belch.berkeley.edu 
+                       prince.white.toronto.edu
+                       atreus.umiacs.umd.edu
+
+       'myth'          iesd.auc.dk
+       (multiuser
+        rogue game)
+
+       TinyTalk/TINT   lancelot.avalon.cs.cmu.edu
+                       derby.cs.wisc.edu
+
+     FTP daemon patch  nanny.lysator.liu.se           /pub/lpmud
+         for LPMUD
+
+--------------------------- cut here ------------------------------------
+
+
+-- 
+jeff wandling                                internet: n8743196@unicorn.wwu.edu
+cs ugrad @ western washington university             illegitimi non carborundum
+
+

@@ -1,0 +1,121 @@
+Mattel Intellivision
+
+[Mattel Intellivision console] From the Intellivision FAQ, copyright Larry
+                               Anderson...
+
+At the end of 1979, Mattel Electronics (a division of Mattel Toys) released a
+video game system known as Intellivision along with 12 video game cartridges.
+Poised as a competitor to the then king of the hill Atari 2600, Mattel
+Electronics called their new product "Intelligent Television", stemming largely
+from their marketing plans to release a compatible computer keyboard for their
+video games console. Mattel's marketing was anything *but* intelligent and
+almost destroyed the company by 1984. In one sense the system was very
+successful, with over 3 million units sold and 125 games released before the
+system was discontinued by INTV Corp. in 1990.
+
+The original Master Component was test marketed in Fresno, California in late
+1979. The response was excellent, and Mattel went national with their new game
+system in late 1980. The first year's production run of 200,000 units was
+completely sold out! To help enhance it's marketability, Mattel also marketed
+the system in Sears stores as the Super Video Arcade, and at Radio Shack as the
+Tandyvision One in the early 1980's.
+
+1980 was a turbulent year for the Intellivision. Mattel announced that an
+"inexpensive" keyboard expansion [alternate picture] would be available in 1981
+for the master component to be dropped into. This was to turn the system into a
+powerful 64K home computer that could do everything from play games to balance
+your checkbook. There was a great deal of marketing money and press coverage
+devoted to this unit; a third of the box for the GTE/Sylvania Intellivision
+describes the features of this proposed expansion. Many people bought an
+Intellivision with plans to turn it into a computer when the expansion module
+was released. Months, then years passed and the original expansion keyboard was
+released only in a few test areas in late 1981. With the price too high and the
+initial reaction poor, the product was scrapped in 1982 before being released
+nationwide.
+
+1982 saw many changes in both the videogame industry and the Intellivision
+product line. A voice-synthesis module called Intellivoice made sound and
+speech and integral part of gameplay, through the use of special voice-
+enhanced cartridges. The Intellivision II was also released this year, which
+one company spokesperson described as "smaller and lighter that the original,
+yet with the same powerful 16-bit microprocessor". The new console was more
+compact than the first, and its grayish body made it look more like a
+sophisticated electronic device than the original design.
+
+1983 brought more promises from the folks at Mattel, the most significant of
+which being the Intellivision III. This was shown off at the January 1983 CES
+show, and lauded in the videogame mags for many months afterwards. In June of
+1983 at the Summer CES show, Mattel announced it was killing the Intellivision
+III and including most of its high-profile features into their long-awaited
+computer expansion, the Entertainment Computer System.
+
+Probably the most ambitious effort the Intellivision team had undertaken, the
+Entertainment Computer System was comprised of a computer keyboard add-on, a
+49-key music synthesizer, ram expansion for the keyboard add-on to expand it to
+a full 64K RAM and 24K ROM, a data recorder to store programs, a 40-column
+thermal printer, and an adapter which would allow you to play Atari 2600 games
+on your Intellivision. The RAM expansion modules, data recorder, and thermal
+printer never made it past the drawing board, and the music synthesizer had but
+one software title to take advantage of its capabilities. While the 2600
+adapter greatly expanded the library of available games, much of the steam this
+generated had already been stolen by Coleco's own expansion module.
+
+1984 would spell the end of the original Intellivision as the world knew it.
+T.E. Valeski, Senior Vice President of Marketing and Sales at Mattel
+Electronics, along with a group of investors, purchased the assets, trademarks,
+patents, and right to the Intellivision in January of 1984 for $16.5 million
+dollars. The purchase was backed by financing from Tangible Industries, a
+division of Revco Drug Stores, The newly formed company was originally called
+Intellivision, Inc., and later renamed INTV, Inc., after Valeski negotiated all
+rights from Revco in November of 1984. During the next two years, the new
+company would lie dormant while plans were being made for a re-emergence.
+
+In the fall of 1985, the INTV System III (also called the Super Pro System)
+appeared at Toys 'R Us, Kiddie City, and in a mail order catalog sent to owners
+of the original Intellivision direct from INTV. The new console was of the same
+general design as the original master component, except it sported a fresh
+black plastic shell with brushed aluminum trim. Several new games accompanied
+the release of the new system, and 1985 would register over $6 million dollars
+in sales worldwide, indicating that INTV Corp. had indeed revived the
+Intellivision. INTV continued to market games and repair services through the
+mail with great success. Between 1985 and 1990 over 35 new games were released,
+bringing the Intellivision's game library to a total of 125 titles.
+
+Many more changes were to come during the final six years of Intellivision's
+useful life. In 1987, an improved master component called the INTV System IV
+was shown at the January CES, which sported detachable controllers and a timing
+device. Unfortunately, this never saw the light either. In the fall of 1988,
+INTV re-introduced the computer keyboard adapter through their mail order
+catalog on a limited quantity basis. In 1990, INTV discontinued retail sales of
+thier games and equipment and sold them only through the mail channels. The
+change in marketing was due to agreements with Nintendo and Sega to become a
+software vendor for the NES, Game Boy and Genesis. In 1991, INTV sold out its
+stock of Intellivision games and consoles, and the company, along with the
+Intellivision, gradually faded into black.
+
+Related Information
+
+   * Intellivision FAQ
+   * Intellivision Cartridge List
+   * Mattel Strikes Back from the October/November 1983 issue of Video Games
+     Player
+
+Pictures
+
+   * Mattel Intellivision console
+   * Super Video Arcade Intellivision clone
+   * Original keyboard expansion
+   * Original keyboard expansion [alternate picture]
+   * Intellivoice Voice Synthesizer
+   * Intellivision II
+   * Entertainment Computer System
+   * ECS 49-key music synthesizer
+   * System Changer 2600 adapter
+   * Page from an Intellivision catalog about the unit itself
+
+[PREV] [UP] [NEXT]
+-------------------------------------------------------------------------------
+
+Dennis Brown, dgb@owlnet.rice.edu, creator and maintainer. E-Mail me with
+corrections and additions. All contents copyright 1996, Dennis Brown. All
+trademarks are properties of their respective companies.

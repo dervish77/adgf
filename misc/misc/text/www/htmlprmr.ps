@@ -1,0 +1,1632 @@
+%!PS-Adobe-1.0
+%%DocumentFonts: Times-Roman Times-Bold Times-Italic Courier
+%%Pages: (atend)
+%%EndComments
+save
+/D {def} def
+/M {fnsiz mul xmargin add yp moveto} D
+/N {/yp yp fnsiz 2 add sub D xmargin yp moveto} D
+/S {show} D
+/SF {/fnsiz exch D findfont fnsiz scalefont setfont} D
+/TR {/Times-Roman} D
+/TB {/Times-Bold} D
+/TI {/Times-Italic} D
+/CR {/Courier} D
+/SP {showpage} D
+/NP {} D
+/xmargin 72 D /yp 720 D/fnsiz 0 D
+%%EndProlog
+%%Page: 1
+save
+N
+TR 14 SF
+TB 20 SF
+N
+0 M
+(A Beginner's Guide to HTML)S
+TB 18 SF
+N
+N
+0 M
+(Introduction)S
+TR 12 SF
+N
+N
+0 M
+(This document is a )S
+TI 12 SF
+(primer)S
+TR 12 SF
+( for writing documents in )S
+TB 12 SF
+(HTML)S
+TR 12 SF
+( \(HyperText Markup)S
+N
+0 M
+(Language\), the markup language used in the )S
+(World Wide Web project)S
+( and the )S
+N
+0 M
+(NCSA Mosaic)S
+( networked information browser.  This is not a complete overview)S
+N
+0 M
+(of HTML, but covers enough ground to have you creating full-featured HTML)S
+N
+0 M
+(documents within an hour or two.  )S
+N
+N
+0 M
+(This guide contains the following sections: )S
+N
+N
+1 M
+(\267)S
+3 M
+(Basics of HTML)S
+( )S
+N
+1 M
+(\267)S
+3 M
+(A Beginning Example)S
+( )S
+N
+1 M
+(\267)S
+3 M
+(Titles and Headers)S
+( )S
+N
+1 M
+(\267)S
+3 M
+(Paragraphs and Formatting)S
+( )S
+N
+1 M
+(\267)S
+3 M
+(Basic Special Effects)S
+( )S
+N
+1 M
+(\267)S
+3 M
+(Inlined Images)S
+( )S
+N
+1 M
+(\267)S
+3 M
+(Hypertext Links)S
+( )S
+N
+1 M
+(\267)S
+3 M
+(Bulleted and Numbered Lists)S
+( )S
+N
+1 M
+(\267)S
+3 M
+(Description Lists)S
+( )S
+N
+1 M
+(\267)S
+3 M
+(Preformatted Text)S
+( )S
+N
+1 M
+(\267)S
+3 M
+(Troubleshooting)S
+( )S
+N
+1 M
+(\267)S
+3 M
+(For More Information)S
+( )S
+TB 18 SF
+N
+N
+0 M
+(Basics of HTML)S
+TR 12 SF
+N
+N
+0 M
+(HTML is a very simple SGML-based markup language -- it is complex enough)S
+N
+0 M
+(to support )S
+TI 12 SF
+(basic)S
+TR 12 SF
+( online formatting and presentation of hypermedia documents,)S
+N
+0 M
+(but no more complex.  In fact, if you are familiar with LaTeX, TeX, troff, or)S
+N
+0 M
+(Texinfo, you can breathe a sigh of relief at this point, since HTML is quite a bit)S
+N
+0 M
+(simpler than any of those.  )S
+N
+N
+0 M
+(HTML documents use )S
+TI 12 SF
+(tags)S
+TR 12 SF
+( to indicate formatting or structural information.  )S
+(A)S
+N
+0 M
+(tag is simply a left angle bracket)S
+( \()S
+CR 12 SF
+( < )S
+TR 12 SF
+(\) followed by a )S
+TI 12 SF
+(directive)S
+TR 12 SF
+( and zero or more)S
+N
+0 M
+(parameters followed by a right angle bracket \()S
+CR 12 SF
+( > )S
+TR 12 SF
+(\).  The remainder of this)S
+N
+0 M
+(document explains the various HTML directives.  )S
+TB 18 SF
+N
+N
+0 M
+(A Beginning Example)S
+TR 12 SF
+N
+N
+0 M
+(For people who prefer to learn by doing, here is an example of a simple HTML)S
+N
+0 M
+(document: )S
+CR 12 SF
+N
+SP
+restore
+%%Page: 2
+save
+N
+CR 12 SF
+0 M
+(    <title>Simple example of an HTML document.</title>)S
+N
+0 M
+(    <h1>A simple example.</h1>)S
+N
+N
+0 M
+(    This is a simple HTML document.  This is the first)S
+N
+0 M
+(    paragraph. <p>)S
+N
+N
+0 M
+(    This is the second paragraph.  This is a word in)S
+N
+0 M
+(    <i>italics</i>.  This is a word in <b>bold</b>.)S
+N
+0 M
+(    Here is an inlined GIF image: <img src="myimage.gif">. )S
+N
+0 M
+(    <p>)S
+N
+N
+0 M
+(    This is the third paragraph.  Here is a hypertext)S
+N
+0 M
+(    link from the word <a href="subdir/myfile.html">foo</a>)S
+N
+0 M
+(    to a document called "subdir/myfile.html". <p>)S
+N
+N
+0 M
+(    <h2>A second-level header.</h2>)S
+N
+N
+0 M
+(    Here is a section of text that should show up in a )S
+N
+0 M
+(    fixed-width font \(as if it were a computer listing)S
+N
+0 M
+(    or a verse of poetry\): <p>)S
+N
+N
+0 M
+(    <pre>)S
+N
+0 M
+(        The cat in the hat)S
+N
+0 M
+(        fell to the ground and went splat.)S
+N
+0 M
+(    </pre>)S
+N
+N
+0 M
+(    This is a bulleted list with two items: <p>)S
+N
+N
+0 M
+(    <ul>)S
+N
+0 M
+(    <li> First item goes here.)S
+N
+0 M
+(    <li> Second item goes here.)S
+N
+0 M
+(    </ul>)S
+N
+N
+0 M
+(    This is the end of my example document. <p>)S
+N
+N
+0 M
+(    <address>John Bigbooty</address>)S
+TR 12 SF
+N
+N
+0 M
+(Note that any HTML document from anywhere on the net that you access with)S
+N
+0 M
+(Mosaic can be easily used as an example; just use the )S
+TB 12 SF
+(Document Source)S
+TR 12 SF
+( option in)S
+N
+0 M
+(Mosaic's )S
+TB 12 SF
+(File)S
+TR 12 SF
+( menu to call up a window that will show you the HTML for the)S
+N
+0 M
+(current document being viewed.  )S
+TB 18 SF
+N
+N
+0 M
+(Titles and Headers)S
+TR 12 SF
+N
+N
+0 M
+(Every HTML document should have a )S
+TI 12 SF
+(title)S
+TR 12 SF
+(: about half a dozen words that declare)S
+N
+0 M
+(the document's purpose.  Titles are not displayed as part of the document text, but)S
+SP
+restore
+%%Page: 3
+save
+N
+TR 12 SF
+0 M
+(are rather displayed separately from the document by most browsers \(at the top)S
+N
+0 M
+(of the window in NCSA Mosaic\) and used for document identification in certain)S
+N
+0 M
+(other contexts.  \(The title of this document is "A Beginner's Guide to HTML".\) )S
+N
+N
+0 M
+(The title generally goes on the first line of the document.  Here is an example)S
+N
+0 M
+(title: )S
+CR 12 SF
+N
+N
+0 M
+(    <title>This is my document's title.</title>)S
+TR 12 SF
+N
+N
+0 M
+(Notice that the )S
+TI 12 SF
+(directive)S
+TR 12 SF
+( for the title tag is, appropriately enough, )S
+CR 12 SF
+(title)S
+TR 12 SF
+(.  Note)S
+N
+0 M
+(also the fact that there are both )S
+TI 12 SF
+(starting)S
+TR 12 SF
+( and )S
+TI 12 SF
+(ending)S
+TR 12 SF
+( title tags, and that the ending)S
+N
+0 M
+(tag looks just like the starting tag except a slash \()S
+CR 12 SF
+( / )S
+TR 12 SF
+(\) precedes the directive.)S
+N
+0 M
+(\(This is also a good time to note that HTML is not case sensitive: both )S
+CR 12 SF
+(<title>)S
+TR 12 SF
+N
+0 M
+(and )S
+CR 12 SF
+(<TITLE>)S
+TR 12 SF
+( mean the same thing.\) )S
+TI 12 SF
+N
+N
+0 M
+(Headers)S
+TR 12 SF
+( are displayed within the document, generally using larger and/or bolder)S
+N
+0 M
+(fonts than normal document text.  There are six levels of headers \(numbered 1)S
+N
+0 M
+(through 6\), with 1 being the largest.  \(Usually only levels 1 through 3 are used)S
+N
+0 M
+(with any frequency.\) )S
+N
+N
+0 M
+(Here is an example level 1 header: )S
+CR 12 SF
+N
+N
+0 M
+(    <h1>This is a level 1 header.</h1>)S
+TR 12 SF
+N
+N
+0 M
+(Here is an example level 2 header: )S
+CR 12 SF
+N
+N
+0 M
+(   <h2>This is a level 2 header.</h2>)S
+TR 12 SF
+N
+N
+0 M
+(Most documents use the same five or six words both for the title and for the)S
+N
+0 M
+(initial \(level 1\) header; for example, the first two lines of the HTML source for)S
+N
+0 M
+(this document are: )S
+CR 12 SF
+N
+N
+0 M
+(    <title>A Beginner's Guide to HTML</title>)S
+N
+0 M
+(    <h1>A Beginner's Guide to HTML</h1>)S
+TB 18 SF
+N
+N
+0 M
+(Paragraphs and Formatting)S
+TR 12 SF
+N
+N
+0 M
+(Since HTML is a markup language for creating formatted documents, a basic)S
+N
+0 M
+(assumption is that newlines and whitespace aren't significant in normal text, and)S
+N
+0 M
+(that word wrapping can occur at any place.  Therefore, terminating a paragraph)S
+N
+0 M
+(with a single blank line, for example, is not sufficient: )S
+TB 12 SF
+(each paragraph should)S
+N
+0 M
+(be terminated by a paragraph tag)S
+TR 12 SF
+(.  The HTML paragraph tag is )S
+CR 12 SF
+(<p>)S
+TR 12 SF
+(.  )S
+N
+N
+0 M
+(Here is an example paragraph, complete with terminating paragraph tag: )S
+CR 12 SF
+N
+N
+0 M
+(    This is my first sentence.  This is my )S
+SP
+restore
+%%Page: 4
+save
+N
+CR 12 SF
+0 M
+(    second sentence.  This is my third sentence.  )S
+N
+0 M
+(    This is the end of the paragraph. <p>)S
+TB 12 SF
+N
+N
+0 M
+(Special Characters)S
+TR 12 SF
+N
+N
+0 M
+(Three characters out of the entire ASCII \(or ISO 8859\) character set are )S
+TI 12 SF
+(special)S
+TR 12 SF
+N
+0 M
+(and cannot be used "as-is" within an HTML document.  These characters are left)S
+N
+0 M
+(angle bracket \()S
+CR 12 SF
+( < )S
+TR 12 SF
+(\), right angle bracket \()S
+CR 12 SF
+( > )S
+TR 12 SF
+(\), and ampersand \()S
+CR 12 SF
+( & )S
+TR 12 SF
+(\).  )S
+N
+N
+0 M
+(Why is this?  The angle brackets are used to specify HTML tags \(as shown )S
+(above)S
+(\),)S
+N
+0 M
+(while ampersand is used as the )S
+TI 12 SF
+(escape mechanism)S
+TR 12 SF
+( for these and other characters: )S
+N
+N
+1 M
+(\267)S
+3 M
+CR 12 SF
+(&lt;)S
+TR 12 SF
+( is the )S
+TI 12 SF
+(escape sequence)S
+TR 12 SF
+( for )S
+CR 12 SF
+(<)S
+TR 12 SF
+( )S
+N
+1 M
+(\267)S
+3 M
+CR 12 SF
+(&gt;)S
+TR 12 SF
+( is the escape sequence for )S
+CR 12 SF
+(>)S
+TR 12 SF
+( )S
+N
+1 M
+(\267)S
+3 M
+CR 12 SF
+(&amp;)S
+TR 12 SF
+( is the escape sequence for )S
+CR 12 SF
+(&)S
+TR 12 SF
+( )S
+N
+N
+0 M
+(Note that "escape sequence" only means that the given sequence of characters)S
+N
+0 M
+(represents the single character in an HTML document: the conversion to the)S
+N
+0 M
+(single character itself takes place when the document is formatted for display by)S
+N
+0 M
+(a reader.  )S
+N
+N
+0 M
+(Note also that there are additional escape sequences that are possible; notably,)S
+N
+0 M
+(there are a whole set of such sequences to support 8-bit character sets \(namely,)S
+N
+0 M
+(ISO 8859-1\); for example: )S
+N
+N
+1 M
+(\267)S
+3 M
+CR 12 SF
+(&ouml;)S
+TR 12 SF
+( is the escape sequence for a lowercase )S
+CR 12 SF
+(o)S
+TR 12 SF
+( with an umlaut: ö )S
+N
+1 M
+(\267)S
+3 M
+CR 12 SF
+(&ntilde;)S
+TR 12 SF
+( is the escape sequence for a lowercase )S
+CR 12 SF
+(n)S
+TR 12 SF
+( with an tilde: ñ )S
+N
+1 M
+(\267)S
+3 M
+CR 12 SF
+(&Egrave;)S
+TR 12 SF
+( is the escape sequence for an uppercase )S
+CR 12 SF
+(E)S
+TR 12 SF
+( with a grave mark:)S
+N
+3 M
+(È )S
+N
+N
+0 M
+(Many such escapes exist; a canonical list is )S
+(here)S
+(.  )S
+TB 18 SF
+N
+N
+0 M
+(Basic Special Effects)S
+TR 12 SF
+N
+N
+0 M
+(Individual words or sentences in paragraphs can be put in )S
+TB 12 SF
+(bold)S
+TR 12 SF
+(, )S
+TI 12 SF
+(italic)S
+TR 12 SF
+(, or )S
+CR 12 SF
+N
+0 M
+(fixed-width)S
+TR 12 SF
+( styles.  Correspondingly, you should know about the following)S
+N
+0 M
+(three directives: )S
+N
+N
+1 M
+(\267)S
+3 M
+CR 12 SF
+(<i>text</i>)S
+TR 12 SF
+( puts text in italics \(the result of the example would be )S
+TI 12 SF
+N
+3 M
+(text)S
+TR 12 SF
+(\).  )S
+N
+1 M
+(\267)S
+3 M
+CR 12 SF
+(<b>text</b>)S
+TR 12 SF
+( puts text in bold \(the result of the example would be )S
+TB 12 SF
+N
+3 M
+(text)S
+TR 12 SF
+(\).  )S
+N
+1 M
+(\267)S
+3 M
+CR 12 SF
+(<code>text</code>)S
+TR 12 SF
+( puts text in a fixed-width font \(the result of)S
+N
+3 M
+(the example would be )S
+CR 12 SF
+(text)S
+TR 12 SF
+(\).  )S
+TB 18 SF
+N
+SP
+restore
+%%Page: 5
+save
+N
+TB 18 SF
+0 M
+(Inlined Images)S
+TR 12 SF
+N
+N
+0 M
+(A value-added feature of NCSA Mosaic is that images \(in X bitmap or GIF)S
+N
+0 M
+(formats\) can be displayed inside documents, right in the middle of document text.)S
+N
+0 M
+(For example, here's a picture of Elvis: )S
+( )S
+N
+N
+0 M
+(Here's how that image was inlined into the document text above: )S
+CR 12 SF
+N
+N
+0 M
+(    <img align=top src="elvis-small.gif">)S
+TR 12 SF
+N
+N
+0 M
+(Note in particular the )S
+CR 12 SF
+(align=top)S
+TR 12 SF
+( parameter -- this directs the document)S
+N
+0 M
+(viewer to align adjacent text with the top of the image \(rather than the bottom, as)S
+N
+0 M
+(is the default\).  So if you just say )S
+CR 12 SF
+(<img src="elvis-small.gif">)S
+TR 12 SF
+(,)S
+N
+0 M
+(you'll get this effect: )S
+( This default behavior is especially suited)S
+N
+0 M
+(for using an image at the beginning of a paragraph \(see the next paragraph as an)S
+N
+0 M
+(example\).  )S
+N
+N
+1 M
+( Multiple instances of the )S
+CR 12 SF
+(img)S
+TR 12 SF
+( tag can be scattered through the document,)S
+N
+0 M
+(but note that each such image takes time to process and thus slows down the)S
+N
+0 M
+(initial display of the document.  \(Using a particular image multiple times in a)S
+N
+0 M
+(document causes no performance hit compared to using the image only once,)S
+N
+0 M
+(though.\) )S
+N
+N
+0 M
+(\(Note that the )S
+CR 12 SF
+(img)S
+TR 12 SF
+( tag is an HTML extension that is currently only understood)S
+N
+0 M
+(by NCSA Mosaic and not by most other World Wide Web browsers.\) )S
+TB 18 SF
+N
+N
+0 M
+(Hypertext Links)S
+TR 12 SF
+N
+N
+0 M
+(Since the whole point behind HTML's existence is to allow networked hypertext,)S
+N
+0 M
+(it's about time we get to that part of the language.  There is a single)S
+N
+0 M
+(hypertext-related directive, and it's )S
+CR 12 SF
+(a)S
+TR 12 SF
+(, which stands for )S
+TI 12 SF
+(anchor)S
+TR 12 SF
+( \(which is a)S
+N
+0 M
+(common term for one end of a hypertext )S
+TI 12 SF
+(link)S
+TR 12 SF
+(\).  )S
+N
+N
+0 M
+(An anchor is commonly used to point )S
+TI 12 SF
+(to)S
+TR 12 SF
+( somewhere from the current document.)S
+N
+0 M
+(Here's how that works: )S
+N
+N
+1 M
+(\267)S
+3 M
+(Start by opening the anchor with the leading angle bracket and the anchor)S
+N
+3 M
+(directive: )S
+CR 12 SF
+(<a)S
+TR 12 SF
+( )S
+N
+1 M
+(\267)S
+3 M
+(Name the document that's being pointed to, by giving the parameter )S
+CR 12 SF
+N
+3 M
+(href="document.html")S
+TR 12 SF
+(, and follow that with the closing angle)S
+N
+3 M
+(bracket: )S
+CR 12 SF
+(>)S
+TR 12 SF
+(.  )S
+N
+1 M
+(\267)S
+3 M
+(Give the text that should show up in the current document as the)S
+N
+3 M
+(hypertext link \(i.e.  the text that will be in a different color and/or)S
+N
+3 M
+(underlined, to indicate that clicking on it follows the hyperlink\).  )S
+N
+1 M
+(\267)S
+3 M
+(End by giving the ending anchor tag: )S
+CR 12 SF
+(</a>)S
+TR 12 SF
+( )S
+N
+SP
+restore
+%%Page: 6
+save
+N
+TR 12 SF
+0 M
+(So, an example hypertext reference looks like this: )S
+CR 12 SF
+N
+N
+0 M
+(    <a href="subdir/document.html">some text</a>)S
+TR 12 SF
+N
+N
+0 M
+(.......which causes "some text" to be the hyperlink to the document named)S
+N
+0 M
+("subdir/document.html".  )S
+N
+N
+0 M
+(Note that inlined images \(explained above\) can serve as the contents of anchors.)S
+N
+0 M
+(For example, the following picture of Elvis is a hyperlink to the NCSA Mosaic)S
+N
+0 M
+(documentation: )S
+( -- so when you click on Elvis, you get the)S
+N
+0 M
+(Mosaic docs.  The HTML for that was: )S
+CR 12 SF
+N
+N
+0 M
+(    <a href="http://machine.name/subdir/file.html">)S
+N
+0 M
+(    <img src="elvis-small.html"></a>)S
+TB 12 SF
+N
+N
+0 M
+(Another Use For Anchors)S
+TR 12 SF
+N
+N
+0 M
+(Anchors can also be used to say "hey, point to me".  If you want to point to a)S
+N
+0 M
+(specific location in a document, you can put a )S
+TI 12 SF
+(named anchor)S
+TR 12 SF
+( in the document at)S
+N
+0 M
+(that location and then point to that named anchor as part of a hyperlink reference.  )S
+N
+N
+0 M
+(Here's an example.  In document A, I have a traditional hyperlink, but the)S
+N
+0 M
+(hypertext reference \(href\) gives not only the filename \("document-b.html"\) but)S
+N
+0 M
+(also the name of a named anchor in the referenced document \("foobar"\), with)S
+N
+0 M
+(those two things separated by a hash mark \("#"\): )S
+CR 12 SF
+N
+N
+0 M
+(    This is my <a href="document-b.html#foobar">link</a>.)S
+TR 12 SF
+N
+N
+0 M
+(Meanwhile, in document B, I have a lot of other text, and then the following: )S
+CR 12 SF
+N
+N
+0 M
+(    Here's <a name="foobar">some random text</a>.)S
+TR 12 SF
+N
+N
+0 M
+(Therefore, the link in document A points directly at the words "some random)S
+N
+0 M
+(text" in document B, and following the link from document A will not only jump)S
+N
+0 M
+(the reader to document B but will position document B in the window such that)S
+N
+0 M
+("some random text" is immediately visible no matter where in document B it's)S
+N
+0 M
+(located.  \(In Mosaic, the window will be scrolled far enough down so "some)S
+N
+0 M
+(random text" will be on the top line of the viewable region of the window, if)S
+N
+0 M
+(possible.\) )S
+N
+N
+0 M
+(An offshoot of this technique is that you can have hyperlink cross-references )S
+TI 12 SF
+N
+0 M
+(within)S
+TR 12 SF
+( a single document: to point to a named anchor with name "blargh" in the)S
+N
+0 M
+(current document, just give "#blargh" as the href for the hyperlink \(omitting a)S
+N
+0 M
+(filename\): )S
+CR 12 SF
+N
+N
+0 M
+(    I'm pointing to the named anchor "blargh" in this )S
+N
+0 M
+(    document with this <a href="#blargh">link</a>.)S
+TB 18 SF
+SP
+restore
+%%Page: 7
+save
+N
+TB 18 SF
+N
+0 M
+(Bulleted and Numbered Lists)S
+TR 12 SF
+N
+N
+0 M
+(A basic )S
+TI 12 SF
+(bulleted list)S
+TR 12 SF
+( can be produced as follows: )S
+N
+N
+1 M
+(\267)S
+3 M
+(Start with an opening )S
+CR 12 SF
+(<ul>)S
+TR 12 SF
+( tag.  )S
+N
+1 M
+(\267)S
+3 M
+(Give the items one at a time, each preceded by a )S
+CR 12 SF
+(<li>)S
+TR 12 SF
+( tag.  \(There is no)S
+N
+3 M
+(closing tag for list items.\) )S
+N
+1 M
+(\267)S
+3 M
+(End with a closing )S
+CR 12 SF
+(</ul>)S
+TR 12 SF
+( tag.  )S
+N
+N
+0 M
+(So, here's an example two-item list: )S
+CR 12 SF
+N
+N
+0 M
+(    <ul>)S
+N
+0 M
+(    <li> First item goes here.)S
+N
+0 M
+(    <li> Second item goes here.)S
+N
+0 M
+(    </ul>)S
+TR 12 SF
+N
+N
+0 M
+(For a )S
+TI 12 SF
+(numbered list)S
+TR 12 SF
+(, do the same thing except use the )S
+CR 12 SF
+(ol)S
+TR 12 SF
+( directive rather than the )S
+CR 12 SF
+N
+0 M
+(ul)S
+TR 12 SF
+( directive.  For example: )S
+CR 12 SF
+N
+N
+0 M
+(    <ol>)S
+N
+0 M
+(    <li> First item goes here.)S
+N
+0 M
+(    <li> Second item goes here.)S
+N
+0 M
+(    </ol>)S
+TR 12 SF
+N
+N
+0 M
+(Lists can be arbitrarily nested: any list item can itself contain lists.  Also note)S
+N
+0 M
+(that no paragraph separator \(or anything else\) is necessary at the end of a list)S
+N
+0 M
+(item; the subsequent )S
+CR 12 SF
+(<li>)S
+TR 12 SF
+( tag \(or list end tag\) serves that role.  \(One can also)S
+N
+0 M
+(have a number of paragraphs, each themselves containing nested lists, in a single)S
+N
+0 M
+(list item, and so on.\) )S
+N
+N
+0 M
+(An example nested list follows: )S
+CR 12 SF
+N
+N
+0 M
+(    <ul>)S
+N
+0 M
+(    <li> This item includes a nested list.)S
+N
+0 M
+(      <ul>)S
+N
+0 M
+(      <li> First item of nested list.)S
+N
+0 M
+(      <li> Second item of nested list.)S
+N
+0 M
+(      </ul>)S
+N
+0 M
+(    <li> Second item goes here.)S
+N
+0 M
+(      <ul>)S
+N
+0 M
+(      <li> Only item of second nested list.)S
+N
+0 M
+(      </ul>)S
+N
+0 M
+(    </ul>)S
+TR 12 SF
+N
+N
+0 M
+(This is displayed as: )S
+SP
+restore
+%%Page: 8
+save
+N
+TR 12 SF
+N
+1 M
+(\267)S
+3 M
+(This item includes a nested list.  )S
+N
+4 M
+(\267)S
+6 M
+(First item of nested list.  )S
+N
+4 M
+(\267)S
+6 M
+(Second item of nested list.  )S
+N
+1 M
+(\267)S
+3 M
+(Second item goes here.  )S
+N
+4 M
+(\267)S
+6 M
+(Only item of second nested list.  )S
+TB 18 SF
+N
+N
+0 M
+(Description Lists)S
+TR 12 SF
+N
+N
+0 M
+(A )S
+TI 12 SF
+(description list)S
+TR 12 SF
+( usually consists of alternating "description titles" \(dt's\) and)S
+N
+0 M
+("description descriptions" \(dd's\).  Think of a description list as a glossary: a list)S
+N
+0 M
+(of terms or phrases, each of which has an associated definition.  )S
+N
+N
+0 M
+(Here's an example description list: )S
+CR 12 SF
+N
+N
+0 M
+(    <dl>)S
+N
+0 M
+(    <dt> This is the first "title".)S
+N
+0 M
+(    <dd> This is the first "description", followed by )S
+N
+0 M
+(         a lot of completely meaningless text intended to )S
+N
+0 M
+(         make sure that at least one line wrap will occur )S
+N
+0 M
+(         for a reasonable window width, and if you don't )S
+N
+0 M
+(         have a window width wide enough to cause at least )S
+N
+0 M
+(         a single line wrap, you should narrow your window )S
+N
+0 M
+(         at this point, otherwise this example is pretty )S
+N
+0 M
+(         much pointless and here I sit getting carpal )S
+N
+0 M
+(         tunnel syndrome typing in all this verbage all )S
+N
+0 M
+(         for nothing.)S
+N
+0 M
+(    <dt> This is the second "title".)S
+N
+0 M
+(    <dd> This is the second "description".)S
+N
+0 M
+(    </dl>)S
+TR 12 SF
+N
+N
+0 M
+(......which comes out looking like this: )S
+N
+N
+0 M
+(This is the first "title".  )S
+N
+3 M
+(This is the first "description", followed by a lot of completely)S
+N
+3 M
+(meaningless text intended to make sure that at least one line wrap will)S
+N
+3 M
+(occur for a reasonable window width, and if you don't have a window)S
+N
+3 M
+(width wide enough to cause at least a single line wrap, you should narrow)S
+N
+3 M
+(your window at this point, otherwise this example is pretty much)S
+N
+3 M
+(pointless and here I sit getting carpal tunnel syndrome typing in all this)S
+N
+3 M
+(verbage all for nothing.  )S
+N
+0 M
+(This is the second "title".  )S
+N
+3 M
+(This is the second "description".  )S
+N
+N
+0 M
+(Titles and descriptions can contain arbitrary items: multiple paragraphs)S
+N
+0 M
+(\(separated by paragraph tags\), lists, other description lists, or whatever.  )S
+TB 18 SF
+SP
+restore
+%%Page: 9
+save
+N
+TB 18 SF
+N
+0 M
+(Preformatted Text)S
+TR 12 SF
+N
+N
+0 M
+(To put whole sections of text in a fixed-width font and to also cause spaces,)S
+N
+0 M
+(newlines, and the like to be significant \(e.g., for program listings, or plaintext)S
+N
+0 M
+(dumps of numerical spreadsheets\) you can use the )S
+CR 12 SF
+(pre)S
+TR 12 SF
+( tag \("pre" stands for)S
+N
+0 M
+(preformatted\).  For example, the following HTML: )S
+CR 12 SF
+N
+N
+0 M
+(    <pre>)S
+N
+0 M
+(    column 1      column 2      column 3)S
+N
+0 M
+(    --------      --------      --------)S
+N
+0 M
+(       133.0         115.0         332.5)S
+N
+0 M
+(     + 556.0       + 332.6       + 229.3)S
+N
+0 M
+(     = 689.0       = 447.6       = 561.8)S
+N
+0 M
+(    </pre>)S
+TR 12 SF
+N
+N
+0 M
+(.......will result in exactly this: )S
+CR 12 SF
+N
+N
+0 M
+(    column 1      column 2      column 3)S
+N
+0 M
+(    --------      --------      --------)S
+N
+0 M
+(       133.0         115.0         332.5)S
+N
+0 M
+(     + 556.0       + 332.6       + 229.3)S
+N
+0 M
+(     = 689.0       = 447.6       = 561.8)S
+TR 12 SF
+N
+N
+0 M
+(No surprises there.  \(You should be aware that you can also embed hypertext)S
+N
+0 M
+(references inside )S
+CR 12 SF
+(pre)S
+TR 12 SF
+( sections without losing the formatted effects, which is)S
+N
+0 M
+(good.  This capability is used, for example, in the manual page interfaces)S
+N
+0 M
+(provided through Mosaic.\) )S
+N
+N
+0 M
+(In general, you should try to avoid using )S
+CR 12 SF
+(pre)S
+TR 12 SF
+( whenever possible under the)S
+N
+0 M
+(principle that the final results will be much less flexible, and attractive, than full)S
+N
+0 M
+(HTML.  \(Most people seem to think that preformatted, fixed-width text -- an)S
+N
+0 M
+(artifact of the typewriter and primitive computer era -- looks pretty baroque)S
+N
+0 M
+(compared to formatted text.\) )S
+TB 18 SF
+N
+N
+0 M
+(Troubleshooting)S
+TR 12 SF
+N
+N
+1 M
+(\267)S
+3 M
+(While certain HTML constructs can be nested \(for example, you can have)S
+N
+3 M
+(an anchor within a header\), they cannot be overlapped.  For example, the)S
+N
+3 M
+(following is invalid HTML: )S
+CR 12 SF
+N
+N
+3 M
+(    <h1>This is <a name="foo">invalid HTML.</h1></a>)S
+TR 12 SF
+N
+N
+3 M
+(Since many HTML parsers aren't very good at handling invalid HTML,)S
+N
+3 M
+(it is always good to avoid doing bad things like overlapping constructs.  )S
+N
+1 M
+(\267)S
+3 M
+(When an )S
+CR 12 SF
+(img)S
+TR 12 SF
+( tag points at an image that does not exist or cannot be)S
+SP
+restore
+%%Page: 10
+save
+N
+TR 12 SF
+3 M
+(otherwise obtained from whatever server is supposed to be serving it, the)S
+N
+3 M
+(NCSA logo will be substituted in place.  For example, doing )S
+CR 12 SF
+(<img)S
+N
+3 M
+(href="doesNotExist.gif">)S
+TR 12 SF
+( \(where "doesNotExist.gif" does not)S
+N
+3 M
+(exist\) causes the following to be displayed: )S
+( )S
+N
+N
+3 M
+(If this happens to you, first make sure that the referenced image does in)S
+N
+3 M
+(fact exist, then make sure the remote server \(if any\) can actually serve it,)S
+N
+3 M
+(then make sure the image file is uncorrupted \(and that your server is not)S
+N
+3 M
+(corrupting it -- the NCSA httpd doesn't corrupt images, but certain)S
+N
+3 M
+(other common http servers do\).  )S
+TB 18 SF
+N
+N
+0 M
+(For More Information)S
+TR 12 SF
+N
+N
+0 M
+(The official HTML spec exists )S
+(here)S
+(.  )S
+N
+N
+0 M
+(The in-development HTML RFC is )S
+(here)S
+(.  )S
+N
+N
+0 M
+(A description of SGML, the Standard Generalized Markup Language on which)S
+N
+0 M
+(HTML is based, is )S
+(here)S
+(.  )S
+N
+N
+0 M
+(A simple overview of Universal Resource Locators \(the extended filename)S
+N
+0 M
+(references used in hypertext links and in the )S
+CR 12 SF
+(src)S
+TR 12 SF
+( part of an )S
+CR 12 SF
+(img)S
+TR 12 SF
+( tag\) is )S
+(here)S
+(; this)S
+N
+0 M
+(overview is still incomplete and will improve in the future.  )S
+N
+N
+0 M
+(The URL specification itself is )S
+(here)S
+(.  )S
+N
+N
+0 M
+(A style guide for online hypertext document structures can be found )S
+(here)S
+(.  )S
+TI 12 SF
+N
+N
+0 M
+(marca@ncsa.uiuc.edu --- Copyright 1993 NCSA )S
+SP
+restore
+%%Trailer
+restore
+%%Pages: 10
+

@@ -1,0 +1,986 @@
+[Digital Equipment  Corporation]
+[Career InfoCenter Headline]
+ [HR]
+
+Engineering opportunities
+
+[Career Opportunities  Graphic]
+
+To locate jobs you may either scroll through all of the opportunities on this
+page or jump right to Engineering positions available in the following
+divisions:
+
+   * Systems Business Unit
+        o Server Business Segment
+        o Workstations Business Segment
+        o Engineering Prototype Manufacturing
+        o UNIX Systems Group
+
+   * Components Division
+        o Embedded and Real Time Product Group
+        o Storage Business Unit
+
+   * Digital Semiconductor
+
+   * Internet Software Business Unit
+
+-------------------------------------------------------------------------------
+
+Systems Business Unit -
+Engineering opportunities
+
+Server Business Segment
+
+ASIC Engineers - Multiple Positions
+Server Business Segment (Maynard, Massachusetts)
+
+Data/Control path logic for: SPM design, PCI interface (32/64 bit, 33/66Mhz),
+I/O Bridge, memory, switching interconnects, optical interconnects. 6 plus
+years' experience in complex ASIC design. Experience needed in architecture,
+design and implementation of high performance ASIC using industry standard
+hardware development tools and leading-edge silicon.
+
+Digital offers competitive salaries and full benefits. Please send resume to:
+Digital Equipment Corporation, Staffing Department, Dept 008 MSO-DEC, 129
+Parker Street, Mail Stop PKO3-2/Q22, Maynard, Massachusetts, 01754, USA. Fax:
+508-492-2877. E-mail: jobs-us-servers@digital.com For consideration, resumes
+must indicate department code. We are an Equal Employment Opportunity employer
+
+-------------------------------------------------------------------------------
+
+Module Designers - Multiple Positions
+Server Business Segment (Maynard, Massachusetts)
+
+Module designers with high performance PWB technology signal integrity
+experience. 6 plus years' experience in complex module design.
+
+Digital offers competitive salaries and full benefits. Please send resume to:
+Digital Equipment Corporation, Staffing Department, Dept 008 MSO-DEC, 129
+Parker Street, Mail Stop PKO3-2/Q22, Maynard, Massachusetts, 01754, USA. Fax:
+508-493-2877. E-mail: jobs-us-servers@digital.com For consideration, resumes
+must indicate department code. We are an Equal Employment Opportunity employer.
+
+-------------------------------------------------------------------------------
+
+Verification Engineers - Multiple Positions
+Server Business Segment (Maynard, Massachusetts)
+
+Verification Engineers with transactor environments, test directed environments
+and system level environments. 2 plus years' experience in design verification.
+Verilog HDL experience required and firm knowledge of Viewlogic, Chronologic,
+Motive and Synopsis is a plus.
+
+Digital offers competitive salaries and full benefits. Please send resume to:
+Digital Equipment Corporation, Staffing Department, Dept 008 MSO-DEC, 129
+Parker Street, Mail Stop PKO3-2/Q22, Maynard, Massachusetts, 01754, USA. Fax:
+508-493-2877. E-mail: jobs-us-servers@digital.com For consideration, resumes
+must indicate department code. We are an Equal Employment Opportunity employer.
+
+-------------------------------------------------------------------------------
+
+Power/Interconnect Engineers
+Server Business Segment (Maynard, Massachusetts)
+
+Will be responsible for power system architecture/design, EMC, System control
+and interconnect/component development. 7 to 10 years' experience in large
+power systems and power supplies. Experience in both bulk and distributed power
+architectures. Distributed large power system design a plus. 5 plus years in
+materials engineering with particular expertise in high performance PWB, metal
+fabrication and plastics. Requires the associated hard tooling experience.
+
+Digital offers competitive salaries and full benefits. Please send resume to:
+Digital Equipment Corporation, Staffing Department, Dept 008 MSO-DEC, 129
+Parker Street, Mail Stop PKO3-2/Q22, Maynard, Massachusetts, 01754, USA. Fax:
+508-493-2877. E-mail: jobs-us-servers@digital.com For consideration, resumes
+must indicate department code. We are an Equal Employment Opportunity employer.
+
+-------------------------------------------------------------------------------
+
+Product Engineer
+Server Business Segment (Maynard, Massachusetts)
+
+Provide on-going design support engineering. Responsible for investigating
+design related problems, modifying the design and qualifying proposed changes.
+3 to 5 years of related product engineering experience required.
+
+Digital offers competitive salaries and full benefits. Please send resume to:
+Digital Equipment Corporation, Staffing Department, Dept 008 MSO-DEC, 129
+Parker Street, Mail Stop PKO3-2/Q22, Maynard, Massachusetts, 01754, USA. Fax:
+508-493-2877. E-mail: jobs-us-servers@digital.com For consideration, resumes
+must indicate department code. We are an Equal Employment Opportunity employer.
+
+-------------------------------------------------------------------------------
+
+System Test Engineer
+Server Business Segment (Maynard, Massachusetts)
+
+Work as part of a team system testing newly developed option products.
+Responsibilities include staging hardware/software test beds for maximum system
+interaction. 5 plus years' experience including hardware/software problem
+isolation and resolution.
+
+Digital offers competitive salaries and full benefits. Please send resume to:
+Digital Equipment Corporation, Staffing Department, Dept 008 MSO-DEC, 129
+Parker Street, mail Stop PKO3-2/Q22, Maynard, Massachusetts, 01754, USA. Fax:
+508-493-2877. E-mail: jobs-us-servers@digital.com For consideration, resumes
+must indicate department code. We are an Equal Employment Opportunity employer.
+
+   * Return to the Engineering opportunities menu.
+   * Visit the Servers Business Segment home page.
+
+-------------------------------------------------------------------------------
+
+Workstations Business Segment
+
+Verification Engineers - Multiple Positions
+Workstations Business Segment (Maynard, Massachusetts)
+
+Responsible for the verification of a high-performance, 3D- graphics ASIC. Must
+have a detailed understanding of the hardware in order to develop thorough
+pseudo-random tests. This position strongly determines the success of the
+project. Requires OpenGL,C, C++, hardware-design, graphics architecture and
+directed , random testing. Also, UNIX, VERILOG and C-based simulation expertise
+is very advantageous. Two to five years' experience in at least one of hardware
+design, graphics, verification or software development.
+
+Digital offers competitive salaries and full benefits. Please send resume to:
+Digital Equipment Corporation, Staffing Department, Dept 008 MSO-DEC, 129
+Parker Street, Mail Stop PKO3-2/Q22, Maynard, Massachusetts, 01754, USA. Fax:
+508-493-2877. E-mail: jobs-us-workstations@digital.com For consideration,
+resumes must indicate department code. We are an Equal Employment Opportunity
+employer.
+
+-------------------------------------------------------------------------------
+
+ASIC Designer - Multiple Positions
+Workstations Business Segment (Maynard, Massachusetts)
+
+Involves the hardware design of a portion of a high-performance, 3D-graphics
+ASIC. The position utilizes ASIC design skills in logic synthesis, C/C++
+programming in a UNIX environment, functional verification, timing verification
+and ASIC floor-planning. Knowledge of computer graphics fundamentals, computer
+arithmetic or high-performance logic design are desirable. Requires 5 - 7
+years' experience.
+
+Digital offers competitive salaries and full benefits. Please send resume to:
+Digital Equipment Corporation, Staffing Department, Dept 008 MSO-DEC, 129
+Parker Street, Mail Stop PKO3-2/Q22, Maynard, Massachusetts, 01754, USA. Fax:
+508-493-2877. E-mail: jobs-us-workstations@digital.com For consideration,
+resumes must indicate department code. We are an Equal Employment Opportunity
+employer.
+
+-------------------------------------------------------------------------------
+
+System Application Test Engineer
+Workstations Business Segment (Maynard, Massachusetts)
+
+System application testing of new circuit components and analysis of system
+design problems involving Alpha workstations and peripherals including EISA/ISA
+and PCI options, main memory, cache memory and Alpha CPUs. Will collaborate
+with the support team in analysis of problems and definition of practical
+design solutions. Knowledge of computer design in some or all of the following
+areas is essential: CPU buses, memory and I/O buses, signal integrity, circuit
+timing, PCI and EISA/ISA buses. familiarity with firmware and operating systems
+(VMS,UNIX, or Windows NT) is required.
+
+Digital offers competitive salaries and full benefits. Please send resume to:
+Digital Equipment Corporation, Staffing Department, Dept 008 MSO-DEC, 129
+Parker Street, Mail Stop PKO3-2/Q22, Maynard, Massachusetts, 01754, USA. Fax:
+508-493-2877. E-mail: jobs-us-workstations@digital.com For consideration,
+resumes must indicate department code. We are an Equal Employment Opportunity
+employer.
+
+   * Return to the Engineering opportunities menu.
+   * Visit the Workstations Business Segment home page.
+
+-------------------------------------------------------------------------------
+
+Engineering Prototype Manufacturing
+
+ATE Process Engineer
+Engineering Prototype Manufacturing (New Hampshire)
+
+As an ATE Process Engineer in our Engineering Prototype Manufacturing
+organization, you will be responsible for the development, implementation, and
+installation of Teradyne Z1800 test applications in support of engineering
+prototypes and new products.
+
+Development will include working closely with design engineering to insure
+design-for-testability principles are incorporated. Implementation will include
+interfacing with design engineering and volume manufacturing to insure the
+company receives maximum benefit from prototype ATE efforts as it ramps the
+product into volume production. Installation includes on-site installation
+contract manufacturing. Applicants must have a BS/MS EE and 3-5 years of test
+related experience. Minimum of 1 year Z1800 programming and PC experience
+required. Knowledge of state-of-the-art test structures, strategies, and
+equipment a must. GR228X and C programming experience a plus.
+
+Digital offers competitive salaries and full benefits. Please send resume to:
+Digital Equipment Corporation, Attn: Steve Zabek, Dept. 019 MSO-DEC,
+MS02-1/B14, 111 Powdermill Road, Maynard, MA 01754, USA. Fax: (508) 493-7382.
+E-mail: jobs-us-informationtechnology@digital.com For consideration, resumes
+must indicate department code. We are an Equal Employment Opportunity employer.
+
+   * Return to the Engineering opportunities menu.
+
+-------------------------------------------------------------------------------
+
+UNIX Systems Group
+
+Senior/Principal Software Engineer
+UNIX Systems Group (Nashua, New Hampshire)
+
+This position calls on your experience with multithreaded concurrent
+technology, system software development and multiplatform portability to work
+on our state-of-the-art, POSIX-compliant multithreading package (DECthreads).
+This foundation technology is critical to the success of our software products,
+operating systems, compilers, distributed client/server technology and Internet
+business. As an active member of a small development team, you will not only
+serve as a technical contributor but also have some involvement with project
+leadership. Future work may involve integration with Win32 technology,
+performance analysis and optimization as well as advanced user development
+tools. To qualify, you must have exceptional knowledge of software design and
+be highly skilled in C coding. Individuals with both the interest and ability
+to handle some project management functions are preferred.
+
+Digital offers competitive salaries and full benefits including relocation
+assistance where applicable. Please send your resume to: Digital Equipment
+Corporation, Attn: Staffing, Dept. DEC, 110 Spit Brook Road, Mail
+Stop:ZK01-3/J35, Nashua, NH 03062, USA. Fax: 603-881-0712. E-mail:
+jobs-us-software@digital.com For consideration, resumes must indicate
+department code. We are an Equal Employment Opportunity employer.
+
+-------------------------------------------------------------------------------
+
+OS Hardware Interfaces
+UNIX Systems Group (Nashua, New Hampshire)
+
+Develop OS support for high-performance hardware systems in the following
+areas: CPUs, buses, storage (SCSI/CAM), graphics and communications. To
+qualify, you must have a degree in Computer Science or equivalent, strong C
+programming skills, the ability to communicate effectively, and experience with
+UNIX Kernel and Device Drivers development as well as developing UNIX-based
+applications or OS subsystems. Master's degree and experience with Shell
+Programming TCL/TK and X/Motif a plus.
+
+Digital offers competitive salaries and full benefits including relocation
+assistance where applicable. Please send your resume to: Digital Equipment
+Corporation, Attn: Staffing, Dept. DEC, 110 Spit Brook Road, Mail
+Stop:ZK01-3/J35, Nashua, NH 03062, USA. Fax: 603-881-0712. E-mail:
+jobs-us-software@digital.com For consideration, resumes must indicate
+department code. We are an Equal Employment Opportunity employer.
+
+-------------------------------------------------------------------------------
+
+Development Environment Engineering
+UNIX Systems Group (Nashua, New Hampshire)
+
+Design, develop and maintain software for the development environment with
+specific focus on shared libraries, linker enhancements and post-link
+optimization. To qualify, you must have an MSCS, strong C programming skills,
+experience developing UNIX-based applications or OS subsystems, and 7-10 years'
+software engineering experience in the areas of code generation and
+optimization, linkers, or loaders on a UNIX platform. The ability to
+communicate effectively is also essential. Experience with Shell Programming
+TCL/TK and X/Motif a plus. Knowledge of C++ is highly desirable.
+
+Serving as an interface between development and maintenance engineering groups,
+you will be responsible for managing/improving source management and
+maintenance processes and problem management. To qualify, you must have a
+Computer Science degree or equivalent, experience developing UNIX-based
+applications or OS subsystems, strong C programming skills, 5+ years' software
+engineering experience (preferably on a UNIX platform), and familiarity with
+development process and source code management tools, processes and issues.
+Knowledge of UNIX compilers and tools (especially C++), a Master's degree, and
+experience with Shell Programming TCL/TK and X/Motif a plus.
+
+Digital offers competitive salaries and full benefits including relocation
+assistance where applicable. Please send your resume to: Digital Equipment
+Corporation, Attn: Staffing, Dept. DEC, 110 Spit Brook Road, Mail
+Stop:ZK01-3/J35, Nashua, NH 03062, USA. Fax: 603-881-0712. E-mail:
+jobs-us-software@digital.com For consideration, resumes must indicate
+department code. We are an Equal Employment Opportunity employer.
+
+-------------------------------------------------------------------------------
+
+OS Kernel Networking
+UNIX Systems Group (Nashua, New Hampshire)
+
+As part of a high-caliber OS Networking team, you will use your drive,
+creativity and UNIX networking experience to work on various parts of the
+network system. To qualify, you must have a degree in Computer Science or
+equivalent, experience developing UNIX-based applications or OS subsystems,
+strong C programming skills, and the ability to communicate effectively.
+Master's degree and experience with Shell Programming TCL/TK, X/Motif, TCP/IP
+internals or ATM a plus.
+
+Digital offers competitive salaries and full benefits including relocation
+assistance where applicable. Please send your resume to: Digital Equipment
+Corporation, Attn: Staffing, Dept. DEC, 110 Spit Brook Road, Mail
+Stop:ZK01-3/J35, Nashua, NH 03062, USA. Fax: 603-881-0712. E-mail:
+jobs-us-software@digital.com For consideration, resumes must indicate
+department code. We are an Equal Employment Opportunity employer.
+
+-------------------------------------------------------------------------------
+
+OS Kernel
+UNIX Systems Group (Nashua, New Hampshire)
+
+As a member of the UNIX Kernel Development Group, you will work in the areas of
+process management, virtual memory management or join our Micro Kernel Advanced
+Development Project. To qualify, you must have a degree in Computer Science or
+equivalent, experience developing UNIX-based applications or OS subsystems,
+strong C programming skills, and the ability to communicate effectively.
+Master's degree and experience with Shell Programming TCL/TK and X/Motif a
+plus.
+
+Digital offers competitive salaries and full benefits including relocation
+assistance where applicable. Please send your resume to: Digital Equipment
+Corporation, Attn: Staffing, Dept. DEC, 110 Spit Brook Road, Mail
+Stop:ZK01-3/J35, Nashua, NH 03062, USA. Fax: 603-881-0712. E-mail:
+jobs-us-software@digital.com For consideration, resumes must indicate
+department code. We are an Equal Employment Opportunity employer.
+
+-------------------------------------------------------------------------------
+
+Quality Assurance
+UNIX Systems Group (Nashua, New Hampshire)
+
+Our exciting team in the UNIX QA Group is looking forward to the addition of
+your experience and talent to projects dealing with X/Motif, OS Kernel, and
+distributed systems. To qualify, you must have a degree in Computer Science or
+equivalent, experience developing UNIX-based applications or OS subsystems,
+strong C programming skills, and the ability to communicate effectively. In
+addition, you must have experience in one or more of the following areas: test
+development, large complex UNIX systems testing, C development and debugging,
+large storage/network clusters, performance tuning and databases. Master's
+degree and experience with Shell Programming TCL/TK and X/Motif a plus.
+
+Digital offers competitive salaries and full benefits including relocation
+assistance where applicable. Please send your resume to: Digital Equipment
+Corporation, Attn: Staffing, Dept. DEC, 110 Spit Brook Road, Mail
+Stop:ZK01-3/J35, Nashua, NH 03062, USA. Fax: 603-881-0712. E-mail:
+jobs-us-software@digital.com For consideration, resumes must indicate
+department code. We are an Equal Employment Opportunity employer.
+
+-------------------------------------------------------------------------------
+
+UNIX File Systems
+UNIX Systems Group (Nashua, New Hampshire)
+
+You will be responsible for developing state-of-the-art technology in support
+of commercial and technical computing solutions, as well as working on the
+Digital UNIX OS and 64-bit Alpha hardware platforms from the desktop to highly
+available clustered systems. Positions are available on projects dealing with
+disk volume management, logged-based physical file systems, Clusters, and
+network and distributed file systems. To qualify, you must have a degree in
+Computer Science or equivalent, experience developing UNIX-based applications
+or OS subsystems, strong C programming skills, and the ability to communicate
+effectively. Master's degree and experience with Shell Programming TCL/TK and
+X/Motif a plus.
+
+Digital offers competitive salaries and full benefits including relocation
+assistance where applicable. Please send your resume to: Digital Equipment
+Corporation, Attn: Staffing, Dept. DEC, 110 Spit Brook Road, Mail
+Stop:ZK01-3/J35, Nashua, NH 03062, USA. Fax: 603-881-0712. E-mail:
+jobs-us-software@digital.com For consideration, resumes must indicate
+department code. We are an Equal Employment Opportunity employer.
+
+-------------------------------------------------------------------------------
+
+Sustaining Engineering
+UNIX Systems Group (Nashua, New Hampshire)
+
+As part of an experienced team of engineers, you will solve high-priority
+problems from customers in the rapidly expanding installed base of Digital UNIX
+systems. Debugging systems down to code level, analyzing crash dumps, and
+recommending code fixes are essential. To qualify, you must have a degree in
+Computer Science or equivalent, experience developing UNIX-based applications
+or OS subsystems, strong C programming skills, the ability to communicate
+effectively, and knowledge of one or more of the following: OS Kernel, File
+Systems, I/O networking, X-Servers, Commands and Utilities or Compilers.
+Master's degree and experience with Shell Programming TCL/TK and X/Motif a
+plus.
+
+Digital offers competitive salaries and full benefits including relocation
+assistance where applicable. Please send your resume to: Digital Equipment
+Corporation, Attn: Staffing, Dept. DEC, 110 Spit Brook Road, Mail
+Stop:ZK01-3/J35, Nashua, NH 03062, USA. Fax: 603-881-0712. E-mail:
+jobs-us-software@digital.com For consideration, resumes must indicate
+department code. We are an Equal Employment Opportunity employer.
+
+-------------------------------------------------------------------------------
+
+Product Management
+UNIX Systems Group (Nashua, New Hampshire)
+
+Using your background in network and system management, commercial server
+software, or software development, you will apply expertise to strategy
+development, planning and business implementation. To qualify, you must have a
+degree in Computer Science or equivalent, experience developing UNIX-based
+applications or OS subsystems, strong C programming skills, and the ability to
+communicate effectively. Master's degree and experience with Shell Programming
+TCL/TK and X/Motif a plus.
+
+Digital offers competitive salaries and full benefits including relocation
+assistance where applicable. Please send your resume to: Digital Equipment
+Corporation, Attn: Staffing, Dept. DEC, 110 Spit Brook Road, Mail
+Stop:ZK01-3/J35, Nashua, NH 03062, USA. Fax: 603-881-0712. E-mail:
+jobs-us-software@digital.com For consideration, resumes must indicate
+department code. We are an Equal Employment Opportunity employer.
+
+-------------------------------------------------------------------------------
+
+Principal/Senior Software Engineer
+UNIX Systems Group (Nashua, New Hampshire)
+
+Using your experience in a complex system-level application, you will function
+as part of our Cell Directory Service (CDS) team. To qualify, you must have a
+degree in Computer Science or equivalent, experience developing UNIX-based
+applications or OS subsystems, strong C programming skills, and the ability to
+communicate effectively. Master's degree and experience with Shell Programming
+TCL/TK and X/Motif a plus. Knowledge of RPC programming and threads debugging
+would be very helpful. Experience developing UNIX preferred.
+
+Digital offers competitive salaries and full benefits including relocation
+assistance where applicable. Please send your resume to: Digital Equipment
+Corporation, Attn: Staffing, Dept. DEC, 110 Spit Brook Road, Mail
+Stop:ZK01-3/J35, Nashua, NH 03062, USA. Fax: 603-881-0712. E-mail:
+jobs-us-software@digital.com For consideration, resumes must indicate
+department code. We are an Equal Employment Opportunity employer.
+
+-------------------------------------------------------------------------------
+
+Compiler Code Generation and Optimization
+UNIX Systems Group (Nashua, New Hampshire)
+
+In this position you will be responsible for software development, support and
+maintenance tasks. To qualify, you must have a degree in Computer Science or
+equivalent, experience developing UNIX-based applications or OS subsystems,
+strong C programming skills, and the ability to communicate effectively.
+Knowledge and experience in compiler theory, construction and code generation
+or code optimization is also required. Master's degree and experience with
+Shell Programming TCL/TK and X/Motif a plus.
+
+Digital offers competitive salaries and full benefits including relocation
+assistance where applicable. Please send your resume to: Digital Equipment
+Corporation, Attn: Staffing, Dept. DEC, 110 Spit Brook Road, Mail
+Stop:ZK01-3/J35, Nashua, NH 03062, USA. Fax: 603-881-0712. E-mail:
+jobs-us-software@digital.com For consideration, resumes must indicate
+department code. We are an Equal Employment Opportunity employer.
+
+-------------------------------------------------------------------------------
+
+   * Return to the Engineering opportunities menu.
+
+-------------------------------------------------------------------------------
+
+Components Division -
+Engineering opportunities
+
+Embedded and Real Time Product Group
+
+Software Senior Engineer
+Embedded and Real Time Product Group-Engineering Services (Marlboro,
+Massachusetts)
+
+Work in the SW/Firmware Testing group. Responsibilities include leading and
+participating in qualification of new product development, developing and
+executing test strategies, and resolving issues with the development
+organization. The ideal candidate will have the following skills: experience
+with test methodologies and automated test tools, experience with Windows,
+Windows NT and/or UNIX operating platforms, experience with various network
+environments, and proficiency with programming in a language such as C.
+
+Digital offers competitive salaries and full benefits. Please send your resume
+to: Digital Equipment Corporation, Attn: Employment, Dept. TB1-DEC, 550 King
+Street LKG1-1/07, Littleton, MA 01460, USA. Fax: 508-486-5091. E-mail:
+jobs-us-components@digital.com For consideration, resumes must indicate
+department code. We are an Equal Employment Opportunity employer.
+
+-------------------------------------------------------------------------------
+
+Software Engineer
+Embedded and Real Time Product Group-Engineering Services (Marlboro,
+Massachusetts)
+
+Work in the SW/Firmware Testing group. Responsibilities include leading and
+participating in qualification of new product development, developing and
+executing test strategies, and resolving issues with the development
+organization. Ideal candidate will have the following skills: experience with
+test methodologies and automated test tools, exp with windows, Windows NT
+and/or UNIX operating platforms, experience with various network environments,
+and proficiency with programming in a language such as C. BS/MS Computer
+Science. 2+ yrs exp in SW eng. Exp with SW quality/testing helpful.
+
+Digital offers competitive salaries and full benefits. Please send your resume
+to: Digital Equipment Corporation, Attn: Employment, Dept.TB2-DEC, 550 King
+Street LKG1-1/07, Employment, Littleton, MA 01460, USA. Fax: 508-486-5091.
+E-mail: jobs-us-components@digital.com For consideration, resumes must indicate
+department code. We are an Equal Employment Opportunity employer.
+
+-------------------------------------------------------------------------------
+
+Software Engineer
+Embedded and Real Time Product Group-Engineering Services (Marlboro,
+Massachusetts)
+
+Coordinate multiple field tests of complex video and printer hardware and
+software products. Analyze functions needing test write field test plan,
+perform licensing and test startup, provide central focus for communications
+between test sites ( internal and external) and development teams. 3 years
+field test experience, BA or BS with excellent negotiation, communication and
+writing skills. Sufficient hardware and software experience to make substantive
+contribution at field test sites. Ability to influence sites to use products
+under test.
+
+Digital offers competitive salaries and full benefits. Please send your resume
+to: Digital Equipment Corporation, Attn: Employment, Dept. TB3-DEC, 550 King
+Street LKG1-1/07, Littleton, MA 01460, USA. FAX: 508-486-5091. E-mail:
+jobs-us-components@digital.com For consideration, resumes must indicate
+department code. We are an Equal Employment Opportunity employer.
+
+-------------------------------------------------------------------------------
+
+Software Senior Engineer
+Embedded and Real Time Product Group-Engineering Services (Marlboro,
+Massachusetts)
+
+Work in the Software/Firmware Quality group within the Components & Peripherals
+Business Unit. The ideal candidate will have the following skills: PC-Windows &
+NT, UNIXSolaris, AIX and/or SCO, Networks-LAN & WAN testing, test
+methodologies, configuration management, automated test tools, writing test
+plans & test case, testing methods for different environ, testing drivers,
+Motif knowledgeable, proficient w/ a high level computer language like C. BS or
+MS in Computer Science, Computer Engineering or the equiv. 4+ yrs exp in
+software eng, w/explicit testing/quality exp a must.
+
+Digital offers competitive salaries and full benefits. Please send your resume
+to: Digital Equipment Corporation, Attn: Employment, Dept. TB4-DEC, 550 King
+Street LKG1-1/07, Littleton, MA 01460, USA. FAX: 508-486-5091. E-mail:
+jobs-us-components@digital.com For consideration, resumes must indicate
+department code. We are an Equal Employment Opportunity employer.
+
+   * Return to the Engineering opportunities menu.
+
+-------------------------------------------------------------------------------
+
+Storage Business Unit
+
+Software Engineers
+Storage Business Unit (Shrewsbury, Massachusetts; Colorado Springs, Colorado;
+Bellevue, Washington)
+
+The Storage Business Unit provides industry-leading, enterprise-wide storage
+solutions to global markets with our StorageWorks product family. Products so
+flexible, they also run on Sun, HP and IBM platforms, as well as PC servers and
+LANs. Plus, we are leaders in cutting-edge storage technology like RAID
+(Redundant Array of Independent Disks) and HSM (Hierarchical Storage
+Management).
+
+Opportunities are available today for you to put your skills to work in
+Digital's Storage Business Unit, which has had continual growth and increasing
+market share. Openings exist for individuals to: design and develop software
+for media management, backup, HSM and networked storage applications. You could
+also qualify and integrate storage devices (disk, tape, and optical) and
+subsystems into solutions for customers or, develop state-of-the-art solutions
+for Digital and third-party partners. You could also become part of the array
+controller team responsible for designing hardware and firmware, or join our
+manufacturing group and help integrate product solutions into a manufacturing
+environment. Each position requires the ability to determine and evaluate
+technical solutions, analyze problems and work with other engineering groups.
+To qualify, you should have a B.S. in Computer Science, Electrical Engineering,
+Electrical Engineering Technology or equivalent. Experience with UNIX, Windows
+NT, VMS, C++, C, Basic and computer storage devices preferred.
+
+Digital offers competitive salaries and full benefits including an outstanding
+relocation package. Please send your resume for all locations to: Digital
+Equipment Corporation, Attn: Storage Staffing Manager, Dept. DEC, Mail Stop:
+SHR3-2/C5, 334 South Street, Shrewsbury, MA 01545, USA. Fax: 508-841-5753.
+E-Mail: jobs-us-storage@digital.com For consideration, resumes must indicate
+department code. We are an Equal Employment Opportunity employer.
+
+   * Return to the Engineering opportunities menu.
+   * Visit the Storage Business Unit home page.
+
+-------------------------------------------------------------------------------
+
+Digital Semiconductor -
+Engineering opportunities
+
+VLSI Chip/System Verification Engineers/Architects
+Digital Semiconductor (Massachusetts)
+
+You'll enjoy all the benefits of leading a dual life--not only as a
+verification and architecture expert, but also as a member of a leading-edge
+VLSI development team - working closely with circuit designers and chip
+architects to uncover bugs and help lead the project to success. You won't get
+stuck doing just hardware, or just software. Instead, you'll combine your
+architecture, logic, software (knowledge of C/C++ algorithms and data
+structures), and CAD tool skills/experience to devise innovative ways of
+creating random transactors and demons that will exercise all the nooks and
+crannies of these complicated chips. Whether you write macrocode tests directly
+or write tools to generate tests and scripts, you'll be encouraged to look at
+the design from differing perspectives and apply simulation, debugging, and
+functional coverage analysis techniques to dig deeper for unstimulated
+cross-products. With an eagerness to learn, you'll tap into our extensive
+state-of-the-art verification tool suite and experience base to sharpen your
+own effectiveness and grow even more. Often, our verification engineers know
+the functional operation better than the designers themselves. As a leader,
+technical contributor, or tool crafter, you'll be a vital part of this exciting
+design team.
+
+Digital offers competitive salaries and full benefits. Please send resumes to:
+Digital Semiconductor, Attn: Professional Staffing, Dept. DEC, 77 Reed Road,
+(HLO2-2/K12), Hudson, MA 01749, USA. Fax: 508-568-6662. E-mail:
+jobs-us-semiconductor@digital.com For consideration, resumes must indicate
+department code. We are an Equal Employment Opportunity employer.
+
+-------------------------------------------------------------------------------
+
+Circuit Designers
+Digital Semiconductor (Massachusetts)
+
+As a Custom CMOS VLSI Circuit Designer, you will lay the technical foundation
+for the design of future generations of high-performance Alpha microprocessors.
+The work covers a broad range of disciplines and involves design optimizations
+that span process technology, circuit design and microarchitecture. You will
+function as a valued member of an innovative team that will design
+state-of-the-art, high-speed, power-efficient circuit structures. In addition,
+you will help guide the continuing development of our leading-edge CAD suite,
+as well as contribute to all phases of design - from conception through
+production release.
+
+Digital offers competitive salaries and full benefits. Please send resumes to:
+Digital Semiconductor, Attn: Staffing Manager, Dept. DEC, 77 Reed Road,
+(HLO2-2/K12), Hudson, MA 01749, USA. Fax: 508-568-6662. E-mail:
+jobs-us-semiconductor@digital.com For consideration, resumes must indicate
+department code. We are an Equal Employment Opportunity employer.
+
+-------------------------------------------------------------------------------
+
+Architects
+Digital Semiconductor (Massachusetts)
+
+As a Microprocessor Architect, you will help create the next generation
+deep-submicron Alpha microprocessor capable of achieving high instructions per
+cycle time while operating at Digital's industry-leading clock frequencies.
+This will include analysis of critical applications, performance and
+behavioral/RTL modeling, microarchitectural performance/area/power tradeoffs
+and high-speed system design. In addition, you will work closely with our
+circuit, layout and verification engineers to guide the design from initial
+concept through implementation to production release.
+
+Digital offers competitive salaries and full benefits. Please send resumes to:
+Digital Semiconductor, Attn: Staffing Manager, Dept. DEC, 77 Reed Road,
+(HLO2-2/K12), Hudson, MA 01749, USA. Fax: 508-568-6662. E-mail:
+jobs-us-semiconductor@digital.com For consideration, resumes must indicate
+department code. We are an Equal Employment Opportunity employer.
+
+-------------------------------------------------------------------------------
+
+MOSFET Engineers
+Digital Semiconductor (Massachusetts)
+
+You will develop and enhance parasitic models such as capacitances, resistance
+and inductance of high-speed VLSI devices and circuits. To qualify, you must
+have a MS in Physics or PhDEE, 3 years' experience in device interconnect
+modeling and software development.
+
+Digital offers competitive salaries and full benefits. Please send resumes to:
+Digital Semiconductor, Attn: Professional Staffing, Dept. DEC, 77 Reed Road,
+(HLO2-2/K12), Hudson, MA 01749, USA. Fax: 508-568-6662. E-mail:
+jobs-us-semiconductor@digital.com For consideration, resumes must indicate
+department code. We are an Equal Employment Opportunity employer.
+
+-------------------------------------------------------------------------------
+
+Microprocessor Architects
+Digital Semiconductor (Palo Alto, California)
+
+As a technical leader for StrongArm high-performance, low-power CPU chips, you
+will provide technical direction to a team of architects and interface with the
+VLSI Implementation group. To qualify, you must have 8-10 years' experience in
+custom microprocessor design.
+
+Digital offers competitive salaries and full benefits. Please send your resume
+to: Digital Semiconductor, Attn: Staffing, Dept. DEC, 181 Lytton Ave., Suite
+101, Palo Alto, CA 94301, USA. Fax: 415-853-6537. E-mail:
+jobs-us-paloalto@digital.com For consideration, resumes must indicate
+department code. We are an Equal Employment Opportunity employer.
+
+-------------------------------------------------------------------------------
+
+VLSI Microprocessor Designers
+Digital Semiconductor (Palo Alto, California)
+
+You will perform full customer CMOS design at the logic and circuit level.
+Working with microarchitects, you will define optimum chip organization and
+timing budgets with responsibility for the complete implementation using
+Digital Semiconductor's specially developed high-performance CAD tools.
+Positions are available at all levels including VLSI Chip Implementation
+Leader.
+
+Digital offers competitive salaries and full benefits. Please send your resume
+to: Digital Semiconductor, Attn: Staffing, Dept. DEC, 181 Lytton Ave., Suite
+101, Palo Alto, CA 94301, USA. Fax: 415-853-6537. E-mail:
+jobs-us-paloalto@digital.com For consideration, resumes must indicate
+department code. We are an Equal Employment Opportunity employer.
+
+-------------------------------------------------------------------------------
+
+VLSI Microprocessor Verification Engineers
+Digital Semiconductor (Palo Alto, California)
+
+You will be responsible for verification test development, testability and
+coverage analysis as well as manufacturing test development and on-chip test
+hardware. BIST design for high-performance, low-power microprocessors will also
+be required. Entry-level to senior-level positions are available.
+
+Digital offers competitive salaries and full benefits. Please send your resume
+to: Digital Semiconductor, Attn: Staffing, Dept. DEC, 181 Lytton Ave., Suite
+101, Palo Alto, CA 94301, USA. Fax: 415-853-6537. E-mail:
+jobs-us-paloalto@digital.com For consideration, resumes must indicate
+department code. We are an Equal Employment Opportunity employer.
+
+-------------------------------------------------------------------------------
+
+Multimedia and Signal Processing Architects
+Digital Semiconductor (Palo Alto, California)
+
+You will help define the features required to support high-performance video
+encoding/decoding, 3D graphics, soft modems, etc. In addition, you will be
+responsible for algorithm development and detailed functionality as well as
+performance evaluation. Senior or Principal Engineer level positions are
+available.
+
+Digital offers competitive salaries and full benefits. Please send your resume
+to: Digital Semiconductor, Attn: Staffing, Dept. DEC, 181 Lytton Ave., Suite
+101, Palo Alto, CA 94301, USA. Fax: 415-853-6537. E-mail:
+jobs-us-paloalto@digital.com For consideration, resumes must indicate
+department code. We are an Equal Employment Opportunity employer.
+
+-------------------------------------------------------------------------------
+
+VLSI CAD and Support Engineers
+Digital Semiconductor (Palo Alto, California)
+
+You will work with design engineers to define an optimum CAD environment for
+low-power microprocessor development. Helping to configure internally developed
+CAD tools to meet local needs as well as evaluating commercial tools for
+integration in the design environment will also be among your duties.
+Senior-level positions are available.
+
+Digital offers competitive salaries and full benefits. Please send your resume
+to: Digital Semiconductor, Attn: Staffing, Dept. DEC, 181 Lytton Ave., Suite
+101, Palo Alto, CA 94301, USA. Fax: 415-853-6537. E-mail:
+jobs-us-paloalto@digital.com For consideration, resumes must indicate
+department code. We are an Equal Employment Opportunity employer.
+
+-------------------------------------------------------------------------------
+
+Test Engineers
+Digital Semiconductor (Massachusetts)
+
+Generate test programs/hardware to test and characterize complex VLSI devices
+on advanced automated test equipment. Develop test strategies, evaluate device
+testability, and write software tools to enhance test program development. Work
+with Manufacturing and Design on device debug and verification. Develop and
+evaluate new test methodologies and equipment. Will be a project leader/mentor.
+Applicants need BSEE/CE (MS preferred) with 8+ years' experience in VLSI test
+development. Strong knowledge of CMOS device physics, computer architecture and
+logic simulation needed.
+
+Digital offers competitive salaries and full benefits. Please send resumes to:
+Digital Semiconductor, Attn: Professional Staffing, Dept. DEC, 77 Reed Road,
+(HLO2-2/K12), Hudson, MA 01749, USA. Fax: 508-568-6662. E-mail:
+jobs-us-semiconductor@digital.com For consideration, resumes must indicate
+department code. We are an Equal Employment Opportunity employer.
+
+-------------------------------------------------------------------------------
+
+Product Engineers
+Digital Semiconductor (Massachusetts)
+
+These individuals will be responsible for solving product manufacturing
+problems for complex VLSI devices. Includes understanding and solving circuit
+design and testing problems, packaging problems, product to process match and
+attaining yield enhancement and cost reduction. These positions will provide an
+opportunity to become totally familiar with certain device types and also to
+understand manufacturing of VLSI devices. Applicants need a BSEE (MS preferred)
+with 5+ years' experience in Product- Engineering or a related field (Test,
+Process or Circuit).
+
+Digital offers competitive salaries and full benefits. Please send resumes to:
+Digital Semiconductor, Attn: Professional Staffing, Dept. DEC, 77 Reed Road,
+(HLO2-2/K12), Hudson, MA 01749, USA. Fax: 508-568-6662. E-mail:
+jobs-us-semiconductor@digital.com For consideration, resumes must indicate
+department code. We are an Equal Employment Opportunity employer.
+
+-------------------------------------------------------------------------------
+
+CMOS Layout Designers
+Digital Semiconductor (Massachusetts)
+
+Excellent opportunities exist for talented IC layout professionals with custom
+CMOS layout experience. Responsible for creating, verifying and integrating
+large custom CMOS VLSI chips. A minimum of 3-5 years' experience in floor
+planning, integrating and leading other layout designers in the development of
+large microprocessor designs required.
+
+Digital offers competitive salaries and full benefits. Please send resumes to:
+Digital Semiconductor, Attn: Professional Staffing, Dept. DEC, 77 Reed Road,
+(HLO2-2/K12), Hudson, MA 01749, USA. Fax: 508-568-6662. E-mail:
+jobs-us-semiconductor@digital.com For consideration, resumes must indicate
+department code. We are an Equal Employment Opportunity employer.
+
+-------------------------------------------------------------------------------
+
+Process Engineers
+Digital Semiconductor (Massachusetts)
+
+Responsible for providing on-line process engineering support for CMOS, 200mm,
+class 10 cleanroom environment. Individuals will be responsible for one or more
+of the following process areas: Photolithography, Metrology, Films, Diffusion,
+Implant, or Defect Reduction. Knowledge of underlying process chemistry/physics
+and an understanding of equipment control systems will be used to drive process
+capabilities and cost improvements. Requires BS/MS in Chemical Engineering,
+Physics, Electrical Engineering or Material Science, with 2+ years of practical
+CMOS wafer fab experience.
+
+Digital offers competitive salaries and full benefits. Please send resumes to:
+Digital Semiconductor, Attn: Professional Staffing, Dept. DEC, 77 Reed Road,
+(HLO2-2/K12), Hudson, MA 01749, USA. Fax: 508-568-6662. E-mail:
+jobs-us-semiconductor@digital.com For consideration, resumes must indicate
+department code. We are an Equal Employment Opportunity employer.
+
+-------------------------------------------------------------------------------
+
+Photoresist Engineers
+Digital Semiconductor (Massachusetts)
+
+Qualified candidates will be responsible for research, identification,
+qualification and introduction of new photoresist chemicals and processes in
+200mm CMOS manufacturing. Individuals will be responsible for vendor, product
+and process qualification, chemical analysis, product/process introduction to
+manufacturing, as well as QC/QA SPC reporting. Requires: BS/MS - Chemical
+Engineering/Material Sciences with 5+ years of experience in photoresist
+engineering.
+
+Digital offers competitive salaries and full benefits. Please send resumes to:
+Digital Semiconductor, Attn: Professional Staffing, Dept. DEC, 77 Reed Road,
+(HLO2-2/K12), Hudson, MA 01749, USA. Fax: 508-568-6662. E-mail:
+jobs-us-semiconductor@digital.com For consideration, resumes must indicate
+department code. We are an Equal Employment Opportunity employer.
+
+   * Return to the Engineering opportunities menu.
+   * Visit the Digital Semiconductor home page.
+
+-------------------------------------------------------------------------------
+
+Internet Software Business Unit -
+Engineering Opportunities
+
+Software Principal Engineer - Internet Collaboration (2 positions)
+Internet Software Business Unit (Massachusetts)
+
+You will work on the development of Alta Vista collaboration products. These
+products allow multiple individuals to share information and work on the same
+team. Products such as Alta Vista Workgroup Forum will be enhanced as a base
+platform and with newly developed applications. Development will occur
+primarily on WindowsNT, Windows95 and UNIX. To qualify, you must have a BS
+CS/SE/EE (MS preferred), general networking experience and knowledge of C and
+C++. UNIX, Internet and WWW server experience is also essential. U.S. work
+permit required.
+
+Digital offers competitive salaries and full benefits. Please send resume to:
+Fax: 603-881-0712. E-mail: jobs-us-isbustaffing@digital.com Attn: ISBU
+Staffing, Dept. DEC. For consideration, resumes must indicate department code.
+We are an Equal Employment Opportunity employer.
+
+-------------------------------------------------------------------------------
+
+Software Engineering Consultant - Internet Security
+Internet Software Business Unit (Massachusetts)
+
+This challenging position calls on your abilities as a senior-level
+Cryptographer and Protocol Developer. In-depth experience in the following will
+be required: public/secret key technologies, key distribution systems,
+certificates, authorities, digital signatures, key escrow systems, key exchange
+mechanisms (i.e. Diffie-Hellman), stream and block ciphers (i.e. RC4 and DES)
+and hashing algorithms (i.e. MD5 and SHA). To qualify, you must have a BS
+CS/SE/EE (MS/PhD preferred), the ability to architect and implement in a
+fast-paced product development environment, and experience developing with C++
+in Windows and UNIX. Knowledge in US Crypto export law and in one or more of
+the following protocols is also essential: TCP/IP, SSL, SHTTP, PCT, SKIP and
+Photuris. U.S. work permit required.
+
+Digital offers competitive salaries and full benefits. Please send resume to:
+Fax: 603-881-0712. E-mail: jobs-us-isbustaffing@digital.com Attn: ISBU
+Staffing, Dept. DEC. For consideration, resumes must indicate department code.
+We are an Equal Employment Opportunity employer.
+
+-------------------------------------------------------------------------------
+
+Senior/Principal Software Engineer - Internet Security (2 positions)
+Internet Software Business Unit (Massachusetts)
+
+As a self-motivated QA Engineer, you will work in a start-up environment to
+ensure early detection of defects found in the development process, test
+development on multiple platforms, automated test execution, test code coverage
+analysis and creating reusable tools. Members of the quality team work closely
+with engineering teams with quick time-to-market goals. Products are Internet
+security related and run on Windows95, WindowsNT and UNIX platforms. To
+qualify, you must have a BSCS/MSCS or equivalent; 3-5 years' experience; and
+knowledge of WWW technologies, security, networking and white box testing.
+Proficiency in C/C++, shell scripts, Tcl/Tk, GUI testing, TCP/IP protocols,
+source code control, MFC and firewall/tunnels a plus. U.S. work permit
+required.
+
+Digital offers competitive salaries and full benefits. Please send resume to:
+Fax: 603-881-0712. E-mail: jobs-us-isbustaffing@digital.com Attn: ISBU
+Staffing, Dept. DEC. For consideration, resumes must indicate department code.
+We are an Equal Employment Opportunity employer.
+
+-------------------------------------------------------------------------------
+
+Principal Software Engineer - Systems Engineering (4 positions)
+Internet Software Business Unit (Massachusetts)
+
+Your experience as a Windows programmer is ideally suited for this challenging
+position. To qualify, you must have a BSCS/MSCS; 4+ years' experience in
+Windows software development; and object-oriented experience that includes
+knowledge of C++, familiarity with the MFC and some OLE/COM experience. In
+addition, you must have written applications for Windows/Windows95/ WindowsNT.
+Some distributed systems or networking experience as well as an interest in the
+Web and its applications is highly desirable. U.S. work permit required.
+
+Digital offers competitive salaries and full benefits. Please send resume to:
+Fax: 603-881-0712. E-mail: jobs-us-isbustaffing@digital.com Attn: ISBU
+Staffing, Dept. DEC. For consideration, resumes must indicate department code.
+We are an Equal Employment Opportunity employer.
+
+-------------------------------------------------------------------------------
+
+Senior Software Engineer - Alta Vista Product Development (3 positions)
+Internet Software Business Unit (Massachusetts)
+
+You will function as an active member a team responsible for developing
+software for the Village Alta Vista. To qualify, you must have a BSCS/MSCS or
+equivalent, software development experience with C in a UNIX or WindowsNT
+environment, and strong knowledge of the Internet, WWW and network programming.
+U.S. work permit required.
+
+Digital offers competitive salaries and full benefits. Please send resume to:
+Fax: 603-881-0712. E-mail: jobs-us-isbustaffing@digital.com Attn: ISBU
+Staffing, Dept. DEC. For consideration, resumes must indicate department code.
+We are an Equal Employment Opportunity employer.
+
+   * Return to the Engineering opportunities menu.
+
+ [HR]
+ [Home]
+
+Updated: Tue April 30, 1996
+
+TM

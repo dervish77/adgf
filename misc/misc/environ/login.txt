@@ -1,0 +1,73 @@
+
+# @(#)login_template	1.5 94/02/04 11:38:51
+##################################################################
+#
+#         .login file template
+#
+#         Read in after the .cshrc file when you log in.
+#         Not read in for subsequent shells.  For setting up
+#         terminal and global environment characteristics.
+#
+##################################################################
+
+
+# EXECUTE the common login...
+# IF it doesnt exist then source old login
+
+# IATC_LOCAL should have been set in .cshrc
+if ( -r ${IATC_LOCAL}/common_login ) then
+  source ${IATC_LOCAL}/common_login 
+
+############################################################
+
+# User specific stuff
+setenv NNTPSERVER news.ed.ray.com
+
+project -p hkong
+
+#limit coredumpsize 0
+
+if (`tty` == /dev/console) then
+        setenv ABHOME /tools/answerbook
+	setenv X11R5 /usr/X11R5
+        setenv OPENWINHOME /usr/openwin
+	setenv FMHOME /tools/frame
+        setenv FONTPATH $ABHOME/lib/fonts
+        setenv HELPPATH $ABHOME/lib/help
+        set path = ($path $ABHOME/bin)
+	# fire up openwindows...
+	if (! $?L0) then
+#	  exec xinit -- ${X11R5}/bin/X
+#         (using OpenWin X server below)
+          exec $OPENWINHOME/bin/openwin
+        endif
+#        exec $OPENWINHOME/bin/openwin
+
+else if ( $term == dialup || $term == unknown ) then
+	if ( -x /usr/ucb/tset ) then
+		set noglob
+		eval `tset -sQ -m 'dialup:?vt100'`
+		set glob
+	endif
+	set term=$TERM
+	if ($?MAIL) then
+	  if (-w $MAIL && ! -z $MAIL) echo "You have mail."
+	endif
+
+else if ( $term != sun && $term != sun-cmd ) then
+	if ( -x /usr/ucb/tset ) then
+		set noglob
+		eval `tset -sQ`
+		set glob
+	endif
+	echo TERM = $term
+	if ($?MAIL) then
+	  if (-w $MAIL && ! -z $MAIL) echo "You have mail."
+	endif
+endif
+
+# See if old login exists
+else if ( -r $HOME/.login.old ) then
+  source $HOME/.login.old
+endif
+
