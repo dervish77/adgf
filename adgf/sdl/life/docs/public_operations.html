@@ -1,0 +1,69 @@
+<!-- Documentation produced by the Html generator of Bouml (http://bouml.free.fr) -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Public Operations Index</title>
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body bgcolor="#ffffff">
+
+<div class = "title">Public Operations Index</div>
+<p></p>
+
+<!-- ============================================================= -->
+
+<table>
+<tr bgcolor=#f0f0f0><td align=center><b>Operation</b></td><td align=center><b>Class</b></td><td align=center><b>Description</b></td></tr>
+<tr bgcolor=#f0f0f0><td><a href="class128027.html#refoperation128027"><b>animal</b></a></td><td><a href="class128027.html#refclass128027"><b>animal</b></a></td><td></td></tr>
+<tr bgcolor=#f0f0f0><td><a href="class128539.html#refoperation133915"><b>boundstest</b></a></td><td><a href="class128539.html#refclass128539"><b>boundstest</b></a></td><td></td></tr>
+<tr bgcolor=#f0f0f0><td><a href="class128923.html#refoperation129179"><b>cat</b></a></td><td><a href="class128923.html#refclass128923"><b>cat</b></a></td><td></td></tr>
+<tr bgcolor=#f0f0f0><td><a href="class128155.html#refoperation128283"><b>dog</b></a></td><td><a href="class128155.html#refclass128155"><b>dog</b></a></td><td></td></tr>
+<tr bgcolor=#f0f0f0><td><a href="class131355.html#refoperation139035"><b>doLeak</b></a></td><td><a href="class131355.html#refclass131355"><b>zebra</b></a></td><td> The doLeak method allocates some memory to a character array.  The pointer is stored <br /> on the stack.  But the memory is not freed, thus creating an indirect memory leak when <br /> the object is destroyed.<br /> </td></tr>
+<tr bgcolor=#f0f0f0><td><a href="class130203.html#refoperation131611"><b>doProgram</b></a></td><td><a href="class130203.html#refclass130203"><b>mymain</b></a></td><td></td></tr>
+<tr bgcolor=#f0f0f0><td><a href="class128539.html#refoperation128795"><b>execute</b></a></td><td><a href="class128539.html#refclass128539"><b>boundstest</b></a></td><td> The execute method invokes the stackTest and heapTest methods.<br /> </td></tr>
+<tr bgcolor=#f0f0f0><td><a href="class128667.html#refoperation128923"><b>execute</b></a></td><td><a href="class128667.html#refclass128667"><b>inittest</b></a></td><td> The execute method invokes the staticTest, stackTest and heapTest methods.<br /> </td></tr>
+<tr bgcolor=#f0f0f0><td><a href="class128283.html#refoperation128667"><b>execute</b></a></td><td><a href="class128283.html#refclass128283"><b>leaktest</b></a></td><td> The execute method invokes the heapTest method.<br /> </td></tr>
+<tr bgcolor=#f0f0f0><td><a href="class128411.html#refoperation128539"><b>execute</b></a></td><td><a href="class128411.html#refclass128411"><b>test</b></a></td><td></td></tr>
+<tr bgcolor=#f0f0f0><td><a href="class128923.html#refoperation129819"><b>getId</b></a></td><td><a href="class128923.html#refclass128923"><b>cat</b></a></td><td></td></tr>
+<tr bgcolor=#f0f0f0><td><a href="class128155.html#refoperation130075"><b>getId</b></a></td><td><a href="class128155.html#refclass128155"><b>dog</b></a></td><td></td></tr>
+<tr bgcolor=#f0f0f0><td><a href="class131355.html#refoperation138907"><b>getId</b></a></td><td><a href="class131355.html#refclass131355"><b>zebra</b></a></td><td></td></tr>
+<tr bgcolor=#f0f0f0><td><a href="class128411.html#refoperation135579"><b>getMode</b></a></td><td><a href="class128411.html#refclass128411"><b>test</b></a></td><td></td></tr>
+<tr bgcolor=#f0f0f0><td><a href="class128027.html#refoperation129563"><b>getSpecies</b></a></td><td><a href="class128027.html#refclass128027"><b>animal</b></a></td><td></td></tr>
+<tr bgcolor=#f0f0f0><td><a href="class128539.html#refoperation136859"><b>heapTest</b></a></td><td><a href="class128539.html#refclass128539"><b>boundstest</b></a></td><td> The heapTest method creates two character arrays on the heap.  It then initializes the <br /> second array, and then initializes the first array by over-running the end of the array.<br /> This creates a buffer over-run condition using heap memory.<br /> </td></tr>
+<tr bgcolor=#f0f0f0><td><a href="class128667.html#refoperation137243"><b>heapTest</b></a></td><td><a href="class128667.html#refclass128667"><b>inittest</b></a></td><td> The heapTest method initializes a data member of one of two objects that <br /> were created on the heap.  The same data member of the other object is <br /> left uninitialized.<br /> </td></tr>
+<tr bgcolor=#f0f0f0><td><a href="class128283.html#refoperation137371"><b>heapTest</b></a></td><td><a href="class128283.html#refclass128283"><b>leaktest</b></a></td><td> The heapTest method creates two arrays of objects on the heap.  As each <br /> object is created, some data within the object is initialized.  Then <br /> nearly all the objects in each array are deleted, one object in one array, <br /> and two objects in the other array are left intact, hence creating a direct <br /> memory leak.<br /><br /> Also another object is created that contains a method called doLeak.  This <br /> method is called before deleting the object which results in an indirect <br /> memory leak when the object itself is deleted.<br /> </td></tr>
+<tr bgcolor=#f0f0f0><td><a href="class128667.html#refoperation133659"><b>inittest</b></a></td><td><a href="class128667.html#refclass128667"><b>inittest</b></a></td><td></td></tr>
+<tr bgcolor=#f0f0f0><td><a href="class128283.html#refoperation133403"><b>leaktest</b></a></td><td><a href="class128283.html#refclass128283"><b>leaktest</b></a></td><td></td></tr>
+<tr bgcolor=#f0f0f0><td><a href="class128795.html#refoperation133147"><b>life</b></a></td><td><a href="class128795.html#refclass128795"><b>life</b></a></td><td></td></tr>
+<tr bgcolor=#f0f0f0><td><a href="class130203.html#refoperation132891"><b>mymain</b></a></td><td><a href="class130203.html#refclass130203"><b>mymain</b></a></td><td></td></tr>
+<tr bgcolor=#f0f0f0><td><a href="class130203.html#refoperation131227"><b>parseArgs</b></a></td><td><a href="class130203.html#refclass130203"><b>mymain</b></a></td><td></td></tr>
+<tr bgcolor=#f0f0f0><td><a href="class130203.html#refoperation131355"><b>printBanner</b></a></td><td><a href="class130203.html#refclass130203"><b>mymain</b></a></td><td></td></tr>
+<tr bgcolor=#f0f0f0><td><a href="class130203.html#refoperation131483"><b>printHelp</b></a></td><td><a href="class130203.html#refclass130203"><b>mymain</b></a></td><td></td></tr>
+<tr bgcolor=#f0f0f0><td><a href="class130203.html#refoperation132763"><b>printUsage</b></a></td><td><a href="class130203.html#refclass130203"><b>mymain</b></a></td><td></td></tr>
+<tr bgcolor=#f0f0f0><td><a href="class128795.html#refoperation129051"><b>runProgram</b></a></td><td><a href="class128795.html#refclass128795"><b>life</b></a></td><td> The runProgram method determines which startup pattern needs to be used and then executes the simulation.<br /> </td></tr>
+<tr bgcolor=#f0f0f0><td><a href="class128923.html#refoperation129691"><b>setId</b></a></td><td><a href="class128923.html#refclass128923"><b>cat</b></a></td><td></td></tr>
+<tr bgcolor=#f0f0f0><td><a href="class128155.html#refoperation129947"><b>setId</b></a></td><td><a href="class128155.html#refclass128155"><b>dog</b></a></td><td></td></tr>
+<tr bgcolor=#f0f0f0><td><a href="class131355.html#refoperation138779"><b>setId</b></a></td><td><a href="class131355.html#refclass131355"><b>zebra</b></a></td><td></td></tr>
+<tr bgcolor=#f0f0f0><td><a href="class128411.html#refoperation135451"><b>setMode</b></a></td><td><a href="class128411.html#refclass128411"><b>test</b></a></td><td></td></tr>
+<tr bgcolor=#f0f0f0><td><a href="class128027.html#refoperation129435"><b>setSpecies</b></a></td><td><a href="class128027.html#refclass128027"><b>animal</b></a></td><td></td></tr>
+<tr bgcolor=#f0f0f0><td><a href="class128539.html#refoperation136731"><b>stackTest</b></a></td><td><a href="class128539.html#refclass128539"><b>boundstest</b></a></td><td> The stackTest method creates two character arrays on the stack.  It then initializes the <br /> second array, and then initializes the first array by over-running the end of the array.<br /> This creates a buffer over-run condition using stack memory.<br /> </td></tr>
+<tr bgcolor=#f0f0f0><td><a href="class128667.html#refoperation137115"><b>stackTest</b></a></td><td><a href="class128667.html#refclass128667"><b>inittest</b></a></td><td> The stackTest method initializes a data member of one of two objects that <br /> were created on the stack.  The same data member of the other object is <br /> left uninitialized.<br /> </td></tr>
+<tr bgcolor=#f0f0f0><td><a href="class128667.html#refoperation136987"><b>staticTest</b></a></td><td><a href="class128667.html#refclass128667"><b>inittest</b></a></td><td> The staticTest method initializes a data member of one of two objects that <br /> are stored as static data members of the staticTest object.  The same data <br /> member of the other object is left uninitialized.<br /> </td></tr>
+<tr bgcolor=#f0f0f0><td><a href="class128411.html#refoperation134171"><b>test</b></a></td><td><a href="class128411.html#refclass128411"><b>test</b></a></td><td></td></tr>
+<tr bgcolor=#f0f0f0><td><a href="class131355.html#refoperation138523"><b>zebra</b></a></td><td><a href="class131355.html#refclass131355"><b>zebra</b></a></td><td></td></tr>
+<tr bgcolor=#f0f0f0><td><a href="class128027.html#refoperation128155"><b>~animal</b></a></td><td><a href="class128027.html#refclass128027"><b>animal</b></a></td><td></td></tr>
+<tr bgcolor=#f0f0f0><td><a href="class128539.html#refoperation134043"><b>~boundstest</b></a></td><td><a href="class128539.html#refclass128539"><b>boundstest</b></a></td><td></td></tr>
+<tr bgcolor=#f0f0f0><td><a href="class128923.html#refoperation129307"><b>~cat</b></a></td><td><a href="class128923.html#refclass128923"><b>cat</b></a></td><td></td></tr>
+<tr bgcolor=#f0f0f0><td><a href="class128155.html#refoperation128411"><b>~dog</b></a></td><td><a href="class128155.html#refclass128155"><b>dog</b></a></td><td></td></tr>
+<tr bgcolor=#f0f0f0><td><a href="class128667.html#refoperation133787"><b>~inittest</b></a></td><td><a href="class128667.html#refclass128667"><b>inittest</b></a></td><td></td></tr>
+<tr bgcolor=#f0f0f0><td><a href="class128283.html#refoperation133531"><b>~leaktest</b></a></td><td><a href="class128283.html#refclass128283"><b>leaktest</b></a></td><td></td></tr>
+<tr bgcolor=#f0f0f0><td><a href="class128795.html#refoperation133275"><b>~life</b></a></td><td><a href="class128795.html#refclass128795"><b>life</b></a></td><td></td></tr>
+<tr bgcolor=#f0f0f0><td><a href="class130203.html#refoperation133019"><b>~mymain</b></a></td><td><a href="class130203.html#refclass130203"><b>mymain</b></a></td><td></td></tr>
+<tr bgcolor=#f0f0f0><td><a href="class128411.html#refoperation134299"><b>~test</b></a></td><td><a href="class128411.html#refclass128411"><b>test</b></a></td><td></td></tr>
+<tr bgcolor=#f0f0f0><td><a href="class131355.html#refoperation138651"><b>~zebra</b></a></td><td><a href="class131355.html#refclass131355"><b>zebra</b></a></td><td></td></tr>
+</table>
+</body>
+</html>

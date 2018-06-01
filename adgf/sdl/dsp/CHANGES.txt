@@ -1,0 +1,19 @@
+CHANGES	 history for DspDemo
+----------------------------
+
+0.1.2
+    - updated README.txt
+    - added 'make version'
+
+0.1.1
+    - added mixer code
+    - modified filter code to just do a waveform copy for now
+    - modified ResetSim to create baseline waveform, and mix in a noise waveform
+    - modified ExecuteSim to process waveform through filter and draw result
+
+0.1.0
+    - updated to now use draw-sdl version 0.7.3
+
+0.0.0
+    - Originated, cloned from DrawDemo
+

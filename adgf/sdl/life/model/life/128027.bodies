@@ -1,0 +1,5 @@
+class animal
+!!!129435.cpp!!!	setSpecies(in species : int) : void
+  mySpecies = species;
+!!!129563.cpp!!!	getSpecies() : int
+  return(mySpecies);

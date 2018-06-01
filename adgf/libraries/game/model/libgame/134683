@@ -1,0 +1,1201 @@
+format 75
+"Screen" // libgame::Screen
+  revision 1
+  modified_by 27 "bl12960"
+  // class settings
+  //class diagram settings
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  //use case diagram settings
+  package_name_in_tab default show_context default auto_label_position default draw_all_relations default class_drawing_mode default shadow default show_stereotype_properties default
+  //sequence diagram settings
+  show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+  //collaboration diagram settings
+  show_full_operations_definition default show_hierarchical_rank default write_horizontally default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+  //object diagram settings
+   write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+  //component diagram settings
+  package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  //deployment diagram settings
+  package_name_in_tab default show_context default write_horizontally default auto_label_position default draw_all_relations default shadow default
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  //state diagram settings
+  package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+  show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+  //activity diagram settings
+  package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+  show_infonote default drawing_language default show_stereotype_properties default
+  
+  usecaseview 134555 "use cases"
+    //use case diagram settings
+    package_name_in_tab default show_context default auto_label_position default draw_all_relations default class_drawing_mode default shadow default show_stereotype_properties default
+    //sequence diagram settings
+    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+    //collaboration diagram settings
+    show_full_operations_definition default show_hierarchical_rank default write_horizontally default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+    //class diagram settings
+    draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+    //object diagram settings
+     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+    //state diagram settings
+    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+    show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+    //activity diagram settings
+    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+    show_infonote default drawing_language default show_stereotype_properties default
+    usecasediagram 144155 "use cases"
+      package_name_in_tab default show_context default auto_label_position default draw_all_relations default class_drawing_mode default shadow default show_stereotype_properties default
+      size A4
+    end
+  end
+
+  classview 134555 "class view"
+    //class diagram settings
+    draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+    //collaboration diagram settings
+    show_full_operations_definition default show_hierarchical_rank default write_horizontally default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+    //object diagram settings
+     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+    //sequence diagram settings
+    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+    //state diagram settings
+    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+    show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+    //class settings
+    //activity diagram settings
+    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+    show_infonote default drawing_language default show_stereotype_properties default
+    classdiagram 144283 "Screen"
+      draw_all_relations no hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      size A4
+    end
+
+    class 153627 "ScreenContext"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit}
+{
+${members}};
+
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      operation 156699 "GetInstance"
+	preserve_cpp_body_indent public return_type class_ref 153627 // ScreenContext
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "////////////////////////////////////////////////////////////////////////////////
+///
+/// @name ${class}::${name}
+///
+/// @brief ${description}
+///
+/// @param
+///
+/// @returns
+///
+////////////////////////////////////////////////////////////////////////////////
+${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}
+{
+    ${body}}
+"
+	preserve_java_body_indent 
+	preserve_php_body_indent 
+	preserve_python_body_indent 
+	
+      end
+
+      operation 155675 "Open"
+	preserve_cpp_body_indent public explicit_return_type "void"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "////////////////////////////////////////////////////////////////////////////////
+///
+/// @name ${class}::${name}
+///
+/// @brief ${description}
+///
+/// @param
+///
+/// @returns
+///
+////////////////////////////////////////////////////////////////////////////////
+${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}
+{
+    ${body}}
+"
+	preserve_java_body_indent 
+	preserve_php_body_indent 
+	preserve_python_body_indent 
+	
+      end
+
+      operation 155803 "Close"
+	preserve_cpp_body_indent public explicit_return_type "void"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "////////////////////////////////////////////////////////////////////////////////
+///
+/// @name ${class}::${name}
+///
+/// @brief ${description}
+///
+/// @param
+///
+/// @returns
+///
+////////////////////////////////////////////////////////////////////////////////
+${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}
+{
+    ${body}}
+"
+	preserve_java_body_indent 
+	preserve_php_body_indent 
+	preserve_python_body_indent 
+	
+      end
+
+    end
+
+    class 153883 "ScreenEvent"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit}
+{
+${members}};
+
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      attribute 162971 "type"
+	private explicit_type ""
+	cpp_decl "    ${comment}${static}${mutable}${volatile}${const}${type} ${name}${h_value};"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 163099 "state"
+	private explicit_type ""
+	cpp_decl "    ${comment}${static}${mutable}${volatile}${const}${type} ${name}${h_value};"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 163227 "key"
+	private explicit_type ""
+	cpp_decl "    ${comment}${static}${mutable}${volatile}${const}${type} ${name}${h_value};"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 163355 "mx"
+	private explicit_type ""
+	cpp_decl "    ${comment}${static}${mutable}${volatile}${const}${type} ${name}${h_value};"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 163483 "my"
+	private explicit_type ""
+	cpp_decl "    ${comment}${static}${mutable}${volatile}${const}${type} ${name}${h_value};"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+    end
+
+    class 153499 "Screen"
+      abstract visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit}
+{
+${members}};
+
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 160283 // mScreenContext (<directional aggregation>)
+	relation 159643 o-->
+	  a role_name "mScreenContext" multiplicity "1" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} * ${name}${value};"
+	    classrelation_ref 160283 // mScreenContext (<directional aggregation>)
+	  b parent class_ref 153627 // ScreenContext
+      end
+
+      operation 155035 "GetScreenWidth"
+	preserve_cpp_body_indent public explicit_return_type "int"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "////////////////////////////////////////////////////////////////////////////////
+///
+/// @name ${class}::${name}
+///
+/// @brief ${description}
+///
+/// @param
+///
+/// @returns
+///
+////////////////////////////////////////////////////////////////////////////////
+${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}
+{
+    ${body}}
+"
+	preserve_java_body_indent 
+	preserve_php_body_indent 
+	preserve_python_body_indent 
+	
+      end
+
+      operation 155163 "GetScreenHeight"
+	preserve_cpp_body_indent public explicit_return_type ""
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "////////////////////////////////////////////////////////////////////////////////
+///
+/// @name ${class}::${name}
+///
+/// @brief ${description}
+///
+/// @param
+///
+/// @returns
+///
+////////////////////////////////////////////////////////////////////////////////
+${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}
+{
+    ${body}}
+"
+	preserve_java_body_indent 
+	preserve_php_body_indent 
+	preserve_python_body_indent 
+	
+      end
+
+      operation 155547 "GetScreenEvent"
+	preserve_cpp_body_indent public return_type class_ref 153883 // ScreenEvent
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "////////////////////////////////////////////////////////////////////////////////
+///
+/// @name ${class}::${name}
+///
+/// @brief ${description}
+///
+/// @param
+///
+/// @returns
+///
+////////////////////////////////////////////////////////////////////////////////
+${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}
+{
+    ${body}}
+"
+	preserve_java_body_indent 
+	preserve_php_body_indent 
+	preserve_python_body_indent 
+	
+      end
+
+      operation 156059 "Pause"
+	preserve_cpp_body_indent public explicit_return_type "void"
+	nparams 1
+	  param in name "delay" explicit_type "int"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${t0} ${p0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "////////////////////////////////////////////////////////////////////////////////
+///
+/// @name ${class}::${name}
+///
+/// @brief ${description}
+///
+/// @param
+///
+/// @returns
+///
+////////////////////////////////////////////////////////////////////////////////
+${inline}${type} ${class}::${name}${(}${t0} ${p0}${)}${const}${volatile}${throw}${staticnl}
+{
+    ${body}}
+"
+	preserve_java_body_indent 
+	preserve_php_body_indent 
+	preserve_python_body_indent 
+	
+      end
+
+      operation 156187 "WaitQuit"
+	preserve_cpp_body_indent public explicit_return_type "void"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "////////////////////////////////////////////////////////////////////////////////
+///
+/// @name ${class}::${name}
+///
+/// @brief ${description}
+///
+/// @param
+///
+/// @returns
+///
+////////////////////////////////////////////////////////////////////////////////
+${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}
+{
+    ${body}}
+"
+	preserve_java_body_indent 
+	preserve_php_body_indent 
+	preserve_python_body_indent 
+	
+      end
+
+      operation 155931 "Clear"
+	preserve_cpp_body_indent public explicit_return_type "void"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "////////////////////////////////////////////////////////////////////////////////
+///
+/// @name ${class}::${name}
+///
+/// @brief ${description}
+///
+/// @param
+///
+/// @returns
+///
+////////////////////////////////////////////////////////////////////////////////
+${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}
+{
+    ${body}}
+"
+	preserve_java_body_indent 
+	preserve_php_body_indent 
+	preserve_python_body_indent 
+	
+      end
+
+      operation 155291 "UpdateDisplay"
+	preserve_cpp_body_indent public explicit_return_type "void"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "////////////////////////////////////////////////////////////////////////////////
+///
+/// @name ${class}::${name}
+///
+/// @brief ${description}
+///
+/// @param
+///
+/// @returns
+///
+////////////////////////////////////////////////////////////////////////////////
+${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}
+{
+    ${body}}
+"
+	preserve_java_body_indent 
+	preserve_php_body_indent 
+	preserve_python_body_indent 
+	
+      end
+
+      operation 155419 "Draw"
+	abstract preserve_cpp_body_indent cpp_virtual public explicit_return_type "void"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	preserve_java_body_indent 
+	preserve_php_body_indent 
+	preserve_python_body_indent 
+	
+      end
+    end
+
+    class 153755 "TitleScreen"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit}
+{
+${members}};
+
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 160411 // <generalisation>
+	relation 159771 ---|>
+	  a public
+	    cpp default "${type}"
+	    classrelation_ref 160411 // <generalisation>
+	  b parent class_ref 153499 // Screen
+      end
+
+      operation 156315 "Draw"
+	preserve_cpp_body_indent cpp_virtual public explicit_return_type "void"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "////////////////////////////////////////////////////////////////////////////////
+///
+/// @name ${class}::${name}
+///
+/// @brief ${description}
+///
+/// @param
+///
+/// @returns
+///
+////////////////////////////////////////////////////////////////////////////////
+${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}
+{
+    ${body}}
+"
+	preserve_java_body_indent 
+	preserve_php_body_indent 
+	preserve_python_body_indent 
+	
+      end
+    end
+
+    class 154011 "GameOverScreen"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit}
+{
+${members}};
+
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 160539 // <generalisation>
+	relation 159899 ---|>
+	  a public
+	    cpp default "${type}"
+	    classrelation_ref 160539 // <generalisation>
+	  b parent class_ref 153499 // Screen
+      end
+
+      operation 156571 "Draw"
+	preserve_cpp_body_indent cpp_virtual public explicit_return_type "void"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "////////////////////////////////////////////////////////////////////////////////
+///
+/// @name ${class}::${name}
+///
+/// @brief ${description}
+///
+/// @param
+///
+/// @returns
+///
+////////////////////////////////////////////////////////////////////////////////
+${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}
+{
+    ${body}}
+"
+	preserve_java_body_indent 
+	preserve_php_body_indent 
+	preserve_python_body_indent 
+	
+      end
+    end
+
+    class 154139 "PlayScreen"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit}
+{
+${members}};
+
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 160667 // <generalisation>
+	relation 160027 ---|>
+	  a public
+	    cpp default "${type}"
+	    classrelation_ref 160667 // <generalisation>
+	  b parent class_ref 153499 // Screen
+      end
+
+      operation 156443 "Draw"
+	preserve_cpp_body_indent cpp_virtual public explicit_return_type "void"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "////////////////////////////////////////////////////////////////////////////////
+///
+/// @name ${class}::${name}
+///
+/// @brief ${description}
+///
+/// @param
+///
+/// @returns
+///
+////////////////////////////////////////////////////////////////////////////////
+${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}
+{
+    ${body}}
+"
+	preserve_java_body_indent 
+	preserve_php_body_indent 
+	preserve_python_body_indent 
+	
+      end
+    end
+
+    class 154267 "Sprite"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit}
+{
+${members}};
+
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      operation 157979 "Load"
+	preserve_cpp_body_indent public explicit_return_type ""
+	nparams 1
+	  param in name "filename" explicit_type ""
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}const ${t0} & ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "////////////////////////////////////////////////////////////////////////////////
+///
+/// @name ${class}::${name}
+///
+/// @brief ${description}
+///
+/// @param
+///
+/// @returns
+///
+////////////////////////////////////////////////////////////////////////////////
+${inline}${type} ${class}::${name}${(}const ${t0} & ${p0}${)}${const}${volatile}${throw}${staticnl}
+{
+    ${body}}
+"
+	preserve_java_body_indent 
+	preserve_php_body_indent 
+	preserve_python_body_indent 
+	
+      end
+
+      operation 156827 "GetState"
+	preserve_cpp_body_indent public explicit_return_type "int"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "////////////////////////////////////////////////////////////////////////////////
+///
+/// @name ${class}::${name}
+///
+/// @brief ${description}
+///
+/// @param
+///
+/// @returns
+///
+////////////////////////////////////////////////////////////////////////////////
+${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}
+{
+    ${body}}
+"
+	preserve_java_body_indent 
+	preserve_php_body_indent 
+	preserve_python_body_indent 
+	
+      end
+
+      operation 156955 "GetType"
+	preserve_cpp_body_indent public explicit_return_type "int"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "////////////////////////////////////////////////////////////////////////////////
+///
+/// @name ${class}::${name}
+///
+/// @brief ${description}
+///
+/// @param
+///
+/// @returns
+///
+////////////////////////////////////////////////////////////////////////////////
+${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}
+{
+    ${body}}
+"
+	preserve_java_body_indent 
+	preserve_php_body_indent 
+	preserve_python_body_indent 
+	
+      end
+
+      operation 157083 "GetCenter"
+	preserve_cpp_body_indent public explicit_return_type ""
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "////////////////////////////////////////////////////////////////////////////////
+///
+/// @name ${class}::${name}
+///
+/// @brief ${description}
+///
+/// @param
+///
+/// @returns
+///
+////////////////////////////////////////////////////////////////////////////////
+${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}
+{
+    ${body}}
+"
+	preserve_java_body_indent 
+	preserve_php_body_indent 
+	preserve_python_body_indent 
+	
+      end
+
+      operation 157723 "SetCenter"
+	preserve_cpp_body_indent public explicit_return_type ""
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "////////////////////////////////////////////////////////////////////////////////
+///
+/// @name ${class}::${name}
+///
+/// @brief ${description}
+///
+/// @param
+///
+/// @returns
+///
+////////////////////////////////////////////////////////////////////////////////
+${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}
+{
+    ${body}}
+"
+	preserve_java_body_indent 
+	preserve_php_body_indent 
+	preserve_python_body_indent 
+	
+      end
+
+      operation 157211 "GetVelocity"
+	preserve_cpp_body_indent public explicit_return_type ""
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "////////////////////////////////////////////////////////////////////////////////
+///
+/// @name ${class}::${name}
+///
+/// @brief ${description}
+///
+/// @param
+///
+/// @returns
+///
+////////////////////////////////////////////////////////////////////////////////
+${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}
+{
+    ${body}}
+"
+	preserve_java_body_indent 
+	preserve_php_body_indent 
+	preserve_python_body_indent 
+	
+      end
+
+      operation 157851 "SetVelocity"
+	preserve_cpp_body_indent public explicit_return_type ""
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "////////////////////////////////////////////////////////////////////////////////
+///
+/// @name ${class}::${name}
+///
+/// @brief ${description}
+///
+/// @param
+///
+/// @returns
+///
+////////////////////////////////////////////////////////////////////////////////
+${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}
+{
+    ${body}}
+"
+	preserve_java_body_indent 
+	preserve_php_body_indent 
+	preserve_python_body_indent 
+	
+      end
+
+      operation 157339 "GetBounds"
+	preserve_cpp_body_indent public explicit_return_type ""
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "////////////////////////////////////////////////////////////////////////////////
+///
+/// @name ${class}::${name}
+///
+/// @brief ${description}
+///
+/// @param
+///
+/// @returns
+///
+////////////////////////////////////////////////////////////////////////////////
+${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}
+{
+    ${body}}
+"
+	preserve_java_body_indent 
+	preserve_php_body_indent 
+	preserve_python_body_indent 
+	
+      end
+
+      operation 157467 "Draw"
+	preserve_cpp_body_indent public explicit_return_type ""
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "////////////////////////////////////////////////////////////////////////////////
+///
+/// @name ${class}::${name}
+///
+/// @brief ${description}
+///
+/// @param
+///
+/// @returns
+///
+////////////////////////////////////////////////////////////////////////////////
+${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}
+{
+    ${body}}
+"
+	preserve_java_body_indent 
+	preserve_php_body_indent 
+	preserve_python_body_indent 
+	
+      end
+
+      operation 157595 "Erase"
+	preserve_cpp_body_indent public explicit_return_type ""
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "////////////////////////////////////////////////////////////////////////////////
+///
+/// @name ${class}::${name}
+///
+/// @brief ${description}
+///
+/// @param
+///
+/// @returns
+///
+////////////////////////////////////////////////////////////////////////////////
+${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}
+{
+    ${body}}
+"
+	preserve_java_body_indent 
+	preserve_php_body_indent 
+	preserve_python_body_indent 
+	
+      end
+
+      attribute 163611 "context"
+	private explicit_type ""
+	cpp_decl "    ${comment}${static}${mutable}${volatile}${const}${type} ${name}${h_value};"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+    end
+
+    classdiagram 144411 "Game"
+      draw_all_relations no hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      size A4
+    end
+
+    class 154395 "GameState"
+      abstract visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit}
+{
+${members}};
+
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      operation 158107 "Execute"
+	abstract preserve_cpp_body_indent cpp_virtual public explicit_return_type "void"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	preserve_java_body_indent 
+	preserve_php_body_indent 
+	preserve_python_body_indent 
+	
+      end
+    end
+
+    class 154523 "TitleGameState"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit}
+{
+${members}};
+
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 160795 // <generalisation>
+	relation 160155 ---|>
+	  a public
+	    cpp default "${type}"
+	    classrelation_ref 160795 // <generalisation>
+	  b parent class_ref 154395 // GameState
+      end
+
+      classrelation 160923 // <directional composition>
+	relation 160283 *-->
+	  a role_name "" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} ${name}${value};"
+	    classrelation_ref 160923 // <directional composition>
+	  b parent class_ref 153755 // TitleScreen
+      end
+
+      operation 158235 "Execute"
+	preserve_cpp_body_indent cpp_virtual public explicit_return_type "void"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "////////////////////////////////////////////////////////////////////////////////
+///
+/// @name ${class}::${name}
+///
+/// @brief ${description}
+///
+/// @param
+///
+/// @returns
+///
+////////////////////////////////////////////////////////////////////////////////
+${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}
+{
+    ${body}}
+"
+	preserve_java_body_indent 
+	preserve_php_body_indent 
+	preserve_python_body_indent 
+	
+      end
+    end
+
+    class 154651 "Game"
+      abstract visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit}
+{
+${members}};
+
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      operation 158747 "Init"
+	abstract preserve_cpp_body_indent cpp_virtual public explicit_return_type ""
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	preserve_java_body_indent 
+	preserve_php_body_indent 
+	preserve_python_body_indent 
+	
+      end
+
+      operation 158491 "Execute"
+	abstract preserve_cpp_body_indent cpp_virtual public explicit_return_type ""
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	preserve_java_body_indent 
+	preserve_php_body_indent 
+	preserve_python_body_indent 
+	
+      end
+    end
+
+    class 154779 "PlayGameState"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit}
+{
+${members}};
+
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 161051 // <generalisation>
+	relation 160411 ---|>
+	  a public
+	    cpp default "${type}"
+	    classrelation_ref 161051 // <generalisation>
+	  b parent class_ref 154395 // GameState
+      end
+
+      operation 158363 "Execute"
+	preserve_cpp_body_indent cpp_virtual public explicit_return_type "void"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "////////////////////////////////////////////////////////////////////////////////
+///
+/// @name ${class}::${name}
+///
+/// @brief ${description}
+///
+/// @param
+///
+/// @returns
+///
+////////////////////////////////////////////////////////////////////////////////
+${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}
+{
+    ${body}}
+"
+	preserve_java_body_indent 
+	preserve_php_body_indent 
+	preserve_python_body_indent 
+	
+      end
+
+      classrelation 161179 // <directional composition>
+	relation 160539 *-->
+	  a role_name "" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} ${name}${value};"
+	    classrelation_ref 161179 // <directional composition>
+	  b parent class_ref 154139 // PlayScreen
+      end
+    end
+
+    class 154907 "MyGame"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit}
+{
+${members}};
+
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 161307 // <generalisation>
+	relation 160667 ---|>
+	  a public
+	    cpp default "${type}"
+	    classrelation_ref 161307 // <generalisation>
+	  b parent class_ref 154651 // Game
+      end
+
+      classrelation 161435 // <directional composition>
+	relation 160795 *-->
+	  a role_name "" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} ${name}${value};"
+	    classrelation_ref 161435 // <directional composition>
+	  b parent class_ref 154523 // TitleGameState
+      end
+
+      classrelation 161563 // <directional composition>
+	relation 160923 *-->
+	  a role_name "" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} ${name}${value};"
+	    classrelation_ref 161563 // <directional composition>
+	  b parent class_ref 154779 // PlayGameState
+      end
+
+      operation 158875 "Init"
+	preserve_cpp_body_indent cpp_virtual public explicit_return_type ""
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "////////////////////////////////////////////////////////////////////////////////
+///
+/// @name ${class}::${name}
+///
+/// @brief ${description}
+///
+/// @param
+///
+/// @returns
+///
+////////////////////////////////////////////////////////////////////////////////
+${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}
+{
+    ${body}}
+"
+	preserve_java_body_indent 
+	preserve_php_body_indent 
+	preserve_python_body_indent 
+	
+      end
+
+      operation 159003 "Execute"
+	preserve_cpp_body_indent cpp_virtual public explicit_return_type ""
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "////////////////////////////////////////////////////////////////////////////////
+///
+/// @name ${class}::${name}
+///
+/// @brief ${description}
+///
+/// @param
+///
+/// @returns
+///
+////////////////////////////////////////////////////////////////////////////////
+${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}
+{
+    ${body}}
+"
+	preserve_java_body_indent 
+	preserve_php_body_indent 
+	preserve_python_body_indent 
+	
+      end
+    end
+
+    class 155035 "Ball"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit}
+{
+${members}};
+
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 161691 // <directional composition>
+	relation 161051 *-->
+	  a role_name "" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} ${name}${value};"
+	    classrelation_ref 161691 // <directional composition>
+	  b parent class_ref 154267 // Sprite
+      end
+    end
+
+    class 155163 "Paddle"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit}
+{
+${members}};
+
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 161819 // <directional composition>
+	relation 161179 *-->
+	  a role_name "" private
+	    cpp default "    ${comment}${static}${mutable}${volatile}${const}${type} ${name}${value};"
+	    classrelation_ref 161819 // <directional composition>
+	  b parent class_ref 154267 // Sprite
+      end
+    end
+  end
+
+  deploymentview 134683 "deploy view"
+    //deployment diagram settings
+    package_name_in_tab default show_context default write_horizontally default auto_label_position default draw_all_relations default shadow default
+    draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  end
+end

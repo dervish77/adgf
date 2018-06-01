@@ -1,0 +1,33 @@
+REVISION history for life
+-------------------------
+
+0.20    02/23/2011      Updated "draw-sdl" to latest version (0.7.3)
+
+0.19    11/12/2010      Updated "draw-sdl" to latest version (0.7.0)
+
+0.18    07/08/2010      Updated "draw-sdl" to latest version (0.6.2)
+
+0.17    07/06/2010      Moved random number code into separate file.
+
+0.16    06/30/2010      Fixed problem with random number generation.  Was calling srand()
+                        on every call to int_random(), this was wrong.
+
+0.15    06/28/2010      Fixed bug in ScreenDrawCell, offset for width/height was wrong
+
+0.14    06/27/2010      Completed initial implementation of life game:
+                        - supports start/stop of game sim
+                        - supports fast/slow speed toggle
+                        - supports pattern cycle with 5 pre-built patterns
+                        - supports mouse click and drag to highlight multiple cells
+
+0.13    06/25/2010      Modified "ui" code to more closer meet needs for life game
+
+0.12    06/24/2010      Added CodeBlocks IDE projects to "ide" directory
+
+0.11    06/24/2010      Fixed test program for life library in src
+                        Consolidation to single version.h file in "include"
+
+0.10    06/23/2010      Cobbled together initial UI program from tic tac toe SDL game
+
+0.00  	06/18/2010  	Originated
+

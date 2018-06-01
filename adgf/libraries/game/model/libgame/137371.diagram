@@ -1,0 +1,51 @@
+format 72
+
+classcanvas 128027 class_ref 139163 // GameSurface
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  hidden_operations
+    operation_ref 145819 // GameSurface
+    operation_ref 145947 // ~GameSurface
+  xyz 7 7 2000
+end
+classcanvas 128155 class_ref 139419 // GameExtent
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility yes show_members_stereotype default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  xyz 329 6 2000
+end
+classcanvas 128667 class_ref 139675 // GameColor
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility yes show_members_stereotype default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  xyz 329 212 2000
+end
+classcanvas 128923 class_ref 139547 // GamePoint
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility yes show_members_stereotype default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  xyz 334 111 2000
+end
+classcanvas 129179 class_ref 146971 // GameRect
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  xyz 492 70 2000
+end
+relationcanvas 128283 relation_ref 145179 // <directional composition>
+  from ref 128027 z 2001 to ref 128155
+  role_a_pos 288 26 3000 no_role_b
+  multiplicity_a_pos 312 59 3000 no_multiplicity_b
+end
+relationcanvas 129051 relation_ref 145307 // <directional composition>
+  from ref 128027 z 2001 to ref 128923
+  role_a_pos 294 120 3000 no_role_b
+  multiplicity_a_pos 317 153 3000 no_multiplicity_b
+end
+relationcanvas 129307 relation_ref 152859 // <directional composition>
+  from ref 129179 z 2001 to ref 128155
+  role_a_pos 415 33 3000 no_role_b
+  multiplicity_a_pos 415 66 3000 no_multiplicity_b
+end
+relationcanvas 129435 relation_ref 152987 // <directional composition>
+  from ref 129179 z 2001 to ref 128923
+  role_a_pos 414 107 3000 no_role_b
+  multiplicity_a_pos 414 140 3000 no_multiplicity_b
+end
+relationcanvas 129563 relation_ref 153115 // <directional composition>
+  from ref 128027 z 2001 to ref 128667
+  role_a_pos 275 227 3000 no_role_b
+  multiplicity_a_pos 312 260 3000 no_multiplicity_b
+end
+end

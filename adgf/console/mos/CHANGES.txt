@@ -1,0 +1,68 @@
+REVISION history for MOS 
+------------------------
+
+0.76  09/21/2012  fixed coverage build problem when switching between different PORTs
+				  which now allows coverage to work on cygwin
+				  
+0.75  02/23/2011  fixed coverage analysis via "gcov" in build system
+                  enhanced profiling via "gprof" in build system
+
+0.74  02/17/2011  implemented a simulation of Terminal device for linux port
+                  modified "mosapp" to use Terminal device
+                  added hwCheckTaskTimer function and modified sequence list to use it
+
+0.73  02/15/2011  added port for "c64" using the cc65 compiler
+
+0.72  02/14/2011  moved common source code into "src/ports/common"
+                  modified make system to build libmos.a via common and <port>
+                  removed "clone" make target
+
+0.71  02/13/2011  use PORT make variable to pick between which toolchain to use
+                  cleaned up mosapp and mosunit source code
+
+0.70  04/29/2010  removed all use of malloc, now use static buffers for task memory,
+                  and now use static allocation for context structure
+                  reduced max size of task memory to 256 bytes
+
+0.62  04/23/2010  added a TODO file to track what still needs doing
+
+0.61  04/07/2010  some general cleanup in code and comments
+                  reset versioning scheme to allow for more versions before 1.0
+
+0.6   04/05/2010  renamed unit test as 'mosunit' and test app as 'mosapp'
+                  sped up simulated OS time tick
+                  added testing of platform functions to 'mosunit'
+                  adjusted which files are included for coverage, now it's at 97%
+
+0.53  04/02/2010  improved code coverage results to 82%
+
+0.52  04/01/2010  modified testapp to show no debug text, and altered command line args
+
+0.51  03/31/2010  fixed a bug in the message queue code
+                  improved some error detection
+
+0.5   02/09/2010  added debug print facility to use instead of directly using printf,
+                  this needs to be ported to each platform
+
+0.41  09/30/2009  added support for setting and retrieving error codes
+                  added support for checking valid, suspend, block task states
+                  added unit test coverage report analysis (see coverage.sh)
+
+0.4   09/23/2009  renamed all MOS functions to have "mos" as a prefix
+
+0.32  03/25/2009  added SendBroadcast() function
+                  added platform.c,h files and GetPlatform() function
+
+0.31  03/24/2009  cleaned up formatting
+                  added verbose output control
+                  fixed major potential bug - now check return code of FindTaskIndex()
+
+0.3   03/20/2009  added idle task to be created by default (see InitTasking())
+                  added support for creating ports of MOS to other platforms (see "src" tree)
+
+0.2   11/08/2007  transformed into MOS (from mainloop)
+
+0.1   10/21/2003  modified for compile by Cygwin
+
+0.0   10/20/2003  Originated
+

@@ -1,0 +1,15 @@
+REVISION history for soundex
+----------------------------
+
+0.4     03/23/2011  Added "make ide" target to launch codeblocks project
+                    Re-implemented command line argument parsing
+                    Added command line args for '-v' and '-h'
+
+0.3     03/21/2011  Split file routines from soundex.c into file.c
+
+0.2	    03/20/2011	Implement real soundex algorithm
+
+0.1	    06/05/1996	Added processing for actual soundex translation
+
+0.0  	06/04/1996  Originated
+

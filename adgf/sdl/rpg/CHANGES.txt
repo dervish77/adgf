@@ -1,0 +1,10 @@
+CHANGES	 history for RPG
+-----------------------------
+
+
+0.1.0
+    - Updated to DrawSdl version 0.7.3
+
+0.0.0
+    - Originated, cloned from Life and Breakout
+

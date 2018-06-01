@@ -1,0 +1,8 @@
+class test
+!!!134171.cpp!!!	test()
+  isRunning = false;
+  isCompleted = false;
+!!!135451.cpp!!!	setMode(in mode : int) : void
+  theMode = mode;
+!!!135579.cpp!!!	getMode() : int
+  return(theMode);

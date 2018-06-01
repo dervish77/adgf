@@ -1,0 +1,89 @@
+CHANGES	 history for DrawSdl
+----------------------------
+
+0.7.1
+    - added COURIER.TTF to fonts
+    - modified full demo to use COURIER.TTF font
+
+0.7.0
+    - converted source files from c to c++, modified module.mk and Makefile
+    - added configuration variable HAS_TEXT to module.mk
+    - added drawTextSetSize, drawTextSetColor, and a new version of drawText
+
+0.6.4
+    - added drawLoadSprite, drawGetSpriteExtent, and drawSprite functions
+    - added "sprites" demo
+
+0.6.3
+    - added support for initializing with full screen and/or double buffering
+    - this is configured via "draw-sdl.h"
+
+0.6.2
+    - added drawPolyline, drawPolygon and drawSolidPolygon functions
+    - added "polygons" demo
+    - moved fonts into a "fonts" directory
+    - moved bmp images into a "images" directory
+    - modified demo.c for fonts and images paths
+
+0.6.1
+    - added drawIsTextSupported function
+    - added drawGetPixelCount function
+    - added drawSolidCircle function
+    - modified "circles" demo to include filled circles
+    - modified "boxes" demo for better layout and more boxes
+    - modified "full" demo to include a filled circle
+    - modified "full" demo to include a triangle
+
+0.6.0
+    - added draw-text feature
+    - added "text" demo
+    - update "full" demo to include some text
+    - split main.c into demo.c and main.c
+    - added demo.h and main.h
+    - moved Usage() into main.c
+    - modified Makefile to build DrawSdl as a library
+    - put VERSION into draw-sdl.h so that it goes with the DrawSdl library
+    - removed usage.c and version.h
+
+0.5.2
+    - added proper command line parsing
+    - added drawDottedLine function
+    - added drawDashedLine function
+    - updated "lines" demo
+    - updated "full" demo
+
+0.5.1
+    - cleaned up some compiler warnings
+
+0.5.0
+    - added support for two timers (can be extended easily)
+    - added "drawInitExtended" to allow for window caption to be set
+
+0.4.0
+    - added new functions to draw-sdl.c
+    - added triangle demo
+    - added keys demo
+    - added mouse demo
+    - added animation demo
+
+0.3.1
+    - disabled certain printf's in draw-sdl.c so they will only show for DEBUG build
+
+0.3.0
+    - added boxes demo
+    - added circles demo
+    - added bitmap demo
+    - added bltter demo
+
+0.2.0
+    - added menu for choosing which demo to run
+    - separated example drawing code into demo functions
+
+0.1.0	
+    - cloned from VidTest sources
+    - removed everything except code required to use LibSDL
+    - stripped down main.c to only do simple demo of drawing functions
+
+0.0.0
+    - Originated
+

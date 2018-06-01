@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Documentation produced by the Html generator of Bouml (http://bouml.free.fr) -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Class GameCore</title>
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body bgcolor="#ffffff">
+
+<div class = "title">Class GameCore</div>
+<p></p>
+
+<!-- ============================================================= -->
+
+<a name="ref4_139035"></a>
+<p>Declaration :</p><ul>
+<li>C++ : class GameCore </li></ul><p>Artifact : <a href="index.html#ref8_138907"><b>GameCore</b></a></p>
+<div class="sub">
+<a name="ref2_145563"></a>
+<table><tr><td><div class="element">Operation <b>GameCore</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + GameCore() : </li><li>C++ : public: GameCore()</li></ul><a name="ref2_145691"></a>
+<table><tr><td><div class="element">Operation <b>~GameCore</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + ~GameCore() : </li><li>C++ : public: ~GameCore()</li></ul><a name="ref2_146331"></a>
+<table><tr><td><div class="element">Operation <b>GetVersion</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + GetVersion() : char*</li><li>C++ : public: char* GetVersion()</li></ul><a name="ref2_146459"></a>
+<table><tr><td><div class="element">Operation <b>SetCaption</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + SetCaption(in caption : char) : void</li><li>C++ : public: void SetCaption(char * caption)</li></ul><a name="ref2_146587"></a>
+<table><tr><td><div class="element">Operation <b>Open</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + Open(in width : int, in height : int, in bpp : int) : int</li><li>C++ : public: int Open(int width, int height, int bpp)</li></ul><a name="ref2_146715"></a>
+<table><tr><td><div class="element">Operation <b>Close</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + Close() : int</li><li>C++ : public: int Close()</li></ul><a name="ref2_146843"></a>
+<table><tr><td><div class="element">Operation <b>GetDisplaySurface</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + GetDisplaySurface() : GameSurface*   [libgame]</li><li>C++ : public: GameSurface*   [libgame] GetDisplaySurface()</li></ul><a name="ref2_147995"></a>
+<table><tr><td><div class="element">Operation <b>ClearDisplay</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + ClearDisplay(in color : <a href="class139675.html#refclass139675"><b>GameColor</b></a>) : </li><li>C++ : public:  ClearDisplay(const <a href="class139675.html#refclass139675"><b>GameColor</b></a> &amp; color)</li></ul><a name="ref2_148123"></a>
+<table><tr><td><div class="element">Operation <b>BlitToDisplay</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + BlitToDisplay(in source : <a href="class139163.html#refclass139163"><b>GameSurface</b></a>) : void</li><li>C++ : public: void BlitToDisplay(const <a href="class139163.html#refclass139163"><b>GameSurface</b></a> &amp; source)</li></ul><a name="ref2_148251"></a>
+<table><tr><td><div class="element">Operation <b>SwapDisplay</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + SwapDisplay() : void</li><li>C++ : public: void SwapDisplay()</li></ul><a name="ref0_145563"></a>
+<table><tr><td><div class="element">Relation <b>displaySurface (&lt;directional composition&gt;)</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : - displaySurface : <a href="class139163.html#refclass139163"><b>GameSurface</b></a>, multiplicity : 1</li><li>C++ : private: <a href="class139163.html#refclass139163"><b>GameSurface</b></a> displaySurface</li></ul></div>
+<p>All public operations : <a href="class139035.html#ref2_148123"><b>BlitToDisplay</b></a> , <a href="class139035.html#ref2_147995"><b>ClearDisplay</b></a> , <a href="class139035.html#ref2_146715"><b>Close</b></a> , <a href="class139035.html#ref2_146843"><b>GetDisplaySurface</b></a> , <a href="class139035.html#ref2_146331"><b>GetVersion</b></a> , <a href="class139035.html#ref2_146587"><b>Open</b></a> , <a href="class139035.html#ref2_146459"><b>SetCaption</b></a> , <a href="class139035.html#ref2_148251"><b>SwapDisplay</b></a> </p>
+</body>
+</html>

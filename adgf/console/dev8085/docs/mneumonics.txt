@@ -1,0 +1,26 @@
+Dev8085 Supported Assembly Language Mneumonics
+==============================================
+
+1. Assembler Directives
+
+    .mod <string>               - name of module
+
+    .org <address>              - entry point address
+
+    .prog <string>              - name of program
+
+
+2. Assembly Instructions
+
+
+
+
+3. Other Supported Structures
+
+    ;                           - comment
+
+    LABEL: <instr>              - branch label
+
+==============================================
+EOF
+

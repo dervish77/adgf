@@ -1,0 +1,76 @@
+.ad l
+.nh
+.TH bindump 1 "31 January 1997" "USR"
+.SH NAME
+bindump - dump files as binary data.
+
+.SH SYNOPSIS
+.B "bindump"
+[ \fI-h\fP ] [ \fI-a\fP ] [ \fI-n NNN\fP ] [ \fI-r BB\fP ] \fIfile\fP
+
+.SH DESCRIPTION
+dump files to screen as binary data.
+
+.SH EXAMPLES
+.PP
+To dump a file to screen, use
+.PP
+.B
+     bindump myfile
+.PP
+To dump a file to screen but suppress ascii output, use
+.PP
+.B
+     bindump -a myfile
+.PP
+To dump a file to screen but set block size to 512, use
+.PP
+.B
+     bindump -n 512 myfile
+
+.SH OPTIONS
+.TP 5
+.B "-h"
+get help on options.
+
+.TP 5
+.B "-a"
+suppress ascii output.
+
+.TP 5
+.B "-n \fINNN\fP"
+set block size to NNN bytes.
+
+By default, block size is set to 256 bytes.  There is no maximum or minimum
+block size.
+
+.TP 5
+.B "-r \fIBB\fP"
+set bytes per row to BB bytes.
+
+By default, bytes per row is set to 16 bytes.  There is no maximum or
+minimum bytes per row.
+
+.SH COPYRIGHT
+Copyright 1996 US Robotics, Inc.
+.PP
+Permission to use, copy, modify, distribute, and sell this software and
+its documentation for any purpose is hereby granted without fee,
+provided that the above copyright notice appear in all copies and that
+both that copyright notice and this permission notice appear in
+supporting documentation, and that the name of US Robotics, Inc.
+not be used in advertising or publicity pertaining to
+distribution of the software without specific, written prior
+permission.  US Robotics Access Corporation makes no representations
+about the suitability of this software for any purpose.  It is provided
+"as is" without express or implied warranty.
+.PP
+US Robotics, Inc. disclaims all warranties with regard
+to this software, including all implied warranties of merchantability
+and fitness, in no event shall US Robotics, Inc. be
+liable for any special, indirect or consequential damages or any
+damages whatsoever resulting from loss of use, data or profits, whether
+in an action of contract, negligence or other tortuous action, arising
+out of or in connection with the use or performance of this software.
+.SH AUTHORS
+Brian Lingard, US Robotics, Inc.

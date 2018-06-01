@@ -1,0 +1,22 @@
+3D renderer -- for polygon based model files
+
+This directory contains the source code for a 3D rendering program.  This
+program currently supports orthographic, parallel and perspective viewing.
+The program also supports wireframe, outline, and colored shading types 
+of rendering.  The color shading scheme currently uses flat shaded polygons.
+This directory contains the files:
+
+	render.c	- main program
+	rendutls.h	- high level rendering functions
+	clipping.h	- clipping functions
+	shading.h	- shading functions
+	sorting.h	- polygon sort functions
+	drawutls.h	- screen drawing functions using SRGP
+	mathutls.h	- math related functions
+	data		- sample polygon data file
+	view		- sample view description file
+	makefile	- makefile for above
+
+Brian Lingard
+March 1995
+

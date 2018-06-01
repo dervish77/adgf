@@ -1,0 +1,7 @@
+class dog
+!!!128283.cpp!!!	dog()
+  setSpecies(2001);
+!!!129947.cpp!!!	setId(in id : int) : void
+  myId = id;
+!!!130075.cpp!!!	getId() : int
+  return(myId);

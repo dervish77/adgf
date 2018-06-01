@@ -1,0 +1,18 @@
+REVISION history for BinTools
+-----------------------------
+
+2.0	08/10/2004	Added more binary utilites, added unit tests
+
+1.2	12/21/2000	Added other utilities to package
+
+1.1	07/31/97	Corrected documentation.
+
+1.0	12/19/96	Adapted for company use.
+
+0.9	02/21/96	Beta release.
+
+0.8  	02/21/96  	Added column dividers for binary section 
+
+0.6  	02/21/96  	Fixed bug in binary output
+
+0.0  	02/12/96  	Originated

@@ -1,0 +1,34 @@
+<!-- Documentation produced by the Html generator of Bouml (http://bouml.free.fr) -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Class inittest</title>
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body bgcolor="#ffffff">
+
+<div class = "title">Class inittest</div>
+<p></p>
+
+<!-- ============================================================= -->
+
+<a name="refclass128667"></a>
+<p>This test forces an uninitialized variable condition to test dynamic <br />memory analysis tools.<br /></p>
+<p>Declaration :</p><ul>
+<li>C++ : class inittest : public <a href="class128411.html#refclass128411"><b>test</b></a> </li></ul><p>Artifact : <a href="index.html#refartifact129947"><b>inittest</b></a></p>
+<div class="sub">
+<a name="refoperation133659"></a>
+<table><tr><td><div class="element">Operation <b>inittest</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + inittest() : </li><li>C++ : public: inittest()</li></ul><a name="refoperation133787"></a>
+<table><tr><td><div class="element">Operation <b>~inittest</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + ~inittest() : </li><li>C++ : public: ~inittest()</li></ul><a name="refoperation128923"></a>
+<table><tr><td><div class="element">Operation <b>execute</b></div></td></tr></table><p> The execute method invokes the staticTest, stackTest and heapTest methods.<br /> <br /></p><p>Declaration :</p><ul><li>Uml : + execute() : bool</li><li>C++ : public: virtual bool execute()</li></ul><a name="refoperation136987"></a>
+<table><tr><td><div class="element">Operation <b>staticTest</b></div></td></tr></table><p> The staticTest method initializes a data member of one of two objects that <br /> are stored as static data members of the staticTest object.  The same data <br /> member of the other object is left uninitialized.<br /> <br /></p><p>Declaration :</p><ul><li>Uml : + staticTest() : bool</li><li>C++ : public: bool staticTest()</li></ul><a name="refoperation137115"></a>
+<table><tr><td><div class="element">Operation <b>stackTest</b></div></td></tr></table><p> The stackTest method initializes a data member of one of two objects that <br /> were created on the stack.  The same data member of the other object is <br /> left uninitialized.<br /> <br /></p><p>Declaration :</p><ul><li>Uml : + stackTest() : bool</li><li>C++ : public: bool stackTest()</li></ul><a name="refoperation137243"></a>
+<table><tr><td><div class="element">Operation <b>heapTest</b></div></td></tr></table><p> The heapTest method initializes a data member of one of two objects that <br /> were created on the heap.  The same data member of the other object is <br /> left uninitialized.<br /> <br /></p><p>Declaration :</p><ul><li>Uml : + heapTest() : bool</li><li>C++ : public: bool heapTest()</li></ul><a name="refrelation138523"></a>
+<table><tr><td><div class="element">Relation <b>theCat (&lt;directional composition&gt;)</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : - theCat : <a href="class128923.html#refclass128923"><b>cat</b></a></li><li>C++ : private: <a href="class128923.html#refclass128923"><b>cat</b></a> theCat</li></ul><a name="refrelation138651"></a>
+<table><tr><td><div class="element">Relation <b>theDog (&lt;directional composition&gt;)</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : - theDog : <a href="class128155.html#refclass128155"><b>dog</b></a></li><li>C++ : private: <a href="class128155.html#refclass128155"><b>dog</b></a> theDog</li></ul></div>
+<p>All public operations : <a href="class128667.html#refoperation128923"><b>execute</b></a> , <a href="class128411.html#refoperation128539"><b>execute</b></a> , <a href="class128411.html#refoperation135579"><b>getMode</b></a> , <a href="class128667.html#refoperation137243"><b>heapTest</b></a> , <a href="class128411.html#refoperation135451"><b>setMode</b></a> , <a href="class128667.html#refoperation137115"><b>stackTest</b></a> , <a href="class128667.html#refoperation136987"><b>staticTest</b></a> </p>
+</body>
+</html>

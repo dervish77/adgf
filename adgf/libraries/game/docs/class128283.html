@@ -1,0 +1,37 @@
+<!-- Documentation produced by the Html generator of Bouml (http://bouml.free.fr) -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Class leaktest</title>
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body bgcolor="#ffffff">
+
+<div class = "title">Class leaktest</div>
+<p></p>
+
+<!-- ============================================================= -->
+
+<a name="refclass128283"></a>
+<p>This test forces a memory leak condition to test dynamic <br />memory analysis tools.<br /><br /></p>
+<p>Declaration :</p><ul>
+<li>C++ : class leaktest : public <a href="class128411.html#refclass128411"><b>test</b></a> </li></ul><p>Artifact : <a href="index.html#refartifact129691"><b>leaktest</b></a></p>
+<div class="sub">
+<a name="refoperation133403"></a>
+<table><tr><td><div class="element">Operation <b>leaktest</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + leaktest() : </li><li>C++ : public: leaktest()</li></ul><a name="refoperation133531"></a>
+<table><tr><td><div class="element">Operation <b>~leaktest</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + ~leaktest() : </li><li>C++ : public: virtual ~leaktest()</li></ul><a name="refoperation128667"></a>
+<table><tr><td><div class="element">Operation <b>execute</b></div></td></tr></table><p> The execute method invokes the heapTest method.<br /> <br /></p><p>Declaration :</p><ul><li>Uml : + execute() : bool</li><li>C++ : public: virtual bool execute()</li></ul><a name="refoperation137371"></a>
+<table><tr><td><div class="element">Operation <b>heapTest</b></div></td></tr></table><p> The heapTest method creates two arrays of objects on the heap.  As each <br /> object is created, some data within the object is initialized.  Then <br /> nearly all the objects in each array are deleted, one object in one array, <br /> and two objects in the other array are left intact, hence creating a direct <br /> memory leak.<br /><br /> Also another object is created that contains a method called doLeak.  This <br /> method is called before deleting the object which results in an indirect <br /> memory leak when the object itself is deleted.<br /> <br /></p><p>Declaration :</p><ul><li>Uml : + heapTest() : bool</li><li>C++ : public: bool heapTest()</li></ul><a name="refrelation138779"></a>
+<table><tr><td><div class="element">Relation <b>theCat (&lt;directional composition&gt;)</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : - theCat : <a href="class128923.html#refclass128923"><b>cat</b></a></li><li>C++ : private: <a href="class128923.html#refclass128923"><b>cat</b></a> theCat</li></ul><a name="refrelation138907"></a>
+<table><tr><td><div class="element">Relation <b>theDog (&lt;directional composition&gt;)</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : - theDog : <a href="class128155.html#refclass128155"><b>dog</b></a></li><li>C++ : private: <a href="class128155.html#refclass128155"><b>dog</b></a> theDog</li></ul><a name="refrelation139035"></a>
+<table><tr><td><div class="element">Relation <b>theZebra (&lt;directional composition&gt;)</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : - theZebra : <a href="class131355.html#refclass131355"><b>zebra</b></a></li><li>C++ : private: <a href="class131355.html#refclass131355"><b>zebra</b></a> theZebra</li></ul><a name="refattribute132379"></a>
+<table><tr><td><div class="element">Attribute <b>numCats</b></div></td></tr></table>
+<p>Declaration :</p><ul><li>Uml : - numCats : int</li><li>C++ : private: int numCats</li></ul><a name="refattribute132507"></a>
+<table><tr><td><div class="element">Attribute <b>numDogs</b></div></td></tr></table>
+<p>Declaration :</p><ul><li>Uml : - numDogs : int</li><li>C++ : private: int numDogs</li></ul></div>
+<p>All public operations : <a href="class128283.html#refoperation128667"><b>execute</b></a> , <a href="class128411.html#refoperation128539"><b>execute</b></a> , <a href="class128411.html#refoperation135579"><b>getMode</b></a> , <a href="class128283.html#refoperation137371"><b>heapTest</b></a> , <a href="class128411.html#refoperation135451"><b>setMode</b></a> </p>
+</body>
+</html>

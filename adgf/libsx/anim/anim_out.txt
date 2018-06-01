@@ -1,0 +1,418 @@
+Animating Articulated Structures
+--------------------------------
+
+
+Overview
+	Introduction
+	   Motivations
+	Definitions
+	Forward vs Inverse Kinematics
+	Forward Kinematics
+	Inverse Kinematics
+	   Jacobian
+	Applications
+	   Skeletons
+	   Legged Figures
+	Demo
+	   Simple Forward Kinematics
+	References
+
+
+Introduction
+	Why animate articulated structures?
+		can create synthetic actors
+		can produce more natural looking human figure animation
+		can produce suggestions of human feelings and emotions
+
+	Why use forward/inverse kinematics?
+		don't need keyframes
+		specify animation using only a few parameters
+
+
+Definitions
+	Kinematics
+	   study of motion independant of forces producing the motion
+
+	Articulated figure
+	   structure consisting of rigid links connected at joints
+
+	Degrees of freedom (DOF)
+	   number of independant joint variables specifying the state 
+	   of the structure
+
+	End Effector
+	   end of a chain of links, i.e. foot or hand
+
+	State vector
+	   set of independant parameters which define a particular state
+	   of the articulated structure, thus
+
+	   O = ( O1, O2, ... , ON)	where we have N DOF
+
+
+Forward vs Inverse Kinematics
+	Forward kinematics
+
+		X = f ( O )
+
+		motion of all joints are explicitly specified
+
+		motion of end effector is accumlation of all transformations
+		that lead to that end effector, as the tree structure is
+		descended, thus given O derive X.
+
+	Inverse kinematics
+
+		     -1
+		O = f  ( X )
+
+		"goal directed motion"
+
+		define position of end effector only
+
+		inverse kinematics solves for position and orientation of all
+		joints in the link hierarchy that lead to the end effector
+
+
+Forward Kinematics
+	
+	figure 16.2 pg 371, two links
+
+	X = (x , y)
+
+	X = ( l1 cos O1 + l2 cos (O1 + O2), l1 sin O1 + l2 sin (O1 + O2))
+
+	project such that 
+		x1 = l1 cos O1		y1 = l1 sin O1
+		x2 = l2 cos (O1 + O2)	y2 = l2 sin (O1 + O2)
+
+	adding another joint adds at least another DOF
+
+	though having more transformations lends more freedom of control,
+	it may prove too complicated to achieve in practice
+
+
+Inverse Kinematics
+
+	figure 16.2 pg 371
+
+	O = (O1 , O2)
+
+	        -1    2    2     2     2
+	O1 = cos   ((x  + y  - l   - l  ) / (2 l  l ))
+	                        1     2         1  2 
+
+
+	O2 =  -(l  sin O ) x + (l  + l  cos O ) y
+	         2      2        1    2      2
+	      -----------------------------------
+	      (l  sin O ) y + (l  + l  cos O ) x
+	        2      2        1    2      2
+
+	as DOF increases the problem on finding O for a given X becomes
+	underdefined.  A whole subspace {Ox} defined by
+
+		O (O1, ..., On) element of Ox, if f(O) = X
+
+	maps onto solution X.
+
+	thus we must reduce the possible solution set by adding constraints
+	on the system like energy conservation, momentum conservation etc
+
+
+The Jacobian
+
+	given  X = f ( O )
+
+	where X is of dimension n and O of dimension m, the Jacobian is
+	the n x m matrix of partial derivatives relating differential 
+	changes of O (dO) to differential changes in X (dX)
+
+	dX = J(O) dO
+
+	where (i,j)th element of J is 
+
+	      df
+	        i
+	J  = -----
+	 ij   dx
+	        j
+
+	but we usually divide by dt to give
+
+	.        .
+	X = J(O) O
+
+	where dotX is velocity of end effector which is a vector of six
+	dimensions which include linear velocity V and angular velocity Omega
+	and dotO is time derivative of state vector.  
+
+	Thus the Jacobian maps velocities in state space to velocities
+	in cartesian space.  Thus at any time these quantities are
+	related via the linear transformation J which itself changes through
+	time as O changes.
+
+	Why is this useful?  Recall inverse kinematics statement.  If we
+	localize around the current operating position and invert the 
+	Jacobian gives
+
+	      -1
+	dO = J  (dX)
+
+	and iterate toward the goal over a series of incremental steps
+	as shown in figure 16.7 pg 375
+
+	if we recall fig 6.2 (abbr. notation)
+
+	X = (l c  + l c   , l s  + l s  )
+	      1 1    2 12    1 1    2 12
+
+	and differentiate using chain rule
+
+	.         .          .    .        .          .    .
+	X = (-l s O  - l s  (O  + O ), l c O  + l c  (O  + O ))
+	       1 1 1    2 12  1    2    1 1 1    2 12  1    2
+
+	                                    .
+	    | -l s  - l s       -l s   |  | O  |
+	    |   1 1    2 12       2 12 |  |  1 |
+	  = |                          |  | .  |
+            | l c  + l c         l c   |  | O  |
+            |  1 1    2 12        2 12 |  |  2 |
+
+
+	Note that this is only simple for very simple link hierarchies.
+
+	How do we construct this Jacobian?
+
+
+Moving Axes Formula
+
+    an aside:
+
+	want to rotate a vector r about an axis n by amount O
+
+	we resolve r into r|| and r_|_ where
+
+	r|| = (n.r)n
+
+	r_|_ = r - (n.r)n
+
+	r_|_ is rotated to position Rr_|_
+
+	we constuct a vector V perpendicular 
+	to r_|_ and lying in the plane
+
+	V = n x r_|_ = n x r
+
+	so
+
+	Rr_|_ = (cos O) r_|_ + (sin O) V
+
+	Rr = Rr|| + Rr_|_
+
+	   = Rr|| + (cos O) r_|_ + (sin O) V
+
+	   = (n.r)n + cos O(r - (n.r)n) + (sin O)n x r
+
+[1]	Rr = (cos O)r + (1 - cos O)n(n.r) + (sin O)n x r
+
+    were back:
+
+	now for incremental rotations O -> 0, cos O -> 1 and sin O -> O
+
+	Rr = r + On x r
+
+	putting OMjidt = On and Pj = r, incremental change in Pj as 
+	seen from frame {i} is
+
+	OMjidt x Pj
+
+	dividing by dt, the velocity of P relative to frame {i} is
+
+[2]	Vpi = OMji x Pj
+
+	more generally the origin of frame {j} could be moving with 
+	respect to frame {I} with linear velocity Vji and point P could 
+	be moving with velocity Vpj, these velocities are linear and may
+	be simply added
+
+[3]	Vpi = Vji + OMji x Pj + Vpj
+
+
+
+Velocity Propagation across links
+
+	let the origins of the frames be a set of vectors 
+
+	{P0, P2, P3, ... , Pn-1, Pn}
+
+	that is defined relative to a common frame say {0}
+
+	now let express velocity of frame {k} relative to frame {i} via
+	an intermediate frame {j} as
+
+	Vpki = Vji = OMji x (Pk)j + Vpkj
+
+	note that (Pk)j = Pk - Pj and write as Pkj, also replace Pk as 
+	subscript by just k
+
+[4]	Vki = Vji + OMji x Pkj + Vkj
+
+	now calc angular velocity of end effector, we start at {0} and 
+	work up, thus set (i,j,k) to (0,1,3) so
+
+	V30 = V10 + OM10 x P31 + V31
+
+	substitute for V31 by setting (i,j,k) to (1,2,3) and 
+	setting P31 = P32 + P21
+
+	V30 = V10 + OM10 x (P32 + P21) + V21 + OM21 x P32 + V32
+
+	but V20 = V10 + OM10 x P21 + V21 so
+
+	V30 = V20 + (OM10 + OM21) x P32 + V32
+
+	and since V30 = V20 + OM20 x P32 + V32 when (i,j,k) is set to (0,2,3)
+
+	OM20 = OM10 + OM21
+
+	and similarly OM30 = OM20 + OM32
+
+	so by induction we get
+
+[5]	OMn0 = SUM (OMi,i-1) from i = 1 to n-1
+
+	similar derivation for linear velocity, but start at end effector
+	to get 
+
+[6]	Vn0 = SUM (OMi,i-1 x Pni) from i = 1 to n-1
+
+
+
+Constructing the Jacobian using [6]
+
+	return to fig 16.2
+
+	linear velocity of X is now V30 (for n=3) 
+
+	V30 = OM10 x P31 + OM21 x P32
+
+	where we evaluate the following in frame {0}
+
+	P31 = (l1c1 + l2c12, l1s1 + l2s12)
+
+	P21 = (l2c12, l2s12)
+
+	                 .
+	OM10 = ( 0, 0, 1)O
+	                  1
+	                 .
+	OM21 = ( 0, 0, 1)O
+	                  2
+	             .                                     .
+	V30 = (0,0,1)O  x (l c +l c , l s +l s  ) + (0,0,1)O  x (l c  , l s  )
+	              1     1 1  2 12  1 1  2 12            2     2 12   2 12
+
+
+	lots more to go to completely describe how to build J
+
+
+
+Other Concerns (Inverting J and iterating towards Xgoal)
+
+	Numerical tracking errors
+
+		magnitude of error is ||J(dO) - dX||
+
+
+	Singularities
+
+		have one when ||J|| = 0, det J
+
+		will be 0 when (from fig 16.2) O2 is either 0 or PI
+
+
+	Ill conditioning
+		                               2        2       2
+		minimize the sum ||J(dO) - dX||  + gamma  ||dO||
+
+
+
+Applications -- Skeletons (human figures)
+
+	[MATT] figure 16.14 pg 383 shows how to specify branching chains
+	of links and have multiple roots.  
+
+	Thus can use inverse kinematics as an attachable engine to any node
+	where we need to perform inverse kinematics between a base node
+	and an end node.  Thus different kinematics engines can be used
+	dependant upon the kind of motion required.
+
+
+	[CALV] developed a desktop system called Life Forms used to 
+	choreograph dance sequences and develop realistic animation of
+	multiple figures.  The system mixes keyframing, forward and inverse
+	kinematic techniques.
+
+	The user (choreographers, animators) block out a concept storyboard 
+	using the Stage editor.  The user places characters places on the
+	stage and orients them.  This process is performed for all key
+	scenes in the storyboard.  Thus at this point the characters movement
+	around the stage is specified, not movement of hands and legs.
+
+	For each figure being animated, the individual movements are 
+	contructed using a Sequence editor.  Can pick from menus or specify
+	constraints on the limbs.  Again key frames are used to speed up
+	entering of movements.  Limbs can be moved via inverse kinematics
+	just by grabbing a hand and moving it.
+
+	Finally multiple figures are combined using the Timeline editor to
+	synchronize the individual movements with the movments of the other
+	figures.
+
+	Supports various body model from stick figures to fully rendered.
+
+
+
+Applications -- Legged Figures (walking)
+
+	[BRUD] presents the KLAW system (Keyframe-Less Animation of Walking)
+
+	Allows a walking sequence to be specified by only 3 parameters - 
+	forward velocity, step length, and step frequency.  Only one of the
+	3 needs to be specified.  There are also 28 other attributes to
+	individualize the walking.
+
+	
+
+Demo -- simple forward kinematics
+
+	single chain of links
+
+	implemented forward kinematics via table of joint angles which are
+	applied in a cycle of N frames
+
+	future expansion to include inverse kinematics and interactive
+	grabbing and movement of end effector
+
+
+
+References
+
+[MATT] Matt and Matt, Advanced Animation and Rendering Techniques: Theory
+	and Practice, Addison-Wesley, 1992, pp. 369-394.
+
+[CALV] Calvert et al, "Desktop Animation of Multiple Human Figures", IEEE
+	Computer Graphics and Applications, May 1993, pp. 18-26.
+
+[BRUD] Bruderlin and Calvert, "Goal-Directed, Dynamic Animation of Human
+	Walking", Computer Graphics (Siggraph 1989), V23-3, pp. 233-242.
+
+[MONH] Monheit and Bradler, "A Kinematic Model of the Human Spine and
+	Torso", IEEE Computer Graphics and Applications, March 1991, 
+	pp. 29-38.
+
+[SIMR] Simerman, "Anatomy of an Animation", Computer Graphics World, 
+	March 1995, pp. 36-43.
+

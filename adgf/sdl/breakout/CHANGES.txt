@@ -1,0 +1,59 @@
+CHANGES	 history for BreakOut
+-----------------------------
+
+0.2.8
+    - updated to now use draw-sdl version 0.7.4
+
+0.2.7
+    - updated to now use draw-sdl version 0.7.3
+
+0.2.6
+    - Added handling for using mouse motion to move paddle
+    - Hitting bottom now decrements lives
+    - Now when lives reaches 0, game is over
+
+0.2.5
+    - Added handling for collision with paddle
+    - Added handling for collision with blocks (including block removal)
+    - Added detection of all blocks removed to move to next level
+    - Added keys for paddle toggle between long and normal width
+    - Added a max limit to the speed up of the ball
+
+0.2.4
+    - Added handling for ball collision with wall, now bounces off wall
+    - Added trigger check to speed up ball after so many collisions (without hitting block)
+
+0.2.3
+    - Added MakeVector() to vecmath.cpp
+    - Added VecReflectionAboutNormal() to vecmath.cpp
+    - Added VecScale() to vecmath.cpp
+    - Added logic for checking for collision of ball with wall
+    - Added logic for moving ball sprite
+    - Switched ball, paddle, and block to use sprites instead of raw bitmaps
+
+0.2.2
+    - Removed more obsolete code
+    - Moved some defines and structures from game.h to screen.h
+    - Added initialization of level data
+    - Added screen draw of level data
+
+0.2.1
+    - Added initial animation movement of paddle
+    - Added initial animation movement of ball
+    - Removed obsolete code
+
+0.2.0
+    - Began modifications to game logic and screens
+    - Added level screen logic
+    - Added drawing functions for paddle, blocks, and ball
+    - Added vecmath.cpp
+
+0.1.1
+    - Added art assets for breakout game
+
+0.1.0
+    - Updated to DrawSdl version 0.7.0
+
+0.0.0
+    - Originated, cloned from SicDacLoe
+

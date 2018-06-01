@@ -1,0 +1,25 @@
+<!-- Documentation produced by the Html generator of Bouml (http://bouml.free.fr) -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>H</title>
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body bgcolor="#ffffff">
+
+<div class = "title">H</div>
+<p></p>
+
+<!-- ============================================================= -->
+
+<table>
+<tr bgcolor=#f0f0f0><td align=center><b>Name</b></td><td align=center><b>Kind</b></td><td align=center><b>Description</b></td></tr>
+<tr bgcolor=#f0f0f0><td><a href="index.html#refoperation136859" target = "projectFrame"><b>heapTest</b></a></td><td>operation</td><td> The heapTest method creates two character arrays on the heap.  It then initializes the <br /> second array, and then initializes the first array by over-running the end of the array.<br /> This creates a buffer over-run condition using heap memory.<br /> </td></tr>
+<tr bgcolor=#f0f0f0><td><a href="index.html#refoperation137243" target = "projectFrame"><b>heapTest</b></a></td><td>operation</td><td> The heapTest method initializes a data member of one of two objects that <br /> were created on the heap.  The same data member of the other object is <br /> left uninitialized.<br /> </td></tr>
+<tr bgcolor=#f0f0f0><td><a href="index.html#refoperation137371" target = "projectFrame"><b>heapTest</b></a></td><td>operation</td><td> The heapTest method creates two arrays of objects on the heap.  As each <br /> object is created, some data within the object is initialized.  Then <br /> nearly all the objects in each array are deleted, one object in one array, <br /> and two objects in the other array are left intact, hence creating a direct <br /> memory leak.<br /><br /> Also another object is created that contains a method called doLeak.  This <br /> method is called before deleting the object which results in an indirect <br /> memory leak when the object itself is deleted.<br /> </td></tr>
+</table>
+</body>
+</html>

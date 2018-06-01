@@ -1,0 +1,43 @@
+# makefile for tcp echo client/server programs
+#
+
+CC=gcc
+
+OBJECTS1 = chat.o   		# chat client
+
+OBJECTS2 = chatd.o   		# chat server
+
+TARGET1 = enetchat
+
+TARGET2 = enetchatd
+
+TARGETS = $(TARGET1) $(TARGET2)
+
+LIBS	= -lenet 
+#LIBS	= -lenet -lsocket -lnsl
+#LIBS	= -lbsd -lnsl
+CFLAGS  = -O
+
+
+
+default: $(TARGETS)
+
+
+$(TARGET1): $(OBJECTS1)
+	$(CC) -o $@ $(OBJECTS1) $(LIBS)
+
+$(TARGET2): $(OBJECTS2)
+	$(CC) -o $@ $(OBJECTS2) $(LIBS)
+
+
+chat.o : chat.c chat.h
+
+chatd.o : chatd.c chat.h
+
+
+clean:
+	rm -f *.o *% *~
+
+realclean:
+	rm -f *.o *% *~ core $(TARGETS)
+

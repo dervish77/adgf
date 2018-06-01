@@ -1,0 +1,12 @@
+; test2.s85 - sample 8085 program
+; 
+
+; add two numbers and display the result
+    MVI D, 8BH      ; move 0x8B into register D
+    MVI C, 6FH      ; move 0x6F into register C
+    MOV A, C        ; move register C into A
+    ADD D           ; add register D to A
+    OUT PORT1       ; output register A to PORT1
+    HLT             ; halt the program
+
+; end of file

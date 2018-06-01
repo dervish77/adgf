@@ -1,0 +1,65 @@
+# depslib dependency file v1.0
+1308187901 source:/scratch/bl12960/misc/adgf/dsp/draw-sdl.cpp
+	<stdlib.h>
+	<stdio.h>
+	<sys/time.h>
+	<unistd.h>
+	<SDL/SDL.h>
+	"draw-sdl.h"
+
+1308187901 /scratch/bl12960/misc/adgf/dsp/draw-sdl.h
+	<SDL/SDL.h>
+
+1308199390 source:/scratch/bl12960/misc/adgf/dsp/filters.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"filters.h"
+	"waveform.h"
+
+1308199141 /scratch/bl12960/misc/adgf/dsp/filters.h
+	"waveform.h"
+
+1308230761 /scratch/bl12960/misc/adgf/dsp/waveform.h
+
+1308232053 source:/scratch/bl12960/misc/adgf/dsp/main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"main.h"
+	"waveform.h"
+	"filter.h"
+	"mixer.h"
+
+1308188968 /scratch/bl12960/misc/adgf/dsp/main.h
+	"draw-sdl.h"
+
+1308194890 source:/scratch/bl12960/misc/adgf/dsp/random.cpp
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<time.h>
+
+1308232927 source:/scratch/bl12960/misc/adgf/dsp/waveform.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	"waveform.h"
+	"random.h"
+
+1308194894 /scratch/bl12960/misc/adgf/dsp/random.h
+
+1308232259 source:/scratch/bl12960/misc/adgf/dsp/filter.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"filter.h"
+	"waveform.h"
+
+1308232169 /scratch/bl12960/misc/adgf/dsp/filter.h
+	"waveform.h"
+
+1308232371 /scratch/bl12960/misc/adgf/dsp/mixer.h
+	"waveform.h"
+

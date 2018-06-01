@@ -1,0 +1,26 @@
+# defs for building LIBGFS
+#
+
+
+# pick you favorite compiler -- tested with GNU gcc
+CC=gcc
+
+
+# comment this line out if you do not want debug enabled
+DEBUG = -g -DGS_DEBUG
+
+
+#
+#  edit these two lines for your location of SRGP package
+#
+SRGP_LIB_LOC = -L/scratch/bl12960/misc/src/SRGP_DISTRIB/lib -L/usr/X11R6/lib
+SRGP_INCLUDE_LOC = -I/scratch/bl12960/misc/src/SRGP_DISTRIB/include -I/usr/include 
+
+
+#
+#  edit these two lines for your location of LIBGFS package
+#
+LIBGFS_LIB_LOC = -L../lib
+LIBGFS_INCLUDE_LOC = -I../include
+
+

@@ -1,0 +1,6 @@
+			Image Processing Demo
+--------------------------------------------------------------------------
+
+This program is an image processing demo program using 'libsx' to implement
+the GUI.  The program features several image processing operations as listed
+below.  The program currently supports only the PPM image file format.

@@ -1,0 +1,22 @@
+Current Project Database:
+  project loaded  = 0
+  project saved   = 0
+  load file       = 
+  save file       = 
+  project:
+    project name  = 
+    num of acts   = 4
+    num of scenes = 60
+  draw info:
+    draw mode     = 0
+    fill mode     = 0
+    pattern mode  = 0
+    color mode    = 0
+  view info:
+    view mode     = 0
+    num vert      = 1
+    num horiz     = 1
+    delay to next = 5
+  print info:
+    print mode    = 0
+    print file    = 

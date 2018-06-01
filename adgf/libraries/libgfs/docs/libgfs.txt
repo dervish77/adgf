@@ -1,0 +1,277 @@
+			User Manual for LIBGFS
+			______________________
+
+
+1.  Introduction
+
+    LIBGFS is a GUI library package developed using SRGP as the underlying
+    graphics library.  Please see the file README for information regarding 
+    the installation and setup of both the SRGP package and the LIBGFS 
+    package.
+
+    LIBGFS was designed to be an experiment in GUI design, and as an
+    investigation into how the underlying mechanics of a GUI system works.
+    Pease feel free to checkout the source code and make any changes or
+    improvements that you see fit.  I would be interested in hearing about 
+    any changes that are made to the underlying system.
+
+    The following sections describe how each of the application level 
+    functions work and provide some insight into how the underlying design
+    behaves. 
+
+    A basic shell of an application must contain the following calls at a 
+    minimum: 
+
+	GS_MakeWindow			creates top level window
+
+	GS_MakePushButton, etc		create any gadgets needed
+
+	GS_InitWindow			displays created gadgets
+
+	loop
+	    GS_WaitForEvent		event loop for detecting user input
+	endloop
+
+	GS_CloseWindow			deallocates gadgets and closes window
+
+
+    Please examine the programs found in the test directory for more
+    detailed examples of application level code.
+
+
+2.  Window Functions
+
+2.1 Make Window
+
+	typedef short int GS_windowID;
+	GS_windowID GS_MakeWindow( char *name,
+			long int width,
+			long int height,
+			short int num_planes,
+			short int bgd_color,
+			short int fgd_color);
+
+    GS_MakeWindow must be the first LIBGFS routine called by the application 
+    since it handles all of the initialization needed to get everything 
+    started.  The name parameter is used as the title of the window.  The
+    width and height parameteres are used to specify the width and height
+    of the window respectively.  The num_planes parameter is used to request
+    of many bit planes are needed to represent color (typically 8 planes).
+    The bgd_color and fgd_color are indices into the color table used to
+    specify the background and foreground colors of the window respectively.
+    There are eight pre-defined color indices available:
+
+	GSWHITE, GSBLACK, GSRED, GSGREEN, GSBLUE, GSCYAN, GSMAGENTA, GSYELLOW
+
+    See section 4.1 for more info regarding adding new colors to the color
+    table.
+
+
+2.2 Init Window
+
+	typedef short int GS_errorType;
+	GS_errorType GS_InitWindow(GS_windowID w);
+
+    Once all the gadgets have been declared, GS_InitWindow is called to 
+    display them within the specified window.  Currently, only one window
+    is supported.
+
+
+2.3 Close Window
+
+	GS_errorType GS_CloseWindow(GS_windowID w);
+
+    Before an application exits, GS_CloseWindow must be called to deallocate
+    any memory that was allocated during the creation of gadgets.  Currently, 
+    only one window is supported.
+
+
+3.  Gadget Functions
+
+3.1 Make Push Button Gadget
+
+	typedef short int GS_gadgetID;
+	GS_gadgetID GS_MakePushButton(char *label,
+			long int width,
+			long int height,
+			long int xloc,
+			long int yloc,
+			short int loc_type,
+			short int bor_color,
+			short int bgd_color,
+			short int text_color);
+
+    Creates a rectanglar push button gadget.  The character string pointed by
+    label is used as the button's label.  The button sized as specified by
+    the parameters width and height.  The button's location within the window
+    is specified by xloc and yloc, and by the value of loc_type.  loc_type
+    can be one of the following:
+
+	GSCENTERED	xloc,yloc defines the gadget's center
+	GSTOPLEFT	xloc,yloc defines the gadget's top left corner
+	GSBOTLEFT	xloc,yloc defines the gadget's bottom left corner
+	GSTOPRIGHT	xloc,yloc defines the gadget's top right corner
+	GSBOTRIGHT	xloc,yloc defines the gadget's bottom right corner
+
+    The button's border color, background color, and text color are specified
+    by the parameters bor_color, bgd_color, and text_color respectively.
+
+
+3.2 Make Toggle Button Gadget
+
+	GS_gadgetID GS_MakeToggleButton(char *label,
+			long int width,
+			long int height,
+			long int xloc,
+			long int yloc,
+			short int loc_type,
+			short int bor_color,
+			short int bgd_color,
+			short int text_color,
+			short int toggle_shape);
+
+
+3.3 Make Menu Bar Gadget
+
+	GS_gadgetID GS_MakeMenuBar(short int item_count,
+			char *item_list,
+			GS_gadgetID *submenu_list,
+			long int width,
+			long int height,
+			long int xloc,
+			long int yloc,
+			short int loc_type,
+			short int bor_color,
+			short int bgd_color,
+			short int text_color);
+
+
+3.4 Make Sub Menu Gadget (i.e Pulldown Menu)
+
+	GS_gadgetID GS_MakeSubMenu( );
+
+
+3.5 Make Draw Area Gadget
+
+	GS_gadgetID GS_MakeDrawArea( long int width,
+			long int height,
+			long int xloc,
+			long int yloc,
+			short int loc_type,
+			short int bor_color,
+			short int bgd_color,
+			short int fgd_color);
+
+
+3.6 Make Text Gadget
+
+	GS_gadgetID GS_MakeTextGadget( );
+
+
+3.7 Inquire Gadget Extent
+
+	GS_errorType GS_InquireGadgetExtent(GS_gadgetID g, rectangle *rect);
+
+
+4.  Color Functions
+
+4.1 Add New Color
+
+	typedef short int GS_colorindexType;
+
+	typedef struct {
+	   unsigned short int R;
+	   unsigned short int G;
+	   unsigned short int B;
+	} GS_rgbType;
+
+	GS_errorType GS_AddNewColor(GS_colorindexType index, GS_rgbType color);
+
+
+4.2 Set Drawing Color
+
+	GS_errorType GS_SetDrawingColor(GS_gadgetID g, GS_colorindexType index);
+
+
+
+5.  Drawing Functions
+
+5.1 Clear Draw Area
+
+	GS_errorType GS_ClearDrawArea(GS_gadgetID g);
+
+
+5.2 Define Point
+
+	point        GS_DefPoint(int x, int y);
+
+
+5.3 Draw Point
+
+	GS_errorType GS_DrawPoint(GS_gadgetID g, point pt);
+
+
+5.4 Draw Line
+
+	GS_errorType GS_DrawLine(GS_gadgetID g, point start, point end);
+
+
+5.5 Draw Polyline
+
+	GS_errorType GS_DrawPolyline(GS_gadgetID g, int vert_count, 
+							point *vertices);
+
+
+5.6 Draw Polygon
+
+	GS_errorType GS_DrawPolygon(GS_gadgetID g, int vert_count, 
+							point *vertices);
+
+
+5.7 Draw Rectangle
+
+	GS_errorType GS_DrawRectangle(GS_gadgetID g, rectangle rect);
+
+
+6.  Event Handling Functions
+
+6.1 Wait For Event
+
+	typedef short int GS_eventType;
+	GS_eventType GS_WaitForEvent();
+
+
+6.2 Inquire Keyboard Event Character
+
+	char         GS_InquireEventChar();
+
+
+6.3 Inquire Mouse Event Gadget ID
+
+	GS_gadgetID  GS_InquireEventGadgetID();
+
+
+6.4 Inquire Mouse Event Location
+
+	point        GS_InquireEventLocation();
+
+
+6.5 Inquire Mouse Event Which Button
+
+	int          GS_InquireEventWhichButton();
+
+
+6.6 Inquire Mouse Event Button Status
+
+	int          GS_InquireEventButtonStat();
+
+
+6.7 Inquire Mouse Event Menu Item ID
+
+	short int    GS_InquireEventMenuItem();
+
+
+__________________________________________________________________________
+
+Last Updated:  January 29, 1996
+

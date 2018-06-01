@@ -1,0 +1,7 @@
+class cat
+!!!129179.cpp!!!	cat()
+  setSpecies(1001);
+!!!129691.cpp!!!	setId(in id : int) : void
+  myId = id; 
+!!!129819.cpp!!!	getId() : int
+  return(myId);

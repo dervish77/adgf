@@ -1,0 +1,15 @@
+TODO for HwSim
+______________
+
+- create ButtonSim
+
+- create LCDSim
+
+- create OLEDSim
+
+__________________________________________________________________
+
+Author: Brian S. Lingard
+
+Last Updated: March 18, 2013
+

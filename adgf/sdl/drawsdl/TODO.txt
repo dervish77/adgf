@@ -1,0 +1,15 @@
+TODO for DrawSdl
+________________
+
+- add support for two more timers
+
+- add support for SDL audio
+
+- add support for more fonts
+
+__________________________________________________________________
+
+Author: Brian S. Lingard
+
+Last Updated: April 19, 2011
+

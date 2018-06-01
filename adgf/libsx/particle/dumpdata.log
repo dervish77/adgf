@@ -1,0 +1,22 @@
+project loaded   = 1
+project saved    = 0
+load file name   = 
+save file name   = 
+view screen mode = 5
+
+system count = 1
+
+view structure:
+  type = 1
+  eyeloc = 0.000000 10.000000 -30.000000
+  lookat = 0.000000 0.000000 0.000000
+  vup    = 0.000000 1.000000 0.000000
+  vrp    = 0.000000 0.000000 0.000000
+
+anim structure:
+  type         = 2
+  mode         = 1
+  num frames   = 20
+  frame rate   = 10
+
+ END OF FILE

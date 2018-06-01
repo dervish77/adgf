@@ -1,0 +1,7 @@
+LIBVM library file
+-------------------
+
+To use, setup your makefile to access:
+
+	libvm.a
+

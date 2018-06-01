@@ -1,0 +1,148 @@
+README for libsx version of Othello
+____________________________________________________________________________
+
+
+This is an experiment in writing a game which performs simple processing
+of game rule logic, and the associated 2D graphics required for drawing
+the game board and player pieces.
+
+Please find the following files in the distribution:
+
+	README		- this file
+	COPYING		- copying policy
+	REVISION	- revision history
+	main.c		- main program (sets up GUI)
+	main.h		- main header 
+	othello.c	- main game routines
+	othello.h	- top level header
+	flip.c		- piece flipping routines
+	scan.c		- board scanning routines
+	count.c		- flipped piece counting routines
+	callback.c	- callback routines for menus etc.
+	callback.h	- protos of callback routines
+	drwlibsx.c	- libsx specific drawing routines
+	libsx.h		- libsx header 
+	vecmath.h	- useful defines and types
+	makefile	- make file for Unix
+
+____________________________________________________________________________
+
+Making and installing:
+
+	Unpack by -> gunzip othello.tar.gz
+	          -> tar xvf othello.tar
+
+	Make by   -> cd othello
+	          -> make all
+
+	This will build the game executable and install it into your 
+	'$HOME/bin' directory.  If you prefer to install the game somewhere 
+	else, edit the makefile to set the INSTALL_DIR variable to your 
+	desired location.
+
+	CAUTION:  READ the notes at the end of this file before attempting
+		  to build the executable.
+
+	This program has been successfully compiled on Sun workstations 
+	(Solaris 5.3) and SGI workstations (Irix 6.2 and 6.3).
+
+____________________________________________________________________________
+
+Background and Rules:
+
+Othello is played on a rectangular grid of squares usually about 16 
+by 16.  There are two colors for player pieces -- black and white.
+The game starts with two pieces of each color placed in the center of
+the board as follows:
+
+				  W B
+				  B W
+
+The white player gets the first move and can place his piece in any
+position indicated by the 'x' as shown below:
+
+				    x
+				  W B x
+				x B W
+				  x
+
+When the white player makes his move, all the black pieces between the newly
+placed piece and an existing white piece flip over to the white color, for
+example:
+
+				  W W W
+				  B W
+
+The black player can make his move similarly into any of the positions
+marked with an 'x' as shown below:
+
+				  x   x
+				  W W W
+				  B W x
+
+And similarly, when black moves the previously white pieces flip over 
+to black as thus:
+
+				      B
+				  W B W
+				  B W 
+
+And so on, until all empty board positions are filled.  The player with
+the most pieces on the board wins.
+
+As a point of stategy, securing a corner location on the board can make 
+or break a player's chance of winning.  A player should endeavor to 
+secure a corner as early as possible.
+
+For this version of the game, Player 1 is White, while Player 2 is Black,
+and Player 1 always goes first.
+
+----------------------------------------------------------------------------
+
+Playing the Game:
+
+You may play the game in either single player or two player mode.  Single
+player mode pits you against the computer.  Two player mode allows two people 
+to play.  There is also a demo mode which has the computer take over
+playing both sides.
+
+When playing the computer, you can select several different skill levels,
+including no skill, random moves, corners, max flips, and AI.  The no skill
+level mode has the computer simply take the first legal move it finds.  
+Random skill mode has the computer build a list of several moves and then
+randomly picks one.  Corner skill mode has the computer build a list of 
+moves and then pick the move which is closest to a corner.  Max flips mode
+has the computer build a list of moves and then take the move which results
+in the largest number of flipped pieces.  AI skill level mode has the 
+computer combine the corners mode and max flips mode according to a set
+of rules which results in the computer making a decision about which move
+is best.
+
+If a player finds that no legal move is available, they may press the 
+"Pass" button to skip their turn.  Also a player can get see a hint about
+any legal moves that may be available by pressing the "Hint" button.
+
+Games in progress can be saved to a file.  These saved games can be 
+resumed by loading in a saved game.
+
+____________________________________________________________________________
+
+Notes:
+	
+	This program requires that you must have "libsx" installed on
+	your system.  Libsx is the simple X library which uses the 
+	Athena widget set and provides a easy way to create GUI's for
+	applications.
+
+	Libsx can be obtaining via anonymous ftp from "ftp.x.org" at
+	the path:
+
+		ftp.x.org:/contrib/libraries/libsx.tar.Z
+
+	Libsx has been successfully compiled on most workstations 
+	supporting the Athena widget set.
+
+____________________________________________________________________________
+
+Brian Lingard
+October 26, 1998

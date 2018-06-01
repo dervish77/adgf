@@ -1,0 +1,37 @@
+CHANGES	 history for DrawSdl
+----------------------------
+
+0.5.1
+    - cleaned up some compiler warnings
+
+0.5.0
+    - added support for two timers (can be extended easily)
+    - added "drawInitExtended" to allow for window caption to be set
+
+0.4.0
+    - added new functions to draw-sdl.c
+    - added triangle demo
+    - added keys demo
+    - added mouse demo
+    - added animation demo
+
+0.3.1
+    - disabled certain printf's in draw-sdl.c so they will only show for DEBUG build
+
+0.3.0
+    - added boxes demo
+    - added circles demo
+    - added bitmap demo
+    - added bltter demo
+
+0.2.0
+    - added menu for choosing which demo to run
+    - separated example drawing code into demo functions
+
+0.1.0	
+    - cloned from VidTest sources
+    - removed everything except code required to use LibSDL
+    - stripped down main.c to only do simple demo of drawing functions
+
+0.0.0
+    - Originated

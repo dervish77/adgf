@@ -1,0 +1,71 @@
+format 75
+
+classcanvas 128027 class_ref 153499 // Screen
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  xyz 83 8 2000
+end
+classcanvas 128155 class_ref 153627 // ScreenContext
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  xyz 362 7 2000
+end
+classcanvas 128411 class_ref 153755 // TitleScreen
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  xyz 12 277 2000
+end
+note 128667 "Singleton: Holds screen context and reference to drawSdl"
+  xyzwh 486 11 2000 183 57
+note 128923 "Examples of derived screens"
+  xyzwh 80 378 2000 111 63
+classcanvas 129179 class_ref 153883 // ScreenEvent
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  xyz 370 124 2000
+end
+note 129307 "Wraps around drawSdl event"
+  xyzwh 513 109 2000 99 59
+classcanvas 129563 class_ref 154011 // GameOverScreen
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  xyz 185 278 2000
+end
+classcanvas 130075 class_ref 154139 // PlayScreen
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  xyz 99 278 2000
+end
+classcanvas 130587 class_ref 154267 // Sprite
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  xyz 373 288 2000
+end
+note 130715 "context is a drawSdl spriteContext which contains the loaded sprite image"
+  xyzwh 513 295 2000 127 105
+relationcanvas 128283 relation_ref 159643 // <directional aggregation>
+  from ref 128027 z 2001 to ref 128155
+  role_a_pos 269 37 3000 no_role_b
+  multiplicity_a_pos 345 70 3000 no_multiplicity_b
+end
+relationcanvas 129691 relation_ref 159899 // <generalisation>
+  from ref 129563 z 2001 to ref 128027
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 129947 relation_ref 159771 // <generalisation>
+  from ref 128411 z 2001 to ref 128027
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 130203 relation_ref 160027 // <generalisation>
+  from ref 130075 z 2001 to ref 128027
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+line 128795 -_-_
+  from ref 128155 z 2001 to ref 128667
+line 129051 -_-_
+  from ref 128923 z 2001 to ref 128411
+line 129435 -_-_
+  from ref 129179 z 2001 to ref 129307
+line 130331 -_-_
+  from ref 128923 z 2001 to ref 130075
+line 130459 -_-_
+  from ref 128923 z 2001 to ref 129563
+line 130843 -_-_
+  from ref 130587 z 2001 to ref 130715
+end

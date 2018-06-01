@@ -1,0 +1,7 @@
+LIBGFS library file
+-------------------
+
+To use, setup your makefile to access:
+
+	libgfs.a
+

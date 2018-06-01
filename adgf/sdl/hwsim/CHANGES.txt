@@ -1,0 +1,6 @@
+CHANGES	 history for HwSim
+--------------------------
+
+0.0.0
+    - Originated, cloned from DrawDemo and DrawSdl
+

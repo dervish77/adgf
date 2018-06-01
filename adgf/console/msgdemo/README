@@ -1,0 +1,109 @@
+README for example TCP Msgdemo client/server programs
+__________________________________________________
+
+
+Files:
+	README		- this file
+
+	tcplib.h	- common socket header
+
+	tcplib.c	- common socket functions
+
+	common.c	- common msg functions
+
+	msg.h		- common msg header
+
+	msg.c		- MSG client program
+	
+	msgd.c		- MSG server daemon
+
+	makefile	- unix makefile
+
+__________________________________________________
+
+To unpack:
+	gunzip msgdemo.tar.gz
+	tar xvf msgdemo.tar
+
+
+To build:
+
+	cd msgdemo
+	make
+
+
+To cleanup:
+
+	cd msgdemo
+	make clean
+or
+	make realclean
+
+__________________________________________________
+
+
+Usage on single machine, type:
+
+	msgd 50001&			- to start MSG server daemon
+
+	msg localhost 50001		- to run MSG client
+
+
+Then simply type numbers 0-9 and hit <cr>.  Message packet should
+be echoed back from server.
+
+__________________________________________________
+
+
+Usage on two machines, type:
+
+	rlogin <remote host>
+	msgd 50001&			- to start MSG server daemon
+
+on another host type:
+
+	msg <remote host> 50001		- to run MSG client
+
+
+Then simply type numbers 0-9 and hit <cr>.  Message packet should
+be echoed back from server.
+
+__________________________________________________
+
+
+Example session using local host:
+
+	% msgd 50001 & <cr>
+	% msg localhost 50001 <cr>
+        TCP MSG client version 0.1
+
+	(enter 99 to exit)
+	
+	Msg id: 1
+	to server:
+	  msg id       = 1
+	  msg src host  = toht
+	  msg src port  = 50001
+	  msg dst host  = localhost
+          msg dst port  = 50001
+          msg body len  = 11
+          msg body data = sample body
+        from server:	
+	  msg id       = 1
+	  msg src host  = toht
+	  msg src port  = 50001
+	  msg dst host  = localhost
+          msg dst port  = 50001
+          msg body len  = 11
+          msg body data = sample body
+
+	Msg id: 99
+	closing connection
+	connection to localhost closed
+	% 
+
+Note that you will have to manually kill the server process.
+
+__________________________________________________
+
+last updated:  Oct 03, 1997

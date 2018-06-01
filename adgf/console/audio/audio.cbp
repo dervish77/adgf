@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="audio" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin\Debug\audio" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj\Debug\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin\Release\audio" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj\Release\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="CHANGES.txt" />
+		<Unit filename="README.txt" />
+		<Unit filename="audioBlocks.cpp" />
+		<Unit filename="audioBlocks.h" />
+		<Unit filename="audioCore.cpp" />
+		<Unit filename="audioCore.h" />
+		<Unit filename="audioFilter.cpp" />
+		<Unit filename="audioFilter.h" />
+		<Unit filename="audioMixer.cpp" />
+		<Unit filename="audioMixer.h" />
+		<Unit filename="audioModel.cpp" />
+		<Unit filename="audioModel.h" />
+		<Unit filename="audioUtils.cpp" />
+		<Unit filename="audioUtils.h" />
+		<Unit filename="audioWaveform.cpp" />
+		<Unit filename="audioWaveform.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="main.h" />
+		<Unit filename="random.cpp" />
+		<Unit filename="random.h" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+			<envvars />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

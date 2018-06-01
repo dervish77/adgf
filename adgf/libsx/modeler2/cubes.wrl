@@ -1,0 +1,81 @@
+#VRML V1.0 ascii
+#Inventor V2.0 ascii
+
+WWWAnchor {
+    name "http://www.sd.tgs.com/~template/vrml/stuff.wrl"
+
+    Scale { scaleFactor 4 4 4 }  # Make everything bigger
+    Separator {
+	Transform {
+	    translation	-0.01 0.016 -0.069
+	    scaleFactor	1 1 0.89
+	}
+	Material {
+	    ambientColor	0.08 0.1 0.06
+	    diffuseColor	0.3 0.5 0.25
+	    shininess	0.51
+	}
+	Cube {
+	    width	0.42
+	    height	0.47
+	    depth	0.42
+	}
+    }
+    Separator {
+	Transform {
+	    translation	0.06 0.11 0.15
+	}
+	DEF EyeMaterial Material {
+	    ambientColor	0.067 0.03 0.11
+	    diffuseColor	0.2 0.1 0.3
+	    shininess	0.133333
+	}
+	DEF EyeCube Cube {
+	    width	0.06
+	    height	0.09
+	    depth	0.06
+	}
+    }
+    Separator {
+	Transform {
+	    translation	-0.08 0.1 0.15
+	}
+	USE EyeMaterial
+	USE EyeCube
+    }
+    Separator {
+	Transform {
+	    translation	0.004 -0.1 0.15
+	    scaleFactor	1 1.02 1
+	    scaleOrientation	0 1 0  0.785398
+	}
+	Material {
+	    ambientColor	0.23 0.11 0.089
+	    diffuseColor	0.91 0.44 0.35
+	    specularColor	0.35 0.14 0
+	    shininess	0.13
+	}
+	Cube {
+	    width	0.3
+	    height	0.06
+	    depth	0.06
+	}
+    }
+    Separator {
+	Transform {
+	    translation	-0.0063 0.023 0.13
+	    rotation	-0.088 0.025 0.995  0.543
+	    scaleFactor	1 0.8 1
+	}
+	Material {
+	    ambientColor	0.067 0.025 0.019
+	    diffuseColor	0.28 0.10 0.08
+	    shininess	0.097
+	}
+	Cube {
+	    width	0.036
+	    height	0.048
+	    depth	0.036
+	}
+    }
+}

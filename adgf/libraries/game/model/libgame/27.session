@@ -1,0 +1,18 @@
+window_sizes 1799 949 305 1133 703 82
+diagrams
+  classdiagram_ref 144283 // Screen
+    906 639 100 4 0 0
+  active  classdiagram_ref 144411 // Game
+    906 586 100 4 0 0
+end
+show_stereotypes
+selected 
+package_ref 128027 // libgame
+open
+  
+package_ref 134555 // Game
+  usecaseview_ref 134555 // use cases
+  classview_ref 134555 // class view
+end
+end
+verbose

@@ -1,0 +1,19 @@
+TODO for Life
+_____________
+
+- add save and load feature for customized patterns
+
+- add zoom feature for controlling how much of board is visible
+
+- add ability to modify algorithm rules (survive/birth)
+    - i.e. make rules more generic, and thus selectable
+
+- add UI buttons for controls - start/stop/reset/pattern/load/save/zoom
+
+- implement OO based design for Life Library engine via UML model
+__________________________________________________________________
+
+Author: Brian S. Lingard
+
+Last Updated: June 28, 2010
+

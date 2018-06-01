@@ -1,0 +1,11 @@
+; test1.s85 - sample 8085 program
+; 
+
+; load register A through register B
+    MVI B, 7FH      ; move 0x7F into register B
+    MOV A, B        ; move register B into register A
+    ADI 01H         ; add 1 to A
+                    ; register A should now contain 0x80
+    HLT             ; halt the program
+
+; end of file

@@ -1,0 +1,51 @@
+# depslib dependency file v1.0
+1277301373 source:/scratch/bl12960/misc/adgf/life/ui/draw-sdl.cpp
+	<stdlib.h>
+	<stdio.h>
+	<sys/time.h>
+	<unistd.h>
+	<SDL/SDL.h>
+	"draw-sdl.h"
+
+1277301375 /scratch/bl12960/misc/adgf/life/ui/draw-sdl.h
+
+1277733426 source:/scratch/bl12960/misc/adgf/life/ui/game.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	<sys/types.h>
+	<sys/time.h>
+	<limits.h>
+	<unistd.h>
+	"game.h"
+	"screens.h"
+
+1277732046 /scratch/bl12960/misc/adgf/life/ui/game.h
+	"screens.h"
+
+1277754714 /scratch/bl12960/misc/adgf/life/ui/screens.h
+	"draw-sdl.h"
+
+1277732050 source:/scratch/bl12960/misc/adgf/life/ui/main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"main.h"
+	"game.h"
+	"screens.h"
+	"version.h"
+
+1277316155 /scratch/bl12960/misc/adgf/life/ui/main.h
+	"draw-sdl.h"
+
+1277754868 /scratch/bl12960/misc/adgf/life/include/version.h
+
+1277754634 source:/scratch/bl12960/misc/adgf/life/ui/screens.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"draw-sdl.h"
+	"screens.h"
+	"main.h"
+

@@ -1,0 +1,19 @@
+# defs for building LIBVM
+#
+
+
+# pick you favorite compiler -- tested with GNU gcc
+CC=gcc
+
+
+# comment this line out if you do not want debug enabled
+DEBUG = -g -DVM_DEBUG
+
+
+#
+#  edit these two lines for your location of LIBVM package
+#
+LIBVM_LIB_LOC = -L../lib
+LIBVM_INCLUDE_LOC = -I../include
+
+

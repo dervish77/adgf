@@ -1,0 +1,14 @@
+class zebra
+!!!138523.cpp!!!	zebra()
+  setSpecies(3001);
+!!!138779.cpp!!!	setId(in id : int) : void
+  myId = id;
+!!!138907.cpp!!!	getId() : int
+  return(myId);
+!!!139035.cpp!!!	doLeak() : bool
+  char *leakyString;
+  leakyString = new char[100];
+  for (int i=0; i< 100; i++)
+  {
+      leakyString[i] = i;
+  }

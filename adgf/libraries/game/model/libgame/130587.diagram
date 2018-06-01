@@ -1,0 +1,129 @@
+format 62
+
+classinstance 128027 class_ref 130203 // mymain
+  name ""   xyz 10 9 2000 life_line_z 2000
+classinstance 128155 class_ref 128795 // dynamic
+  name ""   xyz 142 10 2000 life_line_z 2000
+classinstance 128283 class_ref 128539 // boundstest
+  name ""   xyz 211 11 2000 life_line_z 2000
+classinstance 128411 class_ref 128667 // inittest
+  name ""   xyz 315 11 2000 life_line_z 2000
+classinstance 128539 class_ref 128283 // leaktest
+  name ""   xyz 417 10 2000 life_line_z 2000
+classinstance 131355 class_ref 128923 // cat
+  name ""   xyz 525 9 2000 life_line_z 2000
+classinstance 131483 class_ref 128155 // dog
+  name ""   xyz 628 10 2000 life_line_z 2000
+classinstance 131611 class_ref 131355 // zebra
+  name ""   xyz 727 10 2000 life_line_z 2000
+note 133531 "stackTest and heaptest are similar in algorithm to staticTest"
+  xyzwh 422 385 2005 208 63
+durationcanvas 128667 classinstance_ref 128027 // :mymain
+  xyzwh 30 79 2010 11 40
+end
+durationcanvas 128795 classinstance_ref 128155 // :dynamic
+  xyzwh 164 79 2010 11 25
+end
+durationcanvas 130331 classinstance_ref 128411 // :inittest
+  xyzwh 334 84 2010 11 375
+  overlappingdurationcanvas 130587
+    xyzwh 340 90 2020 11 262
+    overlappingdurationcanvas 131739
+      xyzwh 346 120 2030 11 25
+    end
+  end
+  overlappingdurationcanvas 130843
+    xyzwh 340 374 2020 11 25
+  end
+  overlappingdurationcanvas 131099
+    xyzwh 340 421 2020 11 25
+  end
+end
+durationcanvas 131995 classinstance_ref 131355 // :cat
+  xyzwh 544 157 2010 11 25
+end
+durationcanvas 132251 classinstance_ref 131483 // :dog
+  xyzwh 647 190 2010 11 25
+end
+durationcanvas 132507 classinstance_ref 131355 // :cat
+  xyzwh 544 226 2010 11 25
+end
+durationcanvas 132763 classinstance_ref 131355 // :cat
+  xyzwh 544 259 2010 11 26
+end
+durationcanvas 133019 classinstance_ref 131483 // :dog
+  xyzwh 647 293 2010 11 25
+end
+durationcanvas 133275 classinstance_ref 131483 // :dog
+  xyzwh 647 328 2010 11 25
+end
+msg 128923 synchronous
+  from durationcanvas_ref 128667
+  to durationcanvas_ref 128795
+  yz 79 2015 msg operation_ref 129051 // "runTest(in testId : int, in mode : int) : bool"
+  show_full_operations_definition default drawing_language default
+  args "INIT"
+  label_xy 63 63
+msg 130459 synchronous
+  from durationcanvas_ref 128795
+  to durationcanvas_ref 130331
+  yz 84 2020 msg operation_ref 128923 // "execute() : bool"
+  show_full_operations_definition default drawing_language default
+  label_xy 232 68
+reflexivemsg 130715 synchronous
+  to durationcanvas_ref 130587
+  yz 90 2025 msg operation_ref 136987 // "staticTest() : bool"
+  show_full_operations_definition default drawing_language default
+  label_xy 354 71
+reflexivemsg 130971 synchronous
+  to durationcanvas_ref 130843
+  yz 374 2025 msg operation_ref 137115 // "stackTest() : bool"
+  show_full_operations_definition default drawing_language default
+  label_xy 350 356
+reflexivemsg 131227 synchronous
+  to durationcanvas_ref 131099
+  yz 421 2025 msg operation_ref 137243 // "heapTest() : bool"
+  show_full_operations_definition default drawing_language default
+  label_xy 351 401
+reflexivemsg 131867 synchronous
+  to durationcanvas_ref 131739
+  yz 120 2035 msg operation_ref 135579 // "getMode() : int"
+  show_full_operations_definition default drawing_language default
+  label_xy 359 102
+msg 132123 synchronous
+  from durationcanvas_ref 130587
+  to durationcanvas_ref 131995
+  yz 157 2035 msg operation_ref 129691 // "setId(in id : int) : void"
+  show_full_operations_definition default drawing_language default
+  label_xy 431 139
+msg 132379 synchronous
+  from durationcanvas_ref 130587
+  to durationcanvas_ref 132251
+  yz 190 2025 msg operation_ref 129947 // "setId(in id : int) : void"
+  show_full_operations_definition default drawing_language default
+  label_xy 483 172
+msg 132635 synchronous
+  from durationcanvas_ref 130587
+  to durationcanvas_ref 132507
+  yz 226 2025 msg operation_ref 129819 // "getId() : int"
+  show_full_operations_definition default drawing_language default
+  label_xy 431 208
+msg 132891 synchronous
+  from durationcanvas_ref 130587
+  to durationcanvas_ref 132763
+  yz 259 2025 msg operation_ref 129563 // "getSpecies() : int"
+  show_full_operations_definition default drawing_language default
+  label_xy 416 241
+msg 133147 synchronous
+  from durationcanvas_ref 130587
+  to durationcanvas_ref 133019
+  yz 293 2025 msg operation_ref 130075 // "getId() : int"
+  show_full_operations_definition default drawing_language default
+  label_xy 483 275
+msg 133403 synchronous
+  from durationcanvas_ref 130587
+  to durationcanvas_ref 133275
+  yz 328 2025 msg operation_ref 129563 // "getSpecies() : int"
+  show_full_operations_definition default drawing_language default
+  label_xy 468 310
+end

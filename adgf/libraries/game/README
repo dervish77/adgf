@@ -1,0 +1,102 @@
+README for LibGame
+------------------
+
+LibGame is a set of C++ classes useful for creating games.  These classes fall into 
+one of several categories:
+
+    - core (initialization, inputs events, timers)
+    - graphics (primitives, sprites (BMP), surfaces)
+    - audio (WAV)
+    - video (future)
+    - screens
+    - game state
+    - threading
+
+----------------------------------------------------------------------------
+
+Files within this directory:
+
+    demo/       - source for example game using LibGame (tic tac toe)
+
+    docs/       - generated docs from UML model
+
+    ide/        - IDE project files
+
+    include/    - common include files
+
+    lib/        - common libraries
+
+	model/		- UML model for LibGame
+
+	src/		- source for LibGame library (output tree for generated code)
+
+    reference/  - reference code from DrawSdl "C" library
+
+	Makefile	- makefile to make target 'LibGame' for Unix systems
+
+	README		- this file
+
+	REVISION	- revision history
+
+	common.mk	- common tools stuff
+
+    coverage.sh - code coverage test script
+
+	timing.mk	- build timing stuff
+
+----------------------------------------------------------------------------
+
+To unpack distribution file:
+
+	tar xzvf game-x.x.x.tgz
+	
+----------------------------------------------------------------------------
+
+To make and install LibGame executables:
+
+	cd game
+
+	<edit common.mk to change compilers if necessary>
+	<edit Makefile to change installed directory if desired>
+	
+	make all
+
+----------------------------------------------------------------------------
+
+To use example game:
+
+//	Usage:	game [-h|-v]|[-l <file>]
+//
+//	Options:
+//		        -h	        - get options help
+//
+//              -v          - display version
+//
+//              -l <file>   - load saved game
+
+----------------------------------------------------------------------------
+
+Examples:
+
+show help, list usage
+
+    game -h
+
+show version
+
+    game -v
+
+run demo with custom starting pattern
+
+    game -g mygame.save
+
+----------------------------------------------------------------------------
+
+Notes:
+
+
+----------------------------------------------------------------------------
+last update 
+07/07/2010
+
+

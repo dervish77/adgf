@@ -1,0 +1,10 @@
+REVISION history for bindump
+----------------------------
+
+0.9	02/21/96	Beta release.
+
+0.8  	02/21/96  	added column dividers for binary section 
+
+0.6  	02/21/96  	fixed bug in binary output
+
+0.0  	02/12/96  	Originated

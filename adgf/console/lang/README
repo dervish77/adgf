@@ -1,0 +1,104 @@
+README for Sentence Diagrammer Test Program
+-------------------------------------------
+
+
+Files within this directory:
+
+	README		- this file
+
+	lang.c		- main program routines
+	lang.h		- all necessary defines and types
+
+	def_dict	- default dictionary file
+
+	makefile	- makefile to make target 'lang'
+
+
+----------------------------------------------------------------------------
+
+Dictionary format:
+
+count
+t word_string
+...
+t word_string
+
+
+valid types (t) are:
+	D	- determiner 	"a", "an", "the"
+	N	- noun 		"boy", "dog"
+	V	- verb 		"is", "run"
+	U	- pronoun 	"he", "she", "it"
+	P	- preposition 	"in", "on", "above"
+	A	- adjective 	"red", "big"
+	R	- adverb	"slowly", "running"	
+ 
+
+example file:
+
+5
+D the
+N boy
+V is
+P at 
+N home
+
+
+----------------------------------------------------------------------------
+
+Sentence diagrams:
+
+S -> NP VP		a sentence is a noun phrase and a verb phrase
+
+VP -> V (Adv*) NP	a verb phrase is a verb, at least one adverb 
+			and a noun phrase
+
+VP -> (Adv*) V NP	a verb phrase is at least one adverb, a verb,  
+			and a noun phrase
+
+NP -> (D) (Adj*) N	a noun phrase is a determiner, at least one adjective
+			and a noun
+
+PP -> (Prep*) NP	a prepositional phrase is at least one preposition
+			and a noun phrase
+
+() means this part is optional
+
+
+Examples:
+
+The dog is home.
+
+	NP -> The dog 			-> The 		-> D
+					-> dog		-> N
+
+	VP -> is home.			-> is		-> V
+					-> home.	-> N
+
+
+The big boy is on the yellow bus.
+
+	NP -> The big boy 		-> The 		-> D
+					-> big		-> Adj
+					-> boy		-> N
+
+	VP -> is on the yellow bus.	-> is			-> V
+					-> on the yellow bus.	-> PP
+
+	PP -> on the yellow bus.	-> on			-> Prep
+					-> the yellow bus	-> NP
+
+	NP -> the yellow bus.		-> the		-> D
+					-> yellow	-> Adj
+					-> bus.		-> N
+
+
+The girl ran quickly home.
+
+	NP -> The girl 			-> The 		-> D
+					-> girl		-> N
+
+	VP -> ran quickly home.		-> ran		-> V
+					-> quickly	-> Adv
+					-> home.	-> N
+

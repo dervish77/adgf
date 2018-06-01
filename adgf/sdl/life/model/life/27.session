@@ -1,0 +1,14 @@
+window_sizes 1801 922 273 1165 703 82
+diagrams
+  active  classdiagram_ref 129179 // animals
+    716 397 100 4 0 0
+end
+show_stereotypes
+selected usecasediagram_ref 130331 // use cases
+open
+  usecaseview_ref 128027 // use cases
+  classdiagram_ref 128027 // tests
+  artifact_ref 132379 // zebra
+end
+end
+verbose

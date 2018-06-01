@@ -1,0 +1,289 @@
+# depslib dependency file v1.0
+1308187901 source:/scratch/bl12960/misc/adgf/dsp/draw-sdl.cpp
+	<stdlib.h>
+	<stdio.h>
+	<sys/time.h>
+	<unistd.h>
+	<SDL/SDL.h>
+	"draw-sdl.h"
+
+1330136987 h"
+
+1308187901 /scratch/bl12960/misc/adgf/dsp/draw-sdl.h
+	<SDL/SDL.h>
+
+1308187901 >
+
+1308199390 source:/scratch/bl12960/misc/adgf/dsp/filters.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"filters.h"
+	"waveform.h"
+
+1308199141 /scratch/bl12960/misc/adgf/dsp/filters.h
+	"waveform.h"
+
+1308230761 /scratch/bl12960/misc/adgf/dsp/waveform.h
+
+1308232053 source:/scratch/bl12960/misc/adgf/dsp/main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"main.h"
+	"waveform.h"
+	"filter.h"
+	"mixer.h"
+
+1330234901 
+
+1308188968 /scratch/bl12960/misc/adgf/dsp/main.h
+	"draw-sdl.h"
+
+1308194890 source:/scratch/bl12960/misc/adgf/dsp/random.cpp
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<time.h>
+
+1308232927 source:/scratch/bl12960/misc/adgf/dsp/waveform.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	"waveform.h"
+	"random.h"
+
+1308194894 /scratch/bl12960/misc/adgf/dsp/random.h
+
+1308232259 source:/scratch/bl12960/misc/adgf/dsp/filter.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"filter.h"
+	"waveform.h"
+
+1308232169 /scratch/bl12960/misc/adgf/dsp/filter.h
+	"waveform.h"
+
+1308232371 /scratch/bl12960/misc/adgf/dsp/mixer.h
+	"waveform.h"
+
+1330576261 source:c:\cygwin\home\bl12960\misc\adgf\audio\main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"main.h"
+	"audioCore.h"
+
+1330235466 form.h"
+
+1330576131 c:\cygwin\home\bl12960\misc\adgf\audio\main.h
+
+1330232405 c:\cygwin\home\bl12960\misc\adgf\audio\waveform.h
+
+1330235513 c:\cygwin\home\bl12960\misc\adgf\audio\mixer.h
+	"audioWaveform.h"
+
+1330235466 source:c:\cygwin\home\bl12960\misc\adgf\audio\mixer.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"mixer.h"
+	"audioWaveform.h"
+
+1330129450 source:c:\cygwin\home\bl12960\misc\adgf\audio\random.cpp
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<time.h>
+
+1330232428 source:c:\cygwin\home\bl12960\misc\adgf\audio\waveform.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	"waveform.h"
+	"random.h"
+
+1330129450 c:\cygwin\home\bl12960\misc\adgf\audio\random.h
+
+1330575982 source:c:\cygwin\home\bl12960\misc\adgf\audio\audiocore.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"audioCore.h"
+	"audioUtils.h"
+	"audioBlocks.h"
+	"audioModel.h"
+	"audioFilter.h"
+	"audioMixer.h"
+	"audioWaveform.h"
+
+1330231019 .h"
+
+1330575688 c:\cygwin\home\bl12960\misc\adgf\audio\audiocore.h
+	"audioUtils.h"
+	"audioModel.h"
+	"audioFilter.h"
+	"audioMixer.h"
+	"audioWaveform.h"
+
+1330221172 ks.h"
+
+1330569687 c:\cygwin\home\bl12960\misc\adgf\audio\audioutils.h
+	"usbstk5515.h"
+
+1330221585 5.h"
+
+1330567270 c:\cygwin\home\bl12960\misc\adgf\audio\audioblocks.h
+	"audioUtils.h"
+	"audioModel.h"
+
+1330233305 s.h"
+
+1330569724 source:c:\cygwin\home\bl12960\misc\adgf\audio\audioutils.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"audioUtils.h"
+
+1330567402 source:c:\cygwin\home\bl12960\misc\adgf\audio\audioblocks.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"audioBlocks.h"
+	"audioModel.h"
+
+1330136991 source:c:\cygwin\home\bl12960\misc\adgf\audio\filter.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"filter.h"
+	"waveform.h"
+
+1330136987 c:\cygwin\home\bl12960\misc\adgf\audio\filter.h
+	"waveform.h"
+
+1330574353 source:c:\cygwin\home\bl12960\misc\adgf\audio\audiowaveform.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	"audioWaveform.h"
+	"random.h"
+
+1330574322 c:\cygwin\home\bl12960\misc\adgf\audio\audiowaveform.h
+	"audioUtils.h"
+
+1330441587 source:/scratch/bl12960/misc/adgf/audio/audioBlocks.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"audioBlocks.h"
+	"audioModel.h"
+
+1330441601 /scratch/bl12960/misc/adgf/audio/audioBlocks.h
+	"audioUtils.h"
+	"audioModel.h"
+
+1330221585 /scratch/bl12960/misc/adgf/audio/audioUtils.h
+	"usbstk5515.h"
+
+1330441510 /scratch/bl12960/misc/adgf/audio/audioModel.h
+	"audioUtils.h"
+
+1330441560 source:/scratch/bl12960/misc/adgf/audio/audioModel.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"audioBlocks.h"
+
+1330221102 source:/scratch/bl12960/misc/adgf/audio/audioUtils.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"audioUtils.h"
+
+1330470327 source:/scratch/bl12960/misc/adgf/audio/audioWaveform.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	"audioWaveform.h"
+	"random.h"
+
+1330470317 /scratch/bl12960/misc/adgf/audio/audioWaveform.h
+	"audioUtils.h"
+
+1330129450 /scratch/bl12960/misc/adgf/audio/random.h
+
+1330470474 source:/scratch/bl12960/misc/adgf/audio/main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"main.h"
+	"audioCore.h"
+	"mixer.h"
+
+1330452685 /scratch/bl12960/misc/adgf/audio/main.h
+
+1330470831 /scratch/bl12960/misc/adgf/audio/audioCore.h
+	"audioUtils.h"
+	"audioModel.h"
+	"audioWaveform.h"
+
+1330235513 /scratch/bl12960/misc/adgf/audio/mixer.h
+	"audioWaveform.h"
+
+1330235466 source:/scratch/bl12960/misc/adgf/audio/mixer.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"mixer.h"
+	"audioWaveform.h"
+
+1330129450 source:/scratch/bl12960/misc/adgf/audio/random.cpp
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<time.h>
+
+1330470330 source:/scratch/bl12960/misc/adgf/audio/audioCore.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"audioCore.h"
+	"audioBlocks.h"
+	"audioModel.h"
+
+1330575496 c:\cygwin\home\bl12960\misc\adgf\audio\audiomodel.h
+	"audioUtils.h"
+
+1330575522 source:c:\cygwin\home\bl12960\misc\adgf\audio\audiomodel.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"audioBlocks.h"
+
+1330570003 c:\cygwin\home\bl12960\misc\adgf\audio\audiomixer.h
+	"audioWaveform.h"
+
+1330570040 source:c:\cygwin\home\bl12960\misc\adgf\audio\audiomixer.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"audioMixer.h"
+	"audioWaveform.h"
+
+1330575354 source:c:\cygwin\home\bl12960\misc\adgf\audio\audiofilter.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"audioFilter.h"
+	"audioModel.h"
+	"audioWaveform.h"
+
+1330572881 c:\cygwin\home\bl12960\misc\adgf\audio\audiofilter.h
+	"audioWaveform.h"
+

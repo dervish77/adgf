@@ -1,0 +1,122 @@
+README for Animation Demo for Articulated Structures			4/21/95
+-------------------------------------------------------------------------------
+
+This directory contains some demo software for a simple demo of animating
+an articulated structure consisting of a single chain of links.  This
+software utilizes the simple X library known as LIBSX.  You must have the
+library file 'libsx.a' compiled/installed on your target system.  See the
+notes below for information on obtaining LIBSX.  
+
+The articulated structure itself is defined by an input file with the format 
+as shown below.  The user interface is briefly described below.  Currently this
+software only supports single chains with no branches, supports only a rotation
+about the 'z' axis (using right handed coordinates).  The actual animation 
+produced uses forward kinematic techniques of either reading a new state 
+vector from a table or generating a randomized delta state vector.  The state
+vector table is limited to 20 frames per cycle, and currently only supports 
+4 links in the chain (sorry).
+
+
+User interface:
+	File menu
+	   Open...		- opens and loads input file
+	   About...		- about message popup
+	   Help...		- brief online help
+	   Quit			- quit program
+
+	Anim Mode menu
+	   Manual		- not supported
+	   Linear		- not supported
+	   Circle		- not supported
+	   Random		- not supported
+	   Forward Table	- forward kinematics using state vector table
+	   Forward Random	- forward kinematics using random state vector
+
+	Run button		- run animation
+
+	Stop button		- stop animation
+
+	Scroll bar		- change desired frame rate
+
+
+Input file format:
+	num_links
+	type_link ox oy oz tl vl rx ry rz 
+	end_type 
+	motion_type
+	num_frames_per_cycle
+	l1_zrot ... ln_zrot
+
+    where
+	num_links	- total number of links in hierarchy (int)
+	type_link	- 4 character keyword (root, link, or brch)
+	ox, oy, oz	- origin of link (only valid if root) (float triplet)
+	tl		- total length of link (float)
+	vl		- visible length of link (float)
+	rx, ry, rz	- rotation about each axis (float degrees)
+	end_type	- 6 character keyword (square, circle, or triang)
+	motion_type	- 6 character keyword (manual, linear, circle, or random)
+	num_frames	- number of frames per animation cycle (0 = no table)
+	ln_zrot		- z axis rotation for nth link (one value per link)
+
+Example input file:
+	4
+	root -20.0 0 0 10.0 10.0 0 0 0.0
+	link 0 0 0 10.0 10.0 0 0 10.0
+	link 0 0 0 10.0 10.0 0 0 20.0
+	link 0 0 0 10.0 10.0 0 0 30.0
+	square
+	manual
+	6
+	0.0 10.0 20.0 30.0
+	2.0 14.0 26.0 38.0
+	4.0 18.0 32.0 46.0
+	6.0 22.0 38.0 54.0
+	4.0 18.0 32.0 46.0
+	2.0 14.0 26.0 38.0
+
+
+Files contained in this directory:
+
+  README	- this file
+
+  libsx.h	- required LIBSX header file 
+  main.c	- main program which sets up user interface stuff
+  main.h	- contains main data structure 
+  callbacks.c	- callback functions for user interface
+  callbacks.h	- prototypes of callback functions
+  invkine.c	- animation support functions
+  invkine.h	- defines for link, end effector and anim structures
+  vecmath.c	- collection of vector and matrix functions
+  vecmath.h	- defines for vector and matrix types
+
+  makefile	- makefile for all of this
+
+  test1.anim	- example input file, connected links
+  test2.anim	- example input file, unconnected links
+  curl1.anim	- yet another example, curling connected links
+  curl2.anim	- yet another example, curling unconnected links
+
+  anim.html	- 'html' page describing animation of articulated structures
+  animscn1.gif 	- sample screen shot
+  animscn2.gif	- sample screen shot
+  animscn3.gif	- sample screen shot
+
+Enjoy!!
+
+Brian Lingard
+
+
+--------------------------
+
+Notes: Obtaining LIBSX
+
+Libsx can be obtaining via anonymous ftp from "ftp.funet.fi" at 
+the path:
+
+	
+
+Libsx has been successfully compiled on most workstations supporting 
+the Athena widget set.
+
+

@@ -1,0 +1,15 @@
+#VMRL V1.0 ascii
+Separator {
+    Transform {
+        translation     0.000000 0.000000 0.000000
+        scaleFactor     6.000000 8.000000 10.000000
+    }
+    Material {
+        ambientColor    0.500000 0.500000 0.500000
+        diffuseColor    0.925490 0.192157 0.176471
+        specularColor   0.100000 0.100000 0.100000
+        shininess       0.100000
+    }
+    Cone {
+    }
+}

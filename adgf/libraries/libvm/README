@@ -1,0 +1,90 @@
+Welcome to LIBVM version 0.1 (alpha) --- released 22 Jan 1997
+____________________________________________________________
+
+
+LIBVM is a Vector and Matrix math library package developed for use in
+computer graphics applications.  The package consists of useful macros,
+2D vector functions, 3D vector functions, matrix functions, and
+some computer graphics specific functions.
+
+
+
+
+__________________________________________________________________________
+
+Building LIBVM:
+
+
+To unpack distribution type:
+
+	gunzip libvm-0.1.tar.gz
+	tar xvf libvm-0.1.tar
+
+
+To make everything (library, regress, and install) type:
+
+	cd libvm
+	make
+
+
+To make just the libvm.a library type:
+
+	cd libvm
+	make libvm
+
+
+To run the regression test programs type:
+
+	cd libvm/test
+	make regress
+
+
+To install edit the top level Makefile, for variables INSTALL_LIB_PATH
+and INSTALL_INCLUDE_PATH, then type:
+
+	cd libvm
+	make install
+
+
+To uninstall type:
+
+	cd libvm
+	make uninstall
+
+
+__________________________________________________________________________
+
+Distribution Contents:
+
+	README			- this file
+
+	REVISION		- revision history summary
+
+	COPYING			- copying policy and copyleft statement
+
+	Makefile		- top level makefile
+
+	libvm_defs		- configuration setup info
+
+	include/vm.h		- public libvm header file
+	include/vmprivat.h	- private libvm header file
+
+	src/vm_vec2.c		- 2D vector functions
+	src/vm_vec3.c		- 3D vector functions
+	src/vm_mat.c		- matrix functions
+	src/vm_cg.c		- computer graphics functions
+	src/makefile		- makefile for libvm.a
+
+	docs/libvm.txt		- user's manual in ascii
+
+	test/testvec2.c		- regression test for 2D vector functions
+	test/testvec3.c		- regression test for 3D vector functions
+	test/testmat.c		- regression test for matrix functions
+	test/makefile		- makefile for tests
+
+	lib/			- location of libvm.a once built
+
+__________________________________________________________________________
+
+Last Updated:  September 26, 1997
+

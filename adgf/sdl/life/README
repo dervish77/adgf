@@ -1,0 +1,108 @@
+README for Life
+---------------
+
+Life is an implementation of Conway's Game of Life.    
+
+Conway's Rules
+
+For a space that is 'populated':
+    Each cell with one or no neighbors dies, as if by loneliness. 
+    Each cell with four or more neighbors dies, as if by overpopulation. 
+    Each cell with two or three neighbors survives. 
+For a space that is 'empty' or 'unpopulated'
+    Each cell with three neighbors becomes populated. 
+
+
+----------------------------------------------------------------------------
+
+Files within this directory:
+
+    docs/       - generated docs from UML model
+
+    ide/        - IDE project files
+
+    include/    - common include files
+
+    lib/        - common libraries
+
+	model/		- UML model for Life
+
+	src/		- source for Life library (output tree for generated code)
+
+    ui/         - source for LibSDL based UI program (not generated)
+
+	Makefile	- makefile to make target 'Life' for Unix systems
+
+	README		- this file
+
+	REVISION	- revision history
+
+	common.mk	- common tools stuff
+
+    coverage.sh - code coverage test script
+
+	timing.mk	- build timing stuff
+
+----------------------------------------------------------------------------
+
+To unpack distribution file:
+
+	tar xzvf life-x.x.x.tgz
+	
+----------------------------------------------------------------------------
+
+To make and install Life executables:
+
+	cd life
+
+	<edit common.mk to change compilers if necessary>
+	<edit Makefile to change installed directory if desired>
+	
+	make all
+
+----------------------------------------------------------------------------
+
+To use Life:
+
+//	Usage:	life [-h|-v]|[-f <file>|-p #|-r #]
+//
+//	Options:
+//		        -h	        - get options help
+//              -v          - display version
+//
+//              -f <file>   - use custom pattern from file
+//
+//		        -p #        - use pre-defined pattern
+//
+//              -r #        - use alternate rules
+
+----------------------------------------------------------------------------
+
+Examples:
+
+show help, list pre-defined patterns
+
+    life -h
+
+show version
+
+    life -v
+
+run demo with custom starting pattern
+
+    life -f cool.cells
+
+run demo with pre-defined starting pattern
+
+    life -p 6
+
+----------------------------------------------------------------------------
+
+Notes:
+
+
+----------------------------------------------------------------------------
+last update 
+06/24/2010
+
+

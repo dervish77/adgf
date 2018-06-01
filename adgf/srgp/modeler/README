@@ -1,0 +1,19 @@
+3D Modeler
+
+
+This directory contains source code for a polygon based 3D modeling 
+program.  The supported shapes are rectangular solids, cylinders, and 
+a right angle prism.  Consult the file "modeler.c" for the format of the 
+object description file.  The included files are:
+
+	modeler.c	- main program
+	modlutls.h	- primitive generation functions
+	unitutls.h	- unit sized primitive functions
+	mathutls.h	- math related functions
+	object 		- sample object decription file
+	data.exp	- expected data output file
+	makefile	- makefile for above
+
+Brian Lingard
+March 1995
+

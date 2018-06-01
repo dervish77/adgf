@@ -1,0 +1,42 @@
+format 72
+
+classcanvas 129435 class_ref 139291 // GameEvent
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  xyz 7 127 2000
+end
+classcanvas 129563 class_ref 140315 // GameMouse
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  xyz 197 59 2000
+end
+classcanvas 129819 class_ref 140059 // GameKey
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility yes show_members_stereotype default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  xyz 259 175 2006
+end
+classcanvas 130075 class_ref 140187 // GameTimer
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  xyz 258 268 2006
+end
+classcanvas 130331 class_ref 140443 // GameButtonState
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  xyz 595 5 2000
+end
+classcanvas 130459 class_ref 139547 // GamePoint
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility yes show_members_stereotype default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  xyz 443 5 2006
+end
+relationcanvas 129691 relation_ref 146331 // <directional composition>
+  from ref 129435 z 2001 to ref 129563
+  role_a_pos 153 109 3000 no_role_b
+  multiplicity_a_pos 180 142 3000 no_multiplicity_b
+end
+relationcanvas 129947 relation_ref 145947 // <directional composition>
+  from ref 129435 z 2007 to ref 129819
+  role_a_pos 230 183 3000 no_role_b
+  multiplicity_a_pos 242 216 3000 no_multiplicity_b
+end
+relationcanvas 130587 relation_ref 146203 // <directional composition>
+  from ref 129563 z 2007 to ref 130459
+  role_a_pos 395 26 3000 no_role_b
+  multiplicity_a_pos 426 59 3000 no_multiplicity_b
+end
+end

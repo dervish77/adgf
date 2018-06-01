@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="audioBlocks.cpp" open="1" top="0" tabpos="9">
+		<Cursor position="1748" topLine="76" />
+	</File>
+	<File name="audioBlocks.h" open="0" top="0" tabpos="7">
+		<Cursor position="742" topLine="27" />
+	</File>
+	<File name="audioCore.cpp" open="1" top="0" tabpos="4">
+		<Cursor position="528" topLine="9" />
+	</File>
+	<File name="audioCore.h" open="1" top="0" tabpos="3">
+		<Cursor position="549" topLine="6" />
+	</File>
+	<File name="audioFilter.cpp" open="1" top="1" tabpos="6">
+		<Cursor position="193" topLine="56" />
+	</File>
+	<File name="audioFilter.h" open="1" top="0" tabpos="5">
+		<Cursor position="199" topLine="0" />
+	</File>
+	<File name="audioMixer.cpp" open="1" top="0" tabpos="7">
+		<Cursor position="189" topLine="20" />
+	</File>
+	<File name="audioMixer.h" open="1" top="0" tabpos="8">
+		<Cursor position="759" topLine="16" />
+	</File>
+	<File name="audioModel.cpp" open="0" top="0" tabpos="6">
+		<Cursor position="1701" topLine="0" />
+	</File>
+	<File name="audioModel.h" open="0" top="0" tabpos="5">
+		<Cursor position="1831" topLine="0" />
+	</File>
+	<File name="audioUtils.cpp" open="0" top="0" tabpos="10">
+		<Cursor position="1194" topLine="54" />
+	</File>
+	<File name="audioUtils.h" open="0" top="0" tabpos="9">
+		<Cursor position="985" topLine="62" />
+	</File>
+	<File name="audioWaveform.cpp" open="0" top="0" tabpos="12">
+		<Cursor position="853" topLine="41" />
+	</File>
+	<File name="audioWaveform.h" open="0" top="0" tabpos="11">
+		<Cursor position="1410" topLine="58" />
+	</File>
+	<File name="main.cpp" open="1" top="0" tabpos="1">
+		<Cursor position="249" topLine="0" />
+	</File>
+	<File name="main.h" open="1" top="0" tabpos="2">
+		<Cursor position="257" topLine="0" />
+	</File>
+	<File name="random.cpp" open="0" top="0" tabpos="11">
+		<Cursor position="1938" topLine="28" />
+	</File>
+	<File name="random.h" open="0" top="0" tabpos="0">
+		<Cursor position="0" topLine="23" />
+	</File>
+</CodeBlocks_layout_file>

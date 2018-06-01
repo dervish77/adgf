@@ -1,0 +1,68 @@
+README for libsx version of Emu85
+____________________________________________________________________________
+
+
+This is an 
+
+Please find the following files in the distribution:
+
+	README		- this file
+	COPYING		- copying policy
+	REVISION	- revision history
+	main.c		- main program (sets up GUI)
+	main.h		- main header 
+	emu.c		- main emu routines
+	emu.h		- top level header
+	callback.c	- callback routines for menus etc.
+	callback.h	- protos of callback routines
+	drwlibsx.c	- libsx specific drawing routines
+	libsx.h		- libsx header 
+	vecmath.h	- useful defines and types
+	makefile	- make file for Unix
+
+____________________________________________________________________________
+
+Making and installing:
+
+	Unpack by -> gunzip emu85.tar.gz
+	          -> tar xvf emu85.tar
+
+	Make by   -> cd emu85
+	          -> make all
+
+	This will build the executable and install it into your 
+	'$HOME/bin' directory.  If you prefer to install emu85 somewhere 
+	else, edit the makefile to set the INSTALL_DIR variable to your 
+	desired location.
+
+	CAUTION:  READ the notes at the end of this file before attempting
+		  to build the executable.
+
+	This program has been successfully compiled on Sun workstations 
+	(Solaris 5.3) and SGI workstations (Irix 6.2 and 6.3).
+
+____________________________________________________________________________
+
+
+
+____________________________________________________________________________
+
+Notes:
+	
+	This program requires that you must have "libsx" installed on
+	your system.  Libsx is the simple X library which uses the 
+	Athena widget set and provides a easy way to create GUI's for
+	applications.
+
+	Libsx can be obtaining via anonymous ftp from "ftp.x.org" at
+	the path:
+
+		ftp.x.org:/contrib/libraries/libsx.tar.Z
+
+	Libsx has been successfully compiled on most workstations 
+	supporting the Athena widget set.
+
+____________________________________________________________________________
+
+Brian Lingard
+October 15, 1997

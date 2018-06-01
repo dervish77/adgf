@@ -1,0 +1,106 @@
+# depslib dependency file v1.0
+1277406912 source:/scratch/bl12960/misc/adgf/life/ide/LifeTest/main.cpp
+	<iostream>
+
+1277384695 source:/scratch/bl12960/misc/adgf/life/src/animal.cpp
+	<stdio.h>
+	<stdlib.h>
+	"animal.h"
+
+1276884668 /scratch/bl12960/misc/adgf/life/src/animal.h
+
+1277384694 source:/scratch/bl12960/misc/adgf/life/src/boundstest.cpp
+	<stdio.h>
+	<stdlib.h>
+	"boundstest.h"
+
+1276884668 /scratch/bl12960/misc/adgf/life/src/boundstest.h
+	"test.h"
+
+1276884667 /scratch/bl12960/misc/adgf/life/src/test.h
+
+1277384695 source:/scratch/bl12960/misc/adgf/life/src/cat.cpp
+	<stdio.h>
+	<stdlib.h>
+	"cat.h"
+
+1276884668 /scratch/bl12960/misc/adgf/life/src/cat.h
+	"animal.h"
+
+1277384695 source:/scratch/bl12960/misc/adgf/life/src/dog.cpp
+	<stdio.h>
+	<stdlib.h>
+	"dog.h"
+
+1276884668 /scratch/bl12960/misc/adgf/life/src/dog.h
+	"animal.h"
+
+1277384694 source:/scratch/bl12960/misc/adgf/life/src/inittest.cpp
+	<stdio.h>
+	<stdlib.h>
+	"inittest.h"
+
+1276884668 /scratch/bl12960/misc/adgf/life/src/inittest.h
+	"test.h"
+	"cat.h"
+	"dog.h"
+
+1277384695 source:/scratch/bl12960/misc/adgf/life/src/leaktest.cpp
+	<stdio.h>
+	<stdlib.h>
+	"leaktest.h"
+
+1276884668 /scratch/bl12960/misc/adgf/life/src/leaktest.h
+	"test.h"
+	"cat.h"
+	"dog.h"
+	"zebra.h"
+
+1276884668 /scratch/bl12960/misc/adgf/life/src/zebra.h
+	"animal.h"
+
+1277384695 source:/scratch/bl12960/misc/adgf/life/src/life.cpp
+	<stdio.h>
+	<stdlib.h>
+	"life.h"
+
+1276892003 /scratch/bl12960/misc/adgf/life/src/life.h
+	"boundstest.h"
+	"inittest.h"
+	"leaktest.h"
+
+1277385251 source:/scratch/bl12960/misc/adgf/life/src/main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"main.h"
+
+1277318908 /scratch/bl12960/misc/adgf/life/src/main.h
+	<stdio.h>
+	<string.h>
+	<ctype.h>
+	"mymain.h"
+	"version.h"
+
+1277384862 /scratch/bl12960/misc/adgf/life/src/mymain.h
+	"version.h"
+	"life.h"
+
+1277387550 /scratch/bl12960/misc/adgf/life/include/version.h
+
+1277385942 source:/scratch/bl12960/misc/adgf/life/src/mymain.cpp
+	<stdio.h>
+	<stdlib.h>
+	"mymain.h"
+
+1277384694 source:/scratch/bl12960/misc/adgf/life/src/test.cpp
+	<stdio.h>
+	<stdlib.h>
+	"test.h"
+
+1277384695 source:/scratch/bl12960/misc/adgf/life/src/zebra.cpp
+	<stdio.h>
+	<stdlib.h>
+	"zebra.h"
+

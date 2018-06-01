@@ -1,0 +1,147 @@
+Re: simple function to get URL
+
+Al Globus (globus@nas.nasa.gov)
+Wed, 8 Mar 1995 18:26:05 -0800 
+
+   Messages sorted by: [ date ][ thread ][ subject ][ author ] 
+   Next message: Gavin Bell: "Re: Shadow Volumes (was Re: Scenes with lots
+   of simple objects)" 
+   Previous message: Linas Vepstas: "Shadow Volumes (was Re: Scenes with
+   lots of simple objects)" 
+
+Thanx for all the responses. Most suggested libWWW -- but I
+failed to mention I wanted something small (say one file).
+In any case, David Yip and I implemented it. Thought you
+might like to see. There's some missing error checking
+and no timeout, but it seems to work ok on simple tests.
+The main() is just for testing
+
+======================= cut here ============================
+#include <assert.h>
+#include <string.h>
+#include <stdlib.h>
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <stdio.h>
+#include <netinet/in.h>
+#include <netdb.h>
+#include <unistd.h>
+
+#define ERROR 0
+/*
+Get the data at a URL and return it.
+Called is responsible for calling 'free' on
+returned *data.
+Returns 0 is something wrong.
+
+BUG: no timeouts and doesn't check all error returns
+*/
+#define BUF_SIZE 4096
+size_t getURLbyParts( void** data, char* machine, int port, char* file )
+{
+struct hostent *he;
+struct servent *se;
+struct sockaddr_in sin;
+int sock;
+int bytes;
+char buf[BUF_SIZE];
+char* results = 0;
+size_t size;
+char getString[2048]; /* BUG: use malloc, but freeing after error is a problem */
+
+data = 0;
+he = gethostbyname( machine );
+
+sock = socket(he->h_addrtype, SOCK_STREAM, 0);
+
+bzero((caddr_t)&sin, sizeof(sin));
+sin.sin_family = he->h_addrtype;
+if (bind(sock, &sin, sizeof(sin)) < 0)
+return ERROR;
+bcopy(he->h_addr, &sin.sin_addr, he->h_length);
+se = getservbyname("telnet", "tcp");
+
+sin.sin_port = port;
+if (connect(sock, &sin, sizeof(sin)) < 0)
+return ERROR;
+
+/* send GET message to http */
+sprintf(getString,"GET %s\n", file);
+if ( write( sock, getString, strlen(getString) != strlen(getString) ) )
+return ERROR;
+
+/* get data */
+size = 0;
+results = 0;
+while( (bytes = read(sock,buf,BUF_SIZE)) > 0) {
+int newSize = size + bytes;
+results = realloc( results, newSize );
+assert( results );
+bcopy( buf, results + size, bytes );
+size += bytes;
+}
+*data = (void*)results;
+return size;
+}
+
+/*
+Get the data at a URL and return it.
+Called is responsible for calling 'free' on
+returned *data.
+url must be of the form http://machine-name[:port]/file-name
+Returns 0 is something wrong.
+*/
+size_t getURL( void** data, char* url )
+{
+char* s;
+size_t size;
+char* machine;
+int machineLen; /* length of machine name */
+int port;
+char* file = 0;
+
+char* http = "http://";
+int httpLen = strlen( http );
+if ( !url ) return ERROR;
+if ( strncmp( http, url, httpLen) ) return 0;
+
+/* get the machine name */
+for( s = url + strlen(http) + 1; *s && (*s != ':') && (*s != '/'); s++ )
+;
+machineLen = s - url;
+machineLen -= httpLen;
+machine = (char*)malloc( machineLen + 1 ); assert( machine );
+strncpy( machine, url + httpLen, machineLen );
+
+/* get port number */
+if ( *s == ':' ) {
+port = atoi( ++s );
+while( *s && (*s != '/') )
+s++;
+} else {
+port = 80;
+}
+
+/* get the file name */
+if ( *s == '/' ) 
+file = s;
+else
+file = "/";
+
+size = getURLbyParts( data, machine, port, file );
+free( machine );
+return size;
+}
+
+void main( int argc, char** argv )
+{
+char* url = argv[1];
+void* data;
+size_t size = getURL( &data, url );
+}
+
+   Next message: Gavin Bell: "Re: Shadow Volumes (was Re: Scenes with lots
+   of simple objects)" 
+   Previous message: Linas Vepstas: "Shadow Volumes (was Re: Scenes with
+   lots of simple objects)" 
+

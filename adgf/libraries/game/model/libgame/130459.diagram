@@ -1,0 +1,71 @@
+format 62
+
+classinstance 128027 class_ref 130203 // mymain
+  name ""   xyz 10 9 2000 life_line_z 2000
+classinstance 128155 class_ref 128795 // dynamic
+  name ""   xyz 153 9 2000 life_line_z 2000
+classinstance 128283 class_ref 128539 // boundstest
+  name ""   xyz 308 9 2000 life_line_z 2000
+classinstance 128411 class_ref 128667 // inittest
+  name ""   xyz 455 9 2000 life_line_z 2000
+classinstance 128539 class_ref 128283 // leaktest
+  name ""   xyz 588 8 0 life_line_z 2000
+note 130331 "stackTest initializes numbers array on stack, then initializes letters array so that it overruns the numbers array"
+  xyzwh 431 83 2000 230 76
+note 130459 "heapTest performs same algorithm as stackTest but on the heap instead of the stack"
+  xyzwh 441 203 2005 203 81
+durationcanvas 128667 classinstance_ref 128027 // :mymain
+  xyzwh 30 79 2010 11 40
+end
+durationcanvas 128795 classinstance_ref 128155 // :dynamic
+  xyzwh 175 79 2010 11 25
+end
+durationcanvas 129051 classinstance_ref 128283 // :boundstest
+  xyzwh 336 86 2010 11 198
+  overlappingdurationcanvas 129307
+    xyzwh 342 97 2020 11 66
+    overlappingdurationcanvas 129819
+      xyzwh 348 131 2030 11 25
+    end
+  end
+  overlappingdurationcanvas 129563
+    xyzwh 342 213 2020 11 66
+    overlappingdurationcanvas 130075
+      xyzwh 348 245 2030 11 25
+    end
+  end
+end
+msg 128923 synchronous
+  from durationcanvas_ref 128667
+  to durationcanvas_ref 128795
+  yz 79 2015 msg operation_ref 129051 // "runTest(in testId : int, in mode : int) : bool"
+  show_full_operations_definition default drawing_language default
+  args "BOUNDS"
+  label_xy 55 63
+msg 129179 synchronous
+  from durationcanvas_ref 128795
+  to durationcanvas_ref 129051
+  yz 86 2020 msg operation_ref 128795 // "execute() : bool"
+  show_full_operations_definition default drawing_language default
+  label_xy 237 68
+reflexivemsg 129435 synchronous
+  to durationcanvas_ref 129307
+  yz 97 2025 msg operation_ref 136731 // "stackTest() : bool"
+  show_full_operations_definition default drawing_language default
+  label_xy 354 77
+reflexivemsg 129691 synchronous
+  to durationcanvas_ref 129563
+  yz 213 2025 msg operation_ref 136859 // "heapTest() : bool"
+  show_full_operations_definition default drawing_language default
+  label_xy 357 193
+reflexivemsg 129947 synchronous
+  to durationcanvas_ref 129819
+  yz 131 2035 msg operation_ref 135579 // "getMode() : int"
+  show_full_operations_definition default drawing_language default
+  label_xy 364 112
+reflexivemsg 130203 synchronous
+  to durationcanvas_ref 130075
+  yz 245 2035 msg operation_ref 135579 // "getMode() : int"
+  show_full_operations_definition default drawing_language default
+  label_xy 362 225
+end

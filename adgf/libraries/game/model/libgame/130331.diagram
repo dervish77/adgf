@@ -1,0 +1,40 @@
+format 72
+
+classcanvas 128027 class_ref 132507 // user
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 16 107 2000
+end
+usecasecanvas 128155 usecase_ref 128027 // loadPattern
+  xyzwh 156 48 3005 64 32 label_xy 160 80
+end
+usecasecanvas 128283 usecase_ref 128155 // executeSim
+  xyzwh 156 125 3005 64 32 label_xy 159 157
+end
+usecasecanvas 128411 usecase_ref 128283 // createPattern
+  xyzwh 156 203 3005 64 32 label_xy 155 235
+end
+usecasecanvas 128923 usecase_ref 134811 // loadPredefined
+  xyzwh 359 15 3005 64 32 label_xy 355 47
+end
+usecasecanvas 129051 usecase_ref 134939 // loadCustom
+  xyzwh 360 95 3005 64 32 label_xy 363 127
+end
+usecasecanvas 129179 usecase_ref 135067 // savePattern
+  xyzwh 360 202 3005 64 32 label_xy 362 234
+end
+line 128539 ----
+  from ref 128027 z 1999 to ref 128155
+line 128667 ----
+  from ref 128027 z 1999 to ref 128283
+line 128795 ----
+  from ref 128027 z 1999 to ref 128411
+simplerelationcanvas 129691 simplerelation_ref 128027
+  from ref 128155 z 3006 stereotype "<<include>>" xyz 259 44 3000 to ref 128923
+end
+simplerelationcanvas 129819 simplerelation_ref 128155
+  from ref 128155 z 3006 stereotype "<<include>>" xyz 260 85 3000 to ref 129051
+end
+simplerelationcanvas 129947 simplerelation_ref 128283
+  from ref 128411 z 3006 stereotype "<<include>>" xyz 259.5 217 3000 to ref 129179
+end
+end

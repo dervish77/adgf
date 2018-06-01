@@ -1,0 +1,47 @@
+README for 3D Modeling and Rendering Demo				3/20/96
+-----------------------------------------
+
+To make:
+
+	make <cr>
+
+
+Files in this distribution:
+
+add_prim.c		- add primitive dialog box
+callback.c		- main program callbacks
+callback.h		- main program callbacks
+creq.c			- color requestor dialog
+creq.h			- color requestor dialog
+del_prim.c		- delete primitive dialog box
+drawgen.c		- generic drawing functions
+drwlibsx.c		- drawing functions using libsx calls
+edit_cam.c		- edit camera dialog box
+edit_lit.c		- edit light dialog box
+editanim.c		- edit animation dialog box
+libsx.h			- libsx header
+main.c			- main program
+main.h			- main header
+makefile		- makefile
+modeler.c		- high level functions
+modeler.h		- all necessary defines and types
+translat.c		- geometric translation functions
+vecmath.c		- vector and matrix math functions
+vecmath.h		- vector and matrix math header
+
+models/anim.mdl		- various example model files
+models/box.mdl
+models/cone.mdl
+models/cube.mdl
+models/cylinder.mdl
+models/new.mdl
+models/planets.mdl
+models/save.mdl
+models/shapes.mdl
+models/shapes2.mdl
+models/sphere.mdl
+models/sphere2.mdl
+models/table.mdl
+models/temp.mdl
+models/test.mdl
+models/world.mdl

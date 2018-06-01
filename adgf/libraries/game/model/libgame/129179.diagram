@@ -1,0 +1,46 @@
+format 72
+
+classcanvas 128027 class_ref 128027 // animal
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  hidden_operations
+    operation_ref 128027 // animal
+    operation_ref 128155 // ~animal
+  xyz 103 8 2000
+end
+classcanvas 128155 class_ref 128923 // cat
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  hidden_operations
+    operation_ref 129179 // cat
+    operation_ref 129307 // ~cat
+  xyz 10 135 2000
+end
+classcanvas 128283 class_ref 128155 // dog
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  hidden_operations
+    operation_ref 128283 // dog
+    operation_ref 128411 // ~dog
+  xyz 131 135 2000
+end
+classcanvas 128667 class_ref 131355 // zebra
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  hidden_operations
+    operation_ref 138523 // zebra
+    operation_ref 138651 // ~zebra
+  xyz 255 136 2004
+end
+relationcanvas 128411 relation_ref 128923 // <generalisation>
+  from ref 128155 z 1999 to ref 128027
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 128539 relation_ref 128027 // <generalisation>
+  from ref 128283 z 1999 to ref 128027
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 128795 relation_ref 131483 // <generalisation>
+  from ref 128667 z 1999 to ref 128027
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+end

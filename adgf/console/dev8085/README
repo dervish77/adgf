@@ -1,0 +1,90 @@
+
+Welcome to Dev8085 version 0.1 (alpha) 
+
+__________________________________________________________________________
+
+
+Dev8085 is a software development package for the Intel 8085 8-bit
+microprocessor.  This package features an 8085 cross assembler,
+a binary dump utility, eprom utilities, module linker, and a basic 8085 
+emulator.  Please review the file docs/dev8085.txt for detailed 
+summary of all tools.
+
+__________________________________________________________________________
+
+To unpack and build the development package:
+
+	gunzip dev8085-0.1.tar.gz
+	tar xvf dev8085-0.1.tar
+	cd dev8085
+	make
+
+To run the test program:
+
+	cd dev8085/test
+	../bin/asm85 test.s85 -r test.raw
+	test test.raw
+
+	{Hopefully, the test will pass.  If it fails, try building 
+	 the package again from a newly downloaded distribution.}
+
+To install the tools:
+
+	cd dev8085
+	{edit dev8085.mk if necessary}
+	make install
+
+To uninstall the tools:
+
+	cd dev8085
+	make uninstall
+
+__________________________________________________________________________
+
+Distribution Contents:
+
+	README			    - this file
+
+	REVISION		    - revision history summary
+
+	COPYING			    - copying policy and copyleft statement
+
+	Makefile	    	- top level makefile
+
+	dev8085.mk	    	- make file defs
+
+	bin/README.txt		- directory for tools after compile
+	bin/emu85.cfg		- sample emu85 configuration file
+
+	docs/dev8085.txt	- user's manual for Dev8085
+    docs/mneumonics.txt - list of supported assembly mneumonics
+
+	include/dev8085.h	- header file for Dev8085
+
+	lib/README.txt		- directory for any special libraries
+
+	man/asm85.man		- man page for asm85
+	man/dump85.man		- man page for dump85
+	man/emu85.man		- man page for emu85
+	man/link85.man		- man page for link85
+	man/srec85.man		- man page for srec85
+
+	src/asm85.c		    - source for 8085 cross assembler
+	src/dump85.c		- source for binary file dump utility
+	src/emu85.c		    - source for 8085 SBC emulator
+	src/link85.c		- source for module linker
+	src/srec85.c		- source for S-records conversion utility
+	src/instr.c		    - instruction data structure
+	src/parse.c		    - parsing utilities
+	src/makefile		- makefile for src directory
+
+	test/test.c		    - source for test tool
+	test/test1.s85		- source for example 8085 code
+	test/test2.s85		- source for example 8085 code
+	test/makefile		- makefile for test directory
+
+
+__________________________________________________________________________
+
+Last Updated:  December 18, 1996
+

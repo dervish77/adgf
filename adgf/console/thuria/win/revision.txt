@@ -1,0 +1,38 @@
+Revisions of Dungeons of Thuria
+-------------------------------
+
+
+Dungeons of Thuria version 1.0 (beta) --- released 29 Oct 1998
+
+	Added ranking of scores.
+	Added a few new objects and commands. 
+	Added remaining puzzles. 
+	Added processing for magic words.
+	Improved examine command.
+
+
+Dungeons of Thuria version 0.5 (beta) --- released 22 Oct 1998
+
+	Fixed broken save game, load game, and new game functions.
+
+
+Dungeons of Thuria version 0.4 (beta) --- released 05 Apr 1998
+
+	First beta release.
+	Added proper save game, load game, and new game functions.
+
+
+Dungeons of Thuria version 0.3 (alpha) --- released 27 Mar 1998
+
+	Added rest of map and skeleton puzzle.
+
+
+Dungeons of Thuria version 0.2 (alpha) --- released 11 Mar 1998
+
+	Added some interior rooms and front door puzzle.
+
+
+Dungeons of Thuria version 0.1 (alpha) --- released 12 Dec 1996
+
+	Initial alpha release.
+

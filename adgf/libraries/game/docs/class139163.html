@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Documentation produced by the Html generator of Bouml (http://bouml.free.fr) -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Class GameSurface</title>
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body bgcolor="#ffffff">
+
+<div class = "title">Class GameSurface</div>
+<p></p>
+
+<!-- ============================================================= -->
+
+<a name="ref4_139163"></a>
+<p>Declaration :</p><ul>
+<li>C++ : class GameSurface </li></ul><p>Artifact : <a href="index.html#ref8_139163"><b>GameGraphics</b></a></p>
+<div class="sub">
+<a name="ref2_145819"></a>
+<table><tr><td><div class="element">Operation <b>GameSurface</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + GameSurface() : </li><li>C++ : public: GameSurface()</li></ul><a name="ref2_145947"></a>
+<table><tr><td><div class="element">Operation <b>~GameSurface</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + ~GameSurface() : </li><li>C++ : public: ~GameSurface()</li></ul><a name="ref2_146075"></a>
+<table><tr><td><div class="element">Operation <b>GetExtent</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + GetExtent() : <a href="class139419.html#refclass139419"><b>GameExtent</b></a></li><li>C++ : public: <a href="class139419.html#refclass139419"><b>GameExtent</b></a> GetExtent()</li></ul><a name="ref2_146203"></a>
+<table><tr><td><div class="element">Operation <b>GetTopLeft</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + GetTopLeft() : GamePoint</li><li>C++ : public: GamePoint GetTopLeft()</li></ul><a name="ref2_147227"></a>
+<table><tr><td><div class="element">Operation <b>SetAlpha</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + SetAlpha(in alpha : int) : void</li><li>C++ : public: void SetAlpha(int alpha)</li></ul><a name="ref2_147355"></a>
+<table><tr><td><div class="element">Operation <b>GetAlpha</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + GetAlpha() : int</li><li>C++ : public: int GetAlpha()</li></ul><a name="ref2_147483"></a>
+<table><tr><td><div class="element">Operation <b>SetColorKey</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + SetColorKey(in key : <a href="class139675.html#refclass139675"><b>GameColor</b></a>) : </li><li>C++ : public:  SetColorKey(const <a href="class139675.html#refclass139675"><b>GameColor</b></a> &amp; key)</li></ul><a name="ref2_147611"></a>
+<table><tr><td><div class="element">Operation <b>GetColorKey</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + GetColorKey() : <a href="class139675.html#refclass139675"><b>GameColor</b></a></li><li>C++ : public: <a href="class139675.html#refclass139675"><b>GameColor</b></a> GetColorKey()</li></ul><a name="ref2_147739"></a>
+<table><tr><td><div class="element">Operation <b>EnableColorKey</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + EnableColorKey(in enable : bool) : void</li><li>C++ : public: void EnableColorKey(bool enable)</li></ul><a name="ref1_147099"></a>
+<table><tr><td><div class="element">Attribute <b>surface</b></div></td></tr></table>
+<p>Declaration :</p><ul><li>Uml : - surface : SDL_Surface*</li><li>C++ : private: SDL_Surface* surface</li></ul><a name="ref0_145691"></a>
+<table><tr><td><div class="element">Relation <b>extent (&lt;directional composition&gt;)</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : - extent : <a href="class139419.html#refclass139419"><b>GameExtent</b></a>, multiplicity : 1</li><li>C++ : private: <a href="class139419.html#refclass139419"><b>GameExtent</b></a> extent</li></ul><a name="ref0_145947"></a>
+<table><tr><td><div class="element">Relation <b>topleft (&lt;directional composition&gt;)</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : - topleft : <a href="class139547.html#refclass139547"><b>GamePoint</b></a>, multiplicity : 1</li><li>C++ : private: <a href="class139547.html#refclass139547"><b>GamePoint</b></a> topleft</li></ul><a name="ref1_147995"></a>
+<table><tr><td><div class="element">Attribute <b>alpha</b></div></td></tr></table>
+<p>Declaration :</p><ul><li>Uml : - alpha : int</li><li>C++ : private: int alpha</li></ul><a name="ref0_153755"></a>
+<table><tr><td><div class="element">Relation <b>colorKey (&lt;directional composition&gt;)</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : - colorKey : <a href="class139675.html#refclass139675"><b>GameColor</b></a>, multiplicity : 1</li><li>C++ : private: <a href="class139675.html#refclass139675"><b>GameColor</b></a> colorKey</li></ul></div>
+<p>All public operations : <a href="class139163.html#ref2_147739"><b>EnableColorKey</b></a> , <a href="class139163.html#ref2_147355"><b>GetAlpha</b></a> , <a href="class139163.html#ref2_147611"><b>GetColorKey</b></a> , <a href="class139163.html#ref2_146075"><b>GetExtent</b></a> , <a href="class139163.html#ref2_146203"><b>GetTopLeft</b></a> , <a href="class139163.html#ref2_147227"><b>SetAlpha</b></a> , <a href="class139163.html#ref2_147483"><b>SetColorKey</b></a> </p>
+</body>
+</html>

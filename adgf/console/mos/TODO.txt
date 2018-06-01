@@ -1,0 +1,19 @@
+TODO for MOS
+____________
+
+- add real system tick interface, simulate on Linux using POSIX timer
+
+- modify task scheduler to use system tick
+
+- complete port for ez80 board
+
+- complete port for AVR Butterfly
+
+- create port for Arduino (requires porting to Wiring language from C)
+
+__________________________________________________________________
+
+Author: Brian S. Lingard
+
+Last Updated: April 29, 2010
+

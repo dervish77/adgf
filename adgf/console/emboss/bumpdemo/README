@@ -1,0 +1,51 @@
+This directory contains some code for a bump mapping demo.  This
+code is based upon some code found in Graphics Gems IV called
+"emboss.c".  Listed below are the contents of this directory:
+
+bumpdemo.c	- bump mapping demo program
+
+imagfile.c	- functions used in reading and writing BMP files
+
+imagfile.h	- image file structure for above
+
+emboss.c	- Graphics Gem IV source code
+
+embdemo.c	- modified gems code for simple demo
+
+testimag.c	- test program
+
+makefile	- makefile for all of above
+
+bumpmap.html	- Web page summary of bump mapping
+
+image1.gif	- simple bump mapped image
+
+image2.gif	- bump mapped texture image
+
+bumpfun.bmp	- some text to use a bump map
+
+texture.bmp	- a sample texture image
+
+
+NOTE:
+
+to make and run the bump map demo, type the following:
+
+	make bumpdemo
+
+	bumpdemo -b bumpfun.bmp -o out1.bmp
+
+	bumpdemo -b bumpfun.bmp -t texture.bmp -o out2.bmp
+
+Image out1.bmp will be just embosed text, and image out2.bmp will be
+similar but have the text embossed on a texture image.
+
+You may need to use 'convert' to create '.gif' files out of these
+to make them viewable with 'xv'.
+
+
+
+Enjoy!!
+
+Brian Lingard, lingard@wpi.wpi.edu
+ 

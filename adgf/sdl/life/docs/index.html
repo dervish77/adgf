@@ -1,0 +1,128 @@
+<!-- Documentation produced by the Html generator of Bouml (http://bouml.free.fr) -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>life
+Documentation</title>
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body bgcolor="#ffffff">
+
+<div class = "title">life<br />Documentation</div>
+<p></p>
+
+<!-- ============================================================= -->
+
+<a name="refpackage128027"></a>
+<p>Life is an implementation of Conway's Game of Life.<br /><br /></p><a name="refuse case view128027"></a>
+<h1 class ="view">1 Use Case View use cases</h1>
+<p>The DynTest utility provides the user with several options for which kind of memory fault to simulate to aid in evaluating memory analysis tools.<br /></p>
+<div class="sub">
+<a name="refuse case diagram130331"></a>
+<p align="center"><img src="fig130331.png" alt="" /></p>
+ <p align="center"><b>use cases</b></p><p><br /></p><p><br /></p>
+<table><tr><td><div class="element">Class <b><a href="class132507.html#refclass132507"><b>user</b></a></b></div></td></tr></table>
+<a name="refuse case128027"></a>
+<h2 class ="usecase">1.1 Use Case loadPattern</h2>
+<p>The user runs the "bounds test" option of DynTest.<br /></p>
+<div class="sub">
+<a name="refsequence diagram130459"></a>
+<p align="center"><img src="fig130459.png" alt="" /></p>
+ <p align="center"><b>boundstest</b></p><p><br /></p><p><br /></p>
+<p>The bounds test simulates the situation of over-running an array into another array thus corrupting the data in the second array.<br /></p></div>
+<a name="refuse case128155"></a>
+<h2 class ="usecase">1.2 Use Case executeSim</h2>
+<p>The user runs the "init test" option of DynTest.<br /></p>
+<div class="sub">
+<a name="refsequence diagram130587"></a>
+<p align="center"><img src="fig130587.png" alt="" /></p>
+ <p align="center"><b>inittest</b></p><p><br /></p><p><br /></p>
+<p>The init test simulates the situation where data within an object is not initialized prior to trying to reference or read that data.<br /></p></div>
+<a name="refuse case128283"></a>
+<h2 class ="usecase">1.3 Use Case createPattern</h2>
+<p>The user runs the "leak test" option of DynTest.<br /></p>
+<div class="sub">
+<a name="refsequence diagram130715"></a>
+<p align="center"><img src="fig130715.png" alt="" /></p>
+ <p align="center"><b>leaktest</b></p><p><br /></p><p><br /></p>
+<p>The leak test simulates that situation where the number of deletes do not equal the number of news.<br /></p></div>
+<a name="refuse case134811"></a>
+<h2 class ="usecase">1.4 Use Case loadPredefined</h2>
+<a name="refuse case134939"></a>
+<h2 class ="usecase">1.5 Use Case loadCustom</h2>
+<a name="refuse case135067"></a>
+<h2 class ="usecase">1.6 Use Case savePattern</h2>
+</div>
+<a name="refclass view128027"></a>
+<h1 class ="view">2 Class View class view</h1>
+<div class="sub">
+<a name="refclass diagram128027"></a>
+<p align="center"><img src="fig128027.png" alt="" /></p>
+ <p align="center"><b>tests</b></p><p><br /></p><p><br /></p>
+<p>The tests class diagram show the relationships and structure of the test classes used within the DynTest utility.<br /></p><table><tr><td><div class="element">Class <b><a href="class128411.html#refclass128411"><b>test</b></a></b></div></td></tr></table>
+<table><tr><td><div class="element">Class <b><a href="class128539.html#refclass128539"><b>boundstest</b></a></b></div></td></tr></table>
+<table><tr><td><div class="element">Class <b><a href="class128667.html#refclass128667"><b>inittest</b></a></b></div></td></tr></table>
+<table><tr><td><div class="element">Class <b><a href="class128283.html#refclass128283"><b>leaktest</b></a></b></div></td></tr></table>
+<table><tr><td><div class="element">Class <b><a href="class128795.html#refclass128795"><b>life</b></a></b></div></td></tr></table>
+<table><tr><td><div class="element">Class <b><a href="class130203.html#refclass130203"><b>mymain</b></a></b></div></td></tr></table>
+<a name="refclass diagram129179"></a>
+<p align="center"><img src="fig129179.png" alt="" /></p>
+ <p align="center"><b>animals</b></p><p><br /></p><p><br /></p>
+<p>The animal classes are essentially data types that the various tests can use as part of their processing to simulate memory faults.<br /></p><table><tr><td><div class="element">Class <b><a href="class128027.html#refclass128027"><b>animal</b></a></b></div></td></tr></table>
+<table><tr><td><div class="element">Class <b><a href="class128923.html#refclass128923"><b>cat</b></a></b></div></td></tr></table>
+<table><tr><td><div class="element">Class <b><a href="class128155.html#refclass128155"><b>dog</b></a></b></div></td></tr></table>
+<table><tr><td><div class="element">Class <b><a href="class131355.html#refclass131355"><b>zebra</b></a></b></div></td></tr></table>
+</div>
+<a name="refdeployment view128155"></a>
+<h1 class ="view">3 Deployment View deploy view</h1>
+<div class="sub">
+<a name="refartifact129179"></a>
+<table><tr><td><div class="element">Artifact <b>animal</b></div></td></tr></table>
+<p>Stereotype: source</p>
+<p>Artifact <i>source</i> associated with : <a href="class128027.html#refclass128027"><b>animal</b></a></p>
+<a name="refartifact129307"></a>
+<table><tr><td><div class="element">Artifact <b>dog</b></div></td></tr></table>
+<p>Stereotype: source</p>
+<p>Artifact <i>source</i> associated with : <a href="class128155.html#refclass128155"><b>dog</b></a></p>
+<a name="refartifact129435"></a>
+<table><tr><td><div class="element">Artifact <b>cat</b></div></td></tr></table>
+<p>Stereotype: source</p>
+<p>Artifact <i>source</i> associated with : <a href="class128923.html#refclass128923"><b>cat</b></a></p>
+<a name="refartifact132379"></a>
+<table><tr><td><div class="element">Artifact <b>zebra</b></div></td></tr></table>
+<p>Stereotype: source</p>
+<p>Artifact <i>source</i> associated with : <a href="class131355.html#refclass131355"><b>zebra</b></a></p>
+<a name="refartifact129563"></a>
+<table><tr><td><div class="element">Artifact <b>test</b></div></td></tr></table>
+<p>Stereotype: source</p>
+<p>Artifact <i>source</i> associated with : <a href="class128411.html#refclass128411"><b>test</b></a></p>
+<a name="refartifact129819"></a>
+<table><tr><td><div class="element">Artifact <b>boundstest</b></div></td></tr></table>
+<p>Stereotype: source</p>
+<p>Artifact <i>source</i> associated with : <a href="class128539.html#refclass128539"><b>boundstest</b></a></p>
+<a name="refartifact129947"></a>
+<table><tr><td><div class="element">Artifact <b>inittest</b></div></td></tr></table>
+<p>Stereotype: source</p>
+<p>Artifact <i>source</i> associated with : <a href="class128667.html#refclass128667"><b>inittest</b></a></p>
+<a name="refartifact129691"></a>
+<table><tr><td><div class="element">Artifact <b>leaktest</b></div></td></tr></table>
+<p>Stereotype: source</p>
+<p>Artifact <i>source</i> associated with : <a href="class128283.html#refclass128283"><b>leaktest</b></a></p>
+<a name="refartifact130075"></a>
+<table><tr><td><div class="element">Artifact <b>life</b></div></td></tr></table>
+<p>Stereotype: source</p>
+<p>Artifact <i>source</i> associated with : <a href="class128795.html#refclass128795"><b>life</b></a></p>
+<a name="refartifact131227"></a>
+<table><tr><td><div class="element">Artifact <b>mymain</b></div></td></tr></table>
+<p>Stereotype: source</p>
+<p>Artifact <i>source</i> associated with : <a href="class130203.html#refclass130203"><b>mymain</b></a></p>
+<a name="refartifact129051"></a>
+<table><tr><td><div class="element">Artifact <b>main</b></div></td></tr></table>
+<p>Stereotype: source</p>
+<p>Artifact <i>source</i></p>
+</div>
+</body>
+</html>

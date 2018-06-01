@@ -1,0 +1,97 @@
+			User Manual for Dev8085
+			_______________________
+
+
+1.  Introduction
+
+    Dev8085 is a development package for the Intel 8085 8-bit microprocessor.  This package 
+features an 8085 cross assembler, a binary dump utility, eprom utilities, module linker, and 
+a basic 8085 emulator (text based).
+
+1.1 Building the Package
+
+Unpack the distribution file and build as follows:
+
+	tar xzvf dev8085-0.1.tar.gz
+	cd dev8085
+	make
+
+1.2 Testing the Tools
+
+Run the regression tests on the newly built tools as follows:
+
+	cd dev8085/test
+	../bin/asm85 test1.s85 -r test1.raw
+	test test1.raw
+
+
+2.  Development Tools
+
+2.1 asm85
+  
+The 'asm5' tool is the 8085 cross assembler.  See "docs/mneumonics.txt" for a list of assembly 
+language instructions that the assembler supports
+
+Assemble into raw format as follows:
+
+    asm85 -r file.raw file.s85 
+
+Assemble into binary object module format as follows:
+
+    asm85 -o file.obj file.s85 
+
+
+2.2 dump85
+
+The 'dump85' tool is the binary dump utility.
+
+
+2.3 emu85
+
+The 'emu85' tool is a text based 8085 emulator.
+
+Execute a linked executable binary using a specified entry point address as follows:
+
+    emu85 -e 0x1000 file.bin
+
+
+2.4 link85
+
+The 'link85' tool is the 8085 object module linker.
+
+Link binary object modules into an executable binary as follows:
+
+    link85 -b file.bin file.obj
+or
+    link85 -b file.bin file1.obj file2.obj file3.obj
+
+Note that one of your binary object modules must contain the entry point of your program.
+
+
+2.5 srec85
+
+The 'srec85' tool is a utility for converting a binary image into an srecord file for 
+programming into a flash or eeprom.
+
+
+
+3.  Test Programs
+
+
+
+4.  Using the Assembler and Linker
+
+
+
+5.  Using the Emulator
+
+
+
+A.  Example 8085 assembly code
+
+
+
+__________________________________________________________________________
+
+Last Updated:  December 4, 1996
+

@@ -1,0 +1,16 @@
+CHANGES	 history for Emboss
+---------------------------
+
+0.2.0
+    - Updated to use DrawSdl 0.7.4
+    - Modified to use drawSprite instead of drawBitmap
+
+0.1.1
+    - Modified to handle new keyboard shortcuts
+
+0.1.0
+    - Modified to statically draw input, map, and output images
+
+0.0.0
+    - Originated, cloned from BumpDemo and DrawDemo
+

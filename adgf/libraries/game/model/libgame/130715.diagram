@@ -1,0 +1,113 @@
+format 62
+
+classinstance 128027 class_ref 130203 // mymain
+  name ""   xyz 10 9 2000 life_line_z 2000
+classinstance 128155 class_ref 128795 // dynamic
+  name ""   xyz 141 10 2000 life_line_z 2000
+classinstance 128283 class_ref 128539 // boundstest
+  name ""   xyz 211 11 2000 life_line_z 2000
+classinstance 128411 class_ref 128283 // leaktest
+  name ""   xyz 359 11 2000 life_line_z 2000
+classinstance 128539 class_ref 128667 // inittest
+  name ""   xyz 295 11 2000 life_line_z 2000
+classinstance 131355 class_ref 128923 // cat
+  name ""   xyz 525 9 2000 life_line_z 2000
+classinstance 131483 class_ref 128155 // dog
+  name ""   xyz 628 10 2000 life_line_z 2000
+classinstance 131611 class_ref 131355 // zebra
+  name ""   xyz 727 10 2000 life_line_z 2000
+note 135195 "delete one less zebra than we created"
+  xyzwh 451 346 2000 219 36
+durationcanvas 128667 classinstance_ref 128027 // :mymain
+  xyzwh 30 79 2010 11 40
+end
+durationcanvas 128795 classinstance_ref 128155 // :dynamic
+  xyzwh 163 79 2010 11 25
+end
+durationcanvas 130331 classinstance_ref 128411 // :leaktest
+  xyzwh 379 84 2010 11 287
+  overlappingdurationcanvas 130587
+    xyzwh 385 90 2020 11 262
+    overlappingdurationcanvas 131739
+      xyzwh 391 120 2030 11 25
+    end
+  end
+end
+durationcanvas 133659 classinstance_ref 131355 // :cat
+  xyzwh 544 152 2010 11 25
+end
+durationcanvas 133915 classinstance_ref 131483 // :dog
+  xyzwh 647 183 2010 11 25
+end
+durationcanvas 134171 classinstance_ref 131611 // :zebra
+  xyzwh 746 210 2010 11 27
+end
+durationcanvas 134427 classinstance_ref 131355 // :cat
+  xyzwh 544 256 2010 11 25
+end
+durationcanvas 134683 classinstance_ref 131483 // :dog
+  xyzwh 647 290 2010 11 25
+end
+durationcanvas 134939 classinstance_ref 131611 // :zebra
+  xyzwh 746 329 2010 11 25
+end
+msg 128923 synchronous
+  from durationcanvas_ref 128667
+  to durationcanvas_ref 128795
+  yz 79 2015 msg operation_ref 129051 // "runTest(in testId : int, in mode : int) : bool"
+  show_full_operations_definition default drawing_language default
+  args "LEAK"
+  label_xy 63 63
+msg 130459 synchronous
+  from durationcanvas_ref 128795
+  to durationcanvas_ref 130331
+  yz 84 2020 msg operation_ref 128923 // "execute() : bool"
+  show_full_operations_definition default drawing_language default
+  label_xy 253 69
+reflexivemsg 130715 synchronous
+  to durationcanvas_ref 130587
+  yz 90 2025 msg operation_ref 137371 // "heapTest() : bool"
+  show_full_operations_definition default drawing_language default
+  label_xy 399 71
+reflexivemsg 131867 synchronous
+  to durationcanvas_ref 131739
+  yz 120 2035 msg operation_ref 135579 // "getMode() : int"
+  show_full_operations_definition default drawing_language default
+  label_xy 404 102
+msg 133787 synchronous
+  from durationcanvas_ref 130587
+  to durationcanvas_ref 133659
+  yz 152 3005 msg operation_ref 129179 // "cat()"
+  show_full_operations_definition default drawing_language default
+  label_xy 458 134
+msg 134043 synchronous
+  from durationcanvas_ref 130587
+  to durationcanvas_ref 133915
+  yz 183 2025 msg operation_ref 128283 // "dog()"
+  show_full_operations_definition default drawing_language default
+  label_xy 499 165
+msg 134299 synchronous
+  from durationcanvas_ref 130587
+  to durationcanvas_ref 134171
+  yz 212 2025 msg operation_ref 138523 // "zebra()"
+  show_full_operations_definition default drawing_language default
+  label_xy 579 195
+msg 134555 synchronous
+  from durationcanvas_ref 130587
+  to durationcanvas_ref 134427
+  yz 256 2025 msg operation_ref 129307 // "~cat()"
+  show_full_operations_definition default drawing_language default
+  label_xy 455 238
+msg 134811 synchronous
+  from durationcanvas_ref 130587
+  to durationcanvas_ref 134683
+  yz 290 2025 msg operation_ref 128411 // "~dog()"
+  show_full_operations_definition default drawing_language default
+  label_xy 496 273
+msg 135067 synchronous
+  from durationcanvas_ref 130587
+  to durationcanvas_ref 134939
+  yz 329 2025 msg operation_ref 138651 // "~zebra()"
+  show_full_operations_definition default drawing_language default
+  label_xy 574 312
+end
