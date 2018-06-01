@@ -1,0 +1,390 @@
+; ZiLOG eZ80 ANSI C Compiler Release 2.06
+; -alias -debug -intsrc -nomodsect -optsize -localcse
+; -peephole -globalopt -nosdiopt -bitfieldsize=24 -charsize=8
+; -doublesize=32 -floatsize=32 -intsize=24 -longsize=32
+; -nofastcall -noregvar -nostkck -nooptlink -swap 
+	FILE	".\MAIN.C"
+	.assume ADL=1
+.DEBUG "C"
+	SEGMENT DATA
+_device_name:
+	DB	101
+	DB	90
+	DB	56
+	DB	48
+	DB	70
+	DB	57
+	DB	49
+	DB	0
+.DEFINE "device_name"
+.ALIAS "_device_name"
+.CLASS 69
+.VALUE _device_name
+.DIM 8
+.TYPE 98
+.ENDEF
+	SEGMENT TEXT
+_version:
+	DB	49
+	DB	46
+	DB	48
+	DB	0
+.DEFINE "version"
+.ALIAS "_version"
+.CLASS 84
+.VALUE _version
+.DIM 4
+.TYPE 98
+.ENDEF
+;    1	/*                                                   Copyright (c) ZiLOG, 2003
+;    2	 *****************************************************************************
+;    3	 *  main.c (1.0)
+;    4	 *
+;    5	 *  eZ80 Development Board demonstration program
+;    6	 *
+;    7	 *  This project displays a text message on the 5x7 LED matrix.
+;    8	 *
+;    9	 *****************************************************************************
+;   10	 */
+;   11	
+;   12	#include <ez80.h>
+;   13	#include <stdio.h>
+;   14	
+;   15	#include "Console.h"
+;   16	#include "LedMatrix.h"
+;   17	#include "LedTimer.h"
+;   18	#include "Buttons.h"
+;   19	
+;   20	extern void _init_default_vectors( void );
+;   21	
+;   22	/* device names -- chosen at build-time */
+;   23	#ifdef _EZ80190
+;   24	char device_name[] = "eZ80190";
+;   25	#endif
+;   26	#ifdef _EZ80L92
+;   27	char device_name[] = "eZ80L92";
+;   28	#endif
+;   29	#ifdef _EZ80F93
+;   30	char device_name[] = "eZ80F93";
+;   31	#endif
+;   32	#ifdef _EZ80F92
+;   33	char device_name[] = "eZ80F92";
+;   34	#endif
+;   35	#ifdef _EZ80F91
+;   36	char device_name[] = "eZ80F91";
+;   37	#endif
+;   38	
+;   39	const char version[] = "1.0";
+	SEGMENT code
+;   40	
+;   41	/*****************************************************************************
+;   42	 *  main()
+;   43	 *
+;   44	 *  - initializes LED matrix, timer, buttons(gpio), and console
+;   45	 *  - sends welcome message and instruction to console
+;   46	 *  - displays simple spin and full matrix blink test
+;   47	 *  - continually displays device name on LED matrix
+;   48	 */
+;   49	void main( void )
+;   50	{
+_main:
+.DEFINE "_main"
+
+.VALUE _main
+
+.CLASS 2
+
+.TYPE 65
+
+.ENDEF
+
+.BEGFUNC "main",50,"_main"
+
+.LINE 50
+
+.DEFINE "count"
+
+.CLASS 65
+
+.VALUE -3
+
+.TYPE 4
+
+.ENDEF
+
+.DEFINE "ch"
+
+.CLASS 65
+
+.VALUE -4
+
+.TYPE 2
+
+.ENDEF
+
+.DEFINE "buffer"
+
+.CLASS 65
+
+.VALUE -132
+
+.DIM 128
+
+.TYPE 98
+
+.ENDEF
+
+;   51	    char i, ch;
+;   52		char buffer[128];
+;   53		int count=0;
+.LINE 53
+
+	PUSH	IX
+	LD	IX,0
+	ADD	IX,SP
+	LD	IY,-132
+	ADD	IY,SP
+	LD	SP,IY
+	LD	BC,0
+	LD	(IX+-3),BC
+;   54	
+;   55	    /* initialize system peripherals */
+;   56	    _init_default_vectors();
+.LINE 56
+
+	CALL	__init_default_vectors
+;   57	    ledmatrix_init();
+.LINE 57
+
+	CALL	_ledmatrix_init
+;   58		ledtimer_init( 1 );  /* 1 mS interval */
+	LD	BC,1
+	PUSH	BC
+.LINE 58
+
+	CALL	_ledtimer_init
+	POP	BC
+;   59		buttons_init();
+.LINE 59
+
+	CALL	_buttons_init
+;   60	    console_init( 57600 );
+	LD	BC,57600
+	PUSH	BC
+.LINE 60
+
+	CALL	_console_init
+	POP	BC
+;   61	
+;   62	    /* flash full LED matrix */
+;   63	    ledmatrix_flash();
+.LINE 63
+
+	CALL	_ledmatrix_flash
+;   64	    /* show a rotating bar on the LED matrix */
+;   65	    ledmatrix_spin();
+.LINE 65
+
+	CALL	_ledmatrix_spin
+;   66	   	
+;   67		/* console welcome message and instruction */
+;   68		printf( "\n  ZiLOG Development Board Demonstration Program (%s)", version );
+	LD	BC,_version
+	PUSH	BC
+	LD	BC,L__0
+	PUSH	BC
+.LINE 68
+
+	CALL	_printf
+	POP	BC
+	POP	BC
+;   69		printf( "\n        Featuring the %s\n", device_name );
+	LD	BC,_device_name
+	PUSH	BC
+	LD	BC,L__1
+	PUSH	BC
+.LINE 69
+
+	CALL	_printf
+	POP	BC
+	POP	BC
+;   70	
+;   71		printf( "\n  Console Test Program:\n" );
+	LD	BC,L__2
+	PUSH	BC
+.LINE 71
+
+	CALL	_printf
+	POP	BC
+;   72	
+;   73		printf(">> ");
+	LD	BC,L__3
+	PUSH	BC
+.LINE 73
+
+	CALL	_printf
+	POP	BC
+;   74		ledmatrix_clear();
+.LINE 74
+
+	CALL	_ledmatrix_clear
+;   75	
+;   76		/* main demonstration loop */
+;   77		while( 1 )
+.LINE 77
+
+L_4:
+;   78		{
+;   79	#if 0
+;   80	        /* display device name on LED Matrix one character at a time */
+;   81			ledmatrix_puts( device_name );
+;   82	
+;   83			/* wait a half a second */
+;   84	        wait( 500 );
+;   85	#endif
+;   86			ch = getchar();
+.LINE 86
+
+	CALL	_getchar
+	LD	(IX+-4),L
+;   87			if (ch == '\r')
+.LINE 87
+
+	LD	A,(IX+-4)
+	CP	A,13
+	JR	NZ,L_2
+;   88			{
+;   89				buffer[count] = '\0';
+.LINE 89
+
+	LD	HL,IX
+	LD	BC,-132
+	ADD	HL,BC
+	LD	BC,(IX+-3)
+	ADD	HL,BC
+	XOR	A,A
+	LD	(HL),A
+;   90				count = 0;
+.LINE 90
+
+	LD	BC,0
+	LD	(IX+-3),BC
+;   91	
+;   92				printf("You typed - %s\n", buffer);
+	LD	IY,IX
+	LD	BC,-132
+	ADD	IY,BC
+	LD	BC,IY
+	PUSH	BC
+	LD	BC,L__5
+	PUSH	BC
+.LINE 92
+
+	CALL	_printf
+	POP	BC
+	POP	BC
+;   93				printf(">> ");	
+	LD	BC,L__6
+	PUSH	BC
+.LINE 93
+
+	CALL	_printf
+	POP	BC
+;   94			}
+;   95			else
+.LINE 95
+
+	JMP	L_4
+L_2:
+;   96			{
+;   97				buffer[count] = ch;
+.LINE 97
+
+	LD	HL,IX
+	LD	BC,-132
+	ADD	HL,BC
+	LD	BC,(IX+-3)
+	ADD	HL,BC
+	LD	A,(IX+-4)
+	LD	(HL),A
+;   98				count++;
+.LINE 98
+
+	LD	BC,(IX+-3)
+	INC	BC
+	LD	(IX+-3),BC
+;   99			}
+;  100		}
+L_3:
+.LINE 100
+
+	JMP	L_4
+;  101	}
+L_5:
+.LINE 101
+
+	LD	SP,IX
+	POP	IX
+	RET	
+
+
+;**************************** _main ***************************
+;Name                         Addr/Register   Size   Type
+;_getchar                            IMPORT  -----   function
+;_ledmatrix_clear                    IMPORT  -----   function
+;_device_name                        STATIC      8   variable
+;_version                            STATIC      4   variable
+;_printf                             IMPORT  -----   function
+;_ledmatrix_spin                     IMPORT  -----   function
+;_ledmatrix_flash                    IMPORT  -----   function
+;_console_init                       IMPORT  -----   function
+;_buttons_init                       IMPORT  -----   function
+;_ledtimer_init                      IMPORT  -----   function
+;_ledmatrix_init                     IMPORT  -----   function
+;__init_default_vectors              IMPORT  -----   function
+;buffer                              IX-132    128   variable
+;ch                                    IX-4      1   variable
+;count                                 IX-3      3   variable
+
+
+; Stack Frame Size: 138 (bytes)
+;       Spill Code: 0 (instruction)
+
+
+.ENDFUNC "main",101,"_main"
+	SEGMENT STRSECT
+L__0:
+	DB	10
+	DB	"  ZiLOG Development Board Demonstration Program (%s)"
+	DB	0
+L__1:
+	DB	10
+	DB	"        Featuring the %s"
+	DB	10,0
+L__2:
+	DB	10
+	DB	"  Console Test Program:"
+	DB	10,0
+L__3:
+	DB	">> "
+	DB	0
+L__5:
+	DB	"You typed - %s"
+	DB	10,0
+L__6:
+	DB	">> "
+	DB	0
+	XREF __init_default_vectors:ROM
+	XREF _buttons_init:ROM
+	XREF _ledtimer_init:ROM
+	XREF _ledmatrix_spin:ROM
+	XREF _ledmatrix_flash:ROM
+	XREF _ledmatrix_clear:ROM
+	XREF _ledmatrix_init:ROM
+	XREF _console_init:ROM
+	XREF _getchar:ROM
+	XREF _printf:ROM
+	XDEF _main
+	XDEF _version
+	XDEF _device_name
+	END

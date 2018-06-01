@@ -1,0 +1,642 @@
+; ZiLOG eZ80 ANSI C Compiler Release 2.06
+; -alias -debug -intsrc -nomodsect -optsize -localcse
+; -peephole -globalopt -nosdiopt -bitfieldsize=24 -charsize=8
+; -doublesize=32 -floatsize=32 -intsize=24 -longsize=32
+; -nofastcall -noregvar -nostkck -nooptlink -swap 
+	FILE	".\CONSOLE.C"
+	.assume ADL=1
+.DEBUG "C"
+	SEGMENT BSS
+_char_ready:
+	DS	1
+.DEFINE "char_ready"
+.ALIAS "_char_ready"
+.CLASS 83
+.VALUE _char_ready
+.TYPE 2
+.ENDEF
+_char_rcvd:
+	DS	1
+.DEFINE "char_rcvd"
+.ALIAS "_char_rcvd"
+.CLASS 83
+.VALUE _char_rcvd
+.TYPE 12
+.ENDEF
+;    1	/*                                                   Copyright (c) ZiLOG, 2003
+;    2	 *****************************************************************************
+;    3	 *  Console.c (1.0)
+;    4	 *
+;    5	 *  Console I/O functions used by standard print functions...
+;    6	 *****************************************************************************
+;    7	 */
+;    8	#include <ez80.h>
+;    9	#include "Console.h"
+;   10	#include "LedMatrix.h"
+;   11	
+;   12	extern void set_vector(unsigned short vector,void (*hndlr)(void));
+;   13	
+;   14	/* masterclock and UART 0 interrupt vectors for the various devices */
+;   15	#define UART_DR 0x01
+;   16	#define UART_THRE 0x20
+;   17	#define UARTMODE 0x01
+;   18	
+;   19	#ifdef _EZ80F91
+;   20	#define SYSTEMCLOCK 50000000
+;   21	#define UART0_IVECT 0x70
+;   22	#endif
+;   23	
+;   24	#ifdef _EZ80L92
+;   25	#define SYSTEMCLOCK 48000000
+;   26	#define UART0_IVECT 0x18
+;   27	#endif
+;   28	
+;   29	#ifdef _EZ80F92
+;   30	#define SYSTEMCLOCK 20000000
+;   31	#define UART0_IVECT 0x18
+;   32	#endif
+;   33	
+;   34	#ifdef _EZ80F93
+;   35	#define SYSTEMCLOCK 20000000
+;   36	#define UART0_IVECT 0x18
+;   37	#endif
+;   38	
+;   39	#ifdef _EZ80190
+;   40	#define SYSTEMCLOCK 50000000
+;   41	#define UART0_IVECT 0x12
+;   42	#define	UART0_BRG_L	(*(ISFR)0xC0)
+;   43	#define	UART0_BRG_H	(*(ISFR)0xC1)
+;   44	#define	UART0_RBR	(*(ISFR)0xC0)
+;   45	#define	UART0_THR	(*(ISFR)0xC0)
+;   46	#define	UART0_IER	(*(ISFR)0xC1)
+;   47	#define	UART0_IIR	(*(ISFR)0xC2)
+;   48	#define	UART0_FCTL	(*(ISFR)0xC2)
+;   49	#define	UART0_LCTL	(*(ISFR)0xC3)
+;   50	#define	UART0_MCTL	(*(ISFR)0xC4)
+;   51	#define	UART0_LSR	(*(ISFR)0xC5)
+;   52	#define	UART0_MSR	(*(ISFR)0xC6)
+;   53	#define	UART0_SPR	(*(ISFR)0xC7)
+;   54	#endif
+;   55	
+;   56	
+;   57	/* character ready flag */
+;   58	char char_ready;
+;   59	/* received character holder */
+;   60	unsigned char char_rcvd;
+	SEGMENT code
+;   61	
+;   62	/*****************************************************************************
+;   63	 *  UART 0 interrupt service routine
+;   64	 *
+;   65	 *  designed for recieve interrupt only
+;   66	 */
+;   67	void interrupt uart0_isr( void )
+;   68	{
+_uart0_isr:
+.DEFINE "_uart0_isr"
+
+.VALUE _uart0_isr
+
+.CLASS 2
+
+.TYPE 65
+
+.ENDEF
+
+.BEGFUNC "uart0_isr",68,"_uart0_isr"
+
+;   69	    char_ready = 1;
+.LINE 69
+
+	EXX	
+	EX	AF,AF'
+	PUSH	IX
+	LD	IX,0
+	ADD	IX,SP
+	LD	A,1
+	LD	(_char_ready),A
+;   70		user_input = 1;
+.LINE 70
+
+	LD	(_user_input),A
+;   71		char_rcvd = UART0_RBR;
+.LINE 71
+
+	IN0	A,(192)
+	LD	(_char_rcvd),A
+;   72		p_user_input = &matrix_char_map[char_rcvd - 31][0];
+.LINE 72
+
+	UEXT	HL
+	LD	L,A
+	LD	IY,HL
+	LEA	IY,IY+-31
+	LD	BC,IY
+	LD	HL,7
+	CALL	__imuls
+	LD	BC,_matrix_char_map
+	ADD	HL,BC
+	LD	(_p_user_input),HL
+;   73	}
+.LINE 73
+
+	EXX	
+	EX	AF,AF'
+	LD	SP,IX
+	POP	IX
+	EI	
+	RETI	
+
+
+;**************************** _uart0_isr ***************************
+;Name                         Addr/Register   Size   Type
+;_p_user_input                       IMPORT      3   variable
+;_matrix_char_map                    IMPORT    896   variable
+;_char_rcvd                          STATIC      1   variable
+;_user_input                         IMPORT      1   variable
+;_char_ready                         STATIC      1   variable
+
+
+; Stack Frame Size: 6 (bytes)
+;       Spill Code: 0 (instruction)
+
+
+.ENDFUNC "uart0_isr",73,"_uart0_isr"
+;   74	
+;   75	
+;   76	/*****************************************************************************
+;   77	 *  console_init()
+;   78	 *
+;   79	 *  initializes console port -- UART0
+;   80	 *  
+;   81	 *  Parameters:
+;   82	 *  57600 bps, 8 Data bits, 1 Stop bit, No Parity bit
+;   83	 */
+;   84	void console_init( int baudrate )
+;   85	{
+_console_init:
+.DEFINE "_console_init"
+
+.VALUE _console_init
+
+.CLASS 2
+
+.TYPE 65
+
+.ENDEF
+
+.BEGFUNC "console_init",85,"_console_init"
+
+.LINE 85
+
+.DEFINE "baudrate"
+
+.CLASS 65
+
+.VALUE 6
+
+.TYPE 4
+
+.ENDEF
+
+.DEFINE "brg"
+
+.CLASS 65
+
+.VALUE -2
+
+.TYPE 13
+
+.ENDEF
+
+;   86		unsigned short brg;
+;   87	
+;   88		brg = (unsigned short)(SYSTEMCLOCK / (baudrate * 16));
+.LINE 88
+
+	PUSH	IX
+	LD	IX,0
+	ADD	IX,SP
+	DEC	SP
+	DEC	SP
+	LD	HL,(IX+6)
+	ADD	HL,HL
+	ADD	HL,HL
+	ADD	HL,HL
+	ADD	HL,HL
+	LD	BC,HL
+	CALL	__itol
+	LD	E,A
+	LD	HL,BC
+	LD	BC,16445568
+	LD	A,2
+	CALL	__ldivs
+	LD	(IX+-2),C
+	LD	(IX+-1),B
+;   89	
+;   90		//Set the PortD bits D1,D0 to Alternate function mode
+;   91		PD_ALT2 = 0x03;
+;   92		PD_ALT1 = 0x00;
+;   93		PD_DDR = 0xFF;
+;   94		PD_DR = 0x00;
+;   95	
+;   96	    /* set UART0 interrupt vector */
+;   97	    set_vector( UART0_IVECT, uart0_isr );
+	LD	BC,_uart0_isr
+	PUSH	BC
+	LD	BC,112
+	PUSH	BC
+.LINE 91
+
+	LD	A,3
+	OUT0	(165),A
+.LINE 92
+
+	XOR	A,A
+	OUT0	(164),A
+.LINE 93
+
+	LD	A,255
+	OUT0	(163),A
+.LINE 94
+
+	XOR	A,A
+	OUT0	(162),A
+.LINE 97
+
+	CALL	_set_vector
+	POP	BC
+	POP	BC
+;   98	
+;   99		UART0_LCTL |= 0x80; 			//Set DLAB, dont disturb other bits
+.LINE 99
+
+	IN0	A,(195)
+	UEXT	HL
+	LD	L,A
+	LD	BC,128
+	CALL	__ior
+	LD	A,L
+	OUT0	(195),A
+;  100		/* Set UART baudrate */
+;  101		UART0_BRG_L = (unsigned char) ( brg & 0x00FF );        //Load divisor low
+.LINE 101
+
+	LD	BC,(IX+-2)
+	CALL	__stoiu
+	LD	BC,255
+	CALL	__iand
+	LD	A,L
+	OUT0	(192),A
+;  102		UART0_BRG_H = (unsigned char)(( brg & 0xFF00 ) >> 8);  //Load divisor high
+.LINE 102
+
+	LD	BC,(IX+-2)
+	CALL	__stoiu
+	LD	BC,65280
+	CALL	__iand
+	LD	BC,8
+	CALL	__ishrs
+	LD	A,L
+	OUT0	(193),A
+;  103	
+;  104		/* Clear DLAB, configure for 8 data bits, no parity, 1 stop bit  */
+;  105		UART0_LCTL = 0x03; 		    //Reset DLAB, dont disturb other bits
+.LINE 105
+
+	LD	A,3
+	OUT0	(195),A
+;  106	
+;  107		/* Enable recieve interrupt only */
+;  108	    UART0_IER = 0x01;
+.LINE 108
+
+	LD	A,1
+	OUT0	(193),A
+;  109	
+;  110		char_ready = 0;
+.LINE 110
+
+	XOR	A,A
+	LD	(_char_ready),A
+;  111	}
+.LINE 111
+
+	LD	SP,IX
+	POP	IX
+	RET	
+
+
+;**************************** _console_init ***************************
+;Name                         Addr/Register   Size   Type
+;_char_ready                         STATIC      1   variable
+;_set_vector                         IMPORT  -----   function
+;brg                                   IX-2      2   variable
+;baudrate                              IX+6      3   parameter
+
+
+; Stack Frame Size: 11 (bytes)
+;       Spill Code: 0 (instruction)
+
+
+.ENDFUNC "console_init",111,"_console_init"
+;  112	
+;  113	/*****************************************************************************
+;  114	 *  kbhit()
+;  115	 *
+;  116	 *  wait for input
+;  117	 */
+;  118	int kbhit(void)
+;  119	{
+_kbhit:
+.DEFINE "_kbhit"
+
+.VALUE _kbhit
+
+.CLASS 2
+
+.TYPE 68
+
+.ENDEF
+
+.BEGFUNC "kbhit",119,"_kbhit"
+
+;  120	    while ( char_ready != 1 );
+.LINE 120
+
+	PUSH	IX
+	LD	IX,0
+	ADD	IX,SP
+	JMP	L_2
+L_2:
+	LD	A,(_char_ready)
+	CP	A,1
+	JR	NZ,L_2
+;  121	
+;  122		char_ready = 0;
+.LINE 122
+
+	XOR	A,A
+	LD	(_char_ready),A
+;  123	}
+.LINE 123
+
+	LD	SP,IX
+	POP	IX
+	RET	
+
+
+;**************************** _kbhit ***************************
+;Name                         Addr/Register   Size   Type
+;_char_ready                         STATIC      1   variable
+
+
+; Stack Frame Size: 6 (bytes)
+;       Spill Code: 0 (instruction)
+
+
+.ENDFUNC "kbhit",123,"_kbhit"
+;  124	
+;  125	/*****************************************************************************
+;  126	 *  putch()
+;  127	 *
+;  128	 *  waits for an empty transmit holding register and puts a character in it
+;  129	 */
+;  130	void putch(unsigned char ch)
+;  131	{
+_putch:
+.DEFINE "_putch"
+
+.VALUE _putch
+
+.CLASS 2
+
+.TYPE 65
+
+.ENDEF
+
+.BEGFUNC "putch",131,"_putch"
+
+.LINE 131
+
+.DEFINE "ch"
+
+.CLASS 65
+
+.VALUE 6
+
+.TYPE 12
+
+.ENDEF
+
+;  132		while ((UART0_LSR & UART_THRE) == 0);
+.LINE 132
+
+	PUSH	IX
+	LD	IX,0
+	ADD	IX,SP
+	JMP	L_6
+L_6:
+	IN0	A,(197)
+	UEXT	HL
+	LD	L,A
+	LD	BC,32
+	CALL	__iand
+	LD	BC,0
+	OR	A,A
+	SBC	HL,BC
+	JR	Z,L_6
+;  133		UART0_THR = (unsigned char)ch;
+.LINE 133
+
+	LD	A,(IX+6)
+	OUT0	(192),A
+;  134	
+;  135		if ((unsigned char)ch == '\n')
+.LINE 135
+
+	LD	A,(IX+6)
+	UEXT	HL
+	LD	L,A
+	LD	BC,10
+	OR	A,A
+	SBC	HL,BC
+	JR	Z,L_9
+	JMP	L_13
+;  136		{
+;  137			while ((UART0_LSR & UART_THRE) == 0);
+L_10:
+.LINE 137
+
+L_9:
+	IN0	A,(197)
+	UEXT	HL
+	LD	L,A
+	LD	BC,32
+	CALL	__iand
+	LD	BC,0
+	OR	A,A
+	SBC	HL,BC
+	JR	Z,L_9
+;  138			UART0_THR = '\r';
+.LINE 138
+
+	LD	A,13
+	OUT0	(192),A
+;  139		}
+;  140	}
+L_13:
+.LINE 140
+
+	LD	SP,IX
+	POP	IX
+	RET	
+
+
+;**************************** _putch ***************************
+;Name                         Addr/Register   Size   Type
+;ch                                    IX+6      1   parameter
+
+
+; Stack Frame Size: 9 (bytes)
+;       Spill Code: 0 (instruction)
+
+
+.ENDFUNC "putch",140,"_putch"
+;  141	
+;  142	/*****************************************************************************
+;  143	 *  getch()
+;  144	 *
+;  145	 *  waits for a character to be received and gets it from UART recieve buffer
+;  146	 */
+;  147	unsigned char getch(void)
+;  148	{
+_getch:
+.DEFINE "_getch"
+
+.VALUE _getch
+
+.CLASS 2
+
+.TYPE 76
+
+.ENDEF
+
+.BEGFUNC "getch",148,"_getch"
+
+;  149		kbhit();
+.LINE 149
+
+	PUSH	IX
+	LD	IX,0
+	ADD	IX,SP
+	CALL	_kbhit
+;  150		return( char_rcvd );
+.LINE 150
+
+	LD	A,(_char_rcvd)
+;  151	}
+.LINE 151
+
+	LD	SP,IX
+	POP	IX
+	RET	
+
+
+;**************************** _getch ***************************
+;Name                         Addr/Register   Size   Type
+;_char_rcvd                          STATIC      1   variable
+;_kbhit                              IMPORT  -----   function
+
+
+; Stack Frame Size: 6 (bytes)
+;       Spill Code: 0 (instruction)
+
+
+.ENDFUNC "getch",151,"_getch"
+;  152	
+;  153	/*****************************************************************************
+;  154	 *  getche()
+;  155	 *
+;  156	 *  waits for a character to be received and gets it from UART recieve buffer
+;  157	 *  with echo
+;  158	 */
+;  159	unsigned char getche(void)
+;  160	{
+_getche:
+.DEFINE "_getche"
+
+.VALUE _getche
+
+.CLASS 2
+
+.TYPE 76
+
+.ENDEF
+
+.BEGFUNC "getche",160,"_getche"
+
+;  161	    unsigned char ch;
+;  162	
+;  163	   	kbhit();
+.LINE 163
+
+	PUSH	IX
+	LD	IX,0
+	ADD	IX,SP
+	CALL	_kbhit
+;  164		putch( char_rcvd );
+	LD	B,0
+	PUSH	AF
+	LD	A,(_char_rcvd)
+	LD	C,A
+	POP	AF
+	PUSH	BC
+.LINE 164
+
+	CALL	_putch
+	POP	BC
+;  165		return( char_rcvd );
+.LINE 165
+
+	LD	A,(_char_rcvd)
+;  166	}
+.LINE 166
+
+	LD	SP,IX
+	POP	IX
+	RET	
+
+
+;**************************** _getche ***************************
+;Name                         Addr/Register   Size   Type
+;_char_rcvd                          STATIC      1   variable
+;_putch                              IMPORT  -----   function
+;_kbhit                              IMPORT  -----   function
+
+
+; Stack Frame Size: 6 (bytes)
+;       Spill Code: 0 (instruction)
+
+
+.ENDFUNC "getche",166,"_getche"
+	XREF _set_vector:ROM
+	XREF _matrix_char_map:ROM
+	XREF _user_input:ROM
+	XREF _p_user_input:ROM
+	XREF __ldivs:ROM
+	XREF __imuls:ROM
+	XREF __ior:ROM
+	XREF __iand:ROM
+	XREF __ishrs:ROM
+	XREF __stoiu:ROM
+	XREF __itol:ROM
+	XDEF _getche
+	XDEF _getch
+	XDEF _putch
+	XDEF _kbhit
+	XDEF _console_init
+	XDEF _uart0_isr
+	XDEF _char_rcvd
+	XDEF _char_ready
+	END

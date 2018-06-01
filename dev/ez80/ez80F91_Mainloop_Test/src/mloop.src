@@ -1,0 +1,3264 @@
+; ZiLOG eZ80 ANSI C Compiler Release 2.06
+; -alias -debug -intsrc -nomodsect -optsize -localcse
+; -peephole -globalopt -nosdiopt -bitfieldsize=24 -charsize=8
+; -doublesize=32 -floatsize=32 -intsize=24 -longsize=32
+; -nofastcall -noregvar -nostkck -nooptlink -swap 
+	FILE	".\MLOOP.C"
+	.assume ADL=1
+.DEBUG "C"
+	SEGMENT code
+.BEGREC "NONAME0",6
+.DEFINE "quot"
+.VALUE 0
+.CLASS 8
+.TYPE 4
+.ENDEF
+.DEFINE "rem"
+.VALUE 3
+.CLASS 8
+.TYPE 4
+.ENDEF
+.ENDREC "NONAME0"
+.BEGREC "NONAME1",8
+.DEFINE "quot"
+.VALUE 0
+.CLASS 8
+.TYPE 5
+.ENDEF
+.DEFINE "rem"
+.VALUE 4
+.CLASS 8
+.TYPE 5
+.ENDEF
+.ENDREC "NONAME1"
+.BEGREC "header",6
+.DEFINE "s"
+.VALUE 0
+.CLASS 11
+.TAG "NONAME2"
+.TYPE 8
+.ENDEF
+.DEFINE "x"
+.VALUE 0
+.CLASS 11
+.TYPE 2
+.ENDEF
+.ENDREC "header"
+.BEGREC "NONAME2",6
+.DEFINE "ptr"
+.VALUE 0
+.CLASS 8
+.TAG "header"
+.TYPE 40
+.ENDEF
+.DEFINE "size"
+.VALUE 3
+.CLASS 8
+.TYPE 14
+.ENDEF
+.ENDREC "NONAME2"
+.BEGREC "arg_struct",9
+.DEFINE "arg1"
+.VALUE 0
+.CLASS 8
+.TYPE 4
+.ENDEF
+.DEFINE "arg2"
+.VALUE 3
+.CLASS 8
+.TYPE 4
+.ENDEF
+.DEFINE "arg3"
+.VALUE 6
+.CLASS 8
+.TYPE 4
+.ENDEF
+.ENDREC "arg_struct"
+.BEGREC "memblock_s_t",6
+.DEFINE "size"
+.VALUE 0
+.CLASS 8
+.TYPE 4
+.ENDEF
+.DEFINE "ptr"
+.VALUE 3
+.CLASS 8
+.TYPE 34
+.ENDEF
+.ENDREC "memblock_s_t"
+.BEGREC "msg_s_t",35
+.DEFINE "size"
+.VALUE 0
+.CLASS 8
+.TYPE 4
+.ENDEF
+.DEFINE "buf"
+.VALUE 3
+.CLASS 8
+.DIM 32
+.TYPE 98
+.ENDEF
+.ENDREC "msg_s_t"
+.BEGREC "msgq_s_t",143
+.DEFINE "count"
+.VALUE 0
+.CLASS 8
+.TYPE 4
+.ENDEF
+.DEFINE "msg"
+.VALUE 3
+.CLASS 8
+.DIM 4
+.TAG "msg_s_t"
+.TYPE 104
+.ENDEF
+.ENDREC "msgq_s_t"
+.BEGREC "task_s_t",210
+.DEFINE "taskid"
+.VALUE 0
+.CLASS 8
+.TYPE 4
+.ENDEF
+.DEFINE "taskname"
+.VALUE 3
+.CLASS 8
+.DIM 40
+.TYPE 98
+.ENDEF
+.DEFINE "proc"
+.VALUE 43
+.CLASS 8
+.TYPE 545
+.ENDEF
+.DEFINE "args"
+.VALUE 46
+.CLASS 8
+.TYPE 33
+.ENDEF
+.DEFINE "mem"
+.VALUE 49
+.CLASS 8
+.TAG "memblock_s_t"
+.TYPE 8
+.ENDEF
+.DEFINE "queue"
+.VALUE 55
+.CLASS 8
+.TAG "msgq_s_t"
+.TYPE 8
+.ENDEF
+.DEFINE "valid"
+.VALUE 198
+.CLASS 8
+.TYPE 4
+.ENDEF
+.DEFINE "ready"
+.VALUE 201
+.CLASS 8
+.TYPE 4
+.ENDEF
+.DEFINE "blocked"
+.VALUE 204
+.CLASS 8
+.TYPE 4
+.ENDEF
+.DEFINE "suspend"
+.VALUE 207
+.CLASS 8
+.TYPE 4
+.ENDEF
+.ENDREC "task_s_t"
+.BEGREC "context_s_t",2109
+.DEFINE "numtasks"
+.VALUE 0
+.CLASS 8
+.TYPE 4
+.ENDEF
+.DEFINE "tasklist"
+.VALUE 3
+.CLASS 8
+.DIM 10
+.TAG "task_s_t"
+.TYPE 104
+.ENDEF
+.DEFINE "ticks"
+.VALUE 2103
+.CLASS 8
+.TYPE 4
+.ENDEF
+.DEFINE "ticktime"
+.VALUE 2106
+.CLASS 8
+.TYPE 4
+.ENDEF
+.ENDREC "context_s_t"
+	SEGMENT BSS
+_gbContext:
+	DS	3
+.DEFINE "gbContext"
+.ALIAS "_gbContext"
+.CLASS 83
+.VALUE _gbContext
+.TAG "context_s_t"
+.TYPE 40
+.ENDEF
+;    1	/*****************************************************************************
+;    2	 *
+;    3	 *	Main Loop program routines.
+;    4	 *
+;    5	 *	File:	mloop.c
+;    6	 *
+;    7	 *	Author: Brian Lingard
+;    8	 *
+;    9	 *	Date:	10/31/2003
+;   10	 *
+;   11	 *	Revs:
+;   12	 *	  0.0 	10/31/2003  originated
+;   13	 *
+;   14	 *****************************************************************************/
+;   15	
+;   16	
+;   17	#include <stdio.h>
+;   18	#include <stdlib.h>
+;   19	#include <string.h>
+;   20	
+;   21	#ifndef _MLOOP_H
+;   22	#include "mloop.h"
+;   23	#endif
+;   24	
+;   25	
+;   26	
+;   27	#undef DEBUG
+;   28	
+;   29	
+;   30	/*
+;   31	 *  GLOBALS
+;   32	 */
+;   33	CONTEXT_S_T *gbContext;
+	SEGMENT code
+;   34	
+;   35	
+;   36	/*
+;   37	 *  STATICS
+;   38	 */
+;   39	static int FindTaskIndex( int taskid );
+;   40	
+;   41	
+;   42	
+;   43	/*  InitTasking		- allocates a context block 
+;   44	 *
+;   45	 *  Parameters:
+;   46	 *	none
+;   47	 *
+;   48	 *  Returns:
+;   49	 *	error		- returns '0' on init fail
+;   50	 *
+;   51	 */
+;   52	int 
+;   53	InitTasking( void )
+;   54	{
+_InitTasking:
+.DEFINE "_InitTasking"
+
+.VALUE _InitTasking
+
+.CLASS 2
+
+.TYPE 68
+
+.ENDEF
+
+.BEGFUNC "InitTasking",54,"_InitTasking"
+
+.LINE 54
+
+.DEFINE "context"
+
+.CLASS 65
+
+.VALUE -3
+
+.TAG "context_s_t"
+
+.TYPE 40
+
+.ENDEF
+
+	PUSH	IX
+	LD	IX,0
+	ADD	IX,SP
+	PUSH	BC
+	PUSH	BC
+;   55	   CONTEXT_S_T	*context;
+;   56	
+;   57	   context = (CONTEXT_S_T *)malloc( sizeof(CONTEXT_S_T) );
+	LD	BC,2109
+	PUSH	BC
+.LINE 57
+
+	LD	(IX+-6),IY
+	CALL	_malloc
+	LD	IY,(IX+-6)
+	POP	BC
+	LD	(IX+-3),HL
+;   58	
+;   59	   if (context == NULL)
+.LINE 59
+
+	LD	BC,0
+	LD	HL,(IX+-3)
+	OR	A,A
+	SBC	HL,BC
+	JR	NZ,L_1
+;   60	   {
+;   61	      return( 0 );
+.LINE 61
+
+	LD	HL,0
+	JMP	L_2
+;   62	   }
+;   63	   else
+L_1:
+.LINE 63
+
+;   64	   {
+;   65	      gbContext = context;
+.LINE 65
+
+	LD	BC,(IX+-3)
+	LD	(_gbContext),BC
+;   66	      gbContext->numtasks = 0;
+.LINE 66
+
+	LD	IY,(_gbContext)
+	LD	BC,0
+	LD	(IY),BC
+;   67	      gbContext->ticks = 0;
+.LINE 67
+
+	LD	IY,(_gbContext)
+	LD	HL,0
+	LD	BC,2103
+	CALL	__istiy
+;   68	      gbContext->ticktime = DEFAULT_TICK_TIME;
+.LINE 68
+
+	LD	IY,(_gbContext)
+	LD	HL,10
+	LD	BC,2106
+	CALL	__istiy
+;   69	      return( 1 );
+.LINE 69
+
+	LD	HL,1
+;   70	   }
+;   71	}
+L_2:
+.LINE 71
+
+	LD	SP,IX
+	POP	IX
+	RET	
+
+
+;**************************** _InitTasking ***************************
+;Name                         Addr/Register   Size   Type
+;_gbContext                          STATIC      3   variable
+;_malloc                             IMPORT  -----   function
+;context                               IX-3      3   variable
+
+
+; Stack Frame Size: 12 (bytes)
+;       Spill Code: 0 (instruction)
+
+
+.ENDFUNC "InitTasking",71,"_InitTasking"
+;   72	
+;   73	
+;   74	
+;   75	/*  FreeTasking		- deallocate context block and memory blocks
+;   76	 *
+;   77	 *  Parameters:
+;   78	 *	none
+;   79	 *
+;   80	 *  Returns:
+;   81	 *	none
+;   82	 */
+;   83	void
+;   84	FreeTasking( void )
+;   85	{
+_FreeTasking:
+.DEFINE "_FreeTasking"
+
+.VALUE _FreeTasking
+
+.CLASS 2
+
+.TYPE 65
+
+.ENDEF
+
+.BEGFUNC "FreeTasking",85,"_FreeTasking"
+
+.LINE 85
+
+.DEFINE "i"
+
+.CLASS 65
+
+.VALUE -3
+
+.TYPE 4
+
+.ENDEF
+
+	PUSH	IX
+	LD	IX,0
+	ADD	IX,SP
+	PUSH	BC
+	PUSH	BC
+	LD	BC,0
+	LD	(IX+-3),BC
+;   86	   int i;
+;   87	
+;   88	   for (i = 0; i < gbContext->numtasks; i++)
+.LINE 88
+
+	JMP	L_7
+L_5:
+;   89	   {
+;   90	      if ( gbContext->tasklist[i].valid )
+	LD	BC,(IX+-3)
+	LD	HL,210
+	CALL	__imuls
+.LINE 90
+
+	LD	BC,(_gbContext)
+	LD	IY,3
+	ADD	IY,BC
+	LD	BC,IY
+	ADD	HL,BC
+	LD	DE,0
+	LD	BC,198
+	LD	IY,HL
+	CALL	__ildiy
+	OR	A,A
+	SBC	HL,DE
+	JR	Z,L_6
+;   91	         free( gbContext->tasklist[i].mem.ptr );
+	LD	BC,(IX+-3)
+	LD	HL,210
+	CALL	__imuls
+.LINE 91
+
+	LD	BC,(_gbContext)
+	LD	IY,3
+	ADD	IY,BC
+	LD	BC,IY
+	ADD	HL,BC
+	LD	IY,HL
+	LD	BC,(IY+52)
+	PUSH	BC
+	LD	(IX+-6),IY
+	CALL	_free
+	LD	IY,(IX+-6)
+	POP	BC
+;   92	   }
+L_6:
+.LINE 92
+
+	LD	BC,(IX+-3)
+	INC	BC
+	LD	(IX+-3),BC
+L_7:
+	LD	IY,(_gbContext)
+	LD	BC,(IY)
+	LD	HL,(IX+-3)
+	OR	A,A
+	SBC	HL,BC
+	JP	M,L_5
+;   93	
+;   94	   free( gbContext );
+	LD	BC,(_gbContext)
+	PUSH	BC
+.LINE 94
+
+	CALL	_free
+	POP	BC
+;   95	}
+.LINE 95
+
+	LD	SP,IX
+	POP	IX
+	RET	
+
+
+;**************************** _FreeTasking ***************************
+;Name                         Addr/Register   Size   Type
+;_free                               IMPORT  -----   function
+;_gbContext                          STATIC      3   variable
+;i                                     IX-3      3   variable
+
+
+; Stack Frame Size: 12 (bytes)
+;       Spill Code: 0 (instruction)
+
+
+.ENDFUNC "FreeTasking",95,"_FreeTasking"
+;   96	
+;   97	
+;   98	/*  CreateTask		- create task entry 
+;   99	 *
+;  100	 *  Parameters:
+;  101	 *	*name		- pointer to task name string
+;  102	 *	*proc		- pointer to task function
+;  103	 *	*args		- pointer to task arguments
+;  104	 *	size		- size of memory block in bytes
+;  105	 *
+;  106	 *  Returns:
+;  107	 *	taskid		- task id of new task, -1 on fail
+;  108	 */
+;  109	int
+;  110	CreateTask( char *name, void (*proc)(void *), void *args, int size )
+;  111	{
+_CreateTask:
+.DEFINE "_CreateTask"
+
+.VALUE _CreateTask
+
+.CLASS 2
+
+.TYPE 68
+
+.ENDEF
+
+.BEGFUNC "CreateTask",111,"_CreateTask"
+
+.LINE 111
+
+.DEFINE "name"
+
+.CLASS 65
+
+.VALUE 6
+
+.TYPE 34
+
+.ENDEF
+
+.DEFINE "proc"
+
+.CLASS 65
+
+.VALUE 9
+
+.TYPE 545
+
+.ENDEF
+
+.DEFINE "args"
+
+.CLASS 65
+
+.VALUE 12
+
+.TYPE 33
+
+.ENDEF
+
+.DEFINE "size"
+
+.CLASS 65
+
+.VALUE 15
+
+.TYPE 4
+
+.ENDEF
+
+.DEFINE "index"
+
+.CLASS 65
+
+.VALUE -3
+
+.TYPE 4
+
+.ENDEF
+
+.DEFINE "taskid"
+
+.CLASS 65
+
+.VALUE -6
+
+.TYPE 4
+
+.ENDEF
+
+;  112	   int	index;
+;  113	   int	taskid = -1;
+.LINE 113
+
+	PUSH	IX
+	LD	IX,0
+	ADD	IX,SP
+	LEA	IY,IX+-21
+	LD	SP,IY
+	LD	BC,16777215
+	LD	(IX+-6),BC
+;  114	
+;  115	#ifdef DEBUG
+;  116	   printf("\n... create task ...\n");
+;  117	#endif
+;  118	
+;  119	   if (gbContext->numtasks == 0)
+.LINE 119
+
+	LD	IY,(_gbContext)
+	LD	BC,0
+	LD	HL,(IY)
+	OR	A,A
+	SBC	HL,BC
+	JR	NZ,L_14
+;  120	   {
+;  121	      index = 0;
+.LINE 121
+
+	LD	(IX+-3),BC
+;  122	      taskid = gbContext->tasklist[index].taskid = 1;
+.LINE 122
+
+	LD	BC,(IX+-3)
+	LD	HL,210
+	CALL	__imuls
+	LD	(IX+-9),HL
+	LD	BC,(_gbContext)
+	LD	HL,3
+	ADD	HL,BC
+	LD	BC,(IX+-9)
+	ADD	HL,BC
+	LD	BC,1
+	LD	(HL),BC
+	LD	BC,(_gbContext)
+	LD	HL,3
+	ADD	HL,BC
+	LD	BC,(IX+-9)
+	ADD	HL,BC
+	LD	BC,(HL)
+	LD	(IX+-12),BC
+	LD	BC,(IX+-12)
+	LD	(IX+-6),BC
+;  123	   }
+;  124	   else if (gbContext->numtasks < MAX_TASKS)
+.LINE 124
+
+	JMP	L_15
+L_14:
+	LD	IY,(_gbContext)
+	LD	BC,10
+	LD	HL,(IY)
+	OR	A,A
+	SBC	HL,BC
+	JP	P,L_12
+;  125	   {
+;  126	      index = gbContext->numtasks;
+.LINE 126
+
+	LD	IY,(_gbContext)
+	LD	BC,(IY)
+	LD	(IX+-3),BC
+;  127	      taskid = gbContext->tasklist[index - 1].taskid + 1;
+	LD	IY,(IX+-3)
+	LEA	IY,IY+-1
+	LD	BC,IY
+	LD	HL,210
+	CALL	__imuls
+	LD	BC,HL
+.LINE 127
+
+	LD	DE,(_gbContext)
+	LD	HL,3
+	ADD	HL,DE
+	ADD	HL,BC
+	LD	BC,(HL)
+	INC	BC
+	LD	(IX+-6),BC
+;  128	      gbContext->tasklist[index].taskid = taskid;
+	LD	BC,(IX+-3)
+	LD	HL,210
+	CALL	__imuls
+	LD	BC,HL
+.LINE 128
+
+	LD	DE,(_gbContext)
+	LD	HL,3
+	ADD	HL,DE
+	ADD	HL,BC
+	LD	BC,(IX+-6)
+	LD	(HL),BC
+;  129	   }
+;  130	   else
+.LINE 130
+
+	JMP	L_15
+L_12:
+;  131	   {
+;  132	      printf("\ntask list full\n");
+	LD	BC,L__7
+	PUSH	BC
+.LINE 132
+
+	CALL	_printf
+	POP	BC
+;  133	      return( -1 );
+.LINE 133
+
+	LD	HL,16777215
+	JMP	L_17
+;  134	   }
+L_15:
+.LINE 134
+
+;  135	
+;  136	   strncpy( gbContext->tasklist[index].taskname, name, SHORT_BUFF_LEN );
+	LD	BC,40
+	PUSH	BC
+	LD	BC,(IX+6)
+	PUSH	BC
+	LD	BC,(IX+-3)
+	LD	HL,210
+	CALL	__imuls
+.LINE 136
+
+	LD	BC,(_gbContext)
+	LD	IY,3
+	ADD	IY,BC
+	LD	BC,IY
+	ADD	HL,BC
+	LD	IY,HL
+	PEA	IY+3
+	LD	(IX+-21),IY
+	CALL	_strncpy
+	LD	IY,(IX+-21)
+	POP	BC
+	POP	BC
+	POP	BC
+;  137	   gbContext->tasklist[index].proc = (void *)(proc);
+.LINE 137
+
+	LD	BC,(IX+-3)
+	LD	HL,210
+	CALL	__imuls
+	LD	(IX+-15),HL
+	LD	BC,(_gbContext)
+	LD	HL,3
+	ADD	HL,BC
+	LD	BC,(IX+-15)
+	ADD	HL,BC
+	LD	BC,(IX+9)
+	LD	IY,HL
+	LD	(IY+43),BC
+;  138	   gbContext->tasklist[index].args = args;
+.LINE 138
+
+	LD	BC,(_gbContext)
+	LD	HL,3
+	ADD	HL,BC
+	LD	BC,(IX+-15)
+	ADD	HL,BC
+	LD	BC,(IX+12)
+	LD	IY,HL
+	LD	(IY+46),BC
+;  139	   gbContext->tasklist[index].mem.size = size;
+.LINE 139
+
+	LD	BC,(_gbContext)
+	LD	HL,3
+	ADD	HL,BC
+	LD	BC,(IX+-15)
+	ADD	HL,BC
+	LD	BC,(IX+15)
+	LD	IY,HL
+	LD	(IY+49),BC
+;  140	   gbContext->tasklist[index].mem.ptr = (char*)malloc( size );
+	LD	BC,(IX+15)
+	PUSH	BC
+.LINE 140
+
+	LD	(IX+-21),IY
+	CALL	_malloc
+	LD	IY,(IX+-21)
+	POP	BC
+	LD	DE,HL
+	LD	BC,(_gbContext)
+	LD	HL,3
+	ADD	HL,BC
+	LD	BC,(IX+-15)
+	ADD	HL,BC
+	LD	IY,HL
+	LD	(IY+52),DE
+;  141	   gbContext->tasklist[index].queue.count = 0;
+.LINE 141
+
+	LD	BC,(IX+-3)
+	LD	HL,210
+	CALL	__imuls
+	LD	(IX+-18),HL
+	LD	BC,(_gbContext)
+	LD	HL,3
+	ADD	HL,BC
+	LD	BC,(IX+-18)
+	ADD	HL,BC
+	LD	BC,0
+	LD	IY,HL
+	LD	(IY+55),BC
+;  142	   gbContext->tasklist[index].valid = TRUE;
+.LINE 142
+
+	LD	BC,(_gbContext)
+	LD	HL,3
+	ADD	HL,BC
+	LD	BC,(IX+-18)
+	ADD	HL,BC
+	LD	IY,HL
+	LD	HL,1
+	LD	BC,198
+	CALL	__istiy
+;  143	   gbContext->tasklist[index].ready = TRUE;
+.LINE 143
+
+	LD	BC,(_gbContext)
+	LD	HL,3
+	ADD	HL,BC
+	LD	BC,(IX+-18)
+	ADD	HL,BC
+	LD	IY,HL
+	LD	HL,1
+	LD	BC,201
+	CALL	__istiy
+;  144	   gbContext->tasklist[index].blocked = FALSE;
+.LINE 144
+
+	LD	BC,(_gbContext)
+	LD	HL,3
+	ADD	HL,BC
+	LD	BC,(IX+-18)
+	ADD	HL,BC
+	LD	IY,HL
+	LD	HL,0
+	LD	BC,204
+	CALL	__istiy
+;  145	   gbContext->tasklist[index].suspend = FALSE;
+.LINE 145
+
+	LD	BC,(_gbContext)
+	LD	HL,3
+	ADD	HL,BC
+	LD	BC,(IX+-18)
+	ADD	HL,BC
+	LD	IY,HL
+	LD	HL,0
+	LD	BC,207
+	CALL	__istiy
+;  146	   gbContext->numtasks++;
+	LD	HL,(_gbContext)
+.LINE 146
+
+	LD	IY,(_gbContext)
+	LD	BC,(IY)
+	INC	BC
+	LD	(HL),BC
+;  147	
+;  148	   return( taskid );
+.LINE 148
+
+	LD	HL,(IX+-6)
+;  149	}
+L_17:
+.LINE 149
+
+	LD	SP,IX
+	POP	IX
+	RET	
+
+
+;**************************** _CreateTask ***************************
+;Name                         Addr/Register   Size   Type
+;_malloc                             IMPORT  -----   function
+;_strncpy                            IMPORT  -----   function
+;_printf                             IMPORT  -----   function
+;_gbContext                          STATIC      3   variable
+;taskid                                IX-6      3   variable
+;index                                 IX-3      3   variable
+;size                                 IX+15      3   parameter
+;args                                 IX+12      3   parameter
+;proc                                  IX+9      3   parameter
+;name                                  IX+6      3   parameter
+
+
+; Stack Frame Size: 39 (bytes)
+;       Spill Code: 0 (instruction)
+
+
+.ENDFUNC "CreateTask",149,"_CreateTask"
+	SEGMENT STRSECT
+L__7:
+	DB	10
+	DB	"task list full"
+	DB	10,0
+	SEGMENT code
+;  150	
+;  151	
+;  152	/*  DeleteTask		- delete task entry 
+;  153	 *
+;  154	 *  Parameters:
+;  155	 *	taskid		- task id to delete
+;  156	 *
+;  157	 *  Returns:
+;  158	 *	none
+;  159	 */
+;  160	void
+;  161	DeleteTask( int taskid )
+;  162	{
+_DeleteTask:
+.DEFINE "_DeleteTask"
+
+.VALUE _DeleteTask
+
+.CLASS 2
+
+.TYPE 65
+
+.ENDEF
+
+.BEGFUNC "DeleteTask",162,"_DeleteTask"
+
+.LINE 162
+
+.DEFINE "taskid"
+
+.CLASS 65
+
+.VALUE 6
+
+.TYPE 4
+
+.ENDEF
+
+.DEFINE "index"
+
+.CLASS 65
+
+.VALUE -3
+
+.TYPE 4
+
+.ENDEF
+
+	PUSH	IX
+	LD	IX,0
+	ADD	IX,SP
+	PUSH	BC
+	PUSH	BC
+	PUSH	BC
+;  163	   int	index;
+;  164	
+;  165	#ifdef DEBUG
+;  166	   printf("\n... delete task ...\n");
+;  167	#endif
+;  168	
+;  169	   index = FindTaskIndex( taskid );
+	LD	BC,(IX+6)
+	PUSH	BC
+.LINE 169
+
+	LD	(IX+-9),IY
+	CALL	_FindTaskIndex
+	LD	IY,(IX+-9)
+	POP	BC
+	LD	(IX+-3),HL
+;  170	
+;  171	   strncpy( gbContext->tasklist[index].taskname, "deleted", SHORT_BUFF_LEN );
+	LD	BC,40
+	PUSH	BC
+	LD	BC,L__9
+	PUSH	BC
+	LD	BC,(IX+-3)
+	LD	HL,210
+	CALL	__imuls
+.LINE 171
+
+	LD	BC,(_gbContext)
+	LD	IY,3
+	ADD	IY,BC
+	LD	BC,IY
+	ADD	HL,BC
+	LD	IY,HL
+	PEA	IY+3
+	LD	(IX+-9),IY
+	CALL	_strncpy
+	LD	IY,(IX+-9)
+	POP	BC
+	POP	BC
+	POP	BC
+;  172	   free( gbContext->tasklist[index].mem.ptr );
+	LD	BC,(IX+-3)
+	LD	HL,210
+	CALL	__imuls
+.LINE 172
+
+	LD	BC,(_gbContext)
+	LD	IY,3
+	ADD	IY,BC
+	LD	BC,IY
+	ADD	HL,BC
+	LD	IY,HL
+	LD	BC,(IY+52)
+	PUSH	BC
+	LD	(IX+-9),IY
+	CALL	_free
+	LD	IY,(IX+-9)
+	POP	BC
+;  173	   gbContext->tasklist[index].mem.size = 0;
+.LINE 173
+
+	LD	BC,(IX+-3)
+	LD	HL,210
+	CALL	__imuls
+	LD	(IX+-6),HL
+	LD	BC,(_gbContext)
+	LD	HL,3
+	ADD	HL,BC
+	LD	BC,(IX+-6)
+	ADD	HL,BC
+	LD	BC,0
+	LD	IY,HL
+	LD	(IY+49),BC
+;  174	   gbContext->tasklist[index].valid = FALSE;
+.LINE 174
+
+	LD	BC,(_gbContext)
+	LD	IY,3
+	ADD	IY,BC
+	LD	BC,(IX+-6)
+	LD	HL,IY
+	ADD	HL,BC
+	LD	IY,HL
+	LD	HL,0
+	LD	BC,198
+	CALL	__istiy
+;  175	   gbContext->tasklist[index].ready = FALSE;
+.LINE 175
+
+	LD	BC,(_gbContext)
+	LD	IY,3
+	ADD	IY,BC
+	LD	BC,(IX+-6)
+	LD	HL,IY
+	ADD	HL,BC
+	LD	IY,HL
+	LD	HL,0
+	LD	BC,201
+	CALL	__istiy
+;  176	}
+.LINE 176
+
+	LD	SP,IX
+	POP	IX
+	RET	
+
+
+;**************************** _DeleteTask ***************************
+;Name                         Addr/Register   Size   Type
+;_free                               IMPORT  -----   function
+;_gbContext                          STATIC      3   variable
+;_strncpy                            IMPORT  -----   function
+;_FindTaskIndex                      STATIC  -----   function
+;index                                 IX-3      3   variable
+;taskid                                IX+6      3   parameter
+
+
+; Stack Frame Size: 18 (bytes)
+;       Spill Code: 0 (instruction)
+
+
+.ENDFUNC "DeleteTask",176,"_DeleteTask"
+	SEGMENT STRSECT
+L__9:
+	DB	"deleted"
+	DB	0
+	SEGMENT code
+;  177	
+;  178	
+;  179	/*  SuspendTask		- suspend task entry 
+;  180	 *
+;  181	 *  Parameters:
+;  182	 *	taskid		- task id to suspend
+;  183	 *
+;  184	 *  Returns:
+;  185	 *	none
+;  186	 */
+;  187	void
+;  188	SuspendTask( int taskid )
+;  189	{
+_SuspendTask:
+.DEFINE "_SuspendTask"
+
+.VALUE _SuspendTask
+
+.CLASS 2
+
+.TYPE 65
+
+.ENDEF
+
+.BEGFUNC "SuspendTask",189,"_SuspendTask"
+
+.LINE 189
+
+.DEFINE "taskid"
+
+.CLASS 65
+
+.VALUE 6
+
+.TYPE 4
+
+.ENDEF
+
+.DEFINE "index"
+
+.CLASS 65
+
+.VALUE -3
+
+.TYPE 4
+
+.ENDEF
+
+	PUSH	IX
+	LD	IX,0
+	ADD	IX,SP
+	PUSH	BC
+	PUSH	BC
+	PUSH	BC
+;  190	   int	index;
+;  191	
+;  192	#ifdef DEBUG
+;  193	   printf("\n... suspend task ...\n");
+;  194	#endif
+;  195	
+;  196	   index = FindTaskIndex( taskid );
+	LD	BC,(IX+6)
+	PUSH	BC
+.LINE 196
+
+	LD	(IX+-9),IY
+	CALL	_FindTaskIndex
+	LD	IY,(IX+-9)
+	POP	BC
+	LD	(IX+-3),HL
+;  197	
+;  198	   gbContext->tasklist[index].ready = FALSE;
+.LINE 198
+
+	LD	BC,(IX+-3)
+	LD	HL,210
+	CALL	__imuls
+	LD	(IX+-6),HL
+	LD	BC,(_gbContext)
+	LD	IY,3
+	ADD	IY,BC
+	LD	BC,(IX+-6)
+	LD	HL,IY
+	ADD	HL,BC
+	LD	IY,HL
+	LD	HL,0
+	LD	BC,201
+	CALL	__istiy
+;  199	   gbContext->tasklist[index].suspend = TRUE;
+.LINE 199
+
+	LD	BC,(_gbContext)
+	LD	IY,3
+	ADD	IY,BC
+	LD	BC,(IX+-6)
+	LD	HL,IY
+	ADD	HL,BC
+	LD	IY,HL
+	LD	HL,1
+	LD	BC,207
+	CALL	__istiy
+;  200	}
+.LINE 200
+
+	LD	SP,IX
+	POP	IX
+	RET	
+
+
+;**************************** _SuspendTask ***************************
+;Name                         Addr/Register   Size   Type
+;_gbContext                          STATIC      3   variable
+;_FindTaskIndex                      STATIC  -----   function
+;index                                 IX-3      3   variable
+;taskid                                IX+6      3   parameter
+
+
+; Stack Frame Size: 18 (bytes)
+;       Spill Code: 0 (instruction)
+
+
+.ENDFUNC "SuspendTask",200,"_SuspendTask"
+;  201	
+;  202	
+;  203	/*  ResumeTask		- un-suspend task entry 
+;  204	 *
+;  205	 *  Parameters:
+;  206	 *	taskid		- task id to resume
+;  207	 *
+;  208	 *  Returns:
+;  209	 *	none
+;  210	 */
+;  211	void
+;  212	ResumeTask( int taskid )
+;  213	{
+_ResumeTask:
+.DEFINE "_ResumeTask"
+
+.VALUE _ResumeTask
+
+.CLASS 2
+
+.TYPE 65
+
+.ENDEF
+
+.BEGFUNC "ResumeTask",213,"_ResumeTask"
+
+.LINE 213
+
+.DEFINE "taskid"
+
+.CLASS 65
+
+.VALUE 6
+
+.TYPE 4
+
+.ENDEF
+
+.DEFINE "index"
+
+.CLASS 65
+
+.VALUE -3
+
+.TYPE 4
+
+.ENDEF
+
+	PUSH	IX
+	LD	IX,0
+	ADD	IX,SP
+	PUSH	BC
+	PUSH	BC
+	PUSH	BC
+;  214	   int	index;
+;  215	
+;  216	#ifdef DEBUG
+;  217	   printf("\n... resume task ...\n");
+;  218	#endif
+;  219	
+;  220	   index = FindTaskIndex( taskid );
+	LD	BC,(IX+6)
+	PUSH	BC
+.LINE 220
+
+	LD	(IX+-9),IY
+	CALL	_FindTaskIndex
+	LD	IY,(IX+-9)
+	POP	BC
+	LD	(IX+-3),HL
+;  221	
+;  222	   gbContext->tasklist[index].ready = TRUE;
+.LINE 222
+
+	LD	BC,(IX+-3)
+	LD	HL,210
+	CALL	__imuls
+	LD	(IX+-6),HL
+	LD	BC,(_gbContext)
+	LD	IY,3
+	ADD	IY,BC
+	LD	BC,(IX+-6)
+	LD	HL,IY
+	ADD	HL,BC
+	LD	IY,HL
+	LD	HL,1
+	LD	BC,201
+	CALL	__istiy
+;  223	   gbContext->tasklist[index].suspend = FALSE;
+.LINE 223
+
+	LD	BC,(_gbContext)
+	LD	IY,3
+	ADD	IY,BC
+	LD	BC,(IX+-6)
+	LD	HL,IY
+	ADD	HL,BC
+	LD	IY,HL
+	LD	HL,0
+	LD	BC,207
+	CALL	__istiy
+;  224	}
+.LINE 224
+
+	LD	SP,IX
+	POP	IX
+	RET	
+
+
+;**************************** _ResumeTask ***************************
+;Name                         Addr/Register   Size   Type
+;_gbContext                          STATIC      3   variable
+;_FindTaskIndex                      STATIC  -----   function
+;index                                 IX-3      3   variable
+;taskid                                IX+6      3   parameter
+
+
+; Stack Frame Size: 18 (bytes)
+;       Spill Code: 0 (instruction)
+
+
+.ENDFUNC "ResumeTask",224,"_ResumeTask"
+;  225	
+;  226	
+;  227	/*  BlockTask		- block task entry 
+;  228	 *
+;  229	 *  Parameters:
+;  230	 *	taskid		- task id to block
+;  231	 *
+;  232	 *  Returns:
+;  233	 *	none
+;  234	 */
+;  235	void
+;  236	BlockTask( int taskid )
+;  237	{
+_BlockTask:
+.DEFINE "_BlockTask"
+
+.VALUE _BlockTask
+
+.CLASS 2
+
+.TYPE 65
+
+.ENDEF
+
+.BEGFUNC "BlockTask",237,"_BlockTask"
+
+.LINE 237
+
+.DEFINE "taskid"
+
+.CLASS 65
+
+.VALUE 6
+
+.TYPE 4
+
+.ENDEF
+
+.DEFINE "index"
+
+.CLASS 65
+
+.VALUE -3
+
+.TYPE 4
+
+.ENDEF
+
+	PUSH	IX
+	LD	IX,0
+	ADD	IX,SP
+	PUSH	BC
+	PUSH	BC
+	PUSH	BC
+;  238	   int	index;
+;  239	
+;  240	#ifdef DEBUG
+;  241	   printf("... block task ...\n");
+;  242	#endif
+;  243	
+;  244	   index = FindTaskIndex( taskid );
+	LD	BC,(IX+6)
+	PUSH	BC
+.LINE 244
+
+	LD	(IX+-9),IY
+	CALL	_FindTaskIndex
+	LD	IY,(IX+-9)
+	POP	BC
+	LD	(IX+-3),HL
+;  245	
+;  246	   gbContext->tasklist[index].ready = FALSE;
+.LINE 246
+
+	LD	BC,(IX+-3)
+	LD	HL,210
+	CALL	__imuls
+	LD	(IX+-6),HL
+	LD	BC,(_gbContext)
+	LD	IY,3
+	ADD	IY,BC
+	LD	BC,(IX+-6)
+	LD	HL,IY
+	ADD	HL,BC
+	LD	IY,HL
+	LD	HL,0
+	LD	BC,201
+	CALL	__istiy
+;  247	   gbContext->tasklist[index].blocked = TRUE;
+.LINE 247
+
+	LD	BC,(_gbContext)
+	LD	IY,3
+	ADD	IY,BC
+	LD	BC,(IX+-6)
+	LD	HL,IY
+	ADD	HL,BC
+	LD	IY,HL
+	LD	HL,1
+	LD	BC,204
+	CALL	__istiy
+;  248	}
+.LINE 248
+
+	LD	SP,IX
+	POP	IX
+	RET	
+
+
+;**************************** _BlockTask ***************************
+;Name                         Addr/Register   Size   Type
+;_gbContext                          STATIC      3   variable
+;_FindTaskIndex                      STATIC  -----   function
+;index                                 IX-3      3   variable
+;taskid                                IX+6      3   parameter
+
+
+; Stack Frame Size: 18 (bytes)
+;       Spill Code: 0 (instruction)
+
+
+.ENDFUNC "BlockTask",248,"_BlockTask"
+;  249	
+;  250	
+;  251	/*  UnBlockTask		- un-block task entry 
+;  252	 *
+;  253	 *  Parameters:
+;  254	 *	taskid		- task id to unblock
+;  255	 *
+;  256	 *  Returns:
+;  257	 *	none
+;  258	 */
+;  259	void
+;  260	UnBlockTask( int taskid )
+;  261	{
+_UnBlockTask:
+.DEFINE "_UnBlockTask"
+
+.VALUE _UnBlockTask
+
+.CLASS 2
+
+.TYPE 65
+
+.ENDEF
+
+.BEGFUNC "UnBlockTask",261,"_UnBlockTask"
+
+.LINE 261
+
+.DEFINE "taskid"
+
+.CLASS 65
+
+.VALUE 6
+
+.TYPE 4
+
+.ENDEF
+
+.DEFINE "index"
+
+.CLASS 65
+
+.VALUE -3
+
+.TYPE 4
+
+.ENDEF
+
+	PUSH	IX
+	LD	IX,0
+	ADD	IX,SP
+	PUSH	BC
+	PUSH	BC
+	PUSH	BC
+;  262	   int	index;
+;  263	
+;  264	#ifdef DEBUG
+;  265	   printf("... unblock task ...\n");
+;  266	#endif
+;  267	
+;  268	   index = FindTaskIndex( taskid );
+	LD	BC,(IX+6)
+	PUSH	BC
+.LINE 268
+
+	LD	(IX+-9),IY
+	CALL	_FindTaskIndex
+	LD	IY,(IX+-9)
+	POP	BC
+	LD	(IX+-3),HL
+;  269	
+;  270	   gbContext->tasklist[index].ready = TRUE;
+.LINE 270
+
+	LD	BC,(IX+-3)
+	LD	HL,210
+	CALL	__imuls
+	LD	(IX+-6),HL
+	LD	BC,(_gbContext)
+	LD	IY,3
+	ADD	IY,BC
+	LD	BC,(IX+-6)
+	LD	HL,IY
+	ADD	HL,BC
+	LD	IY,HL
+	LD	HL,1
+	LD	BC,201
+	CALL	__istiy
+;  271	   gbContext->tasklist[index].blocked = FALSE;
+.LINE 271
+
+	LD	BC,(_gbContext)
+	LD	IY,3
+	ADD	IY,BC
+	LD	BC,(IX+-6)
+	LD	HL,IY
+	ADD	HL,BC
+	LD	IY,HL
+	LD	HL,0
+	LD	BC,204
+	CALL	__istiy
+;  272	}
+.LINE 272
+
+	LD	SP,IX
+	POP	IX
+	RET	
+
+
+;**************************** _UnBlockTask ***************************
+;Name                         Addr/Register   Size   Type
+;_gbContext                          STATIC      3   variable
+;_FindTaskIndex                      STATIC  -----   function
+;index                                 IX-3      3   variable
+;taskid                                IX+6      3   parameter
+
+
+; Stack Frame Size: 18 (bytes)
+;       Spill Code: 0 (instruction)
+
+
+.ENDFUNC "UnBlockTask",272,"_UnBlockTask"
+;  273	
+;  274	
+;  275	/*  FindTaskIndex	- locate task within tasklist 
+;  276	 *
+;  277	 *  Parameters:
+;  278	 *	taskid		- task id
+;  279	 *
+;  280	 *  Returns:
+;  281	 *	index		- index within tasklist, -1 on fail
+;  282	 */
+;  283	int
+;  284	FindTaskIndex( int taskid )
+;  285	{
+_FindTaskIndex:
+.DEFINE "_FindTaskIndex"
+
+.VALUE _FindTaskIndex
+
+.CLASS 2
+
+.TYPE 68
+
+.ENDEF
+
+.BEGFUNC "FindTaskIndex",285,"_FindTaskIndex"
+
+.LINE 285
+
+.DEFINE "taskid"
+
+.CLASS 65
+
+.VALUE 6
+
+.TYPE 4
+
+.ENDEF
+
+.DEFINE "index"
+
+.CLASS 65
+
+.VALUE -3
+
+.TYPE 4
+
+.ENDEF
+
+	PUSH	IX
+	LD	IX,0
+	ADD	IX,SP
+	PUSH	BC
+	LD	BC,0
+	LD	(IX+-3),BC
+;  286	   int index = -1;
+;  287	
+;  288	   for (index = 0; index < gbContext->numtasks; index++ )
+.LINE 288
+
+	JMP	L_27
+L_25:
+;  289	   {
+;  290	      if (gbContext->tasklist[index].taskid == taskid)
+	LD	BC,(IX+-3)
+	LD	HL,210
+	CALL	__imuls
+	LD	BC,HL
+.LINE 290
+
+	LD	DE,(_gbContext)
+	LD	HL,3
+	ADD	HL,DE
+	ADD	HL,BC
+	LD	BC,(IX+6)
+	LD	HL,(HL)
+	OR	A,A
+	SBC	HL,BC
+	JR	Z,L_28
+	LD	BC,(IX+-3)
+	INC	BC
+	LD	(IX+-3),BC
+;  291	         break;
+;  292	   }
+L_27:
+.LINE 292
+
+	LD	IY,(_gbContext)
+	LD	BC,(IY)
+	LD	HL,(IX+-3)
+	OR	A,A
+	SBC	HL,BC
+	JP	M,L_25
+L_28:
+;  293	
+;  294	   return( index );   
+.LINE 294
+
+	LD	HL,(IX+-3)
+;  295	}
+.LINE 295
+
+	LD	SP,IX
+	POP	IX
+	RET	
+
+
+;**************************** _FindTaskIndex ***************************
+;Name                         Addr/Register   Size   Type
+;_gbContext                          STATIC      3   variable
+;index                                 IX-3      3   variable
+;taskid                                IX+6      3   parameter
+
+
+; Stack Frame Size: 12 (bytes)
+;       Spill Code: 0 (instruction)
+
+
+.ENDFUNC "FindTaskIndex",295,"_FindTaskIndex"
+;  296	
+;  297	
+;  298	/*  ExecuteTask		- execute task function 
+;  299	 *
+;  300	 *  Parameters:
+;  301	 *	index	- index into task list
+;  302	 *
+;  303	 *  Returns:
+;  304	 *	none
+;  305	 */
+;  306	void
+;  307	ExecuteTask( int index )
+;  308	{
+_ExecuteTask:
+	PUSH	IX
+	LD	IX,0
+	ADD	IX,SP
+;  309	   int 	result;
+;  310	
+;  311	#ifdef DEBUG
+;  312	   printf("... execute task ...\n");
+;  313	#endif
+;  314	
+;  315	   (gbContext->tasklist[index].proc)(gbContext->tasklist[index].args);
+	LD	BC,(IX+6)
+	LD	HL,210
+	CALL	__imuls
+.DEFINE "_ExecuteTask"
+
+.VALUE _ExecuteTask
+
+.CLASS 2
+
+.TYPE 65
+
+.ENDEF
+
+.BEGFUNC "ExecuteTask",308,"_ExecuteTask"
+
+.LINE 308
+
+.DEFINE "index"
+
+.CLASS 65
+
+.VALUE 6
+
+.TYPE 4
+
+.ENDEF
+
+.LINE 315
+
+	LD	BC,(_gbContext)
+	LD	IY,3
+	ADD	IY,BC
+	LD	BC,IY
+	ADD	HL,BC
+	LD	IY,HL
+	LD	DE,(IY+43)
+	LD	BC,(IX+6)
+	LD	HL,210
+	CALL	__imuls
+	LD	BC,(_gbContext)
+	LD	IY,3
+	ADD	IY,BC
+	LD	BC,IY
+	ADD	HL,BC
+	LD	IY,HL
+	LD	BC,(IY+46)
+	PUSH	BC
+	LD	IY,DE
+	CALL	__indcall
+	POP	BC
+;  316	}
+.LINE 316
+
+	LD	SP,IX
+	POP	IX
+	RET	
+
+
+;**************************** _ExecuteTask ***************************
+;Name                         Addr/Register   Size   Type
+;_gbContext                          STATIC      3   variable
+;index                                 IX+6      3   parameter
+
+
+; Stack Frame Size: 9 (bytes)
+;       Spill Code: 0 (instruction)
+
+
+.ENDFUNC "ExecuteTask",316,"_ExecuteTask"
+;  317	
+;  318	
+;  319	/*  SequenceTaskList		- execute all tasks once
+;  320	 *
+;  321	 *  Parameters:
+;  322	 *	none
+;  323	 *
+;  324	 *  Returns:
+;  325	 *	none
+;  326	 */
+;  327	void
+;  328	SequenceTaskList( void )
+;  329	{
+_SequenceTaskList:
+.DEFINE "_SequenceTaskList"
+
+.VALUE _SequenceTaskList
+
+.CLASS 2
+
+.TYPE 65
+
+.ENDEF
+
+.BEGFUNC "SequenceTaskList",329,"_SequenceTaskList"
+
+.LINE 329
+
+.DEFINE "index"
+
+.CLASS 65
+
+.VALUE -3
+
+.TYPE 4
+
+.ENDEF
+
+	PUSH	IX
+	LD	IX,0
+	ADD	IX,SP
+	PUSH	BC
+	PUSH	BC
+;  330	   int 	index;
+;  331	
+;  332	   printf("\n");
+	LD	BC,L__19
+	PUSH	BC
+.LINE 332
+
+	LD	(IX+-6),IY
+	CALL	_printf
+	LD	IY,(IX+-6)
+	POP	BC
+	LD	BC,0
+	LD	(IX+-3),BC
+;  333	   for (index = 0; index < gbContext->numtasks; index++)
+.LINE 333
+
+	JMP	L_40
+L_38:
+;  334	   {
+;  335	      if (gbContext->tasklist[index].valid)
+	LD	BC,(IX+-3)
+	LD	HL,210
+	CALL	__imuls
+.LINE 335
+
+	LD	BC,(_gbContext)
+	LD	IY,3
+	ADD	IY,BC
+	LD	BC,IY
+	ADD	HL,BC
+	LD	DE,0
+	LD	BC,198
+	LD	IY,HL
+	CALL	__ildiy
+	OR	A,A
+	SBC	HL,DE
+	JR	Z,L_39
+;  336	      {
+;  337	         if (gbContext->tasklist[index].blocked)
+	LD	BC,(IX+-3)
+	LD	HL,210
+	CALL	__imuls
+.LINE 337
+
+	LD	BC,(_gbContext)
+	LD	IY,3
+	ADD	IY,BC
+	LD	BC,IY
+	ADD	HL,BC
+	LD	BC,204
+	LD	IY,HL
+	CALL	__ildiy
+	OR	A,A
+	SBC	HL,DE
+	JR	Z,L_36
+;  338	         {
+;  339	            printf("... taskid %d is blocked ...\n", gbContext->tasklist[index].taskid );
+	LD	BC,(IX+-3)
+	LD	HL,210
+	CALL	__imuls
+	LD	BC,HL
+.LINE 339
+
+	LD	DE,(_gbContext)
+	LD	HL,3
+	ADD	HL,DE
+	ADD	HL,BC
+	LD	BC,(HL)
+	PUSH	BC
+	LD	BC,L__22
+	PUSH	BC
+	LD	(IX+-6),IY
+	CALL	_printf
+	LD	IY,(IX+-6)
+	POP	BC
+	POP	BC
+;  340	         }
+;  341	         else if (gbContext->tasklist[index].suspend)
+.LINE 341
+
+	JMP	L_39
+L_36:
+	LD	BC,(IX+-3)
+	LD	HL,210
+	CALL	__imuls
+	LD	BC,(_gbContext)
+	LD	IY,3
+	ADD	IY,BC
+	LD	BC,IY
+	ADD	HL,BC
+	LD	BC,207
+	LD	IY,HL
+	CALL	__ildiy
+	OR	A,A
+	SBC	HL,DE
+	JR	Z,L_34
+;  342	         {
+;  343	            printf("... taskid %d is suspended ...\n", gbContext->tasklist[index].taskid );
+	LD	BC,(IX+-3)
+	LD	HL,210
+	CALL	__imuls
+	LD	BC,HL
+.LINE 343
+
+	LD	DE,(_gbContext)
+	LD	HL,3
+	ADD	HL,DE
+	ADD	HL,BC
+	LD	BC,(HL)
+	PUSH	BC
+	LD	BC,L__24
+	PUSH	BC
+	LD	(IX+-6),IY
+	CALL	_printf
+	LD	IY,(IX+-6)
+	POP	BC
+	POP	BC
+;  344	         }
+;  345	         else if (gbContext->tasklist[index].ready)
+.LINE 345
+
+	JMP	L_39
+L_34:
+	LD	BC,(IX+-3)
+	LD	HL,210
+	CALL	__imuls
+	LD	BC,(_gbContext)
+	LD	IY,3
+	ADD	IY,BC
+	LD	BC,IY
+	ADD	HL,BC
+	LD	BC,201
+	LD	IY,HL
+	CALL	__ildiy
+	OR	A,A
+	SBC	HL,DE
+	JR	Z,L_39
+;  346	         {
+;  347	            printf("... taskid %d - ", gbContext->tasklist[index].taskid );
+	LD	BC,(IX+-3)
+	LD	HL,210
+	CALL	__imuls
+	LD	BC,HL
+.LINE 347
+
+	LD	DE,(_gbContext)
+	LD	HL,3
+	ADD	HL,DE
+	ADD	HL,BC
+	LD	BC,(HL)
+	PUSH	BC
+	LD	BC,L__26
+	PUSH	BC
+	LD	(IX+-6),IY
+	CALL	_printf
+	LD	IY,(IX+-6)
+	POP	BC
+	POP	BC
+;  348	            ExecuteTask( index );
+	LD	BC,(IX+-3)
+	PUSH	BC
+.LINE 348
+
+	LD	(IX+-6),IY
+	CALL	_ExecuteTask
+	LD	IY,(IX+-6)
+	POP	BC
+;  349	         }
+;  350	      }
+;  351	   }
+L_39:
+.LINE 351
+
+	LD	BC,(IX+-3)
+	INC	BC
+	LD	(IX+-3),BC
+L_40:
+	LD	IY,(_gbContext)
+	LD	BC,(IY)
+	LD	HL,(IX+-3)
+	OR	A,A
+	SBC	HL,BC
+	JP	M,L_38
+;  352	}
+.LINE 352
+
+	LD	SP,IX
+	POP	IX
+	RET	
+
+
+;**************************** _SequenceTaskList ***************************
+;Name                         Addr/Register   Size   Type
+;_ExecuteTask                        IMPORT  -----   function
+;_gbContext                          STATIC      3   variable
+;_printf                             IMPORT  -----   function
+;index                                 IX-3      3   variable
+
+
+; Stack Frame Size: 12 (bytes)
+;       Spill Code: 0 (instruction)
+
+
+.ENDFUNC "SequenceTaskList",352,"_SequenceTaskList"
+	SEGMENT STRSECT
+L__19:
+	DB	10,0
+L__22:
+	DB	"... taskid %d is blocked ..."
+	DB	10,0
+L__24:
+	DB	"... taskid %d is suspended ..."
+	DB	10,0
+L__26:
+	DB	"... taskid %d - "
+	DB	0
+	SEGMENT code
+;  353	
+;  354	
+;  355	/*  DisplayTaskList		- display task list
+;  356	 *
+;  357	 *  Parameters:
+;  358	 *	none
+;  359	 *
+;  360	 *  Returns:
+;  361	 *	none
+;  362	 */
+;  363	void
+;  364	DisplayTaskList( void )
+;  365	{
+_DisplayTaskList:
+.DEFINE "_DisplayTaskList"
+
+.VALUE _DisplayTaskList
+
+.CLASS 2
+
+.TYPE 65
+
+.ENDEF
+
+.BEGFUNC "DisplayTaskList",365,"_DisplayTaskList"
+
+.LINE 365
+
+.DEFINE "i"
+
+.CLASS 65
+
+.VALUE -3
+
+.TYPE 4
+
+.ENDEF
+
+	PUSH	IX
+	LD	IX,0
+	ADD	IX,SP
+	PUSH	BC
+	PUSH	BC
+	PUSH	BC
+;  366	   int 		i;
+;  367	
+;  368	   printf("\nTask List:\n");
+	LD	BC,L__29
+	PUSH	BC
+.LINE 368
+
+	LD	(IX+-9),IY
+	CALL	_printf
+	LD	IY,(IX+-9)
+	POP	BC
+;  369	   printf("   id name                 V R B S Mem  Cnt\n");
+	LD	BC,L__30
+	PUSH	BC
+.LINE 369
+
+	LD	(IX+-9),IY
+	CALL	_printf
+	LD	IY,(IX+-9)
+	POP	BC
+	LD	BC,0
+	LD	(IX+-3),BC
+;  370	
+;  371	   for (i = 0; i < gbContext->numtasks; i++)
+.LINE 371
+
+	JMP	L_45
+L_43:
+;  372	   {
+;  373	      printf("   %02d %-20s  %d %d %d %d %04d %d\n", 
+;  374			gbContext->tasklist[i].taskid,
+;  375			gbContext->tasklist[i].taskname,
+;  376			gbContext->tasklist[i].valid,
+;  377			gbContext->tasklist[i].ready,
+;  378			gbContext->tasklist[i].blocked,
+;  379			gbContext->tasklist[i].suspend,
+;  380			gbContext->tasklist[i].mem.size,
+;  381			gbContext->tasklist[i].queue.count);
+.LINE 381
+
+	LD	BC,(IX+-3)
+	LD	HL,210
+	CALL	__imuls
+	LD	(IX+-6),HL
+	LD	BC,(_gbContext)
+	LD	IY,3
+	ADD	IY,BC
+	LD	BC,(IX+-6)
+	LD	HL,IY
+	ADD	HL,BC
+	LD	IY,HL
+	LD	BC,(IY+55)
+	PUSH	BC
+	LD	BC,(_gbContext)
+	LD	HL,3
+	ADD	HL,BC
+	LD	BC,(IX+-6)
+	ADD	HL,BC
+	LD	IY,HL
+	LD	BC,(IY+49)
+	PUSH	BC
+	LD	BC,(_gbContext)
+	LD	IY,3
+	ADD	IY,BC
+	LD	BC,(IX+-6)
+	LD	HL,IY
+	ADD	HL,BC
+	LD	BC,207
+	LD	IY,HL
+	CALL	__ildiy
+	PUSH	HL
+	LD	BC,(_gbContext)
+	LD	IY,3
+	ADD	IY,BC
+	LD	BC,(IX+-6)
+	LD	HL,IY
+	ADD	HL,BC
+	LD	BC,204
+	LD	IY,HL
+	CALL	__ildiy
+	PUSH	HL
+	LD	BC,(_gbContext)
+	LD	IY,3
+	ADD	IY,BC
+	LD	BC,(IX+-6)
+	LD	HL,IY
+	ADD	HL,BC
+	LD	BC,201
+	LD	IY,HL
+	CALL	__ildiy
+	PUSH	HL
+	LD	BC,(_gbContext)
+	LD	IY,3
+	ADD	IY,BC
+	LD	BC,(IX+-6)
+	LD	HL,IY
+	ADD	HL,BC
+	LD	BC,198
+	LD	IY,HL
+	CALL	__ildiy
+	PUSH	HL
+	LD	BC,(_gbContext)
+	LD	IY,3
+	ADD	IY,BC
+	LD	BC,(IX+-6)
+	LD	HL,IY
+	ADD	HL,BC
+	LD	IY,HL
+	PEA	IY+3
+	LD	BC,(_gbContext)
+	LD	HL,3
+	ADD	HL,BC
+	LD	BC,(IX+-6)
+	ADD	HL,BC
+	LD	BC,(HL)
+	PUSH	BC
+	LD	BC,L__31
+	PUSH	BC
+	LD	(IX+-9),IY
+	CALL	_printf
+	LD	IY,(IX+-9)
+	LD	IY,27
+	ADD	IY,SP
+	LD	SP,IY
+	LD	BC,(IX+-3)
+	INC	BC
+	LD	(IX+-3),BC
+;  382	   }
+L_45:
+.LINE 382
+
+	LD	IY,(_gbContext)
+	LD	BC,(IY)
+	LD	HL,(IX+-3)
+	OR	A,A
+	SBC	HL,BC
+	JP	M,L_43
+;  383	}
+.LINE 383
+
+	LD	SP,IX
+	POP	IX
+	RET	
+
+
+;**************************** _DisplayTaskList ***************************
+;Name                         Addr/Register   Size   Type
+;_gbContext                          STATIC      3   variable
+;_printf                             IMPORT  -----   function
+;i                                     IX-3      3   variable
+
+
+; Stack Frame Size: 15 (bytes)
+;       Spill Code: 0 (instruction)
+
+
+.ENDFUNC "DisplayTaskList",383,"_DisplayTaskList"
+	SEGMENT STRSECT
+L__29:
+	DB	10
+	DB	"Task List:"
+	DB	10,0
+L__30:
+	DB	"   id name                 V R B S Mem  Cnt"
+	DB	10,0
+L__31:
+	DB	"   %02d %-20s  %d %d %d %d %04d %d"
+	DB	10,0
+	SEGMENT code
+;  384	
+;  385	
+;  386	/*  GetTaskId		- lookup task id by task name
+;  387	 *
+;  388	 *  Parameters:
+;  389	 *	*name		- pointer to task name string
+;  390	 *
+;  391	 *  Returns:
+;  392	 *	taskid		- task id of named task
+;  393	 */
+;  394	int
+;  395	GetTaskId( char *name )
+;  396	{
+_GetTaskId:
+.DEFINE "_GetTaskId"
+
+.VALUE _GetTaskId
+
+.CLASS 2
+
+.TYPE 68
+
+.ENDEF
+
+.BEGFUNC "GetTaskId",396,"_GetTaskId"
+
+.LINE 396
+
+.DEFINE "name"
+
+.CLASS 65
+
+.VALUE 6
+
+.TYPE 34
+
+.ENDEF
+
+.DEFINE "i"
+
+.CLASS 65
+
+.VALUE -3
+
+.TYPE 4
+
+.ENDEF
+
+.DEFINE "taskid"
+
+.CLASS 65
+
+.VALUE -6
+
+.TYPE 4
+
+.ENDEF
+
+;  397	   int 		i, taskid = 0;
+.LINE 397
+
+	PUSH	IX
+	LD	IX,0
+	ADD	IX,SP
+	PUSH	BC
+	PUSH	BC
+	LD	BC,0
+	LD	(IX+-6),BC
+	LD	(IX+-3),BC
+;  398	
+;  399	   for (i = 0; i < gbContext->numtasks; i++)
+.LINE 399
+
+	JMP	L_51
+L_49:
+;  400	   {
+;  401	      if (strcmp( name, gbContext->tasklist[i].taskname ) == 0)
+	LD	BC,(IX+-3)
+	LD	HL,210
+	CALL	__imuls
+	LD	BC,HL
+.LINE 401
+
+	LD	DE,(_gbContext)
+	LD	HL,3
+	ADD	HL,DE
+	ADD	HL,BC
+	LD	IY,HL
+	PEA	IY+3
+	LD	BC,(IX+6)
+	PUSH	BC
+	CALL	_strcmp
+	POP	BC
+	POP	BC
+	LD	BC,0
+	OR	A,A
+	SBC	HL,BC
+	JR	NZ,L_50
+;  402	      {
+;  403	         taskid = gbContext->tasklist[i].taskid;
+	LD	BC,(IX+-3)
+	LD	HL,210
+	CALL	__imuls
+	LD	BC,HL
+.LINE 403
+
+	LD	DE,(_gbContext)
+	LD	HL,3
+	ADD	HL,DE
+	ADD	HL,BC
+	LD	BC,(HL)
+	LD	(IX+-6),BC
+;  404	         break;
+.LINE 404
+
+	JMP	L_52
+;  405	      }
+;  406	   }
+L_50:
+.LINE 406
+
+	LD	BC,(IX+-3)
+	INC	BC
+	LD	(IX+-3),BC
+L_51:
+	LD	IY,(_gbContext)
+	LD	BC,(IY)
+	LD	HL,(IX+-3)
+	OR	A,A
+	SBC	HL,BC
+	JP	M,L_49
+L_52:
+;  407	   return( taskid );
+.LINE 407
+
+	LD	HL,(IX+-6)
+;  408	}
+.LINE 408
+
+	LD	SP,IX
+	POP	IX
+	RET	
+
+
+;**************************** _GetTaskId ***************************
+;Name                         Addr/Register   Size   Type
+;_gbContext                          STATIC      3   variable
+;_strcmp                             IMPORT  -----   function
+;taskid                                IX-6      3   variable
+;i                                     IX-3      3   variable
+;name                                  IX+6      3   parameter
+
+
+; Stack Frame Size: 15 (bytes)
+;       Spill Code: 0 (instruction)
+
+
+.ENDFUNC "GetTaskId",408,"_GetTaskId"
+;  409	
+;  410	
+;  411	/*  GetTaskMemPtr	- lookup memory pointer by task id
+;  412	 *
+;  413	 *  Parameters:
+;  414	 *	taskid		- task id to lookup
+;  415	 *
+;  416	 *  Returns:
+;  417	 *	*mem		- pointer to memory block
+;  418	 */
+;  419	char *GetTaskMemPtr( int taskid )
+;  420	{
+_GetTaskMemPtr:
+.DEFINE "_GetTaskMemPtr"
+
+.VALUE _GetTaskMemPtr
+
+.CLASS 2
+
+.TYPE 322
+
+.ENDEF
+
+.BEGFUNC "GetTaskMemPtr",420,"_GetTaskMemPtr"
+
+.LINE 420
+
+.DEFINE "taskid"
+
+.CLASS 65
+
+.VALUE 6
+
+.TYPE 4
+
+.ENDEF
+
+.DEFINE "index"
+
+.CLASS 65
+
+.VALUE -3
+
+.TYPE 4
+
+.ENDEF
+
+	PUSH	IX
+	LD	IX,0
+	ADD	IX,SP
+	PUSH	BC
+;  421	   int	index;
+;  422	
+;  423	   index = FindTaskIndex( taskid );
+	LD	BC,(IX+6)
+	PUSH	BC
+.LINE 423
+
+	CALL	_FindTaskIndex
+	POP	BC
+	LD	(IX+-3),HL
+;  424	
+;  425	   return( gbContext->tasklist[index].mem.ptr );
+	LD	BC,(IX+-3)
+	LD	HL,210
+	CALL	__imuls
+	LD	DE,HL
+.LINE 425
+
+	LD	BC,(_gbContext)
+	LD	HL,3
+	ADD	HL,BC
+	ADD	HL,DE
+	LD	IY,HL
+	LD	HL,(IY+52)
+;  426	}
+.LINE 426
+
+	LD	SP,IX
+	POP	IX
+	RET	
+
+
+;**************************** _GetTaskMemPtr ***************************
+;Name                         Addr/Register   Size   Type
+;_gbContext                          STATIC      3   variable
+;_FindTaskIndex                      STATIC  -----   function
+;index                                 IX-3      3   variable
+;taskid                                IX+6      3   parameter
+
+
+; Stack Frame Size: 12 (bytes)
+;       Spill Code: 0 (instruction)
+
+
+.ENDFUNC "GetTaskMemPtr",426,"_GetTaskMemPtr"
+;  427	
+;  428	
+;  429	/*  GetTaskMemSize	- lookup memory size by task id
+;  430	 *
+;  431	 *  Parameters:
+;  432	 *	taskid		- task id to lookup
+;  433	 *
+;  434	 *  Returns:
+;  435	 *	size		- size of memory block in bytes
+;  436	 */
+;  437	int
+;  438	GetTaskMemSize( int taskid )
+;  439	{
+_GetTaskMemSize:
+.DEFINE "_GetTaskMemSize"
+
+.VALUE _GetTaskMemSize
+
+.CLASS 2
+
+.TYPE 68
+
+.ENDEF
+
+.BEGFUNC "GetTaskMemSize",439,"_GetTaskMemSize"
+
+.LINE 439
+
+.DEFINE "taskid"
+
+.CLASS 65
+
+.VALUE 6
+
+.TYPE 4
+
+.ENDEF
+
+.DEFINE "index"
+
+.CLASS 65
+
+.VALUE -3
+
+.TYPE 4
+
+.ENDEF
+
+	PUSH	IX
+	LD	IX,0
+	ADD	IX,SP
+	PUSH	BC
+;  440	   int	index;
+;  441	
+;  442	   index = FindTaskIndex( taskid );
+	LD	BC,(IX+6)
+	PUSH	BC
+.LINE 442
+
+	CALL	_FindTaskIndex
+	POP	BC
+	LD	(IX+-3),HL
+;  443	
+;  444	   return( gbContext->tasklist[index].mem.size );
+	LD	BC,(IX+-3)
+	LD	HL,210
+	CALL	__imuls
+	LD	DE,HL
+.LINE 444
+
+	LD	BC,(_gbContext)
+	LD	HL,3
+	ADD	HL,BC
+	ADD	HL,DE
+	LD	IY,HL
+	LD	HL,(IY+49)
+;  445	}
+.LINE 445
+
+	LD	SP,IX
+	POP	IX
+	RET	
+
+
+;**************************** _GetTaskMemSize ***************************
+;Name                         Addr/Register   Size   Type
+;_gbContext                          STATIC      3   variable
+;_FindTaskIndex                      STATIC  -----   function
+;index                                 IX-3      3   variable
+;taskid                                IX+6      3   parameter
+
+
+; Stack Frame Size: 12 (bytes)
+;       Spill Code: 0 (instruction)
+
+
+.ENDFUNC "GetTaskMemSize",445,"_GetTaskMemSize"
+;  446	
+;  447	
+;  448	/*  ClearMessageQueue	- clear msg queue count by task id
+;  449	 *
+;  450	 *  Parameters:
+;  451	 *	taskid		- task id to lookup
+;  452	 *
+;  453	 *  Returns:
+;  454	 *	none
+;  455	 */
+;  456	void
+;  457	ClearMessageQueue( int taskid )
+;  458	{
+_ClearMessageQueue:
+.DEFINE "_ClearMessageQueue"
+
+.VALUE _ClearMessageQueue
+
+.CLASS 2
+
+.TYPE 65
+
+.ENDEF
+
+.BEGFUNC "ClearMessageQueue",458,"_ClearMessageQueue"
+
+.LINE 458
+
+.DEFINE "taskid"
+
+.CLASS 65
+
+.VALUE 6
+
+.TYPE 4
+
+.ENDEF
+
+.DEFINE "index"
+
+.CLASS 65
+
+.VALUE -3
+
+.TYPE 4
+
+.ENDEF
+
+	PUSH	IX
+	LD	IX,0
+	ADD	IX,SP
+	PUSH	BC
+;  459	   int	index;
+;  460	
+;  461	   index = FindTaskIndex( taskid );
+	LD	BC,(IX+6)
+	PUSH	BC
+.LINE 461
+
+	CALL	_FindTaskIndex
+	POP	BC
+	LD	(IX+-3),HL
+;  462	
+;  463	   gbContext->tasklist[index].queue.count = 0;
+	LD	BC,(IX+-3)
+	LD	HL,210
+	CALL	__imuls
+.LINE 463
+
+	LD	BC,(_gbContext)
+	LD	IY,3
+	ADD	IY,BC
+	LD	BC,IY
+	ADD	HL,BC
+	LD	BC,0
+	LD	IY,HL
+	LD	(IY+55),BC
+;  464	}
+.LINE 464
+
+	LD	SP,IX
+	POP	IX
+	RET	
+
+
+;**************************** _ClearMessageQueue ***************************
+;Name                         Addr/Register   Size   Type
+;_gbContext                          STATIC      3   variable
+;_FindTaskIndex                      STATIC  -----   function
+;index                                 IX-3      3   variable
+;taskid                                IX+6      3   parameter
+
+
+; Stack Frame Size: 12 (bytes)
+;       Spill Code: 0 (instruction)
+
+
+.ENDFUNC "ClearMessageQueue",464,"_ClearMessageQueue"
+;  465	
+;  466	
+;  467	/*  CheckMessageQueue	- lookup msg queue count by task id
+;  468	 *
+;  469	 *  Parameters:
+;  470	 *	taskid		- task id to lookup
+;  471	 *
+;  472	 *  Returns:
+;  473	 *	count		- number of msgs in queue
+;  474	 */
+;  475	int
+;  476	CheckMessageQueue( int taskid )
+;  477	{
+_CheckMessageQueue:
+.DEFINE "_CheckMessageQueue"
+
+.VALUE _CheckMessageQueue
+
+.CLASS 2
+
+.TYPE 68
+
+.ENDEF
+
+.BEGFUNC "CheckMessageQueue",477,"_CheckMessageQueue"
+
+.LINE 477
+
+.DEFINE "taskid"
+
+.CLASS 65
+
+.VALUE 6
+
+.TYPE 4
+
+.ENDEF
+
+.DEFINE "index"
+
+.CLASS 65
+
+.VALUE -3
+
+.TYPE 4
+
+.ENDEF
+
+	PUSH	IX
+	LD	IX,0
+	ADD	IX,SP
+	PUSH	BC
+;  478	   int	index;
+;  479	
+;  480	   index = FindTaskIndex( taskid );
+	LD	BC,(IX+6)
+	PUSH	BC
+.LINE 480
+
+	CALL	_FindTaskIndex
+	POP	BC
+	LD	(IX+-3),HL
+;  481	
+;  482	   return( gbContext->tasklist[index].queue.count );
+	LD	BC,(IX+-3)
+	LD	HL,210
+	CALL	__imuls
+	LD	DE,HL
+.LINE 482
+
+	LD	BC,(_gbContext)
+	LD	HL,3
+	ADD	HL,BC
+	ADD	HL,DE
+	LD	IY,HL
+	LD	HL,(IY+55)
+;  483	}
+.LINE 483
+
+	LD	SP,IX
+	POP	IX
+	RET	
+
+
+;**************************** _CheckMessageQueue ***************************
+;Name                         Addr/Register   Size   Type
+;_gbContext                          STATIC      3   variable
+;_FindTaskIndex                      STATIC  -----   function
+;index                                 IX-3      3   variable
+;taskid                                IX+6      3   parameter
+
+
+; Stack Frame Size: 12 (bytes)
+;       Spill Code: 0 (instruction)
+
+
+.ENDFUNC "CheckMessageQueue",483,"_CheckMessageQueue"
+;  484	
+;  485	
+;  486	/*  ReadMessage		- read message from queue by index
+;  487	 *
+;  488	 *  Parameters:
+;  489	 *	taskid		- task id to lookup
+;  490	 *	index		- index into msg queue
+;  491	 *	*buf		- pointer to msg buffer for copy
+;  492	 *
+;  493	 *  Returns:
+;  494	 *	size		- size of bytes copied
+;  495	 */
+;  496	int
+;  497	ReadMessage( int taskid, int index, char *buf  )
+;  498	{
+_ReadMessage:
+.DEFINE "_ReadMessage"
+
+.VALUE _ReadMessage
+
+.CLASS 2
+
+.TYPE 68
+
+.ENDEF
+
+.BEGFUNC "ReadMessage",498,"_ReadMessage"
+
+.LINE 498
+
+.DEFINE "taskid"
+
+.CLASS 65
+
+.VALUE 6
+
+.TYPE 4
+
+.ENDEF
+
+.DEFINE "index"
+
+.CLASS 65
+
+.VALUE 9
+
+.TYPE 4
+
+.ENDEF
+
+.DEFINE "buf"
+
+.CLASS 65
+
+.VALUE 12
+
+.TYPE 34
+
+.ENDEF
+
+.DEFINE "size"
+
+.CLASS 65
+
+.VALUE -3
+
+.TYPE 4
+
+.ENDEF
+
+.DEFINE "task"
+
+.CLASS 65
+
+.VALUE -6
+
+.TYPE 4
+
+.ENDEF
+
+	PUSH	IX
+	LD	IX,0
+	ADD	IX,SP
+	LEA	IY,IX+-12
+	LD	SP,IY
+;  499	   int	task, size;
+;  500	
+;  501	   task = FindTaskIndex( taskid );
+	LD	BC,(IX+6)
+	PUSH	BC
+.LINE 501
+
+	CALL	_FindTaskIndex
+	POP	BC
+	LD	(IX+-6),HL
+;  502	
+;  503	   size = gbContext->tasklist[task].queue.msg[index].size;
+.LINE 503
+
+	LD	BC,(IX+-6)
+	LD	HL,210
+	CALL	__imuls
+	LD	(IX+-9),HL
+	LD	BC,(IX+9)
+	LD	HL,35
+	CALL	__imuls
+	LD	(IX+-12),HL
+	LD	BC,(_gbContext)
+	LD	IY,3
+	ADD	IY,BC
+	LD	BC,(IX+-9)
+	LD	HL,IY
+	ADD	HL,BC
+	LD	IY,58
+	LD	BC,HL
+	ADD	IY,BC
+	LD	BC,(IX+-12)
+	LD	HL,IY
+	ADD	HL,BC
+	LD	BC,(HL)
+	LD	(IX+-3),BC
+;  504	
+;  505	   strncpy( buf, 
+;  506		gbContext->tasklist[task].queue.msg[index].buf, size );
+	LD	BC,(IX+-3)
+	PUSH	BC
+.LINE 506
+
+	LD	BC,(_gbContext)
+	LD	IY,3
+	ADD	IY,BC
+	LD	BC,(IX+-9)
+	LD	HL,IY
+	ADD	HL,BC
+	LD	IY,58
+	LD	BC,HL
+	ADD	IY,BC
+	LD	BC,(IX+-12)
+	LD	HL,IY
+	ADD	HL,BC
+	LD	IY,HL
+	PEA	IY+3
+	LD	BC,(IX+12)
+	PUSH	BC
+	CALL	_strncpy
+	POP	BC
+	POP	BC
+	POP	BC
+;  507	
+;  508	   return( size );
+.LINE 508
+
+	LD	HL,(IX+-3)
+;  509	}
+.LINE 509
+
+	LD	SP,IX
+	POP	IX
+	RET	
+
+
+;**************************** _ReadMessage ***************************
+;Name                         Addr/Register   Size   Type
+;_strncpy                            IMPORT  -----   function
+;_gbContext                          STATIC      3   variable
+;_FindTaskIndex                      STATIC  -----   function
+;task                                  IX-6      3   variable
+;size                                  IX-3      3   variable
+;buf                                  IX+12      3   parameter
+;index                                 IX+9      3   parameter
+;taskid                                IX+6      3   parameter
+
+
+; Stack Frame Size: 27 (bytes)
+;       Spill Code: 0 (instruction)
+
+
+.ENDFUNC "ReadMessage",509,"_ReadMessage"
+;  510	
+;  511	
+;  512	/*  SendMessage		- send message to another task
+;  513	 *
+;  514	 *  Parameters:
+;  515	 *	desttaskid	- destination task id
+;  516	 *	*buf		- pointer to msg buffer for copy
+;  517	 *	size 		- number of bytes in buffer
+;  518	 *
+;  519	 *  Returns:
+;  520	 *	size 		- number of bytes copied, 0 if error
+;  521	 */
+;  522	int
+;  523	SendMessage( int desttaskid, char *buf, int size )
+;  524	{
+_SendMessage:
+.DEFINE "_SendMessage"
+
+.VALUE _SendMessage
+
+.CLASS 2
+
+.TYPE 68
+
+.ENDEF
+
+.BEGFUNC "SendMessage",524,"_SendMessage"
+
+.LINE 524
+
+.DEFINE "desttaskid"
+
+.CLASS 65
+
+.VALUE 6
+
+.TYPE 4
+
+.ENDEF
+
+.DEFINE "buf"
+
+.CLASS 65
+
+.VALUE 9
+
+.TYPE 34
+
+.ENDEF
+
+.DEFINE "size"
+
+.CLASS 65
+
+.VALUE 12
+
+.TYPE 4
+
+.ENDEF
+
+.DEFINE "desttask"
+
+.CLASS 65
+
+.VALUE -3
+
+.TYPE 4
+
+.ENDEF
+
+.DEFINE "index"
+
+.CLASS 65
+
+.VALUE -6
+
+.TYPE 4
+
+.ENDEF
+
+	PUSH	IX
+	LD	IX,0
+	ADD	IX,SP
+	LEA	IY,IX+-12
+	LD	SP,IY
+;  525	   int	index, desttask;
+;  526	
+;  527	   desttask = FindTaskIndex( desttaskid ); 
+	LD	BC,(IX+6)
+	PUSH	BC
+.LINE 527
+
+	CALL	_FindTaskIndex
+	POP	BC
+	LD	(IX+-3),HL
+;  528	
+;  529	   if ( gbContext->tasklist[desttask].queue.count < MAX_MSG_COUNT
+;  530		&& size < MAX_MSG_SIZE )
+	LD	BC,(IX+-3)
+	LD	HL,210
+	CALL	__imuls
+.LINE 530
+
+	LD	BC,(_gbContext)
+	LD	IY,3
+	ADD	IY,BC
+	LD	BC,IY
+	ADD	HL,BC
+	LD	BC,4
+	LD	IY,HL
+	LD	HL,(IY+55)
+	OR	A,A
+	SBC	HL,BC
+	JP	P,L_62
+	LD	BC,32
+	LD	HL,(IX+12)
+	OR	A,A
+	SBC	HL,BC
+	JP	P,L_62
+;  531	   {
+;  532	      index = gbContext->tasklist[desttask].queue.count + 1;
+.LINE 532
+
+	LD	BC,(IX+-3)
+	LD	HL,210
+	CALL	__imuls
+	LD	(IX+-9),HL
+	LD	BC,(_gbContext)
+	LD	IY,3
+	ADD	IY,BC
+	LD	BC,(IX+-9)
+	LD	HL,IY
+	ADD	HL,BC
+	LD	IY,HL
+	LD	BC,(IY+55)
+	INC	BC
+	LD	(IX+-6),BC
+;  533	      strncpy( gbContext->tasklist[desttask].queue.msg[index].buf,
+;  534			buf,
+;  535			size);
+	LD	BC,(IX+12)
+	PUSH	BC
+	LD	BC,(IX+9)
+	PUSH	BC
+.LINE 535
+
+	LD	BC,(_gbContext)
+	LD	HL,3
+	ADD	HL,BC
+	LD	BC,(IX+-9)
+	ADD	HL,BC
+	LD	DE,HL
+	LD	BC,(IX+-6)
+	LD	HL,35
+	CALL	__imuls
+	LD	IY,58
+	ADD	IY,DE
+	LD	BC,IY
+	ADD	HL,BC
+	LD	IY,HL
+	PEA	IY+3
+	CALL	_strncpy
+	POP	BC
+	POP	BC
+	POP	BC
+;  536	      gbContext->tasklist[desttask].queue.msg[index].size = size;
+.LINE 536
+
+	LD	BC,(IX+-3)
+	LD	HL,210
+	CALL	__imuls
+	LD	(IX+-12),HL
+	LD	BC,(_gbContext)
+	LD	HL,3
+	ADD	HL,BC
+	LD	BC,(IX+-12)
+	ADD	HL,BC
+	LD	DE,HL
+	LD	BC,(IX+-6)
+	LD	HL,35
+	CALL	__imuls
+	LD	BC,HL
+	LD	HL,58
+	ADD	HL,DE
+	ADD	HL,BC
+	LD	BC,(IX+12)
+	LD	(HL),BC
+;  537	      gbContext->tasklist[desttask].queue.count++;
+	LD	BC,(_gbContext)
+.LINE 537
+
+	LD	DE,(_gbContext)
+	LD	HL,3
+	ADD	HL,DE
+	LD	DE,(IX+-12)
+	ADD	HL,DE
+	LD	IY,HL
+	LD	HL,3
+	ADD	HL,BC
+	LD	BC,(IX+-12)
+	ADD	HL,BC
+	LD	BC,(IY+55)
+	INC	BC
+	LD	IY,HL
+	LD	(IY+55),BC
+;  538	      return( size );
+.LINE 538
+
+	LD	HL,(IX+12)
+	JMP	L_63
+;  539	   }
+;  540	   else
+L_62:
+.LINE 540
+
+;  541	   {
+;  542	      return( 0 );
+.LINE 542
+
+	LD	HL,0
+;  543	   }
+;  544	}
+L_63:
+.LINE 544
+
+	LD	SP,IX
+	POP	IX
+	RET	
+
+
+;**************************** _SendMessage ***************************
+;Name                         Addr/Register   Size   Type
+;_strncpy                            IMPORT  -----   function
+;_gbContext                          STATIC      3   variable
+;_FindTaskIndex                      STATIC  -----   function
+;index                                 IX-6      3   variable
+;desttask                              IX-3      3   variable
+;size                                 IX+12      3   parameter
+;buf                                   IX+9      3   parameter
+;desttaskid                            IX+6      3   parameter
+
+
+; Stack Frame Size: 27 (bytes)
+;       Spill Code: 0 (instruction)
+
+
+.ENDFUNC "SendMessage",544,"_SendMessage"
+	XREF _strcmp:ROM
+	XREF _strncpy:ROM
+	XREF _malloc:ROM
+	XREF _free:ROM
+	XREF _printf:ROM
+	XREF __indcall:ROM
+	XREF __imuls:ROM
+	XREF __ildiy:ROM
+	XREF __istiy:ROM
+	XDEF _SendMessage
+	XDEF _ReadMessage
+	XDEF _CheckMessageQueue
+	XDEF _ClearMessageQueue
+	XDEF _GetTaskMemSize
+	XDEF _GetTaskMemPtr
+	XDEF _GetTaskId
+	XDEF _DisplayTaskList
+	XDEF _SequenceTaskList
+	XDEF _ExecuteTask
+	XDEF _FindTaskIndex
+	XDEF _UnBlockTask
+	XDEF _BlockTask
+	XDEF _ResumeTask
+	XDEF _SuspendTask
+	XDEF _DeleteTask
+	XDEF _CreateTask
+	XDEF _FreeTasking
+	XDEF _InitTasking
+	XDEF _gbContext
+	END

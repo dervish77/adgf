@@ -1,0 +1,54 @@
+# Project: vidtest
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe -D__DEBUG__
+CC   = gcc.exe -D__DEBUG__
+WINDRES = windres.exe
+RES  = vidtest_private.res
+OBJ  = main.o draw.o draw-sdl.o MonHandle.o MonMain.o MonParse.o usage.o video.o $(RES)
+LINKOBJ  = main.o draw.o draw-sdl.o MonHandle.o MonMain.o MonParse.o usage.o video.o $(RES)
+LIBS =  -L"C:/Utils/Dev-Cpp/lib" -lmingw32 -lSDLmain -lSDL  -g3 
+INCS =  -I"C:/Utils/Dev-Cpp/include" 
+CXXINCS =  -I"C:/Utils/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/Utils/Dev-Cpp/include/c++/3.4.2/backward"  -I"C:/Utils/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"C:/Utils/Dev-Cpp/include/c++/3.4.2"  -I"C:/Utils/Dev-Cpp/include" 
+BIN  = vidtest.exe
+CXXFLAGS = $(CXXINCS)   -g3
+CFLAGS = $(INCS)   -g3
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before vidtest.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o "vidtest.exe" $(LIBS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+draw.o: draw.c
+	$(CC) -c draw.c -o draw.o $(CFLAGS)
+
+draw-sdl.o: draw-sdl.c
+	$(CC) -c draw-sdl.c -o draw-sdl.o $(CFLAGS)
+
+MonHandle.o: MonHandle.c
+	$(CC) -c MonHandle.c -o MonHandle.o $(CFLAGS)
+
+MonMain.o: MonMain.c
+	$(CC) -c MonMain.c -o MonMain.o $(CFLAGS)
+
+MonParse.o: MonParse.c
+	$(CC) -c MonParse.c -o MonParse.o $(CFLAGS)
+
+usage.o: usage.c
+	$(CC) -c usage.c -o usage.o $(CFLAGS)
+
+video.o: video.c
+	$(CC) -c video.c -o video.o $(CFLAGS)
+
+vidtest_private.res: vidtest_private.rc 
+	$(WINDRES) -i vidtest_private.rc --input-format=rc -o vidtest_private.res -O coff 

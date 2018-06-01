@@ -1,0 +1,633 @@
+; ZiLOG eZ80 ANSI C Compiler Release 2.06
+; -alias -debug -intsrc -nomodsect -optsize -localcse
+; -peephole -globalopt -nosdiopt -bitfieldsize=24 -charsize=8
+; -doublesize=32 -floatsize=32 -intsize=24 -longsize=32
+; -nofastcall -noregvar -nostkck -nooptlink -swap 
+	FILE	".\MAINLOOP.C"
+	.assume ADL=1
+.DEBUG "C"
+	SEGMENT code
+.BEGREC "arg_struct",9
+.DEFINE "arg1"
+.VALUE 0
+.CLASS 8
+.TYPE 4
+.ENDEF
+.DEFINE "arg2"
+.VALUE 3
+.CLASS 8
+.TYPE 4
+.ENDEF
+.DEFINE "arg3"
+.VALUE 6
+.CLASS 8
+.TYPE 4
+.ENDEF
+.ENDREC "arg_struct"
+.BEGREC "memblock_s_t",6
+.DEFINE "size"
+.VALUE 0
+.CLASS 8
+.TYPE 4
+.ENDEF
+.DEFINE "ptr"
+.VALUE 3
+.CLASS 8
+.TYPE 34
+.ENDEF
+.ENDREC "memblock_s_t"
+.BEGREC "msg_s_t",35
+.DEFINE "size"
+.VALUE 0
+.CLASS 8
+.TYPE 4
+.ENDEF
+.DEFINE "buf"
+.VALUE 3
+.CLASS 8
+.DIM 32
+.TYPE 98
+.ENDEF
+.ENDREC "msg_s_t"
+.BEGREC "msgq_s_t",143
+.DEFINE "count"
+.VALUE 0
+.CLASS 8
+.TYPE 4
+.ENDEF
+.DEFINE "msg"
+.VALUE 3
+.CLASS 8
+.DIM 4
+.TAG "msg_s_t"
+.TYPE 104
+.ENDEF
+.ENDREC "msgq_s_t"
+.BEGREC "task_s_t",210
+.DEFINE "taskid"
+.VALUE 0
+.CLASS 8
+.TYPE 4
+.ENDEF
+.DEFINE "taskname"
+.VALUE 3
+.CLASS 8
+.DIM 40
+.TYPE 98
+.ENDEF
+.DEFINE "proc"
+.VALUE 43
+.CLASS 8
+.TYPE 545
+.ENDEF
+.DEFINE "args"
+.VALUE 46
+.CLASS 8
+.TYPE 33
+.ENDEF
+.DEFINE "mem"
+.VALUE 49
+.CLASS 8
+.TAG "memblock_s_t"
+.TYPE 8
+.ENDEF
+.DEFINE "queue"
+.VALUE 55
+.CLASS 8
+.TAG "msgq_s_t"
+.TYPE 8
+.ENDEF
+.DEFINE "valid"
+.VALUE 198
+.CLASS 8
+.TYPE 4
+.ENDEF
+.DEFINE "ready"
+.VALUE 201
+.CLASS 8
+.TYPE 4
+.ENDEF
+.DEFINE "blocked"
+.VALUE 204
+.CLASS 8
+.TYPE 4
+.ENDEF
+.DEFINE "suspend"
+.VALUE 207
+.CLASS 8
+.TYPE 4
+.ENDEF
+.ENDREC "task_s_t"
+.BEGREC "context_s_t",2109
+.DEFINE "numtasks"
+.VALUE 0
+.CLASS 8
+.TYPE 4
+.ENDEF
+.DEFINE "tasklist"
+.VALUE 3
+.CLASS 8
+.DIM 10
+.TAG "task_s_t"
+.TYPE 104
+.ENDEF
+.DEFINE "ticks"
+.VALUE 2103
+.CLASS 8
+.TYPE 4
+.ENDEF
+.DEFINE "ticktime"
+.VALUE 2106
+.CLASS 8
+.TYPE 4
+.ENDEF
+.ENDREC "context_s_t"
+.BEGREC "database_s_t",6
+.DEFINE "temp1"
+.VALUE 0
+.CLASS 8
+.TYPE 4
+.ENDEF
+.DEFINE "temp2"
+.VALUE 3
+.CLASS 8
+.TYPE 4
+.ENDEF
+.ENDREC "database_s_t"
+;    1	/*****************************************************************************
+;    2	 *
+;    3	 *	Main Loop Demo main program.
+;    4	 *
+;    5	 *	File:	main.c
+;    6	 *
+;    7	 *	Author: Brian Lingard
+;    8	 *
+;    9	 *	Date:	10/31/2003
+;   10	 *
+;   11	 *	Revs:
+;   12	 *	  0.0 	10/31/2003  originated
+;   13	 *
+;   14	 *	Usage:	mainloop [-h]
+;   15	 *
+;   16	 *****************************************************************************/
+;   17	
+;   18	
+;   19	#include <stdio.h>
+;   20	#include <string.h>
+;   21	#include <ctype.h>
+;   22	
+;   23	#ifndef _MLOOP_H
+;   24	#include "mloop.h"
+;   25	#endif
+;   26	
+;   27	#ifndef _DEMO_H
+;   28	#include "demo.h"
+;   29	#endif
+;   30	
+;   31	
+;   32	#define DEBUG
+;   33	
+;   34	
+;   35	
+;   36	/*
+;   37	 *  GLOBALS
+;   38	 */
+;   39	extern DATABASE_S_T *data;
+;   40	
+;   41	
+;   42	/*
+;   43	 *  STATICS
+;   44	 */
+;   45	
+;   46	
+;   47	
+;   48	/*  main	- main program
+;   49	 *
+;   50	 *  Parameters:
+;   51	 *	argc	- number of command line arguments
+;   52	 *	argv	- pointer to command line argument array
+;   53	 *
+;   54	 *  Returns:
+;   55	 *	none
+;   56	 */
+;   57	int 
+;   58	mainloop(void)
+;   59	{
+_mainloop:
+.DEFINE "_mainloop"
+
+.VALUE _mainloop
+
+.CLASS 2
+
+.TYPE 68
+
+.ENDEF
+
+.BEGFUNC "mainloop",59,"_mainloop"
+
+.LINE 59
+
+.DEFINE "mdata"
+
+.CLASS 65
+
+.VALUE -6
+
+.TAG "database_s_t"
+
+.TYPE 8
+
+.ENDEF
+
+	PUSH	IX
+	LD	IX,0
+	ADD	IX,SP
+	PUSH	BC
+	PUSH	BC
+	PUSH	BC
+;   60	   DATABASE_S_T		mdata;
+;   61	
+;   62	
+;   63	   printf("\nMain Loop Demo - version %d.%d\n", VERSION_MAJOR, VERSION_MINOR);
+	LD	BC,1
+	PUSH	BC
+	LD	BC,0
+	PUSH	BC
+	LD	BC,L__0
+	PUSH	BC
+.LINE 63
+
+	CALL	_printf
+	POP	BC
+	POP	BC
+	POP	BC
+;   64	
+;   65	
+;   66	   printf("--initializing demo...\n");
+	LD	BC,L__1
+	PUSH	BC
+.LINE 66
+
+	CALL	_printf
+	POP	BC
+;   67	   DemoInit(&mdata);
+	PEA	IX+-6
+.LINE 67
+
+	CALL	_DemoInit
+	POP	BC
+;   68	   data = &mdata;
+.LINE 68
+
+	LEA	BC,IX+-6
+	LD	(_data),BC
+;   69	
+;   70	#if 0
+;   71	   /*  parse command line args
+;   72	    */
+;   73	   switch (argc)
+;   74	   {
+;   75	      case 1:
+;   76	            printf("--running demo...\n");
+;   77	            DemoRun(&mdata);
+;   78	         break;
+;   79	
+;   80	      case 2:
+;   81	         if ( (argv[1][0] EQ '-') AND (argv[1][1] EQ 'i') )
+;   82	         {
+;   83	            printf("--starting up interactive demo...\n");
+;   84	            DemoInteractive(&mdata);
+;   85	         }
+;   86	         else if ( (argv[1][0] EQ '-') AND (argv[1][1] EQ 'h') )
+;   87	         {
+;   88	            DemoHelp();
+;   89	         }
+;   90	         else
+;   91	         {
+;   92	            ErrorUsage();
+;   93	         }
+;   94	         break;
+;   95	
+;   96	      default:
+;   97	         ErrorUsage();
+;   98	         break;
+;   99	   }
+;  100	#endif
+;  101	
+;  102	#if 0
+;  103	   printf("--running demo...\n");
+;  104	   DemoRun(&mdata);
+;  105	   DemoRun(&mdata);
+;  106	   DemoRun(&mdata);
+;  107	#endif
+;  108	
+;  109	#if 1
+;  110	   printf("--starting up interactive demo...\n");
+	LD	BC,L__2
+	PUSH	BC
+.LINE 110
+
+	CALL	_printf
+	POP	BC
+;  111	   DemoInteractive(&mdata);
+	PEA	IX+-6
+.LINE 111
+
+	CALL	_DemoInteractive
+	POP	BC
+;  112	#endif
+;  113	
+;  114	   printf("--closing demo...\n");
+	LD	BC,L__3
+	PUSH	BC
+.LINE 114
+
+	CALL	_printf
+	POP	BC
+;  115	   DemoClose(&mdata);
+	PEA	IX+-6
+.LINE 115
+
+	LD	(IX+-9),HL
+	CALL	_DemoClose
+	LD	HL,(IX+-9)
+	POP	BC
+;  116	
+;  117	//   exit(0);
+;  118	}
+.LINE 118
+
+	LD	SP,IX
+	POP	IX
+	RET	
+
+
+;**************************** _mainloop ***************************
+;Name                         Addr/Register   Size   Type
+;_DemoClose                          IMPORT  -----   function
+;_DemoInteractive                    IMPORT  -----   function
+;_data                               IMPORT      3   variable
+;_DemoInit                           IMPORT  -----   function
+;_printf                             IMPORT  -----   function
+;mdata                                 IX-6      6   variable
+
+
+; Stack Frame Size: 15 (bytes)
+;       Spill Code: 0 (instruction)
+
+
+.ENDFUNC "mainloop",118,"_mainloop"
+	SEGMENT STRSECT
+L__0:
+	DB	10
+	DB	"Main Loop Demo - version %d.%d"
+	DB	10,0
+L__1:
+	DB	"--initializing demo..."
+	DB	10,0
+L__2:
+	DB	"--starting up interactive demo..."
+	DB	10,0
+L__3:
+	DB	"--closing demo..."
+	DB	10,0
+	SEGMENT code
+;  119	
+;  120	
+;  121	/*  ParseString	- general purpose string parser
+;  122	 *
+;  123	 *  Parameters:
+;  124	 *	string	- pointer to string to be parsed
+;  125	 *	args	- pointer to parsed array of strings
+;  126	 *
+;  127	 *  Returns:
+;  128	 *	count	- count of substrings in array
+;  129	 */
+;  130	int 
+;  131	ParseString(char *string, char *args[])
+;  132	{
+_ParseString:
+.DEFINE "_ParseString"
+
+.VALUE _ParseString
+
+.CLASS 2
+
+.TYPE 68
+
+.ENDEF
+
+.BEGFUNC "ParseString",132,"_ParseString"
+
+.LINE 132
+
+.DEFINE "string"
+
+.CLASS 65
+
+.VALUE 6
+
+.TYPE 34
+
+.ENDEF
+
+.DEFINE "args"
+
+.CLASS 65
+
+.VALUE 9
+
+.TYPE 290
+
+.ENDEF
+
+.DEFINE "argcount"
+
+.CLASS 65
+
+.VALUE -3
+
+.TYPE 4
+
+.ENDEF
+
+.DEFINE "argstart"
+
+.CLASS 65
+
+.VALUE -6
+
+.TYPE 34
+
+.ENDEF
+
+.DEFINE "arglen"
+
+.CLASS 65
+
+.VALUE -9
+
+.TYPE 4
+
+.ENDEF
+
+.DEFINE "c"
+
+.CLASS 65
+
+.VALUE -10
+
+.TYPE 2
+
+.ENDEF
+
+;  133	   char c, *argstart;
+;  134	   int arglen, argcount=0;
+.LINE 134
+
+	PUSH	IX
+	LD	IX,0
+	ADD	IX,SP
+	LEA	IY,IX+-13
+	LD	SP,IY
+	LD	BC,0
+	LD	(IX+-3),BC
+;  135	   
+;  136	   argstart = string;
+.LINE 136
+
+	LD	BC,(IX+6)
+	LD	(IX+-6),BC
+;  137	//   printf("Parsing %s\n", argstart);
+;  138	
+;  139	   for (; *string != '\0'; string++) {
+.LINE 139
+
+	JMP	L_7
+L_5:
+;  140	      c = *string;
+.LINE 140
+
+	LD	IY,(IX+6)
+	LD	A,(IY)
+	LD	(IX+-10),A
+;  141	//	  printf("%02x %c\n", c, c);
+;  142	      if (isspace(c) || (c == '\0')) {
+.LINE 142
+
+	LD	A,(IX+-10)
+	SEXT	HL
+	LD	L,(IX+-10)
+	PUSH	HL
+	CALL	_isspace
+	POP	BC
+	LD	BC,0
+	OR	A,A
+	SBC	HL,BC
+	JR	NZ,L_4
+	LD	A,(IX+-10)
+	OR	A,A
+	JR	NZ,L_6
+L_4:
+;  143	         args[argcount] = argstart;
+.LINE 143
+
+	LD	BC,(IX+-3)
+	LD	HL,3
+	CALL	__imuls
+	LD	(IX+-13),HL
+	LD	BC,(IX+-13)
+	LD	HL,(IX+9)
+	ADD	HL,BC
+	LD	BC,(IX+-6)
+	LD	(HL),BC
+;  144	         arglen = string - argstart;
+.LINE 144
+
+	LD	HL,(IX+6)
+	LD	BC,(IX+-6)
+	OR	A,A
+	SBC	HL,BC
+	LD	(IX+-9),HL
+;  145	//         printf("Parsing %s arglen %d\n", argstart, arglen);
+;  146	         args[argcount][arglen] = '\0';
+.LINE 146
+
+	LD	BC,(IX+-13)
+	LD	HL,(IX+9)
+	ADD	HL,BC
+	LD	BC,(IX+-9)
+	LD	HL,(HL)
+	ADD	HL,BC
+	XOR	A,A
+	LD	(HL),A
+;  147	         argcount++;
+.LINE 147
+
+	LD	BC,(IX+-3)
+	INC	BC
+	LD	(IX+-3),BC
+;  148	         argstart = string + 1;
+.LINE 148
+
+	LD	BC,(IX+6)
+	INC	BC
+	LD	(IX+-6),BC
+;  149	      }
+;  150	   }
+L_6:
+.LINE 150
+
+	LD	BC,(IX+6)
+	INC	BC
+	LD	(IX+6),BC
+L_7:
+	LD	IY,(IX+6)
+	LD	A,(IY)
+	LD	B,A
+	SEXT	HL
+	LD	L,B
+	LD	BC,0
+	OR	A,A
+	SBC	HL,BC
+	JR	NZ,L_5
+;  151	
+;  152	   return(argcount);
+.LINE 152
+
+	LD	HL,(IX+-3)
+;  153	} /* end of ParseString() */
+.LINE 153
+
+	LD	SP,IX
+	POP	IX
+	RET	
+
+
+;**************************** _ParseString ***************************
+;Name                         Addr/Register   Size   Type
+;_isspace                            IMPORT  -----   function
+;c                                    IX-10      1   variable
+;arglen                                IX-9      3   variable
+;argstart                              IX-6      3   variable
+;argcount                              IX-3      3   variable
+;args                                  IX+9      3   parameter
+;string                                IX+6      3   parameter
+
+
+; Stack Frame Size: 25 (bytes)
+;       Spill Code: 0 (instruction)
+
+
+.ENDFUNC "ParseString",153,"_ParseString"
+	XREF _data:ROM
+	XREF _DemoInteractive:ROM
+	XREF _DemoClose:ROM
+	XREF _DemoInit:ROM
+	XREF _isspace:ROM
+	XREF _printf:ROM
+	XREF __imuls:ROM
+	XDEF _ParseString
+	XDEF _mainloop
+	END

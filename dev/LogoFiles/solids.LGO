@@ -1,0 +1,39 @@
+to coolness
+perspective
+repeat 72 [square rr 5]
+polyview
+end
+
+to myarc
+arc 180 100
+end
+
+to myarc2
+arc2 180 100
+pu rt 90 fd 200 rt 90 pd
+end
+
+to neat
+perspective
+repeat 36 ~
+   [
+   polystart
+   circle 100
+   polyend
+   rr 10
+   ]
+polyview
+end
+
+to neato
+perspective
+repeat 36 [myarc2 rr 10]
+window 
+end
+
+to square
+polystart
+repeat 4 [fd 100 rt 90]
+polyend
+end
+

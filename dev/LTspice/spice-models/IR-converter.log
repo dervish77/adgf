@@ -1,0 +1,9 @@
+Circuit: * C:\Users\bl12960\Dropbox\Dev\IR-converter.asc
+
+WARNING: Node TRIGGER is floating.
+
+.OP point found by inspection.
+Changing Tseed to 1e-008
+Changing Tseed to 1e-010
+Heightened Def Con from 2.08203e-010 ++++++++++++++++++++++++++++++++++++++++++++++++++Fatal Error: Analysis:  Time step too small; time = 2.08203e-010, timestep = 1.25e-019: trouble with 2n2222-instance q1
+

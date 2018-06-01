@@ -1,0 +1,535 @@
+; ZiLOG eZ80 ANSI C Compiler Release 2.06
+; -alias -debug -intsrc -nomodsect -optsize -localcse
+; -peephole -globalopt -nosdiopt -bitfieldsize=24 -charsize=8
+; -doublesize=32 -floatsize=32 -intsize=24 -longsize=32
+; -nofastcall -noregvar -nostkck -nooptlink -swap 
+	FILE	".\LEDTIMER.C"
+	.assume ADL=1
+.DEBUG "C"
+	SEGMENT BSS
+_timer:
+	DS	3
+.DEFINE "timer"
+.ALIAS "_timer"
+.CLASS 83
+.VALUE _timer
+.TYPE 4
+.ENDEF
+;    1	/*                                                   Copyright (c) ZiLOG, 2003
+;    2	 *****************************************************************************
+;    3	 *  LedTimer.c (1.0)
+;    4	 *
+;    5	 *  routines for timing the LED Matrix and wait routine
+;    6	 *****************************************************************************
+;    7	 */
+;    8	
+;    9	#include <ez80.h>
+;   10	#include "LedMatrix.h"
+;   11	#include "Console.h"
+;   12	
+;   13	int timer;
+	SEGMENT code
+;   14	
+;   15	extern void set_vector(unsigned short vector,void (*hndlr)(void));
+;   16	
+;   17	/* masterclock and timer 2 interrupt vectors for the various devices */
+;   18	#ifdef _EZ80F91
+;   19	#define SYSTEMCLOCK 50000000
+;   20	#define TMR2_IVECT 0x5c
+;   21	#endif
+;   22	
+;   23	#ifdef _EZ80F93
+;   24	#define SYSTEMCLOCK 20000000
+;   25	#define TMR2_IVECT 0x0e
+;   26	#endif
+;   27	
+;   28	#ifdef _EZ80F92
+;   29	#define SYSTEMCLOCK 20000000
+;   30	#define TMR2_IVECT 0x0e
+;   31	#endif
+;   32	
+;   33	#ifdef _EZ80L92
+;   34	#define SYSTEMCLOCK 48000000
+;   35	#define TMR2_IVECT 0x0e
+;   36	#endif
+;   37	
+;   38	#ifdef _EZ80190
+;   39	#define SYSTEMCLOCK 50000000
+;   40	#define TMR2_IVECT 0x0a
+;   41	#endif
+;   42	
+;   43	/*****************************************************************************
+;   44	 *  timer 2 interrupt service routine
+;   45	 *
+;   46	 *  controls the LED Matrix scroll rate
+;   47	 */
+;   48	void interrupt tmr2_isr( void )
+;   49	{
+_tmr2_isr:
+.DEFINE "_tmr2_isr"
+
+.VALUE _tmr2_isr
+
+.CLASS 2
+
+.TYPE 65
+
+.ENDEF
+
+.BEGFUNC "tmr2_isr",49,"_tmr2_isr"
+
+.LINE 49
+
+.DEFINE "tmp"
+
+.CLASS 65
+
+.VALUE -1
+
+.TYPE 12
+
+.ENDEF
+
+;   50	    static unsigned char i, row;
+.LINE 50
+
+.DEFINE "i"
+
+.ALIAS "_0i"
+
+.CLASS 83
+
+.VALUE _0i
+
+.TYPE 12
+
+.ENDEF
+
+.DEFINE "row"
+
+.ALIAS "_1row"
+
+.CLASS 83
+
+.VALUE _1row
+
+.TYPE 12
+
+.ENDEF
+
+;   51	    unsigned char tmp;
+;   52	
+;   53	#ifdef _EZ80F91
+;   54	    tmp = TMR2_IIR;
+.LINE 54
+
+	EXX	
+	EX	AF,AF'
+	PUSH	IX
+	LD	IX,0
+	ADD	IX,SP
+	DEC	SP
+	IN0	A,(113)
+	LD	(IX+-1),A
+;   55	#else
+;   56	    /* _EZ80190, _EZ80L92, _EZ80F92, _EZ80F93 */
+;   57		tmp = TMR2_CTL;
+;   58	#endif
+;   59	
+;   60	    if( 0 > i || i > 6 )
+.LINE 60
+
+	LD	A,(_0i)
+	OR	A,A
+	JR	C,L_1
+	LD	BC,(_0i)
+	LD	A,6
+	CP	A,C
+	JR	NC,L_2
+L_1:
+;   61	    {
+;   62	        row = 0x01;
+.LINE 62
+
+	LD	A,1
+	LD	(_1row),A
+;   63	        i = 0;
+.LINE 63
+
+	XOR	A,A
+	LD	(_0i),A
+;   64		}
+L_2:
+.LINE 64
+
+;   65	
+;   66	    LEDMATRIX_ROW = row;
+.LINE 66
+
+	LD	A,(_1row)
+	LD	(8388608),A
+;   67	    LEDMATRIX_COLUMN = *(pcolumn + i);
+.LINE 67
+
+	LD	A,(_0i)
+	UEXT	HL
+	LD	L,A
+	LD	BC,(_pcolumn)
+	ADD	HL,BC
+	LD	A,(HL)
+	LD	(8388609),A
+;   68	
+;   69	    i++;
+.LINE 69
+
+	LD	A,(_0i)
+	INC	A
+	LD	(_0i),A
+;   70	    row = row << 1;
+.LINE 70
+
+	LD	A,(_1row)
+	UEXT	HL
+	LD	L,A
+	ADD	HL,HL
+	LD	A,L
+	LD	(_1row),A
+;   71	
+;   72	    timer++;
+.LINE 72
+
+	LD	BC,(_timer)
+	INC	BC
+	LD	(_timer),BC
+;   73	}
+.LINE 73
+
+	EXX	
+	EX	AF,AF'
+	LD	SP,IX
+	POP	IX
+	EI	
+	RETI	
+
+
+;**************************** _tmr2_isr ***************************
+;Name                         Addr/Register   Size   Type
+;_timer                              STATIC      3   variable
+;_pcolumn                            IMPORT      3   variable
+;_1row                               STATIC      1   variable
+;_0i                                 STATIC      1   variable
+;tmp                                   IX-1      1   variable
+
+
+; Stack Frame Size: 7 (bytes)
+;       Spill Code: 0 (instruction)
+
+
+.ENDFUNC "tmr2_isr",73,"_tmr2_isr"
+	SEGMENT BSS
+_0i:
+	DS	1
+_1row:
+	DS	1
+	SEGMENT code
+;   74	
+;   75	/*****************************************************************************
+;   76	 *  ledtimer_init()
+;   77	 *
+;   78	 *  initialization routine for timer 2
+;   79	 *
+;   80	 */
+;   81	void ledtimer_init( int interval )
+;   82	{
+_ledtimer_init:
+.DEFINE "_ledtimer_init"
+
+.VALUE _ledtimer_init
+
+.CLASS 2
+
+.TYPE 65
+
+.ENDEF
+
+.BEGFUNC "ledtimer_init",82,"_ledtimer_init"
+
+.LINE 82
+
+.DEFINE "interval"
+
+.CLASS 65
+
+.VALUE 6
+
+.TYPE 4
+
+.ENDEF
+
+.DEFINE "rr"
+
+.CLASS 65
+
+.VALUE -2
+
+.TYPE 13
+
+.ENDEF
+
+.DEFINE "tmp"
+
+.CLASS 65
+
+.VALUE -3
+
+.TYPE 12
+
+.ENDEF
+
+;   83	    unsigned char tmp;
+;   84		unsigned short rr;
+;   85	
+;   86		TMR2_CTL = 0x00;
+.LINE 86
+
+	PUSH	IX
+	LD	IX,0
+	ADD	IX,SP
+	PUSH	BC
+	XOR	A,A
+	OUT0	(111),A
+;   87	
+;   88		/* set Timer 2 interrupt vector */
+;   89	    set_vector( TMR2_IVECT, tmr2_isr );
+	LD	BC,_tmr2_isr
+	PUSH	BC
+	LD	BC,92
+	PUSH	BC
+.LINE 89
+
+	CALL	_set_vector
+	POP	BC
+	POP	BC
+;   90	
+;   91		rr = ( unsigned short )((( SYSTEMCLOCK / 1000) * interval ) / 16 );
+.LINE 91
+
+	LD	BC,(IX+6)
+	CALL	__itol
+	LD	HL,50000
+	LD	E,0
+	CALL	__lmuls
+	LD	HL,16
+	LD	E,0
+	CALL	__ldivs
+	LD	(IX+-2),C
+	LD	(IX+-1),B
+;   92		TMR2_RR_H = (unsigned char)(( rr & 0xFF00 ) >> 8);
+.LINE 92
+
+	LD	BC,(IX+-2)
+	CALL	__stoiu
+	LD	BC,65280
+	CALL	__iand
+	LD	BC,8
+	CALL	__ishrs
+	LD	A,L
+	OUT0	(115),A
+;   93		TMR2_RR_L = (unsigned char) ( rr & 0x00FF );
+.LINE 93
+
+	LD	BC,(IX+-2)
+	CALL	__stoiu
+	LD	BC,255
+	CALL	__iand
+	LD	A,L
+	OUT0	(114),A
+;   94	
+;   95	#ifdef _EZ80190
+;   96		tmp = TMR2_CTL;
+;   97	    TMR2_CTL = 0x5f;
+;   98	#endif
+;   99	
+;  100	#ifdef _EZ80F91
+;  101	    tmp = TMR2_IIR;
+.LINE 101
+
+	IN0	A,(113)
+	LD	(IX+-3),A
+;  102	    TMR2_CTL = 0x0F;
+.LINE 102
+
+	LD	A,15
+	OUT0	(111),A
+;  103	   	TMR2_IER = 0x01;
+.LINE 103
+
+	LD	A,1
+	OUT0	(112),A
+;  104	#endif
+;  105	
+;  106	#ifdef _EZ80L92
+;  107		tmp = TMR2_CTL;
+;  108	    TMR2_CTL = 0x57;
+;  109	#endif
+;  110	
+;  111	#ifdef _EZ80F92
+;  112		tmp = TMR2_CTL;
+;  113	    TMR2_CTL = 0x57;
+;  114	#endif
+;  115	
+;  116	#ifdef _EZ80F93
+;  117		tmp = TMR2_CTL;
+;  118	    TMR2_CTL = 0x57;
+;  119	#endif
+;  120	
+;  121	}
+.LINE 121
+
+	LD	SP,IX
+	POP	IX
+	RET	
+
+
+;**************************** _ledtimer_init ***************************
+;Name                         Addr/Register   Size   Type
+;_set_vector                         IMPORT  -----   function
+;tmp                                   IX-3      1   variable
+;rr                                    IX-2      2   variable
+;interval                              IX+6      3   parameter
+
+
+; Stack Frame Size: 12 (bytes)
+;       Spill Code: 0 (instruction)
+
+
+.ENDFUNC "ledtimer_init",121,"_ledtimer_init"
+;  122	
+;  123	/*****************************************************************************
+;  124	 *  wait()
+;  125	 *
+;  126	 *  wait routine for displaying text messages
+;  127	 */
+;  128	void wait( int j )
+;  129	{
+_wait:
+.DEFINE "_wait"
+
+.VALUE _wait
+
+.CLASS 2
+
+.TYPE 65
+
+.ENDEF
+
+.BEGFUNC "wait",129,"_wait"
+
+.LINE 129
+
+.DEFINE "j"
+
+.CLASS 65
+
+.VALUE 6
+
+.TYPE 4
+
+.ENDEF
+
+;  130	    timer = 0;
+.LINE 130
+
+	PUSH	IX
+	LD	IX,0
+	ADD	IX,SP
+	LD	BC,0
+	LD	(_timer),BC
+;  131	
+;  132		while( timer < j )
+.LINE 132
+
+	JMP	L_8
+L_9:
+;  133		{
+;  134		    if( user_input == 1 )
+.LINE 134
+
+	LD	A,(_user_input)
+	CP	A,1
+	JR	NZ,L_8
+;  135			{
+;  136				user_input = 0;
+.LINE 136
+
+	XOR	A,A
+	LD	(_user_input),A
+;  137				char_ready = 0;
+.LINE 137
+
+	XOR	A,A
+	LD	(_char_ready),A
+;  138			    pcolumn = p_user_input;
+.LINE 138
+
+	LD	BC,(_p_user_input)
+	LD	(_pcolumn),BC
+;  139				timer = 0;
+.LINE 139
+
+	LD	BC,0
+	LD	(_timer),BC
+;  140				j = 2000;
+.LINE 140
+
+	LD	BC,2000
+	LD	(IX+6),BC
+;  141		    }
+;  142		}
+L_8:
+.LINE 142
+
+	LD	BC,(IX+6)
+	LD	HL,(_timer)
+	OR	A,A
+	SBC	HL,BC
+	JP	M,L_9
+;  143	}
+.LINE 143
+
+	LD	SP,IX
+	POP	IX
+	RET	
+
+
+;**************************** _wait ***************************
+;Name                         Addr/Register   Size   Type
+;_pcolumn                            IMPORT      3   variable
+;_p_user_input                       IMPORT      3   variable
+;_char_ready                         IMPORT      1   variable
+;_user_input                         IMPORT      1   variable
+;_timer                              STATIC      3   variable
+;j                                     IX+6      3   parameter
+
+
+; Stack Frame Size: 9 (bytes)
+;       Spill Code: 0 (instruction)
+
+
+.ENDFUNC "wait",143,"_wait"
+	XREF _set_vector:ROM
+	XREF _char_ready:ROM
+	XREF _user_input:ROM
+	XREF _p_user_input:ROM
+	XREF _pcolumn:ROM
+	XREF __ldivs:ROM
+	XREF __lmuls:ROM
+	XREF __iand:ROM
+	XREF __ishrs:ROM
+	XREF __stoiu:ROM
+	XREF __itol:ROM
+	XDEF _wait
+	XDEF _ledtimer_init
+	XDEF _tmr2_isr
+	XDEF _timer
+	END

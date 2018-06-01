@@ -1,0 +1,1 @@
+"./switch_test.obj" "./sar.obj" "./main.obj" -l"usbstk5515bsl.lib" -l"rts55x.lib" "../lnkx.cmd" 

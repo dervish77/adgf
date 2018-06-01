@@ -1,0 +1,725 @@
+; ZiLOG eZ80 ANSI C Compiler Release 2.06
+; -alias -debug -intsrc -nomodsect -optsize -localcse
+; -peephole -globalopt -nosdiopt -bitfieldsize=24 -charsize=8
+; -doublesize=32 -floatsize=32 -intsize=24 -longsize=32
+; -nofastcall -noregvar -nostkck -nooptlink -swap 
+	FILE	".\MAIN.C"
+	.assume ADL=1
+.DEBUG "C"
+	SEGMENT code
+.BEGREC "map_s_t",140
+.DEFINE "roomnum"
+.VALUE 0
+.CLASS 8
+.TYPE 3
+.ENDEF
+.DEFINE "roomname"
+.VALUE 2
+.CLASS 8
+.DIM 120
+.TYPE 98
+.ENDEF
+.DEFINE "beenhere"
+.VALUE 122
+.CLASS 8
+.TYPE 12
+.ENDEF
+.DEFINE "inside"
+.VALUE 123
+.CLASS 8
+.TYPE 12
+.ENDEF
+.DEFINE "n"
+.VALUE 124
+.CLASS 8
+.TYPE 3
+.ENDEF
+.DEFINE "s"
+.VALUE 126
+.CLASS 8
+.TYPE 3
+.ENDEF
+.DEFINE "e"
+.VALUE 128
+.CLASS 8
+.TYPE 3
+.ENDEF
+.DEFINE "w"
+.VALUE 130
+.CLASS 8
+.TYPE 3
+.ENDEF
+.DEFINE "d"
+.VALUE 132
+.CLASS 8
+.TYPE 3
+.ENDEF
+.DEFINE "u"
+.VALUE 134
+.CLASS 8
+.TYPE 3
+.ENDEF
+.DEFINE "special"
+.VALUE 136
+.CLASS 8
+.TYPE 3
+.ENDEF
+.DEFINE "object"
+.VALUE 138
+.CLASS 8
+.TYPE 3
+.ENDEF
+.ENDREC "map_s_t"
+.BEGREC "object_s_t",244
+.DEFINE "objnum"
+.VALUE 0
+.CLASS 8
+.TYPE 3
+.ENDEF
+.DEFINE "score"
+.VALUE 2
+.CLASS 8
+.TYPE 3
+.ENDEF
+.DEFINE "key"
+.VALUE 4
+.CLASS 8
+.DIM 40
+.TYPE 98
+.ENDEF
+.DEFINE "prep"
+.VALUE 44
+.CLASS 8
+.DIM 40
+.TYPE 98
+.ENDEF
+.DEFINE "name"
+.VALUE 84
+.CLASS 8
+.DIM 40
+.TYPE 98
+.ENDEF
+.DEFINE "examine"
+.VALUE 124
+.CLASS 8
+.DIM 120
+.TYPE 98
+.ENDEF
+.ENDREC "object_s_t"
+.BEGREC "special_s_t",124
+.DEFINE "spnum"
+.VALUE 0
+.CLASS 8
+.TYPE 3
+.ENDEF
+.DEFINE "score"
+.VALUE 2
+.CLASS 8
+.TYPE 3
+.ENDEF
+.DEFINE "phrase"
+.VALUE 4
+.CLASS 8
+.DIM 120
+.TYPE 98
+.ENDEF
+.ENDREC "special_s_t"
+.BEGREC "magic_s_t",168
+.DEFINE "mgnum"
+.VALUE 0
+.CLASS 8
+.TYPE 3
+.ENDEF
+.DEFINE "score"
+.VALUE 2
+.CLASS 8
+.TYPE 3
+.ENDEF
+.DEFINE "fromroom"
+.VALUE 4
+.CLASS 8
+.TYPE 3
+.ENDEF
+.DEFINE "toroom"
+.VALUE 6
+.CLASS 8
+.TYPE 3
+.ENDEF
+.DEFINE "word"
+.VALUE 8
+.CLASS 8
+.DIM 40
+.TYPE 98
+.ENDEF
+.DEFINE "phrase"
+.VALUE 48
+.CLASS 8
+.DIM 120
+.TYPE 98
+.ENDEF
+.ENDREC "magic_s_t"
+.BEGREC "rank_s_t",162
+.DEFINE "rnum"
+.VALUE 0
+.CLASS 8
+.TYPE 3
+.ENDEF
+.DEFINE "title"
+.VALUE 2
+.CLASS 8
+.DIM 40
+.TYPE 98
+.ENDEF
+.DEFINE "phrase"
+.VALUE 42
+.CLASS 8
+.DIM 120
+.TYPE 98
+.ENDEF
+.ENDREC "rank_s_t"
+.BEGREC "verb_s_t",44
+.DEFINE "vnum"
+.VALUE 0
+.CLASS 8
+.TYPE 3
+.ENDEF
+.DEFINE "word"
+.VALUE 2
+.CLASS 8
+.DIM 40
+.TYPE 98
+.ENDEF
+.DEFINE "type"
+.VALUE 42
+.CLASS 8
+.TYPE 3
+.ENDEF
+.ENDREC "verb_s_t"
+.BEGREC "room_s_t",124
+.DEFINE "roomnum"
+.VALUE 0
+.CLASS 8
+.TYPE 3
+.ENDEF
+.DEFINE "linenum"
+.VALUE 2
+.CLASS 8
+.TYPE 3
+.ENDEF
+.DEFINE "roomline"
+.VALUE 4
+.CLASS 8
+.DIM 120
+.TYPE 98
+.ENDEF
+.ENDREC "room_s_t"
+.BEGREC "intro_s_t",122
+.DEFINE "linenum"
+.VALUE 0
+.CLASS 8
+.TYPE 3
+.ENDEF
+.DEFINE "introline"
+.VALUE 2
+.CLASS 8
+.DIM 120
+.TYPE 98
+.ENDEF
+.ENDREC "intro_s_t"
+.BEGREC "inv_s_t",22
+.DEFINE "count"
+.VALUE 0
+.CLASS 8
+.TYPE 3
+.ENDEF
+.DEFINE "list"
+.VALUE 2
+.CLASS 8
+.DIM 10
+.TYPE 99
+.ENDEF
+.ENDREC "inv_s_t"
+.BEGREC "chest_s_t",52
+.DEFINE "count"
+.VALUE 0
+.CLASS 8
+.TYPE 3
+.ENDEF
+.DEFINE "list"
+.VALUE 2
+.CLASS 8
+.DIM 25
+.TYPE 99
+.ENDEF
+.ENDREC "chest_s_t"
+.BEGREC "cmd_s_t",46
+.DEFINE "type"
+.VALUE 0
+.CLASS 8
+.TYPE 4
+.ENDEF
+.DEFINE "length"
+.VALUE 3
+.CLASS 8
+.TYPE 4
+.ENDEF
+.DEFINE "cmd"
+.VALUE 6
+.CLASS 8
+.DIM 40
+.TYPE 98
+.ENDEF
+.ENDREC "cmd_s_t"
+.BEGREC "game_s_t",857
+.DEFINE "play_game"
+.VALUE 0
+.CLASS 8
+.TYPE 12
+.ENDEF
+.DEFINE "suppress_instructions"
+.VALUE 1
+.CLASS 8
+.TYPE 12
+.ENDEF
+.DEFINE "adult_enabled"
+.VALUE 2
+.CLASS 8
+.TYPE 12
+.ENDEF
+.DEFINE "adult_count"
+.VALUE 3
+.CLASS 8
+.TYPE 4
+.ENDEF
+.DEFINE "debug_enabled"
+.VALUE 6
+.CLASS 8
+.TYPE 12
+.ENDEF
+.DEFINE "verbose"
+.VALUE 7
+.CLASS 8
+.TYPE 12
+.ENDEF
+.DEFINE "have_lamp"
+.VALUE 8
+.CLASS 8
+.TYPE 12
+.ENDEF
+.DEFINE "lamp_is_on"
+.VALUE 9
+.CLASS 8
+.TYPE 12
+.ENDEF
+.DEFINE "current_room"
+.VALUE 10
+.CLASS 8
+.TYPE 3
+.ENDEF
+.DEFINE "score"
+.VALUE 12
+.CLASS 8
+.TYPE 4
+.ENDEF
+.DEFINE "health"
+.VALUE 15
+.CLASS 8
+.TYPE 4
+.ENDEF
+.DEFINE "moves"
+.VALUE 18
+.CLASS 8
+.TYPE 4
+.ENDEF
+.DEFINE "oil"
+.VALUE 21
+.CLASS 8
+.TYPE 4
+.ENDEF
+.DEFINE "load_game"
+.VALUE 24
+.CLASS 8
+.TYPE 12
+.ENDEF
+.DEFINE "save_game"
+.VALUE 25
+.CLASS 8
+.TYPE 12
+.ENDEF
+.DEFINE "game_loaded"
+.VALUE 26
+.CLASS 8
+.TYPE 12
+.ENDEF
+.DEFINE "game_saved"
+.VALUE 27
+.CLASS 8
+.TYPE 12
+.ENDEF
+.DEFINE "load_file_name"
+.VALUE 28
+.CLASS 8
+.DIM 40
+.TYPE 98
+.ENDEF
+.DEFINE "save_file_name"
+.VALUE 68
+.CLASS 8
+.DIM 40
+.TYPE 98
+.ENDEF
+.DEFINE "inventory"
+.VALUE 108
+.CLASS 8
+.TAG "inv_s_t"
+.TYPE 8
+.ENDEF
+.DEFINE "chest"
+.VALUE 130
+.CLASS 8
+.TAG "chest_s_t"
+.TYPE 8
+.ENDEF
+.DEFINE "cmdstring"
+.VALUE 182
+.CLASS 8
+.DIM 120
+.TYPE 98
+.ENDEF
+.DEFINE "argcount"
+.VALUE 302
+.CLASS 8
+.TYPE 4
+.ENDEF
+.DEFINE "list"
+.VALUE 305
+.CLASS 8
+.DIM 12
+.TAG "cmd_s_t"
+.TYPE 104
+.ENDEF
+.ENDREC "game_s_t"
+	SEGMENT DATA
+_suppress_intro:
+	DB	0
+.DEFINE "suppress_intro"
+.ALIAS "_suppress_intro"
+.CLASS 69
+.VALUE _suppress_intro
+.TYPE 12
+.ENDEF
+_device_name:
+	DB	101
+	DB	90
+	DB	56
+	DB	48
+	DB	70
+	DB	57
+	DB	49
+	DB	0
+.DEFINE "device_name"
+.ALIAS "_device_name"
+.CLASS 69
+.VALUE _device_name
+.DIM 8
+.TYPE 98
+.ENDEF
+	SEGMENT TEXT
+_version:
+	DB	49
+	DB	46
+	DB	48
+	DB	0
+.DEFINE "version"
+.ALIAS "_version"
+.CLASS 84
+.VALUE _version
+.DIM 4
+.TYPE 98
+.ENDEF
+;    1	/*                                                   Copyright (c) ZiLOG, 2003
+;    2	 *****************************************************************************
+;    3	 *  main.c (1.0)
+;    4	 *
+;    5	 *  eZ80 Development Board demonstration program
+;    6	 *
+;    7	 *  This project displays a text message on the 5x7 LED matrix.
+;    8	 *
+;    9	 *****************************************************************************
+;   10	 */
+;   11	
+;   12	#include <ez80.h>
+;   13	#include <stdio.h>
+;   14	
+;   15	#include "Console.h"
+;   16	#include "LedMatrix.h"
+;   17	#include "LedTimer.h"
+;   18	#include "Buttons.h"
+;   19	
+;   20	#include "main.h"
+;   21	
+;   22	BOOLEAN_T suppress_intro = FALSE;
+;   23	
+;   24	
+;   25	extern void DisplayIntroduction(void);
+;   26	extern void DisplayTitle(void);
+;   27	extern void LoadGame(GAME_S_T *game);
+;   28	extern void SaveGame(GAME_S_T *game);
+;   29	extern void InitGame(GAME_S_T *game);
+;   30	extern void PlayGame(GAME_S_T *game);
+;   31	extern void CloseAll(GAME_S_T *game);
+;   32	
+;   33	
+;   34	extern void _init_default_vectors( void );
+;   35	
+;   36	/* device names -- chosen at build-time */
+;   37	#ifdef _EZ80190
+;   38	char device_name[] = "eZ80190";
+;   39	#endif
+;   40	#ifdef _EZ80L92
+;   41	char device_name[] = "eZ80L92";
+;   42	#endif
+;   43	#ifdef _EZ80F93
+;   44	char device_name[] = "eZ80F93";
+;   45	#endif
+;   46	#ifdef _EZ80F92
+;   47	char device_name[] = "eZ80F92";
+;   48	#endif
+;   49	#ifdef _EZ80F91
+;   50	char device_name[] = "eZ80F91";
+;   51	#endif
+;   52	
+;   53	const char version[] = "1.0";
+	SEGMENT code
+;   54	
+;   55	/*****************************************************************************
+;   56	 *  main()
+;   57	 *
+;   58	 *  - initializes LED matrix, timer, buttons(gpio), and console
+;   59	 *  - sends welcome message and instruction to console
+;   60	 *  - displays simple spin and full matrix blink test
+;   61	 *  - continually displays device name on LED matrix
+;   62	 */
+;   63	void main( void )
+;   64	{
+_main:
+.DEFINE "_main"
+
+.VALUE _main
+
+.CLASS 2
+
+.TYPE 65
+
+.ENDEF
+
+.BEGFUNC "main",64,"_main"
+
+.LINE 64
+
+.DEFINE "game"
+
+.CLASS 65
+
+.VALUE -857
+
+.TAG "game_s_t"
+
+.TYPE 8
+
+.ENDEF
+
+	PUSH	IX
+	LD	IX,0
+	ADD	IX,SP
+	LD	IY,-857
+	ADD	IY,SP
+	LD	SP,IY
+;   65	#if 0
+;   66	    char i, ch;
+;   67		char buffer[128];
+;   68		int count=0;
+;   69	
+;   70	    /* initialize system peripherals */
+;   71	    _init_default_vectors();
+;   72	    ledmatrix_init();
+;   73		ledtimer_init( 1 );  /* 1 mS interval */
+;   74		buttons_init();
+;   75	    console_init( 57600 );
+;   76	
+;   77	    /* flash full LED matrix */
+;   78	    ledmatrix_flash();
+;   79	    /* show a rotating bar on the LED matrix */
+;   80	    ledmatrix_spin();
+;   81	   	
+;   82		/* console welcome message and instruction */
+;   83		printf( "\n  ZiLOG Development Board Demonstration Program (%s)", version );
+;   84		printf( "\n        Featuring the %s\n", device_name );
+;   85	
+;   86		printf( "\n  Console Test Program:\n" );
+;   87	
+;   88		printf(">> ");
+;   89		ledmatrix_clear();
+;   90	
+;   91		/* main demonstration loop */
+;   92		while( 1 )
+;   93		{
+;   94	
+;   95	        /* display device name on LED Matrix one character at a time */
+;   96			ledmatrix_puts( device_name );
+;   97	
+;   98			/* wait a half a second */
+;   99	        wait( 500 );
+;  100	
+;  101			ch = getchar();
+;  102			if (ch == '\r')
+;  103			{
+;  104				buffer[count] = '\0';
+;  105				count = 0;
+;  106	
+;  107				printf("You typed - %s\n", buffer);
+;  108				printf(">> ");	
+;  109			}
+;  110			else
+;  111			{
+;  112				buffer[count] = ch;
+;  113				count++;
+;  114			}
+;  115		}
+;  116	#endif
+;  117	
+;  118	   GAME_S_T game;
+;  119	   int i;
+;  120	
+;  121	
+;  122	   /*  initialize game
+;  123	    */
+;  124	   InitGame(&game);
+	LD	IY,IX
+	LD	BC,-857
+	ADD	IY,BC
+	LD	BC,IY
+	PUSH	BC
+.LINE 124
+
+	CALL	_InitGame
+	POP	BC
+;  125	
+;  126	
+;  127	   /*  prompt for introduction
+;  128	    */
+;  129	   if ( !suppress_intro )
+.LINE 129
+
+	LD	A,(_suppress_intro)
+	OR	A,A
+	JR	NZ,L_1
+;  130	   {
+;  131	      DisplayIntroduction();
+.LINE 131
+
+	CALL	_DisplayIntroduction
+;  132	   }
+L_1:
+.LINE 132
+
+;  133	
+;  134	
+;  135	   /*  display title block
+;  136	    */
+;  137	   DisplayTitle();
+.LINE 137
+
+	CALL	_DisplayTitle
+;  138	
+;  139	
+;  140	   /*  start playing the game
+;  141	    */
+;  142	   if (game.load_game) 
+.LINE 142
+
+	LD	BC,-833
+	CALL	__bldix
+	OR	A,A
+	JR	Z,L_3
+;  143	   {
+;  144	      LoadGame(&game);
+	LD	IY,IX
+	LD	BC,-857
+	ADD	IY,BC
+	LD	BC,IY
+	PUSH	BC
+.LINE 144
+
+	CALL	_LoadGame
+	POP	BC
+;  145	   }
+L_3:
+.LINE 145
+
+;  146	
+;  147	
+;  148	   /*  start playing the game
+;  149	    */
+;  150	   PlayGame(&game);
+	LD	IY,IX
+	LD	BC,-857
+	ADD	IY,BC
+	LD	BC,IY
+	PUSH	BC
+.LINE 150
+
+	CALL	_PlayGame
+	POP	BC
+;  151	
+;  152	
+;  153	   /*  close all files
+;  154	    */
+;  155	   CloseAll(&game);
+	LD	IY,IX
+	LD	BC,-857
+	ADD	IY,BC
+	LD	BC,IY
+	PUSH	BC
+.LINE 155
+
+	CALL	_CloseAll
+	POP	BC
+;  156	
+;  157	}
+.LINE 157
+
+	LD	SP,IX
+	POP	IX
+	RET	
+
+
+;**************************** _main ***************************
+;Name                         Addr/Register   Size   Type
+;_CloseAll                           IMPORT  -----   function
+;_PlayGame                           IMPORT  -----   function
+;_LoadGame                           IMPORT  -----   function
+;_DisplayTitle                       IMPORT  -----   function
+;_DisplayIntroduction                IMPORT  -----   function
+;_suppress_intro                     STATIC      1   variable
+;_InitGame                           IMPORT  -----   function
+;game                                IX-857    857   variable
+
+
+; Stack Frame Size: 863 (bytes)
+;       Spill Code: 0 (instruction)
+
+
+.ENDFUNC "main",157,"_main"
+	XREF _CloseAll:ROM
+	XREF _PlayGame:ROM
+	XREF _InitGame:ROM
+	XREF _LoadGame:ROM
+	XREF _DisplayTitle:ROM
+	XREF _DisplayIntroduction:ROM
+	XREF __bldix:ROM
+	XDEF _main
+	XDEF _version
+	XDEF _device_name
+	XDEF _suppress_intro
+	END

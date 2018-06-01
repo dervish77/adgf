@@ -1,0 +1,173 @@
+MOS CPU Definition
+==================
+
+
+Memory Organization
+-------------------
+
+Instruction Block - 256 bytes
+
+Data Block        - 256 bytes
+
+Stack Block       - 256 bytes (optional)
+
+
+
+Registers (all are 8 bits)
+---------
+
+P  - program counter
+
+A  - accumulator
+
+X  - index register
+
+F  - flags register  ( E x x x x x Z C )
+
+		E - error flag
+		Z - zero flag
+		C - carry flag
+
+G  - GPIO register (optional)
+
+S  - stack pointer (optional)
+
+
+
+Instructions
+------------
+
+All instructions are two bytes -- operation , operand
+
+
+dd - delta value (two's complement -- thus -128 to +127)
+ii - index into Data Block -- thus 0 to 255
+xx - absolute value -- thus 0 to 255
+00 - ignored
+
+
+Mneumonic	Action			Flags 			Hex Code	Comments
+
+NOP		(P) <- (P) + 2					07 00		all instructions increment P by 2
+
+RST		(P) <- 0		all flags cleared	0F 00
+		(S) <- 255
+		(A) <- 0
+		(X) <- 0
+
+
+load/store operations
+
+CLA		(A) <- 0					11 00
+
+CLX		(X) <- 0					12 00
+
+CLD ii		Data[ii] <- 0					13 ii
+
+CLV		Data[(X)] <- 0					14 00
+
+LAI xx		(A) <- xx		Z = 1 if (A) = 0	21 xx
+
+LXI xx		(X) <- xx		Z = 1 if (X) = 0	22 xx
+
+LAD ii		(A) <- Data[ii]		Z = 1 if (A) = 0	23 ii
+
+WAD ii		Data[ii] <- (A)					33 ii
+
+LXD ii		(X) <- Data[ii]		Z = 1 if (X) = 0	24 ii
+
+WXD ii		Data[ii] <- (X)					34 ii
+
+LAV		(A) <- Data[(X)]	Z = 1 if (A) = 0	25 00
+
+WAV		Data[(X)] <- (A)				35 00
+
+
+logic operations
+
+ANA xx		(A) <- (A) & xx		Z = 1 if (A) = 0	41 xx
+
+ANX		(A) <- (A) & (X)	Z = 1 if (X) = 0	42 00
+
+ORA xx		(A) <- (A) | xx					43 xx
+
+ORX		(A) <- (A) | (X)				44 00
+
+CMA xx		compare (A) with xx	Z = 1 if (A) = xx	45 xx
+
+CMX xx		compare (X) with xx	Z = 1 if (X) = xx	46 xx
+
+CMP		compare (A) with (X)	Z = 1 if (A) = (X)	47 00
+
+
+math operations
+
+AIA xx		(A) <- (A) + xx		C = 1 if carry		51 xx
+
+ADX 		(A) <- (A) + (X)	C = 1 if carry		52 00
+
+SIA xx		(A) <- (A) - xx		Z = 1 if (A) = 0	53 xx
+
+SBX 		(A) <- (A) - (X)	Z = 1 if (A) = 0	54 00
+
+MVA  		(X) <- (A)					61 00
+
+MVX 		(A) <- (X)					62 00
+
+RRA		(A) <- shift (A) right 				63 00
+
+RLA		(A) <- shift (A) left				64 00
+
+INA		(A) <- (A) + 1		C = 1 if carry		71 00
+
+INX		(X) <- (X) + 1		C = 1 if carry		72 00
+
+DCA		(A) <- (A) - 1		Z = 1 if (A) = 0	73 00
+
+DCX		(X) <- (X) - 1		Z = 1 if (X) = 0	74 00
+
+
+branch operations
+
+JMP xx		(P) <- xx					81 xx
+
+JMI dd		(P) <- (P) + dd					82 dd		dd is two's complement
+
+BRC dd		if C = 1 (P) <- (P) + dd			91 dd		dd is two's complement
+
+BRZ dd		if Z = 1 (P) <- (P) + dd			92 dd		dd is two's complement
+
+
+optional GPIO operations
+
+LGA		(A) <- (G)					A1 00
+
+LGX		(X) <- (G)					A2 00
+
+WAG		(G) <- (A)					A3 00
+
+WXG		(G) <- (X)					A4 00
+
+
+optional stack operations
+
+PUA		Stack[(S)] <- (A)				C1 00
+		(S) <- (S) - 1
+
+PUX		Stack[(S)] <- (X)				C2 00
+		(S) <- (S) - 1
+
+PPA		(S) <- (S) + 1					C8 00
+		(A) <- Stack[(S)]
+
+PPX		(S) <- (S) + 1					C9 00
+		(X) <- Stack[(S)]
+
+SUB xx		Stack[(S)] <- (P)				D1 xx
+		(S) <- (S) - 1
+		(P) <- xx	
+
+RET		(S) <- (S) + 1					D7 00
+		(P) <- Stack[(S)]
+
+

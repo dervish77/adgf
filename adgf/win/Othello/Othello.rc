@@ -1,0 +1,60 @@
+/*-----------------------------
+   OTHELLO.RC resource script
+  -----------------------------*/
+
+#include "main.h"
+
+Othello MENU
+     {
+     POPUP "&File"
+          {
+          MENUITEM "&New Game",              IDM_NEW
+          MENUITEM "&Load Game",             IDM_LOAD
+          MENUITEM "&Save Game",             IDM_SAVE
+          MENUITEM SEPARATOR
+          MENUITEM "E&xit",                  IDM_EXIT
+          }
+     POPUP "&Edit"
+          {
+          MENUITEM "&Undo",                  IDM_UNDO
+          MENUITEM SEPARATOR
+          MENUITEM "Cu&t",                   IDM_CUT
+          MENUITEM "&Copy",                  IDM_COPY
+          MENUITEM "&Paste",                 IDM_PASTE
+          MENUITEM "De&lete",                IDM_DEL
+          }
+     POPUP "&Mode"
+          {
+          MENUITEM "&Single Player",         IDM_SINGLE, CHECKED
+          MENUITEM "&Two Players",           IDM_MULTI
+          MENUITEM "&Network Game",          IDM_NETWORK
+          MENUITEM "&Demo",                  IDM_DEMO
+          }
+     POPUP "&Skill"
+          {
+          MENUITEM "&No Skill",              IDM_NOSKILL, CHECKED
+          MENUITEM "&Random",                IDM_RANDOM
+          MENUITEM "&Corners",               IDM_CORNERS
+          MENUITEM "&Max Flips",             IDM_MAXFLIPS
+          MENUITEM "&AI",                    IDM_AI
+          }
+     POPUP "&Board"
+          {
+          MENUITEM "&8 x 8",                 IDM_BOARD8
+          MENUITEM "1&0 x 10",               IDM_BOARD10
+          MENUITEM "1&2 x 12",               IDM_BOARD12, CHECKED
+          }
+     POPUP "&Help"
+          {
+          MENUITEM "Hi&nt",                  IDM_HINT
+          MENUITEM "&Pass",                  IDM_PASS
+          MENUITEM SEPARATOR
+          MENUITEM "&Help...",               IDM_HELP
+          MENUITEM "Help &Keys...",          IDM_HELPKEY
+          MENUITEM "Help &Rules...",         IDM_HELPRULE
+          MENUITEM SEPARATOR
+          MENUITEM "&Status",                IDM_STATUS
+          MENUITEM SEPARATOR
+          MENUITEM "&About Othello...",      IDM_ABOUT
+          }
+     }

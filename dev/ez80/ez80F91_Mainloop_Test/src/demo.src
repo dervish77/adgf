@@ -1,0 +1,2506 @@
+; ZiLOG eZ80 ANSI C Compiler Release 2.06
+; -alias -debug -intsrc -nomodsect -optsize -localcse
+; -peephole -globalopt -nosdiopt -bitfieldsize=24 -charsize=8
+; -doublesize=32 -floatsize=32 -intsize=24 -longsize=32
+; -nofastcall -noregvar -nostkck -nooptlink -swap 
+	FILE	".\DEMO.C"
+	.assume ADL=1
+.DEBUG "C"
+	SEGMENT code
+.BEGREC "NONAME0",6
+.DEFINE "quot"
+.VALUE 0
+.CLASS 8
+.TYPE 4
+.ENDEF
+.DEFINE "rem"
+.VALUE 3
+.CLASS 8
+.TYPE 4
+.ENDEF
+.ENDREC "NONAME0"
+.BEGREC "NONAME1",8
+.DEFINE "quot"
+.VALUE 0
+.CLASS 8
+.TYPE 5
+.ENDEF
+.DEFINE "rem"
+.VALUE 4
+.CLASS 8
+.TYPE 5
+.ENDEF
+.ENDREC "NONAME1"
+.BEGREC "header",6
+.DEFINE "s"
+.VALUE 0
+.CLASS 11
+.TAG "NONAME2"
+.TYPE 8
+.ENDEF
+.DEFINE "x"
+.VALUE 0
+.CLASS 11
+.TYPE 2
+.ENDEF
+.ENDREC "header"
+.BEGREC "NONAME2",6
+.DEFINE "ptr"
+.VALUE 0
+.CLASS 8
+.TAG "header"
+.TYPE 40
+.ENDEF
+.DEFINE "size"
+.VALUE 3
+.CLASS 8
+.TYPE 14
+.ENDEF
+.ENDREC "NONAME2"
+.BEGREC "arg_struct",9
+.DEFINE "arg1"
+.VALUE 0
+.CLASS 8
+.TYPE 4
+.ENDEF
+.DEFINE "arg2"
+.VALUE 3
+.CLASS 8
+.TYPE 4
+.ENDEF
+.DEFINE "arg3"
+.VALUE 6
+.CLASS 8
+.TYPE 4
+.ENDEF
+.ENDREC "arg_struct"
+.BEGREC "memblock_s_t",6
+.DEFINE "size"
+.VALUE 0
+.CLASS 8
+.TYPE 4
+.ENDEF
+.DEFINE "ptr"
+.VALUE 3
+.CLASS 8
+.TYPE 34
+.ENDEF
+.ENDREC "memblock_s_t"
+.BEGREC "msg_s_t",35
+.DEFINE "size"
+.VALUE 0
+.CLASS 8
+.TYPE 4
+.ENDEF
+.DEFINE "buf"
+.VALUE 3
+.CLASS 8
+.DIM 32
+.TYPE 98
+.ENDEF
+.ENDREC "msg_s_t"
+.BEGREC "msgq_s_t",143
+.DEFINE "count"
+.VALUE 0
+.CLASS 8
+.TYPE 4
+.ENDEF
+.DEFINE "msg"
+.VALUE 3
+.CLASS 8
+.DIM 4
+.TAG "msg_s_t"
+.TYPE 104
+.ENDEF
+.ENDREC "msgq_s_t"
+.BEGREC "task_s_t",210
+.DEFINE "taskid"
+.VALUE 0
+.CLASS 8
+.TYPE 4
+.ENDEF
+.DEFINE "taskname"
+.VALUE 3
+.CLASS 8
+.DIM 40
+.TYPE 98
+.ENDEF
+.DEFINE "proc"
+.VALUE 43
+.CLASS 8
+.TYPE 545
+.ENDEF
+.DEFINE "args"
+.VALUE 46
+.CLASS 8
+.TYPE 33
+.ENDEF
+.DEFINE "mem"
+.VALUE 49
+.CLASS 8
+.TAG "memblock_s_t"
+.TYPE 8
+.ENDEF
+.DEFINE "queue"
+.VALUE 55
+.CLASS 8
+.TAG "msgq_s_t"
+.TYPE 8
+.ENDEF
+.DEFINE "valid"
+.VALUE 198
+.CLASS 8
+.TYPE 4
+.ENDEF
+.DEFINE "ready"
+.VALUE 201
+.CLASS 8
+.TYPE 4
+.ENDEF
+.DEFINE "blocked"
+.VALUE 204
+.CLASS 8
+.TYPE 4
+.ENDEF
+.DEFINE "suspend"
+.VALUE 207
+.CLASS 8
+.TYPE 4
+.ENDEF
+.ENDREC "task_s_t"
+.BEGREC "context_s_t",2109
+.DEFINE "numtasks"
+.VALUE 0
+.CLASS 8
+.TYPE 4
+.ENDEF
+.DEFINE "tasklist"
+.VALUE 3
+.CLASS 8
+.DIM 10
+.TAG "task_s_t"
+.TYPE 104
+.ENDEF
+.DEFINE "ticks"
+.VALUE 2103
+.CLASS 8
+.TYPE 4
+.ENDEF
+.DEFINE "ticktime"
+.VALUE 2106
+.CLASS 8
+.TYPE 4
+.ENDEF
+.ENDREC "context_s_t"
+.BEGREC "database_s_t",6
+.DEFINE "temp1"
+.VALUE 0
+.CLASS 8
+.TYPE 4
+.ENDEF
+.DEFINE "temp2"
+.VALUE 3
+.CLASS 8
+.TYPE 4
+.ENDEF
+.ENDREC "database_s_t"
+	SEGMENT BSS
+_data:
+	DS	3
+.DEFINE "data"
+.ALIAS "_data"
+.CLASS 83
+.VALUE _data
+.TAG "database_s_t"
+.TYPE 40
+.ENDEF
+	SEGMENT DATA
+_dummyargs:
+	DW	1
+	DB	0
+	DW	2
+	DB	0
+	DW	3
+	DB	0
+.DEFINE "dummyargs"
+.ALIAS "_dummyargs"
+.CLASS 69
+.VALUE _dummyargs
+.TAG "arg_struct"
+.TYPE 8
+.ENDEF
+;    1	/*****************************************************************************
+;    2	 *
+;    3	 *	Main Loop Demo program routines.
+;    4	 *
+;    5	 *	File:	demo.c
+;    6	 *
+;    7	 *	Author: Brian Lingard
+;    8	 *
+;    9	 *	Date:	10/31/2003
+;   10	 *
+;   11	 *	Revs:
+;   12	 *	  0.0 	10/31/2003  originated
+;   13	 *
+;   14	 *****************************************************************************/
+;   15	
+;   16	
+;   17	#include <stdio.h>
+;   18	#include <stdlib.h>
+;   19	#include <string.h>
+;   20	
+;   21	#ifndef _MLOOP_H
+;   22	#include "mloop.h"
+;   23	#endif
+;   24	
+;   25	#ifndef _DEMO_H
+;   26	#include "demo.h"
+;   27	#endif
+;   28	
+;   29	
+;   30	#define DEBUG
+;   31	
+;   32	
+;   33	/*
+;   34	 *  GLOBALS
+;   35	 */
+;   36	DATABASE_S_T *data;
+;   37	
+;   38	
+;   39	/*
+;   40	 *  STATICS
+;   41	 */
+;   42	static void dummy( void *args );
+;   43	static void dummygetid( void *args );
+;   44	static void dummysuspend( void *args );
+;   45	
+;   46	static ARG_STRUCT dummyargs = 
+;   47	{
+	SEGMENT code
+;   48		1,
+;   49		2,
+;   50		3
+;   51	};
+;   52	
+;   53	
+;   54	char *getstr (char *string) 
+;   55	{
+_getstr:
+.DEFINE "_getstr"
+
+.VALUE _getstr
+
+.CLASS 2
+
+.TYPE 322
+
+.ENDEF
+
+.BEGFUNC "getstr",55,"_getstr"
+
+.LINE 55
+
+.DEFINE "string"
+
+.CLASS 65
+
+.VALUE 6
+
+.TYPE 34
+
+.ENDEF
+
+.DEFINE "sptr"
+
+.CLASS 65
+
+.VALUE -3
+
+.TYPE 34
+
+.ENDEF
+
+.DEFINE "chr"
+
+.CLASS 65
+
+.VALUE -4
+
+.TYPE 2
+
+.ENDEF
+
+;   56	  char *sptr = string;
+.LINE 56
+
+	PUSH	IX
+	LD	IX,0
+	ADD	IX,SP
+	PUSH	BC
+	PUSH	BC
+	DEC	SP
+	DEC	SP
+	LD	BC,(IX+6)
+	LD	(IX+-3),BC
+;   57	  char chr;
+;   58	
+;   59	  while (TRUE) {
+.LINE 59
+
+L_5:
+;   60	    chr = getchar();
+.LINE 60
+
+	CALL	_getchar
+	LD	(IX+-4),L
+;   61	
+;   62	    if (chr == '\r') {
+.LINE 62
+
+	LD	A,(IX+-4)
+	CP	A,13
+	JR	NZ,L_3
+;   63	      *sptr = ' ';
+.LINE 63
+
+	LD	IY,(IX+-3)
+	LD	A,32
+	LD	(IY),A
+;   64	      *(sptr+1) = '\0';
+.LINE 64
+
+	LD	IY,(IX+-3)
+	XOR	A,A
+	LD	(IY+1),A
+;   65	      return (string);
+.LINE 65
+
+	LD	HL,(IX+6)
+	JMP	L_6
+;   66	    } /* Remove LF */
+L_3:
+.LINE 66
+
+;   67	
+;   68	    *(sptr++) = chr;
+.LINE 68
+
+	LD	BC,(IX+-3)
+	LD	(IX+-7),BC
+	LD	A,(IX+-4)
+	LD	(IX+-8),A
+	LD	IY,(IX+-7)
+	LD	A,(IX+-8)
+	LD	(IY),A
+	LD	BC,(IX+-3)
+	INC	BC
+	LD	(IX+-3),BC
+;   69	
+;   70	  }  /* while (TRUE) */
+L_4:
+.LINE 70
+
+	JMP	L_5
+;   71	} /* gets */
+L_6:
+.LINE 71
+
+	LD	SP,IX
+	POP	IX
+	RET	
+
+
+;**************************** _getstr ***************************
+;Name                         Addr/Register   Size   Type
+;_getchar                            IMPORT  -----   function
+;chr                                   IX-4      1   variable
+;sptr                                  IX-3      3   variable
+;string                                IX+6      3   parameter
+
+
+; Stack Frame Size: 17 (bytes)
+;       Spill Code: 0 (instruction)
+
+
+.ENDFUNC "getstr",71,"_getstr"
+;   72	
+;   73	
+;   74	/*  DemoInit	- initializes demo database
+;   75	 *
+;   76	 *  Parameters:
+;   77	 *	DATABASE_S_T *mdata	- pointer to  database
+;   78	 *
+;   79	 *  Returns:
+;   80	 *
+;   81	 */
+;   82	void 
+;   83	DemoInit( DATABASE_S_T *mdata )
+;   84	{
+_DemoInit:
+.DEFINE "_DemoInit"
+
+.VALUE _DemoInit
+
+.CLASS 2
+
+.TYPE 65
+
+.ENDEF
+
+.BEGFUNC "DemoInit",84,"_DemoInit"
+
+.LINE 84
+
+.DEFINE "mdata"
+
+.CLASS 65
+
+.VALUE 6
+
+.TAG "database_s_t"
+
+.TYPE 40
+
+.ENDEF
+
+.DEFINE "taskid"
+
+.CLASS 65
+
+.VALUE -3
+
+.TYPE 4
+
+.ENDEF
+
+;   85	   int	taskid;
+;   86	
+;   87	   InitTasking();
+.LINE 87
+
+	PUSH	IX
+	LD	IX,0
+	ADD	IX,SP
+	PUSH	BC
+	CALL	_InitTasking
+;   88	
+;   89	   taskid = CreateTask( "dummy1", &dummy, &dummyargs, 16 );
+	LD	BC,16
+	PUSH	BC
+	LD	BC,_dummyargs
+	PUSH	BC
+	LD	BC,_dummy
+	PUSH	BC
+	LD	BC,L__3
+	PUSH	BC
+.LINE 89
+
+	CALL	_CreateTask
+	POP	BC
+	POP	BC
+	POP	BC
+	POP	BC
+	LD	(IX+-3),HL
+;   90	   if (!taskid)
+.LINE 90
+
+	LD	BC,0
+	LD	HL,(IX+-3)
+	OR	A,A
+	SBC	HL,BC
+	JR	NZ,L_8
+;   91	   {
+;   92	      printf("DemoInit: create task dummy1 failed!\n");
+	LD	BC,L__5
+	PUSH	BC
+.LINE 92
+
+	CALL	_printf
+	POP	BC
+;   93	   }
+L_8:
+.LINE 93
+
+;   94	
+;   95	   taskid = CreateTask( "dummy2", &dummy, &dummyargs, 1 );
+	LD	BC,1
+	PUSH	BC
+	LD	BC,_dummyargs
+	PUSH	BC
+	LD	BC,_dummy
+	PUSH	BC
+	LD	BC,L__6
+	PUSH	BC
+.LINE 95
+
+	CALL	_CreateTask
+	POP	BC
+	POP	BC
+	POP	BC
+	POP	BC
+	LD	(IX+-3),HL
+;   96	   if (!taskid)
+.LINE 96
+
+	LD	BC,0
+	LD	HL,(IX+-3)
+	OR	A,A
+	SBC	HL,BC
+	JR	NZ,L_10
+;   97	   {
+;   98	      printf("DemoInit: create task dummy1 failed!\n");
+	LD	BC,L__8
+	PUSH	BC
+.LINE 98
+
+	CALL	_printf
+	POP	BC
+;   99	   }
+L_10:
+.LINE 99
+
+;  100	
+;  101	   taskid = CreateTask( "getid", &dummygetid, &dummyargs, 1024 );
+	LD	BC,1024
+	PUSH	BC
+	LD	BC,_dummyargs
+	PUSH	BC
+	LD	BC,_dummygetid
+	PUSH	BC
+	LD	BC,L__9
+	PUSH	BC
+.LINE 101
+
+	CALL	_CreateTask
+	POP	BC
+	POP	BC
+	POP	BC
+	POP	BC
+	LD	(IX+-3),HL
+;  102	   if (!taskid)
+.LINE 102
+
+	LD	BC,0
+	LD	HL,(IX+-3)
+	OR	A,A
+	SBC	HL,BC
+	JR	NZ,L_12
+;  103	   {
+;  104	      printf("DemoInit: create task getid failed!\n");
+	LD	BC,L__11
+	PUSH	BC
+.LINE 104
+
+	CALL	_printf
+	POP	BC
+;  105	   }
+L_12:
+.LINE 105
+
+;  106	
+;  107	   taskid = CreateTask( "suspend", &dummysuspend, &dummyargs, 128 );
+	LD	BC,128
+	PUSH	BC
+	LD	BC,_dummyargs
+	PUSH	BC
+	LD	BC,_dummysuspend
+	PUSH	BC
+	LD	BC,L__12
+	PUSH	BC
+.LINE 107
+
+	CALL	_CreateTask
+	POP	BC
+	POP	BC
+	POP	BC
+	POP	BC
+	LD	(IX+-3),HL
+;  108	   if (!taskid)
+.LINE 108
+
+	LD	BC,0
+	LD	HL,(IX+-3)
+	OR	A,A
+	SBC	HL,BC
+	JR	NZ,L_14
+;  109	   {
+;  110	      printf("DemoInit: create task suspend failed!\n");
+	LD	BC,L__14
+	PUSH	BC
+.LINE 110
+
+	CALL	_printf
+	POP	BC
+;  111	   }
+L_14:
+.LINE 111
+
+;  112	
+;  113	   mdata->temp1 = 0;
+.LINE 113
+
+	LD	IY,(IX+6)
+	LD	BC,0
+	LD	(IY),BC
+;  114	   mdata->temp2 = 0;
+.LINE 114
+
+	LD	IY,(IX+6)
+	LD	(IY+3),BC
+;  115	}
+.LINE 115
+
+	LD	SP,IX
+	POP	IX
+	RET	
+
+
+;**************************** _DemoInit ***************************
+;Name                         Addr/Register   Size   Type
+;_dummysuspend                       STATIC  -----   function
+;_dummygetid                         STATIC  -----   function
+;_printf                             IMPORT  -----   function
+;_dummy                              STATIC  -----   function
+;_dummyargs                          STATIC      9   variable
+;_CreateTask                         IMPORT  -----   function
+;_InitTasking                        IMPORT  -----   function
+;taskid                                IX-3      3   variable
+;mdata                                 IX+6      3   parameter
+
+
+; Stack Frame Size: 12 (bytes)
+;       Spill Code: 0 (instruction)
+
+
+.ENDFUNC "DemoInit",115,"_DemoInit"
+	SEGMENT STRSECT
+L__3:
+	DB	"dummy1"
+	DB	0
+L__5:
+	DB	"DemoInit: create task dummy1 failed!"
+	DB	10,0
+L__6:
+	DB	"dummy2"
+	DB	0
+L__8:
+	DB	"DemoInit: create task dummy1 failed!"
+	DB	10,0
+L__9:
+	DB	"getid"
+	DB	0
+L__11:
+	DB	"DemoInit: create task getid failed!"
+	DB	10,0
+L__12:
+	DB	"suspend"
+	DB	0
+L__14:
+	DB	"DemoInit: create task suspend failed!"
+	DB	10,0
+	SEGMENT code
+;  116	
+;  117	
+;  118	/*  DemoClose	- closes demo
+;  119	 *
+;  120	 *  Parameters:
+;  121	 *	DATABASE_S_T *mdata	- pointer to database
+;  122	 *
+;  123	 *  Returns:
+;  124	 *
+;  125	 */
+;  126	void 
+;  127	DemoClose( DATABASE_S_T *mdata )
+;  128	{
+_DemoClose:
+.DEFINE "_DemoClose"
+
+.VALUE _DemoClose
+
+.CLASS 2
+
+.TYPE 65
+
+.ENDEF
+
+.BEGFUNC "DemoClose",128,"_DemoClose"
+
+.LINE 128
+
+.DEFINE "mdata"
+
+.CLASS 65
+
+.VALUE 6
+
+.TAG "database_s_t"
+
+.TYPE 40
+
+.ENDEF
+
+;  129	   FreeTasking();
+.LINE 129
+
+	PUSH	IX
+	LD	IX,0
+	ADD	IX,SP
+	CALL	_FreeTasking
+;  130	}
+.LINE 130
+
+	LD	SP,IX
+	POP	IX
+	RET	
+
+
+;**************************** _DemoClose ***************************
+;Name                         Addr/Register   Size   Type
+;_FreeTasking                        IMPORT  -----   function
+;mdata                                 IX+6      3   parameter
+
+
+; Stack Frame Size: 9 (bytes)
+;       Spill Code: 0 (instruction)
+
+
+.ENDFUNC "DemoClose",130,"_DemoClose"
+;  131	
+;  132	
+;  133	/*  DemoRun		- runs canned demo
+;  134	 *
+;  135	 *  Parameters:
+;  136	 *	DATABASE_S_T *mdata	- pointer to sim database
+;  137	 *
+;  138	 *  Returns:
+;  139	 *
+;  140	 */
+;  141	void 
+;  142	DemoRun( DATABASE_S_T *mdata )
+;  143	{
+_DemoRun:
+.DEFINE "_DemoRun"
+
+.VALUE _DemoRun
+
+.CLASS 2
+
+.TYPE 65
+
+.ENDEF
+
+.BEGFUNC "DemoRun",143,"_DemoRun"
+
+.LINE 143
+
+.DEFINE "mdata"
+
+.CLASS 65
+
+.VALUE 6
+
+.TAG "database_s_t"
+
+.TYPE 40
+
+.ENDEF
+
+;  144	   SequenceTaskList();
+.LINE 144
+
+	PUSH	IX
+	LD	IX,0
+	ADD	IX,SP
+	CALL	_SequenceTaskList
+;  145	}
+.LINE 145
+
+	LD	SP,IX
+	POP	IX
+	RET	
+
+
+;**************************** _DemoRun ***************************
+;Name                         Addr/Register   Size   Type
+;_SequenceTaskList                   IMPORT  -----   function
+;mdata                                 IX+6      3   parameter
+
+
+; Stack Frame Size: 9 (bytes)
+;       Spill Code: 0 (instruction)
+
+
+.ENDFUNC "DemoRun",145,"_DemoRun"
+;  146	
+;  147	
+;  148	/*  DemoHelp		- displays demo help
+;  149	 *
+;  150	 *  Parameters:
+;  151	 *	none
+;  152	 *
+;  153	 *  Returns:
+;  154	 *
+;  155	 */
+;  156	void 
+;  157	DemoHelp( void )
+;  158	{
+_DemoHelp:
+.DEFINE "_DemoHelp"
+
+.VALUE _DemoHelp
+
+.CLASS 2
+
+.TYPE 65
+
+.ENDEF
+
+.BEGFUNC "DemoHelp",158,"_DemoHelp"
+
+	PUSH	IX
+	LD	IX,0
+	ADD	IX,SP
+;  159	   printf("\nAvailable commands:\n");
+	LD	BC,L__18
+	PUSH	BC
+.LINE 159
+
+	CALL	_printf
+	POP	BC
+;  160	   printf("  run              - run tasking demo\n");
+	LD	BC,L__19
+	PUSH	BC
+.LINE 160
+
+	CALL	_printf
+	POP	BC
+;  161	   printf("  list             - display task list\n");
+	LD	BC,L__20
+	PUSH	BC
+.LINE 161
+
+	CALL	_printf
+	POP	BC
+;  162	   printf("  loop [#]         - loop for count or forever\n");
+	LD	BC,L__21
+	PUSH	BC
+.LINE 162
+
+	CALL	_printf
+	POP	BC
+;  163	   printf("  create <name>    - create task\n");
+	LD	BC,L__22
+	PUSH	BC
+.LINE 163
+
+	CALL	_printf
+	POP	BC
+;  164	   printf("  delete #         - delete task\n");
+	LD	BC,L__23
+	PUSH	BC
+.LINE 164
+
+	CALL	_printf
+	POP	BC
+;  165	   printf("  suspend #        - suspend task\n");
+	LD	BC,L__24
+	PUSH	BC
+.LINE 165
+
+	CALL	_printf
+	POP	BC
+;  166	   printf("  resume #         - resume task\n");
+	LD	BC,L__25
+	PUSH	BC
+.LINE 166
+
+	CALL	_printf
+	POP	BC
+;  167	   printf("  block #          - block task\n");
+	LD	BC,L__26
+	PUSH	BC
+.LINE 167
+
+	CALL	_printf
+	POP	BC
+;  168	   printf("  unblock #        - unblock task\n");
+	LD	BC,L__27
+	PUSH	BC
+.LINE 168
+
+	CALL	_printf
+	POP	BC
+;  169	   printf("  help             - display help\n");
+	LD	BC,L__28
+	PUSH	BC
+.LINE 169
+
+	CALL	_printf
+	POP	BC
+;  170	   printf("  exit             - exit demo\n");
+	LD	BC,L__29
+	PUSH	BC
+.LINE 170
+
+	CALL	_printf
+	POP	BC
+;  171	}
+.LINE 171
+
+	LD	SP,IX
+	POP	IX
+	RET	
+
+
+;**************************** _DemoHelp ***************************
+;Name                         Addr/Register   Size   Type
+;_printf                             IMPORT  -----   function
+
+
+; Stack Frame Size: 6 (bytes)
+;       Spill Code: 0 (instruction)
+
+
+.ENDFUNC "DemoHelp",171,"_DemoHelp"
+	SEGMENT STRSECT
+L__18:
+	DB	10
+	DB	"Available commands:"
+	DB	10,0
+L__19:
+	DB	"  run              - run tasking demo"
+	DB	10,0
+L__20:
+	DB	"  list             - display task list"
+	DB	10,0
+L__21:
+	DB	"  loop [#]         - loop for count or forever"
+	DB	10,0
+L__22:
+	DB	"  create <name>    - create task"
+	DB	10,0
+L__23:
+	DB	"  delete #         - delete task"
+	DB	10,0
+L__24:
+	DB	"  suspend #        - suspend task"
+	DB	10,0
+L__25:
+	DB	"  resume #         - resume task"
+	DB	10,0
+L__26:
+	DB	"  block #          - block task"
+	DB	10,0
+L__27:
+	DB	"  unblock #        - unblock task"
+	DB	10,0
+L__28:
+	DB	"  help             - display help"
+	DB	10,0
+L__29:
+	DB	"  exit             - exit demo"
+	DB	10,0
+	SEGMENT code
+;  172	
+;  173	
+;  174	/*  DemoInteractive	- runs interactive demo
+;  175	 *
+;  176	 *  Parameters:
+;  177	 *	DATABASE_S_T *mdata	- pointer to database
+;  178	 *
+;  179	 *  Returns:
+;  180	 *
+;  181	 */
+;  182	void 
+;  183	DemoInteractive( DATABASE_S_T *mdata )
+;  184	{
+_DemoInteractive:
+.DEFINE "_DemoInteractive"
+
+.VALUE _DemoInteractive
+
+.CLASS 2
+
+.TYPE 65
+
+.ENDEF
+
+.BEGFUNC "DemoInteractive",184,"_DemoInteractive"
+
+.LINE 184
+
+.DEFINE "mdata"
+
+.CLASS 65
+
+.VALUE 6
+
+.TAG "database_s_t"
+
+.TYPE 40
+
+.ENDEF
+
+.DEFINE "cmd"
+
+.CLASS 65
+
+.VALUE -120
+
+.DIM 120
+
+.TYPE 98
+
+.ENDEF
+
+.DEFINE "exit"
+
+.CLASS 65
+
+.VALUE -123
+
+.TYPE 4
+
+.ENDEF
+
+.DEFINE "i"
+
+.CLASS 65
+
+.VALUE -126
+
+.TYPE 4
+
+.ENDEF
+
+.DEFINE "id"
+
+.CLASS 65
+
+.VALUE -129
+
+.TYPE 4
+
+.ENDEF
+
+.DEFINE "argcount"
+
+.CLASS 65
+
+.VALUE -132
+
+.TYPE 4
+
+.ENDEF
+
+.DEFINE "cmdstring"
+
+.CLASS 65
+
+.VALUE -252
+
+.DIM 120
+
+.TYPE 98
+
+.ENDEF
+
+.DEFINE "buffer"
+
+.CLASS 65
+
+.VALUE -255
+
+.TYPE 34
+
+.ENDEF
+
+.DEFINE "cmdargs"
+
+.CLASS 65
+
+.VALUE -318
+
+.DIM 21
+
+.TYPE 354
+
+.ENDEF
+
+;  185	   LONG_BUFFER_T	cmd, cmdstring;	
+;  186	   BOOLEAN_T		exit = FALSE;
+.LINE 186
+
+	PUSH	IX
+	LD	IX,0
+	ADD	IX,SP
+	LD	IY,-318
+	ADD	IY,SP
+	LD	SP,IY
+	LD	BC,0
+	LD	(IX+-123),BC
+;  187	   char 		*buffer;
+;  188	   char			*cmdargs[MAX_CMD_ARGS];
+;  189	   int			i, argcount;
+;  190	   int			id;
+;  191	
+;  192	
+;  193	   /* loop while not exit */
+;  194	   while (!exit)
+.LINE 194
+
+	JMP	L_69
+L_70:
+;  195	   {
+;  196	      /* get command string */
+;  197	      printf("\n%s ", PROMPT);
+	LD	BC,L__31
+	PUSH	BC
+	LD	BC,L__32
+	PUSH	BC
+.LINE 197
+
+	CALL	_printf
+	POP	BC
+	POP	BC
+;  198	      getstr( cmd );
+	PEA	IX+-120
+.LINE 198
+
+	CALL	_getstr
+	POP	BC
+;  199	//	  printf("You typed cmd - %s\n", cmd);     
+;  200		  strncpy( cmdstring, cmd, LONG_BUFF_LEN );
+	LD	BC,120
+	PUSH	BC
+	PEA	IX+-120
+	LD	IY,IX
+	LD	BC,-252
+	ADD	IY,BC
+	LD	BC,IY
+	PUSH	BC
+.LINE 200
+
+	CALL	_strncpy
+	POP	BC
+	POP	BC
+	POP	BC
+;  201	//	  printf("You typed cmdstring - %s\n", cmdstring);  
+;  202	//	  printf("strlen cmdstring - %d\n", strlen(cmdstring));
+;  203	     
+;  204	      /* parse command string */
+;  205	      buffer = &cmdstring[0];
+.LINE 205
+
+	LD	HL,IX
+	LD	BC,-252
+	ADD	HL,BC
+	LD	BC,-255
+	CALL	__istix
+;  206	      cmdstring[LONG_BUFF_LEN - 1] = '\0';
+.LINE 206
+
+	XOR	A,A
+	LD	BC,-133
+	CALL	__bstix
+;  207	      argcount = ParseString( buffer, cmdargs );
+	LD	IY,IX
+	LD	BC,-318
+	ADD	IY,BC
+	LD	BC,IY
+	PUSH	BC
+	LD	BC,-255
+	CALL	__ildix
+	PUSH	HL
+.LINE 207
+
+	CALL	_ParseString
+	POP	BC
+	POP	BC
+	LD	BC,-132
+	CALL	__istix
+;  208	
+;  209	// 	  printf("You typed %d cmdargs[0] - %s %s\n", argcount, cmdargs[0], cmdargs[1]);
+;  210	      
+;  211		  if ( strcmp( cmdargs[0], "run" ) == 0 )
+	LD	BC,L__33
+	PUSH	BC
+	LD	BC,-318
+	CALL	__ildix
+	PUSH	HL
+.LINE 211
+
+	CALL	_strcmp
+	POP	BC
+	POP	BC
+	LD	BC,0
+	OR	A,A
+	SBC	HL,BC
+	JR	NZ,L_68
+;  212	      {
+;  213	         DemoRun( mdata );
+	LD	BC,(IX+6)
+	PUSH	BC
+.LINE 213
+
+	CALL	_DemoRun
+	POP	BC
+;  214	      }
+;  215	      else if ( strcmp( cmdargs[0], "loop" ) == 0 )
+.LINE 215
+
+	JMP	L_69
+L_68:
+	LD	BC,L__35
+	PUSH	BC
+	LD	BC,-318
+	CALL	__ildix
+	PUSH	HL
+	CALL	_strcmp
+	POP	BC
+	POP	BC
+	LD	BC,0
+	OR	A,A
+	SBC	HL,BC
+	JR	NZ,L_66
+;  216	      {
+;  217	         if (argcount == 1)
+.LINE 217
+
+	LD	DE,1
+	LD	BC,-132
+	CALL	__ildix
+	OR	A,A
+	SBC	HL,DE
+	JR	Z,L_19
+	JMP	L_28
+;  218	         {
+;  219	            for ( ;; )
+L_19:
+.LINE 219
+
+;  220	               DemoRun( mdata );
+	LD	BC,(IX+6)
+	PUSH	BC
+.LINE 220
+
+	CALL	_DemoRun
+	POP	BC
+	JMP	L_19
+;  221	         }
+;  222	         else if (argcount == 2)
+L_28:
+.LINE 222
+
+	LD	DE,2
+	CALL	__ildix
+	OR	A,A
+	SBC	HL,DE
+	JR	NZ,L_26
+	LD	BC,0
+	LD	(IX+-126),BC
+;  223	         {
+;  224	            for (i=0; i < atoi(cmdargs[1]); i++)
+.LINE 224
+
+	JMP	L_24
+L_22:
+;  225	               DemoRun( mdata );
+	LD	BC,(IX+6)
+	PUSH	BC
+.LINE 225
+
+	CALL	_DemoRun
+	POP	BC
+	LD	BC,(IX+-126)
+	INC	BC
+	LD	(IX+-126),BC
+L_24:
+	LD	BC,-315
+	CALL	__ildix
+	PUSH	HL
+	CALL	_atoi
+	POP	BC
+	LD	BC,HL
+	LD	HL,(IX+-126)
+	OR	A,A
+	SBC	HL,BC
+	JP	M,L_22
+	JMP	L_69
+;  226	         }
+;  227	         else
+L_26:
+.LINE 227
+
+;  228	         {
+;  229	            DemoHelp();            
+.LINE 229
+
+	CALL	_DemoHelp
+;  230	         }
+;  231	
+;  232	      }
+;  233	      else if ( strcmp( cmdargs[0], "create" ) == 0 )
+.LINE 233
+
+	JMP	L_69
+L_66:
+	LD	BC,L__40
+	PUSH	BC
+	LD	BC,-318
+	CALL	__ildix
+	PUSH	HL
+	CALL	_strcmp
+	POP	BC
+	POP	BC
+	LD	BC,0
+	OR	A,A
+	SBC	HL,BC
+	JR	NZ,L_64
+;  234	      {
+;  235	         if (argcount == 2)
+.LINE 235
+
+	LD	DE,2
+	LD	BC,-132
+	CALL	__ildix
+	OR	A,A
+	SBC	HL,DE
+	JR	NZ,L_30
+;  236	         {
+;  237	            id = CreateTask( cmdargs[1], &dummy, &dummyargs, 1 );
+	LD	BC,1
+	PUSH	BC
+	LD	BC,_dummyargs
+	PUSH	BC
+	LD	BC,_dummy
+	PUSH	BC
+	LD	BC,-315
+	CALL	__ildix
+	PUSH	HL
+.LINE 237
+
+	CALL	_CreateTask
+	POP	BC
+	POP	BC
+	POP	BC
+	POP	BC
+	LD	BC,-129
+	CALL	__istix
+;  238	         }
+;  239	         else
+.LINE 239
+
+	JMP	L_69
+L_30:
+;  240	         {
+;  241	            DemoHelp();            
+.LINE 241
+
+	CALL	_DemoHelp
+;  242	         }
+;  243	      }
+;  244	      else if ( strcmp( cmdargs[0], "delete" ) == 0 )
+.LINE 244
+
+	JMP	L_69
+L_64:
+	LD	BC,L__43
+	PUSH	BC
+	LD	BC,-318
+	CALL	__ildix
+	PUSH	HL
+	CALL	_strcmp
+	POP	BC
+	POP	BC
+	LD	BC,0
+	OR	A,A
+	SBC	HL,BC
+	JR	NZ,L_62
+;  245	      {
+;  246	         if (argcount == 2)
+.LINE 246
+
+	LD	DE,2
+	LD	BC,-132
+	CALL	__ildix
+	OR	A,A
+	SBC	HL,DE
+	JR	NZ,L_32
+;  247	         {
+;  248	            id = atoi( cmdargs[1] );
+	LD	BC,-315
+	CALL	__ildix
+	PUSH	HL
+.LINE 248
+
+	CALL	_atoi
+	POP	BC
+	LD	BC,-129
+	CALL	__istix
+;  249	            DeleteTask( id );
+	LD	BC,-129
+	CALL	__ildix
+	PUSH	HL
+.LINE 249
+
+	CALL	_DeleteTask
+	POP	BC
+;  250	         }
+;  251	         else
+.LINE 251
+
+	JMP	L_69
+L_32:
+;  252	         {
+;  253	            DemoHelp();            
+.LINE 253
+
+	CALL	_DemoHelp
+;  254	         }
+;  255	      }
+;  256	      else if ( strcmp( cmdargs[0], "suspend" ) == 0 )
+.LINE 256
+
+	JMP	L_69
+L_62:
+	LD	BC,L__46
+	PUSH	BC
+	LD	BC,-318
+	CALL	__ildix
+	PUSH	HL
+	CALL	_strcmp
+	POP	BC
+	POP	BC
+	LD	BC,0
+	OR	A,A
+	SBC	HL,BC
+	JR	NZ,L_60
+;  257	      {
+;  258	         if (argcount == 2)
+.LINE 258
+
+	LD	DE,2
+	LD	BC,-132
+	CALL	__ildix
+	OR	A,A
+	SBC	HL,DE
+	JR	NZ,L_34
+;  259	         {
+;  260	            id = atoi( cmdargs[1] );
+	LD	BC,-315
+	CALL	__ildix
+	PUSH	HL
+.LINE 260
+
+	CALL	_atoi
+	POP	BC
+	LD	BC,-129
+	CALL	__istix
+;  261	            SuspendTask( id );
+	LD	BC,-129
+	CALL	__ildix
+	PUSH	HL
+.LINE 261
+
+	CALL	_SuspendTask
+	POP	BC
+;  262	         }
+;  263	         else
+.LINE 263
+
+	JMP	L_69
+L_34:
+;  264	         {
+;  265	            DemoHelp();            
+.LINE 265
+
+	CALL	_DemoHelp
+;  266	         }
+;  267	      }
+;  268	      else if ( strcmp( cmdargs[0], "resume" ) == 0 )
+.LINE 268
+
+	JMP	L_69
+L_60:
+	LD	BC,L__49
+	PUSH	BC
+	LD	BC,-318
+	CALL	__ildix
+	PUSH	HL
+	CALL	_strcmp
+	POP	BC
+	POP	BC
+	LD	BC,0
+	OR	A,A
+	SBC	HL,BC
+	JR	NZ,L_58
+;  269	      {
+;  270	         if (argcount == 2)
+.LINE 270
+
+	LD	DE,2
+	LD	BC,-132
+	CALL	__ildix
+	OR	A,A
+	SBC	HL,DE
+	JR	NZ,L_36
+;  271	         {
+;  272	            id = atoi( cmdargs[1] );
+	LD	BC,-315
+	CALL	__ildix
+	PUSH	HL
+.LINE 272
+
+	CALL	_atoi
+	POP	BC
+	LD	BC,-129
+	CALL	__istix
+;  273	            ResumeTask( id );
+	LD	BC,-129
+	CALL	__ildix
+	PUSH	HL
+.LINE 273
+
+	CALL	_ResumeTask
+	POP	BC
+;  274	         }
+;  275	         else
+.LINE 275
+
+	JMP	L_69
+L_36:
+;  276	         {
+;  277	            DemoHelp();            
+.LINE 277
+
+	CALL	_DemoHelp
+;  278	         }
+;  279	      }
+;  280	      else if ( strcmp( cmdargs[0], "block" ) == 0 )
+.LINE 280
+
+	JMP	L_69
+L_58:
+	LD	BC,L__52
+	PUSH	BC
+	LD	BC,-318
+	CALL	__ildix
+	PUSH	HL
+	CALL	_strcmp
+	POP	BC
+	POP	BC
+	LD	BC,0
+	OR	A,A
+	SBC	HL,BC
+	JR	NZ,L_56
+;  281	      {
+;  282	         if (argcount == 2)
+.LINE 282
+
+	LD	DE,2
+	LD	BC,-132
+	CALL	__ildix
+	OR	A,A
+	SBC	HL,DE
+	JR	NZ,L_38
+;  283	         {
+;  284	            id = atoi( cmdargs[1] );
+	LD	BC,-315
+	CALL	__ildix
+	PUSH	HL
+.LINE 284
+
+	CALL	_atoi
+	POP	BC
+	LD	BC,-129
+	CALL	__istix
+;  285	            BlockTask( id );
+	LD	BC,-129
+	CALL	__ildix
+	PUSH	HL
+.LINE 285
+
+	CALL	_BlockTask
+	POP	BC
+;  286	         }
+;  287	         else
+.LINE 287
+
+	JMP	L_69
+L_38:
+;  288	         {
+;  289	            DemoHelp();            
+.LINE 289
+
+	CALL	_DemoHelp
+;  290	         }
+;  291	      }
+;  292	      else if ( strcmp( cmdargs[0], "unblock" ) == 0 )
+.LINE 292
+
+	JMP	L_69
+L_56:
+	LD	BC,L__55
+	PUSH	BC
+	LD	BC,-318
+	CALL	__ildix
+	PUSH	HL
+	CALL	_strcmp
+	POP	BC
+	POP	BC
+	LD	BC,0
+	OR	A,A
+	SBC	HL,BC
+	JR	NZ,L_54
+;  293	      {
+;  294	         if (argcount == 2)
+.LINE 294
+
+	LD	DE,2
+	LD	BC,-132
+	CALL	__ildix
+	OR	A,A
+	SBC	HL,DE
+	JR	NZ,L_40
+;  295	         {
+;  296	            id = atoi( cmdargs[1] );
+	LD	BC,-315
+	CALL	__ildix
+	PUSH	HL
+.LINE 296
+
+	CALL	_atoi
+	POP	BC
+	LD	BC,-129
+	CALL	__istix
+;  297	            UnBlockTask( id );
+	LD	BC,-129
+	CALL	__ildix
+	PUSH	HL
+.LINE 297
+
+	CALL	_UnBlockTask
+	POP	BC
+;  298	         }
+;  299	         else
+.LINE 299
+
+	JMP	L_69
+L_40:
+;  300	         {
+;  301	            DemoHelp();            
+.LINE 301
+
+	CALL	_DemoHelp
+;  302	         }
+;  303	      }
+;  304	      else if ( strcmp( cmdargs[0], "list" ) == 0 )
+.LINE 304
+
+	JMP	L_69
+L_54:
+	LD	BC,L__58
+	PUSH	BC
+	LD	BC,-318
+	CALL	__ildix
+	PUSH	HL
+	CALL	_strcmp
+	POP	BC
+	POP	BC
+	LD	BC,0
+	OR	A,A
+	SBC	HL,BC
+	JR	NZ,L_52
+;  305	      {
+;  306	         DisplayTaskList( );
+.LINE 306
+
+	CALL	_DisplayTaskList
+;  307	      }
+;  308	      else if ( strcmp( cmdargs[0], "help" ) == 0 )
+.LINE 308
+
+	JMP	L_69
+L_52:
+	LD	BC,L__60
+	PUSH	BC
+	LD	BC,-318
+	CALL	__ildix
+	PUSH	HL
+	CALL	_strcmp
+	POP	BC
+	POP	BC
+	LD	BC,0
+	OR	A,A
+	SBC	HL,BC
+	JR	NZ,L_50
+;  309	      {
+;  310	         DemoHelp();
+.LINE 310
+
+	CALL	_DemoHelp
+;  311	      }
+;  312	      else if ( strcmp( cmdargs[0], "h" ) == 0 )
+.LINE 312
+
+	JMP	L_69
+L_50:
+	LD	BC,L__62
+	PUSH	BC
+	LD	BC,-318
+	CALL	__ildix
+	PUSH	HL
+	CALL	_strcmp
+	POP	BC
+	POP	BC
+	LD	BC,0
+	OR	A,A
+	SBC	HL,BC
+	JR	NZ,L_48
+;  313	      {
+;  314	         DemoHelp();
+.LINE 314
+
+	CALL	_DemoHelp
+;  315	      }
+;  316	      else if ( strcmp( cmdargs[0], "?" ) == 0 )
+.LINE 316
+
+	JMP	L_69
+L_48:
+	LD	BC,L__64
+	PUSH	BC
+	LD	BC,-318
+	CALL	__ildix
+	PUSH	HL
+	CALL	_strcmp
+	POP	BC
+	POP	BC
+	LD	BC,0
+	OR	A,A
+	SBC	HL,BC
+	JR	NZ,L_46
+;  317	      {
+;  318	         DemoHelp();
+.LINE 318
+
+	CALL	_DemoHelp
+;  319	      }
+;  320	      else if ( strcmp( cmdargs[0], "exit" ) == 0 )
+.LINE 320
+
+	JMP	L_69
+L_46:
+	LD	BC,L__66
+	PUSH	BC
+	LD	BC,-318
+	CALL	__ildix
+	PUSH	HL
+	CALL	_strcmp
+	POP	BC
+	POP	BC
+	LD	BC,0
+	OR	A,A
+	SBC	HL,BC
+	JR	NZ,L_44
+;  321	      {
+;  322	         printf("exit\n");
+	LD	BC,L__68
+	PUSH	BC
+.LINE 322
+
+	CALL	_printf
+	POP	BC
+;  323	         exit = TRUE;
+.LINE 323
+
+	LD	BC,1
+	LD	(IX+-123),BC
+;  324	      }
+;  325	      else if ( strcmp( cmdargs[0], "ex" ) == 0 )
+.LINE 325
+
+	JMP	L_69
+L_44:
+	LD	BC,L__69
+	PUSH	BC
+	LD	BC,-318
+	CALL	__ildix
+	PUSH	HL
+	CALL	_strcmp
+	POP	BC
+	POP	BC
+	LD	BC,0
+	OR	A,A
+	SBC	HL,BC
+	JR	NZ,L_42
+;  326	      {
+;  327	         printf("exit\n");
+	LD	BC,L__71
+	PUSH	BC
+.LINE 327
+
+	CALL	_printf
+	POP	BC
+;  328	         exit = TRUE;
+.LINE 328
+
+	LD	BC,1
+	LD	(IX+-123),BC
+;  329	      }
+;  330	      else
+.LINE 330
+
+	JMP	L_69
+L_42:
+;  331	      {
+;  332	         printf("\nError - unknown command!\n");
+	LD	BC,L__72
+	PUSH	BC
+.LINE 332
+
+	CALL	_printf
+	POP	BC
+;  333	      }
+;  334	   }
+L_69:
+.LINE 334
+
+	LD	BC,0
+	LD	HL,(IX+-123)
+	OR	A,A
+	SBC	HL,BC
+	JR	Z,L_70
+;  335	}
+.LINE 335
+
+	LD	SP,IX
+	POP	IX
+	RET	
+
+
+;**************************** _DemoInteractive ***************************
+;Name                         Addr/Register   Size   Type
+;_DisplayTaskList                    IMPORT  -----   function
+;_UnBlockTask                        IMPORT  -----   function
+;_BlockTask                          IMPORT  -----   function
+;_ResumeTask                         IMPORT  -----   function
+;_SuspendTask                        IMPORT  -----   function
+;_DeleteTask                         IMPORT  -----   function
+;_dummy                              STATIC  -----   function
+;_dummyargs                          STATIC      9   variable
+;_CreateTask                         IMPORT  -----   function
+;_DemoHelp                           IMPORT  -----   function
+;_atoi                               IMPORT  -----   function
+;_DemoRun                            IMPORT  -----   function
+;_strcmp                             IMPORT  -----   function
+;_ParseString                        IMPORT  -----   function
+;_strncpy                            IMPORT  -----   function
+;_printf                             IMPORT  -----   function
+;cmdargs                             IX-318     63   variable
+;buffer                              IX-255      3   variable
+;cmdstring                           IX-252    120   variable
+;argcount                            IX-132      3   variable
+;id                                  IX-129      3   variable
+;i                                   IX-126      3   variable
+;exit                                IX-123      3   variable
+;cmd                                 IX-120    120   variable
+;mdata                                 IX+6      3   parameter
+
+
+; Stack Frame Size: 327 (bytes)
+;       Spill Code: 0 (instruction)
+
+
+.ENDFUNC "DemoInteractive",335,"_DemoInteractive"
+	SEGMENT STRSECT
+L__31:
+	DB	"mloop>"
+	DB	0
+L__32:
+	DB	10
+	DB	"%s "
+	DB	0
+L__33:
+	DB	"run"
+	DB	0
+L__35:
+	DB	"loop"
+	DB	0
+L__40:
+	DB	"create"
+	DB	0
+L__43:
+	DB	"delete"
+	DB	0
+L__46:
+	DB	"suspend"
+	DB	0
+L__49:
+	DB	"resume"
+	DB	0
+L__52:
+	DB	"block"
+	DB	0
+L__55:
+	DB	"unblock"
+	DB	0
+L__58:
+	DB	"list"
+	DB	0
+L__60:
+	DB	"help"
+	DB	0
+L__62:
+	DB	"h"
+	DB	0
+L__64:
+	DB	"?"
+	DB	0
+L__66:
+	DB	"exit"
+	DB	0
+L__68:
+	DB	"exit"
+	DB	10,0
+L__69:
+	DB	"ex"
+	DB	0
+L__71:
+	DB	"exit"
+	DB	10,0
+L__72:
+	DB	10
+	DB	"Error - unknown command!"
+	DB	10,0
+	SEGMENT code
+;  336	
+;  337	
+;  338	void
+;  339	dummy( void *args )
+;  340	{
+_dummy:
+.DEFINE "_dummy"
+
+.VALUE _dummy
+
+.CLASS 2
+
+.TYPE 65
+
+.ENDEF
+
+.BEGFUNC "dummy",340,"_dummy"
+
+.LINE 340
+
+.DEFINE "args"
+
+.CLASS 65
+
+.VALUE 6
+
+.TYPE 33
+
+.ENDEF
+
+.DEFINE "my"
+
+.CLASS 65
+
+.VALUE -3
+
+.TAG "arg_struct"
+
+.TYPE 40
+
+.ENDEF
+
+;  341	   int id;
+;  342	   ARG_STRUCT *my;
+;  343	
+;  344	   my = args;
+.LINE 344
+
+	PUSH	IX
+	LD	IX,0
+	ADD	IX,SP
+	PUSH	BC
+	LD	BC,(IX+6)
+	LD	(IX+-3),BC
+;  345	
+;  346	   printf("dummy task running, args %d %d %d\n", my->arg1, my->arg2, my->arg3);
+.LINE 346
+
+	LD	IY,(IX+-3)
+	LD	BC,(IY+6)
+	PUSH	BC
+	LD	IY,(IX+-3)
+	LD	BC,(IY+3)
+	PUSH	BC
+	LD	IY,(IX+-3)
+	LD	BC,(IY)
+	PUSH	BC
+	LD	BC,L__75
+	PUSH	BC
+	CALL	_printf
+	POP	BC
+	POP	BC
+	POP	BC
+	POP	BC
+;  347	}
+.LINE 347
+
+	LD	SP,IX
+	POP	IX
+	RET	
+
+
+;**************************** _dummy ***************************
+;Name                         Addr/Register   Size   Type
+;_printf                             IMPORT  -----   function
+;my                                    IX-3      3   variable
+;args                                  IX+6      3   parameter
+
+
+; Stack Frame Size: 12 (bytes)
+;       Spill Code: 0 (instruction)
+
+
+.ENDFUNC "dummy",347,"_dummy"
+	SEGMENT STRSECT
+L__75:
+	DB	"dummy task running, args %d %d %d"
+	DB	10,0
+	SEGMENT code
+;  348	
+;  349	
+;  350	void
+;  351	dummygetid( void *args )
+;  352	{
+_dummygetid:
+.DEFINE "_dummygetid"
+
+.VALUE _dummygetid
+
+.CLASS 2
+
+.TYPE 65
+
+.ENDEF
+
+.BEGFUNC "dummygetid",352,"_dummygetid"
+
+.LINE 352
+
+.DEFINE "args"
+
+.CLASS 65
+
+.VALUE 6
+
+.TYPE 33
+
+.ENDEF
+
+.DEFINE "id"
+
+.CLASS 65
+
+.VALUE -3
+
+.TYPE 4
+
+.ENDEF
+
+.DEFINE "my"
+
+.CLASS 65
+
+.VALUE -6
+
+.TAG "arg_struct"
+
+.TYPE 40
+
+.ENDEF
+
+;  353	   int id;
+;  354	   ARG_STRUCT *my;
+;  355	
+;  356	   my = args;
+.LINE 356
+
+	PUSH	IX
+	LD	IX,0
+	ADD	IX,SP
+	PUSH	BC
+	PUSH	BC
+	LD	BC,(IX+6)
+	LD	(IX+-6),BC
+;  357	
+;  358	   id = GetTaskId( "getid" );
+	LD	BC,L__77
+	PUSH	BC
+.LINE 358
+
+	CALL	_GetTaskId
+	POP	BC
+	LD	(IX+-3),HL
+;  359	   printf("getid task running, args %d %d %d, id = %d\n", 
+;  360		my->arg1, my->arg2, my->arg3, id);
+	LD	BC,(IX+-3)
+	PUSH	BC
+.LINE 360
+
+	LD	IY,(IX+-6)
+	LD	BC,(IY+6)
+	PUSH	BC
+	LD	IY,(IX+-6)
+	LD	BC,(IY+3)
+	PUSH	BC
+	LD	IY,(IX+-6)
+	LD	BC,(IY)
+	PUSH	BC
+	LD	BC,L__78
+	PUSH	BC
+	CALL	_printf
+	POP	BC
+	POP	BC
+	POP	BC
+	POP	BC
+	POP	BC
+;  361	}
+.LINE 361
+
+	LD	SP,IX
+	POP	IX
+	RET	
+
+
+;**************************** _dummygetid ***************************
+;Name                         Addr/Register   Size   Type
+;_printf                             IMPORT  -----   function
+;_GetTaskId                          IMPORT  -----   function
+;my                                    IX-6      3   variable
+;id                                    IX-3      3   variable
+;args                                  IX+6      3   parameter
+
+
+; Stack Frame Size: 15 (bytes)
+;       Spill Code: 0 (instruction)
+
+
+.ENDFUNC "dummygetid",361,"_dummygetid"
+	SEGMENT STRSECT
+L__77:
+	DB	"getid"
+	DB	0
+L__78:
+	DB	"getid task running, args %d %d %d, id = %d"
+	DB	10,0
+	SEGMENT code
+;  362	
+;  363	
+;  364	void
+;  365	dummysuspend( void *args )
+;  366	{
+_dummysuspend:
+.DEFINE "_dummysuspend"
+
+.VALUE _dummysuspend
+
+.CLASS 2
+
+.TYPE 65
+
+.ENDEF
+
+.BEGFUNC "dummysuspend",366,"_dummysuspend"
+
+.LINE 366
+
+.DEFINE "args"
+
+.CLASS 65
+
+.VALUE 6
+
+.TYPE 33
+
+.ENDEF
+
+.DEFINE "id"
+
+.CLASS 65
+
+.VALUE -3
+
+.TYPE 4
+
+.ENDEF
+
+.DEFINE "my"
+
+.CLASS 65
+
+.VALUE -6
+
+.TAG "arg_struct"
+
+.TYPE 40
+
+.ENDEF
+
+;  367	   int id;
+;  368	   ARG_STRUCT *my;
+;  369	
+;  370	   my = args;
+.LINE 370
+
+	PUSH	IX
+	LD	IX,0
+	ADD	IX,SP
+	PUSH	BC
+	PUSH	BC
+	LD	BC,(IX+6)
+	LD	(IX+-6),BC
+;  371	
+;  372	   id = GetTaskId( "suspend" );
+	LD	BC,L__80
+	PUSH	BC
+.LINE 372
+
+	CALL	_GetTaskId
+	POP	BC
+	LD	(IX+-3),HL
+;  373	   SuspendTask( id );
+	LD	BC,(IX+-3)
+	PUSH	BC
+.LINE 373
+
+	CALL	_SuspendTask
+	POP	BC
+;  374	   printf("suspend task running, args %d %d %d, id = %d\n", 
+;  375		my->arg1, my->arg2, my->arg3, id);
+	LD	BC,(IX+-3)
+	PUSH	BC
+.LINE 375
+
+	LD	IY,(IX+-6)
+	LD	BC,(IY+6)
+	PUSH	BC
+	LD	IY,(IX+-6)
+	LD	BC,(IY+3)
+	PUSH	BC
+	LD	IY,(IX+-6)
+	LD	BC,(IY)
+	PUSH	BC
+	LD	BC,L__81
+	PUSH	BC
+	CALL	_printf
+	POP	BC
+	POP	BC
+	POP	BC
+	POP	BC
+	POP	BC
+;  376	}
+.LINE 376
+
+	LD	SP,IX
+	POP	IX
+	RET	
+
+
+;**************************** _dummysuspend ***************************
+;Name                         Addr/Register   Size   Type
+;_printf                             IMPORT  -----   function
+;_SuspendTask                        IMPORT  -----   function
+;_GetTaskId                          IMPORT  -----   function
+;my                                    IX-6      3   variable
+;id                                    IX-3      3   variable
+;args                                  IX+6      3   parameter
+
+
+; Stack Frame Size: 15 (bytes)
+;       Spill Code: 0 (instruction)
+
+
+.ENDFUNC "dummysuspend",376,"_dummysuspend"
+	SEGMENT STRSECT
+L__80:
+	DB	"suspend"
+	DB	0
+L__81:
+	DB	"suspend task running, args %d %d %d, id = %d"
+	DB	10,0
+	SEGMENT code
+;  377	
+;  378	
+;  379	/*  ErrorUsage		- output usage error message and exit 
+;  380	 *
+;  381	 *  Parameters:
+;  382	 *	none
+;  383	 *
+;  384	 *  Returns:
+;  385	 *	none
+;  386	 */
+;  387	void 
+;  388	ErrorUsage( void )
+;  389	{
+_ErrorUsage:
+.DEFINE "_ErrorUsage"
+
+.VALUE _ErrorUsage
+
+.CLASS 2
+
+.TYPE 65
+
+.ENDEF
+
+.BEGFUNC "ErrorUsage",389,"_ErrorUsage"
+
+	PUSH	IX
+	LD	IX,0
+	ADD	IX,SP
+;  390	   printf("Usage: mainloop [-i | -l]\n");
+	LD	BC,L__83
+	PUSH	BC
+.LINE 390
+
+	CALL	_printf
+	POP	BC
+;  391	//   exit(1);
+;  392	}
+.LINE 392
+
+	LD	SP,IX
+	POP	IX
+	RET	
+
+
+;**************************** _ErrorUsage ***************************
+;Name                         Addr/Register   Size   Type
+;_printf                             IMPORT  -----   function
+
+
+; Stack Frame Size: 6 (bytes)
+;       Spill Code: 0 (instruction)
+
+
+.ENDFUNC "ErrorUsage",392,"_ErrorUsage"
+	SEGMENT STRSECT
+L__83:
+	DB	"Usage: mainloop [-i | -l]"
+	DB	10,0
+	SEGMENT code
+;  393	
+;  394	
+;  395	/*  ErrorOpenFile	- output open file error message and exit 
+;  396	 *
+;  397	 *  Parameters:
+;  398	 *	string		- pointer to character string
+;  399	 *
+;  400	 *  Returns:
+;  401	 *	none
+;  402	 */
+;  403	void 
+;  404	ErrorOpenFile( char *string )
+;  405	{
+_ErrorOpenFile:
+.DEFINE "_ErrorOpenFile"
+
+.VALUE _ErrorOpenFile
+
+.CLASS 2
+
+.TYPE 65
+
+.ENDEF
+
+.BEGFUNC "ErrorOpenFile",405,"_ErrorOpenFile"
+
+.LINE 405
+
+.DEFINE "string"
+
+.CLASS 65
+
+.VALUE 6
+
+.TYPE 34
+
+.ENDEF
+
+	PUSH	IX
+	LD	IX,0
+	ADD	IX,SP
+;  406	   printf("Error:  opening %s as list file\n", string);
+	LD	BC,(IX+6)
+	PUSH	BC
+	LD	BC,L__85
+	PUSH	BC
+.LINE 406
+
+	CALL	_printf
+	POP	BC
+	POP	BC
+;  407	//   exit(1);
+;  408	}
+.LINE 408
+
+	LD	SP,IX
+	POP	IX
+	RET	
+
+
+;**************************** _ErrorOpenFile ***************************
+;Name                         Addr/Register   Size   Type
+;_printf                             IMPORT  -----   function
+;string                                IX+6      3   parameter
+
+
+; Stack Frame Size: 9 (bytes)
+;       Spill Code: 0 (instruction)
+
+
+.ENDFUNC "ErrorOpenFile",408,"_ErrorOpenFile"
+	SEGMENT STRSECT
+L__85:
+	DB	"Error:  opening %s as list file"
+	DB	10,0
+	XREF _ParseString:ROM
+	XREF _DisplayTaskList:ROM
+	XREF _SequenceTaskList:ROM
+	XREF _GetTaskId:ROM
+	XREF _UnBlockTask:ROM
+	XREF _BlockTask:ROM
+	XREF _ResumeTask:ROM
+	XREF _SuspendTask:ROM
+	XREF _DeleteTask:ROM
+	XREF _CreateTask:ROM
+	XREF _FreeTasking:ROM
+	XREF _InitTasking:ROM
+	XREF _strcmp:ROM
+	XREF _strncpy:ROM
+	XREF _atoi:ROM
+	XREF _getchar:ROM
+	XREF _printf:ROM
+	XREF __ildix:ROM
+	XREF __istix:ROM
+	XREF __bstix:ROM
+	XDEF _ErrorOpenFile
+	XDEF _ErrorUsage
+	XDEF _dummysuspend
+	XDEF _dummygetid
+	XDEF _dummy
+	XDEF _DemoInteractive
+	XDEF _DemoHelp
+	XDEF _DemoRun
+	XDEF _DemoClose
+	XDEF _DemoInit
+	XDEF _getstr
+	XDEF _data
+	END
