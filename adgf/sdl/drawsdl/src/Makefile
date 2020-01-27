@@ -15,9 +15,9 @@ include $(MODROOT)/module.mk
 # --------------------------------------------------------------------
 # you shouldn't need to change anything below this line
 
-FILES	= 
+FILES	=
 
-TARGET	= 
+TARGET	=
 
 LIB_FILES = draw-sdl.xxx draw-text.xxx
 
@@ -28,7 +28,7 @@ HEADER = *.h
 
 #------------------------------------------------------------------------
 
-INCLUDES 	=  
+INCLUDES 	=
 
 LIBLIST		= -ldrawsdl
 
@@ -36,11 +36,11 @@ LIBS		= $(LIBLIST) $(MOD_LIBS)
 
 #------------------------------------------------------------------------
 
-# OPTIMIZE 	= 
+# OPTIMIZE 	=
 
 DEP_CPPFLAGS	= $(CPPFLAGS) $(MOD_CPPFLAGS) $(MOD_INCLUDES)
 
-ALL_CPPFLAGS 	= $(CPPFLAGS) $(MOD_CPPFLAGS) $(MOD_INCLUDES)
+ALL_CPPFLAGS 	= $(CPPFLAGS) $(MOD_CPPFLAGS) $(MOD_INCLUDES) 
 
 ALL_LDFLAGS	= $(LDFLAGS) $(MOD_LDFLAGS) $(MOD_LIB_PATHS) -L$(MODROOT)
 
@@ -60,9 +60,9 @@ LIB_CFILES = $(LIB_FILES:.xxx=.cpp)
 
 default: all
 
-#all exe : depend.mk $(LIB_OFILES) $(TARGET) 
+#all exe : depend.mk $(LIB_OFILES) $(TARGET)
 #all exe : $(LIB_OFILES) $(TARGET) strip1
-all exe : $(LIB_OFILES) $(TARGET) 
+all exe : $(LIB_OFILES) $(TARGET)
 	cp $(HEADER) $(MODROOT)/include
 
 strip1: $(TARGET)
@@ -73,10 +73,10 @@ $(TARGET): $(OFILES) $(LIBLIST)
 	$(CPP) $(ALL_LDFLAGS) -o $(TARGET) $(OFILES) $(LIBS)
 
 $(OFILES): %.o: %.cpp *.h
-	$(CPP) $(OPTIMIZE) $(ALL_CPPFLAGS) -c $< 
+	$(CPP) $(OPTIMIZE) $(ALL_CPPFLAGS) -c $<
 
 $(LIB_OFILES): %.o: %.cpp *.h
-	$(CPP) $(OPTIMIZE) $(ALL_CPPFLAGS) -c $< 
+	$(CPP) $(OPTIMIZE) $(ALL_CPPFLAGS) -c $<
 	$(AR) $(ALL_ARFLAGS) $(LIBRARY) $*.o
 #	$(RM) $*.o
 
@@ -92,8 +92,8 @@ clean:
 	$(RM) *.o *% *~ *.bak depend.mk
 
 realclean: clean
-	$(RM) $(LIBRARY) 
-	$(RM) $(TARGET) $(TARGET).exe 
+	$(RM) $(LIBRARY)
+	$(RM) $(TARGET) $(TARGET).exe
 	$(RM) *.srec *.bin config.h
 	$(RM) *.gcov *.gcda *.gcno
 
@@ -117,4 +117,3 @@ gcov:
 #------------------------------------------------------------------------
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
-

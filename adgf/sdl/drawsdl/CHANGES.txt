@@ -1,6 +1,9 @@
 CHANGES	 history for DrawSdl
 ----------------------------
 
+0.7.6
+    - fixed compile errors with latest version of g++
+
 0.7.5
     - revamped how drawing pixels works (now handles pixel depth correctly)
     - added ability to read pixel color from a surface
@@ -99,11 +102,10 @@ CHANGES	 history for DrawSdl
     - added menu for choosing which demo to run
     - separated example drawing code into demo functions
 
-0.1.0	
+0.1.0
     - cloned from VidTest sources
     - removed everything except code required to use LibSDL
     - stripped down main.c to only do simple demo of drawing functions
 
 0.0.0
     - Originated
-

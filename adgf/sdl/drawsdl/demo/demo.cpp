@@ -38,11 +38,11 @@
 void DemoPixels()
 {
     int i;
-    int w, h;    // screen width and height   
-  
+    int w, h;    // screen width and height
+
     // initialize the drawing package
     drawInit(WIDTH, HEIGHT, BPP);
-    
+
     // retrieve screen width and height for later use
     w = drawGetWidth();
     h = drawGetHeight();
@@ -65,18 +65,18 @@ void DemoPixels()
 
     // call this to make everything appear on the screen
     drawSwapBuffers();
-  
+
     // call this to wait for user to 'X' out
     drawWaitQuit();
 }
 
 void DemoLines()
 {
-    int w, h;    // screen width and height   
-  
+    int w, h;    // screen width and height
+
     // initialize the drawing package
     drawInit(WIDTH, HEIGHT, BPP);
-    
+
     // retrieve screen width and height for later use
     w = drawGetWidth();
     h = drawGetHeight();
@@ -88,17 +88,17 @@ void DemoLines()
 
     // draw several lines in different colors
     drawLine( CLR_WHITE,   50, (h/2)-60,     w-50, (h/2)-60 );
-    drawLine( CLR_RED,     50, (h/2)-40,     w-50, (h/2)-40 );    
-    drawLine( CLR_GREEN,   50, (h/2)-20,     w-50, (h/2)-20 );    
-    drawLine( CLR_BLUE,    50, (h/2),        w-50, (h/2) );    
-    drawLine( CLR_MAGENTA, 50, (h/2)+20,     w-50, (h/2)+20 );    
-    drawLine( CLR_YELLOW,  50, (h/2)+40,     w-50, (h/2)+40 );    
-    drawLine( CLR_CYAN,    50, (h/2)+60,     w-50, (h/2)+60 );    
+    drawLine( CLR_RED,     50, (h/2)-40,     w-50, (h/2)-40 );
+    drawLine( CLR_GREEN,   50, (h/2)-20,     w-50, (h/2)-20 );
+    drawLine( CLR_BLUE,    50, (h/2),        w-50, (h/2) );
+    drawLine( CLR_MAGENTA, 50, (h/2)+20,     w-50, (h/2)+20 );
+    drawLine( CLR_YELLOW,  50, (h/2)+40,     w-50, (h/2)+40 );
+    drawLine( CLR_CYAN,    50, (h/2)+60,     w-50, (h/2)+60 );
 
     drawDashedLine( CLR_WHITE,   50, 50,       w-50, 50 );
     drawDashedLine( CLR_WHITE,   50, 50,       w-50, 150 );
     drawDashedLine( CLR_WHITE,   50, 50,       w-50, 250 );
-    
+
     drawDottedLine( CLR_WHITE,   50, h-50,       w-50, h-50 );
     drawDottedLine( CLR_WHITE,   50, h-50,       w-50, h-150 );
     drawDottedLine( CLR_WHITE,   50, h-50,       w-50, h-250 );
@@ -107,18 +107,18 @@ void DemoLines()
 
     // call this to make everything appear on the screen
     drawSwapBuffers();
-  
+
     // call this to wait for user to 'X' out
     drawWaitQuit();
 }
 
 void DemoBoxes()
 {
-    int w, h;    // screen width and height   
-  
+    int w, h;    // screen width and height
+
     // initialize the drawing package
     drawInit(WIDTH, HEIGHT, BPP);
-    
+
     // retrieve screen width and height for later use
     w = drawGetWidth();
     h = drawGetHeight();
@@ -154,18 +154,18 @@ void DemoBoxes()
 
     // call this to make everything appear on the screen
     drawSwapBuffers();
-    
+
     // call this to wait for user to 'X' out
     drawWaitQuit();
 }
 
 void DemoTriangles()
 {
-    int w, h;    // screen width and height   
-  
+    int w, h;    // screen width and height
+
     // initialize the drawing package
     drawInit(WIDTH, HEIGHT, BPP);
-    
+
     // retrieve screen width and height for later use
     w = drawGetWidth();
     h = drawGetHeight();
@@ -183,18 +183,18 @@ void DemoTriangles()
 
     // call this to make everything appear on the screen
     drawSwapBuffers();
-  
+
     // call this to wait for user to 'X' out
     drawWaitQuit();
 }
 
 void DemoCircles()
 {
-    int w, h;    // screen width and height   
-  
+    int w, h;    // screen width and height
+
     // initialize the drawing package
     drawInit(WIDTH, HEIGHT, BPP);
-    
+
     // retrieve screen width and height for later use
     w = drawGetWidth();
     h = drawGetHeight();
@@ -221,25 +221,25 @@ void DemoCircles()
     drawSolidCircle( CLR_RED,     500, h/2 + 70, 40 );
     drawSolidCircle( CLR_GREEN,   600, h/2 + 70, 40 );
     drawSolidCircle( CLR_BLUE,    700, h/2 + 70, 40 );
-    
+
 
     // END DEMO HERE //
 
     // call this to make everything appear on the screen
     drawSwapBuffers();
-  
+
     // call this to wait for user to 'X' out
     drawWaitQuit();
 }
 
 void DemoBitmaps()
 {
-    int w, h;    // screen width and height   
+    int w, h;    // screen width and height
     int bh;      // height of bitmap
-  
+
     // initialize the drawing package
     drawInit(WIDTH, HEIGHT, BPP);
-    
+
     // retrieve screen width and height for later use
     w = drawGetWidth();
     h = drawGetHeight();
@@ -265,18 +265,18 @@ void DemoBitmaps()
 
     // call this to make everything appear on the screen
     drawSwapBuffers();
-  
+
     // call this to wait for user to 'X' out
     drawWaitQuit();
 }
 
 void DemoBlitters()
 {
-    int w, h;    // screen width and height   
-  
+    int w, h;    // screen width and height
+
     // initialize the drawing package
     drawInit(WIDTH, HEIGHT, BPP);
-    
+
     // retrieve screen width and height for later use
     w = drawGetWidth();
     h = drawGetHeight();
@@ -297,15 +297,15 @@ void DemoBlitters()
 
     // call this to make everything appear on the screen
     drawSwapBuffers();
-  
+
     // call this to wait for user to 'X' out
     drawWaitQuit();
 }
 
 void DemoKeys()
 {
-    int w, h;    // screen width and height   
-    
+    int w, h;    // screen width and height
+
     // show key menu before opening drawing screen
     printf("Key commands:\n");
     printf(" l  - draw line in current color\n");
@@ -316,11 +316,11 @@ void DemoKeys()
     printf(" x  - clear screen\n");
     printf(" q  - quit\n");
     printf("\n");
-    drawWait(2000);  
+    drawWait(2000);
 
     // initialize the drawing package
     drawInit(WIDTH, HEIGHT, BPP);
-    
+
     // retrieve screen width and height for later use
     w = drawGetWidth();
     h = drawGetHeight();
@@ -329,7 +329,7 @@ void DemoKeys()
     drawBackground(CLR_BLACK);
 
     // BEGIN DEMO HERE //
-    
+
     // use keys to draw a line in a selected color
     int done = 0;
     long color = CLR_WHITE;
@@ -372,7 +372,7 @@ void DemoKeys()
                 break;
         }
     }
-    
+
     // END DEMO HERE //
 
     drawQuit();
@@ -397,7 +397,7 @@ void DrawByMode(int mode, int x, int y)
 
 void DemoMouse()
 {
-    int w, h;    // screen width and height   
+    int w, h;    // screen width and height
 
     // show key menu before opening drawing screen
     printf("Key commands:\n");
@@ -407,18 +407,18 @@ void DemoMouse()
     printf(" x  - clear screen\n");
     printf(" q  - quit\n");
     printf("\n");
-    drawWait(1000);  
+    drawWait(1000);
 
     // initialize the drawing package
     drawInitExtended(WIDTH, HEIGHT, BPP, "DrawSDL - Mouse");
-    
+
     // retrieve screen width and height for later use
     w = drawGetWidth();
     h = drawGetHeight();
 
     // clear the background
     drawBackground(CLR_BLACK);
-    
+
     // BEGIN DEMO HERE //
 
     // draw white dots while left mouse button is pressed
@@ -484,7 +484,7 @@ void DemoMouse()
 
 void DemoAnim()
 {
-    int w, h;    // screen width and height   
+    int w, h;    // screen width and height
 
     // show key menu before opening drawing screen
     printf("Key commands:\n");
@@ -493,35 +493,35 @@ void DemoAnim()
     printf(" x  - clear screen\n");
     printf(" q  - quit\n");
     printf("\n");
-    drawWait(1000);  
+    drawWait(1000);
 
     // initialize the drawing package
     drawInitExtended(WIDTH, HEIGHT, BPP, "DrawSDL - Anim");
-    
+
     // retrieve screen width and height for later use
     w = drawGetWidth();
     h = drawGetHeight();
 
     // clear the background
     drawBackground(CLR_BLACK);
-    
+
     // BEGIN DEMO HERE //
-    
+
     char key;
     int mx, my;
     int x = 50, y = 3 * (h/4);      // starting position
-    
+
     // draw reference line
     drawLine( CLR_WHITE, 50, y+51, w-50, y+51);
-    
+
     // draw first rectangle
     drawSolidRect( CLR_WHITE, x, y, 50, 50);
     drawSwapBuffers();
-    
+
     // set up anim timer for 30 frames per second
     int interval = 33;              // milliseconds per frame
-    int animTimerId = drawAddTimer( interval, TIMER1_EVENT );
-    
+    TIMERID animTimerId = drawAddTimer( interval, TIMER1_EVENT );
+
     int erase = 1;
     int drawing = 1;
     int done = 0;
@@ -566,15 +566,15 @@ void DemoAnim()
                         break;
                     case 'r':  // reset and run anim again
                         x = 50;
-                        y = 3 * (h/4);                
-                        drawBackground(CLR_BLACK);                
+                        y = 3 * (h/4);
+                        drawBackground(CLR_BLACK);
                         drawLine( CLR_WHITE, 50, y+51, w-50, y+51);
                         drawSolidRect( CLR_WHITE, x, y, 50, 50);
                         drawSwapBuffers();
                         drawing = 1;
                         break;
                     case 'x':  // clear screen
-                        drawBackground(CLR_BLACK);                
+                        drawBackground(CLR_BLACK);
                         drawSwapBuffers();
                         break;
                     case 'q':  // quit
@@ -587,33 +587,33 @@ void DemoAnim()
                 break;
         }
     }
-    
+
     // END DEMO HERE //
 
     // remove anim timer and quit drawing package
     drawRemoveTimer( animTimerId );
-    drawQuit();  
+    drawQuit();
 }
 
 void DemoText()
 {
     int y;       // position of text
-    int w, h;    // screen width and height   
+    int w, h;    // screen width and height
     int tw, th;  // bitmap width and height
 
     int fontsize = 12;
-  
+
     // initialize the drawing package
     drawInit(WIDTH, HEIGHT, BPP);
     drawTextInit("fonts/times.ttf");
-    
+
     // retrieve screen width and height for later use
     w = drawGetWidth();
     h = drawGetHeight();
 
     // clear the background
     drawBackground(CLR_BLACK);
-    
+
     // BEGIN DEMO HERE //
 
     drawTextGetExtent("This is some sample text.", fontsize, &tw, &th);
@@ -633,7 +633,7 @@ void DemoText()
 
     // call this to make everything appear on the screen
     drawSwapBuffers();
-  
+
     // call this to wait for user to 'X' out
     drawTextQuit();
     drawWaitQuit();
@@ -641,19 +641,19 @@ void DemoText()
 
 void DemoPolygons()
 {
-    int w, h;    // screen width and height   
+    int w, h;    // screen width and height
     screenPoint polygon[10];
-  
+
     // initialize the drawing package
     drawInit(WIDTH, HEIGHT, BPP);
-    
+
     // retrieve screen width and height for later use
     w = drawGetWidth();
     h = drawGetHeight();
 
     // clear the background
     drawBackground(CLR_BLACK);
-    
+
     // BEGIN DEMO HERE //
 
     polygon[0].x = w/2 - 200;
@@ -683,14 +683,14 @@ void DemoPolygons()
     polygon[3].y = h - 300;
 
     drawSolidPolygon( CLR_BLUE, &polygon[0], 4 );
-    
+
 //    drawSolidLine( CLR_YELLOW, w/2, 50, w/2, h-50);
 
     // END DEMO HERE //
 
     // call this to make everything appear on the screen
     drawSwapBuffers();
-  
+
     // call this to wait for user to 'X' out
     drawWaitQuit();
 }
@@ -699,14 +699,14 @@ void DemoPolygons()
 void DemoSprites()
 {
     int x, y;
-    int w, h;    // screen width and height   
+    int w, h;    // screen width and height
     int sw, sh;  // width and height of sprite
 
     spriteContext sprite;
-  
+
     // initialize the drawing package
     drawInit(WIDTH, HEIGHT, BPP);
-    
+
     // retrieve screen width and height for later use
     w = drawGetWidth();
     h = drawGetHeight();
@@ -719,7 +719,7 @@ void DemoSprites()
     // load sprite image
     drawLoadSprite(&sprite, "images/ship.bmp");
     drawGetSpriteExtent(&sprite, &sw, &sh);
-    
+
     // fill screen with sprites
     for (y = sh; y < (h-sh); y += sh*2)
     {
@@ -733,7 +733,7 @@ void DemoSprites()
 
     // call this to make everything appear on the screen
     drawSwapBuffers();
-  
+
     // call this to wait for user to 'X' out
     drawWaitQuit();
 }
@@ -741,13 +741,13 @@ void DemoSprites()
 void DemoSpriteCopy()
 {
     int x, y;
-    int w, h;    // screen width and height   
+    int w, h;    // screen width and height
     int sw, sh;  // width and height of sprite
 
-  
+
     // initialize the drawing package
     drawInit(WIDTH, HEIGHT, BPP);
-    
+
     // retrieve screen width and height for later use
     w = drawGetWidth();
     h = drawGetHeight();
@@ -786,55 +786,55 @@ void DemoSpriteCopy()
 
     // call this to make everything appear on the screen
     drawSwapBuffers();
-  
+
     // call this to wait for user to 'X' out
     drawWaitQuit();
 }
 
 void DemoFull()
 {
-    int w, h;    // screen width and height   
+    int w, h;    // screen width and height
     int bw, bh;  // bitmap width and height
-  
+
     // initialize the drawing package
     drawInit(WIDTH, HEIGHT, BPP);
     drawTextInit("fonts/ARIAL.TTF");
-    
+
     // retrieve screen width and height for later use
     w = drawGetWidth();
     h = drawGetHeight();
 
     // clear the background
     drawBackground(CLR_BLACK);
-    
+
     // BEGIN DEMO HERE //
-    
+
     // draw large rextangle near top of screen
     drawRect( CLR_MAGENTA, 50, 50, w-100, 100 );
 
     // draw triangle inside large rectangle
     drawTriangle( CLR_WHITE, w/2 - 50, 140,   w/2 + 50, 140,   w/2, 60 );
-    
+
     // draw one of each shape across middle of screen
     drawPixel( CLR_WHITE, 50, h/2 );
     drawPixel( CLR_WHITE, 50, h/2 + 5 );
     drawPixel( CLR_WHITE, 50, h/2 + 10);
     drawPixel( CLR_WHITE, 50, h/2 + 15);
-    
+
     drawRect(       CLR_RED,             100, h/2, 50, 50 );
     drawSolidRect(  CLR_GREEN,           200, h/2, 50, 50 );
     drawShadedRect( CLR_RED,   CLR_BLUE, 300, h/2, 50, 50 );
-   
+
     drawCircle( CLR_YELLOW, 450, h/2, 50 );
     drawCircle( CLR_YELLOW, 450, h/2, 40 );
     drawCircle( CLR_YELLOW, 450, h/2, 30 );
     drawCircle( CLR_YELLOW, 450, h/2, 20 );
     drawSolidCircle( CLR_YELLOW, 450, h/2, 10 );
-    
+
     drawLine(       CLR_WHITE,  600, h/2,      w-50, h/2 );
-    drawSolidLine(  CLR_BLUE,   600, (h/2)+20, w-50, (h/2)+20 );    
-    drawDottedLine( CLR_YELLOW, 600, (h/2)-20, w-50, (h/2)-80 );    
-    drawDashedLine( CLR_GREEN,  600, (h/2)-40, w-50, (h/2)-140 );    
+    drawSolidLine(  CLR_BLUE,   600, (h/2)+20, w-50, (h/2)+20 );
+    drawDottedLine( CLR_YELLOW, 600, (h/2)-20, w-50, (h/2)-80 );
+    drawDashedLine( CLR_GREEN,  600, (h/2)-40, w-50, (h/2)-140 );
 
     // draw some bitmaps near bottom of screen
     bw = drawGetBitmapWidth("images/fun.bmp");
@@ -843,7 +843,7 @@ void DemoFull()
     bw = drawGetBitmapWidth("images/texture.bmp");
     bh = drawGetBitmapHeight("images/texture.bmp");
     drawBitmap("images/texture.bmp", w-bw-50, h-bh-50);
-    
+
     // let's create our own bit blit buffer and display it
     unsigned short myblit[200][200];
     unsigned short color = drawCreateColor16( 0x80, 0x80, 0x80 );
@@ -856,7 +856,7 @@ void DemoFull()
     drawText("DrawSdl Full Demo", 16, w/2 - bw/2, 200 - bh/2, CLR_WHITE, CLR_GRAY_DARK);
 
     // let's draw a sprite
-    spriteContext sprite;    
+    spriteContext sprite;
     drawLoadSprite(&sprite, "images/ship.bmp");
     drawGetSpriteExtent(&sprite, &bw, &bh);
     drawSprite(&sprite, w/2 - bw/2, h/2 - bh/2 - 100);
@@ -867,7 +867,7 @@ void DemoFull()
     drawSwapBuffers();
 
     printf("Pixel Count = %d\n", drawGetPixelCount() );
-  
+
     // call this to wait for user to 'X' out
     drawTextQuit();
     drawWaitQuit();

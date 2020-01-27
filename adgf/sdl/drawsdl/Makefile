@@ -14,14 +14,14 @@ include $(MODROOT)/module.mk
 ##include depend.mk
 
 
-DISTVER=0.7.5
+DISTVER=0.7.6
 
 
 #------------------------------------------------------------------------
 # Include system make include files
 #------------------------------------------------------------------------
 
-MODDIRS = src 
+MODDIRS = src
 
 APPDIRS = demo unit
 
@@ -53,7 +53,7 @@ build_all:
 	done;
 	$(MAKE) version
 
-install: build_all 
+install: build_all
 	-@for dir in $(APPDIRS);  do               \
 	   cd $$dir ; $(MAKE) install ; cd ..;     \
 	done;
@@ -164,8 +164,8 @@ realclean:
 	   cd $$dir ; $(MAKE) realclean ; cd ..; \
 	done;
 	rm -f *~ *.gcov *.gprof gmon.out callgrind.out.*
-	rm -f bin/draw* lib/*.a include/*.h 
-	rm -f images/shipcopy.bmp 
+	rm -f bin/draw* lib/*.a include/*.h
+	rm -f images/shipcopy.bmp
 
 distclean: realclean
 
@@ -185,11 +185,10 @@ archive:
 	tar -cvf $(PKG_NAME).tar $(PKG_HOME) ; \
 	gzip $(PKG_NAME).tar ; \
 	mv $(PKG_NAME).tar.gz $(PKG_NAME).tgz
-	-@echo "Distribution package is ../$(PKG_NAME).tgz" 
+	-@echo "Distribution package is ../$(PKG_NAME).tgz"
 
 .PHONY : exe
 
 #------------------------------------------------------------------------
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
-

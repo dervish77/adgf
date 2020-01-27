@@ -73,7 +73,7 @@ MOD_OUT_DIR	= .
 #------------------------------------------------------------------------
 # Define local includes
 #------------------------------------------------------------------------
-EXTRA_INCLUDE	= -I/usr/local/include 
+EXTRA_INCLUDE	= -I/usr/include
 
 MOD_INCLUDES	= -I.  $(EXTRA_INCLUDE)
 
@@ -85,7 +85,7 @@ MOD_INCLUDES	= -I.  $(EXTRA_INCLUDE)
 EXTRA_DEBUG 	= -g $(OPT)
 #EXTRA_DEBUG 	= $(OPT)
 
-EXTRA_DEFINES   = 
+EXTRA_DEFINES   =
 ifeq ($(HAS_TEXT), yes)
 EXTRA_DEFINES   += -DHAS_TEXT
 endif
@@ -104,7 +104,7 @@ MOD_CPPFLAGS 	= $(EXTRA_DEBUG) $(EXTRA_DEFINES)
 #MOD_LDFLAGS 	= -lang-c++ -static
 #MOD_LDFLAGS 	= -static
 MOD_LDFLAGS 	= $(OPT)
-#MOD_LDFLAGS 	= 
+#MOD_LDFLAGS 	=
 
 MOD_LIB_PATHS 	= -L/usr/local/lib
 
@@ -114,6 +114,3 @@ MOD_LIBS 		+= -lSDL_ttf
 endif
 
 MOD_ARFLAGS 	= -rc
-
-
-
