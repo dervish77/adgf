@@ -2,11 +2,12 @@
 # bouncing ball demo using PyGame
 #
 
-import sys, pygame
+import sys
+import pygame
 pygame.init()
 
-size = width, height = 800, 600
-speed = [1, 1]
+size = width, height = 1000, 800
+speed = [2, 2]
 black = 0, 0, 0
 
 screen = pygame.display.set_mode(size)

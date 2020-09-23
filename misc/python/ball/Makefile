@@ -2,7 +2,7 @@
 #
 
 PY  = /cygdrive/c/Python27/python
-EXE = /cygdrive/c/Python27/python
+EXE = python3
 
 #-------------------------------------------------------------------------
 
