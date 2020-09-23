@@ -1,14 +1,0 @@
-Title: * C:\Program Files\LTC\SwCADIII\NandV\NV_SPICE_11.asc
-Date: Thu Jul 24 16:03:49 2008
-Plotname: Operating Point
-Flags: real
-No. Variables: 3
-No. Points:            1
-Offset:   0.0000000000000000e+000
-Command: Linear Technology Corporation LTspice
-Variables:
-	0	V(n001)	voltage
-	1	I(R1)	device_current
-	2	I(V1)	device_current
-Binary:
-qÇqÇ!@´¢¼´¢¼

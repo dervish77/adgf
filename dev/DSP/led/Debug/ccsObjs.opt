@@ -1,1 +1,0 @@
-"./main.obj" "./led_test.obj" -l"usbstk5515bsl.lib" -l"rts55x.lib" "../lnkx.cmd" 

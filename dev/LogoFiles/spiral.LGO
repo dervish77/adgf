@@ -1,8 +1,0 @@
-to spiral :size
-repeat 36 [square :size rt 10]
-end
-
-to square :size
-REPEAT 4 [FD :size RT 90]
-end
-
