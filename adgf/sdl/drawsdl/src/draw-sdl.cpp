@@ -1,7 +1,7 @@
 /*
  *     Module Name:  draw-sdl.cpp
  *
- *     Author:       Brian Lingard 
+ *     Author:       Brian Lingard
  *
  *     Description:
  *	   Contains platform specific drawing functions for SDL graphics platform.
@@ -89,19 +89,19 @@ static long CreateLongColorFromHicolorPixel(SDL_PixelFormat * fmt, Uint16 value)
     temp = temp >> fmt->Rshift; /* Shift it down to 8-bit */
     temp = temp << fmt->Rloss;  /* Expand to a full 8-bit number */
     red = (Uint8)temp;
-    
+
     /* Get Green component */
     temp = value & fmt->Gmask;  /* Isolate green component */
     temp = temp >> fmt->Gshift; /* Shift it down to 8-bit */
     temp = temp << fmt->Gloss;  /* Expand to a full 8-bit number */
     green = (Uint8)temp;
-   
+
     /* Get Blue component */
     temp = value & fmt->Bmask;  /* Isolate blue component */
     temp = temp >> fmt->Bshift; /* Shift it down to 8-bit */
     temp = temp << fmt->Bloss;  /* Expand to a full 8-bit number */
     blue = (Uint8)temp;
-   
+
     /* Get Alpha component */
     temp = value & fmt->Amask;  /* Isolate alpha component */
     temp = temp >> fmt->Ashift; /* Shift it down to 8-bit */
@@ -196,50 +196,50 @@ void drawWait(int milliseconds)
 void drawWaitQuit()
 {
     int quit = 0;
-    
+
     printf("Waiting for user to quit...\n");
-    
+
     while (quit == 0)
     {
-        while( SDL_PollEvent( &event ) ) 
+        while( SDL_PollEvent( &event ) )
         {
-            if( event.type == SDL_QUIT ) 
-            { 
-                quit = 1; 
-            } 
-        } 
+            if( event.type == SDL_QUIT )
+            {
+                quit = 1;
+            }
+        }
     }
-    
+
     SDL_Quit();
 }
 
 int drawGetQuitState()
 {
     int quit = 0;
-    
-    while( SDL_PollEvent( &event ) ) 
+
+    while( SDL_PollEvent( &event ) )
     {
-        if( event.type == SDL_QUIT ) 
-        { 
+        if( event.type == SDL_QUIT )
+        {
             printf("QUIT\n");
-            quit = 1; 
-        } 
-    } 
+            quit = 1;
+        }
+    }
     return(quit);
 }
 
 char drawGetKey()
 {
     char key = 0;
-        
-    while( SDL_PollEvent( &event ) ) 
+
+    while( SDL_PollEvent( &event ) )
     {
-        if( event.type == SDL_KEYDOWN ) 
-        { 
+        if( event.type == SDL_KEYDOWN )
+        {
             printf("KEY DOWN\n");
-            key = event.key.keysym.sym; 
+            key = event.key.keysym.sym;
         }
-    } 
+    }
 
     return(key);  // returns key as ascii code
 }
@@ -247,22 +247,22 @@ char drawGetKey()
 int drawGetKeyState(char *key)
 {
     int state = 0;
-        
-    while( SDL_PollEvent( &event ) ) 
+
+    while( SDL_PollEvent( &event ) )
     {
-        if( event.type == SDL_KEYDOWN ) 
-        { 
+        if( event.type == SDL_KEYDOWN )
+        {
             printf("KEY DOWN\n");
-            *key = event.key.keysym.sym; 
+            *key = event.key.keysym.sym;
             state = KEY_DOWN;
         }
-        if( event.type == SDL_KEYUP ) 
-        { 
+        if( event.type == SDL_KEYUP )
+        {
             printf("KEY UP\n");
-            *key = event.key.keysym.sym; 
+            *key = event.key.keysym.sym;
             state = KEY_UP;
         }
-    } 
+    }
 
     return(state);
 }
@@ -270,150 +270,150 @@ int drawGetKeyState(char *key)
 int drawGetMouseState(int *x, int *y)
 {
     int state = 0;
-    
-    while( SDL_PollEvent( &event ) ) 
-    { 
-        if( event.type == SDL_MOUSEMOTION ) 
-        { 
-            *x = event.motion.x; 
+
+    while( SDL_PollEvent( &event ) )
+    {
+        if( event.type == SDL_MOUSEMOTION )
+        {
+            *x = event.motion.x;
             *y = event.motion.y;
             state = MOUSE_MOTION;
         }
-        
-        if( event.type == SDL_MOUSEBUTTONDOWN ) 
-        { 
+
+        if( event.type == SDL_MOUSEBUTTONDOWN )
+        {
             printf("MOUSE DOWN\n");
-            if( event.button.button == SDL_BUTTON_LEFT ) 
-            {  
-                *x = event.button.x; 
+            if( event.button.button == SDL_BUTTON_LEFT )
+            {
+                *x = event.button.x;
                 *y = event.button.y;
                 state = MOUSE_LEFT_DOWN;
             }
-            if( event.button.button == SDL_BUTTON_MIDDLE ) 
-            {  
-                *x = event.button.x; 
+            if( event.button.button == SDL_BUTTON_MIDDLE )
+            {
+                *x = event.button.x;
                 *y = event.button.y;
                 state = MOUSE_MIDDLE_DOWN;
             }
-            if( event.button.button == SDL_BUTTON_RIGHT ) 
-            {  
-                *x = event.button.x; 
+            if( event.button.button == SDL_BUTTON_RIGHT )
+            {
+                *x = event.button.x;
                 *y = event.button.y;
                 state = MOUSE_RIGHT_DOWN;
-            }            
+            }
         }
-        
-        if( event.type == SDL_MOUSEBUTTONUP ) 
-        { 
+
+        if( event.type == SDL_MOUSEBUTTONUP )
+        {
             printf("MOUSE UP\n");
-            if( event.button.button == SDL_BUTTON_LEFT ) 
-            {  
-                *x = event.button.x; 
+            if( event.button.button == SDL_BUTTON_LEFT )
+            {
+                *x = event.button.x;
                 *y = event.button.y;
                 state = MOUSE_LEFT_UP;
             }
-            if( event.button.button == SDL_BUTTON_MIDDLE ) 
-            {  
-                *x = event.button.x; 
+            if( event.button.button == SDL_BUTTON_MIDDLE )
+            {
+                *x = event.button.x;
                 *y = event.button.y;
                 state = MOUSE_MIDDLE_UP;
             }
-            if( event.button.button == SDL_BUTTON_RIGHT ) 
-            {  
-                *x = event.button.x; 
+            if( event.button.button == SDL_BUTTON_RIGHT )
+            {
+                *x = event.button.x;
                 *y = event.button.y;
                 state = MOUSE_RIGHT_UP;
-            }            
+            }
         }
     }
-    
+
     return(state);
 }
 
 int drawGetEvent(int *x, int *y, char *key)
 {
     int state = 0;
-    
-    if( SDL_PollEvent( &event ) ) 
-    { 
+
+    if( SDL_PollEvent( &event ) )
+    {
         if( event.type == SDL_USEREVENT )
-        { 
+        {
             state = event.user.code;  // currently conveys which timer event occurred
         }
-        
-        if( event.type == SDL_QUIT ) 
-        { 
+
+        if( event.type == SDL_QUIT )
+        {
             printf("QUIT\n");
-            state = WINDOW_QUIT; 
-        } 
-        
-        if( event.type == SDL_KEYDOWN ) 
-        { 
+            state = WINDOW_QUIT;
+        }
+
+        if( event.type == SDL_KEYDOWN )
+        {
             printf("KEY DOWN\n");
-            *key = event.key.keysym.sym; 
+            *key = event.key.keysym.sym;
             state = KEY_DOWN;
         }
-        if( event.type == SDL_KEYUP ) 
-        { 
+        if( event.type == SDL_KEYUP )
+        {
             printf("KEY UP\n");
-            *key = event.key.keysym.sym; 
+            *key = event.key.keysym.sym;
             state = KEY_UP;
         }
-        
-        if( event.type == SDL_MOUSEMOTION ) 
-        { 
-            *x = event.motion.x; 
+
+        if( event.type == SDL_MOUSEMOTION )
+        {
+            *x = event.motion.x;
             *y = event.motion.y;
             state = MOUSE_MOTION;
         }
-        
-        if( event.type == SDL_MOUSEBUTTONDOWN ) 
-        { 
+
+        if( event.type == SDL_MOUSEBUTTONDOWN )
+        {
             printf("MOUSE DOWN\n");
-            if( event.button.button == SDL_BUTTON_LEFT ) 
-            {  
-                *x = event.button.x; 
+            if( event.button.button == SDL_BUTTON_LEFT )
+            {
+                *x = event.button.x;
                 *y = event.button.y;
                 state = MOUSE_LEFT_DOWN;
             }
-            if( event.button.button == SDL_BUTTON_MIDDLE ) 
-            {  
-                *x = event.button.x; 
+            if( event.button.button == SDL_BUTTON_MIDDLE )
+            {
+                *x = event.button.x;
                 *y = event.button.y;
                 state = MOUSE_MIDDLE_DOWN;
             }
-            if( event.button.button == SDL_BUTTON_RIGHT ) 
-            {  
-                *x = event.button.x; 
+            if( event.button.button == SDL_BUTTON_RIGHT )
+            {
+                *x = event.button.x;
                 *y = event.button.y;
                 state = MOUSE_RIGHT_DOWN;
-            }            
+            }
         }
-        
-        if( event.type == SDL_MOUSEBUTTONUP ) 
-        { 
+
+        if( event.type == SDL_MOUSEBUTTONUP )
+        {
             printf("MOUSE UP\n");
-            if( event.button.button == SDL_BUTTON_LEFT ) 
-            {  
-                *x = event.button.x; 
+            if( event.button.button == SDL_BUTTON_LEFT )
+            {
+                *x = event.button.x;
                 *y = event.button.y;
                 state = MOUSE_LEFT_UP;
             }
-            if( event.button.button == SDL_BUTTON_MIDDLE ) 
-            {  
-                *x = event.button.x; 
+            if( event.button.button == SDL_BUTTON_MIDDLE )
+            {
+                *x = event.button.x;
                 *y = event.button.y;
                 state = MOUSE_MIDDLE_UP;
             }
-            if( event.button.button == SDL_BUTTON_RIGHT ) 
-            {  
-                *x = event.button.x; 
+            if( event.button.button == SDL_BUTTON_RIGHT )
+            {
+                *x = event.button.x;
                 *y = event.button.y;
                 state = MOUSE_RIGHT_UP;
-            }            
+            }
         }
     }
-    
+
     return(state);
 }
 
@@ -432,7 +432,7 @@ int drawInit(int screen_x, int screen_y, int bpp)
 #endif
 
     /* Initialize SDL's video system and check for errors. */
-    if (SDL_Init(SDL_INIT_VIDEO|SDL_INIT_TIMER) != 0) 
+    if (SDL_Init(SDL_INIT_VIDEO|SDL_INIT_TIMER) != 0)
     {
 	    printf("Unable to initialize SDL: %s\n", SDL_GetError());
 	    return(1);
@@ -466,12 +466,12 @@ int drawInit(int screen_x, int screen_y, int bpp)
     screen = SDL_SetVideoMode(display_w, display_h, display_bpp, SDL_SWSURFACE);
   #endif
 #endif
-    if (screen == NULL) 
+    if (screen == NULL)
     {
 	    printf("Unable to set video mode: %s\n", SDL_GetError());
 	    return(1);
     }
-    
+
 #ifdef DEBUG
     printf("drawInit: screen size %d x %d\n", display_w, display_h );
     printf("drawInit: done\n");
@@ -491,7 +491,7 @@ int drawInitExtended(int screen_x, int screen_y, int bpp, char *caption)
 
 void drawSetCaption(char *caption)
 {
-    SDL_WM_SetCaption( caption, NULL );    
+    SDL_WM_SetCaption( caption, NULL );
 }
 
 void drawSwapBuffers()
@@ -533,7 +533,7 @@ void drawBackground(long color)
     Slock(screen);
 
     SDL_FillRect(screen, NULL, color);
-	   
+
     pixelCount = screen->w * screen->h;
 
     /* We're finished drawing, so unlock the surface. */
@@ -639,12 +639,12 @@ static void localReadPixel(SDL_Surface *theScreen, Uint8 *R, Uint8 *G, Uint8 *B,
 
 
 void drawPixel(long color, int x, int y)
-{   
+{
     drawWritePixel( screen, color, x, y );
 }
 
 void drawWritePixel(SDL_Surface *theScreen, long color, int x, int y)
-{    
+{
     Uint8 red, green, blue;
 
     red   = (color & 0x00FF0000) >> 16;
@@ -660,7 +660,7 @@ void drawWritePixel(SDL_Surface *theScreen, long color, int x, int y)
 }
 
 long drawReadPixel(SDL_Surface *theScreen, int x, int y)
-{   
+{
     long color = 0;
 
     Uint8 red, green, blue;
@@ -669,7 +669,7 @@ long drawReadPixel(SDL_Surface *theScreen, int x, int y)
     if (theScreen)
     {
         localReadPixel( theScreen, &red, &green, &blue, x, y );
-    }   
+    }
 
     temp = red;
     color += temp << 16;
@@ -677,8 +677,8 @@ long drawReadPixel(SDL_Surface *theScreen, int x, int y)
     color += temp << 8;
     temp = blue;
     color += temp << 0;
-    
-    if (y == 24) printf("read color %06X\n", color);
+
+    if (y == 24) printf("read color %06X\n", (unsigned int) color);
 
     return(color);
 }
@@ -687,7 +687,7 @@ long drawReadPixel(SDL_Surface *theScreen, int x, int y)
 // sprite functions (better suited for gaming)
 //////////////////////////////////////////////////////////////////////////////
 
-void drawLoadSprite(spriteContext *sprite, char *file)
+void drawLoadSprite(spriteContext *sprite, const char *file)
 {
     if (sprite)
     {
@@ -700,7 +700,7 @@ void drawLoadSprite(spriteContext *sprite, char *file)
 
         sprite->width = sprite->image->w;
         sprite->height = sprite->image->h;
-		
+
 		sprite->half_w = sprite->width / 2;
 		sprite->half_h = sprite->height / 2;
 
@@ -714,12 +714,12 @@ void drawLoadSprite(spriteContext *sprite, char *file)
     }
 }
 
-void drawSaveSprite(spriteContext *sprite, char *file)
+void drawSaveSprite(spriteContext *sprite, const char *file)
 {
     if (sprite)
     {
         /* Save the surface into a BMP file */
-        if ( sprite->image != NULL ) 
+        if ( sprite->image != NULL )
         {
             if ( -1 == SDL_SaveBMP(sprite->image, file) ) {
                 fprintf(stderr, "Couldn't save %s: %s\n", file, SDL_GetError());
@@ -779,7 +779,7 @@ void drawSprite(spriteContext *sprite, int tlx, int tly)
 
         /* Update the changed portion of the screen */
         SDL_UpdateRects(screen, 1, &dest);
-    
+
         pixelCount += (dest.w * dest.h);
     }
 }
@@ -788,7 +788,7 @@ void drawSprite(spriteContext *sprite, int tlx, int tly)
 // bitmap functions (directly loads and displays bitmap)
 //////////////////////////////////////////////////////////////////////////////
 
-int drawGetBitmapWidth(char *file)
+int drawGetBitmapWidth(const char *file)
 {
     SDL_Surface *image;
 
@@ -802,7 +802,7 @@ int drawGetBitmapWidth(char *file)
     return(image->w);
 }
 
-int drawGetBitmapHeight(char *file)
+int drawGetBitmapHeight(const char *file)
 {
     SDL_Surface *image;
 
@@ -816,7 +816,7 @@ int drawGetBitmapHeight(char *file)
     return(image->h);
 }
 
-void drawBitmap(char *file, int x, int y)
+void drawBitmap(const char *file, int x, int y)
 {
     SDL_Surface *image;
     SDL_Rect dest;
@@ -839,7 +839,7 @@ void drawBitmap(char *file, int x, int y)
 
     /* Update the changed portion of the screen */
     SDL_UpdateRects(screen, 1, &dest);
-    
+
     pixelCount += (dest.w * dest.h);
 }
 
@@ -863,9 +863,9 @@ void drawBitBlit(unsigned short *buffer, int tlx, int tly, int width, int height
 
     blit_pixels = (Uint16 *) image->pixels;
 
-    for (y = 0; y < height; y++) 
+    for (y = 0; y < height; y++)
     {
-        for (x = 0; x < width; x++) 
+        for (x = 0; x < width; x++)
         {
 	        int offset;
 	        offset = ((image->pitch / 2) * y + x);
@@ -885,7 +885,7 @@ void drawBitBlit(unsigned short *buffer, int tlx, int tly, int width, int height
     /* Update the changed portion of the screen */
     SDL_UpdateRects(screen, 1, &dest);
     SDL_FreeSurface( image );
- 
+
     pixelCount += (dest.w * dest.h);
 }
 
@@ -913,15 +913,15 @@ Uint32 timer1_callback(Uint32 interval, void *param)
 {
     SDL_Event event;
     SDL_UserEvent userevent;
-    
+
     userevent.type = SDL_USEREVENT;
     userevent.code = TIMER1_EVENT;
     userevent.data1 = param;
     userevent.data2 = NULL;
-    
+
     event.type = SDL_USEREVENT;
     event.user = userevent;
-    
+
     SDL_PushEvent(&event);
     return(interval);
 }
@@ -930,42 +930,42 @@ Uint32 timer2_callback(Uint32 interval, void *param)
 {
     SDL_Event event;
     SDL_UserEvent userevent;
-    
+
     userevent.type = SDL_USEREVENT;
     userevent.code = TIMER2_EVENT;
     userevent.data1 = param;
     userevent.data2 = NULL;
-    
+
     event.type = SDL_USEREVENT;
     event.user = userevent;
-    
+
     SDL_PushEvent(&event);
     return(interval);
 }
 
-int drawAddTimer(int delay, int eventId)
+TIMERID drawAddTimer(int delay, int eventId)
 {
     int interval = (delay / 10) * 10;   // round off to nearest 10 ms
-    int timer_id;
+    TIMERID timer_id;
     switch(eventId)
     {
         case TIMER1_EVENT:
-            timer_id = (int) SDL_AddTimer( interval, timer1_callback, (void *)NULL );
+            timer_id = SDL_AddTimer( interval, timer1_callback, (void *)NULL );
             printf("added timer %d\n", timer_id);
             break;
         case TIMER2_EVENT:
-            timer_id = (int) SDL_AddTimer( interval, timer2_callback, (void *)NULL );
+            timer_id = SDL_AddTimer( interval, timer2_callback, (void *)NULL );
             printf("added timer %d\n", timer_id);
             break;
         default:
-            timer_id = -1;
+            timer_id = 0;
             printf("Unknown timer requested!\n");
             break;
     }
     return(timer_id);
 }
 
-int drawRemoveTimer(int timer_id)
+int drawRemoveTimer(TIMERID timer_id)
 {
     SDL_RemoveTimer( (SDL_TimerID) timer_id );
     return(0);
@@ -989,10 +989,10 @@ int drawRemoveTimer(int timer_id)
 float lerpCalcAlpha( int low, int high, int current )
 {
     float alpha;
-    
-    // calculate 
+
+    // calculate
     //   alpha = (current - low) / (high - low)
-    // or 
+    // or
     //   alpha = delta / range
     //
     //   when current = low,  alpha = 0
@@ -1008,7 +1008,7 @@ float lerpCalcAlpha( int low, int high, int current )
 // linear interpret 32 bit color1 to color2
 long lerpColor32( long color1, long color2, float alpha )
 {
-    long color;    
+    long color;
     color = (long) LERP( alpha, color1, color2 );
     return(color);
 }
@@ -1079,15 +1079,15 @@ static void lineBresenham(long color, int x0, int y0, int x1, int y1)
     if (dx < 0) { dx = -dx;  stepx = -1; } else { stepx = 1; }
     dy <<= 1;                                                  // dy is now 2*dy
     dx <<= 1;                                                  // dx is now 2*dx
-    
+
     drawPixel( color, x0, y0 );
 
-    if (dx > dy) 
+    if (dx > dy)
     {
         int fraction = dy - (dx >> 1);                         // same as 2*dy - dx
-        while (x0 != x1) 
+        while (x0 != x1)
         {
-            if (fraction >= 0) 
+            if (fraction >= 0)
             {
                 y0 += stepy;
                 fraction -= dx;                                // same as fraction -= 2*dx
@@ -1097,13 +1097,13 @@ static void lineBresenham(long color, int x0, int y0, int x1, int y1)
 
             drawPixel( color, x0, y0 );
         }
-    } 
-    else 
+    }
+    else
     {
         int fraction = dx - (dy >> 1);
-        while (y0 != y1) 
+        while (y0 != y1)
         {
-           if (fraction >= 0) 
+           if (fraction >= 0)
            {
                x0 += stepx;
                fraction -= dy;
@@ -1139,15 +1139,15 @@ static void lineBresenhamDashed(long dashed, long color, int x0, int y0, int x1,
     if (dx < 0) { dx = -dx;  stepx = -1; } else { stepx = 1; }
     dy <<= 1;                                                  // dy is now 2*dy
     dx <<= 1;                                                  // dx is now 2*dx
-    
+
     if (enable) drawPixel( color, x0, y0 );
 
-    if (dx > dy) 
+    if (dx > dy)
     {
         int fraction = dy - (dx >> 1);                         // same as 2*dy - dx
-        while (x0 != x1) 
+        while (x0 != x1)
         {
-            if (fraction >= 0) 
+            if (fraction >= 0)
             {
                 y0 += stepy;
                 fraction -= dx;                                // same as fraction -= 2*dx
@@ -1167,13 +1167,13 @@ static void lineBresenhamDashed(long dashed, long color, int x0, int y0, int x1,
 
             count++;
         }
-    } 
-    else 
+    }
+    else
     {
         int fraction = dx - (dy >> 1);
-        while (y0 != y1) 
+        while (y0 != y1)
         {
-            if (fraction >= 0) 
+            if (fraction >= 0)
             {
                 x0 += stepx;
                 fraction -= dy;
@@ -1356,7 +1356,7 @@ void drawSolidPolygon(long color, screenPoint *pointList, int numPoints)
 // circle drawing functions
 //////////////////////////////////////////////////////////////////////////////
 
-static void circlePoints (int cx, int cy, int x, int y, long pix) 
+static void circlePoints (int cx, int cy, int x, int y, long pix)
 {
     int act = pix;
 
@@ -1464,11 +1464,11 @@ void drawCreateBitBlitBuffer(unsigned short *buffer, int width, int height, int 
             break;
         case PITCH_BPP_16:
             mapped16 = (unsigned short *) malloc( width * height * 2 );
-            break;   
+            break;
         default:
-            break;    
+            break;
     }
-         
+
     if (mapped16 == NULL)
     {
         printf("drawCreateBitBlitBuffer: malloc failed\n");
@@ -1486,12 +1486,12 @@ void drawFillBitBlitBuffer(unsigned short *buffer, int width, int height, unsign
     // assumes 16 bit Blt
     int x,y;
     unsigned short *ptr;
- 
+
     ptr = buffer;
 
-    for (y=0; y<height; y++) 
+    for (y=0; y<height; y++)
     {
-        for (x=0; x<width; x++) 
+        for (x=0; x<width; x++)
         {
             *(ptr++) = color;
         }
@@ -1503,4 +1503,3 @@ void drawFillBitBlitBuffer(unsigned short *buffer, int width, int height, unsign
 //***************************************************************************//
 
 /* end of draw-sdl.cpp */
-

@@ -18,7 +18,7 @@
 #include <SDL/SDL.h>
 
 
-#define DRAWSDL_VERSION "0.7.5"
+#define DRAWSDL_VERSION "0.7.6"
 
 
 //////////////////////////////////////////////////////////////////////////////
@@ -133,6 +133,8 @@
 #define TIMER1_EVENT        11
 #define TIMER2_EVENT        12
 
+#define TIMERID             SDL_TimerID
+
 //////////////////////////////////////////////////////////////////////////////
 // define useful structures
 //////////////////////////////////////////////////////////////////////////////
@@ -152,8 +154,8 @@ typedef struct {
     SDL_Surface *image;
     int width;
     int height;
-	int half_w;
-	int half_h;
+	  int half_w;
+	  int half_h;
     int pitch;
     int bpp;
     int alphaEnabled;
@@ -206,12 +208,12 @@ void drawPixel(long color, int x, int y);
 void drawWritePixel(SDL_Surface *theScreen, long color, int x, int y);
 long drawReadPixel(SDL_Surface *theScreen, int x, int y);
 
-void drawBitmap(char *file, int x, int y);
-int  drawGetBitmapWidth(char *file);
-int  drawGetBitmapHeight(char *file);
+void drawBitmap(const char *file, int x, int y);
+int  drawGetBitmapWidth(const char *file);
+int  drawGetBitmapHeight(const char *file);
 
-void drawLoadSprite(spriteContext *sprite, char *file);
-void drawSaveSprite(spriteContext *sprite, char *file);
+void drawLoadSprite(spriteContext *sprite, const char *file);
+void drawSaveSprite(spriteContext *sprite, const char *file);
 void drawCreateSprite(spriteContext *sprite, int w, int h);
 void drawGetSpriteExtent(spriteContext *sprite, int *w, int *h);
 void drawSprite(spriteContext *sprite, int tlx, int tly);
@@ -225,8 +227,8 @@ unsigned short drawCreateColor16(char red, char green, char blue);
 int  drawGetTicks();
 int  drawIsTicksInterval(int start, int interval);
 
-int  drawAddTimer(int delay, int eventId);
-int  drawRemoveTimer(int timer_id);
+TIMERID  drawAddTimer(int delay, int eventId);
+int  drawRemoveTimer(TIMERID timer_id);
 
 // from draw-sdl.c SDL dependent section (not for public use)
 
@@ -269,4 +271,3 @@ void drawCreateBitBlitBuffer(unsigned short *buffer, int width, int height, int 
 void drawFillBitBlitBuffer(unsigned short *buffer, int width, int height, unsigned short color);
 
 #endif /* __draw_sdl_h */
-
