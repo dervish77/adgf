@@ -43,17 +43,13 @@ char SwapNibble( char num )
 void ReverseString( char *input, char *output )
 {
   int length = strlen(input);
-  char *buffer = malloc(strlen(input)+1);
 
   // for each letter in string
   for (int i = 0; i < length; i++)
   {
     // copy current input letter to current output letter
-    buffer[length - i - 1] = *input++;
+    output[length - i - 1] = *input++;
   }
-
-  // copy butter to output ptr
-  strcpy(output, buffer);
 }
 
 void ReverseStringInPlace( char *input )
