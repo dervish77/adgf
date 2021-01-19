@@ -45,11 +45,14 @@ void ReverseString( char *input, char *output )
   int length = strlen(input);
   char *buffer = malloc(strlen(input)+1);
 
+  // for each letter in string
   for (int i = 0; i < length; i++)
   {
+    // copy current input letter to current output letter
     buffer[length - i - 1] = *input++;
   }
 
+  // copy butter to output ptr
   strcpy(output, buffer);
 }
 
@@ -61,15 +64,18 @@ void ReverseStringInPlace( char *input )
   char *endPtr;
   char temp;
 
+  // initialize head and tail ptrs
   startPtr = input;
   endPtr = input + length - 1;
 
+  // while tail ptr is greater than head ptr
   while (endPtr > startPtr)
   {
-    //printf("start is %c - end is %c\n", *startPtr, *endPtr);
+    // swap current head and tail values
     temp = *endPtr;
     *endPtr = *startPtr;
     *startPtr = temp;
+    // advance head and tail pointers
     startPtr++;
     endPtr--;
   }
@@ -82,7 +88,7 @@ int NPower(int nums[], int len, int n)
   // if index is less than or equal to length of array
   if ( n <= len )
   {
-    // compute x^n power for the nth number
+    // compute nth power for the nth number
     power = pow(nums[n-1], n);
   }
 
@@ -91,16 +97,16 @@ int NPower(int nums[], int len, int n)
 
 int IsVowel(char letter)
 {
-  switch (letter | 0x20)  // force to upper case
+  switch (letter | 0x20)  // force letter to upper case
   {
     case 'a':
     case 'e':
     case 'i':
     case 'o':
     case 'u':
-      return 1;
+      return 1;  // yes it's a vowel
     default:
-      return 0;
+      return 0;  // no, it's not a vowel
   }
 }
 int VowelCount(char *str)
@@ -177,6 +183,7 @@ void kata(int number)
       }
       break;
     default:
+      printf("Unknown kata specified\n");
       break;
   }
 }
