@@ -121,6 +121,35 @@ int VowelCount(char *str)
   return vowels;
 }
 
+int FindLongSeq(int numList[], int length)
+{
+  int count = 0;
+  int longest = 0;
+
+  for (int i = 0; i < length; i++)
+  {
+    if ( (numList[i]+1) == numList[i+1] )
+    {
+      count++;
+    }
+    else
+    {
+      if (count > longest)
+      {
+        longest = count;
+      }
+      count = 0;
+    }
+  }
+
+  return longest;
+}
+
+
+#define ELEMENT 5
+int *posfun(int *,int );
+
+
 
 // External function to be called by main()
 //
@@ -131,6 +160,8 @@ void kata(int number)
   switch(number)
   {
     case 1:
+      // Write a C program function "swapByteNibble()" to swap the nibbles
+      // in a byte.
       {
         char input = 0x12;
         char output;
@@ -139,6 +170,8 @@ void kata(int number)
       }
       break;
     case 2:
+      // Implement the function "RevString()" as given in below prototype
+      // to reverse the input string.
       {
         char *input = "Reverse";
         char *output = malloc(strlen(input)+1);
@@ -147,6 +180,7 @@ void kata(int number)
       }
       break;
     case 3:
+      // Same as above, but perform reverse string in place
       {
         char *input = "Reverse";
         char inString[10];
@@ -157,6 +191,8 @@ void kata(int number)
       }
       break;
     case 4:
+      // Calculate the nth power of the nth item in the array,
+      // return -1 if n is greater than the number of elements in the array
       {
         int numarray[] = { 1, 2, 3, 4, 5, 6 };
         int length = sizeof(numarray) / sizeof(numarray[0]);
@@ -166,11 +202,33 @@ void kata(int number)
       }
       break;
     case 5:
+      // Write function to count the vowels in a string
       {
         char string[] = "Another test string";
         int count = 0;
         count = VowelCount(string);
         printf("string was %s - count is %d\n", string, count);
+      }
+      break;
+    case 6:
+      // Write a C program "find_long_seq" to find and return the length of the
+      // longest sequence of consecutive elements in the given array.
+      {
+        int seqList[] = {0,2,3,8,9,10,11,12,18,19,20,21,22,23,24};
+        int elements = sizeof(seqList)/sizeof(seqList[0]);
+        unsigned int len;
+        len = FindLongSeq(seqList, elements);
+        printf("The longest sequence is of length %d\n",len);
+      }
+      break;
+    case 7:
+      // Write a C program function to return the Nth element of an array using
+      // pointer to a function.
+      {
+        int arrList[9] = {11,22,33,44,55,66,77,88,99};
+        int posValue = 0;
+      	/* Implement posfun() to find and return the value at position ELEMENT in arrList*/
+      	printf("Value at position %d = %d\n",ELEMENT,posValue);
       }
       break;
     case 99:

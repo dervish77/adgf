@@ -79,6 +79,8 @@ test: default
 	-@echo "-------------"
 	$(TARGET) 5
 	-@echo "-------------"
+	$(TARGET) 6
+	-@echo "-------------"
 	$(TARGET) 99
 	-@echo "-------------"
 	$(TARGET) 999
