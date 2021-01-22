@@ -1,5 +1,6 @@
 REVISION history for kata
 -------------------------
 
+0.1	01/22/2021  Includes implementations for katas 1 thru 7
 0.0  	01/15/2021  Originated
 
