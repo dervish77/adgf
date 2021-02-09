@@ -40,6 +40,7 @@ char SwapNibble( char num )
   return result;
 }
 
+
 void ReverseString( char *input, char *output )
 {
   int length = strlen(input);
@@ -51,6 +52,7 @@ void ReverseString( char *input, char *output )
     output[length - i - 1] = *input++;
   }
 }
+
 
 void ReverseStringInPlace( char *input )
 {
@@ -77,6 +79,7 @@ void ReverseStringInPlace( char *input )
   }
 }
 
+
 int NPower(int nums[], int len, int n)
 {
   int power = -1;  // default power is -1
@@ -90,6 +93,7 @@ int NPower(int nums[], int len, int n)
 
   return power;
 }
+
 
 int IsVowel(char letter)
 {
@@ -121,6 +125,7 @@ int VowelCount(char *str)
   return vowels;
 }
 
+
 int FindLongSeq(int numList[], int length)
 {
   int count = 0;
@@ -146,9 +151,52 @@ int FindLongSeq(int numList[], int length)
 }
 
 
-#define ELEMENT 5
-int *posfun(int *,int );
 
+#define ELEMENT 5
+int *posfun(int *numlist, int length, int position)
+{
+  int value = -1;
+
+  if (position <= length)
+  {
+    value = numlist[position-1];
+  }
+  
+  return value;
+}
+
+
+#define TO_UPPER(c) (c & 0xDF)
+#define TO_LOWER(c) (c | 0x20)
+char *Accum(char *input)
+{
+  size_t length = strlen(input);
+  char *buffer = malloc(length * length);
+  char *output;
+
+  // save start of output buffer
+  output = buffer;
+
+  // for each character of input string
+  for (int n=0; n < length; n++)
+  {
+    char c = input[n];
+    
+    // copy input character to output string 'n' times where first one is upper case 
+    // and remaining are lower case
+    for (int i=0; i < (n+1); i++)
+    {
+      if (i == 0)
+        *buffer++ = TO_UPPER(c);
+      else
+        *buffer++ = TO_LOWER(c);
+    }
+
+    *buffer++ = '-';
+  }
+
+  return output;
+}
 
 
 // External function to be called by main()
@@ -226,9 +274,22 @@ void kata(int number)
       // pointer to a function.
       {
         int arrList[9] = {11,22,33,44,55,66,77,88,99};
-        int posValue = 0;
+	int length = sizeof(arrList) / sizeof(arrList[0]);
+        int posValue = posfun(arrList, length, ELEMENT);
       	/* Implement posfun() to find and return the value at position ELEMENT in arrList*/
       	printf("Value at position %d = %d\n",ELEMENT,posValue);
+      }
+      break;
+    case 8:
+      // Write a function 'accum()' that performs the following examples:
+      //   accum("abcd") -> "A-Bb-Ccc-Dddd"
+      //   accum("RqaEzty") -> "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
+      //   accum("cwAt") -> "C-Ww-Aaa-Tttt"
+      // The parameter of accum is a string which includes only letters from a..z and A..Z
+      {
+	char *output;
+	output = Accum("HelLo");
+	printf("Accum output is %s\n", output);
       }
       break;
     case 99:

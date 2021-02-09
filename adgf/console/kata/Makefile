@@ -81,6 +81,10 @@ test: default
 	-@echo "-------------"
 	$(TARGET) 6
 	-@echo "-------------"
+	$(TARGET) 7
+	-@echo "-------------"
+	$(TARGET) 8
+	-@echo "-------------"
 	$(TARGET) 99
 	-@echo "-------------"
 	$(TARGET) 999
