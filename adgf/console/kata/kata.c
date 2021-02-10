@@ -151,7 +151,6 @@ int FindLongSeq(int numList[], int length)
 }
 
 
-
 #define ELEMENT 5
 int posfun(int *numlist, int length, int position)
 {
@@ -294,9 +293,9 @@ void kata(int number)
       //   accum("cwAt") -> "C-Ww-Aaa-Tttt"
       // The parameter of accum is a string which includes only letters from a..z and A..Z
       {
-	char *output;
-	output = Accum("HelLo");
-	printf("Accum output is %s\n", output);
+	      char *output;
+	      output = Accum("HelLo");
+	      printf("Accum output is %s\n", output);
       }
       break;
     case 99:
