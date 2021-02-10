@@ -51,6 +51,9 @@ main.o : main.c kata.h
 
 ide: ide-vsc
 
+ide-atom:
+	atom . &
+
 ide-cb:
 	codeblocks $(TARGET).cbp &
 
