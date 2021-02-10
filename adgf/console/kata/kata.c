@@ -153,7 +153,7 @@ int FindLongSeq(int numList[], int length)
 
 
 #define ELEMENT 5
-int *posfun(int *numlist, int length, int position)
+int posfun(int *numlist, int length, int position)
 {
   int value = -1;
 
@@ -278,9 +278,12 @@ void kata(int number)
       // pointer to a function.
       {
         int arrList[9] = {11,22,33,44,55,66,77,88,99};
-	int length = sizeof(arrList) / sizeof(arrList[0]);
-        int posValue = posfun(arrList, length, ELEMENT);
-      	/* Implement posfun() to find and return the value at position ELEMENT in arrList*/
+	      int length = sizeof(arrList) / sizeof(arrList[0]);
+        // define pointer to function 'posfun'
+        int (*posfun_ptr)(int[],int,int);
+        posfun_ptr = &posfun;
+        // call 'posfun' via the function pointer
+        int posValue = (*posfun_ptr)(arrList, length, ELEMENT);
       	printf("Value at position %d = %d\n",ELEMENT,posValue);
       }
       break;
