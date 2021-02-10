@@ -195,6 +195,10 @@ char *Accum(char *input)
     *buffer++ = '-';
   }
 
+  // remove last '-' character
+  buffer--;
+  *buffer = 0;
+
   return output;
 }
 
