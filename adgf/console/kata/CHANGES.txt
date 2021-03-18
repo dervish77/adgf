@@ -1,6 +1,7 @@
 REVISION history for kata
 -------------------------
 
+0.2	03/18/2021  Testing ssh access
 0.1	01/22/2021  Includes implementations for katas 1 thru 7
 0.0  	01/15/2021  Originated
 
