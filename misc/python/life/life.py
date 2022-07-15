@@ -6,17 +6,20 @@ import sys, pygame
 
 pygame.init()
 
+# screen and grid stuff
 size = width, height = 800, 800
 
 gridsize = 40
 
-gridx = width / gridsize
-gridy = height / gridsize
+gridx = width // gridsize
+gridy = height // gridsize
 
+# some colors
 black = 0, 0, 0
 gridcolor = pygame.Color("green")
 wincolor = pygame.Color("white")
 
+# game states
 state_idle   = 0
 state_title  = 1
 state_play   = 2
@@ -38,26 +41,26 @@ def draw_centered_image(image_name):
 
 
 def draw_grid_lines():
-	# draw horizontal grid lines
-	y_incr = 0
-	for y in range (0, gridy):
-	    y_incr = y_incr + gridsize
-            start = [0, y_incr]
-            end = [width, y_incr]
-	    pygame.draw.line(screen, gridcolor, start, end, 1)
+    # draw horizontal grid lines
+    y_incr = 0
+    for y in range (0, gridy):
+        y_incr = y_incr + gridsize
+        start = [0, y_incr]
+        end = [width, y_incr]
+        pygame.draw.line(screen, gridcolor, start, end, 1)
 
 	# draw vertical grid lines
-	x_incr = 0
-	for x in range (0, gridx):
-	    x_incr = x_incr + gridsize
-            start = [x_incr, 0]
-            end = [x_incr, height]
-	    pygame.draw.line(screen, gridcolor, start, end, 1)
+    x_incr = 0
+    for x in range (0, gridx):
+        x_incr = x_incr + gridsize
+        start = [x_incr, 0]
+        end = [x_incr, height]
+        pygame.draw.line(screen, gridcolor, start, end, 1)
 
 
 def draw_filled_grid_cell(position):
-	gx = position[0] / gridsize
-	gy = position[1] / gridsize
+	gx = position[0] // gridsize
+	gy = position[1] // gridsize
 	gridrect = pygame.Rect(gx * gridsize, gy * gridsize, gridsize, gridsize)
 	pygame.draw.rect(screen, gridcolor, gridrect, 0)
 
@@ -89,7 +92,7 @@ while not_done:
         pygame.display.flip()
 
     elif game_state == state_play:
-        if mouse_down == 1: 
+        if mouse_down == 1:
             draw_filled_grid_cell(event.pos)
             pygame.display.flip()
 
@@ -103,4 +106,3 @@ while not_done:
     mouse_down = 0
 
 sys.exit()
-

@@ -2,7 +2,7 @@
 #
 
 PY  = /cygdrive/c/Python27/python
-EXE = /cygdrive/c/Python27/python
+EXE = python
 
 #-------------------------------------------------------------------------
 
@@ -17,7 +17,7 @@ all: execute
 execute: $(TARGET).py
 	$(EXE) $(TARGET).py
 
-idle: 
+idle:
 	/usr/bin/idle $(TARGET).py
 
 #-------------------------------------------------------------------------
@@ -26,5 +26,4 @@ clean:
 	rm -f *.o *% *~
 
 realclean:
-	rm -f *.o *% *~ core 
-
+	rm -f *.o *% *~ core
