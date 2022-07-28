@@ -1,8 +1,10 @@
 # makefile for python programs
 #
 
-PY  = /cygdrive/c/Python27/python
-EXE = python
+PY  = python
+EXE = python3
+
+IDLE = idle3
 
 #-------------------------------------------------------------------------
 
@@ -15,7 +17,7 @@ default: execute
 all: execute
 
 execute: $(TARGET).py
-	$(EXE) $(TARGET).py
+	-@$(EXE) $(TARGET).py
 
 idle:
 	/usr/bin/idle $(TARGET).py

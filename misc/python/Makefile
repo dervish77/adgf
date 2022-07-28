@@ -5,7 +5,7 @@
 #
 #
 
-DIRS = ball hello life
+DIRS = ball cribbage hello life testgui
 
 
 #
@@ -50,4 +50,3 @@ tar:
 	tar -cvf $(PKG_NAME).tar $(PKG_HOME) ; \
 	gzip $(PKG_NAME).tar ; \
 	mv $(PKG_NAME).tar.gz $(PKG_NAME).tgz
-
