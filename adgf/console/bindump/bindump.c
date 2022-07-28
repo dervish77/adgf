@@ -163,7 +163,7 @@ DumpBlock(int size, int bytes_per_row, FILE *out_file_p)
  *  RETURNS:
  *	none
  */
-void
+int
 main(int argc, char **argv)
 {
    int		i;
