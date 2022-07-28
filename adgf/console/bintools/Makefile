@@ -5,7 +5,7 @@
 #*     These are general purpose utilities for building images.
 #*
 #*	"make all" to build all utilities
-#*	
+#*
 #*	"make test" to build and unit test all utilities
 #*
 #*
@@ -20,14 +20,14 @@ VERSION = 2.0
 # set files to compile
 FILES = append.xxx bincat.xxx bindiff.xxx bindump.xxx bingen.xxx \
 	binjoin.xxx binsplit.xxx bintoc.xxx crcgen.xxx prepend.xxx \
-	srectoc.xxx 
+	srectoc.xxx
 
 TARGETS = $(FILES:.xxx=)
 
 TARGETS2 = $(FILES:.xxx=.exe)
 
 #PREFIX		= $(CROSS_COMPILE)
-PREFIX		= 
+PREFIX		=
 
 CC			= $(PREFIX)gcc
 AS			= $(PREFIX)as
@@ -92,6 +92,7 @@ srectoc : src/srectoc.c
 
 install: all
 	@-echo "Install - installing to ./bin"
+	mkdir ./bin
 	cp $(TARGETS) bin
 	rm -f $(TARGETS)
 
@@ -107,11 +108,12 @@ distclean: realclean
 
 # ========================================================================
 
-test: install testhdr testapp testcat testc testcrc testdiff 
+test: testhdr install testapp testcat testc testcrc testdiff
 
 testhdr:
 	@-echo " "
 	@-echo "Testing binary utilities..."
+	@-rm -rf ./bin
 	@-rm -f *.bin *.uu
 	@-echo " "
 
@@ -180,7 +182,7 @@ TAR_FILES = 	\
 	$(TAR_HOME)/Makefile		\
 	$(TAR_HOME)/bin				\
 	$(TAR_HOME)/man/*			\
-	$(TAR_HOME)/src/*		
+	$(TAR_HOME)/src/*
 
 tar: distclean
 	cd .. ; \
@@ -190,4 +192,3 @@ tar: distclean
 
 # ========================================================================
 # end of bintools makefile
-

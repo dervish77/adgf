@@ -28,7 +28,7 @@
 static unsigned char array1[MAX_ROM_SIZE], array2[MAX_ROM_SIZE];
 
 
-int 
+int
 main(int argc, char *argv[])
 {
    int i;
@@ -37,18 +37,18 @@ main(int argc, char *argv[])
 
    printf("\nbindiff -- Diff'ing binary files\n");
 
-   if((input1=fopen(argv[1], "rb")) == NULL) 
-      return;
+   if((input1=fopen(argv[1], "rb")) == NULL)
+      return 0;
 
-   if((input2=fopen(argv[2], "rb")) == NULL) 
-     return;
+   if((input2=fopen(argv[2], "rb")) == NULL)
+     return 0;
 
    fread(array1, 1, MAX_ROM_SIZE, input1);
    fread(array2, 1, MAX_ROM_SIZE, input2);
 
    for (i=0; i <  MAX_ROM_SIZE; i++)
    {
-      if (array1[i] != array2[i]) 
+      if (array1[i] != array2[i])
       {
          printf("OFFSET = %08d, FILE1 = %02x, FILE2 = %02x\n", i, array1[i], array2[i]);
          differ = 1;
@@ -65,5 +65,3 @@ main(int argc, char *argv[])
 
    return 0;
 }  /*end main*/
-
-
