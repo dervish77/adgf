@@ -15,7 +15,7 @@ INSTALL_MAN_DIR = $(HOME)/man/man1
 
 VER = 0.9
 
-OBJECTS = bindump.o  
+OBJECTS = bindump.o
 
 TARGET = bindump
 
@@ -45,6 +45,16 @@ uninstall:
 	( rm -f $(INSTALL_DIR)/$(TARGET) )
 	( rm -f $(INSTALL_MAN_DIR)/$(TARGET).1 )
 
+#
+# unit testing
+#
+
+test : default
+	@-echo "Testing bindump"
+	./$(TARGET) -n 500 TEST.bin
+	./$(TARGET) -n 500 -r 8 TEST.txt
+	./$(TARGET) -n 500 -r 4 -a TEST.txt
+	./$(TARGET) -h
 
 #
 # make distribution file
