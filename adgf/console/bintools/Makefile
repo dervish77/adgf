@@ -99,7 +99,7 @@ install: all
 # ========================================================================
 
 clean:
-	rm -f *% *~ *.bak src/*% src/*~ src/*.bak
+	rm -f *% *~ *.bak src/*% src/*~ src/*.bak *.0* *.c
 
 realclean: clean
 	rm -f $(TARGETS) $(TARGETS2) *.bin *.uu testout.c bin/*
@@ -108,7 +108,7 @@ distclean: realclean
 
 # ========================================================================
 
-test: testhdr install testapp testcat testc testcrc testdiff
+test: testhdr install testapp testcat testc testcrc testdiff testsplit
 
 testhdr:
 	@-echo " "
@@ -152,19 +152,23 @@ testcrc:
 	./bin/crcgen crc2.bin
 	./bin/bindump crc2.bin
 
-testuu:
-	@-echo "-- testing uuencode/uudecode ..."
-	./bin/bingen  -n 1024  -c  -o uu.bin
-	cat uu.bin | uuencode uu.bin > uu.uu
-	uudecode -o uu2.bin uu.uu
-	./bin/bindiff uu.bin uu2.bin
-
 testsplit:
 	@-echo "-- testing binsplit/binjoin ..."
 	./bin/bingen  -n 100024  -c  -o split.bin
 	./bin/binsplit -n 8192 -i split.bin -r split.out
 	./bin/binjoin -r split.out -o split2.bin
 	./bin/bindiff split.bin split2.bin
+
+testsrec:
+	@-echo "-- testing srectoc ..."
+	./bin/srectoc -I test/srec.txt -O srecout.c -A mydata
+
+testuu:
+	@-echo "-- testing uuencode/uudecode ..."
+	./bin/bingen  -n 1024  -c  -o uu.bin
+	cat uu.bin | uuencode uu.bin > uu.uu
+	uudecode -o uu2.bin uu.uu
+	./bin/bindiff uu.bin uu2.bin
 
 # ========================================================================
 

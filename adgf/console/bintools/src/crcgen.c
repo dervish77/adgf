@@ -101,13 +101,13 @@ fputc((Int16)((calcCRC & 0xff)),input);
 
 
 /*display crc and size of the file*/
-printf("\nFile CRC  : %X", calcCRC);
+printf("\nFile CRC  : %lX", calcCRC);
 
 /*software download module expects the address where contents of that address
 indicates CRC */
 textsize=textsize-1;
 
-printf("\nFile Size : %X\n\n", textsize);
+printf("\nFile Size : %lX\n\n", textsize);
 
 /*move the file pointer at the begining and overwrite the correct length*/
 fseek(input, 0L, 0);
