@@ -256,9 +256,12 @@ main(int argc, char **argv)
       /* else, prompt for next block */
       else
       {
-         printf("\nDump next block (y/n)? ");
+         printf("\nDump next block (Y/n)? ");
 
-         gets( &response[0] );
+         if ( fgets( &response[0], 20, stdin ) == NULL )
+         {
+            exit(1);
+         }
 
          if ( (response[0] == 'n') || (response[0] == 'N'))
          {
