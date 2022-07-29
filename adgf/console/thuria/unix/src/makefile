@@ -5,12 +5,12 @@
 #
 include ../thuria.mk
 
-# 
+#
 # you should not need to edit below this line
 #
 
 OBJS    = main.o intro.o game.o cmds.o debug.o map.o \
-          object.o room.o special.o magic.o rank.o verb.o  
+          object.o room.o special.o magic.o rank.o verb.o
 
 TARGET  = thuria
 
@@ -18,14 +18,14 @@ TARGET  = thuria
 # compiler options
 
 # LIBS = -lm
-LIBS = 
+LIBS =
 
-CFLAGS  = -O $(DEBUG)
+CFLAGS  = -O -Wno-unused-result $(DEBUG)
 
-INCLUDE = -I. 
+INCLUDE = -I.
 
 
-# 
+#
 # begin dependancies
 #
 
@@ -61,19 +61,19 @@ map.o : map.c main.h
 object.o : object.c main.h object.h
 	$(CC) $(INCLUDE) $(CFLAGS) -c object.c
 
-special.o : special.c main.h special.h 
+special.o : special.c main.h special.h
 	$(CC) $(INCLUDE) $(CFLAGS) -c special.c
 
-magic.o : magic.c main.h magic.h 
+magic.o : magic.c main.h magic.h
 	$(CC) $(INCLUDE) $(CFLAGS) -c magic.c
 
-rank.o : rank.c main.h rank.h 
+rank.o : rank.c main.h rank.h
 	$(CC) $(INCLUDE) $(CFLAGS) -c rank.c
 
-verb.o : verb.c main.h verb.h 
+verb.o : verb.c main.h verb.h
 	$(CC) $(INCLUDE) $(CFLAGS) -c verb.c
 
-room.o : room.c main.h room.h 
+room.o : room.c main.h room.h
 	$(CC) $(INCLUDE) $(CFLAGS) -c room.c
 
 
@@ -83,5 +83,4 @@ clean:
 	rm -f *.o *% *~
 
 realclean:
-	rm -f *.o *% *~ *.sav core $(TARGET) $(TARGET).exe 
-
+	rm -f *.o *% *~ *.sav core $(TARGET) $(TARGET).exe
