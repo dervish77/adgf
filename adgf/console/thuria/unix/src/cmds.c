@@ -1790,35 +1790,52 @@ void HandleKill(GAME_S_T *game)
       switch(cr)
       {
          case RM_THRONE:
-            if (object[OBJ_SKELETON].key, game->list[1].cmd)
+            if ( strcmp( object[OBJ_SKELETON].key, game->list[1].cmd ) == 0 )
             {
                printf("\nYou stab at where the skeleton's heart used to be and it \ncrumples to the floor.\n");
                game->score += special[SE_SKEL_DEAD].score;
                map[cr].special = SE_SKEL_DEAD;
             }
+            else
+            {
+               printf("\nYou can't kill that.\n");
+            }
             break;
 
          case RM_BEAVER_POND:
-            if (object[OBJ_BEAVER].key, game->list[1].cmd)
+            printf("DEBUG: HandleKill() - key %s cmd %s\n", object[OBJ_BEAVER].key, game->list[1].cmd);
+            if ( strcmp( object[OBJ_BEAVER].key, game->list[1].cmd ) == 0 )
             {
                printf("\nYou cut the poor defenseless beaver cleanly in half.\n");
                map[cr].special = SE_BEAV_DEAD;
             }
+            else
+            {
+               printf("\nYou can't kill that.\n");
+            }
             break;
 
          case RM_RUG_ROOM:
-            if (object[OBJ_BEAR].key, game->list[1].cmd)
+            if ( strcmp( object[OBJ_BEAR].key, game->list[1].cmd ) == 0 )
             {
                printf("\nYou attack the poor sleeping bear, killing it after several blows.\n");
                map[cr].special = SE_BEAR_DEAD;
             }
+            else
+            {
+               printf("\nYou can't kill that.\n");
+            }
             break;
 
          case RM_QUESTION:
-            if (object[OBJ_MAN].key, game->list[1].cmd)
+            if ( strcmp( object[OBJ_MAN].key, game->list[1].cmd ) == 0)
             {
                printf("\nYou try to attack the strange man, but he is surprisingly quick \nand cuts you cleanly in half with his scythe.\n");
                PlayerDied(game);
+            }
+            else
+            {
+               printf("\nYou can't kill that.\n");
             }
             break;
 
