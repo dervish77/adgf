@@ -1803,7 +1803,6 @@ void HandleKill(GAME_S_T *game)
             break;
 
          case RM_BEAVER_POND:
-            printf("DEBUG: HandleKill() - key %s cmd %s\n", object[OBJ_BEAVER].key, game->list[1].cmd);
             if ( strcmp( object[OBJ_BEAVER].key, game->list[1].cmd ) == 0 )
             {
                printf("\nYou cut the poor defenseless beaver cleanly in half.\n");
@@ -1818,7 +1817,7 @@ void HandleKill(GAME_S_T *game)
          case RM_RUG_ROOM:
             if ( strcmp( object[OBJ_BEAR].key, game->list[1].cmd ) == 0 )
             {
-               printf("\nYou attack the poor sleeping bear, killing it after several blows.\n");
+               printf("\nYou attack the sleeping bear, killing it after several blows.\n");
                map[cr].special = SE_BEAR_DEAD;
             }
             else
