@@ -1,6 +1,9 @@
 CHANGES	 history for DrawSdl
 ----------------------------
 
+0.7.7
+    - fixed typo in font name for DemoText function in demo and unit test code
+
 0.7.6
     - fixed compile errors with latest version of g++
 
