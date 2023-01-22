@@ -2,8 +2,8 @@
 Servo servo;
 int servoPin = 11;
 int angle = 0;
-int interval = 5;
-int delayValue = 50;
+int interval = 3;
+int delayValue = 20;
 int increment = 1;
 
 void printAngle( int value )
