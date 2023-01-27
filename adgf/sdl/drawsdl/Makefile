@@ -14,7 +14,7 @@ include $(MODROOT)/module.mk
 ##include depend.mk
 
 
-DISTVER=0.7.6
+DISTVER=0.7.7
 
 
 #------------------------------------------------------------------------

@@ -45,7 +45,7 @@ typedef char BOOLEAN_T;
 int		base = 0;
 
 
-/*  CountData	- counts bytes in binary file 
+/*  CountData	- counts bytes in binary file
  *
  *  PARAMETERS:
  *	in_file_p	- input file pointer
@@ -53,7 +53,7 @@ int		base = 0;
  *  RETURNS:
  *	size		- number of bytes converted
  */
-int 
+int
 CountData(FILE *in_file_p)
 {
    int c;
@@ -68,7 +68,7 @@ CountData(FILE *in_file_p)
 }
 
 
-/*  CopyData	- copy binary data to appended file 
+/*  CopyData	- copy binary data to appended file
  *
  *  PARAMETERS:
  *	in_file_p	- input file pointer
@@ -77,7 +77,7 @@ CountData(FILE *in_file_p)
  *  RETURNS:
  *	count		- number of bytes copied
  */
-int 
+int
 CopyData(FILE *in_file_p, FILE *out_file_p, int size)
 {
    int i;
@@ -85,11 +85,11 @@ CopyData(FILE *in_file_p, FILE *out_file_p, int size)
 
    unsigned char c;
 
-   while(!feof(in_file_p) && (count < size)) 
+   while(!feof(in_file_p) && (count < size))
    {
       c = fgetc(in_file_p);
 
-      if (!feof(in_file_p)) 
+      if (!feof(in_file_p))
       {
          fputc(c, out_file_p);
          count++;
@@ -113,7 +113,7 @@ CopyData(FILE *in_file_p, FILE *out_file_p, int size)
  *  RETURNS:
  *	none
  */
-int 
+int
 main(int argc, char **argv)
 {
    int		i, data = 0, size = 256, suffix = 1, count = 256;
@@ -131,7 +131,7 @@ main(int argc, char **argv)
    switch (argc)
    {
       case 1:
-         fprintf(stderr, 
+         fprintf(stderr,
 		"Usage:  %s [-h] [-n bytes] [-i file] [-r file] [-s]\n", argv[0]);
          exit(1);
 
@@ -145,8 +145,8 @@ main(int argc, char **argv)
                {
 
                   case 'h':
-                     fprintf(stderr, 
-			"Usage:  %s [-h] [-n bytes] [-i file] [-r file] [-s]\n", 
+                     fprintf(stderr,
+			"Usage:  %s [-h] [-n bytes] [-i file] [-r file] [-s]\n",
 			argv[0]);
                      fprintf(stderr,"    -h        get help\n");
                      fprintf(stderr,"    -n bytes  chunk size\n");
@@ -210,10 +210,10 @@ main(int argc, char **argv)
       exit(1);
    }
 
-   /* 
-    *  output file name, file size, and chunk size to .000 file 
+   /*
+    *  output file name, file size, and chunk size to .000 file
     */
-   sprintf(output_file_name, "%s.000", root_file_name, suffix);
+   sprintf(output_file_name, "%s.000", root_file_name);
 
    if (verbose) printf("binsplit -- Opening output file '%s' ...\n", output_file_name);
 
@@ -227,17 +227,17 @@ main(int argc, char **argv)
    fprintf(out_file_p, "%s %d %d\n", input_file_name, CountData( in_file_p ), size );
    fclose(out_file_p);
 
-   /* 
-    *  reset input file to start of file 
+   /*
+    *  reset input file to start of file
     */
    fseek(in_file_p, 0L, SEEK_SET);
 
-   /* 
-    *  copy data to split output files until no more input 
+   /*
+    *  copy data to split output files until no more input
     */
    while (count == size )
    {
-      if (feof(in_file_p)) 
+      if (feof(in_file_p))
          break;
 
       sprintf(output_file_name, "%s.%03d", root_file_name, suffix);
@@ -252,7 +252,7 @@ main(int argc, char **argv)
       }
 
       count = CopyData(in_file_p, out_file_p, size);
-   
+
       fclose(out_file_p);
 
       suffix++;

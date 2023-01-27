@@ -15,11 +15,12 @@
  *	Date:	02/12/96
  *
  *	Revisions:
- *	  0.8  02/21/96  added column dividers for binary section 
+ *	  0.8  02/21/96  added column dividers for binary section
  *	  0.6  02/21/96  fixed bug in binary output
  *	  0.0  02/12/96  Originated
  *****************************************************************************/
 
+#include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -46,7 +47,7 @@ BOOLEAN_T	suppress_ascii = FALSE;
 int		base = 0;
 
 
-/*  DumpBlock	- read a block of size bytes from input file 
+/*  DumpBlock	- read a block of size bytes from input file
  *		and send to output file
  *
  *  PARAMETERS:
@@ -57,7 +58,7 @@ int		base = 0;
  *  RETURNS:
  *	eof		- TRUE if at EOF
  */
-BOOLEAN_T 
+BOOLEAN_T
 DumpBlock(int size, int bytes_per_row, FILE *out_file_p)
 {
    int r, b;
@@ -108,7 +109,7 @@ DumpBlock(int size, int bytes_per_row, FILE *out_file_p)
          }
 
          row_array[b] = (unsigned char) c;
- 
+
          fprintf(out_file_p, "%02X", row_array[b]);
 
          if ( ((b+1) % 4) == 0 )
@@ -161,7 +162,7 @@ DumpBlock(int size, int bytes_per_row, FILE *out_file_p)
  *  RETURNS:
  *	none
  */
-int 
+int
 main(int argc, char **argv)
 {
    int		i;
@@ -178,7 +179,7 @@ main(int argc, char **argv)
    switch (argc)
    {
       case 1:
-         fprintf(stderr, 
+         fprintf(stderr,
 		"Usage:  %s [-h] [-a] [-n NNN] [-r BB] file\n", argv[0]);
          exit(1);
 
@@ -191,8 +192,8 @@ main(int argc, char **argv)
                switch(argv[i][1])
                {
                   case 'h':
-                     fprintf(stderr, 
-			"Usage:  %s [-h] [-a] [-n NNN] [-r BB] file\n", 
+                     fprintf(stderr,
+			"Usage:  %s [-h] [-a] [-n NNN] [-r BB] file\n",
 			argv[0]);
                      fprintf(stderr,"    -h      get help\n");
                      fprintf(stderr,"    -a      suppress ascii\n");

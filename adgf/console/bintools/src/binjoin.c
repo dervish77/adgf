@@ -44,7 +44,7 @@ typedef char BOOLEAN_T;
 int		base = 0;
 
 
-/*  CountData	- counts bytes in binary file 
+/*  CountData	- counts bytes in binary file
  *
  *  PARAMETERS:
  *	in_file_p	- input file pointer
@@ -52,7 +52,7 @@ int		base = 0;
  *  RETURNS:
  *	size		- number of bytes converted
  */
-int 
+int
 CountData(FILE *in_file_p)
 {
    int c;
@@ -67,7 +67,7 @@ CountData(FILE *in_file_p)
 }
 
 
-/*  CopyData	- copy binary data to appended file 
+/*  CopyData	- copy binary data to appended file
  *
  *  PARAMETERS:
  *	in_file_p	- input file pointer
@@ -76,7 +76,7 @@ CountData(FILE *in_file_p)
  *  RETURNS:
  *	count		- number of bytes copied
  */
-int 
+int
 CopyData(FILE *in_file_p, FILE *out_file_p, int size)
 {
    int i;
@@ -84,11 +84,11 @@ CopyData(FILE *in_file_p, FILE *out_file_p, int size)
 
    unsigned char c;
 
-   while(!feof(in_file_p)) 
+   while(!feof(in_file_p))
    {
       c = fgetc(in_file_p);
 
-      if (!feof(in_file_p)) 
+      if (!feof(in_file_p))
       {
          fputc(c, out_file_p);
          count++;
@@ -108,7 +108,7 @@ CopyData(FILE *in_file_p, FILE *out_file_p, int size)
  *  RETURNS:
  *	none
  */
-int 
+int
 main(int argc, char **argv)
 {
    int		i, data = 0, size = 256, suffix = 1, count = 0;
@@ -133,7 +133,7 @@ main(int argc, char **argv)
    switch (argc)
    {
       case 1:
-         fprintf(stderr, 
+         fprintf(stderr,
 		"Usage:  %s [-h] [-r file] [-o file] [-s]\n", argv[0]);
          exit(1);
 
@@ -147,8 +147,8 @@ main(int argc, char **argv)
                {
 
                   case 'h':
-                     fprintf(stderr, 
-			"Usage:  %s [-h] [-r file] [-o file] [-s]\n", 
+                     fprintf(stderr,
+			"Usage:  %s [-h] [-r file] [-o file] [-s]\n",
 			argv[0]);
                      fprintf(stderr,"    -h        get help\n");
                      fprintf(stderr,"    -r file   root file name\n");
@@ -197,10 +197,10 @@ main(int argc, char **argv)
 
    printf("\nbinjoin -- Joining binary file \n");
 
-   /* 
-    *  open and read .000 file  
+   /*
+    *  open and read .000 file
     */
-   sprintf(input_file_name, "%s.000", root_file_name, suffix);
+   sprintf(input_file_name, "%s.000", root_file_name);
 
    if (verbose) printf("binjoin -- Opening input file '%s' ...\n", input_file_name);
 
@@ -219,8 +219,8 @@ main(int argc, char **argv)
    if (verbose) printf("binjoin -- chunk size         - %d\n", zero_chunk);
 
 
-   /* 
-    *  open output file based on either .000 file or -o option 
+   /*
+    *  open output file based on either .000 file or -o option
     */
    if ( override )
       sprintf(output_file_name, "%s", output2_file_name);
@@ -237,8 +237,8 @@ main(int argc, char **argv)
    }
 
 
-   /* 
-    *  copy data from split input files until all bytes copied 
+   /*
+    *  copy data from split input files until all bytes copied
     */
    while (count < zero_size )
    {
@@ -254,7 +254,7 @@ main(int argc, char **argv)
       }
 
       count = count + CopyData(in_file_p, out_file_p, zero_chunk);
-   
+
       fclose(in_file_p);
 
       suffix++;

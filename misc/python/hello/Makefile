@@ -2,9 +2,9 @@
 #
 
 PY  = python
-EXE = python
+EXE = python3
 
-IDLEDIR = /cygdrive/c/Python27/Lib/idlelib
+IDLE = idle3
 
 #-------------------------------------------------------------------------
 

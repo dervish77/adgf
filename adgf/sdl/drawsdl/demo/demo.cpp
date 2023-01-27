@@ -694,7 +694,7 @@ void DemoPolygons()
     // call this to wait for user to 'X' out
     drawWaitQuit();
 }
-
+
 
 void DemoSprites()
 {
@@ -798,7 +798,7 @@ void DemoFull()
 
     // initialize the drawing package
     drawInit(WIDTH, HEIGHT, BPP);
-    drawTextInit("fonts/ARIAL.TTF");
+    drawTextInit("fonts/ARIAL1.TTF");
 
     // retrieve screen width and height for later use
     w = drawGetWidth();

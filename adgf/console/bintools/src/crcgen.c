@@ -3,8 +3,8 @@
  *
  *     Description:
  *
- *     This file is a program file for calculating CRC of operational image 
- *     and decompression module.    
+ *     This file is a program file for calculating CRC of operational image
+ *     and decompression module.
  *
  *     Assumptions:   N/A
  *
@@ -40,20 +40,20 @@ static unsigned char array[2097152];
  *       down at the end of the file.
  *
  *  Parameters:
- *       expects file name.  
+ *       expects file name.
  *  Returns:
  *
- *	
+ *
  *  External variables:
  *
  *      None
  *
  * *%E%***********************************************************************
- */ 
+ */
 int main(int argc, char *argv[])
 {
-  
-unsigned long  textsize, flashsize; 
+
+unsigned long  textsize, flashsize;
 unsigned long calcCRC;
 unsigned char ch;
 int i;
@@ -63,8 +63,8 @@ FILE *input;
   display the correct length of the file in the first byte. Calculate CRC and
   display it in the last byte.*/
 
-if((input=fopen(argv[1], "r+b")) == NULL) 
-  return;
+if((input=fopen(argv[1], "r+b")) == NULL)
+  return 0;
 
 /*move the file pointer to the beginning of the file */
 fseek(input,0L,2);
@@ -77,7 +77,7 @@ fseek(input,0L,0);
 i=0;
 while(!feof(input))
   {
-   
+
     ch=fgetc(input);
     if(!feof(input)){
     array[i]=ch;
@@ -101,13 +101,13 @@ fputc((Int16)((calcCRC & 0xff)),input);
 
 
 /*display crc and size of the file*/
-printf("\nFile CRC  : %X", calcCRC);
+printf("\nFile CRC  : %lX", calcCRC);
 
 /*software download module expects the address where contents of that address
 indicates CRC */
 textsize=textsize-1;
 
-printf("\nFile Size : %X\n\n", textsize);
+printf("\nFile Size : %lX\n\n", textsize);
 
 /*move the file pointer at the begining and overwrite the correct length*/
 fseek(input, 0L, 0);
@@ -140,7 +140,7 @@ return 0;
  *	Size    -  size in bytes of the memory to be CRC'ed.
  *  Returns:
  *	32 bit CRC for the block of memory tested.
- *	
+ *
  *  External variables:
  *
  *      None
@@ -156,11 +156,11 @@ unsigned long CalculateCRC(unsigned char *array, unsigned long Size )
   unsigned char c, ch;
   unsigned long size;
   size = Size;
-  
- 
+
+
   crc = 0xFFFFFFFF;
   tmptr = array;
-  
+
  /*move the array by 4 positions*/
    for(i=0; i<=3; i++)
      {
@@ -174,7 +174,7 @@ unsigned long CalculateCRC(unsigned char *array, unsigned long Size )
 
 
    tmptr--;
- 
+
  do
     {
        tmptr++;
@@ -182,7 +182,7 @@ unsigned long CalculateCRC(unsigned char *array, unsigned long Size )
       crc = ((crc>>8) & 0x00FFFFFF) ^ crcTable[ (crc^c) & 0xFF];
 
     }while(tmptr!= ((array+size)-1));
-      
+
     return( crc^0xFFFFFFFF );
 }
 
@@ -196,13 +196,13 @@ unsigned long CalculateCRC(unsigned char *array, unsigned long Size )
  *
  *	This function generates a table of 32 bit CRCs. The size of the table
  *      is 256*4 = 1024 bytes long. It is used by func CalculateCRC to calc
- *      a CRC for a block of memory.    
+ *      a CRC for a block of memory.
  *
  *  Parameters:
  *      none
- *      
+ *
  *  Returns:
- *	none 
+ *	none
  *
  *  External variables:
  *
@@ -212,11 +212,11 @@ unsigned long CalculateCRC(unsigned char *array, unsigned long Size )
  */
 void CRCgen( void )
 {
-  
+
   unsigned long crc, poly;
   int     i, j;
-  
-  
+
+
   poly = 0xEDB88320L;
   for (i=0; i<256; i++)
     {
@@ -234,9 +234,5 @@ void CRCgen( void )
 	}
 	crcTable[i] = crc;
     }
-  
+
 }
-
-
-
-
