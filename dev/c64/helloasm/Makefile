@@ -1,57 +1,41 @@
-# makefile for C64 hello world
+# makefile for C64 hello world in assembly
 #
 
-CC65_TARGET = c64
+SOURCE  := main.asm
+PROGRAM := main.prg
+ADDR    := 0x1000
 
-#---------------------------------------
+#------------------------------------------
 
-SOURCES = helloc.c
+CC = cl65
 
-PROGRAM = helloc
-
-ifdef CC65_TARGET
-CC      = cl65
-CFLAGS  = -t $(CC65_TARGET) --create-dep $(<:.c=.d) -O
-LDFLAGS = -t $(CC65_TARGET) -m $(PROGRAM).map
-EMU     = x64sc
-else
-CC      = gcc
-CFLAGS  = -MMD -MP -O
-LDFLAGS = -Wl,-Map,$(PROGRAM).map
-endif
+EMU = x64sc
 
 ########################################
 
 .SUFFIXES:
-.PHONY: all clean realclean
+.PHONY: all run clean realclean
+
+default: all
 
 all: $(PROGRAM)
 
-ifneq ($(MAKECMDGOALS),clean)
--include $(SOURCES:.c=.d)
-endif
-
-%.o: %.c
-	$(CC) -c $(CFLAGS) -o $@ $<
-
-$(PROGRAM): $(SOURCES:.c=.o)
-	$(CC) $(LDFLAGS) -o $@ $^
+$(PROGRAM): $(SOURCE)
+	$(CC) --start-addr $(ADDR) -o $(PROGRAM) -t c64 -C c64-asm.cfg $(SOURCE)
 
 clean:
-	$(RM) $(SOURCES:.c=.o) $(SOURCES:.c=.d) $(PROGRAM) $(PROGRAM).map
+	rm -f *.o *.s *% *~
 
 realclean: clean
+	rm -f core $(PROGRAM)
 
 #------------------------------------------
 
 test: run
 
 run: all
-ifdef CC65_TARGET
 	$(EMU) -autostart $(PROGRAM) &
-else
-	$(PROGRAM)
-endif
+	-@echo "Type 'sys 4096' to run program"
 
 #------------------------------------------
 
