@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+
+ <meta name="GENERATOR" content="LinuxDoc-Tools 0.9.21">
+ <title>cc65 Compiler Intro: The easy way (using the cl65 utility)</title>
+ <link href="http://www.cc65.org/doc/intro-6.html" rel="next">
+ <link href="http://www.cc65.org/doc/intro-4.html" rel="previous">
+ <link href="http://www.cc65.org/doc/intro.html#toc5" rel="contents">
+</head><body>
+<a href="http://www.cc65.org/doc/intro-6.html">Next</a>
+<a href="http://www.cc65.org/doc/intro-4.html">Previous</a>
+<a href="http://www.cc65.org/doc/intro.html#toc5">Contents</a>
+<hr>
+<h2><a name="using-cl65"></a> <a name="s5">5.</a> <a href="http://www.cc65.org/doc/intro.html#toc5">The easy way (using the cl65 utility)</a></h2>
+
+
+<p>The <b>cl65</b> utility is able to do all of the steps described above, in just
+one command line, and it has defaults for some options that are very
+well-suited for our example.</p>
+<p>To compile both files into one executable, enter:</p>
+<p>
+</p><blockquote><code>
+</code><pre>        cl65 -O -I ../../include -L ../../lib hello.c text.s
+</pre>
+</blockquote>
+<p></p>
+<p>(The <code>-I</code> option is not needed if you are working under a Unix-like system
+with the include files in their default path, or if the <code>CC65_INC</code>
+environment variable is set correctly. The <code>-L</code> option is not needed if the
+libraries are in their default path, or if the <code>CC65_LIB</code> environment
+variable is set correctly. [Those two environment variables should be set to
+absolute paths.])</p>
+<p>The <b>cl65</b> utility knows how to translate C files into object files (it will
+call the compiler, and then, the assembler). It does know also how to create
+object files from assembly files (it will call only the assembler, for that).
+It knows how to build an executable (it will pass all object files to the
+linker). And finally, it has the C64 as a default target, and will supply the
+correct startup file and runtime library names to the linker, so you don't
+have to care about that.</p>
+<p>The one-liner above should give you a C64 executable named "<code>hello</code>" in the
+current directory.</p>
+<p>For more information about the compile &amp; link utility, see 
+<a href="http://www.cc65.org/doc/cl65.html">cl65.html</a>.</p>
+
+
+
+<hr>
+<a href="http://www.cc65.org/doc/intro-6.html">Next</a>
+<a href="http://www.cc65.org/doc/intro-4.html">Previous</a>
+<a href="http://www.cc65.org/doc/intro.html#toc5">Contents</a>
+</body></html>

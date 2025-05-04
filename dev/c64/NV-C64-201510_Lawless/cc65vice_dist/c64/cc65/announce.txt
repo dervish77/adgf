@@ -1,0 +1,77 @@
+
+I'm proud to announce version 2.12.0 of cc65. cc65 is a complete cross
+development package for 65(C)02 systems, including a powerful macro assembler,
+a C compiler, linker, librarian and several other tools.
+
+cc65 has C and runtime library support for many of the old 6502 machines,
+including
+
+  - The Commodore VIC20, C16/C116, C64, C128, C116, Plus/4, 510 (aka P500),
+    the 600/700 family and newer PET machines (not 2001).
+
+  - The Apple ][ and successors.
+
+  - The Atari 8 bit machines.
+
+  - GEOS for the C64 and C128.
+
+  - The Nintendo Entertainment System (NES).
+
+  - The Supervision console.
+
+  - The Oric Atmos.
+
+  - The Lynx Console.
+
+The libraries are fairly portable, so creating a version for other 6502s
+shouldn't be too much work.
+
+This is mostly a bugfix release, with larger changes in just a few places. The
+latter is especially true for the Apple ][ libraries, which have undergone
+major changes done by Oliver Schmidt.
+
+
+As usual I will provide the complete sources and several binary packages,
+including RPMs for RedHat Enterprise Linux 5. Please note that there are
+separate RPMs for the compiler proper, the docs, and the target specific
+libraries. To develop for one of the predefined target systems you need the
+compiler RPM package *and* one of the target machine packages. Be sure to
+download the documentation package if you're new to cc65.
+
+Precompiled binaries for DOS, OS/2 and Windows are available in ZIP archives.
+As with the RPM packages, you need the package for the development system
+(Windows or whatever.) *and* one or more of the target machine packages, plus
+optionally the doc package.
+
+There's also a windows installer package. The target specific libraries and
+header files are selectable as components from within the installer dialogue.
+
+All packages are available from the MU software FTP server:
+
+        ftp://ftp.musoftware.de/pub/uz/cc65/
+
+More information on cc65 can be found on the cc65 web page at
+
+     	http://www.cc65.org/
+
+There is also a mailing list for discussing cc65 related issues (programming,
+suggestions, bugs, ...). See
+
+        http://www.cc65.org/#List
+
+for information on how to subscribe to this list.
+
+
+
+While I'm the main developer of cc65, it is actually a joint effort. I would
+like to thank the target library developers, all the people on the cc65
+mailing list, all those sending suggestions and feedback, and even those
+bugging me for a new stable release:-) The CREDITS file is probably
+incomplete, but you know who you are.
+
+Thank you!
+
+
+       	Uz
+
+

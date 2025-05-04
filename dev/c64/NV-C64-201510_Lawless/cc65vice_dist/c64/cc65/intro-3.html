@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+
+ <meta name="GENERATOR" content="LinuxDoc-Tools 0.9.21">
+ <title>cc65 Compiler Intro: The assembler</title>
+ <link href="http://www.cc65.org/doc/intro-4.html" rel="next">
+ <link href="http://www.cc65.org/doc/intro-2.html" rel="previous">
+ <link href="http://www.cc65.org/doc/intro.html#toc3" rel="contents">
+</head><body>
+<a href="http://www.cc65.org/doc/intro-4.html">Next</a>
+<a href="http://www.cc65.org/doc/intro-2.html">Previous</a>
+<a href="http://www.cc65.org/doc/intro.html#toc3">Contents</a>
+<hr>
+<h2><a name="s3">3.</a> <a href="http://www.cc65.org/doc/intro.html#toc3">The assembler</a></h2>
+
+
+<p>The assembler translates one assembly source into an object file, for each
+invocation. The assembler is <em>not</em> able to translate more than one source
+file per run.</p>
+<p>Let's translate the "hello.s" and "text.s" files from our example:</p>
+<p>
+</p><blockquote><code>
+</code><pre>        ca65 hello.s
+        ca65 -t c64 text.s
+</pre>
+</blockquote>
+<p></p>
+<p>The <code>-t</code> switch is needed when translating the <code>text.s</code> file, so the
+text is converted from the input character-set (usually ISO-8859-1) into the
+target character-set (PETSCII, in this example) by the assembler. The
+compiler-generated file <code>hello.s</code> does not contain any character constants,
+so specification of a target is not necessary (it wouldn't do any harm,
+however).</p>
+<p>If the assembler does not complain, we should now have two object files (named
+<code>hello.o</code> and <code>text.o</code>) in the current directory.</p>
+<p>For more information about the assembler, see 
+<a href="http://www.cc65.org/doc/ca65.html">ca65.html</a>.</p>
+
+
+
+<hr>
+<a href="http://www.cc65.org/doc/intro-4.html">Next</a>
+<a href="http://www.cc65.org/doc/intro-2.html">Previous</a>
+<a href="http://www.cc65.org/doc/intro.html#toc3">Contents</a>
+</body></html>

@@ -1,0 +1,545 @@
+*** VICE Version 2.4 ***
+OS compiled for: WIN32
+GUI compiled for: NATIVE
+CPU compiled for: 80386
+Compiler used: GCC-4.6.2
+Current OS: Windows XP Home SP3 (32bit X86)
+Current CPU: Unknown AMD CPU
+ 
+Welcome to x64, the free portable C64 Emulator.
+ 
+Current VICE team members:
+D. Lem, A. Matthies, M. Pottendorfer, S. Trikaliotis, M. van den Heuvel,
+C. Vogelgsang, F. Gennari, D. Kahlin, A. Lankila, Groepaz, I. Korb,
+E. Smith, O. Seibert, M. Sutton, U. Schulz, S. Haubenthal, T. Giesel,
+K. Zsolt.
+ 
+This is free software with ABSOLUTELY NO WARRANTY.
+See the "About VICE" command for more info.
+ 
+Loading system file `C:\c64\winvice\C64\kernal'.
+C64MEM: Kernal rev #3.
+Loading system file `C:\c64\winvice\C64\basic'.
+Loading system file `C:\c64\winvice\C64\chargen'.
+Loading system file `C:\c64\winvice\PRINTER\mps803'.
+Palette: Loading palette `C:\c64\winvice\PRINTER\mps803.vpl'.
+Loading system file `C:\c64\winvice\PRINTER\nl10-cbm'.
+Palette: Loading palette `C:\c64\winvice\PRINTER\mps803.vpl'.
+NL10: Printer driver initialized.
+Loading system file `C:\c64\winvice\DRIVES\dos1541'.
+Loading system file `C:\c64\winvice\DRIVES\d1541II'.
+Loading system file `C:\c64\winvice\DRIVES\dos1570'.
+Loading system file `C:\c64\winvice\DRIVES\dos1571'.
+Loading system file `C:\c64\winvice\DRIVES\dos1581'.
+Loading system file `C:\c64\winvice\DRIVES\dos2000'.
+Loading system file `C:\c64\winvice\DRIVES\dos4000'.
+Loading system file `C:\c64\winvice\DRIVES\dos2031'.
+Loading system file `C:\c64\winvice\DRIVES\dos2040'.
+Loading system file `C:\c64\winvice\DRIVES\dos3040'.
+Loading system file `C:\c64\winvice\DRIVES\dos4040'.
+Loading system file `C:\c64\winvice\DRIVES\dos1001'.
+Drive: Finished loading ROM images.
+video_dx9: Failed to prepare for rendering!
+Sound: Available sound devices: dx wmm dummy fs dump wav voc iff aiff mp3 soundmovie
+Keyboard: Loading keymap `C:\c64\winvice\C64\win_pos.vkm'.
+Main CPU: starting at ($FFFC).
+Main CPU: RESET.
+Sound: Opened device `dx', speed 44100Hz, fragment size 23ms, buffer size 116ms
+reSID: MOS6581, filter on, sampling rate 44100Hz - fast
+Drive 8: RESET.
+video_dx9: Failed to prepare for rendering!
+video_dx9: Failed to prepare for rendering!
+video_dx9: Failed to prepare for rendering!
+Writing configuration file `C:\c64\winvice\vice.ini'.
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Sound: Warning - Buffer drained
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Sound: Warning - Buffer drained
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Sound: Warning - Buffer drained
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Sound: Warning - Buffer drained
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Sound: Warning - Buffer drained
+Warning - Your machine is too slow for current settings!
+Sound: Warning - Buffer drained
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Main CPU: RESET.
+Drive 8: RESET.
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Sound: Warning - Buffer drained
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Sound: Warning - Buffer drained
+Warning - Your machine is too slow for current settings!
+Sound: Warning - Buffer drained
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Sound: Warning - Buffer drained
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Sound: Warning - Buffer drained
+Warning - Your machine is too slow for current settings!
+Sound: Warning - Buffer drained
+Warning - Your machine is too slow for current settings!
+Sound: Warning - Buffer drained
+Warning - Your machine is too slow for current settings!
+Sound: Warning - Buffer drained
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Sound: Warning - Buffer drained
+Warning - Your machine is too slow for current settings!
+Sound: Warning - Buffer drained
+Sound: Warning - Buffer drained
+Warning - Your machine is too slow for current settings!
+Sound: Warning - Buffer drained
+Warning - Your machine is too slow for current settings!
+Sound: Warning - Buffer drained
+Warning - Your machine is too slow for current settings!
+Sound: Warning - Buffer drained
+Warning - Your machine is too slow for current settings!
+Sound: Warning - Buffer drained
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Sound: Warning - Buffer drained
+Sound: Warning - Buffer drained
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Sound: Warning - Buffer drained
+Warning - Your machine is too slow for current settings!
+Sound: Warning - Buffer drained
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Sound: Warning - Buffer drained warning repeated 25 times, will now be ignored
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Main CPU: RESET.
+Drive 8: RESET.
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Warning - Your machine is too slow for current settings!
+Writing configuration file `C:\c64\winvice\vice.ini'.
+
+Exiting...
+Sound: Closing device `dx'

@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+
+ <meta name="GENERATOR" content="LinuxDoc-Tools 0.9.21">
+ <title>cc65 Compiler Intro: The linker</title>
+ <link href="http://www.cc65.org/doc/intro-5.html" rel="next">
+ <link href="http://www.cc65.org/doc/intro-3.html" rel="previous">
+ <link href="http://www.cc65.org/doc/intro.html#toc4" rel="contents">
+</head><body>
+<a href="http://www.cc65.org/doc/intro-5.html">Next</a>
+<a href="http://www.cc65.org/doc/intro-3.html">Previous</a>
+<a href="http://www.cc65.org/doc/intro.html#toc4">Contents</a>
+<hr>
+<h2><a name="s4">4.</a> <a href="http://www.cc65.org/doc/intro.html#toc4">The linker</a></h2>
+
+
+<p>The linker combines several object and library files into one output file.
+<b>ld65</b> is very configurable, but fortunately has a built-in configuration
+for the C64, so we don't need to mess with configuration files, here.</p>
+<p>The compiler uses small functions to do things that cannot be done inline
+without a big impact on code size. Those runtime functions, together with the
+C library, are in an object-file archive named after the system, in this case,
+"<code>c64.lib</code>". We have to specify that file on the command line, so that the
+linker can resolve those functions.</p>
+<p>A second file (this time, an object file) needed is the startup code that
+prepares the grounds for the C program to run. The startup file must be
+executed first, so it must be the first file on the linker command line.</p>
+<p>Let's link our files to get the final executable:</p>
+<p>
+</p><blockquote><code>
+</code><pre>        ld65 -t c64 -o hello c64.o hello.o text.o c64.lib
+</pre>
+</blockquote>
+<p></p>
+<p>The argument after <code>-o</code> specifies the name of the output file, the argument
+after <code>-t</code> gives the target system. As discussed, the startup file must be
+the first input file on the command line (you may have to add a path here, if
+<code>c64.o</code> is not in your current directory). Since the library resolves
+imports in <code>hello.o</code> and <code>text.o</code>, it must be specified <em>after</em> those
+files.</p>
+<p>After a successful linker run, we have a file named "<code>hello</code>", ready for
+our C64!</p>
+<p>For more information about the linker, see 
+<a href="http://www.cc65.org/doc/ld65.html">ld65.html</a>.</p>
+
+
+
+<hr>
+<a href="http://www.cc65.org/doc/intro-5.html">Next</a>
+<a href="http://www.cc65.org/doc/intro-3.html">Previous</a>
+<a href="http://www.cc65.org/doc/intro.html#toc4">Contents</a>
+</body></html>

@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+
+ <meta name="GENERATOR" content="LinuxDoc-Tools 0.9.21">
+ <title>cc65 Compiler Intro: The compiler</title>
+ <link href="http://www.cc65.org/doc/intro-3.html" rel="next">
+ <link href="http://www.cc65.org/doc/intro-1.html" rel="previous">
+ <link href="http://www.cc65.org/doc/intro.html#toc2" rel="contents">
+</head><body>
+<a href="http://www.cc65.org/doc/intro-3.html">Next</a>
+<a href="http://www.cc65.org/doc/intro-1.html">Previous</a>
+<a href="http://www.cc65.org/doc/intro.html#toc2">Contents</a>
+<hr>
+<h2><a name="s2">2.</a> <a href="http://www.cc65.org/doc/intro.html#toc2">The compiler</a></h2>
+
+
+<p>The compiler translates one C source into one assembly source, for each
+invocation. It does <em>not</em> create object files directly, and it is <em>not</em>
+able to translate more than one file per run.</p>
+<p>In the example above, we would use the following command line, to translate
+<code>hello.c</code> into <code>hello.s</code>:</p>
+<p>
+</p><blockquote><code>
+</code><pre>        cc65 -O -I ../../include -t c64 hello.c
+</pre>
+</blockquote>
+<p></p>
+<p>The <code>-O</code> switch tells the compiler to do an additional optimizer run, which
+is usually a good idea, since it makes the code smaller. If you don't care
+about the size, but want to have slightly faster code, use <code>-Oi</code> to inline
+some runtime functions.</p>
+<p>The <code>-I</code> switch gives a search path for the include files. You may also set
+the environment variable <code>CC65_INC</code> to the search path.</p>
+<p>The <code>-t</code> switch is followed by the target system name.</p>
+<p>If the compiler does not complain about errors in our "hello world" program, we
+will have a file named "<code>hello.s</code>", in our directory, that contains the
+assembly source for the <b>hello</b> module.</p>
+<p>For more information about the compiler, see 
+<a href="http://www.cc65.org/doc/cc65.html">cc65.html</a>.</p>
+
+
+
+<hr>
+<a href="http://www.cc65.org/doc/intro-3.html">Next</a>
+<a href="http://www.cc65.org/doc/intro-1.html">Previous</a>
+<a href="http://www.cc65.org/doc/intro.html#toc2">Contents</a>
+</body></html>
