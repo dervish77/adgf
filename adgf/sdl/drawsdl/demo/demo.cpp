@@ -694,7 +694,7 @@ void DemoPolygons()
     // call this to wait for user to 'X' out
     drawWaitQuit();
 }
-
+
 
 void DemoSprites()
 {
