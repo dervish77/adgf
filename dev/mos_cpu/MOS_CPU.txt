@@ -24,14 +24,15 @@ X  - index register
 
 F  - flags register  ( E x x x x x Z C )
 
-		E - error flag
-		Z - zero flag
-		C - carry flag
+		E - error flag - indicates program counter overflowed or underflowed
+		Z - zero flag - indicates sub/dec underflowed or compare was equal
+		C - carry flag - indicates add/inc overflowed
 
 G  - GPIO register (optional)
 
 S  - stack pointer (optional)
 
+B  - block register (optional) - points to current set of Instruction, Data, Stack blocks
 
 
 Instructions
@@ -48,12 +49,13 @@ xx - absolute value -- thus 0 to 255
 
 Mneumonic	Action			Flags 			Hex Code	Comments
 
-NOP		(P) <- (P) + 2					07 00		all instructions increment P by 2
+NOP		(P) <- (P) + 2		E = 1 if overflow	07 00		all instructions increment P by 2
 
 RST		(P) <- 0		all flags cleared	0F 00
 		(S) <- 255
 		(A) <- 0
 		(X) <- 0
+		(B) <- 0
 
 
 load/store operations
@@ -62,9 +64,9 @@ CLA		(A) <- 0					11 00
 
 CLX		(X) <- 0					12 00
 
-CLD ii		Data[ii] <- 0					13 ii
+CLD ii		Data[ii] <- 0					18 ii
 
-CLV		Data[(X)] <- 0					14 00
+CLV		Data[(X)] <- 0					19 00
 
 LAI xx		(A) <- xx		Z = 1 if (A) = 0	21 xx
 
@@ -131,43 +133,74 @@ branch operations
 
 JMP xx		(P) <- xx					81 xx
 
-JMI dd		(P) <- (P) + dd					82 dd		dd is two's complement
+JMI dd		(P) <- (P) + dd		E = 1 if over/under	82 dd		dd is two's complement
 
-BRC dd		if C = 1 (P) <- (P) + dd			91 dd		dd is two's complement
+BRC dd		if C = 1 (P) <- (P) + dd			88 dd		dd is two's complement
 
-BRZ dd		if Z = 1 (P) <- (P) + dd			92 dd		dd is two's complement
+BRZ dd		if Z = 1 (P) <- (P) + dd			89 dd		dd is two's complement
+
+BRE dd		if E = 1 (P) <- (P) + dd			8A dd		dd is two's complement
+
+CLB		(B) <- 0 					91 00
+
+LBI xx		(B) <- xx		Z = 1 if (B) = 0	92 xx
+
+INB		(B) <- (B) + 1		C = 1 if carry		93 00
+
+DCB		(B) <- (B) - 1		Z = 1 if (B) = 0	94 00
+
+MBA		(A) <- (B)					95 00
+
+MAB		(B) <- (A)					96 00
+
+
+flag operations
+
+CLF		(F) <- 0					A1 00
+
+MFA		(A) <- (F)					A2 00
+
+TFC		(A) <- 1		if C = 1		A8 00 
+
+TFZ		(A) <- 1		if Z = 1		A9 00
+
+TFE		(A) <- 1		if E = 1		AA 00
 
 
 optional GPIO operations
 
-LGA		(A) <- (G)					A1 00
+LGA		(A) <- (G)					B1 00
 
-LGX		(X) <- (G)					A2 00
+LGX		(X) <- (G)					B2 00
 
-WAG		(G) <- (A)					A3 00
+LGD		Data[ii] <- (G)					B3 ii
 
-WXG		(G) <- (X)					A4 00
+WAG		(G) <- (A)					B8 00
+
+WXG		(G) <- (X)					B9 00
+
+WDG		(G) <- Data[ii]					BA ii
 
 
 optional stack operations
 
 PUA		Stack[(S)] <- (A)				C1 00
-		(S) <- (S) - 1
+		(S) <- (S) - 1		Z = 1 if (S) = 0
 
 PUX		Stack[(S)] <- (X)				C2 00
-		(S) <- (S) - 1
+		(S) <- (S) - 1		Z = 1 if (S) = 0
 
-PPA		(S) <- (S) + 1					C8 00
+PPA		(S) <- (S) + 1		C = 1 if carry		C8 00
 		(A) <- Stack[(S)]
 
-PPX		(S) <- (S) + 1					C9 00
+PPX		(S) <- (S) + 1		C = 1 if carry		C9 00
 		(X) <- Stack[(S)]
 
 SUB xx		Stack[(S)] <- (P)				D1 xx
-		(S) <- (S) - 1
+		(S) <- (S) - 1		Z = 1 if (S) = 0
 		(P) <- xx	
 
-RET		(S) <- (S) + 1					D7 00
+RET		(S) <- (S) + 1		C = 1 if carry		D8 00
 		(P) <- Stack[(S)]
 
 
