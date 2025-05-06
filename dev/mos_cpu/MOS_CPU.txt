@@ -5,18 +5,23 @@ MOS CPU Definition
 Memory Organization
 -------------------
 
-Instruction Block - 256 bytes
+Instruction Block - 256 bytes 
+
+Operand Block     - 256 bytes
 
 Data Block        - 256 bytes
 
 Stack Block       - 256 bytes (optional)
 
+Total Block Size  - 1024 bytes
+
+Max Blocks        - 64 blocks (hence 64K)
 
 
 Registers (all are 8 bits)
 ---------
 
-P  - program counter
+P  - program counter (points to byte in Instruction Block and Operand Block)
 
 A  - accumulator
 
@@ -25,14 +30,14 @@ X  - index register
 F  - flags register  ( E x x x x x Z C )
 
 		E - error flag - indicates program counter overflowed or underflowed
-		Z - zero flag - indicates sub/dec underflowed or compare was equal
+		Z - zero flag  - indicates sub/dec underflowed or compare was equal
 		C - carry flag - indicates add/inc overflowed
 
 G  - GPIO register (optional)
 
 S  - stack pointer (optional)
 
-B  - block register (optional) - points to current set of Instruction, Data, Stack blocks
+B  - block register (optional) - points to current set of Instruction, Operand, Data, Stack blocks
 
 
 Instructions
@@ -49,7 +54,7 @@ xx - absolute value -- thus 0 to 255
 
 Mneumonic	Action			Flags 			Hex Code	Comments
 
-NOP		(P) <- (P) + 2		E = 1 if overflow	07 00		all instructions increment P by 2
+NOP		(P) <- (P) + 1		E = 1 if overflow	07 00		
 
 RST		(P) <- 0		all flags cleared	0F 00
 		(S) <- 255
@@ -145,7 +150,7 @@ CLB		(B) <- 0 					91 00
 
 LBI xx		(B) <- xx		Z = 1 if (B) = 0	92 xx
 
-INB		(B) <- (B) + 1		C = 1 if carry		93 00
+INB		(B) <- (B) + 1		C = 1 if overflow	93 00		overflow if (B) > 63
 
 DCB		(B) <- (B) - 1		Z = 1 if (B) = 0	94 00
 
