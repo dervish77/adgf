@@ -1,4 +1,4 @@
 adgf
 ====
 
-Collection of programs written during grad school
+Collection of programs originally written during grad school
