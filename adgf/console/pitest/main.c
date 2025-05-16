@@ -10,7 +10,7 @@
  *
  *	Revs:
  *    0.2   05/15/2025  split into main.c, added new calc methods
- *	  0.1	03/10/98    added support for prep phrase
+ *	  0.1	03/10/98    added support for command line options
  *	  0.0 	11/02/95    originated
  *
  *	Usage:	pi [-h] [-d | -g | -n] [-i [iterations]]
@@ -57,7 +57,7 @@ int main(int argc, char **argv)
                switch(argv[i][1])
                {
                   case 'h':
-                     fprintf(stderr, "Usage:  %s [-h]  [-d | -g | -n] [-i NNN] \n", argv[0]);
+                     fprintf(stderr, "Usage:  %s [-h] [-d | -g | -n] [-i NNN] \n", argv[0]);
                      fprintf(stderr,"    -h      get help\n");
                      fprintf(stderr,"    -i NNN  number of iterations\n");
                      if (argc == 2)
@@ -94,7 +94,7 @@ int main(int argc, char **argv)
    } /* end of outer switch */
 
 
-   /*  calculate pi
+   /*  calculate pi using selected method
     */
    switch(method)
    {

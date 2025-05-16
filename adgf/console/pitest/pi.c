@@ -10,10 +10,11 @@
  *
  *	Revs:
  *    0.2   05/15/2025  added new calc methods
- *	  0.1	03/10/98    added support for prep phrase
+ *	  0.1	03/10/98    added support for command line options
  *	  0.0 	11/02/95    originated
  *
- *	Usage:	pi [number of digits]
+ *  Notes:
+ *    see https://en.wikipedia.org/wiki/Pi for more info
  *
  *****************************************************************************/
 
@@ -21,9 +22,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#ifndef _PI_H
 #include "pi.h"
-#endif
 
 
 
@@ -131,6 +130,10 @@ BOOLEAN_T CalcPiGregoryLeibniz( int digits )
 
 /*  CalcPiDiv	- calculate and output PI to screen
  *
+ *  method is using simple ratio approximation
+ *
+ *  where pi = 22/7 or 333/106 or 355/113
+ *
  *  Parameters:
  *	digits	- number of digits of PI
  *
@@ -139,11 +142,9 @@ BOOLEAN_T CalcPiGregoryLeibniz( int digits )
  */
 BOOLEAN_T CalcPiDiv( int digits )
 {
-   //float a,b;
    float sum = 3.0;
-   //int n = 0;
 	  
-   sum = 22.0f / 7.0f;
+   sum = 355.0f / 113.0f;
 
    printf("PI = %f\n", sum);
 
