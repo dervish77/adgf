@@ -3,31 +3,45 @@
 
 CC=gcc
 
-OBJECTS = pi.o  
+OBJECTS = pi.o main.o 
 
 TARGET = pi
 
 LIBS	= -lm
 CFLAGS  = -O
 
+default: all
 
-
-default: $(TARGET)
+all: $(TARGET)
 
 $(TARGET): $(OBJECTS)
 	$(CC) -o $(TARGET) $(OBJECTS) $(LIBS)
 
 pi.o : pi.c pi.h
 
+main.o : main.c pi.h
+
 clean:
 	rm -f *.o *% *~ core $(TARGET)
+
+realclean: clean
+
+test: all
+	$(TARGET) 
+	$(TARGET) -h
+	$(TARGET) -d -i 10
+	$(TARGET) -g -i 50000
+	$(TARGET) -n -i 500
+
+run: all
+	$(TARGET) -n -i 500
 
 
 #
 # make distribution file
 #
 
-VERSION = 0.1
+VERSION = 0.2
 
 PKG_HOME = pi
 PKG_NAME = pi-$(VERSION)

@@ -33,6 +33,13 @@ typedef unsigned char 	UBYTE_T;
 
 
 
+/*  define pi calc methods
+ */
+#define DIV    1
+#define GREG   2
+#define NILAK  3
+
+
 /*  define file name type
  */
 #define FILE_NAME_LEN	30
@@ -40,14 +47,11 @@ typedef char FILENAME_T[FILE_NAME_LEN];
 
 
 
-
-
 /*  declare prototypes for all functions
  */
-extern BOOLEAN_T CalcPi( int digits );
+BOOLEAN_T CalcPiNilakantha( int digits );
+BOOLEAN_T CalcPiGregoryLeibniz( int digits );
+BOOLEAN_T CalcPiDiv( int digits );
 
-#if 0
-extern int ParseString(char *string, char *args[]);
-#endif
 
 #endif 	/* _PI_H */
