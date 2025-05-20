@@ -16,10 +16,12 @@
 #ifndef _MOS_H
 #define _MOS_H
 
+#include "platform.h"
+
 #include "types.h"
 
 
-#define VERSION "0.76"
+#define VERSION "0.80"
 
 
 /*  define task tunables

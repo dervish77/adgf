@@ -1,6 +1,9 @@
 REVISION history for MOS 
 ------------------------
 
+0.80  05/19/2025  attempt to complete port to C64 platform
+                  also numerous cleanup items for unused vars, etc
+
 0.76  09/21/2012  fixed coverage build problem when switching between different PORTs
 				  which now allows coverage to work on cygwin
 				  

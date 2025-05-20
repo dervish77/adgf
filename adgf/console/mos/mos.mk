@@ -11,7 +11,7 @@
 # Define targets based on 'PORT'
 #------------------------------------------------------------------------
 
-PORT ?= linux
+PORT ?= cygwin
 
 ifeq ($(PORT), linux)
 CPU              = x86
@@ -67,8 +67,8 @@ ifeq ($(PORT), c64)
 CPU              = 6502
 CROSS_COMPILE    = 
 CROSS_TOOL       = 
-CROSS_TOOL_PATH  = /usr/local
-CROSS_OS_PATH    = /usr/local
+CROSS_TOOL_PATH  = /cygdrive/c/Utils/cc65-snapshot-win32
+CROSS_OS_PATH    = 
 TARGET_NAME      = 6502-unknown-c64
 ARCH             = 6502
 endif
@@ -109,7 +109,7 @@ CROSS_TOOL_CPP = $(CROSS_BIN_PATH)/$(CROSS_TOOL)g++
 PREFIX		= $(CROSS_BIN_PATH)/$(CROSS_TOOL)
 
 ifeq ($(PORT), c64)
-CC		    = $(PREFIX)cc65
+CC		    = $(PREFIX)cl65
 AS		    = $(PREFIX)ca65
 LD		    = $(PREFIX)ld65
 AR		    = $(PREFIX)ar65
@@ -140,9 +140,12 @@ VG_MEM		= --tool=memcheck --leak-check=yes -v
 GPROF_OPT	= -pg
 GCOV_OPT	= -fprofile-arcs -ftest-coverage
 
-#OPT         =
+DEBUG       = 
+#DEBUG       = -g
+
+OPT         =
 #OPT         = $(GPROF_OPT)
-OPT         = $(GCOV_OPT)
+#OPT         = $(GCOV_OPT)
 #OPT         = $(GPROF_OPT) $(GCOV_OPT)
 
 #------------------------------------------------------------------------
@@ -163,10 +166,13 @@ MOD_INCLUDES	= -I. $(EXTRA_INCLUDE)
 #------------------------------------------------------------------------
 # Define local cflags
 #------------------------------------------------------------------------
-#EXTRA_DEBUG 	= 
-EXTRA_DEBUG 	= -g $(OPT)
+EXTRA_DEBUG 	= $(DEBUG) $(OPT)
 
+ifeq ($(PORT), c64)
+MOD_CFLAGS      = -t c64 $(EXTRA_DEBUG)
+else
 MOD_CFLAGS      = $(EXTRA_DEBUG)
+endif
 
 #MOD_CPPFLAGS 	= $(EXTRA_DEBUG) -Wno-deprecated
 MOD_CPPFLAGS 	= $(EXTRA_DEBUG) -fexceptions -lang-c++
@@ -181,8 +187,11 @@ MOD_LDFLAGS 	= $(OPT)
 
 MOD_LIB_PATHS 	= 
 MOD_LIBS        = 
+ifeq ($(PORT), c64)
+MOD_ARFLAGS 	= r
+else
 MOD_ARFLAGS 	= -rc
-
+endif
 
 #------------------------------------------------------------------------
 # Define make command

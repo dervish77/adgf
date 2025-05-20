@@ -33,7 +33,7 @@
 /*
  *  GLOBALS
  */
-DATABASE_S_T *data;
+//DATABASE_S_T *data;
 
 
 /*

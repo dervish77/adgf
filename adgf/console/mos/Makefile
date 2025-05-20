@@ -8,7 +8,7 @@
 
 include ./mos.mk
 
-DISTVER = 0.76
+DISTVER = 0.80
 
 
 # "src/ports/xxx" must be first

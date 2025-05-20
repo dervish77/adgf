@@ -38,7 +38,7 @@ LIBS		= $(LIBLIST) $(MOD_LIBS)
 
 SYS	= c64
 
-CC65_BASE = /scratch/bl12960/src/cc65-2.13.2
+CC65_BASE = /cygdrive/c/Utils/cc65-snapshot-win32
 
 CC65_INC = $(CC65_BASE)/include
 CA65_INC = $(CC65_BASE)/asminc
@@ -47,8 +47,8 @@ MOUS = $(CC65_BASE)/libsrc/$(SYS)*.mou
 TGI  = $(CC65_BASE)/libsrc/$(SYS)*.tgi
 CLIB = $(CC65_BASE)/libsrc/$(SYS).lib
 
-MY_INC = --forget-inc-paths -I . -I $(CC65_INC) -I ../common
-MY_ASM = --forget-inc-paths -I . -I $(CA65_INC)
+MY_INC =  -I . -I $(CC65_INC) -I ../common
+MY_ASM =  -I . -I $(CA65_INC)
 
 MOD_ARFLAGS 	= a
 
@@ -93,15 +93,16 @@ strip1: $(TARGET)
 $(TARGET): $(OFILES) $(LIBLIST)
 	$(CC) $(ALL_LDFLAGS) -o $(TARGET) $(OFILES) $(LIBS)
 
-$(OFILES): %.o: %.s
-	$(AS) $(basename $<).s
+#$(OFILES): %.o: %.s
+#	$(AS) $(basename $<).s
 
-$(SFILES): %.s: %.c
+$(OFILES): %.c
 	$(CC) $(MY_INC) -Oirs --codesize 500 -T -g -t $(SYS) $< 
 
 $(LIB_OFILES): %.o: %.c *.h
-	$(CC) $(MY_INC) -Oirs --codesize 500 -T -g -t $(SYS) $< 
-	$(AS) $(basename $<).s
+#	$(CC) $(MY_INC) -Oirs --codesize 500 -T -g -t $(SYS) $< 
+#	$(AS) $(basename $<).s
+	$(CC) -c $(ALL_CFLAGS) -o $@ $<
 	$(AR) $(ALL_ARFLAGS) $(LIBRARY) $*.o
 
 
