@@ -1,0 +1,32 @@
+RULES for Soundex Translator Program
+------------------------------------
+
+See README.txt for more detailed explanation and exceptions.
+
+
+     The number               Represents the letters
+          1                    B, P, F, V     
+          2                    C, S, K, G, J, Q, X, Z     
+          3                    D, T     
+          4                    L     
+          5                    M, N     
+          6                    R    
+		  
+1. use the first letter of the surname to begin the code
+
+2. cross out all vowels and the letters W, Y, H
+
+3. assign equivalent number to the first three consonants in the surname
+
+4. disregard the remaining letters
+
+* - double letters are coded as one letter
+* - letters with the same code are treated as one letter - ck=2 not 22
+* - if you run out of letters, use 0
+* - stop when you one letter and three numbers
+
+Example:
+
+cherry = C600
+jones = J520
+
