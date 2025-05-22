@@ -35,11 +35,11 @@
 #define OBJ_BEAVER	8
 #define OBJ_PADLOCK	9
 #define OBJ_PAPER	10
-#define OBJ_FLUTE	11
+#define OBJ_STATUE	11
 #define OBJ_JEWELS	12
 #define OBJ_PILLOWS	13
 #define OBJ_VASE	14
-#define OBJ_STATUE	15
+#define OBJ_FLUTE	15
 #define OBJ_ROD		16
 #define OBJ_EMERALD	17
 #define OBJ_BOOTS	18

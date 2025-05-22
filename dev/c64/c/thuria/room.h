@@ -39,18 +39,18 @@
 #define RM_BROOK		14
 
 #define RM_STATUE		15
-#define RM_DARK_DANK		16
-#define RM_ALCOVE		17
-#define RM_NARROW_PASSAGE	18
-#define RM_PILLOW		19
-#define RM_VASE			20
-#define RM_ROUND		21
-#define RM_DARK_ROOM		22
-#define RM_WEST_END_HALL	23
+#define RM_BLACK		16
+#define RM_NARROW_PASSAGE	17
+#define RM_DARK_DANK		18
+#define RM_DARK_ROOM		19
+#define RM_WEST_END_HALL	20
+#define RM_DIMLY_LIT		21
+#define RM_GREEN		22
+#define RM_PILLOW		23
 #define RM_EAST_END_HALL	24
-#define RM_BLACK		25
-#define RM_DIMLY_LIT		26
-#define RM_GREEN		27
+#define RM_VASE			25
+#define RM_ROUND		26
+#define RM_ALCOVE		27
 
 #define RM_CREVICE		28
 #define RM_RUG_ROOM		29

@@ -32,7 +32,7 @@ ROOM_S_T room[] = {
  0, 2, "scattered.  A passageway leads north.",
  0, -1, " ",
 
- 1, 1, "A small antechamber behind the throne.",
+ 1, 1, "Small antechamber behind the throne.",
  1, 2, "Several tapestries hang on the walls.",
  1, -1, " ",
 
@@ -69,8 +69,8 @@ ROOM_S_T room[] = {
  8, 3, "darkness. An exit is to the west.",
  8, -1, " ",
 
- 9, 1, "You see the largest beaver dam you",
- 9, 2, "have ever seen. A marvelous work of",
+ 9, 1, "It's the largest beaver dam you have",
+ 9, 2, "ever seen. A marvelous work of",
  9, 3, "engineering.  A trail heads south",
  9, 3, "and a path winds north around pond.",
  9, -1, " ",
@@ -87,9 +87,8 @@ ROOM_S_T room[] = {
 11, -1, " ",
 
 12, 1, "A long valley, filled with mist.",
-12, 2, "Impassable mountains to the north",
-12, 3, "and south prohibit travel.  A narrow",
-12, 4, "leads west.  A road leads east.",
+12, 2, "A narrow winding path leads west.",
+12, 3, "A road leads east.",
 12, -1, " ",
 
 13, 1, "You are outside a modest castle.  A", 
@@ -99,7 +98,7 @@ ROOM_S_T room[] = {
 
 14, 1, "Babbling brook interrupts the trail.",
 14, 2, "The trail continues east but looks",
-14, 3, "kind of swampy and foreboding.",
+14, 3, "swampy and foreboding.",
 14, -1, " ",
 
 15, 1, "Stairs lead up from the eastern wall.",
@@ -108,59 +107,58 @@ ROOM_S_T room[] = {
 15, 4, "stands across from the stairs.",
 15, -1, " ",
 
-#if 0
-16, 1, "A dank, musty odor fills the air.  A very dark passageway leads west.",
-16, 2, "The deep gloom nearly conceals a narrow set of stairs which lead down.", 
+16, 1, "The walls are glossy black. Single",
+16, 2, "exit leads back north.",
 16, -1, " ",
 
-17, 1, "You are in a small alcove above a room filled with pillows.  A",
-17, 2, "steeply sloped passage leads back down.",
+17, 1, "Narrow north-south passage. Markings",
+17, 2, "cover both walls.",
 17, -1, " ",
 
-18, 1, "You are in a narrow north-south passage.  Indecipherable markings",
-18, 2, "cover both walls.",
+18, 1, "A very dark passageway leads west.",
+18, 2, "A set of stairs which lead down.", 
 18, -1, " ",
 
-19, 1, "Several dozen pillows cover the entire floor of this room.  Each",
-19, 2, "pillow is richly embroidered with a pattern of many different",
-19, 3, "colors.  A single doorway lies to the south, and a steeply sloped",
-19, 4, "passage leads up.  It does appear climbable.",
+19, 1, "Darkness swallows your lantern glow.",
+19, 2, "From somewhere a hollow voice says",
+19, 3, "\"plugh\". After groping you find an",
+19, 4, "exit to the east.",
 19, -1, " ",
 
-20, 1, "A massive granite pillar sits squarely in the middle of this room.  A",
-20, 2, "pair of ornate doorways lead south and east.", 
+
+20, 1, "West end of a large hall.  The hall", 
+20, 2, "extends east.  Doorways lead north",
+20, 3, "and south.  A set of stairs lead up.",
 20, -1, " ",
 
-21, 1, "This room is perfectly round and the walls have no visible markings.",
-21, 2, "Only the western and northern exits disturb the perfect symmetry of",
-21, 3, "the curvature of the walls.",
+21, 1, "A dimly lit room. Some light comes",
+21, 2, "from a slit to the east.",
 21, -1, " ",
 
-22, 1, "The darkness of this room swallows the glow from your lantern.  From",
-22, 2, "somewhere just beyond your sight a hollow voice says \"plugh\".  After",
-22, 3, "groping around in the darkness you find the only exit is to the east.",
+22, 1, "A green glow fills the room. An odd",
+22, 3, "squawking sound comes from somewhere.",
 22, -1, " ",
 
-23, 1, "You are in the west end of a large hall.  The hall extends to the",
-23, 2, "east.  Doorways lead north and south.  Obviously, it was a place used",
-23, 3, "for entertaining visitors to the castle.  Several large paintings",
-23, 4, "line the walls well out of reach.  A narrow set of stairs lead up.",
+#if 0
+23, 1, "Dozens of pillows cover the floor.",
+23, 2, "Doorway to south, steep passage",
+23, 3, "leads up. Appears climbable.",
 23, -1, " ",
 
-24, 1, "You are in the east end of a large hall.  The hall extends to the",
-24, 2, "west.  A single doorway leads north.",
+24, 1, "East end of a large hall.  The hall",
+24, 2, "extends west.  A doorway leads north.",
 24, -1, " ",
 
-25, 1, "The walls of this room are painted glossy black.  A single exit",
-25, 2, "leads back north.",
+25, 1, "Granite pillar is in middle of room.",
+25, 2, "Doorways lead south and east.", 
 25, -1, " ",
 
-26, 1, "You are in a dimly lit room.  The only illumination appears to be",
-26, 2, "coming from a narrow slit in the wall to the east.",
+26, 1, "Perfectly round, no markings on walls.",
+26, 2, "Exits to the west and north.",
 26, -1, " ",
 
-27, 1, "A strange green glow fills this room.  A straw nest lies in the center",
-27, 2, "of room.  An odd squawking sound seems to be coming from somewhere.",
+27, 1, "Small alcove above pillow room.  A",
+27, 2, "steeply sloped passage leads down.",
 27, -1, " ",
 
 28, 1, "You are in a narrow crevice overlooking a library.  The only other",

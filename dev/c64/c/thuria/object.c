@@ -39,17 +39,16 @@ OBJECT_S_T object[] = {
 7,   0, "chest",    "is a",	"heavy chest",			"Looks like it weighs over 300 pounds, and there is a \nmagic aura around it.",
 8,   0, "beaver",   "are",	"several beavers",		"They are ignoring you.",
 9,  10, "padlock",  "is a", 	"padlock",			"Cheap lock, easily picked.",
-10, 10, "paper",    "is",	"some crumpled paper",	"Scrawled in a strange script is a single sentence:\n\"Seek the hall of three questions\".",
-#if 0
-11, 10, "flute",    "is a",	"silver flute",			"There is nothing special about the silver flute.",
-12, 20, "jewels",   "are",	"three tiny purple jewels",	"To your uneducated eye they look like amythest.",
-13,  0, "pillows",  "are", 	"several embroidered pillows", 	"The pillows are embroidered with pictures of flowers and fruits.",
+10, 10, "paper",    "is",	"some crumpled paper",	"Scrawled in a strange script:\n\"Seek the hall of three questions\".",
+11,  0, "statue",   "is an",	"indian statue",		"Odd, the statue has a coin \nsized slot on its left side.",
+
+12, 20, "jewels",   "are",	"three purple jewels",	"To your uneducated eye they \nlook like amythest.",
+13,  0, "pillows",  "are", 	"several pillows", 	"The pillows are embroidered with \npictures of flowers and fruits.",
 14, 10, "vase",     "is a",	"delicate Ming vase",		"Probably made in the 4th dynasty.",
-#endif
-15,  0, "statue",   "is an",	"indian statue",		"Odd, the statue has a coin sized slot on its left side.",
+15, 10, "flute",    "is a",	"silver flute",			"There is nothing special about the silver flute.",
+16, 10, "rod",	    "is a",	"hollow black rod",		"The rod is about half a meter in \nlength and about an inch thick.",
+17, 20, "emerald",  "is a",	"glowing green emerald",	"The emerald is the size \nof a Plover's egg.",
 #if 0
-16, 10, "rod",	    "is a",	"hollow black rod",		"The rod is about half a meter in length and about an inch thick.",
-17, 20, "emerald",  "is a",	"glowing green emerald",	"The emerald is the size of a Plover's egg.",
 18, 10, "boots",    "is a",	"rotting pair of boots",	"Strangely, the boots smell like rotten eggs.",
 19,  0, "grate",    "is a",     "iron grate",			"Strong, no rust.  There is a small keyhole to one side.",
 20, 20, "rug",      "is a",	"large oriental rug",		"Even rolled up it's about 6 feet long.",
