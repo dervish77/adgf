@@ -20,7 +20,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
-#include <math.h>
+//#include <math.h>
 #include <time.h>
 
 #include "game.h"

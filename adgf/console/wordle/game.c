@@ -20,7 +20,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
-#include <math.h>
+//#include <math.h>
 #include <time.h>
 
 #include "game.h"
@@ -206,7 +206,7 @@ void GetGuess(GAME_S_T *game)
 		{	
 			for (i = 0; i < GUESS_LENGTH; i++)
 			{
-				guess[i] = TO_UPPER(guess[i]);
+				guess[i] = toupper(guess[i]);
 			}
 			strcpy( game->guesses[index].guess, guess );
 		}
@@ -272,6 +272,7 @@ void DisplayGameResults(GAME_S_T *game)
 	if (game->status == STATUS_LOSE)
 	{
 		printf("!!! You Lose !!!\n");
+		printf("\nWord was %s\n", game->word.word);
 	}
 	
 	if (game->status == STATUS_WIN)
