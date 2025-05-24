@@ -272,6 +272,7 @@ void DisplayGameResults(GAME_S_T *game)
 	if (game->status == STATUS_LOSE)
 	{
 		printf("!!! You Lose !!!\n");
+		printf("\nWord was %s\n", game->word.word);
 	}
 	
 	if (game->status == STATUS_WIN)
