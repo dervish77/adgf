@@ -62,6 +62,7 @@ int main(int argc, char **argv)
    GAME_S_T game;
 	
    char prog_name[16];
+   char rasterline;
 
    BOOLEAN_T  do_processing = TRUE;
    BOOLEAN_T  is_interactive = TRUE;
@@ -77,7 +78,8 @@ int main(int argc, char **argv)
 
    // seed the random generator
    //
-   srand( time(0) );
+   rasterline = PEEK( 0xd012 );  // read the current raster line register
+   srand( rasterline );
 
    // get program's name
    //
