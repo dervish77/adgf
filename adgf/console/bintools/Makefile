@@ -92,9 +92,10 @@ srectoc : src/srectoc.c
 
 install: all
 	@-echo "Install - installing to ./bin"
-	mkdir ./bin
+	#mkdir ./bin
 	cp $(TARGETS) bin
 	rm -f $(TARGETS)
+	cp bin/* $(HOME)/bin
 
 # ========================================================================
 
