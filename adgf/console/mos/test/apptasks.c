@@ -99,6 +99,26 @@ void cmdtask( void *args )
              mosPrint(" - killing 02 ...\n");
              mosDeleteTask( 2 );
          }
+         else if ( strcmp(buf, "suspend") == 0 )
+         {
+             mosPrint(" - suspending 02 ...\n");
+             mosSuspendTask( 2 );
+         }
+         else if ( strcmp(buf, "resume") == 0 )
+         {
+             mosPrint(" - resuming 02 ...\n");
+             mosResumeTask( 2 );
+         }
+         else if ( strcmp(buf, "block") == 0 )
+         {
+             mosPrint(" - blocking 02 ...\n");
+             mosBlockTask( 2 );
+         }
+         else if ( strcmp(buf, "unblock") == 0 )
+         {
+             mosPrint(" - unblocking 02 ...\n");
+             mosUnBlockTask( 2 );
+         }
          else if ( strcmp(buf, "list") == 0 )
          {
              mosPrint(" - listing...\n");
@@ -106,7 +126,20 @@ void cmdtask( void *args )
          }
          else if ( strcmp(buf, "help") == 0 )
          {
-             mosPrint(" - help is not available");
+			 mosPrint("CMDS:");
+			 mosPrint(" help    - shows cmds");
+			 mosPrint(" hi      - ");
+			 mosPrint(" exit    - exit app");
+			 mosPrint(" kill    - kills task 2");
+			 mosPrint(" list    - lists tasks");
+			 mosPrint(" quit    - ");
+			 mosPrint(" reset   - ");
+			 mosPrint(" start   - ");
+			 mosPrint(" stop    - ");
+			 mosPrint(" suspend - suspends task 2");
+			 mosPrint(" resume  - resumes task 2");
+			 mosPrint(" block   - blocks task 2");
+			 mosPrint(" unblock - unblocks task 2");
          }
          else
          {
