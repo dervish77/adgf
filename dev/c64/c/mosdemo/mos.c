@@ -512,14 +512,14 @@ void mosSequenceTaskListOnce(void)
             if (gbContext->tasklist[index].blocked)
             {
                 if (gbContext->verbose) mosPrint("... taskid %d is blocked ...\n", gbContext->tasklist[index].taskid);
-                gbContext->tasklist[index].ready = TRUE;
-                gbContext->tasklist[index].blocked = FALSE;
+                //gbContext->tasklist[index].ready = TRUE;
+                //gbContext->tasklist[index].blocked = FALSE;
             }
             else if (gbContext->tasklist[index].suspend)
             {
                 if (gbContext->verbose) mosPrint("... taskid %d is suspended ...\n", gbContext->tasklist[index].taskid);
-                gbContext->tasklist[index].ready = TRUE;
-                gbContext->tasklist[index].suspend = FALSE;
+                //gbContext->tasklist[index].ready = TRUE;
+                //gbContext->tasklist[index].suspend = FALSE;
             }
             else if (gbContext->tasklist[index].ready)
             {
