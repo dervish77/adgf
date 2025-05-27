@@ -1,0 +1,129 @@
+STACK language
+==============
+
+
+Machine model
+
+
+              memory
+                |
+                |
+      program--CPU--stack
+                |
+                |
+         program counter (PC)
+
+
+	memory - block of memory (defaults to 4092)
+
+	stack - data stack (defaults to max depth of 32)
+
+
+
+Instruction model
+
+	OPERATION	
+
+	OPERATION <direct operand>
+
+	OPERATION <memory address>
+
+	OPERATION <label>
+
+
+
+Instructions
+
+CLR		clear the stack
+
+END		end of program
+
+NOP		no operation
+
+LDM <mem>	loads data from memory to top of stack		<mem> -> S[0]
+
+STM <mem>	stores data from top of stack to memory		S[0] -> <mem>
+
+PSH <do>	push direct data to top of stack		<do> -> S[0]
+
+POP 		pops top of stack				S[0] -> <delete>
+
+ADD		adds top two stack values 			result = S[1] + S[0]
+								push result -> S[0]
+
+NEG		negates top of stack				result = 0 - S[0] 
+								push result -> S[0]
+
+CPE <do> 	compare if top of stack is equal		if S[0] equal <do>, push 0 -> S[0]
+								else, push 1 -> S[0]
+
+BRN <label>	branch if top of stack is not zero		if S[0] not equal '0', <label> -> PC
+								else, PC is unchanged
+
+BRZ <label>	branch if top of stack is zero			if S[0] equal '0', <label> -> PC
+								else, PC is unchanged
+
+
+
+Special instructions
+
+PRT		prints top of stack, stack unchanged		S[0] -> <print> ; S[0] -> S[0]
+
+PRI <index>	prints stack at <index>, stack unchanged	S[index] -> <print>
+
+PRD		prints current stack depth			depth of S -> <print>
+
+
+
+Example programs
+
+	// adds numbers from 1 to 5, prints sum
+
+	CLR
+	PSH 1
+	PSH 2
+	ADD
+	PSH 3
+	ADD
+	PSH 4
+	ADD
+	PSH 5
+	ADD
+	PRT
+	END
+
+
+	// adds numbers from 1 to 10 in a loop, prints sum
+
+	CLR
+	PSH 0
+	STM 0x1000	// clear sum in memory
+	POP
+	NOP
+	PSH 0		// push "last" value on stack
+	NOP
+	PSH 1
+iloop:	PSH 1		// incr value
+	ADD
+	CPE 10
+	BRN iloop	// loop to push next incr on stack
+	NOP
+aloop:  LDM 0x1000
+	ADD
+	STM 0x1000
+	POP
+	CPE 0
+	BRN aloop	// loop to add next num to sum
+	NOP
+	LDM 0x1000
+	PRT		// print sum
+	END
+
+
+
+
+
+
+
+
+
