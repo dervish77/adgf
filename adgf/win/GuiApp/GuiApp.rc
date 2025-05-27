@@ -1,0 +1,34 @@
+/*-----------------------------
+   GUIAPP.RC resource script
+  -----------------------------*/
+
+#include "main.h"
+
+GuiApp MENU
+     {
+     POPUP "&File"
+          {
+          MENUITEM "&New Game",              IDM_NEW
+          MENUITEM "&Load Game",             IDM_LOAD
+          MENUITEM "&Save Game",             IDM_SAVE
+          MENUITEM SEPARATOR
+          MENUITEM "E&xit",                  IDM_EXIT
+          }
+     POPUP "&Edit"
+          {
+          MENUITEM "&Undo",                  IDM_UNDO
+          MENUITEM SEPARATOR
+          MENUITEM "Cu&t",                   IDM_CUT
+          MENUITEM "&Copy",                  IDM_COPY
+          MENUITEM "&Paste",                 IDM_PASTE
+          MENUITEM "De&lete",                IDM_DEL
+          }
+     POPUP "&Help"
+          {
+          MENUITEM "&Help...",               IDM_HELP
+          MENUITEM SEPARATOR
+          MENUITEM "&Status",                IDM_STATUS
+          MENUITEM SEPARATOR
+          MENUITEM "&About...",              IDM_ABOUT
+          }
+     }

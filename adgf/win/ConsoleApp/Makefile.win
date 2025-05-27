@@ -1,0 +1,39 @@
+# Project: ConsoleApp
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = main.o tokenizer.o parser.o keyword.o $(RES)
+LINKOBJ  = main.o tokenizer.o parser.o keyword.o $(RES)
+LIBS =  -L"C:/Utils/Dev-Cpp/lib"  
+INCS =  -I"C:/Utils/Dev-Cpp/include" 
+CXXINCS =  -I"C:/Utils/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/Utils/Dev-Cpp/include/c++/3.4.2/backward"  -I"C:/Utils/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"C:/Utils/Dev-Cpp/include/c++/3.4.2"  -I"C:/Utils/Dev-Cpp/include" 
+BIN  = ConsoleApp.exe
+CXXFLAGS = $(CXXINCS)   -g
+CFLAGS = $(INCS)   -g
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before ConsoleApp.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "ConsoleApp.exe" $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+tokenizer.o: tokenizer.cpp
+	$(CPP) -c tokenizer.cpp -o tokenizer.o $(CXXFLAGS)
+
+parser.o: parser.cpp
+	$(CPP) -c parser.cpp -o parser.o $(CXXFLAGS)
+
+keyword.o: keyword.cpp
+	$(CPP) -c keyword.cpp -o keyword.o $(CXXFLAGS)
