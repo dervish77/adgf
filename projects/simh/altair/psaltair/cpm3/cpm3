@@ -1,0 +1,6 @@
+attach dsk cpm3.dsk
+set cpu itrap
+set cpu z80
+set cpu rom
+set cpu banked
+boot dsk

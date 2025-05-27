@@ -1,0 +1,7 @@
+reset cpu
+set sio ansi
+set sio upper
+set cpu 8080
+l exbas.bin 0
+d sr 8
+g 0

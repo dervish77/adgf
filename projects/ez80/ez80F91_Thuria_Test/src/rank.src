@@ -1,0 +1,1570 @@
+; ZiLOG eZ80 ANSI C Compiler Release 2.06
+; -alias -debug -intsrc -nomodsect -optsize -localcse
+; -peephole -globalopt -nosdiopt -bitfieldsize=24 -charsize=8
+; -doublesize=32 -floatsize=32 -intsize=24 -longsize=32
+; -nofastcall -noregvar -nostkck -nooptlink -swap 
+	FILE	".\RANK.C"
+	.assume ADL=1
+.DEBUG "C"
+	SEGMENT code
+.BEGREC "map_s_t",140
+.DEFINE "roomnum"
+.VALUE 0
+.CLASS 8
+.TYPE 3
+.ENDEF
+.DEFINE "roomname"
+.VALUE 2
+.CLASS 8
+.DIM 120
+.TYPE 98
+.ENDEF
+.DEFINE "beenhere"
+.VALUE 122
+.CLASS 8
+.TYPE 12
+.ENDEF
+.DEFINE "inside"
+.VALUE 123
+.CLASS 8
+.TYPE 12
+.ENDEF
+.DEFINE "n"
+.VALUE 124
+.CLASS 8
+.TYPE 3
+.ENDEF
+.DEFINE "s"
+.VALUE 126
+.CLASS 8
+.TYPE 3
+.ENDEF
+.DEFINE "e"
+.VALUE 128
+.CLASS 8
+.TYPE 3
+.ENDEF
+.DEFINE "w"
+.VALUE 130
+.CLASS 8
+.TYPE 3
+.ENDEF
+.DEFINE "d"
+.VALUE 132
+.CLASS 8
+.TYPE 3
+.ENDEF
+.DEFINE "u"
+.VALUE 134
+.CLASS 8
+.TYPE 3
+.ENDEF
+.DEFINE "special"
+.VALUE 136
+.CLASS 8
+.TYPE 3
+.ENDEF
+.DEFINE "object"
+.VALUE 138
+.CLASS 8
+.TYPE 3
+.ENDEF
+.ENDREC "map_s_t"
+.BEGREC "object_s_t",244
+.DEFINE "objnum"
+.VALUE 0
+.CLASS 8
+.TYPE 3
+.ENDEF
+.DEFINE "score"
+.VALUE 2
+.CLASS 8
+.TYPE 3
+.ENDEF
+.DEFINE "key"
+.VALUE 4
+.CLASS 8
+.DIM 40
+.TYPE 98
+.ENDEF
+.DEFINE "prep"
+.VALUE 44
+.CLASS 8
+.DIM 40
+.TYPE 98
+.ENDEF
+.DEFINE "name"
+.VALUE 84
+.CLASS 8
+.DIM 40
+.TYPE 98
+.ENDEF
+.DEFINE "examine"
+.VALUE 124
+.CLASS 8
+.DIM 120
+.TYPE 98
+.ENDEF
+.ENDREC "object_s_t"
+.BEGREC "special_s_t",124
+.DEFINE "spnum"
+.VALUE 0
+.CLASS 8
+.TYPE 3
+.ENDEF
+.DEFINE "score"
+.VALUE 2
+.CLASS 8
+.TYPE 3
+.ENDEF
+.DEFINE "phrase"
+.VALUE 4
+.CLASS 8
+.DIM 120
+.TYPE 98
+.ENDEF
+.ENDREC "special_s_t"
+.BEGREC "magic_s_t",168
+.DEFINE "mgnum"
+.VALUE 0
+.CLASS 8
+.TYPE 3
+.ENDEF
+.DEFINE "score"
+.VALUE 2
+.CLASS 8
+.TYPE 3
+.ENDEF
+.DEFINE "fromroom"
+.VALUE 4
+.CLASS 8
+.TYPE 3
+.ENDEF
+.DEFINE "toroom"
+.VALUE 6
+.CLASS 8
+.TYPE 3
+.ENDEF
+.DEFINE "word"
+.VALUE 8
+.CLASS 8
+.DIM 40
+.TYPE 98
+.ENDEF
+.DEFINE "phrase"
+.VALUE 48
+.CLASS 8
+.DIM 120
+.TYPE 98
+.ENDEF
+.ENDREC "magic_s_t"
+.BEGREC "rank_s_t",162
+.DEFINE "rnum"
+.VALUE 0
+.CLASS 8
+.TYPE 3
+.ENDEF
+.DEFINE "title"
+.VALUE 2
+.CLASS 8
+.DIM 40
+.TYPE 98
+.ENDEF
+.DEFINE "phrase"
+.VALUE 42
+.CLASS 8
+.DIM 120
+.TYPE 98
+.ENDEF
+.ENDREC "rank_s_t"
+.BEGREC "verb_s_t",44
+.DEFINE "vnum"
+.VALUE 0
+.CLASS 8
+.TYPE 3
+.ENDEF
+.DEFINE "word"
+.VALUE 2
+.CLASS 8
+.DIM 40
+.TYPE 98
+.ENDEF
+.DEFINE "type"
+.VALUE 42
+.CLASS 8
+.TYPE 3
+.ENDEF
+.ENDREC "verb_s_t"
+.BEGREC "room_s_t",124
+.DEFINE "roomnum"
+.VALUE 0
+.CLASS 8
+.TYPE 3
+.ENDEF
+.DEFINE "linenum"
+.VALUE 2
+.CLASS 8
+.TYPE 3
+.ENDEF
+.DEFINE "roomline"
+.VALUE 4
+.CLASS 8
+.DIM 120
+.TYPE 98
+.ENDEF
+.ENDREC "room_s_t"
+.BEGREC "intro_s_t",122
+.DEFINE "linenum"
+.VALUE 0
+.CLASS 8
+.TYPE 3
+.ENDEF
+.DEFINE "introline"
+.VALUE 2
+.CLASS 8
+.DIM 120
+.TYPE 98
+.ENDEF
+.ENDREC "intro_s_t"
+.BEGREC "inv_s_t",22
+.DEFINE "count"
+.VALUE 0
+.CLASS 8
+.TYPE 3
+.ENDEF
+.DEFINE "list"
+.VALUE 2
+.CLASS 8
+.DIM 10
+.TYPE 99
+.ENDEF
+.ENDREC "inv_s_t"
+.BEGREC "chest_s_t",52
+.DEFINE "count"
+.VALUE 0
+.CLASS 8
+.TYPE 3
+.ENDEF
+.DEFINE "list"
+.VALUE 2
+.CLASS 8
+.DIM 25
+.TYPE 99
+.ENDEF
+.ENDREC "chest_s_t"
+.BEGREC "cmd_s_t",46
+.DEFINE "type"
+.VALUE 0
+.CLASS 8
+.TYPE 4
+.ENDEF
+.DEFINE "length"
+.VALUE 3
+.CLASS 8
+.TYPE 4
+.ENDEF
+.DEFINE "cmd"
+.VALUE 6
+.CLASS 8
+.DIM 40
+.TYPE 98
+.ENDEF
+.ENDREC "cmd_s_t"
+.BEGREC "game_s_t",857
+.DEFINE "play_game"
+.VALUE 0
+.CLASS 8
+.TYPE 12
+.ENDEF
+.DEFINE "suppress_instructions"
+.VALUE 1
+.CLASS 8
+.TYPE 12
+.ENDEF
+.DEFINE "adult_enabled"
+.VALUE 2
+.CLASS 8
+.TYPE 12
+.ENDEF
+.DEFINE "adult_count"
+.VALUE 3
+.CLASS 8
+.TYPE 4
+.ENDEF
+.DEFINE "debug_enabled"
+.VALUE 6
+.CLASS 8
+.TYPE 12
+.ENDEF
+.DEFINE "verbose"
+.VALUE 7
+.CLASS 8
+.TYPE 12
+.ENDEF
+.DEFINE "have_lamp"
+.VALUE 8
+.CLASS 8
+.TYPE 12
+.ENDEF
+.DEFINE "lamp_is_on"
+.VALUE 9
+.CLASS 8
+.TYPE 12
+.ENDEF
+.DEFINE "current_room"
+.VALUE 10
+.CLASS 8
+.TYPE 3
+.ENDEF
+.DEFINE "score"
+.VALUE 12
+.CLASS 8
+.TYPE 4
+.ENDEF
+.DEFINE "health"
+.VALUE 15
+.CLASS 8
+.TYPE 4
+.ENDEF
+.DEFINE "moves"
+.VALUE 18
+.CLASS 8
+.TYPE 4
+.ENDEF
+.DEFINE "oil"
+.VALUE 21
+.CLASS 8
+.TYPE 4
+.ENDEF
+.DEFINE "load_game"
+.VALUE 24
+.CLASS 8
+.TYPE 12
+.ENDEF
+.DEFINE "save_game"
+.VALUE 25
+.CLASS 8
+.TYPE 12
+.ENDEF
+.DEFINE "game_loaded"
+.VALUE 26
+.CLASS 8
+.TYPE 12
+.ENDEF
+.DEFINE "game_saved"
+.VALUE 27
+.CLASS 8
+.TYPE 12
+.ENDEF
+.DEFINE "load_file_name"
+.VALUE 28
+.CLASS 8
+.DIM 40
+.TYPE 98
+.ENDEF
+.DEFINE "save_file_name"
+.VALUE 68
+.CLASS 8
+.DIM 40
+.TYPE 98
+.ENDEF
+.DEFINE "inventory"
+.VALUE 108
+.CLASS 8
+.TAG "inv_s_t"
+.TYPE 8
+.ENDEF
+.DEFINE "chest"
+.VALUE 130
+.CLASS 8
+.TAG "chest_s_t"
+.TYPE 8
+.ENDEF
+.DEFINE "cmdstring"
+.VALUE 182
+.CLASS 8
+.DIM 120
+.TYPE 98
+.ENDEF
+.DEFINE "argcount"
+.VALUE 302
+.CLASS 8
+.TYPE 4
+.ENDEF
+.DEFINE "list"
+.VALUE 305
+.CLASS 8
+.DIM 12
+.TAG "cmd_s_t"
+.TYPE 104
+.ENDEF
+.ENDREC "game_s_t"
+	SEGMENT DATA
+_rank:
+	DW	0
+	DB	72
+	DB	111
+	DB	112
+	DB	101
+	DB	108
+	DB	101
+	DB	115
+	DB	115
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	77
+	DB	97
+	DB	121
+	DB	98
+	DB	101
+	DB	32
+	DB	121
+	DB	111
+	DB	117
+	DB	32
+	DB	115
+	DB	104
+	DB	111
+	DB	117
+	DB	108
+	DB	100
+	DB	32
+	DB	115
+	DB	116
+	DB	105
+	DB	99
+	DB	107
+	DB	32
+	DB	116
+	DB	111
+	DB	32
+	DB	112
+	DB	108
+	DB	97
+	DB	121
+	DB	105
+	DB	110
+	DB	103
+	DB	32
+	DB	68
+	DB	111
+	DB	111
+	DB	109
+	DB	46
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DW	1
+	DB	67
+	DB	108
+	DB	117
+	DB	101
+	DB	108
+	DB	101
+	DB	115
+	DB	115
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	87
+	DB	101
+	DB	108
+	DB	108
+	DB	44
+	DB	32
+	DB	97
+	DB	116
+	DB	32
+	DB	108
+	DB	101
+	DB	97
+	DB	115
+	DB	116
+	DB	32
+	DB	121
+	DB	111
+	DB	117
+	DB	39
+	DB	114
+	DB	101
+	DB	32
+	DB	116
+	DB	114
+	DB	121
+	DB	105
+	DB	110
+	DB	103
+	DB	46
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DW	2
+	DB	65
+	DB	112
+	DB	112
+	DB	114
+	DB	101
+	DB	110
+	DB	116
+	DB	105
+	DB	99
+	DB	101
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	89
+	DB	111
+	DB	117
+	DB	32
+	DB	100
+	DB	111
+	DB	110
+	DB	39
+	DB	116
+	DB	32
+	DB	103
+	DB	101
+	DB	116
+	DB	32
+	DB	111
+	DB	117
+	DB	116
+	DB	32
+	DB	109
+	DB	117
+	DB	99
+	DB	104
+	DB	44
+	DB	32
+	DB	100
+	DB	111
+	DB	32
+	DB	121
+	DB	111
+	DB	117
+	DB	63
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DW	3
+	DB	74
+	DB	111
+	DB	117
+	DB	114
+	DB	110
+	DB	101
+	DB	121
+	DB	109
+	DB	97
+	DB	110
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	68
+	DB	111
+	DB	110
+	DB	39
+	DB	116
+	DB	32
+	DB	121
+	DB	111
+	DB	117
+	DB	32
+	DB	101
+	DB	118
+	DB	101
+	DB	114
+	DB	32
+	DB	115
+	DB	108
+	DB	101
+	DB	101
+	DB	112
+	DB	63
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DW	4
+	DB	77
+	DB	97
+	DB	103
+	DB	105
+	DB	99
+	DB	105
+	DB	97
+	DB	110
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	72
+	DB	101
+	DB	121
+	DB	44
+	DB	32
+	DB	121
+	DB	111
+	DB	117
+	DB	39
+	DB	114
+	DB	101
+	DB	32
+	DB	113
+	DB	117
+	DB	105
+	DB	116
+	DB	101
+	DB	32
+	DB	116
+	DB	104
+	DB	101
+	DB	32
+	DB	119
+	DB	105
+	DB	122
+	DB	32
+	DB	97
+	DB	116
+	DB	32
+	DB	116
+	DB	104
+	DB	105
+	DB	115
+	DB	32
+	DB	115
+	DB	116
+	DB	117
+	DB	102
+	DB	102
+	DB	33
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DW	5
+	DB	87
+	DB	105
+	DB	122
+	DB	97
+	DB	114
+	DB	100
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	84
+	DB	104
+	DB	101
+	DB	32
+	DB	103
+	DB	111
+	DB	100
+	DB	115
+	DB	32
+	DB	111
+	DB	102
+	DB	32
+	DB	105
+	DB	110
+	DB	116
+	DB	101
+	DB	114
+	DB	97
+	DB	99
+	DB	116
+	DB	105
+	DB	118
+	DB	101
+	DB	32
+	DB	102
+	DB	105
+	DB	99
+	DB	116
+	DB	105
+	DB	111
+	DB	110
+	DB	32
+	DB	98
+	DB	111
+	DB	119
+	DB	32
+	DB	100
+	DB	111
+	DB	119
+	DB	110
+	DB	32
+	DB	116
+	DB	111
+	DB	32
+	DB	121
+	DB	111
+	DB	117
+	DB	46
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DW	-1
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+	DB	0
+.DEFINE "rank"
+.ALIAS "_rank"
+.CLASS 69
+.VALUE _rank
+.DIM 7
+.TAG "rank_s_t"
+.TYPE 104
+.ENDEF
+	XDEF _rank
+;    1	/*****************************************************************************
+;    2	 *
+;    3	 *	Ranks for Dungeons of Thuria.
+;    4	 *
+;    5	 *	File:	rank.c
+;    6	 *
+;    7	 *	Author: Brian Lingard
+;    8	 *
+;    9	 *	Date:	11/06/98
+;   10	 *
+;   11	 *	Revs:
+;   12	 *	  0.0 	11/06/98  originated
+;   13	 *
+;   14	 *****************************************************************************/
+;   15	
+;   16	
+;   17	#ifndef MAIN_H
+;   18	#include "main.h"
+;   19	#endif
+;   20	
+;   21	
+;   22	/* 
+;   23	# ranks for Dungeons of Thuria
+;   24	#
+;   25	# Format: 
+;   26	# rank #, title, phrase
+;   27	#
+;   28	*/
+;   29	
+;   30	RANK_S_T rank[] = {
+	END

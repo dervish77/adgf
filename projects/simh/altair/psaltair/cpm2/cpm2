@@ -1,0 +1,6 @@
+attach dsk cpm2.dsk
+attach dsk1 app.dsk
+set cpu itrap
+set cpu z80
+set cpu rom
+boot dsk

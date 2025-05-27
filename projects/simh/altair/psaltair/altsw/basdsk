@@ -1,0 +1,4 @@
+set cpu 8080
+attach dsk mbasic.dsk
+set sio upper
+boot dsk

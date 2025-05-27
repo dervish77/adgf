@@ -1,0 +1,237 @@
+; ZiLOG eZ80 ANSI C Compiler Release 2.06
+; -alias -debug -intsrc -nomodsect -optsize -localcse
+; -peephole -globalopt -nosdiopt -bitfieldsize=24 -charsize=8
+; -doublesize=32 -floatsize=32 -intsize=24 -longsize=32
+; -nofastcall -noregvar -nostkck -nooptlink -swap 
+	FILE	".\MAIN.C"
+	.assume ADL=1
+.DEBUG "C"
+	SEGMENT DATA
+_device_name:
+	DB	101
+	DB	90
+	DB	56
+	DB	48
+	DB	70
+	DB	57
+	DB	49
+	DB	0
+.DEFINE "device_name"
+.ALIAS "_device_name"
+.CLASS 69
+.VALUE _device_name
+.DIM 8
+.TYPE 98
+.ENDEF
+	SEGMENT TEXT
+_version:
+	DB	49
+	DB	46
+	DB	48
+	DB	0
+.DEFINE "version"
+.ALIAS "_version"
+.CLASS 84
+.VALUE _version
+.DIM 4
+.TYPE 98
+.ENDEF
+;    1	/*                                                   Copyright (c) ZiLOG, 2003
+;    2	 *****************************************************************************
+;    3	 *  main.c (1.0)
+;    4	 *
+;    5	 *  eZ80 Development Board demonstration program
+;    6	 *
+;    7	 *  This project displays a text message on the 5x7 LED matrix.
+;    8	 *
+;    9	 *****************************************************************************
+;   10	 */
+;   11	
+;   12	#include <ez80.h>
+;   13	#include <stdio.h>
+;   14	
+;   15	#include "Console.h"
+;   16	#include "LedMatrix.h"
+;   17	#include "LedTimer.h"
+;   18	#include "Buttons.h"
+;   19	
+;   20	extern int mainloop(void);
+;   21	
+;   22	extern void _init_default_vectors( void );
+;   23	
+;   24	/* device names -- chosen at build-time */
+;   25	#ifdef _EZ80190
+;   26	char device_name[] = "eZ80190";
+;   27	#endif
+;   28	#ifdef _EZ80L92
+;   29	char device_name[] = "eZ80L92";
+;   30	#endif
+;   31	#ifdef _EZ80F93
+;   32	char device_name[] = "eZ80F93";
+;   33	#endif
+;   34	#ifdef _EZ80F92
+;   35	char device_name[] = "eZ80F92";
+;   36	#endif
+;   37	#ifdef _EZ80F91
+;   38	char device_name[] = "eZ80F91";
+;   39	#endif
+;   40	
+;   41	const char version[] = "1.0";
+	SEGMENT code
+;   42	
+;   43	/*****************************************************************************
+;   44	 *  main()
+;   45	 *
+;   46	 *  - initializes LED matrix, timer, buttons(gpio), and console
+;   47	 *  - sends welcome message and instruction to console
+;   48	 *  - displays simple spin and full matrix blink test
+;   49	 *  - continually displays device name on LED matrix
+;   50	 */
+;   51	void main( void )
+;   52	{
+_main:
+.DEFINE "_main"
+
+.VALUE _main
+
+.CLASS 2
+
+.TYPE 65
+
+.ENDEF
+
+.BEGFUNC "main",52,"_main"
+
+.LINE 52
+
+.DEFINE "count"
+
+.CLASS 65
+
+.VALUE -3
+
+.TYPE 4
+
+.ENDEF
+
+;   53	    char i, ch;
+;   54		char buffer[128];
+;   55		int count=0;
+.LINE 55
+
+	PUSH	IX
+	LD	IX,0
+	ADD	IX,SP
+	PUSH	BC
+	LD	BC,0
+	LD	(IX+-3),BC
+;   56	
+;   57	    /* initialize system peripherals */
+;   58	    _init_default_vectors();
+.LINE 58
+
+	CALL	__init_default_vectors
+;   59	    ledmatrix_init();
+.LINE 59
+
+	CALL	_ledmatrix_init
+;   60		ledtimer_init( 1 );  /* 1 mS interval */
+	LD	BC,1
+	PUSH	BC
+.LINE 60
+
+	CALL	_ledtimer_init
+	POP	BC
+;   61		buttons_init();
+.LINE 61
+
+	CALL	_buttons_init
+;   62	    console_init( 57600 );
+	LD	BC,57600
+	PUSH	BC
+.LINE 62
+
+	CALL	_console_init
+	POP	BC
+;   63	
+;   64	#if 0
+;   65	    /* flash full LED matrix */
+;   66	    ledmatrix_flash();
+;   67	    /* show a rotating bar on the LED matrix */
+;   68	    ledmatrix_spin();
+;   69	   	
+;   70		/* console welcome message and instruction */
+;   71		printf( "\n  ZiLOG Development Board Demonstration Program (%s)", version );
+;   72		printf( "\n        Featuring the %s\n", device_name );
+;   73	
+;   74		printf( "\n  Console Test Program:\n" );
+;   75	
+;   76		printf(">> ");
+;   77		ledmatrix_clear();
+;   78	
+;   79		/* main demonstration loop */
+;   80		while( 1 )
+;   81		{
+;   82	#if 0
+;   83	        /* display device name on LED Matrix one character at a time */
+;   84			ledmatrix_puts( device_name );
+;   85	
+;   86			/* wait a half a second */
+;   87	        wait( 500 );
+;   88	#endif
+;   89			ch = getchar();
+;   90			if (ch == '\r')
+;   91			{
+;   92				buffer[count] = '\0';
+;   93				count = 0;
+;   94	
+;   95				printf("You typed - %s\n", buffer);
+;   96				printf(">> ");	
+;   97			}
+;   98			else
+;   99			{
+;  100				buffer[count] = ch;
+;  101				count++;
+;  102			}
+;  103		}
+;  104	#endif
+;  105	
+;  106	    count = mainloop();
+.LINE 106
+
+	CALL	_mainloop
+	LD	(IX+-3),HL
+;  107	}
+.LINE 107
+
+	LD	SP,IX
+	POP	IX
+	RET	
+
+
+;**************************** _main ***************************
+;Name                         Addr/Register   Size   Type
+;_mainloop                           IMPORT  -----   function
+;_console_init                       IMPORT  -----   function
+;_buttons_init                       IMPORT  -----   function
+;_ledtimer_init                      IMPORT  -----   function
+;_ledmatrix_init                     IMPORT  -----   function
+;__init_default_vectors              IMPORT  -----   function
+;count                                 IX-3      3   variable
+
+
+; Stack Frame Size: 9 (bytes)
+;       Spill Code: 0 (instruction)
+
+
+.ENDFUNC "main",107,"_main"
+	XREF __init_default_vectors:ROM
+	XREF _mainloop:ROM
+	XREF _buttons_init:ROM
+	XREF _ledtimer_init:ROM
+	XREF _ledmatrix_init:ROM
+	XREF _console_init:ROM
+	XDEF _main
+	XDEF _version
+	XDEF _device_name
+	END
