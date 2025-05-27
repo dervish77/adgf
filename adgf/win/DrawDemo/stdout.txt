@@ -1,0 +1,30 @@
+******************************************************
+             Welcome to DrawDemo 0.1
+******************************************************
+Let's draw ...
+Key commands:
+ p  - pixel mode
+ r  - rectangle mode
+ c  - circle mode
+ x  - clear screen
+ q  - quit
+
+Pausing for 1 seconds...
+drawInit: using double buffers...
+MOUSE DOWN
+MOUSE UP
+MOUSE DOWN
+MOUSE UP
+MOUSE DOWN
+MOUSE UP
+KEY DOWN
+KEY UP
+MOUSE DOWN
+MOUSE UP
+MOUSE DOWN
+MOUSE UP
+MOUSE DOWN
+MOUSE UP
+MOUSE DOWN
+MOUSE UP
+KEY DOWN

@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1189868556 source:c:\documents and settings\owner\my documents\dev\hello\main.cpp
+	<iostream>
+
+1295135471 source:c:\documents and settings\owner\my documents\dev\hello\wallet.cpp
+	"Wallet.h"
+
+1295136669 c:\documents and settings\owner\my documents\dev\hello\wallet.h
+

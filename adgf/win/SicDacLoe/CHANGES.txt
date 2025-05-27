@@ -1,0 +1,25 @@
+CHANGES	 history for SicDacLoe
+------------------------------
+
+0.3.3
+    - updated "draw-sdl" to latest version (0.5.2)
+
+0.3.2
+    - added "-s" command line option for setting skill level
+
+0.3.1
+    - added 'n' key handling for Victory state to start a new game
+
+0.3.0
+    - added computer move logic for several skill levels
+
+0.2.0
+    - added scanning logic to determine if there was a winner
+
+0.1.0
+    - implemented all screen drawing functions using art assetts
+    - implemented several major game logic functions
+
+0.0.0
+    - Originated
+
