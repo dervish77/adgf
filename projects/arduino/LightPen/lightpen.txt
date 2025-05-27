@@ -1,0 +1,56 @@
+
+http://blurtime.blogspot.com/2011/04/arduino-light-pen.html
+
+
+Arduino Light Pen!
+  A simple Light Pen, created using the TVout library with the Arduino 
+and a simple phototransistor sensor. 
+
+
+
+#include <TVout.h>
+#include <fontALL.h> 
+#include <video_gen.h>
+
+long s1,s2;
+TVout TV;
+int sz=8;
+
+void setup() 
+{
+  TV.begin(0,128,96);
+  TV.select_font(font6x8); 
+}
+
+void loop() 
+{  
+  for (int x=3; x<112; x=x+16) 
+  {
+    for (int y=32; y<40; y=y+16) 
+    {
+      s1=analogRead(0);
+      TV.draw_rect(x,y,sz,sz,1,1);
+      TV.delay_frame(2);
+      s2=analogRead(0);
+      TV.draw_rect(x-2,y-2,sz+5,sz+5,0,0);
+      if (abs(s2-s1)>10) 
+      {
+        TV.draw_rect(x-2,y-2,sz+5,sz+5,1,0);
+        TV.delay_frame(5);
+      }
+    }
+  }
+}
+
+
+
+Virtually any light sensor will work, as long as it can provide an output that 
+can be handled by the ATMEGA328's Analog to Digital Converter.  For the simplest 
+form, a CDS photocell simply connected to +5v on one side and the Analog 0 input 
+pin on the Arduino on the other may suffice.
+
+To increase sensitivity or adjust response, a simple voltage divider can be 
+created by adding a variable resistance between Analog 0 and Ground with the 
+above sensor.
+
+Posted by Focalist at 4:40 PM   

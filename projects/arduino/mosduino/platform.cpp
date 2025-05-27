@@ -1,0 +1,315 @@
+/*****************************************************************************
+ *
+ *	MOS library source code - platform specifc code
+ *
+ *  NOTE: "platform.c" requires porting to your hardware platform.
+ *
+ *	File:	platform.c
+ *
+ *	Author: Brian Lingard
+ *
+ *	Date:	03/25/2009
+ *
+ *	Revs:
+ *	  0.0 	03/25/2009  originated
+ *
+ *****************************************************************************/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdarg.h>
+#include <string.h>
+
+#include "platform.h"
+#include "types.h"
+
+
+
+#undef DEBUG
+
+
+
+/*
+ *  GLOBALS
+ */
+
+
+
+
+/*
+ *  STATICS
+ */
+
+static BOOLEAN_T printEnable = FALSE;
+
+#define MAX_DEBUG_CHARS     128
+
+#define MAX_TERM_CHARS      30
+
+
+
+/* =========================================================================================== */
+/*  Keyboard Device - typically a serial port based device                                     */
+/* =========================================================================================== */
+
+/*  mosOpenKeyboard - opens keyboard device 
+ *
+ *  Parameters:
+ *	none
+ *
+ *  Returns:
+ *	none
+ */
+void mosOpenKeyboard(void)
+{
+
+}
+
+
+/*  mosReadKeyboard - reads single character from keyboard (non-blocking) 
+ *
+ *  Parameters:
+ *	none
+ *
+ *  Returns:
+ *	int     - single character from keyboard
+ */
+int mosReadKeyboard(void)
+{
+    return (0);
+}
+
+
+/*  mosCloseKeyboard - closes keyboard device 
+ *
+ *  Parameters:
+ *	none
+ *
+ *  Returns:
+ *	none
+ */
+void mosCloseKeyboard(void)
+{
+
+}
+
+
+/* =========================================================================================== */
+/*  LCD Device - either a serial port based device or parallel port based device               */
+/* =========================================================================================== */
+
+/*  mosOpenLcd - opens LCD device 
+ *
+ *  Parameters:
+ *	none
+ *
+ *  Returns:
+ *	none
+ */
+void mosOpenLcd(void)
+{
+
+}
+
+
+/*  mosWriteLcd - write characters to LCD device 
+ *
+ *  Parameters:
+ *	buf     - string of characters to write to LCD
+ *
+ *  Returns:
+ *	int     - number of bytes written, or -1 on fail
+ */
+int mosWriteLcd(char *buf)
+{
+    UNUSED(buf);
+
+    return (-1);
+}
+
+
+/*  mosCloseLcd - closes LCD device 
+ *
+ *  Parameters:
+ *	none
+ *
+ *  Returns:
+ *	none
+ */
+void mosCloseLcd(void)
+{
+
+}
+
+
+/* =========================================================================================== */
+/*  Terminal Device - typically a serial port based device                                     */
+/* =========================================================================================== */
+
+/*  mosOpenTerminal - opens terminal device 
+ *
+ *  Parameters:
+ *	none
+ *
+ *  Returns:
+ *	none
+ */
+void mosOpenTerminal(void)
+{
+    mosPrint("Terminal is open\n");
+}
+
+
+/*  mosReadTerminal - reads character string from terminal (blocking) 
+ *
+ *  Parameters:
+ *	buf     - string of characters read from terminal
+ *
+ *  Returns:
+ *	int     - number of characters read, or -1 on fail
+ */
+int mosReadTerminal(char *buf)
+{ 
+    size_t bytes;
+    
+    // simulate read of string from terminal
+//    char *s = fgets( buf, MAX_TERM_CHARS, stdin );
+    bytes = Serial.readBytesUntil( '\n', buf, MAX_TERM_CHARS);
+
+    // remove '\n' from end of string
+    buf[ strlen(buf) - 1 ] = '\0';
+
+    if (bytes == 0)
+    {
+        return(-1);
+    }
+    return (strlen(buf));
+}
+
+
+/*  mosWriteTerminal - write characters to terminal device 
+ *
+ *  Parameters:
+ *	buf     - string of characters to write to terminal
+ *
+ *  Returns:
+ *	int     - number of bytes written, or -1 on fail
+ */
+int mosWriteTerminal(char *buf)
+{
+    // simulate write of string to terminal
+    if (buf)
+    {
+         Serial.print(buf);
+    }
+    else
+    {
+         return -1;
+    }
+
+    return(strlen(buf));
+}
+
+
+/*  mosCloseTerminal - closes terminal device 
+ *
+ *  Parameters:
+ *	none
+ *
+ *  Returns:
+ *	none
+ */
+void mosCloseTerminal(void)
+{
+    mosPrint("Terminal is closed\n");
+}
+
+
+/* =========================================================================================== */
+/*  Debug Device - typically uses "printf" facility                                            */
+/* =========================================================================================== */
+
+/*  mosDbgPrint - debug print formatted output text 
+ *
+ *  Parameters:
+ *	id      - debug id, allows potential control over which output is visible
+ *	fmt     - formatted output string
+ *
+ *  Returns:
+ *	none
+ */
+void mosDbgPrint( int id, const char *fmt, ... )
+{
+    const unsigned DBGPRINT_BUF_SIZE = MAX_DEBUG_CHARS;
+    char buf[DBGPRINT_BUF_SIZE];
+
+    va_list argp;
+
+    // Construct the variable part
+    va_start(argp, fmt);
+    vsnprintf( buf, DBGPRINT_BUF_SIZE, fmt, argp);
+    va_end(argp);
+
+    // Ensure null termination
+    buf[DBGPRINT_BUF_SIZE-1] = 0;
+
+    // Display the formatted output   
+//    printf("%03d %s", id, buf);
+    if (printEnable)
+    {
+        Serial.print(id);
+        Serial.print(" ");
+        Serial.println(buf); 
+    }
+}
+
+/*  mosPrint - print formatted output text
+ *
+ *  Parameters:
+ *	fmt     - formatted output string
+ *
+ *  Returns:
+ *	none
+ */
+void mosPrint( const char *fmt, ... )
+{
+    const unsigned DBGPRINT_BUF_SIZE = MAX_DEBUG_CHARS;
+    char buf[DBGPRINT_BUF_SIZE];
+
+    va_list argp;
+
+    // Construct the variable part
+    va_start(argp, fmt);
+    vsnprintf( buf, DBGPRINT_BUF_SIZE, fmt, argp);
+    va_end(argp);
+
+    // Ensure null termination
+    buf[DBGPRINT_BUF_SIZE-1] = 0;
+
+    // Display the formatted output   
+//    printf("%s", buf);
+    if (printEnable)
+    {
+        Serial.println(buf); 
+    }
+}
+
+
+/*  mosPrintEnable		- enable/disable serial debug printing
+ *
+ *  Parameters:
+ *	state - enable/disable control
+ *
+ *  Returns:
+ *	none
+ */
+void mosPrintEnable(BOOLEAN_T state)
+{
+   printEnable = state;
+   if (printEnable)
+   {
+      Serial.begin(9600); 
+   }
+}
+
+/* end of platform.c */
