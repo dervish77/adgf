@@ -1,0 +1,23 @@
+Circuit: * C:\Documents and Settings\bl12960\Desktop\Elec101\analog101\Labs\lab04b-Rect-full-wave.asc
+
+C1: both pins shorted together -- ignoring.
+.OP point found by inspection.
+
+Date: Sat Jul 02 21:02:13 2011
+Total elapsed time: 0.140 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 2479
+traniter = 2479
+tranpoints = 1049
+accept = 1048
+rejected = 1
+matrix size = 7
+fillins = 0
+solver = Normal
+Matrix Compiler1: 410 bytes object code size  2.2/2.2/[2.0]
+Matrix Compiler2: 535 bytes object code size  2.1/2.2/[2.2]
+
+
