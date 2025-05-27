@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1361997827 source:c:\users\bl12960\documents\dev\walletinc\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Wallet.h"
+
+1361997882 c:\users\bl12960\documents\dev\walletinc\wallet.h
+
+1361998010 source:c:\users\bl12960\documents\dev\walletinc\wallet.c
+	"Wallet.h"
+
