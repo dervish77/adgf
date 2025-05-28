@@ -109,7 +109,8 @@ ROOM_S_T room[] = {
 15, -1, " ",
 
 16, 1, "A dank, musty odor fills the air.  A very dark passageway leads west.",
-16, 2, "The deep gloom nearly conceals a narrow set of stairs which lead down.", 16, -1, " ",
+16, 2, "The deep gloom nearly conceals a narrow set of stairs which lead down.",
+16, -1, " ",
 
 17, 1, "You are in a small alcove above a room filled with pillows.  A",
 17, 2, "steeply sloped passage leads back down.",
@@ -126,7 +127,7 @@ ROOM_S_T room[] = {
 19, -1, " ",
 
 20, 1, "A massive granite pillar sits squarely in the middle of this room.  A",
-20, 2, "pair of ornate doorways lead south and east.", 
+20, 2, "pair of ornate doorways lead south and east.",
 20, -1, " ",
 
 21, 1, "This room is perfectly round and the walls have no visible markings.",
@@ -165,7 +166,8 @@ ROOM_S_T room[] = {
 28, 2, "exit is to the south.",
 28, -1, " ",
 
-29, 1, "This is a very tastefully decorated room with several nice oriental", 29, 2, "carpets laying on the floor.", 
+29, 1, "This is a very tastefully decorated room with several nice oriental",
+29, 2, "carpets laying on the floor.  An exit leads south.",
 29, -1, " ",
 
 30, 1, "You are on a narrow ledge on the northern side a bottomless fissure.",
@@ -182,7 +184,8 @@ ROOM_S_T room[] = {
 
 33, 1, "This is obviously a library full of books.  A large table lies in",
 33, 2, "center of the room.  The books seem to cover a range of subjects from",
-33, 3, "science and history, to religion and politics.",
+33, 3, "science and history, to religion and politics.  A doorway leads",
+33, 4, "north and a rough opening leads east.",
 33, -1, " ",
 
 34, 1, "You are in a large cave with exits to the west and south.  A ",
@@ -221,7 +224,7 @@ ROOM_S_T room[] = {
 41, 2, "clutched in your left hand.  An empty coffee cup lies at your feet.",
 41, 3, "Apparently, you either had a bad dream or too much caffienne.  You",
 41, 4, "hear the rumble of a tow truck pulling into your driveway.  Maybe",
-41, 5, "you'll finally make it into work this morning afterall.", 
+41, 5, "you'll finally make it into work this morning afterall.",
 41, -1, " ",
 
 42, 1, "You are lost in the swamp.",
