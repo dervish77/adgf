@@ -68,13 +68,13 @@
 910351292 source:c:\documents and settings\owner\my documents\dev\thuria\verb.c
 	"main.h"
 
-1748377657 source:c:\users\bslin\onedrive\documents\github\adgf\adgf\win\thuria\cmds.c
+1748468261 source:c:\users\bslin\onedrive\documents\github\adgf\adgf\win\thuria\cmds.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"main.h"
 
-1748468425 c:\users\bslin\onedrive\documents\github\adgf\adgf\win\thuria\main.h
+1748470641 c:\users\bslin\onedrive\documents\github\adgf\adgf\win\thuria\main.h
 	<stdio.h>
 	"room.h"
 	"object.h"
@@ -101,8 +101,10 @@
 	<string.h>
 	"main.h"
 
-1748377657 source:c:\users\bslin\onedrive\documents\github\adgf\adgf\win\thuria\game.c
+1748468349 source:c:\users\bslin\onedrive\documents\github\adgf\adgf\win\thuria\game.c
+	<ctype.h>
 	<stdio.h>
+	<stdlib.h>
 	<string.h>
 	"main.h"
 
@@ -122,13 +124,13 @@
 1748377657 source:c:\users\bslin\onedrive\documents\github\adgf\adgf\win\thuria\map.c
 	"main.h"
 
-1748377657 source:c:\users\bslin\onedrive\documents\github\adgf\adgf\win\thuria\object.c
+1748468473 source:c:\users\bslin\onedrive\documents\github\adgf\adgf\win\thuria\object.c
 	"main.h"
 
 1748377657 source:c:\users\bslin\onedrive\documents\github\adgf\adgf\win\thuria\rank.c
 	"main.h"
 
-1748377657 source:c:\users\bslin\onedrive\documents\github\adgf\adgf\win\thuria\room.c
+1748468534 source:c:\users\bslin\onedrive\documents\github\adgf\adgf\win\thuria\room.c
 	"main.h"
 
 1748377657 source:c:\users\bslin\onedrive\documents\github\adgf\adgf\win\thuria\special.c

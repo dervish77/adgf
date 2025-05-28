@@ -49,6 +49,8 @@
 #endif
 
 
+#define DUNGEON_DEBUG
+
 
 /*  define version
  */
