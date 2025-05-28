@@ -1,0 +1,21 @@
+******************************************************
+    Welcome to DrawSdl 0.7.0 - LibSDL drawing demo
+******************************************************
+
+1.  Demo Pixels
+2.  Demo Lines
+3.  Demo Boxes
+4.  Demo Triangles
+5.  Demo Circles
+6.  Demo Bitmaps
+7.  Demo Blitters
+8.  Demo Keys
+9.  Demo Mouse
+10. Demo Animation
+11. Demo Text
+12. Demo Polygons
+13. Demo Sprites
+99. Full Demo
+0.  Exit
+
+Enter choice: 

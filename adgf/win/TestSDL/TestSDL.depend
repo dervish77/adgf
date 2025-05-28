@@ -194,3 +194,8 @@
 	"begin_code.h"
 	"close_code.h"
 
+1748377641 source:c:\users\bslin\onedrive\documents\github\adgf\adgf\win\testsdl\main.cpp
+	<cstdlib>
+	<stdlib.h>
+	<SDL/SDL.h>
+
