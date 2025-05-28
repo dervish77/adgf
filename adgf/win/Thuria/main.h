@@ -53,7 +53,7 @@
 /*  define version
  */
 #define VERSION		"1.1"
-#define VERSIONDATE	"11/06/98"
+#define VERSIONDATE	"11/06/1998"
 
 
 /*  define some constants
@@ -89,7 +89,7 @@
 
 #define ATRG		5
 
-#define RANK_0_MAX	140	
+#define RANK_0_MAX	140
 #define RANK_1_MAX	280
 #define RANK_2_MAX	420
 #define RANK_3_MAX	560
@@ -102,7 +102,7 @@
 typedef unsigned char BOOLEAN_T;
 
 typedef char SHORT_BUFFER_T[SHORT_BUFF_LEN];
-typedef char LONG_BUFFER_T[LONG_BUFF_LEN]; 
+typedef char LONG_BUFFER_T[LONG_BUFF_LEN];
 
 typedef short int 	INDEX_T;
 
@@ -111,38 +111,38 @@ typedef short int 	INDEX_T;
 /*  define map structure
  */
 typedef struct map_s_t {
-   INDEX_T		roomnum;	/* room number index */
-   LONG_BUFFER_T	roomname;	/* room name string */
-   BOOLEAN_T		beenhere;	/* i've been here flag */
-   BOOLEAN_T		inside;		/* inside flag */
-   INDEX_T		n;		/* index for north */
-   INDEX_T		s;		/* index for south */
-   INDEX_T		e;		/* index for east */
-   INDEX_T		w;		/* index for west */
-   INDEX_T		d;		/* index for down */
-   INDEX_T		u;		/* index for up */
-   INDEX_T		special;	/* special effect index */
-   INDEX_T		object;		/* object index */
+   INDEX_T        roomnum;  /* room number index */
+   LONG_BUFFER_T	roomname; /* room name string */
+   BOOLEAN_T      beenhere;	/* i've been here flag */
+   BOOLEAN_T      inside;   /* inside flag */
+   INDEX_T        n;		/* index for north */
+   INDEX_T        s;		/* index for south */
+   INDEX_T        e;		/* index for east */
+   INDEX_T        w;		/* index for west */
+   INDEX_T        d;		/* index for down */
+   INDEX_T        u;		/* index for up */
+   INDEX_T        special;	/* special effect index */
+   INDEX_T        object;		/* object index */
 } MAP_S_T;
 
 
 /*  define object structure
  */
 typedef struct object_s_t {
-   INDEX_T		objnum;		/* object id number */
-   INDEX_T		score;		/* score value */
-   SHORT_BUFFER_T	key;		/* search key word */
-   SHORT_BUFFER_T	prep;		/* prep phrase */
-   SHORT_BUFFER_T	name;		/* object name string */
-   LONG_BUFFER_T	examine;	/* examine phrase */
+   INDEX_T        objnum;   /* object id number */
+   INDEX_T        score;    /* score value */
+   SHORT_BUFFER_T	key;      /* search key word */
+   SHORT_BUFFER_T	prep;     /* prep phrase */
+   SHORT_BUFFER_T	name;     /* object name string */
+   LONG_BUFFER_T  examine;  /* examine phrase */
 } OBJECT_S_T;
 
 
 /*  define special structure
  */
 typedef struct special_s_t {
-   INDEX_T		spnum;		/* special id number */
-   INDEX_T		score;		/* score value */
+   INDEX_T        spnum;		/* special id number */
+   INDEX_T        score;		/* score value */
    LONG_BUFFER_T	phrase;		/* special phrase string */
 } SPECIAL_S_T;
 
@@ -150,38 +150,38 @@ typedef struct special_s_t {
 /*  define magic structure
  */
 typedef struct magic_s_t {
-   INDEX_T		mgnum;		/* magic id number */
-   INDEX_T		score;		/* score value */
-   INDEX_T		fromroom;	/* from room index */
-   INDEX_T		toroom;		/* to room index */
-   SHORT_BUFFER_T	word;		/* magic word string */
-   LONG_BUFFER_T	phrase;		/* magic phrase string */
+   INDEX_T        mgnum;    /* magic id number */
+   INDEX_T        score;    /* score value */
+   INDEX_T        fromroom; /* from room index */
+   INDEX_T        toroom;   /* to room index */
+   SHORT_BUFFER_T	word;     /* magic word string */
+   LONG_BUFFER_T  phrase;   /* magic phrase string */
 } MAGIC_S_T;
 
 
 /*  define rank structure
  */
 typedef struct rank_s_t {
-   INDEX_T		rnum;		/* rank id number */
-   SHORT_BUFFER_T	title;		/* rank title string */
-   LONG_BUFFER_T	phrase;		/* rank phrase string */
+   INDEX_T        rnum;     /* rank id number */
+   SHORT_BUFFER_T	title;    /* rank title string */
+   LONG_BUFFER_T  phrase;   /* rank phrase string */
 } RANK_S_T;
 
 
 /*  define verb structure
  */
 typedef struct verb_s_t {
-   INDEX_T		vnum;		/* verb id number */
+   INDEX_T        vnum;		/* verb id number */
    SHORT_BUFFER_T	word;		/* verb word string */
-   INDEX_T		type;		/* verb type */
+   INDEX_T        type;		/* verb type */
 } VERB_S_T;
 
 
 /*  define room structure
  */
 typedef struct room_s_t {
-   INDEX_T		roomnum;	/* room number index */
-   INDEX_T		linenum;	/* line number of text */
+   INDEX_T        roomnum;	/* room number index */
+   INDEX_T        linenum;	/* line number of text */
    LONG_BUFFER_T	roomline;	/* text string */
 } ROOM_S_T;
 
@@ -189,23 +189,23 @@ typedef struct room_s_t {
 /*  define intro structure
  */
 typedef struct intro_s_t {
-   INDEX_T		linenum;	/* line number of text */
-   LONG_BUFFER_T	introline;	/* text string */
+   INDEX_T        linenum;    /* line number of text */
+   LONG_BUFFER_T  introline;	/* text string */
 } INTRO_S_T;
 
 
 /*  define inventory structure
  */
 typedef struct inv_s_t {
-   INDEX_T		count;			/* count of objects */
-   INDEX_T		list[MAX_INV_OBJS];	/* list of object indexes */
+   INDEX_T    count;              /* count of objects */
+   INDEX_T    list[MAX_INV_OBJS];	/* list of object indexes */
 } INV_S_T;
 
 
 /*  define treasure chest structure
  */
 typedef struct chest_s_t {
-   INDEX_T		count;			/* count of objects */
+   INDEX_T		count;                /* count of objects */
    INDEX_T		list[MAX_CHEST_OBJS];	/* list of object indexes */
 } CHEST_S_T;
 
@@ -213,8 +213,8 @@ typedef struct chest_s_t {
 /*  define command word structure
  */
 typedef struct cmd_s_t {
-   int			type;		/* type of command word */
-   int			length;		/* length of string */
+   int            type;		/* type of command word */
+   int            length;	/* length of string */
    SHORT_BUFFER_T	cmd;		/* cmd word string */
 } CMD_S_T;
 
@@ -222,32 +222,32 @@ typedef struct cmd_s_t {
 /*  define main game structure
  */
 typedef struct game_s_t {
-   BOOLEAN_T 		play_game;		/* play game flag */
-   BOOLEAN_T		suppress_instructions;	/* flag */
-   BOOLEAN_T		adult_enabled;		/* adult flag */
-   int			adult_count;		/* adult count */
-   BOOLEAN_T		debug_enabled;		/* debug flag */
-   BOOLEAN_T		verbose;		/* verbose flag */
-   BOOLEAN_T		have_lamp;		/* i have the lamp flag */
-   BOOLEAN_T		lamp_is_on;		/* the lamp is on flag */
-   INDEX_T		current_room;		/* current room index */
-   int			score;			/* current score */
-   int			health;			/* current health */
-   int			moves;			/* number of moves */
-   int			oil;			/* amount of oil */
-   BOOLEAN_T 		load_game;		/* load the game flag */
-   BOOLEAN_T 		save_game;		/* save the game flag */
-   BOOLEAN_T 		game_loaded;		/* game is loaded flag */
-   BOOLEAN_T		game_saved;		/* game is saved flag */
+   BOOLEAN_T 	 	  play_game;		/* play game flag */
+   BOOLEAN_T	 	  suppress_instructions;	/* flag */
+   BOOLEAN_T	 	  adult_enabled;		/* adult flag */
+   int            adult_count;		/* adult count */
+   BOOLEAN_T		  debug_enabled;		/* debug flag */
+   BOOLEAN_T		  verbose;		/* verbose flag */
+   BOOLEAN_T		  have_lamp;		/* i have the lamp flag */
+   BOOLEAN_T		  lamp_is_on;		/* the lamp is on flag */
+   INDEX_T        current_room;		/* current room index */
+   int            score;			/* current score */
+   int            health;			/* current health */
+   int            moves;			/* number of moves */
+   int            oil;			/* amount of oil */
+   BOOLEAN_T      load_game;		/* load the game flag */
+   BOOLEAN_T 		  save_game;		/* save the game flag */
+   BOOLEAN_T 		  game_loaded;		/* game is loaded flag */
+   BOOLEAN_T		  game_saved;		/* game is saved flag */
    SHORT_BUFFER_T	load_file_name;		/* load file name */
    SHORT_BUFFER_T	save_file_name;		/* save file name */
-   FILE			*load_file_fp;		/* load file pointer */
-   FILE			*save_file_fp;		/* save file pointer */
-   INV_S_T		inventory;		/* inventory list */
-   CHEST_S_T		chest;			/* treasure chest list */
+   FILE			      *load_file_fp;		/* load file pointer */
+   FILE			      *save_file_fp;		/* save file pointer */
+   INV_S_T		    inventory;		/* inventory list */
+   CHEST_S_T		  chest;			/* treasure chest list */
    LONG_BUFFER_T	cmdstring;		/* whole command string */
-   int			argcount;		/* word count of cmd string */
-   CMD_S_T		list[MAX_CMD_ARGS];	/* list of cmd words */
+   int			      argcount;		/* word count of cmd string */
+   CMD_S_T		    list[MAX_CMD_ARGS];	/* list of cmd words */
 } GAME_S_T;
 
 

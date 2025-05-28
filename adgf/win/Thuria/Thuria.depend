@@ -68,3 +68,72 @@
 910351292 source:c:\documents and settings\owner\my documents\dev\thuria\verb.c
 	"main.h"
 
+1748377657 source:c:\users\bslin\onedrive\documents\github\adgf\adgf\win\thuria\cmds.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"main.h"
+
+1748468425 c:\users\bslin\onedrive\documents\github\adgf\adgf\win\thuria\main.h
+	<stdio.h>
+	"room.h"
+	"object.h"
+	"special.h"
+	"magic.h"
+	"rank.h"
+	"verb.h"
+
+1748377657 c:\users\bslin\onedrive\documents\github\adgf\adgf\win\thuria\room.h
+
+1748377657 c:\users\bslin\onedrive\documents\github\adgf\adgf\win\thuria\object.h
+
+1748377657 c:\users\bslin\onedrive\documents\github\adgf\adgf\win\thuria\special.h
+
+1748377657 c:\users\bslin\onedrive\documents\github\adgf\adgf\win\thuria\magic.h
+
+1748377657 c:\users\bslin\onedrive\documents\github\adgf\adgf\win\thuria\rank.h
+
+1748377657 c:\users\bslin\onedrive\documents\github\adgf\adgf\win\thuria\verb.h
+
+1748377657 source:c:\users\bslin\onedrive\documents\github\adgf\adgf\win\thuria\debug.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"main.h"
+
+1748377657 source:c:\users\bslin\onedrive\documents\github\adgf\adgf\win\thuria\game.c
+	<stdio.h>
+	<string.h>
+	"main.h"
+
+1748377657 source:c:\users\bslin\onedrive\documents\github\adgf\adgf\win\thuria\intro.c
+	<stdio.h>
+	"main.h"
+
+1748377657 source:c:\users\bslin\onedrive\documents\github\adgf\adgf\win\thuria\magic.c
+	"main.h"
+
+1748377657 source:c:\users\bslin\onedrive\documents\github\adgf\adgf\win\thuria\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"main.h"
+
+1748377657 source:c:\users\bslin\onedrive\documents\github\adgf\adgf\win\thuria\map.c
+	"main.h"
+
+1748377657 source:c:\users\bslin\onedrive\documents\github\adgf\adgf\win\thuria\object.c
+	"main.h"
+
+1748377657 source:c:\users\bslin\onedrive\documents\github\adgf\adgf\win\thuria\rank.c
+	"main.h"
+
+1748377657 source:c:\users\bslin\onedrive\documents\github\adgf\adgf\win\thuria\room.c
+	"main.h"
+
+1748377657 source:c:\users\bslin\onedrive\documents\github\adgf\adgf\win\thuria\special.c
+	"main.h"
+
+1748377657 source:c:\users\bslin\onedrive\documents\github\adgf\adgf\win\thuria\verb.c
+	"main.h"
+

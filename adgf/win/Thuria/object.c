@@ -20,10 +20,10 @@
 #endif
 
 
-/* 
+/*
 # object file for Dungeons of Thuria
 #
-# Format: 
+# Format:
 # object #, score, search key, prep phrase, full name of object, examine phrase
 #
 */
@@ -36,7 +36,7 @@ OBJECT_S_T object[] = {
 4,  10, "bars",     "are",	"two silver bars",		"They are rather heavy.",
 5,  10, "twinkies", "is a",	"sealed package of twinkies",	"The package is dated Jan 05, 1977.",
 6,  10, "nail",     "is a",	"rusty nail",			"Looks like a common eight penny nail.",
-7,   0, "chest",    "is a",	"heavy chest",			"Looks it weighs over 300 pounds, and there is a \nmagic aura around it.",
+7,   0, "chest",    "is a",	"heavy chest",			"Looks like it weighs over 300 pounds, and there is a \nmagic aura around it.",
 8,   0, "beaver",   "are",	"several beavers",		"They are ignoring you.",
 9,  10, "padlock",  "is a", 	"padlock",			"Cheap lock, easily picked.",
 10, 10, "paper",    "is a",	"piece of crumpled paper",	"Scrawled in a strange script is a single sentence:\n\"Seek the hall of three questions\".",

@@ -13,8 +13,9 @@
  *
  *****************************************************************************/
 
-
+#include <ctype.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
 #ifndef MAIN_H
@@ -43,12 +44,12 @@ extern void HandleMultiCmd(GAME_S_T *game);
  *  Returns:
  *	count	- count of substrings in array
  */
-int 
+int
 ParseString(char *string, char *args[])
 {
    char c, *argstart;
    int arglen, argcount=0;
-   
+
    argstart = string;
 
    for (; *string != '\0'; string++) {
@@ -111,8 +112,8 @@ void DescribeRoom(GAME_S_T *game)
       }
       r++;
    }
-   
-   if (found) 
+
+   if (found)
    {
       while ( (room[r].roomnum == c) && (room[r].linenum > -1) )
       {
@@ -123,7 +124,7 @@ void DescribeRoom(GAME_S_T *game)
    else
    {
       printf("Error - room description not found!\n");
-      exit(0);
+      exit(1);
    }
 }
 
@@ -157,8 +158,8 @@ void DescribeObject(GAME_S_T *game)
 
       if (obj > OBJ_NULL)
       {
-         printf("  There %s %s here!\n", 
-		object[obj].prep, object[obj].name); 
+         printf("  There %s %s here!\n",
+		object[obj].prep, object[obj].name);
       }
    }
 }
@@ -175,7 +176,7 @@ void DescribeSpecial(GAME_S_T *game)
 
    if (sp > SE_NULL)
    {
-      printf("  %s\n", special[sp].phrase); 
+      printf("  %s\n", special[sp].phrase);
    }
 }
 
@@ -187,7 +188,7 @@ void ShowScore(GAME_S_T *game)
 {
    int rk;
 
-   printf("\nYour score is %d out of %d in %d moves.\n", 
+   printf("\nYour score is %d out of %d in %d moves.\n",
 		game->score, MAX_SCORE, game->moves);
 
    if ( game->score >= MIN_SCORE && game->score < RANK_0_MAX )
@@ -217,7 +218,11 @@ void PlayerDied(GAME_S_T *game)
    printf("\nYou have died a horrible death.\n");
    ShowScore(game);
    printf("\nHit any key to quit... ");
-   gets( response );
+   if (fgets( response, SHORT_BUFF_LEN, stdin ) == NULL)
+   {
+      fprintf(stderr,"fgets error");
+      exit(1);
+   }
    exit(0);
 }
 
@@ -271,7 +276,11 @@ BOOLEAN_T ReadCommand(GAME_S_T *game)
    LONG_BUFFER_T	cmd;
 
    printf("\n%s", PROMPT);
-   fgets( cmd, LONG_BUFF_LEN, stdin );
+   if ( fgets( cmd, LONG_BUFF_LEN, stdin ) == NULL)
+   {
+      fprintf(stderr,"fgets error");
+      exit(1);
+   }
    strncpy( game->cmdstring, cmd, LONG_BUFF_LEN );
 
    return(FALSE);
@@ -318,16 +327,20 @@ BOOLEAN_T GetCommand(GAME_S_T *game)
    ParseCommand( game );
 
 
-   /*  for single word commands 
+   /*  for single word commands
     */
    if (game->argcount == 1)
    {
-      if ( strcmp( game->list[0].cmd, "quit" ) == 0 
+      if ( strcmp( game->list[0].cmd, "quit" ) == 0
 		|| strcmp( game->list[0].cmd, "q" ) == 0 )
       {
          ShowScore(game);
          printf("\nQuitting, are you sure? ");
-         gets( response );
+         if (fgets( response, SHORT_BUFF_LEN, stdin ) == NULL)
+         {
+            fprintf(stderr,"fgets error");
+            exit(1);
+         }
          if ( response[0] == 'y' || response[0] == 'Y' )
             return(TRUE);
       }
@@ -357,7 +370,7 @@ BOOLEAN_T GetCommand(GAME_S_T *game)
  */
 void PlayGame(GAME_S_T *game)
 {
-   BOOLEAN_T	quit = FALSE; 
+   BOOLEAN_T	quit = FALSE;
    INDEX_T	current;
 
    current = game->current_room;
@@ -378,7 +391,7 @@ void PlayGame(GAME_S_T *game)
       {
          quit = GetCommand( game );
          game->moves++;
-         if (game->lamp_is_on) 
+         if (game->lamp_is_on)
             game->oil--;
          if (game->health < MAX_HEALTH)
             game->health++;

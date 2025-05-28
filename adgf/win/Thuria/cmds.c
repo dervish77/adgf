@@ -40,6 +40,7 @@ extern BOOLEAN_T CheckLamp(GAME_S_T *game);
 extern void DisplayTitle(void);
 extern BOOLEAN_T HaveObject(GAME_S_T *game, INDEX_T obj, INDEX_T *index);
 extern void HandleDebug(GAME_S_T *game);
+extern void ShowScore(GAME_S_T *game);
 
 
 
@@ -60,7 +61,7 @@ void HandleHelp()
    printf("  save                  - save current game\n");
    printf("  diagnose              - show health status\n");
    printf("  n,s,e,w,u,d           - travel directions\n");
-   
+
    printf("\nOther verbs:\n");
 
    printf("  take, drop, enter, exit, open, read, examine, on, off\n");
@@ -146,10 +147,14 @@ void HandleNew(GAME_S_T *game)
 
    printf("\nStarting new game.  Are you sure (y/n)? ");
 
-   gets( result );
+   if (fgets( result, SHORT_BUFF_LEN, stdin ) == NULL)
+   {
+      fprintf(stderr,"fgets error");
+      exit(1);
+   }
 
    if ( result[0] == 'y' || result[0] == 'Y' )
-   {  
+   {
       printf("\nOkay...\n\n");
       strcpy( game->load_file_name, "init.sav" );
       game->load_file_fp = fopen(game->load_file_name, "r");
@@ -189,7 +194,7 @@ BOOLEAN_T HandleMagic(GAME_S_T *game)
       }
       i++;
    }
-   
+
    if (found)
    {
       if ( mg == MG_XYZZY )
@@ -555,7 +560,7 @@ BOOLEAN_T HandleSpecialDirection(GAME_S_T *game, char dir)
          {
             if ( game->inventory.count > 1 )
             {
-               printf("\nYou cannot fit through the narrow slit with everything that you\nare carrying.  You must drop something first.\n"); 
+               printf("\nYou cannot fit through the narrow slit with everything that you\nare carrying.  You must drop something first.\n");
             }
             else
             {
@@ -571,7 +576,7 @@ BOOLEAN_T HandleSpecialDirection(GAME_S_T *game, char dir)
          {
             if ( game->inventory.count > 1 )
             {
-               printf("\nYou cannot fit through the narrow slit with everything that you\nare carrying.  You must drop something first.\n"); 
+               printf("\nYou cannot fit through the narrow slit with everything that you\nare carrying.  You must drop something first.\n");
             }
             else
             {
@@ -895,11 +900,11 @@ void HandleSingleCmd(GAME_S_T *game)
    {
       HandleLook(game);
    }
-   else if ( strcmp( game->list[0].cmd, "north" ) == 0 
-		|| strcmp( game->list[0].cmd, "south" ) == 0 
-		|| strcmp( game->list[0].cmd, "east" ) == 0 
-		|| strcmp( game->list[0].cmd, "west" ) == 0 
-		|| strcmp( game->list[0].cmd, "up" ) == 0 
+   else if ( strcmp( game->list[0].cmd, "north" ) == 0
+		|| strcmp( game->list[0].cmd, "south" ) == 0
+		|| strcmp( game->list[0].cmd, "east" ) == 0
+		|| strcmp( game->list[0].cmd, "west" ) == 0
+		|| strcmp( game->list[0].cmd, "up" ) == 0
 		|| strcmp( game->list[0].cmd, "down" ) == 0 )
    {
       if ( CheckLamp(game) )
@@ -964,10 +969,10 @@ void HandleSingleCmd(GAME_S_T *game)
    {
       ShowScore(game);
    }
-   else if ( strcmp( game->list[0].cmd, "health" ) == 0 
+   else if ( strcmp( game->list[0].cmd, "health" ) == 0
 		|| strcmp( game->list[0].cmd, "diagnose" ) == 0 )
    {
-      printf("\nYour health is %d out of %d.\n", 
+      printf("\nYour health is %d out of %d.\n",
 		game->health, MAX_HEALTH);
    }
    else if ( strcmp( game->list[0].cmd, "about" ) == 0 )
@@ -995,40 +1000,40 @@ void HandleSingleCmd(GAME_S_T *game)
    {
       printf("\nType much?\n");
    }
-   else if ( strcmp( game->list[0].cmd, "take" ) == 0 
+   else if ( strcmp( game->list[0].cmd, "take" ) == 0
 		|| strcmp( game->list[0].cmd, "drop" ) == 0
 		|| strcmp( game->list[0].cmd, "wave" ) == 0
-		|| strcmp( game->list[0].cmd, "open" ) == 0 
-		|| strcmp( game->list[0].cmd, "close" ) == 0 
+		|| strcmp( game->list[0].cmd, "open" ) == 0
+		|| strcmp( game->list[0].cmd, "close" ) == 0
 		|| strcmp( game->list[0].cmd, "play" ) == 0
 		|| strcmp( game->list[0].cmd, "pick" ) == 0
-		|| strcmp( game->list[0].cmd, "feed" ) == 0 
-		|| strcmp( game->list[0].cmd, "drink" ) == 0 
-		|| strcmp( game->list[0].cmd, "eat" ) == 0 
-		|| strcmp( game->list[0].cmd, "kill" ) == 0 
-		|| strcmp( game->list[0].cmd, "wear" ) == 0 
-		|| strcmp( game->list[0].cmd, "read" ) == 0 
-		|| strcmp( game->list[0].cmd, "move" ) == 0 
-		|| strcmp( game->list[0].cmd, "answer" ) == 0 
-		|| strcmp( game->list[0].cmd, "break" ) == 0 
-		|| strcmp( game->list[0].cmd, "unlock" ) == 0 
+		|| strcmp( game->list[0].cmd, "feed" ) == 0
+		|| strcmp( game->list[0].cmd, "drink" ) == 0
+		|| strcmp( game->list[0].cmd, "eat" ) == 0
+		|| strcmp( game->list[0].cmd, "kill" ) == 0
+		|| strcmp( game->list[0].cmd, "wear" ) == 0
+		|| strcmp( game->list[0].cmd, "read" ) == 0
+		|| strcmp( game->list[0].cmd, "move" ) == 0
+		|| strcmp( game->list[0].cmd, "answer" ) == 0
+		|| strcmp( game->list[0].cmd, "break" ) == 0
+		|| strcmp( game->list[0].cmd, "unlock" ) == 0
 		|| strcmp( game->list[0].cmd, "examine" ) == 0 )
    {
       printf("\nWhat do you wish to %s?\n", game->list[0].cmd);
    }
-   else if ( strcmp( game->list[0].cmd, "ls" ) == 0 
+   else if ( strcmp( game->list[0].cmd, "ls" ) == 0
 		|| strcmp( game->list[0].cmd, "dir" ) == 0
 		|| strcmp( game->list[0].cmd, "reboot" ) == 0
 		|| strcmp( game->list[0].cmd, "ps" ) == 0 )
    {
       printf("\nThis is not a computer, so cut out the geek lingo!\n");
    }
-   else if ( strcmp( game->list[0].cmd, "jesus" ) == 0 
+   else if ( strcmp( game->list[0].cmd, "jesus" ) == 0
 		|| strcmp( game->list[0].cmd, "damn" ) == 0
 		|| strcmp( game->list[0].cmd, "hell" ) == 0
 		|| strcmp( game->list[0].cmd, "fuck" ) == 0 )
    {
-      if (game->adult_enabled) 
+      if (game->adult_enabled)
          printf("\nCursing will not help your situation.\n");
       else
       {
@@ -1044,10 +1049,10 @@ void HandleSingleCmd(GAME_S_T *game)
       }
    }
    else if ( strcmp( game->list[0].cmd, "shit" ) == 0
-		|| strcmp( game->list[0].cmd, "piss" ) == 0 
+		|| strcmp( game->list[0].cmd, "piss" ) == 0
 		|| strcmp( game->list[0].cmd, "puke" ) == 0 )
    {
-      if (game->adult_enabled) 
+      if (game->adult_enabled)
          printf("\nDon't %s in my dungeon!\n", game->list[0].cmd);
       else
       {
@@ -1062,7 +1067,7 @@ void HandleSingleCmd(GAME_S_T *game)
          }
       }
    }
-   else if ( strcmp( game->list[0].cmd, "xxx" ) == 0 
+   else if ( strcmp( game->list[0].cmd, "xxx" ) == 0
 		|| strcmp( game->list[0].cmd, "sex" ) == 0 )
    {
       game->adult_count++;
@@ -1083,7 +1088,7 @@ void HandleSingleCmd(GAME_S_T *game)
 		|| strcmp( game->list[0].cmd, "vagina" ) == 0
 		|| strcmp( game->list[0].cmd, "tit" ) == 0 )
    {
-      if (game->adult_enabled) 
+      if (game->adult_enabled)
          printf("\nYou want me to touch your %s?\n", game->list[0].cmd);
       else
       {
@@ -1158,12 +1163,12 @@ void HandleTake(GAME_S_T *game)
          {
             if ( (invcount + 1) < MAX_INV_OBJS )
             {
-               if ( obj == OBJ_RUG 
+               if ( obj == OBJ_RUG
 			&& map[game->current_room].special == SE_BEAR_HUNGRY)
                {
                   printf("\nThe sleeping bear prevents you from taking the rug.\n");
                }
-               else if ( obj == OBJ_RUG 
+               else if ( obj == OBJ_RUG
 			&& map[game->current_room].special == SE_BEAR_DEAD)
                {
                   printf("\nThe dead bear prevents you from taking the rug.\n");
@@ -1253,7 +1258,7 @@ void HandleDrop(GAME_S_T *game)
             if (obj == OBJ_COINS)
             {
                if (map[game->current_room].special == SE_STATUE_NORTH)
-               { 
+               {
                   printf("(into coin sized slot)\n");
                   printf("\nSlowly the statue of the indian turns to face the southern doorway.\n");
                   map[game->current_room].special = SE_STATUE_SOUTH;
@@ -1266,7 +1271,7 @@ void HandleDrop(GAME_S_T *game)
             }
             else
             {
-               printf("\nYou can't fit the %s into the slot!\n", object[obj].prep, object[obj].name);
+               printf("\nYou can't fit the %s into the slot!\n", object[obj].name);
             }
             break;
 
@@ -1487,26 +1492,26 @@ void HandleWave(GAME_S_T *game)
    {
       if ( obj == OBJ_ROD )
       {
-         if ( cr == RM_LARGE_CAVE 
+         if ( cr == RM_LARGE_CAVE
 		&& map[RM_LARGE_CAVE].special == SE_BRIDGE_NO )
          {
             printf("\nAs you wave the strange black rod over your head, a crystal bridge\ngrows from one side of the fissure to other.\n");
             map[RM_LARGE_CAVE].special = SE_BRIDGE_YES;
             game->score += special[SE_BRIDGE_YES].score;
          }
-         else if ( cr == RM_LARGE_CAVE 
+         else if ( cr == RM_LARGE_CAVE
 		&& map[RM_LARGE_CAVE].special == SE_BRIDGE_BRK )
          {
             printf("\nAs you wave the strange black rod over your head, a crystal bridge\ngrows from one side of the fissure to other.\n");
             map[RM_LARGE_CAVE].special = SE_BRIDGE_YES;
          }
-         else if ( cr == RM_NARROW_CAVE 
+         else if ( cr == RM_NARROW_CAVE
 		&& map[RM_LARGE_CAVE].special == SE_BRIDGE_NO )
          {
             printf("\nAs you wave the strange black rod over your head, a crystal bridge\ngrows from one side of the fissure to other.\n");
             map[RM_LARGE_CAVE].special = SE_BRIDGE_YES;
          }
-         else if ( cr == RM_NARROW_CAVE 
+         else if ( cr == RM_NARROW_CAVE
 		&& map[RM_LARGE_CAVE].special == SE_BRIDGE_BRK )
          {
             printf("\nAs you wave the strange black rod over your head, a crystal bridge\ngrows from one side of the fissure to other.\n");
@@ -1555,14 +1560,14 @@ void HandlePlay(GAME_S_T *game)
    {
       if ( obj == OBJ_FLUTE )
       {
-         if ( cr == RM_STRANGE 
+         if ( cr == RM_STRANGE
 		&& map[RM_STRANGE].special == SE_ROPE_COILED )
          {
             printf("\nAs you play, the rope climbs slowly out of the basket and eventually\nreaches all the way up to the small opening.\n");
             game->score += special[SE_ROPE_RISEN].score;
             map[RM_STRANGE].special = SE_ROPE_RISEN;
          }
-         else if ( cr == RM_STRANGE 
+         else if ( cr == RM_STRANGE
 		&& map[RM_STRANGE].special == SE_ROPE_RISEN )
          {
             printf("\nAs you play, the rope slowly coils itself back inside of the basket.\n");
@@ -1684,18 +1689,18 @@ void HandleAnswer(GAME_S_T *game)
       {
          case SE_ANSWER_0:	/* accept player's name */
             map[cr].special = SE_ANSWER_1;
-            printf("\n%s\n", special[map[cr].special].phrase); 
+            printf("\n%s\n", special[map[cr].special].phrase);
             break;
          case SE_ANSWER_1:	/* accept "home" */
             if ( strcmp( game->list[1].cmd, "home" ) == 0 )
             {
                map[cr].special = SE_ANSWER_2;
-               printf("\n%s\n", special[map[cr].special].phrase); 
+               printf("\n%s\n", special[map[cr].special].phrase);
             }
             else
             {
                map[cr].special = SE_ANSWER_0;
-               printf("\n%s\n", special[map[cr].special].phrase); 
+               printf("\n%s\n", special[map[cr].special].phrase);
             }
             break;
          case SE_ANSWER_2:	/* accept "marcus" */
@@ -1703,16 +1708,16 @@ void HandleAnswer(GAME_S_T *game)
             {
                map[cr].special = SE_ANSWER_3;
                game->score += special[SE_ANSWER_3].score;
-               printf("\n%s\n", special[map[cr].special].phrase); 
+               printf("\n%s\n", special[map[cr].special].phrase);
             }
             else
             {
                map[cr].special = SE_ANSWER_0;
-               printf("\n%s\n", special[map[cr].special].phrase); 
+               printf("\n%s\n", special[map[cr].special].phrase);
             }
             break;
          case SE_ANSWER_3:
-            printf("\n%s\n", special[map[cr].special].phrase); 
+            printf("\n%s\n", special[map[cr].special].phrase);
             break;
       }
    }
@@ -1720,7 +1725,7 @@ void HandleAnswer(GAME_S_T *game)
    {
       printf("\nWho are you talking to?\n");
    }
-} 
+}
 
 
 /* HandleBreak() - handle break object command
@@ -1785,35 +1790,51 @@ void HandleKill(GAME_S_T *game)
       switch(cr)
       {
          case RM_THRONE:
-            if (object[OBJ_SKELETON].key, game->list[1].cmd)
+            if ( strcmp( object[OBJ_SKELETON].key, game->list[1].cmd ) == 0 )
             {
                printf("\nYou stab at where the skeleton's heart used to be and it \ncrumples to the floor.\n");
                game->score += special[SE_SKEL_DEAD].score;
                map[cr].special = SE_SKEL_DEAD;
             }
+            else
+            {
+               printf("\nYou can't kill that.\n");
+            }
             break;
 
          case RM_BEAVER_POND:
-            if (object[OBJ_BEAVER].key, game->list[1].cmd)
+            if ( strcmp( object[OBJ_BEAVER].key, game->list[1].cmd ) == 0 )
             {
                printf("\nYou cut the poor defenseless beaver cleanly in half.\n");
                map[cr].special = SE_BEAV_DEAD;
             }
+            else
+            {
+               printf("\nYou can't kill that.\n");
+            }
             break;
 
          case RM_RUG_ROOM:
-            if (object[OBJ_BEAR].key, game->list[1].cmd)
+            if ( strcmp( object[OBJ_BEAR].key, game->list[1].cmd ) == 0 )
             {
-               printf("\nYou attack the poor sleeping bear, killing it after several blows.\n");
+               printf("\nYou attack the sleeping bear, killing it after several blows.\n");
                map[cr].special = SE_BEAR_DEAD;
+            }
+            else
+            {
+               printf("\nYou can't kill that.\n");
             }
             break;
 
          case RM_QUESTION:
-            if (object[OBJ_MAN].key, game->list[1].cmd)
+            if ( strcmp( object[OBJ_MAN].key, game->list[1].cmd ) == 0)
             {
                printf("\nYou try to attack the strange man, but he is surprisingly quick \nand cuts you cleanly in half with his scythe.\n");
                PlayerDied(game);
+            }
+            else
+            {
+               printf("\nYou can't kill that.\n");
             }
             break;
 
@@ -1855,7 +1876,7 @@ void HandleWear(GAME_S_T *game)
    {
       if ( obj == OBJ_BOOTS )
       {
-         if ( cr == RM_NORTH_SIDE_LAKE 
+         if ( cr == RM_NORTH_SIDE_LAKE
 		&& map[RM_NORTH_SIDE_LAKE].special == SE_BOOTS_OFF )
          {
             printf("\nAs you finish lacing up the rotting boots, you suddenly feel like\nyou could walk on water.\n");
@@ -1863,7 +1884,7 @@ void HandleWear(GAME_S_T *game)
             map[RM_SOUTH_SIDE_LAKE].special = SE_BOOTS_ON;
             game->score += special[SE_BOOTS_ON].score;
          }
-         else if ( cr == RM_SOUTH_SIDE_LAKE 
+         else if ( cr == RM_SOUTH_SIDE_LAKE
 		&& map[RM_SOUTH_SIDE_LAKE].special == SE_BOOTS_OFF )
          {
             printf("\nAs you finish lacing up the rotting boots, you suddenly feel like\nyou could walk on water.\n");
@@ -1939,7 +1960,7 @@ void HandlePick(GAME_S_T *game)
    switch(cr)
    {
       case RM_OUTSIDE_MAIN:
-         if ( strcmp( game->list[1].cmd, "lock" ) == 0 
+         if ( strcmp( game->list[1].cmd, "lock" ) == 0
 		|| strcmp( game->list[1].cmd, "padlock" ) == 0 )
          {
             if ( HaveObject(game, OBJ_NAIL, &index) )
@@ -1970,7 +1991,7 @@ void HandlePick(GAME_S_T *game)
          break;
 
       case RM_CREVICE:
-         if ( strcmp( game->list[1].cmd, "lock" ) == 0 
+         if ( strcmp( game->list[1].cmd, "lock" ) == 0
 		|| strcmp( game->list[1].cmd, "grate" ) == 0 )
          {
             if ( HaveObject(game, OBJ_NAIL, &index) )
@@ -2019,7 +2040,7 @@ void HandleUnlock(GAME_S_T *game)
    switch(cr)
    {
       case RM_CREVICE:
-         if ( strcmp( game->list[1].cmd, "lock" ) == 0 
+         if ( strcmp( game->list[1].cmd, "lock" ) == 0
 		|| strcmp( game->list[1].cmd, "grate" ) == 0 )
          {
             if ( HaveObject(game, OBJ_KEY, &index) )
@@ -2409,7 +2430,7 @@ void HandleMultiCmd(GAME_S_T *game)
 		|| (strcmp( game->list[0].cmd, "bite" ) == 0
 			&& strcmp( game->list[1].cmd, "me" ) == 0) )
    {
-      if (game->adult_enabled) 
+      if (game->adult_enabled)
          printf("\nAnd %s %s to you too!\n", game->list[0].cmd, game->list[1].cmd);
       else
       {
@@ -2427,7 +2448,7 @@ void HandleMultiCmd(GAME_S_T *game)
    else if ( strcmp( game->list[0].cmd, "jesus" ) == 0
 			&& strcmp( game->list[1].cmd, "christ" ) == 0 )
    {
-      if (game->adult_enabled) 
+      if (game->adult_enabled)
          printf("\nCursing will not help your situation.\n");
       else
       {
@@ -2444,7 +2465,7 @@ void HandleMultiCmd(GAME_S_T *game)
    }
    else
    {
-      printf("\nI don't know how to - %s %s\n", 
+      printf("\nI don't know how to - %s %s\n",
 		game->list[0].cmd, game->list[1].cmd);
    }
 }
