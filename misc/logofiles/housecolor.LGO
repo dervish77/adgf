@@ -1,0 +1,70 @@
+to house
+pu rt 180 fd 200 rt 90 fd 200 rt 90 pd
+square 200
+pu fd 200 pd
+triangle 200
+pu rt 180 fd 200 lt 90 fd 50 lt 90 pd
+rectangle 100 50
+pu fd 100 rt 90 fd 75 lt 90 pd
+windows 50
+pu rt 180 fd 100 rt 90 fd 125 rt 90 pd
+end
+
+TO POLYGON :length :sides
+REPEAT :sides [FD :length RT 360.0/:sides]
+END
+
+to rectangle :height :width
+fd :height rt 90
+fd :width rt 90
+fd :height rt 90
+fd :width rt 90
+setfloodcolor [ 125 0 0 ]
+pu rt 45 fd 20 
+fill
+rt 180 fd 20 rt 135 pd
+end
+
+to sphere
+perspective
+repeat 72 [circle 100 rr 5]
+window
+end
+
+to square :size
+repeat 4 [fd :size rt 90]
+setfloodcolor [ 255 255 100 ]
+pu rt 45 fd 20 
+fill
+rt 180 fd 20 rt 135 pd
+end
+
+to star :big
+repeat 30 [square :big rt 12]
+end
+
+to triangle :size
+rt 30
+repeat 3 [fd :size rt 120]
+lt 30
+setfloodcolor [185  93   0]
+pu rt 45 fd 20 
+fill
+rt 180 fd 20 rt 135 pd
+end
+
+to windows :size
+square :size
+
+setfloodcolor [144 113 208]
+pu rt 45 fd 20 
+fill
+rt 180 fd 20 rt 135 pd
+
+pu fd :size/2 rt 90 pd
+fd :size
+pu rt 90 fd :size/2 rt 90 fd :size/2 rt 90 pd
+fd :size
+pu lt 90 fd :size/2 lt 90 fd :size lt 180 pd
+end
+
