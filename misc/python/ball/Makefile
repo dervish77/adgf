@@ -2,7 +2,7 @@
 #
 
 PY  = python
-EXE = python3
+EXE = python
 
 IDLE = idle3
 
