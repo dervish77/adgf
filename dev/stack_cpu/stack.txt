@@ -108,16 +108,16 @@ CNE <do>    compare if top of stack is not equal        <do> -> AC
                                                         else, 
                                                           push 0 -> S[0]
 
-BRN <label> branch if top of stack is not zero          pop S[0] -> AC
-                                                        if AC not equal to 0,
-                                                          <label> -> PC
-                                                        else, 
-                                                          PC + 1 -> PC
-
 BRZ <label> branch if top of stack is zero              pop S[0] -> AC
                                                         if AC equal to 0, 
                                                           <label> -> PC
                                                         else,
+                                                          PC + 1 -> PC
+
+BRN <label> branch if top of stack is not zero          pop S[0] -> AC
+                                                        if AC not equal to 0,
+                                                          <label> -> PC
+                                                        else, 
                                                           PC + 1 -> PC
 
 BRU         branch unconditionally                      <label> -> PC
