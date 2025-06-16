@@ -36,7 +36,12 @@ Registers (all 16 bits)
     PC         program counter - grows up from <bottom of mem>
     SP         stack pointer - grows down from <top of mem>
     DR         data register (hidden) - points to <mem above top of program>
+	
     AC         accumulator (hidden) - used for math operations
+
+    INP        input register - external input
+	OUT        output register - external output 
+	PRT        print register - external output (used by print instructions)
 
 
 Instruction model
@@ -125,11 +130,15 @@ BRU         branch unconditionally                      <label> -> PC
 
 Special instructions
 
-PRT         prints top of stack, stack unchanged        S[0] -> <print>
+INP         inputs to top of stack                      <inp> -> S[0]
 
-PRI <index> prints stack at <index>, stack unchanged    S[index] -> <print>
+OUT         outputs top of stack                        S[0] -> <out>
 
-PRD         prints current stack depth                  depth of S -> <print>
+PRT         prints top of stack, stack unchanged        S[0] -> <prt>
+
+PRI <index> prints stack at <index>, stack unchanged    S[index] -> <prt>
+
+PRD         prints current stack depth                  depth of S -> <prt>
 
 (Note, <print> is std output interface)
 
@@ -185,14 +194,14 @@ Example programs
 iloop:  PSH 1           // incr value
         ADD
         CPE 10
-        BRN iloop       // loop to push next incr value on stack
+        BRZ iloop       // loop to push next incr value on stack
         NOP
 aloop:  LDM 0x0C00
         ADD
         STM 0x0C00
         POP
         CPE 0
-        BRN aloop       // loop to add next num to sum
+        BRZ aloop       // loop to add next num to sum
         NOP
         LDM 0x0C00
         PRT             // print sum
