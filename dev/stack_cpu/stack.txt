@@ -48,11 +48,13 @@ Instruction model
 
     OPERATION
 
-    OPERATION <direct operand>
+    OPERATION <direct operand>               #dd or "c"
 
-    OPERATION <memory address>
+    OPERATION <index>                        #dd
 
-    OPERATION <label>
+    OPERATION <memory address>               $hhhh
+
+    OPERATION <label>                        &label
 
 
 
@@ -64,7 +66,7 @@ CLR         clear the stack                             <mem top> -> SP
 
 END         end of program (aka HALT)                   PC -> PC
 
-NOP         no operation
+NOP         no operation                                no state change
 
 RST         reset cpu                                   0 -> AC
                                                         0 -> DR
@@ -103,9 +105,9 @@ NEG         negates top of stack                        0 -> AC
 
 CPE <do>    compare if top of stack is equal            <do> -> AC
                                                         if S[0] equal AC,
-                                                          push 1 -> S[0]
-                                                        else, 
                                                           push 0 -> S[0]
+                                                        else, 
+                                                          push 1 -> S[0]
 
 CNE <do>    compare if top of stack is not equal        <do> -> AC
                                                         if S[0] not equal AC,
@@ -125,18 +127,16 @@ BRN <label> branch if top of stack is not zero          pop S[0] -> AC
                                                         else, 
                                                           PC + 1 -> PC
 
-BRU         branch unconditionally                      <label> -> PC
+BRU <label> branch unconditionally                      <label> -> PC
 
 
 Special instructions
 
 INP         inputs to top of stack                      <inp> -> S[0]
 
-OUT         outputs top of stack                        S[0] -> <out>
+OUT         outputs top of stack, stack is popped       S[0] -> <out>
 
 PRT         prints top of stack, stack unchanged        S[0] -> <prt>
-
-PRI <index> prints stack at <index>, stack unchanged    S[index] -> <prt>
 
 PRD         prints current stack depth                  depth of S -> <prt>
 
@@ -158,9 +158,9 @@ Example programs
         PRT
         PSH "O"
         PRT
-        PSH 13          // CR
+        PSH #13          // CR
         PRT
-        PSH 10          // LF
+        PSH #10          // LF
         PRT
         END
 
@@ -168,14 +168,14 @@ Example programs
     // adds numbers from 1 to 5, prints sum
 
         CLR
-        PSH 1
-        PSH 2
+        PSH #1
+        PSH #2
         ADD
-        PSH 3
+        PSH #3
         ADD
-        PSH 4
+        PSH #4
         ADD
-        PSH 5
+        PSH #5
         ADD
         PRT
         END
@@ -184,27 +184,27 @@ Example programs
     // adds numbers from 1 to 10 in a loop, prints sum
 
         CLR
-        PSH 0
-        STM 0x0C00      // clear sum in memory
+        PSH #0
+        STM $0C00        // clear sum in memory
         POP
         NOP
-        PSH 0           // push "last" value on stack
+        PSH #0           // push "last" value on stack
         NOP
-        PSH 1
-iloop:  PSH 1           // incr value
+        PSH #1
+iloop:  PSH #1           // incr value
         ADD
-        CPE 10
-        BRZ iloop       // loop to push next incr value on stack
+        CPE #10
+        BRZ &iloop       // loop to push next incr value on stack
         NOP
-aloop:  LDM 0x0C00
+aloop:  LDM $0C00
         ADD
-        STM 0x0C00
+        STM $0C00
         POP
-        CPE 0
-        BRZ aloop       // loop to add next num to sum
+        CPE #0
+        BRZ &aloop       // loop to add next num to sum
         NOP
-        LDM 0x0C00
-        PRT             // print sum
+        LDM $0C00
+        PRT              // print sum
         END
 
 
