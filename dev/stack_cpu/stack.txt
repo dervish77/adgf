@@ -50,8 +50,6 @@ Instruction model
 
     OPERATION <direct operand>               #dd or "c"
 
-    OPERATION <index>                        #dd
-
     OPERATION <memory address>               $hhhh
 
     OPERATION <label>                        &label
@@ -62,7 +60,7 @@ Instructions
 
 (Note, unless otherwise noted all instruction end with PC + 1 -> PC)
 
-CLR         clear the stack                             <mem top> -> SP
+CLS         clear the stack                             <mem top> -> SP
 
 END         end of program (aka HALT)                   PC -> PC
 
@@ -103,6 +101,18 @@ NEG         negates top of stack                        0 -> AC
                                                         AC = AC - S[0]
                                                         push AC -> S[0]
 
+AND <do>    AND top of stack with data                  S[0] -> AC               
+                                                        AC & <do> -> AC
+														push AC -> S[0]
+
+ORR <do>    OR top of stack with data                   S[0] -> AC               
+                                                        AC | <do> -> AC
+														push AC -> S[0]
+
+INV         Invert top of stack                         S[0] -> AC
+                                                        invert AC -> AC
+														push AC -> S[0]
+
 CPE <do>    compare if top of stack is equal            <do> -> AC
                                                         if S[0] equal AC,
                                                           push 0 -> S[0]
@@ -136,7 +146,7 @@ INP         inputs to top of stack                      <inp> -> S[0]
 
 OUT         outputs top of stack, stack is popped       S[0] -> <out>
 
-PRT         prints top of stack, stack unchanged        S[0] -> <prt>
+PRT         prints top of stack, stack is popped        S[0] -> <prt>
 
 PRD         prints current stack depth                  depth of S -> <prt>
 
@@ -147,7 +157,7 @@ Example programs
 
     // prints Hello
 
-        CLR
+        CLS
         PSH "H"
         PRT
         PSH "E"
@@ -167,7 +177,7 @@ Example programs
 
     // adds numbers from 1 to 5, prints sum
 
-        CLR
+        CLS
         PSH #1
         PSH #2
         ADD
@@ -183,10 +193,9 @@ Example programs
 
     // adds numbers from 1 to 10 in a loop, prints sum
 
-        CLR
+        CLS
         PSH #0
         STM $0C00        // clear sum in memory
-        POP
         NOP
         PSH #0           // push "last" value on stack
         NOP
@@ -194,14 +203,13 @@ Example programs
 iloop:  PSH #1           // incr value
         ADD
         CPE #10
-        BRZ &iloop       // loop to push next incr value on stack
+        BRN &iloop       // loop to push next incr value on stack
         NOP
 aloop:  LDM $0C00
         ADD
-        STM $0C00
-        POP
+        STM $0C00        // store sum to memory
         CPE #0
-        BRZ &aloop       // loop to add next num to sum
+        BRN &aloop       // loop to add next num to sum
         NOP
         LDM $0C00
         PRT              // print sum
