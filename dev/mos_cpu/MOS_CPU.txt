@@ -146,6 +146,9 @@ BRZ dd		if Z = 1 (P) <- (P) + dd			89 dd		dd is two's complement
 
 BRE dd		if E = 1 (P) <- (P) + dd			8A dd		dd is two's complement
 
+
+block operations
+
 CLB		(B) <- 0 					91 00
 
 LBI xx		(B) <- xx		Z = 1 if (B) = 0	92 xx
