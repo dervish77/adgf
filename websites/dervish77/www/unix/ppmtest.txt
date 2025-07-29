@@ -1,0 +1,45 @@
+README for ppm_test programs
+----------------------------
+
+This directory contains some files useful for reading and writing PPM
+formatted image files.  PPM is a simple RGB format and does not include
+any support for compression or color map tables.  A PPM file must have 
+as the first two characters 'P' and '6'.
+
+For more information on the format see the file "ppm.note".
+
+
+------------------------------------------------------------------------------
+
+
+The following is a listing of files contained in this directory:
+
+
+ppm_note.txt	- reference notes on PPM file format
+
+input.ppm	- sample input file for ppm_test
+output.ppm	- example output file produced by ppm_test
+
+makefile	- makefile for ppm_test
+
+ppm.h		- header file for ppm.c
+ppm.c		- code for reader and writer functions
+
+ppm_test.c	- test program for reading, writing, and generating PPM files
+
+ppm_test.log	- example output log from ppm_test
+
+
+------------------------------------------------------------------------------
+
+
+Note 1:	Please see the header of "ppm_test.c" for explanation of command
+	line arguments.
+
+Note 2: Files "ppm.h" and "ppm.c" may be used by any application needing
+	to read and write PPM files.  These files must be used together as
+	"ppm.c" depends upon the file "ppm.h".  Please read the source
+	code to determine limitations on how they may be used.
+
+
+

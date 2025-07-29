@@ -1,0 +1,463 @@
+			Story Board Master v1.0
+			-----------------------
+
+1.0 Introduction
+
+   Story Board Master (SBM) is a tool for creating story boards for the 
+serious or casual home animator (and videographer).  Many times the task 
+of planning an animation project which spans several hundred frames
+or several minutes can be daunting.  The use of story boards has been an 
+accepted planning tool within professional circles for many years.  Most 
+home animators tend to either "wing it" or sketch out simple story boards
+on plain paper.  SBM addresses the needs of these users by providing a desktop
+application for creating and maintaining story boards during the production
+of an animation project.  The task of coordinating sound effects and dialog
+with animation can prove challenging.  There are many tools available to
+help in the actual production of the animation, but little to date has been
+available for use during the planning stages of a production.  Some animators
+have turned to using word processors to create templates for story boards.
+Such techniques are fine for very small projects, but when a project involves 
+say about 5 minutes worth of animation combined with 10 minutes of live
+action video, the planning needs are much greater to successfully complete
+the project.
+
+
+2.0 Features
+
+1)  Paint program style of drawing (bitmap oriented)
+
+2)  Small toolbox of drawing tools:  lines, free hand drawing, rectangles,
+	circles, arcs, and import of simple bitmaps.
+
+3)  Variable sized and shaped brushes.
+
+4)  Limited color, black drawing on white foreground.
+
+5)  Limited editing, cut, copy and paste, with one level of undo.
+
+6)  Hierarchical database featuring multiple acts per project, multiple
+	scenes per act, and multiple "frames" per scene.  A frame is simply
+	the lowest resolution of action which can be expressed, but may in
+	fact encompass many animation frames.
+
+7)  Frame drawing area size adjustable from a minimum of 50 x 50 pixels to 
+	640 x 400 pixels.
+
+8)  Number of frames visible on screen also variable, from 1 to 20.
+
+9)  View frames as a slide show, both forward and reverse.
+
+10) Each frame can have several lines of text description for action, dialog,
+	and sound effect notes.  Each frame can have a separate set of 
+	director's notes associated with it.
+
+11) Support for preference printer or output to postscript file.  Print
+	format also fully selectable.
+
+12) Support up to 256 acts per project, 256 scenes per act, 256 frames per
+	scene, though actual number of frames is limited by available memory.
+
+13) Demo version: all features are the same except saving and printing 
+	are disabled.
+
+
+
+3.0 Functions
+
+Preliminary menus:
+
+   File
+	New...
+	Open...
+	Save
+	Save As...
+	Print
+	Print Setup...
+		Print Mode
+		Print File
+	Preferences...
+		Frame Size
+		Thumbnail Size
+		Frames Per Row
+	Close
+	Quit
+
+   Edit
+	Undo
+	Select All
+	Copy
+	Paste
+	Cut
+
+   View
+	View All
+	View Act...
+	View Scene...
+	Mode Hierarchy
+	Mode Frames
+	View Slide Show...
+		Start Frame
+		End Frame
+		Delay Between Frames
+
+   Function
+	Add Act
+	Add Scene
+	Add Frame
+	Delete Act
+	Delete Scene
+	Delete Frame
+	Edit Selected
+	Edit Frame...
+	Rearrange Project...
+
+   Tools
+	Select
+	Line
+	Freehand
+	Rectangle
+	Circle
+	Arc
+	Filled Rectangle
+	Filled Circle
+	Fill Style
+		Solid
+		Pattern
+	Pattern Style
+		Dots
+		Horizontal lines
+		Vertical lines
+		Crosshatch
+	Import Bitmap...
+	Export Bitmap...
+
+   Help
+	About
+	Brief Help
+	Search Help
+	Index Help
+
+
+Descriptions:
+
+File->New
+
+	Create a new project database, specify name, number of acts,
+	number of scenes, number of frames.
+
+File->Open
+	
+	Open project database by project file name.
+
+File->Save
+
+	Save project database to current project file name.
+
+File->Save As
+	
+	Save project database to specified project file name.
+
+File->Print
+
+	Print entire project database to preferences printer or to Postscript
+	file as defined by current print setup.
+
+File->Print Setup
+
+	Allow format of print out to be specified and whether print is to 
+	printer or to file.
+
+File->Preferences
+
+	Allow setting of certain defaults, such as:
+		Frame Size 	- size of frame drawing area
+		Thumbnail Size	- size of frame in view window
+		Frame Per Row	- number of frames per row in view window
+
+File->Close
+
+	Close currently open project database.
+
+File->Quit
+
+	Exit the program, after closing currently open project database.  If
+	project has changes which are not saved, user is prompted to save
+	changes.
+
+Edit->Undo
+
+	Undo last action.  Caution only one level of undo is supported.
+
+Edit->Select All
+
+	Select entire drawing area of current frame.
+
+Edit->Copy
+
+	Copy currently selected region to clipboard.
+
+Edit->Paste
+
+	Paste clipboard into current frame.
+
+Edit->Cut
+
+	Cut currently selected region from current frame.
+
+View->View All
+
+	Display entire project database within the view window.
+
+View->View Act
+
+	Prompt user for which act to display and display all frames contained
+	in this act within the view window.
+
+View->View Scene
+
+	Prompt user for which act and scene and then display all frames 
+	contained in this act/scene within the view window.
+
+View->Mode Hierarchy
+
+	Set view window display mode to show "directory tree" style display
+	and update view window accordingly.
+
+View->Mode Frames
+
+	Set view window display mode to show "frame thumbnail" style display
+	and update view window accordingly.
+
+View->View Slideshow
+
+	Display all frames within project database as a linear slide show, 
+	which is advanced by clicking left mouse or hitting space bar.  Frames
+	are displayed as full size.
+
+Function->Add Act
+
+	Add a new act to the currently open project, after the last act
+	in the database.
+
+Function->Add Scene
+
+	Add a new scene to the currently open project, after the last scene
+	of the specified act.
+
+Function->Add Frame
+
+	Add a new frame to the currently open project, after the last frame
+	of the specified act and specified scene.
+
+Function->Delete Act
+
+	Delete specified act from the project database.
+
+Function->Delete Scene
+
+	Delete specified scene in the specified act from the project database.
+
+Function->Delete Frame
+
+	Delete specified frame in the specified scene and act from the
+	project database.
+
+Function->Edit Selected
+
+	Open frame edit window for the currently selected frame.
+
+Function->Edit Frame
+
+	Open frame edit window for the specified frame.
+
+Function->Rearrange Project
+
+	Allow user to move relative position of acts, scenes, and frames 
+	within the project database.
+
+Tools->Select
+
+	Place cursor into select mode.
+
+Tools->Line
+
+	Select line drawing mode.
+
+Tools->Freehand
+
+	Select free hand drawing mode.
+
+Tools->Rectangle
+
+	Select rectangle drawing mode.
+
+Tools->Circle
+	
+	Select circle drawing mode.
+
+Tools->Arc
+
+	Select arc drawing mode.
+
+Tools->Filled Rectangle
+
+	Select filled rectangle drawing mode.
+
+Tools->Filled Circle
+
+	Select filled circle drawing mode.
+
+Tools->Fill Style
+
+	Select current fill style, between Solid style and Pattern style.
+
+Tools->Pattern Style
+
+	Select current fill pattern style, possible styles include:  Dots,
+	Horizontal lines, Vertical lines, and Crosshatch.
+
+Tools->Import Bitmap...
+
+	Import a bitmap file to the clipboard.
+
+Tools->Export Bitmap...
+
+	Export the clipboard contents to a bitmap file.
+
+Help->About
+
+	Display brief description of program.
+
+Help->Brief Help
+	
+	Display short description of each major function.
+
+Help->Search Help
+
+	Allow search of full online help database.
+
+Help->Index Help
+
+	Display index of full online help database.
+
+
+
+4.0 Design Notes
+
+Preliminary format of frame (on screen and in print):
+
+	 ---------------------------------------
+	|  Act 1        Scene 2        Frame 5  |
+	 ---------------------------------------
+	|					|
+	|					|
+	|					|
+	|      {drawing area N x M pixels}	|
+	|					|
+	|					|
+	|					|
+	 ---------------------------------------
+	| A: some action related text here	|
+	 ---------------------------------------
+	| D: some dialog related text here	|
+	 ---------------------------------------
+	| S: some sound fx related text here	|
+	 ---------------------------------------
+
+
+Hierarchical project database:
+
+                                  project
+                                   /   \
+                                  /     \
+One or more acts               Act1     Act2
+per project                   / | \     / | \
+                             /  |  \   /  |  \
+One or more scenes         S1  S2  S3 S1  S2  S3
+per act                    /\                 /\
+                          /  \ {more frames} /  \
+                         /    \             /    \
+One or more frames      F1    F2           F1    F2
+per scene                                   ^
+                                            |
+                                            |
+Thus this position would denoted as {Act2, Scene3, Frame1}
+
+
+
+Database structures:
+
+project {
+	project name string
+	total number of acts
+	total number of scenes
+	total number of frames
+	first act pointer
+	last act pointer
+	file name string
+	file pointer
+        }
+
+act { 
+	previous act pointer
+	next act pointer
+	current act number
+	first scene pointer 
+	last scene pointer
+	number of scene in this act
+    }
+
+scene {
+	previous scene pointer
+	next scene pointer
+	current scene number
+	first frame pointer 
+	last frame pointer
+	number of frames in this scene
+      }
+
+frame {
+	previous frame pointer
+	next frame pointer
+	current frame number
+	bitmap pointer
+	bitmap height
+	bitmap width
+	action description string
+	dialog description string
+	sound effect description string
+	director's notes string
+      }
+
+
+
+Output File Format:
+
+binary formatted file, with extension '.sbm'
+
+File Header (48 bytes):
+	bytes 0 - 2		file type - characters "SBM"
+	byte  3			color flag - currently always 0
+	bytes 4 - 35		project name - 32 characters
+	bytes 36 - 39		total number of acts
+	bytes 40 - 43		total number of scenes
+	bytes 44 - 47		total number of frames
+
+	bytes 48 - MMM		FFFF frame records
+
+
+Frame Record (minimum 90 bytes - for all white 50x50 bitmap, with no notes):
+	byte  0			act number
+	byte  1			scene number
+	byte  2			frame number
+	byte  3			pad byte
+	bytes 4 - 5		bitmap height in pixels (min 50)
+	bytes 6 - 7		bitmap width in pixels (min 50)
+	bytes 8 - 27		action string - 20 characters
+	bytes 28 - 47		dialog string - 20 characters
+	bytes 48 - 67		sound string - 20 characters
+	byte  68		number of lines in notes (0 - 20)
+	bytes 69 - LLL		notes string - LL lines of 80 chars per line
+	bytes LLL - NNNN	bitmap data (row major order, starting with
+				top-left pixel, one byte per pixel, and
+				RLE encoded)

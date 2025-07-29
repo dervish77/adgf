@@ -1,0 +1,279 @@
+<HTML>
+<HEAD>
+<TITLE>Stereographics</TITLE>
+</HEAD>
+<BODY>
+
+<h1>A Tutorial on Time-Multiplexed Stereoscopic Computer Graphics</h1>
+
+<hr>
+(c) 1995 by Brian Lingard<p>
+
+<h2>Introduction</h2>
+
+Modern computer graphics typically employs such techniques as shading,
+shadowing, occlusion, and linear perspective to convey a sense of depth
+in computer generated 3D images.  While these techniques are effective,
+they leave out perhaps the most important means of indicating depth, which
+is stereopsis.  Stereopsis is the generation of two independant left 
+eye and right eye views of a scene.  These left and right eye views are 
+then displayed such that the left eye sees only the left eye view and 
+similarly for the right eye.  There are two different methods of 
+displaying these views -- time-parallel and time-multiplexed.<p>
+
+The time-parallel method displays both left and 
+right views simultaneously, usually via a split screen or dual screen 
+system.  The viewer wears polarizing or red/green filtering glasses to 
+ensure the appropriate view is seen by the correct eye.  The best known
+example of a time-parallel display is a head mounted display (HMD), 
+typically found in a Virtual Reality (VR) system.<p>
+
+The time-multiplexed method alternates the display of the left and 
+right views on the same CRT.  On a 30 Hz interlaced monitor, the left eye
+view is shown on the even scan lines while the right eye view is shown
+on the odd scan lines.  On a 60 Hz non-interlaced monitor, both views are
+stored in two separate frame buffers and the screen is refreshed by 
+alternating which frame buffer is used to update the screen.  The update
+rate must be at least 120 Hz to eliminate flicker.  Time-multiplexed 
+displays are typically viewed using glasses which have built in shutters
+on each lens that effectively block one eye's view while the other eye
+can see the display.  The shuttering of the glasses is synchronized with
+the display of a particular eye's view on the display.  See the 
+reference section for an example of this type of system.<p>
+
+
+<h2>Calculating Perspective Projections</h2>
+
+The generation of stereoscopic images mainly affects the perspective 
+projection of the 3D model and the back face removal stages of the 
+rendering pipeline.  If specular highlights are computed during the
+shading process, care must be taken to correctly compute the specular
+highlights for each eye's view.<p>
+
+The standard perspective projection (as shown in 
+<a href="stdproj.gif">Figure 1</a>) of a point P(x, y, z) onto a
+projection plane at z=0, with a center of projection (COP) at (0, 0, -d)
+is:
+<pre>
+	xp = (x * d) / (d + z)
+
+	yp = (y * d) / (d + z)
+</pre>
+where (xp, yp) is the coordinate of the projected point.<p>  
+
+If we move the COP such that there are now two COPs -- a left COP (LCOP) 
+at (-e/2, 0, -d) and a right COP (RCOP) at (e/2, 0, -d), we can compute 
+the projected points by:
+<pre>
+	xl = (x * d - z * e / 2) / (d + z)
+
+	yl = (y * d) / (d + z)
+
+	xr = (x * d + z * e / 2) / (d + z)
+
+	yr = (y * d) / (d + z)
+</pre>
+where (xl, yl) is the projected left eye point, and (xr, yr) is the 
+projected right eye point.  This technique is known as <i>off-axis</i> 
+projection, and is illustrated in <a href="offaxis.gif">Figure 2</a>.  
+Note that since yl and yr have the same equations, the 
+off-axis projection is equivalent to horizontally shifting the 
+point P for each view.  Also note that the total field of view (FOV) 
+(also see <a href="offa_fov.gif">Figure 3</a>)
+includes a region seen by both eyes, a region seen only by the left
+eye and a region seen only by the right eye.<p>
+
+As we noted above the perspective projection seems to involve a horizontal
+shift.  We can use a single COP and reformulate the above 
+equations to become:
+<pre>
+	xl = ((d * (x + e/2)) / (d + z)) - e/2 
+
+	xr = ((d * (x - e/2)) / (d + z)) + e/2
+</pre>
+where yl and yr are the same as for off-axis projection.  This technique 
+is known as the <i>on-axis</i> projection.  If we compare these equations
+to those for the standard perspective projection, we see that we can 
+accomplish the left eye's on-axis projection by first translating 
+the point P by e/2, perform the standard perspective projection, 
+and then shifting the projected x value by -e/2.  The right eye's
+view is similar.  Alternatively we could apply the following 
+algorithm (left eye):
+<pre>
+	for every point P(x,y,z) to be projected
+	     translate x to x+e/2
+	     project P using standard pespective projection
+	endfor
+	pan entire image by -e/2
+</pre>
+The right eye view uses a translation of x to x-e/2 and a pan of +e/2.
+A detailed analysis of the FOV for the on-axis projection shows that
+it is approximately 40% that of the off-axis case.  Despite the lower
+FOV, the on-axis technique offers a benefit on workstations which 
+support translations and pans in hardware, since few workstations 
+allow hardware control of multiple COPs.  Thus the on-axis method 
+often runs faster, than the off-axis method.<p>
+
+
+<h2>Display Algorithms</h2>
+
+When displaying stereoscopic images, we can save some computation time 
+by noting that the generated scan lines are invariant with respect
+to each eye's view.  This leads us to the observation that the plane 
+equations of polygons between the left and right eye views are 
+similar, and in fact both planes have the same normal vector.  These
+observations can help us optimize the back face removal phase of the 
+rendering pipeline.<p>
+
+If we assume all our objects are convex, then the plane equation for each
+polygon has the form <i>Ax + By + Cz + D = 0</i>, where the normal 
+vector is <i>N = [A, B, C]</i>.  For each polygon, we can calculate 
+<i>Axv + Byv + Czv + D</i>, where (xv, yv, zv) is one of the viewing 
+positions.  Thus any polygon plane that has <i>Axv + Byv + Czv + D < 0</i>, 
+must be a back face.<p>
+
+We can note that there are four possibilities for each eye:
+<pre>
+	1) polygon is back face for both views
+	2) polygon is front face for both views
+	3) polygon is back face for right view 
+		and front face for left view
+	4) polygon is front face for right view 
+		and back face for left view
+</pre>
+If the back face removal process is a preprocessor for some other 
+hidden surface removal algorithm, cases 3 and 4 won't contain many
+polygons.<p>
+
+Given convex objects, an algorithm for back removal is as follows:
+<pre>
+	for all polygons
+	    if A > 0 then
+	    	if Axv + Byv + Czv + (D + Ae) < 0 then
+		    the polygon is a back face for both views
+	    	endif
+	    else
+	    	if Axv + Byv + Czv + D < 0 then
+		    the polygon is a back face for both views
+	        endif
+	    endif
+	endfor
+</pre>
+and given that (xv, yv, zv) is the viewing position of the 
+right eye.<p>
+
+
+<h2>Horizontal Parallax</h2>
+
+Up until now we haven't commented on an appropriate value for <i>e</i>, 
+the horizontal separation of our two view points.  Choosing a value 
+for <i>e</i> is critical for an observer's ability to merge the left and 
+right eye views.  First lets examine a value known as horizontal 
+parallax, <i>p</i>, or the apparent horizontal shift in our left and right 
+eye images.  We can compute the horizontal parallax by:
+<pre>
+	p = xr - xl
+
+	p = e * (1 - (d / (d + z)))
+</pre>
+where xr and xl are calculated using the on-axis projection.  If we solve 
+for <i>e</i> and substitute z=i*d, we get:
+<pre>
+	e = p * (i + 1) / i
+</pre>
+where i*d is the maximum depth of our scene and <i>i</i> is given 
+in units of <i>d</i>, the orthogonal distance to the view plane.<p> 
+
+
+<h2>Horizontal Visual Angle</h2>
+
+For the above equation to become useful, we must relate the horizontal
+parallax to another value known as the horizontal visual 
+angle (HVA), <i>B</i>.  <a href="hva_diag.gif">Figure 4</a> shows a 
+diagram relating <i>p, d,</i> and <i>B</i>.  From geometry we can see:
+<pre>
+	p = 2 * d * tan(B / 2)
+</pre>
+which we can substitute back into the equation for <i>e</i>:
+<pre>
+	e = 2 * d * tan(B / 2) * (i + 1) / i
+
+where 
+
+	e = distance between LCOP and RCOP
+	d = orthogonal distance to projection plane
+	B = maximum allowed HVA
+	i = depth of scene in units of d
+</pre>
+If we pick a HVA that is too large, most observers will find it difficult
+to merge the stereoscopic images, and if HVA is too small, the 
+stereoscopic effect is lost.  For time-multiplexed displays, that maximum
+HVA is affected by interocular cross talk and by image stimulus duration.
+Various studies have shown that we should limit HVA to be less than or
+equal to 1.5 degrees, which can be accomplished by 
+setting <i>e=0.028d</i>.<p>
+
+
+<h2>Image Quality Concerns</h2>
+
+The quality of time-multiplexed stereoscopic images is chiefly 
+affected by interocular cross talk, ghosting, and the CRT's refresh 
+rate.  Interocular cross talk is result of incomplete blocking of the 
+opposite eye's image by the shutter on shuttering glasses and due to the 
+small but finite amount of time it takes to open/close the 
+shutters.  Ghosting is the effect of image persistance due to cross 
+talk and the CRT's phosphor decay rate.  The CRT's refresh rate mainly 
+affects the perceived amount of flicker, a lower refresh rate results
+in more flicker.<p>
+
+Two types of image distortion can result due to using a fixed head 
+position for calculating horizontal parallax in an interactive system.
+The first type of image distortion is scaling of the horizontal 
+parallax caused by movement of the observer's head.  The second type of
+image distortion is the shifting of the apparent location of the 
+observed object caused by movement of the observer's head.  Thus for 
+time-multiplexed stereoscopic systems head motion should be restricted
+to minimize such effects.<p>
+
+
+<h2>Summary</h2>
+
+As we have seen, stereoscopic imaging can improve the perception of 
+depth in computer generated 3D images.  Time-multiplexed displaying
+of stereoscopic images can yield good results when using the on-axis 
+projection technique and if we limit the maximum HVA.  Interactive
+displays are best when head movement is limited to a region centered
+directly in front of the display.  A stereoscopic display system 
+where a chemist performs molecular docking experiments would be a good
+application of this technology.<p> 
+
+<h2>A Stereo Pair</h2>
+
+Note:  this was produced with the off-axis method and used parallel 
+projection.<p>
+
+<img src="stereopair.gif" alt=[image]><p>
+
+<hr>
+
+<h2>References</h2>
+
+Hodges, "Tutorial: Time-Multiplexed Stereoscopic Computer Graphics",
+<i>IEEE Computer Graphics and Applications</i>, March 1992, pp. 20-30.<p>
+
+StereoGraphics' Corporation <i>Crystal</i> Series Stereoscopic 
+Viewing system.
+
+<h2>Internet Sites</h2>
+
+<a href="http://www.tisco.com/3d-web/">The 3D Web</a> a Stereoscopic Graphics 
+Information web site, has links to many pages of stereographics related 
+information.<p>
+
+<hr>
+
+<ADDRESS>
+lingard@wpi.wpi.edu<p>
+</ADDRESS>
+</BODY>
+</HTML>

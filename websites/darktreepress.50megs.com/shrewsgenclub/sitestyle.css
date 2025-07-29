@@ -1,0 +1,14 @@
+/* stylesheet for Shrewsbury Genealogy Club website */
+/* */
+/* global styles */
+hr {color:sienna;}
+body {
+	background-image:url('pics/bkgd3.gif'); 
+	color:black;
+	} 
+a:link {color:#0070e0;}      /* unvisited link */
+a:visited {color:#008080;}   /* visited link */
+/* specific styles */
+p.maintitle {color:#CC4400; font-size:3em; font-weight:bold;}
+p.pagetitle {color:black; font-size:2em; font-weight:bold;}
+/* eof */

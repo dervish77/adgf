@@ -1,0 +1,81 @@
+README for example TCP ECHO client/server programs
+__________________________________________________
+
+
+Files:
+	README		- this file
+
+	tcplib.h	- general header for echo
+
+	tcplib.c	- common socket functions
+
+	tcpecho.c	- echo client program
+
+	tcpechod.c	- echo server daemon
+
+	makefile	- unix makefile
+
+__________________________________________________
+
+
+To build:
+
+	cd echo
+	make
+
+
+To cleanup:
+
+	cd echo
+	make clean
+or
+	make realclean
+
+__________________________________________________
+
+
+Usage on single machine, type:
+
+	tcpechod 50001&			- to start echo server daemon
+
+	tcpecho localhost 50001		- to run echo client
+
+
+Then simply type character strings and hit <cr>.  String should be echoed
+back from echo server.
+
+__________________________________________________
+
+
+Usage on two machines, type:
+
+	rlogin <remote host>
+	tcpechod 50001&			- to start echo server daemon
+
+on another host type:
+
+	tcpecho <remote host> 50001	- to run echo client
+
+
+Then simply type character strings and hit <cr>.  String should be echoed
+back from echo server.
+
+__________________________________________________
+
+
+Example session using local host:
+
+	%tcpechod 50001& <cr>
+	%tcpecho localhost 50001 <cr>
+	
+	Echo client: hello
+	Echo server: hello
+
+	Echo client: 
+	Echo server: 
+
+	Echo client: this is a longer string to test
+	Echo server: this is a longer string to test
+
+	Echo client: 
+	% 

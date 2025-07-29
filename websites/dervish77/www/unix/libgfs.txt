@@ -1,0 +1,135 @@
+Welcome to LIBGFS version 0.9 (beta) --- released 29 Jan 1996
+____________________________________________________________
+
+
+LIBGFS is a GUI library package developed using SRGP as the underlying
+graphics library.  SRGP itself is a simple raster graphics package
+built on top of X-windows.  SRGP is commonly used in graphics courses
+as a tool for learning basic graphics concepts.
+
+LIBGFS was developed as an experiment to understand how modern GUI's 
+perform such operations as gadget creation and management.  It is
+certainly not intended to be used for real application development.
+Hopefully, LIBGFS could serve as a starting place for others who wish
+to learn about GUI design and for those who would like to experiment
+with creating their own gadget types.
+
+Currently supported features include:
+
+	- Push Button Gadget
+	- Toggle Button Gadget
+	- Menu Bar Gadget
+	- Sub Menu Gadget (i.e. Pulldown Menu)
+	- Drawing Area Gadget
+	- Text Gadget
+
+	- gadget placement is "bulletin board" type
+	- 
+
+
+Features under development:
+
+	- gadget placement using forms
+	- dialog boxes
+
+__________________________________________________________________________
+
+Building LIBGFS:
+
+First off, you must have the SRGP distribution installed and built.  The 
+SRGP package is available via anonymous ftp from:
+
+	ftp://wilma.cs.brown.edu/pub	- 	srgp.tar.Z
+
+If all else fails, send e-mail to 'graphtext@cs.brown.edu' with a subject
+line of "Software-Distribution" to receive more information.
+
+After you have SRGP installed and have SRGP built, you will probably need 
+to modify the the file 'libgs_defs' to point to where the includes and 
+libraries are for both SRGP and the LIBGFS packages.
+
+
+To unpack distribution type:
+
+	gunzip libgfs.tar.gz
+	tar xvf libgfs.tar
+
+
+To make everything type:
+
+	cd libgfs
+	make
+
+
+To run the test program type:
+
+	cd libgfs/test
+	test
+
+
+To install edit the top level Makefile, for variables INSTALL_LIB_PATH
+and INSTALL_INCLUDE_PATH, then type:
+
+	cd libgfs
+	make install
+
+
+To uninstall type:
+
+	cd libgfs
+	make uninstall
+
+
+__________________________________________________________________________
+
+Distribution Contents:
+
+	README			- this file
+
+	REVISIONS		- revision history summary
+
+	COPYING			- copying policy and copyleft statement
+
+	Makefile		- top level makefile
+
+	libgfs_defs		- configuration setup info
+
+	include/gspublic.h	- public libgfs header file
+
+	include/gsprivat.h	- private libgfs header file
+
+	src/gsdraw.c		- drawing functions
+
+	src/gsevent.c		- window and event handling functions
+
+	src/gsgadget.c		- gadget creation functions
+
+	src/gsprivat.c		- private low level functions
+
+	src/makefile		- makefile for libgfs.a
+
+	docs/libgfs.txt		- user's manual in ascii
+
+	test/test.c		- sample test application
+
+	test/testpush.c		- sample test program for push buttons
+
+	test/testtog.c		- sample test program for toggle buttons
+
+	test/testmenu.c		- sample test program for menus
+
+	test/testtext.c		- sample test program for text entry
+
+	test/testdraw.c		- sample test program for drawing area gadget
+
+	test/testdrw2.c		- sample test program with 2 drawing areas
+
+	test/makefile		- makefile for test applications
+
+	lib/			- location of libgfs.a once built
+
+
+__________________________________________________________________________
+
+Last Updated:  January 29, 1996
+

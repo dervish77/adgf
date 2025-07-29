@@ -1,0 +1,75 @@
+README for "bindump" program					02/21/96
+------------------------------------------------------------------------
+
+Bindump is a simple utility for dumping the contents of any file to 
+the screen in a binary (hex) format.  There are options for controlling
+how large a block is dumped at a time and how many bytes per row are
+displayed.  Please consult the man page provided for additional help 
+using options.
+
+
+------------------------------------------------------------------------
+
+Unpacking file distribution:
+
+        gunzip bindump-0.9.tar.gz
+	tar -xvf bindump-0.9.tar
+
+
+To make and install bindump:
+
+	cd bindump
+	make
+
+	(Note: 	Before installing, you may wish to modify the INSTALL_DIR 
+		and INSTALL_MAN_DIR variables in the makefile to contain 
+		your desired install paths.)
+
+	make install
+	make realclean
+
+
+------------------------------------------------------------------------
+
+Below are some examples of output style:
+
+
+bindump README
+
+Byte        Data                                    Ascii
+00000000    52454144 4D452066 6F722022 62696E64     README for "bind
+00000016    756D7022 2070726F 6772616D 09090909     ump" program....
+00000032    0930322F 32312F39 360A2D2D 2D2D2D2D     .02/21/96.------
+00000048    2D2D2D2D 2D2D2D2D 2D2D2D2D 2D2D2D2D     ----------------
+...
+
+
+bindump -a README
+
+Byte        Data
+00000000    52454144 4D452066 6F722022 62696E64 
+00000016    756D7022 2070726F 6772616D 09090909 
+00000032    0930322F 32312F39 360A2D2D 2D2D2D2D 
+00000048    2D2D2D2D 2D2D2D2D 2D2D2D2D 2D2D2D2D 
+...
+
+
+bindump -n 32 README
+
+Byte        Data                                    Ascii
+00000000    52454144 4D452066 6F722022 62696E64     README for "bind
+00000016    756D7022 2070726F 6772616D 09090909     ump" program....
+
+Dump next block (y/n)? n
+
+
+bindump -r 8 README
+
+Byte        Data                  Ascii
+00000000    52454144 4D452066     README f
+00000008    6F722022 62696E64     or "bind
+00000016    756D7022 2070726F     ump" pro
+00000024    6772616D 09090909     gram....
+...
+
+

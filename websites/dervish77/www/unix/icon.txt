@@ -1,0 +1,93 @@
+README for libsx version of Icon
+____________________________________________________________________________
+
+
+Icon is a basic icon editor tool.  It was developed for use in creating 
+custom icons for games.  Icon uses a proprietary file format, but a 
+conversion utility called "icon2ppm" is provided to convert the icon format 
+to PPM (aka "portable pixel map").
+
+____________________________________________________________________________
+
+Please find the following files in the distribution:
+
+	README		- this file
+	COPYING		- copying policy
+	REVISION	- revision history
+
+	main.c		- main program (sets up GUI)
+	main.h		- main header 
+	icon.c		- main icon routines
+	icon.h		- top level header
+	callbcks.c	- callback routines for menus etc.
+	callbcks.h	- protos of callback routines
+	drwlibsx.c	- libsx specific drawing routines
+	creq.c		- color requestor dialog routines
+	creq.h		- color requestor dialog header
+	iconset.c	- setup dialog routines
+	libsx.h		- libsx header 
+	vecmath.h	- useful defines and types
+	makefile	- make file for Unix
+
+	icon2ppm.c	- icon to portable pixmap routines
+	ppm.c		- portable pixmap routines
+	ppm.h		- portable pixmap header
+	ship.ppm	- example icon in ppm format
+
+	game/		- example game icons
+	logic/		- example logic symbol icons
+	map/		- example map symbol icons
+
+____________________________________________________________________________
+
+Making and installing Icon:
+
+	Unpack by -> gunzip icon.tar.gz
+	          -> tar xvf icon.tar
+
+	Make by   -> cd icon
+	          -> make all
+
+	This will build the executable and install it into your 
+	'$HOME/bin' directory.  If you prefer to install emu85 somewhere 
+	else, edit the makefile to set the INSTALL_DIR variable to your 
+	desired location.
+
+	CAUTION:  READ the notes at the end of this file before attempting
+		  to build the executable.
+
+	This program has been successfully compiled on Sun workstations 
+	(Solaris 5.3) and SGI workstations (Irix 6.2 and 6.3).
+
+____________________________________________________________________________
+
+Making the conversion utility:
+
+	Make by	  -> cd icon
+		  -> make icon2ppm
+
+	Run by    -> icon2ppm <file.icn> <file.ppm>
+
+	Test by	  -> xv file.ppm
+
+____________________________________________________________________________
+
+Notes:
+	
+	This program requires that you must have "libsx" installed on
+	your system.  Libsx is the simple X library which uses the 
+	Athena widget set and provides a easy way to create GUI's for
+	applications.
+
+	Libsx can be obtaining via anonymous ftp from "ftp.x.org" at
+	the path:
+
+		ftp.x.org:/contrib/libraries/libsx.tar.Z
+
+	Libsx has been successfully compiled on most workstations 
+	supporting the Athena widget set.
+
+____________________________________________________________________________
+
+Brian Lingard
+September 24, 1998

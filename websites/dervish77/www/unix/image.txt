@@ -1,0 +1,95 @@
+			Image Processing Demo
+--------------------------------------------------------------------------
+
+This program is an image processing demo program using 'libsx' to implement
+the GUI.  The program features several image processing operations as listed
+below.  The program currently supports only the PPM image file format.
+
+Commands include:
+	
+	revert image
+	compute histogram
+	apply threshold
+	brighten image
+	convert color to grey scale
+	negative image
+	apply median filter
+	apply blur filter
+	apply sharpen filter
+	compute edge detection
+
+____________________________________________________________________________
+
+Please find the following files in the distribution:
+
+	README		- this file
+	COPYING		- copying policy
+	REVISION	- revision history
+	ppm.note	- notes about PPM file format
+
+	main.c		- main program (sets up GUI)
+	main.h		- main header 
+	image.c		- main image routines
+	image.h		- top level header
+	callback.c	- callback routines for menus etc.
+	callback.h	- protos of callback routines
+	drwlibsx.c	- libsx specific drawing routines
+	creq.c		- color requestor dialog routines
+	creq.h		- color requestor dialog header
+	ppm.c		- portable pixmap routines
+	ppm.h		- portable pixmap header
+	libsx.h		- libsx header 
+	vecmath.c	- useful vector math routines
+	vecmath.h	- useful defines and types
+	makefile	- make file for Unix
+
+	noise.ppm	- example noise image
+	odie.ppm	- example color image
+	random.ppm	- example random image
+	scale.ppm	- example shaded scale image
+	triton.ppm	- example saturn moon image
+	ufo.ppm		- example ufo image
+	uscgirl.ppm	- example "the USC girl image" image
+
+____________________________________________________________________________
+
+Making and installing Icon:
+
+	Unpack by -> gunzip image.tar.gz
+	          -> tar xvf image.tar
+
+	Make by   -> cd image
+	          -> make all
+
+	This will build the executable and install it into your 
+	'$HOME/bin' directory.  If you prefer to install emu85 somewhere 
+	else, edit the makefile to set the INSTALL_DIR variable to your 
+	desired location.
+
+	CAUTION:  READ the notes at the end of this file before attempting
+		  to build the executable.
+
+	This program has been successfully compiled on Sun workstations 
+	(Solaris 5.3) and SGI workstations (Irix 6.2 and 6.3).
+
+____________________________________________________________________________
+
+Notes:
+	
+	This program requires that you must have "libsx" installed on
+	your system.  Libsx is the simple X library which uses the 
+	Athena widget set and provides a easy way to create GUI's for
+	applications.
+
+	Libsx can be obtaining via anonymous ftp from "ftp.x.org" at
+	the path:
+
+		ftp.x.org:/contrib/libraries/libsx.tar.Z
+
+	Libsx has been successfully compiled on most workstations 
+	supporting the Athena widget set.
+
+____________________________________________________________________________
+
+Brian Lingard
+September 24, 1998

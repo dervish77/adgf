@@ -1,0 +1,52 @@
+Confessions of a Software Weenie
+
+Introduction
+
+Chapter 1 -- When I Was Ten...
+	RCA Cosmac Elf, learning to program Basic, writing "space invaders"
+
+Chapter 2 -- Commodore Computers
+	VIC-20 -- only 5K memory, modern PCs have typically 25,000 times as much memory
+	C-64 -- still a whopping 64K memory, writing my own games and utility programs, GEOS, BBS's
+
+Chapter 3 -- Droppin' Quarters
+	video games, pinball, Tempest, Black Knight, emu's, MAME
+
+Chapter 4 -- Punch Card Hell
+	programming fortran, programming VAX-11 assembly, Wang word processors (midnight forays)
+
+Chapter 5 -- Good First Draft
+	WPI -- IQP, MQP, etc.
+
+Chapter 6 -- My First Contract
+	working in WPI management computer lab, Apples, PDT-11/150
+
+Chapter 7 -- It's Cursive, Not Raster
+	cursive displays (RAMP)
+	design character set ROMs
+
+Chapter 8 -- Measuring Up
+	measuring stuff (100 Meter Cables)
+
+Chapter 9 -- Ahhh, Amiga!
+	Amiga 1200 -- my first real computer
+	why commodore's management sucks
+	sold, resold, acquired, being resurrected under Linux
+
+Chapter 10 -- Graduate School
+	parallel programming, multi programming (crash course in sockets)
+	computer graphics courses
+
+Chapter 11 -- Me and My VR
+	Dactyl nightmare, movies
+
+Chapter 12 -- Dad Brings it Home
+	dual 19 inch rack Data General computer, countless PCs, monitors, etc.
+
+Chapter 13 -- Silicon Graphics
+	machines, what went wrong???
+
+Chapter 14 -- I’ve Seen the Light, and It’s Linux
+	starting out with 1.3, trying newer distros, investing do's and don’ts
+
+Index

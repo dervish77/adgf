@@ -1,0 +1,132 @@
+Brian Lingard	about 3,000 words
+9 Wadsworth Road
+Shrewsbury, MA 01545
+
+(508) 842-5662
+
+
+
+
+
+
+
+
+
+
+Confessions of a Software Weenie
+
+by Brian S. Lingard
+
+
+
+
+The Adventure Begins
+#
+Hi.  I'm a software weenie.  I used to be a hardware 
+engineer, but when peace broke out everywhere during the middle 
+1990's, the work dried up.  I was just completing a graduate 
+degree in Electrical Engineering and luckily had taken several 
+software courses towards the end of my program.  So the shift 
+into software development was fairly natural.
+I suppose I should state that when I use the phrase 
+"software weenie", I don't mean anything derogatory by it at all.  
+It's just a phrase that a friend of mine used to use to describe 
+himself, and he has been a software engineer for many years now.  
+Besides, I enjoy programming and I have enjoyed programming for 
+many years.  
+This book is a collection of essays and reminiscences about 
+my transformation into a software engineer.  Most of these were 
+written for my own enjoyment, possibly to benefit my two sons 
+when they are older.  Hopefully, others may find these pieces 
+entertaining.
+#
+When I Was Ten...
+#
+When I was about ten years old (circa 1974), my father 
+bought his first computer, an RCA Cosmac Elf.  It was a kit that 
+you had to build yourself.  It came with printed circuit boards, 
+all the chips, wires, and so on.  It used an 8-bit processor that 
+amazingly didn't come from Intel.  The system actually predated 
+IBM type PCs by several years.
+To use it you had to enter (by hand of course, there wasn't 
+even a cassette tape interface for storage) the program as a 
+series of hexadecimal codes (technically machine language).  The 
+system's keyboard was only a numeric keypad and the display was a 
+set of four seven-segment LEDs.  After a couple of years, my 
+father obtained a normal keyboard, installed a BASIC interpreter, 
+and built a video controller for a text display monitor (from a 
+kit of course).  When I was about twelve years old, I wrote my 
+own version of the Space Invaders game, written mostly ran in 
+BASIC but had some portions written in machine language (to speed 
+up the keyboard control).  So I guess I've been a software weenie 
+since I was in the sixth grade, and maybe my stint as a hardware 
+engineer was just a passing fad.
+#
+Commodore Computers
+#
+Since then I've had several of my own computers of various 
+types and until recently I've managed to avoid thinking about 
+actually buying a PC clone.  I have been a Commodore supporter 
+for many years starting with their amazing (for circa 1980) VIC-
+20 and then C-64 machines.  
+{more about C-64}
+A few years ago I needed to get a machine that I could use 
+to help me get through graduate school and be capable of decent 
+graphics.  So I opted for an Amiga.  
+{more about amiga}
+But now Commodore has gone bust, and the sale of Commodore's 
+assets and technology still hasn't been resolved, so I feel I 
+must get a PC clone soon to keep from being left behind in the 
+technology grave yard.  I suppose some people out there would 
+say, "why didn't you get a Mac if you wanted good graphics".  Now 
+while I agree that the Mac's have been superior to PC clones in 
+graphics, I like having an actual command line interface, thank 
+you very much.  But I hated DOS.  So my choice was to buy an 
+Amiga or spend thousands more and buy a Unix workstation.  I 
+don't think so.
+But of course if money were no object, I would get an SGI 
+Indy or Indigo workstation, truly the cream of the graphics crop.  
+Too bad the software is so damned expensive.  
+#
+Graduate School
+#
+Anyway I am getting ahead of myself a bit.  As you may have 
+noticed I am somewhat into the computer graphics thing.  I 
+recently finished up taking a couple classes in computer 
+graphics.  Way cool.  If you have the time and don't mind 
+studying a bit, take some computer graphics classes.  You won't 
+be disappointed.  You get to play around with some really neat 
+tools and look at pretty pictures and call it homework.  But my 
+main interests revolve around virtual reality and multimedia 
+related topics.
+#
+Me and My VR
+#
+My interest in VR probably got spawned about 3 years ago when I 
+was out in Seattle on vacation and I went to an arcade that 
+featured the Virtuality game called Dactyl Nightmare.  Dactyl 
+used two Amiga's as the CPUs and had two platforms where the 
+players stood to play the game.  Each player was outfitted with a 
+head mounted display and was handed a combo trigger/joystick 
+device.  A player's view showed a multi-tiered playing field, 
+which had stairs leading down from upper tiers to a central lower 
+tier.  Other objects were scattered around each tier.  You could 
+see your opponent standing on one of the opposite upper tiers in 
+kind of a robot looking outfit.  You could look up, down, side to 
+side.  You could squat down behind objects.  You could walk up 
+and down stairs, and around the tiered platforms.  You computer 
+generated hand held a gun of sorts which you used to fire at your 
+opponent.  The object of the game was to "kill" your opponent as 
+many times as you could before the time ran out and while trying 
+to avoid being picked up and dropped by a Teradactyl flying 
+overhead.  Though the screen updates were a little slow, the game 
+was incredibly fun to play.  I spent way too much money playing 
+it while we were there.
+Ever since then I've wanted to create my own VR system at 
+home or better still get paid a salary to develop one for someone 
+else.  So I have been reading and studying anything I can get my 
+hands on ever since trying that game.
+
+
+
+	LINGARD / WEENIE / 2
