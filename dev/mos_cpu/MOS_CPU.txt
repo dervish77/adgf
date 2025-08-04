@@ -11,7 +11,7 @@ Operand Block     - 256 bytes
 
 Data Block        - 256 bytes
 
-Stack Block       - 256 bytes (optional)
+Stack Block       - 256 bytes 
 
 Total Block Size  - 1024 bytes
 
@@ -21,11 +21,20 @@ Max Blocks        - 64 blocks (hence 64K)
 Registers (all are 8 bits)
 ---------
 
-P  - program counter (points to byte in Instruction Block and Operand Block)
+IP - instruction counter - points to byte in Instruction Block
 
-A  - accumulator
+OP - operand counter - points to byte in Operand Block
 
-X  - index register
+DP - data pointer - points to byte in Data Block
+
+SP - stack pointer (optional) - points to byte in Stack Block
+
+BP - block pointer (optional) - points to current set of Instruction, Operand, Data, Stack blocks
+
+
+A  - accumulator (used for math operations)
+
+X  - index register (used to indexed addressing)
 
 F  - flags register  ( E x x x x x Z C )
 
@@ -33,11 +42,7 @@ F  - flags register  ( E x x x x x Z C )
 		Z - zero flag  - indicates sub/dec underflowed or compare was equal
 		C - carry flag - indicates add/inc overflowed
 
-G  - GPIO register (optional)
-
-S  - stack pointer (optional)
-
-B  - block register (optional) - points to current set of Instruction, Operand, Data, Stack blocks
+G  - GPIO register (optional) - used for I/O  [note, likely will need a direction register]
 
 
 Instructions
@@ -55,6 +60,8 @@ xx - absolute value -- thus 0 to 255
 Mneumonic	Action			Flags 			Hex Code	Comments
 
 NOP		(P) <- (P) + 1		E = 1 if overflow	07 00		
+
+HLT		(P) <- (P)					0C 00
 
 RST		(P) <- 0		all flags cleared	0F 00
 		(S) <- 255
@@ -175,7 +182,7 @@ TFZ		(A) <- 1		if Z = 1		A9 00
 TFE		(A) <- 1		if E = 1		AA 00
 
 
-optional GPIO operations
+optional GPIO operations  [note, likely will need a direction register]
 
 LGA		(A) <- (G)					B1 00
 
