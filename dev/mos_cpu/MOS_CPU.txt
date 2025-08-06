@@ -42,7 +42,9 @@ F  - flags register  ( E x x x x x Z C )
 		Z - zero flag  - indicates sub/dec underflowed or compare was equal
 		C - carry flag - indicates add/inc overflowed
 
-G  - GPIO register (optional) - used for I/O  [note, likely will need a direction register]
+G  - GPIO output register (optional) - used for I/O  
+
+H  - GPIO input register (optional) - used for I/O  
 
 
 Instructions
@@ -182,13 +184,13 @@ TFZ		(A) <- 1		if Z = 1		A9 00
 TFE		(A) <- 1		if E = 1		AA 00
 
 
-optional GPIO operations  [note, likely will need a direction register]
+optional GPIO operations (G is output, H is input)
 
-LGA		(A) <- (G)					B1 00
+LHA		(A) <- (H)					B1 00
 
-LGX		(X) <- (G)					B2 00
+LHX		(X) <- (H)					B2 00
 
-LGD		Data[ii] <- (G)					B3 ii
+LHD		Data[ii] <- (H)					B3 ii
 
 WAG		(G) <- (A)					B8 00
 
