@@ -4,6 +4,9 @@
 #
 #
 
+PLAT = c64
+#PLAT = sim6502
+
 FILES	  = tasks.xxx demo.xxx main.xxx
 
 LIB_FILES = platform.xxx hw.xxx mos.xxx
@@ -23,9 +26,11 @@ LIB_CFILES = $(LIB_FILES:.xxx=.c)
 CC = cl65
 AR = ar65
 
-CFLAGS  = -t c64 --create-dep $(<:.c=.d) -O
+SIM = sim65
 
-LDFLAGS = -t c64 -m $(TARGET).map -L .
+CFLAGS  = -t $(PLAT) --create-dep $(<:.c=.d) -O
+
+LDFLAGS = -t $(PLAT) -m $(TARGET).map -L .
 
 ARFLAGS = r
 
@@ -58,6 +63,11 @@ test: run
 
 run: all
 	$(EMU) -autostart $(TARGET) &
+
+#------------------------------------------
+
+sim: all
+	$(SIM) $(TARGET)
 
 #------------------------------------------
 
