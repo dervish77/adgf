@@ -39,6 +39,9 @@
  *  STATICS
  */
 
+#define MAX_DEBUG_CHARS     128
+
+#define MAX_TERM_CHARS      30
 
 
 
@@ -116,6 +119,8 @@ void mosOpenLcd(void)
  */
 int mosWriteLcd(char *buf)
 {
+    UNUSED(buf);
+
     return (-1);
 }
 
@@ -148,21 +153,31 @@ void mosCloseLcd(void)
  */
 void mosOpenTerminal(void)
 {
-
+    mosPrint("Terminal is open\n");
 }
 
 
-/*  mosReadTerminal - reads single character from terminal (non-blocking) 
+/*  mosReadTerminal - reads character string from terminal (blocking) 
  *
  *  Parameters:
- *	none
+ *	buf     - string of characters read from terminal
  *
  *  Returns:
- *	int     - single character from terminal
+ *	int     - number of characters read, or -1 on fail
  */
 int mosReadTerminal(char *buf)
-{
-    return (-1);
+{ 
+    // simulate read of string from terminal
+    char *s = fgets( buf, MAX_TERM_CHARS, stdin );
+
+    // remove '\n' from end of string
+    buf[ strlen(buf) - 1 ] = '\0';
+
+    if (s == NULL)
+    {
+        return(-1);
+    }
+    return (strlen(buf));
 }
 
 
@@ -176,7 +191,14 @@ int mosReadTerminal(char *buf)
  */
 int mosWriteTerminal(char *buf)
 {
-    return (-1);
+    // simulate write of string to terminal
+    int result = fputs( buf, stdout );
+
+    if (result < 0)
+    {
+        return (-1);
+    }
+    return(strlen(buf));
 }
 
 
@@ -190,7 +212,7 @@ int mosWriteTerminal(char *buf)
  */
 void mosCloseTerminal(void)
 {
-
+    mosPrint("Terminal is closed\n");
 }
 
 
@@ -209,7 +231,7 @@ void mosCloseTerminal(void)
  */
 void mosDbgPrint( int id, const char *fmt, ... )
 {
-    const unsigned DBGPRINT_BUF_SIZE = 1024;
+    const unsigned DBGPRINT_BUF_SIZE = MAX_DEBUG_CHARS;
     char buf[DBGPRINT_BUF_SIZE];
 
     va_list argp;
@@ -236,7 +258,7 @@ void mosDbgPrint( int id, const char *fmt, ... )
  */
 void mosPrint( const char *fmt, ... )
 {
-    const unsigned DBGPRINT_BUF_SIZE = 1024;
+    const unsigned DBGPRINT_BUF_SIZE = MAX_DEBUG_CHARS;
     char buf[DBGPRINT_BUF_SIZE];
 
     va_list argp;

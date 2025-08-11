@@ -23,6 +23,8 @@
 
 #define PLATFORM "Linux"
 
+#define UNUSED(x) (void)(x)
+
 
 /*  declare prototypes for PUBLIC "platform.c" functions
  */

@@ -21,25 +21,40 @@
 #include <stdlib.h>
 #include <stdarg.h>
 
-#define PLATFORM "Linux"
+#define PLATFORM "LinuxMalloc"
+
+#define UNUSED(x) (void)(x)
 
 
-/*  declare prototypes for PLATFORM functions
+/*  declare prototypes for PUBLIC "platform.c" functions
  */
 extern void mosOpenKeyboard(void);
-extern int mosReadKeyboard(void);
+extern int  mosReadKeyboard(void);
 extern void mosCloseKeyboard(void);
 
 extern void mosOpenLcd(void);
-extern int mosWriteLcd(char *buf);
+extern int  mosWriteLcd(char *buf);
 extern void mosCloseLcd(void);
 
 extern void mosOpenTerminal(void);
-extern int mosReadTerminal(char *buf);
-extern int mosWriteTerminal(char *buf);
+extern int  mosReadTerminal(char *buf);
+extern int  mosWriteTerminal(char *buf);
 extern void mosCloseTerminal(void);
 
 extern void mosDbgPrint( int id, const char *fmt, ... );
 extern void mosPrint( const char *fmt, ... );
+
+
+/*  declare prototypes for PRIVATE "hw.c" functions
+ */
+extern void hwInitBoard(void);
+
+extern void hwInitTaskTimer(int tickTime);
+extern void hwStartTaskTimer(void);
+extern void hwCheckTaskTimer(int tickTime);
+extern void hwStopTaskTimer(void);
+
+extern void hwInitDevice(int deviceId);
+
 
 #endif /* _PLATFORM_H */

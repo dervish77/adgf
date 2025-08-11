@@ -16,9 +16,9 @@ include $(MODROOT)/mos.mk
 
 FILES	= 
 
-LIB_FILES = mos.xxx platform.xxx
+LIB_FILES = hw.xxx platform.xxx  
 
-LIBRARY	= libmos.a
+LIBRARY	= $(MODROOT)/lib/libmos.a
 
 TARGET	= 
 
@@ -27,7 +27,7 @@ HEADER  = *.h
 
 #------------------------------------------------------------------------
 
-INCLUDES 	= 
+INCLUDES 	= -I../common
 
 LIBLIST		= -lmos
 
@@ -39,7 +39,7 @@ OPTIMIZE 	=
 
 DEP_CFLAGS	= $(CFLAGS) $(MOD_CFLAGS) $(MOD_INCLUDES)
 
-ALL_CFLAGS 	= $(CFLAGS) $(MOD_CFLAGS) $(MOD_INCLUDES)
+ALL_CFLAGS 	= $(CFLAGS) $(MOD_CFLAGS) $(MOD_INCLUDES) $(INCLUDES)
 
 ALL_LDFLAGS	= $(LDFLAGS) $(MOD_LDFLAGS) $(MOD_LIB_PATHS) -L$(MODROOT)
 
@@ -63,8 +63,8 @@ default: all
 #all exe : depend.mk $(LIB_OFILES) $(TARGET) $(TARGET2)
 #all exe : $(LIB_OFILES) $(TARGET) $(TARGET2) strip1
 all exe : $(LIB_OFILES) $(TARGET) $(TARGET2) 
-	cp $(LIBRARY) ../../../lib
-	cp $(HEADER) ../../../include
+	cp $(HEADER) $(MODROOT)/include
+#	cp $(LIBRARY) $(MODROOT)/lib
 
 strip1: $(TARGET)
 	$(STRIP) -v -s --strip-unneeded --output-target=srec   -o $(TARGET).srec $(TARGET)
@@ -105,7 +105,7 @@ lint: $(CFILES)
 
 gcov:
 	$(GCOV) platform.c
-	$(GCOV) mos.c
+	$(GCOV) hw.c
 
 .PHONY : exe
 
