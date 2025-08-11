@@ -18,7 +18,11 @@ FILES	=
 
 LIB_FILES = mos.xxx 
 
+ifeq ($(PORT), c64)
+LIBRARY	= $(MODROOT)/lib/mos.lib
+else
 LIBRARY	= $(MODROOT)/lib/libmos.a
+endif
 
 TARGET	= 
 

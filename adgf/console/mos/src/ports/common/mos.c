@@ -543,8 +543,6 @@ void mosSequenceTaskListOnce(void)
  */
 void mosSequenceTasks(void)
 {
-    int index;
-
     while (1)
     {
         // execute all tasks once
@@ -1026,6 +1024,9 @@ static void SetErrorCode(int code)
 void idle(void *args)
 {
     int id = mosGetTaskId("idle");
+	   
+	UNUSED(args);
+
     if (gbContext->verbose) mosPrint("idle task, id = %d, args NONE\n", id);
 }
 

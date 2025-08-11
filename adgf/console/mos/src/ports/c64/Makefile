@@ -18,7 +18,11 @@ FILES	=
 
 LIB_FILES = hw.xxx platform.xxx  
 
-LIBRARY	= $(MODROOT)/lib/libmos.lib
+ifeq ($(PORT), c64)
+LIBRARY	= $(MODROOT)/lib/mos.lib
+else
+LIBRARY	= $(MODROOT)/lib/libmos.a
+endif
 
 TARGET	= 
 
@@ -50,7 +54,7 @@ CLIB = $(CC65_BASE)/libsrc/$(SYS).lib
 MY_INC =  -I . -I $(CC65_INC) -I ../common
 MY_ASM =  -I . -I $(CA65_INC)
 
-MOD_ARFLAGS 	= a
+MOD_ARFLAGS 	= r
 
 #------------------------------------------------------------------------
 
