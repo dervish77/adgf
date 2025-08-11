@@ -75,7 +75,7 @@ int main(int argc, char **argv)
    {
       case 1:
          printf("--running demo...\n");
-         DemoRun(&mdata);
+         DemoRun( );
          break;
 
       case 2:

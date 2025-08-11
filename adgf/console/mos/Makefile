@@ -20,7 +20,8 @@ UNITDIRS = unit
 
 CLEANDIRS = src/ports/arduino src/ports/arm src/ports/avr \
 			src/ports/common src/ports/cygwin src/ports/c64 \
-			src/ports/ez80 src/ports/linux src/ports/sh4
+			src/ports/ez80 src/ports/linux src/ports/linuxmalloc \
+			src/ports/sh4
 
 
 #
@@ -53,18 +54,29 @@ install: build_all
 
 test: realclean mosunit
 	
+arduino:
+	-@echo "arduino cross compile is not supported"
+
+arm:
+	-@echo "arm cross compile is not supported"
+
 avr:
 	-@echo "avr cross compile is not supported"
 
 c64:
-	-@echo "c64 cross compile is not supported"
+	make PORT=c64 all
+
+cygwin:
+	make PORT=cygwin all
 
 ez80:
 	-@echo "ez80 cross compile is not supported"
 
+linux:
+	make PORT=linux all
+
 sh4:
 	-@echo "sh4 cross compile is not supported"
-
 
 # =================================================================
 
@@ -198,8 +210,11 @@ help:
 	-@echo "Top Level Targets:"
 	-@echo "  make help              - prints help"
 	-@echo " "
-	-@echo "  make PORT=<port>       - builds everything for default PORT"
-	-@echo "  make PORT=<port> all   - builds everything and installs"
+	-@echo "  make                   - builds everything for default PORT"
+	-@echo "  make all               - builds everything for default PORT and installs"
+	-@echo " "
+	-@echo "  make PORT=<port>       - builds everything for PORT"
+	-@echo "  make PORT=<port> all   - builds everything for PORT and installs"
 	-@echo "  make install           - copies to INSTALL_DIR tree"
 	-@echo "  make test              - builds and runs unit tests"
 	-@echo " "
@@ -210,8 +225,9 @@ help:
 	-@echo "  make tar               - creates tar ball of entire tree"
 	-@echo " "
 	-@echo "Supported Ports:"
-	-@echo "  linux                  - Linux host sim"
+	-@echo "  c64                    - C64 port"
 	-@echo "  cygwin                 - Cygwin host sim"
+	-@echo "  linux                  - Linux host sim"
 	-@echo " "
 
 version:

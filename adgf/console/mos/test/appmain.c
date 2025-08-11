@@ -64,6 +64,9 @@ int main(int argc, char **argv)
    char version[10];
    char platform[10];
 
+   UNUSED(argc);
+   UNUSED(argv);
+
    mosPrint("Cli Test App\n");
 
    mosInitTasking();

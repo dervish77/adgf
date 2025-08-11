@@ -78,6 +78,7 @@ void DemoInit( DATABASE_S_T *mdata )
  */
 void DemoClose( DATABASE_S_T *mdata )
 {
+   UNUSED(mdata);
    mosFreeTasking();
 }
 
@@ -90,7 +91,8 @@ void DemoClose( DATABASE_S_T *mdata )
  *  Returns:
  *
  */
-void DemoRun( DATABASE_S_T *mdata )
+//void DemoRun( DATABASE_S_T *mdata )
+void DemoRun( void )
 {
    mosSequenceTaskListOnce();
 }
@@ -160,6 +162,7 @@ void DemoInteractive( DATABASE_S_T *mdata )
    int			i, argcount;
    int			id;
 
+   UNUSED(mdata);
 
    /* loop while not exit */
    while (!exit)
@@ -176,7 +179,7 @@ void DemoInteractive( DATABASE_S_T *mdata )
 
       if ( strcmp( cmdargs[0], "run" ) == 0 )
       {
-         DemoRun( mdata );
+         DemoRun( );
       }
       else if ( strcmp( cmdargs[0], "loop" ) == 0 )
       {
@@ -184,14 +187,14 @@ void DemoInteractive( DATABASE_S_T *mdata )
          {
             for ( ;; )
             {
-               DemoRun( mdata );
+               DemoRun( );
             }
          }
          else if (argcount == 2)
          {
             for (i=0; i < atoi(cmdargs[1]); i++)
             {
-               DemoRun( mdata );
+               DemoRun( );
             }
          }
          else

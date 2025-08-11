@@ -36,6 +36,8 @@ void dummy( void *args )
    int id;
    ARG_STRUCT *my;
 
+   UNUSED(id);
+
    my = args;
 
    mosPrint("dummy task, args %d %d %d\n", my->arg1, my->arg2, my->arg3);

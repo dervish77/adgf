@@ -23,6 +23,16 @@ TARGET_NAME      = x86-unknown-linux
 ARCH             = x86
 endif
 
+ifeq ($(PORT), linuxmalloc)
+CPU              = x86
+CROSS_COMPILE    = 
+CROSS_TOOL       = 
+CROSS_TOOL_PATH  = /usr
+CROSS_OS_PATH    = /usr
+TARGET_NAME      = x86-unknown-linux
+ARCH             = x86
+endif
+
 ifeq ($(PORT), cygwin)
 CPU              = x86
 CROSS_COMPILE    = 
@@ -61,6 +71,7 @@ CROSS_TOOL_PATH  = /usr
 CROSS_OS_PATH    = /usr
 TARGET_NAME      = avr-unknown-linux
 ARCH             = avr
+EMU              = x64sc
 endif
 
 ifeq ($(PORT), c64)
@@ -68,7 +79,7 @@ CPU              = 6502
 CROSS_COMPILE    = 
 CROSS_TOOL       = 
 CROSS_TOOL_PATH  = /cygdrive/c/Utils/cc65-snapshot-win32
-CROSS_OS_PATH    = 
+CROSS_OS_PATH    = /cygdrive/c/Utils/cc65-snapshot-win32
 TARGET_NAME      = 6502-unknown-c64
 ARCH             = 6502
 endif
@@ -187,6 +198,7 @@ MOD_LDFLAGS 	= $(OPT)
 
 MOD_LIB_PATHS 	= 
 MOD_LIBS        = 
+
 ifeq ($(PORT), c64)
 MOD_ARFLAGS 	= r
 else

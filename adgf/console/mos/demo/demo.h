@@ -41,7 +41,7 @@ typedef struct database_s_t {
 extern void DemoInit( DATABASE_S_T *mdata );
 extern void DemoClose( DATABASE_S_T *mdata );
 extern void DemoInteractive( DATABASE_S_T *mdata );
-extern void DemoRun( DATABASE_S_T *mdata );
+extern void DemoRun( void );
 extern void DemoVersion( void );
 extern void DemoHelp( void );
 

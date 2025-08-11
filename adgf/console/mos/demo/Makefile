@@ -20,7 +20,11 @@ FILES	= tasks.xxx demo.xxx main.xxx
 
 LIB_FILES = 
 
-LIBRARY	= libmos.a
+ifeq ($(PORT), c64)
+LIBRARY	= $(MODROOT)/lib/mos.lib
+else
+LIBRARY	= $(MODROOT)/lib/libmos.a
+endif
 
 TARGET	= mosdemo
 
@@ -28,9 +32,12 @@ TARGET	= mosdemo
 
 INCLUDES 	= -I../include 
 
+ifeq ($(PORT), c64)
+LIBS		= $(LIBRARY) $(MOD_LIBS)
+else
 LIBLIST		= -lmos
-
-LIBS		= $(LIBLIST) $(MOD_LIBS) 
+LIBS		= $(LIBLIST) $(MOD_LIBS)
+endif
 
 #------------------------------------------------------------------------
 
@@ -99,6 +106,13 @@ depend.mk:
 
 lint: $(CFILES)
 	$(LINT) -preproc $(MOD_INCLUDES) -I$(ENV_PREFIX)/usr/include $<
+
+run: all
+ifeq ($(PORT), c64)
+	x64sc -autostart $(TARGET) &
+else
+	$(TARGET) &
+endif
 
 gcov:
 	$(GCOV) tasks.c
