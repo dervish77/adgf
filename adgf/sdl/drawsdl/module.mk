@@ -12,7 +12,7 @@
 # Define targets based on 'PORT'
 #------------------------------------------------------------------------
 
-PORT ?= linux
+PORT ?= cygwin
 
 ifeq ($(PORT), linux)
 HAS_TEXT = yes
@@ -20,7 +20,7 @@ PREFIX = /usr/bin/
 endif
 
 ifeq ($(PORT), cygwin)
-HAS_TEXT = yes
+HAS_TEXT = no
 PREFIX = /usr/bin/
 endif
 
@@ -58,9 +58,9 @@ GPROF_OPT	= -pg
 #GCOV_OPT	= -fprofile-arcs -ftest-coverage
 GCOV_OPT	= --coverage
 
-#OPT         =
+OPT         =
 #OPT         = $(GPROF_OPT)
-OPT         = $(GCOV_OPT)
+#OPT         = $(GCOV_OPT)
 #OPT         = $(GPROF_OPT) $(GCOV_OPT)
 
 #------------------------------------------------------------------------
