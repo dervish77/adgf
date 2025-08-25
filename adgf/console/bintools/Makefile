@@ -20,7 +20,7 @@ VERSION = 2.0
 # set files to compile
 FILES = append.xxx bincat.xxx bindiff.xxx bindump.xxx bingen.xxx \
 	binjoin.xxx binsplit.xxx bintoc.xxx crcgen.xxx prepend.xxx \
-	srectoc.xxx
+	srectoc.xxx binedit.xxx
 
 TARGETS = $(FILES:.xxx=)
 
@@ -70,6 +70,9 @@ bindump : src/bindump.c
 bingen : src/bingen.c
 	$(LOCAL_GCC_PATH) -o $@ $<
 
+binedit : src/binedit.c
+	$(LOCAL_GCC_PATH) -o $@ $<
+
 binjoin : src/binjoin.c
 	$(LOCAL_GCC_PATH) -o $@ $<
 
@@ -103,7 +106,7 @@ clean:
 	rm -f *% *~ *.bak src/*% src/*~ src/*.bak *.0* *.c
 
 realclean: clean
-	rm -f $(TARGETS) $(TARGETS2) *.bin *.uu testout.c bin/*
+	rm -f $(TARGETS) $(TARGETS2) *.bin *.uu testout.c bin/*.exe
 
 distclean: realclean
 
