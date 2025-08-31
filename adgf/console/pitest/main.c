@@ -60,6 +60,9 @@ int main(int argc, char **argv)
                      fprintf(stderr, "Usage:  %s [-h] [-d | -g | -n] [-i NNN] \n", argv[0]);
                      fprintf(stderr,"    -h      get help\n");
                      fprintf(stderr,"    -i NNN  number of iterations\n");
+                     fprintf(stderr,"    -d      use the division method\n");
+                     fprintf(stderr,"    -g      use the GregoryLeibniz method\n");
+                     fprintf(stderr,"    -n      use the Nilakantha method\n");					 
                      if (argc == 2)
                         exit(0);
                      else

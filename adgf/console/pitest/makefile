@@ -3,12 +3,24 @@
 
 CC=gcc
 
+# set to your chosen install location
+INSTALL_DIR = $(HOME)/bin
+
+# set to your chosen man page location
+INSTALL_MAN_DIR = $(HOME)/man/man1
+
+#
+# --------------------------------------------------------------------
+# you shouldn't need to change anything below this line
+
 OBJECTS = pi.o main.o 
 
 TARGET = pi
 
 LIBS	= -lm
 CFLAGS  = -O
+
+# =================================================================
 
 default: all
 
@@ -21,10 +33,14 @@ pi.o : pi.c pi.h
 
 main.o : main.c pi.h
 
+# =================================================================
+
 clean:
 	rm -f *.o *% *~ core $(TARGET)
 
 realclean: clean
+
+# =================================================================
 
 test: all
 	$(TARGET) 
@@ -36,6 +52,13 @@ test: all
 run: all
 	$(TARGET) -n -i 500
 
+# =================================================================
+
+install: $(TARGET)
+	( cp $(TARGET) $(INSTALL_DIR)/$(TARGET) )
+#	( cp $(TARGET).man $(INSTALL_MAN_DIR)/$(TARGET).1 )
+
+# =================================================================
 
 #
 # make distribution file
@@ -57,3 +80,9 @@ tar:
 	tar -cvf $(PKG_NAME).tar $(TAR_FILES) ; \
 	gzip $(PKG_NAME).tar ; \
 	mv $(PKG_NAME).tar.gz $(PKG_HOME)
+
+.PHONY : exe
+
+#------------------------------------------------------------------------
+
+# DO NOT DELETE THIS LINE -- make depend depends on it.
