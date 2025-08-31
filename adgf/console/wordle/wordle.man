@@ -1,0 +1,61 @@
+.ad l
+.nh
+.TH wordle 1 "17 May 2025" "My Utilities"
+.SH NAME
+wordle - plays the game of Wordle in a text interface
+
+.SH SYNOPSIS
+.B "wordle"
+[ [\fI-h\fP] | [\fI-v\fP] ]
+
+.SH DESCRIPTION
+Wordle is a popular word guessing game that gives you six tries to guess 
+a five letter word.  The game gives you clues as to whether any letters in 
+your guess are in the selected word or not.  If a letter is in the word but
+not in the correct position, it is marked with a "y".  If a letter is in the 
+word and in the correct position, it is marked with a "G".  If you guess the 
+word in six tries or less, you win!
+
+.SH EXAMPLES
+.PP
+To play the game, use
+.PP
+.B
+     wordle
+.PP
+To see help, use
+.PP
+.B
+     wordle -h
+
+.SH OPTIONS
+.TP 5
+.B "-h"
+display command line help.
+.TP 5
+.B "-v"
+display version.
+
+.SH COPYRIGHT
+Copyright 1996-2025 Whirling Dervish Software, Incorporated
+.PP
+Permission to use, copy, modify, distribute, and sell this software and
+its documentation for any purpose is hereby granted without fee,
+provided that the above copyright notice appear in all copies and that
+both that copyright notice and this permission notice appear in
+supporting documentation, and that the name of Whirling Dervish Software, 
+Incorporated not be used in advertising or publicity pertaining to
+distribution of the software without specific, written prior
+permission.  Whirling Dervish Software, Incorporated makes no representations
+about the suitability of this software for any purpose.  It is provided
+"as is" without express or implied warranty.
+.PP
+Whirling Dervish Software, Incorporated disclaims all warranties with regard
+to this software, including all implied warranties of merchantability
+and fitness, in no event shall Whirling Dervish Software, Incorporated be
+liable for any special, indirect or consequential damages or any
+damages whatsoever resulting from loss of use, data or profits, whether
+in an action of contract, negligence or other tortuous action, arising
+out of or in connection with the use or performance of this software.
+.SH AUTHORS
+Brian Lingard, Whirling Dervish Software, Incorporated

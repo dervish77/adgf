@@ -77,6 +77,12 @@ test: default
 
 # =================================================================
 
+install: $(TARGET)
+	( cp $(TARGET) $(INSTALL_DIR)/$(TARGET) )
+	( cp $(TARGET).man $(INSTALL_MAN_DIR)/$(TARGET).1 )
+
+# =================================================================
+
 help:
 	-@echo "Top Level Targets:"
 	-@echo "  make help              - prints help"
