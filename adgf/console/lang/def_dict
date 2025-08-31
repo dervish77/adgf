@@ -1,4 +1,4 @@
-52
+63
 D a
 D an
 D the
@@ -14,6 +14,7 @@ N man
 N woman
 N dog
 N cat
+N fox
 N school
 N home
 N car
@@ -25,8 +26,12 @@ N nail
 V is
 V are
 V drop
+V drops
+V dropped
 V go
 V has
+V jumps
+V jumped
 V ran
 V run
 V sat
@@ -36,9 +41,12 @@ V walked
 A red
 A blue
 A green
+A brown
+A quick
 A big
 A small
 A rusty
+A lazy
 P from
 P in
 P on
@@ -46,6 +54,7 @@ P at
 P below
 P above
 P outside
+P over
 P inside
 P of
 P to
