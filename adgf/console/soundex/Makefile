@@ -108,7 +108,7 @@ distclean: realclean
 # make install
 #
 
-install:
+install: $(TARGET)
 	( cp $(TARGET) $(INSTALL_DIR)/$(TARGET) )
 	( cp $(TARGET).man $(INSTALL_MAN_DIR)/$(TARGET).1 )
 
