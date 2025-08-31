@@ -20,7 +20,7 @@ VERSION = 2.0
 # set files to compile
 FILES = append.xxx bincat.xxx bindiff.xxx bindump.xxx bingen.xxx \
 	binjoin.xxx binsplit.xxx bintoc.xxx crcgen.xxx prepend.xxx \
-	srectoc.xxx binedit.xxx
+	srectoc.xxx binedit.xxx bin2hex.xxx
 
 TARGETS = $(FILES:.xxx=)
 
@@ -73,6 +73,9 @@ bingen : src/bingen.c
 binedit : src/binedit.c
 	$(LOCAL_GCC_PATH) -o $@ $<
 
+bin2hex : src/bin2hex.c
+	$(LOCAL_GCC_PATH) -o $@ $<
+
 binjoin : src/binjoin.c
 	$(LOCAL_GCC_PATH) -o $@ $<
 
@@ -106,7 +109,7 @@ clean:
 	rm -f *% *~ *.bak src/*% src/*~ src/*.bak *.0* *.c
 
 realclean: clean
-	rm -f $(TARGETS) $(TARGETS2) *.bin *.uu testout.c bin/*.exe
+	rm -f $(TARGETS) $(TARGETS2) *.bin *.hex *.uu testout.c bin/*.exe
 
 distclean: realclean
 
@@ -166,6 +169,12 @@ testsplit:
 testsrec:
 	@-echo "-- testing srectoc ..."
 	./bin/srectoc -I test/srec.txt -O srecout.c -A mydata
+
+test2hex:
+	@-echo "-- testing bin2hex ..."
+	./bin/bingen  -n 64 -c  -o hex.bin
+	./bin/bin2hex -r 16 -i hex.bin -o hex.hex
+	cat hex.hex
 
 testuu:
 	@-echo "-- testing uuencode/uudecode ..."

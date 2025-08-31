@@ -58,7 +58,7 @@ int		base = 0;
 int 
 GenData(FILE *out_file_p, int size, int data, int mode)
 {
-   char c = 0;
+   char c = -1;
    int i, count = 0;
 
    if (mode == MODE_ALPHA)
@@ -70,7 +70,7 @@ GenData(FILE *out_file_p, int size, int data, int mode)
       {
          case MODE_ALPHA:
             c++;
-            if ( c > 'Z' ) c = 0x41;
+            if ( c > 'Z' ) c = 0x40;
             break;
 
          case MODE_COUNT:
