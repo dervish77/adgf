@@ -11,6 +11,9 @@
 #*
 #*/
 
+# set install path
+INSTALLDIR = $(HOME)/bin
+
 # set distribution name
 DIST = bintools
 
@@ -101,7 +104,8 @@ install: all
 	#mkdir ./bin
 	cp $(TARGETS) bin
 	rm -f $(TARGETS)
-	cp bin/* $(HOME)/bin
+	@-echo "Install - installing to $(INSTALLDIR)"
+	cp bin/* $(INSTALLDIR)
 
 # ========================================================================
 
