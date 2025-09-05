@@ -1,19 +1,42 @@
 # makefile for C64 thuria
 #
 
+PLAT = c64
+#PLAT = sim6502
+
 #SOURCES=main.c intro.c game.c cmds.c debug.c map.c \
 #		object.c room.c special.c magic.c rank.c verb.c
 
+FILES	  = main.xxx intro.xxx map.xxx room.xxx game.xxx cmds.xxx magic.xxx object.xxx rank.xxx special.xxx
+
+LIB_FILES = 
+
+LIBRARY	  = 
+
 SOURCES=main.c intro.c map.c room.c game.c cmds.c magic.c object.c rank.c special.c
 
-TARGET=thuria
+TNAME=thuria
+TARGET=$(TNAME).prg
+
 
 #------------------------------------------
 
-CC = cl65
+OFILES	   = $(FILES:xxx=o)
+CFILES	   = $(FILES:xxx=c)
 
-CFLAGS  = -t c64 --create-dep $(<:.c=.d) -O
-LDFLAGS = -t c64 -m $(TARGET).map
+LIB_OFILES = $(LIB_FILES:.xxx=.o)
+LIB_CFILES = $(LIB_FILES:.xxx=.c)
+
+CC = cl65
+AR = ar65
+
+SIM = sim65
+
+CFLAGS  = -t $(PLAT) --create-dep $(<:.c=.d) -O
+
+LDFLAGS = -t $(PLAT) -m $(TNAME).map -L .
+
+ARFLAGS = r
 
 EMU = x64sc
 
@@ -26,11 +49,17 @@ default: all
 
 all: $(TARGET)
 
-%.o: %.c
-	$(CC) -c $(CFLAGS) -o $@ $<
-
-$(TARGET): $(SOURCES:.c=.o)
+$(TARGET): $(OFILES) $(LIBRARY) 
 	$(CC) $(LDFLAGS) -o $@ $^
+
+$(LIBRARY): $(LIB_OFILES)
+
+$(OFILES): %.o: %.c *.h
+	$(CC) -c $(CFLAGS) -o $@ $<
+	
+$(LIB_OFILES): %.o: %.c *.h
+	$(CC) -c $(CFLAGS) -o $@ $<
+	$(AR) $(ARFLAGS) $(LIBRARY) $*.o
 
 #------------------------------------------
 
@@ -41,9 +70,14 @@ run: all
 
 #------------------------------------------
 
+sim: all
+	$(SIM) $(TARGET)
+
+#------------------------------------------
+
 clean:
 	rm -f *.o *.s *.d *% *~
 
 realclean: clean
-	rm -f core *.map $(TARGET)
+	rm -f core *.a *.lib *.map $(TARGET)
 
