@@ -28,6 +28,7 @@
 
 //#define DEBUG
 
+
 #define TO_UPPER(c) (c & 0xDF)
 #define TO_LOWER(c) (c | 0x20)
 
@@ -138,10 +139,10 @@ INDEX_T RandomPick()
 	DebugPrint("RandomPick");
 
 	value = rand() % (upper_bound - lower_bound + 1) + lower_bound;
-	printf("value = %d\n", value);
+	DebugPrintNumber("value = ", value);
 	
 	index = value / 100;
-	printf("random = %d\n", index);
+	DebugPrintNumber("random = ", index);
 	
 	return(index);
 }

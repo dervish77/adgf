@@ -29,7 +29,7 @@
 #define USE_COLOR 1
 
 
-#define DEBUG
+//#define DEBUG
 
 
 /*  declare common types
@@ -44,7 +44,7 @@
 #endif
 
 
-void DisplayBanner( char *progname );
+void DisplayBanner();
 void ErrorUsage( char *progname );
 
 
@@ -63,6 +63,8 @@ int main(int argc, char **argv)
 	
    char prog_name[16];
    char rasterline;
+   
+   char answer[4];
 
    BOOLEAN_T  do_processing = TRUE;
    BOOLEAN_T  is_interactive = TRUE;
@@ -129,15 +131,22 @@ int main(int argc, char **argv)
    } /* end of outer switch */
 #endif
 
-   DisplayBanner( prog_name );
-
-   if ( do_processing )
+   while ( do_processing )
    {
-	  InitGame(&game);
-      PlayGame(&game);
-	  CloseGame(&game);
-   }
+	  DisplayBanner();
 
+	  if ( do_processing )
+	  {
+		 InitGame(&game);
+		 PlayGame(&game);
+		 CloseGame(&game);
+	  }
+
+	  printf("\nPlay again (y/n)?");
+	  scanf("%s", &answer);
+	  if (answer[0] == 'n') do_processing = FALSE;
+   }
+	  
    return(0);
 }
 
@@ -150,11 +159,11 @@ int main(int argc, char **argv)
  *  Returns:
  *	none
  */
-void DisplayBanner( char *progname )
+void DisplayBanner()
 {
 	printf("\n");
 	printf("###################################\n");
-	printf("#    %s 64 - version %s      #\n", progname, VERSION);
+	printf("#    Wordle 64 - Version %s      #\n", VERSION);
 	printf("###################################\n");
 	printf("\n");
 }
