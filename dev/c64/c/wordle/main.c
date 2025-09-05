@@ -85,6 +85,7 @@ int main(int argc, char **argv)
    //
    strcpy( prog_name, argv[0] );
 
+   UNUSED(argc);
 #if 0
    // parse command line arguments
    //
@@ -153,7 +154,7 @@ void DisplayBanner( char *progname )
 {
 	printf("\n");
 	printf("###################################\n");
-	printf("#    Wordle 64 - Version %s      #\n", VERSION);
+	printf("#    %s 64 - version %s      #\n", progname, VERSION);
 	printf("###################################\n");
 	printf("\n");
 }

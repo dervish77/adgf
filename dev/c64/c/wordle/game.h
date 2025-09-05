@@ -23,6 +23,11 @@
 #define VERSIONDATE	"05/17/2025"
 
 
+/*  define useful macros
+ */
+#define UNUSED(x) (void)(x)
+
+
 /*  define some constants
  */
 #ifndef TRUE

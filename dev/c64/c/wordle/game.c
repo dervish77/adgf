@@ -63,18 +63,26 @@ void DebugPrint(char *msg)
 {
 	#ifdef DEBUG
 	printf("%s\n", msg);
+	#else
+	UNUSED(msg);
 	#endif
 }
 void DebugPrintNumber(char *msg, int value)
 {
 	#ifdef DEBUG
 	printf("%s %d\n", msg, value);
+	#else
+	UNUSED(msg);
+	UNUSED(value);
 	#endif
 }
 void DebugPrintString(char *msg, char *str)
 {
 	#ifdef DEBUG
 	printf("%s %s\n", msg, str);
+	#else
+	UNUSED(msg);
+	UNUSED(str);
 	#endif
 }
 

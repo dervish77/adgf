@@ -12,7 +12,9 @@ LIBRARY	  =
 
 SOURCES=game.c main.c
 
-TARGET=wordle
+TNAME=wordle
+TARGET=$(TNAME).prg
+
 
 #------------------------------------------
 
@@ -29,7 +31,7 @@ SIM = sim65
 
 CFLAGS  = -t $(PLAT) --create-dep $(<:.c=.d) -O
 
-LDFLAGS = -t $(PLAT) -m $(TARGET).map -L .
+LDFLAGS = -t $(PLAT) -m $(TNAME).map -L .
 
 ARFLAGS = r
 
