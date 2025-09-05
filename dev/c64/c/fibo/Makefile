@@ -29,6 +29,8 @@ AR = ar65
 
 SIM = sim65
 
+C1541 = c1541
+
 CFLAGS  = -t $(PLAT) --create-dep $(<:.c=.d) -O
 
 LDFLAGS = -t $(PLAT) -m $(TNAME).map -L .
@@ -72,9 +74,16 @@ sim: all
 
 #------------------------------------------
 
+disk: d64
+
+d64: all
+	$(C1541) -format $(TNAME)disk,01 d64 $(TNAME).d64 -attach $(TNAME).d64 -write $(TARGET) $(TNAME)
+
+#------------------------------------------
+
 clean:
 	rm -f *.o *.s *.d *% *~
 
 realclean: clean
-	rm -f core *.a *.lib *.map $(TARGET)
+	rm -f core *.a *.lib *.map *.d64 $(TARGET)
 
