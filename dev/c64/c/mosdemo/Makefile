@@ -13,7 +13,9 @@ LIB_FILES = platform.xxx hw.xxx mos.xxx
 
 LIBRARY	  = mos.lib
 
-TARGET    = mosdemo
+TNAME=mosdemo
+TARGET=$(TNAME).prg
+
 
 #------------------------------------------
 
@@ -30,7 +32,7 @@ SIM = sim65
 
 CFLAGS  = -t $(PLAT) --create-dep $(<:.c=.d) -O
 
-LDFLAGS = -t $(PLAT) -m $(TARGET).map -L .
+LDFLAGS = -t $(PLAT) -m $(TNAME).map -L .
 
 ARFLAGS = r
 
