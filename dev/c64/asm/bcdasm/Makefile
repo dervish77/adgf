@@ -1,23 +1,45 @@
 # makefile for C64 bcd display in assembly
 #
 
-SOURCE1  := main.asm
-SOURCE2  := outnum.asm
+PLAT = c64
 
-OBJ1     := main.o
-OBJ2     := outnum.o
+FILES	  = main.xxx outnum.xxx
 
-PROGRAM  := main.prg
+LIB_FILES = 
 
-ADDR     := 0x1000
+LIBRARY	  = 
+
+PNAME = main
+PROGRAM = $(PNAME).prg
 
 #------------------------------------------
+
+ADDR      = 0x1000
 
 AS = ca65
 CC = cl65
 CL = cl65
+AR = ar65
 
 EMU = x64sc
+
+SIM = sim65
+
+C1541 = c1541
+
+#------------------------------------------
+
+OFILES	   = $(FILES:xxx=o)
+AFILES	   = $(FILES:xxx=asm)
+
+LIB_OFILES = $(LIB_FILES:.xxx=.o)
+LIB_AFILES = $(LIB_FILES:.xxx=.asm)
+
+ASFLAGS = -t $(PLAT)
+
+LDFLAGS = -t $(PLAT) -C c64-asm.cfg -m $(PNAME).map -L .
+
+ARFLAGS = r
 
 ########################################
 
@@ -28,23 +50,17 @@ default: all
 
 all: $(PROGRAM)
 
-$(OBJ1): $(SOURCE1)
-	$(AS) -t c64 $(SOURCE1) -o $(OBJ1)
+$(PROGRAM): $(OFILES) $(LIBRARY) 
+	$(CL) --start-addr $(ADDR) $(LDFLAGS) -o $@ $^
 
-$(OBJ2): $(SOURCE2)
-	$(AS) -t c64 $(SOURCE2) -o $(OBJ2)
+$(LIBRARY): $(LIB_OFILES)
 
-$(PROGRAM): $(OBJ2) $(OBJ1)
-	$(CL) --start-addr $(ADDR) -t c64 -C c64-asm.cfg $(OBJ1) $(OBJ2) -o $(PROGRAM)
+$(OFILES): %.o: %.asm 
+	$(AS) $(ASFLAGS) -o $@ $<
 
-#$(PROGRAM): $(SOURCE)
-#	$(CC) --start-addr $(ADDR) -o $(PROGRAM) -t c64 -C c64-asm.cfg $(SOURCE)
-
-clean:
-	rm -f *.o *.s *% *~
-
-realclean: clean
-	rm -f core $(PROGRAM)
+$(LIB_OFILES): %.o: %.asm 
+	$(AS) $(ASFLAGS) -o $@ $<
+	$(AR) $(ARFLAGS) $(LIBRARY) $*.o
 
 #------------------------------------------
 
@@ -55,4 +71,17 @@ run: all
 	-@echo "Type 'sys 4096' to run program"
 
 #------------------------------------------
+
+disk: d64
+
+d64: all
+	$(C1541) -format $(PNAME)disk,01 d64 $(PNAME).d64 -attach $(PNAME).d64 -write $(TARGET) $(PNAME)
+
+#------------------------------------------
+
+clean:
+	rm -f *.o *.s *% *~
+
+realclean: clean
+	rm -f core *.map *.d64 $(PROGRAM)
 
