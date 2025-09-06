@@ -29,10 +29,10 @@ default: all
 all: $(PROGRAM)
 
 $(OBJ1): $(SOURCE1)
-	$(AS) --cpu 65C02 $(SOURCE1) -o $(OBJ1)
+	$(AS) -t c64 $(SOURCE1) -o $(OBJ1)
 
 $(OBJ2): $(SOURCE2)
-	$(AS) --cpu 65C02 $(SOURCE2) -o $(OBJ2)
+	$(AS) -t c64 $(SOURCE2) -o $(OBJ2)
 
 $(PROGRAM): $(OBJ2) $(OBJ1)
 	$(CL) --start-addr $(ADDR) -t c64 -C c64-asm.cfg $(OBJ1) $(OBJ2) -o $(PROGRAM)
