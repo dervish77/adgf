@@ -6,7 +6,6 @@
 
 ; main program
 start:  jsr outstr1				; output hex text string
-;
 		lda #10					; add two numbers 
 		clc
 		adc #12
@@ -18,12 +17,16 @@ start:  jsr outstr1				; output hex text string
 		jsr $ffd2
 ;
 		jsr outstr2				; output bcd text string
-;
 		sed
 		lda #10					; add two numbers 
 		clc
 		adc #12
 		jsr outbcd				; output result of sum as hex
+;
+		lda #$0a				; output CR
+		jsr $ffd2
+		lda #$0d				; output LF
+		jsr $ffd2
 ;
 end:	rts                     ; return to whatever called this program
 
