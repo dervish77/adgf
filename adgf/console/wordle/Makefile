@@ -49,7 +49,9 @@ main.o : main.c game.h
 
 # =================================================================
 
-ide: ide-vsc
+NPP = /cygdrive/c/Utils/Notepad++/notepad++.exe
+
+ide: ide-npp
 
 ide-atom:
 	atom . &
@@ -59,11 +61,14 @@ ide-cb:
 
 ide-vsc:
 	code -a . &
+	
+ide-npp:
+	$(NPP) Makefile game.h game.c main.c &
 
 # =================================================================
 
 run: default
-		$(TARGET)
+	$(TARGET)
 
 # =================================================================
 
@@ -80,6 +85,10 @@ test: default
 install: $(TARGET)
 	( cp $(TARGET) $(INSTALL_DIR)/$(TARGET) )
 	( cp $(TARGET).man $(INSTALL_MAN_DIR)/$(TARGET).1 )
+
+uninstall:
+	( rm -f $(INSTALL_DIR)/$(TARGET) )
+	( rm -f $(INSTALL_MAN_DIR)/$(TARGET).1 )
 
 # =================================================================
 
@@ -104,6 +113,8 @@ help:
 version:
 	-@echo "$(TARGET) version is $(DISTVER)"
 
+# =================================================================
+
 # remove all *.o and backup files
 
 clean:
@@ -112,23 +123,11 @@ clean:
 # remove all *.o, executables, and library files
 
 realclean:
-	rm -rf *.o *% *~ core $(TARGET) bin obj *.depend
+	rm -rf *.o *% *~ core $(TARGET) *.depend
 
 distclean: realclean
 
-
-#
-# make install
-#
-
-install:
-	( cp $(TARGET) $(INSTALL_DIR)/$(TARGET) )
-	( cp $(TARGET).man $(INSTALL_MAN_DIR)/$(TARGET).1 )
-
-uninstall:
-	( rm -f $(INSTALL_DIR)/$(TARGET) )
-	( rm -f $(INSTALL_MAN_DIR)/$(TARGET).1 )
-
+# =================================================================
 
 #
 # make distribution file
