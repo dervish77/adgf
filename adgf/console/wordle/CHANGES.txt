@@ -1,4 +1,8 @@
 REVISION history for Wordle
 ---------------------------
 
+0.2		09/07/2025	split word list into separate source code files
+
+0.1		05/28/2025	initial working version of game
+
 0.0 	05/17/2025  originated
