@@ -78,14 +78,15 @@ typedef struct word_s_t {
 /*  define main game structure
  */
 typedef struct game_s_t {
-   BOOLEAN_T          play_game;        /* play game flag */
-   BOOLEAN_T          suppress;         /* suppress instructions flag */
-   BOOLEAN_T          debug_enabled;    /* debug flag */
-   BOOLEAN_T          verbose;          /* verbose flag */
-   INDEX_T            guess_count;
-   int                status;           /* current game status */
-   GUESS_S_T          guesses[MAX_GUESSES];
-   WORD_S_T           word;             /* word to be guessed */
+   BOOLEAN_T          play_game;            /* play game flag */
+   BOOLEAN_T          suppress;             /* suppress instructions flag */
+   BOOLEAN_T          debug_enabled;        /* debug flag */
+   BOOLEAN_T          verbose;              /* verbose flag */
+   int                num_words;            /* number of words in list */
+   INDEX_T            guess_count;          /* current guess count */
+   int                status;               /* current game status */
+   GUESS_S_T          guesses[MAX_GUESSES]; /* saved guesses so far */
+   WORD_S_T           word;                 /* word to be guessed */
 } GAME_S_T;
 
 

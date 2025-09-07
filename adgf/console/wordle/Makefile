@@ -19,7 +19,7 @@ INSTALL_MAN_DIR = $(HOME)/man/man1
 # --------------------------------------------------------------------
 # you shouldn't need to change anything below this line
 
-OBJECTS = game.o main.o
+OBJECTS = words.o game.o main.o
 
 TARGET = wordle
 
@@ -42,7 +42,9 @@ all: $(TARGET) install realclean
 $(TARGET): $(OBJECTS)
 	$(CC) -o $(TARGET) $(OBJECTS) $(LIBS)
 
-game.o : game.c game.h
+words.o : words.c words.h
+
+game.o : game.c game.h words.h
 
 main.o : main.c game.h
 
@@ -63,7 +65,7 @@ ide-vsc:
 	code -a . &
 	
 ide-npp:
-	$(NPP) Makefile game.h game.c main.c &
+	$(NPP) Makefile words.h words.c game.h game.c main.c &
 
 # =================================================================
 
