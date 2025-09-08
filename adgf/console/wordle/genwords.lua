@@ -3,6 +3,8 @@
 -- Usage: genwords.lua [infile outfile]
 --
 
+version = "0.2"
+
 -- define file header
 header = [[
 /************************************************************************
@@ -20,7 +22,7 @@ footer = [[
 };
 ]]
 
--- define temp file names
+-- define default file names
 inputfile = "test.txt"
 outputfile = "test.c"
 
@@ -37,9 +39,8 @@ function processlist(infile, outfile)
 	while true do
 		local line = inf:read("*line")
 		if line == nil then break end
-		local temp = string.sub(line, 1, 5)
-		--of:write(string.format("%d, ", count), string.format("\"%s\",", temp), "\n")
-		of:write(string.format("%d, \"%s\",", count, temp), "\n")
+		local word = string.sub(line, 1, 5)   -- extract word from current line
+		of:write(string.format("%d, \"%s\",", count, word), "\n")
 		count = count + 1
 	end
 	
@@ -47,7 +48,7 @@ function processlist(infile, outfile)
 end
 
 -- main program
-print("=== genwords.lua ======================")
+print(string.format("============ genwords.lua %s ============", version))
 if #arg == 2 then
 	inputfile = arg[1]
 	outputfile = arg[2]

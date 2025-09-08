@@ -19,8 +19,8 @@
 
 /*  define version
  */
-#define VERSION		"0.2"
-#define VERSIONDATE	"09/07/2025"
+#define VERSION		"0.3"
+#define VERSIONDATE	"09/08/2025"
 
 
 /*  define some constants
