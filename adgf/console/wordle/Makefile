@@ -45,7 +45,7 @@ default: $(TARGET)
 
 all: $(TARGET) install realclean
 
-$(TARGET): $(OBJECTS)
+$(TARGET): wordlist $(OBJECTS)
 	$(CC) -o $(TARGET) $(OBJECTS) $(LIBS)
 
 words.o : words.c words.h
@@ -75,8 +75,13 @@ ide-npp:
 
 # =================================================================
 
-wordlist:
-	$(LUA) $(SCRIPT) 
+wordlist: 
+	$(LUA) $(SCRIPT) words.txt words.c
+
+testlua:
+	$(LUA) $(SCRIPT) test.txt test2.c
+	diff test.c test2.c
+	rm -f test2.c
 
 # =================================================================
 

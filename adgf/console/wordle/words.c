@@ -25,5 +25,5 @@ WORD_S_T words[] = {
 18, "CAMEL",
 19, "FIXES",
 20, "COUNT",
--1,	" "
+-1, " "
 };

@@ -1,5 +1,7 @@
 -- genwords.lua - generate wordle word list code file from text file
 --
+-- Usage: genwords.lua [infile outfile]
+--
 
 -- define file header
 header = [[
@@ -45,6 +47,11 @@ function processlist(infile, outfile)
 end
 
 -- main program
+print("=== genwords.lua ======================")
+if #arg == 2 then
+	inputfile = arg[1]
+	outputfile = arg[2]
+end
 print("Generating", outputfile, "from", inputfile)
 processlist(inputfile, outputfile)
 print("... done")
