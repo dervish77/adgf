@@ -16,13 +16,6 @@
 #ifndef _GAME_H
 #define _GAME_H
 
-
-/*  define version
- */
-#define VERSION		"0.3"
-#define VERSIONDATE	"09/08/2025"
-
-
 /*  define some constants
  */
 #ifndef TRUE

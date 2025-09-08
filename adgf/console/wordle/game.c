@@ -82,6 +82,7 @@ void InitGame(GAME_S_T *game)
 	game->verbose = TRUE;	
 		
 	game->num_words = CountWordsInList();
+	printf("num_words = %d\n", game->num_words);
 	game->guess_count = 0;
 	
 	game->status = STATUS_NO_WIN;

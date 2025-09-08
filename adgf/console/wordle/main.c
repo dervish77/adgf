@@ -28,6 +28,12 @@
 #define DEBUG
 
 
+/*  define version
+ */
+#define VERSION		"0.3"
+#define VERSIONDATE	"09/08/2025"
+
+
 /*  declare common types
  */
 #define EQ	==
@@ -71,7 +77,6 @@ int main(int argc, char **argv)
    // get program's name
    //
    strcpy( prog_name, argv[0] );
-
 
    // parse command line arguments
    //
