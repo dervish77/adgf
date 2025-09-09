@@ -4,13 +4,13 @@
 PLAT = c64
 #PLAT = sim6502
 
-FILES	  = game.xxx main.xxx
+FILES	  = words.xxx game.xxx main.xxx
 
 LIB_FILES = 
 
 LIBRARY	  = 
 
-SOURCES=game.c main.c
+SOURCES=words.c game.c main.c
 
 TNAME=wordle
 TARGET=$(TNAME).prg
@@ -41,6 +41,12 @@ EMU = x64sc
 
 #------------------------------------------
 
+LUA = lua
+
+SCRIPT = genwords.lua
+
+#------------------------------------------
+
 .SUFFIXES:
 .PHONY: all clean realclean
 
@@ -59,6 +65,11 @@ $(OFILES): %.o: %.c *.h
 $(LIB_OFILES): %.o: %.c *.h
 	$(CC) -c $(CFLAGS) -o $@ $<
 	$(AR) $(ARFLAGS) $(LIBRARY) $*.o
+
+#------------------------------------------
+
+wordlist: 
+	$(LUA) $(SCRIPT) words.txt words.c
 
 #------------------------------------------
 

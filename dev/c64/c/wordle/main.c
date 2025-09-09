@@ -20,7 +20,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
-//#include <math.h>
 #include <time.h>
 
 #include "game.h"
@@ -30,6 +29,11 @@
 
 
 //#define DEBUG
+
+/*  define version
+ */
+#define VERSION		"0.3"
+#define VERSIONDATE	"09/08/2025"
 
 
 /*  declare common types

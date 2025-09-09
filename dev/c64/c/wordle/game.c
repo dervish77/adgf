@@ -24,41 +24,14 @@
 #include <time.h>
 
 #include "game.h"
+#include "words.h"
 
 
 //#define DEBUG
 
-
 #define TO_UPPER(c) (c & 0xDF)
 #define TO_LOWER(c) (c | 0x20)
 
-
-// Table of words to randomly select
-//
-#define NUM_WORDS 20
-WORD_S_T words[] = {
-1,  "READY",
-2,  "ACTOR",
-3,  "STEAR",
-4,  "ANGER",
-5,  "BINGO",
-6,  "WINGS",
-7,  "RULER",
-8,  "SUPER",
-9,  "GUMBO",
-10, "TAPER",
-11, "FINAL",
-12, "PIECE",
-13, "FOXES",
-14, "FINAL",
-15, "POINT",
-16, "BAKER",
-17, "PENNY",
-18, "CAMEL",
-19, "FIXES",
-20, "COUNT",
--1,	" "
-};
 
 void DebugPrint(char *msg)
 {
@@ -91,6 +64,20 @@ void DebugPrintString(char *msg, char *str)
 // Local functions to be called by PlayGame()
 //
 
+int CountWordsInList()
+{
+	int i;
+	int count = 0;
+	
+	while ( words[i].idnum != -1 )
+	{
+		count++; // = words[i].idnum;
+		i++;
+	}
+	
+	return count;
+}
+
 void InitGame(GAME_S_T *game)
 {
 	int i, s;
@@ -102,6 +89,9 @@ void InitGame(GAME_S_T *game)
 	game->debug_enabled = TRUE;
 	game->verbose = TRUE;	
 		
+	game->num_words = CountWordsInList();
+	game->num_words = 50; // hard coded for now, count function is not working on C64
+	printf("num_words = %u\n", game->num_words);
 	game->guess_count = 0;
 	
 	game->status = STATUS_NO_WIN;
@@ -129,38 +119,39 @@ void CloseGame(GAME_S_T *game)
 	game->play_game = FALSE;
 }
 
-INDEX_T RandomPick()
+INDEX_T RandomPick(GAME_S_T *game)
 {
 	INDEX_T index;
 	int value; 
-    int upper_bound = NUM_WORDS * 100;
+    int upper_bound = game->num_words * 100;
     int lower_bound = 100;
 	
 	DebugPrint("RandomPick");
 
 	value = rand() % (upper_bound - lower_bound + 1) + lower_bound;
-	DebugPrintNumber("value = ", value);
+	//printf("value = %d\n", value);
 	
 	index = value / 100;
-	DebugPrintNumber("random = ", index);
+	//printf("random = %d\n", index);
 	
 	return(index);
 }
+
 void PickWord(GAME_S_T *game)
 {
 	INDEX_T index;
 
 	DebugPrint("PickWord");
 	
-	index = RandomPick();
+	index = RandomPick(game);
 	
-	if (index == NUM_WORDS)
-		index = NUM_WORDS - 1;
+	if (index == game->num_words)
+		index = game->num_words - 1;
 	
 	game->word.idnum = words[index].idnum;
 	strcpy( game->word.word, words[index].word );
 	
-	DebugPrintString("Picked =", game->word.word);
+	DebugPrintString("Picked = ", game->word.word);
 }
 
 void DisplayGuesses(GAME_S_T *game)
