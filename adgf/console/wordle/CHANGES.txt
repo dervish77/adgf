@@ -1,6 +1,8 @@
 REVISION history for Wordle
 ---------------------------
 
+0.4		09/09/2025	using long word list, and added play again feature
+
 0.3		09/08/2025	added genwords.lua script to gen words.c from text file
 
 0.2		09/07/2025	split word list into separate source code files

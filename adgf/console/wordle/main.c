@@ -30,8 +30,8 @@
 
 /*  define version
  */
-#define VERSION		"0.3"
-#define VERSIONDATE	"09/08/2025"
+#define VERSION		"0.4"
+#define VERSIONDATE	"09/09/2025"
 
 
 /*  declare common types
