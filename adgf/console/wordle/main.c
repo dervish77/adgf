@@ -25,7 +25,7 @@
 #include "game.h"
 
 
-#define DEBUG
+//#define DEBUG
 
 
 /*  define version
@@ -64,6 +64,8 @@ int main(int argc, char **argv)
    GAME_S_T game;
 	
    char prog_name[16];
+   
+   char answer[4];
 
    BOOLEAN_T  do_processing = TRUE;
    BOOLEAN_T  is_interactive = FALSE;
@@ -119,13 +121,20 @@ int main(int argc, char **argv)
          break;
    } /* end of outer switch */
 
-   DisplayBanner( prog_name );
-
-   if ( do_processing )
+   while ( do_processing )
    {
-	  InitGame(&game);
-      PlayGame(&game);
-	  CloseGame(&game);
+	  DisplayBanner( prog_name );
+
+	  if ( do_processing )
+	  {
+		 InitGame(&game);
+		 PlayGame(&game);
+		 CloseGame(&game);
+	  }
+
+	  printf("\nPlay again (y/n)?");
+	  scanf("%s", &answer);
+	  if (answer[0] == 'n') do_processing = FALSE;
    }
 
    return(0);

@@ -16,6 +16,12 @@
 #ifndef _GAME_H
 #define _GAME_H
 
+
+/*  define useful macros
+ */
+#define UNUSED(x) (void)(x)
+
+
 /*  define some constants
  */
 #ifndef TRUE

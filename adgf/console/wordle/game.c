@@ -37,18 +37,26 @@ void DebugPrint(char *msg)
 {
 	#ifdef DEBUG
 	printf("%s\n", msg);
+	#else
+	UNUSED(msg);
 	#endif
 }
 void DebugPrintNumber(char *msg, int value)
 {
 	#ifdef DEBUG
 	printf("%s %d\n", msg, value);
+	#else
+	UNUSED(msg);
+	UNUSED(value);
 	#endif
 }
 void DebugPrintString(char *msg, char *str)
 {
 	#ifdef DEBUG
 	printf("%s %s\n", msg, str);
+	#else
+	UNUSED(msg);
+	UNUSED(str);
 	#endif
 }
 
@@ -107,6 +115,7 @@ void InitGame(GAME_S_T *game)
 void CloseGame(GAME_S_T *game)
 {
 	DebugPrint("CloseGame");	
+	game->play_game = FALSE;
 }
 
 INDEX_T RandomPick(GAME_S_T *game)
@@ -157,7 +166,6 @@ void DisplayGuesses(GAME_S_T *game)
 	for (i = 0; i < game->guess_count; i++)
 	{
 		printf("%s -- ", game->guesses[i].guess);
-		//printf("%s -- ", "faked");
 		
 		for (j = 0; j < GUESS_LENGTH; j++)
 		{
@@ -278,7 +286,6 @@ void DisplayGameResults(GAME_S_T *game)
 void PlayGame(GAME_S_T *game)
 {
 	BOOLEAN_T done;
-	int status;
 
 	DebugPrint("PlayGame");
 	
