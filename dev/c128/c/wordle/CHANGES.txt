@@ -1,0 +1,4 @@
+REVISION history for Wordle
+---------------------------
+
+0.0 	05/17/2025  originated
