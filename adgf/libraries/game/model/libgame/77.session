@@ -1,0 +1,10 @@
+window_sizes 1800 903 450 1345 753 104
+
+show_stereotypes
+selected deploymentview_ref 128155 // deploy view
+open
+  classview_ref 128027 // class view
+  usecaseview_ref 134555 // use cases
+  classview_ref 134555 // class view
+end
+end
