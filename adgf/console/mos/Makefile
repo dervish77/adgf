@@ -53,6 +53,10 @@ install: build_all
 	done;
 
 test: realclean mosunit
+
+test64: 
+	$(MAKE) PORT=c64 install
+	cd bin ; x64sc -autostart mosunit ; cd ..;
 	
 arduino:
 	-@echo "arduino cross compile is not supported"
