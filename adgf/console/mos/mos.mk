@@ -154,9 +154,9 @@ GCOV_OPT	= -fprofile-arcs -ftest-coverage
 DEBUG       = 
 #DEBUG       = -g
 
-OPT         =
+#OPT         =
 #OPT         = $(GPROF_OPT)
-#OPT         = $(GCOV_OPT)
+OPT         = $(GCOV_OPT)
 #OPT         = $(GPROF_OPT) $(GCOV_OPT)
 
 #------------------------------------------------------------------------
