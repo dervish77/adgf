@@ -18,7 +18,7 @@ INSTALLDIR = $(HOME)/bin
 DIST = bintools
 
 # set distribution version
-VERSION = 2.0
+VERSION = 2.1
 
 # set files to compile
 FILES = append.xxx bincat.xxx bindiff.xxx bindump.xxx bingen.xxx \
@@ -101,7 +101,6 @@ srectoc : src/srectoc.c
 
 install: all
 	@-echo "Install - installing to ./bin"
-	#mkdir ./bin
 	cp $(TARGETS) bin
 	rm -f $(TARGETS)
 	@-echo "Install - installing to $(INSTALLDIR)"
@@ -113,19 +112,18 @@ clean:
 	rm -f *% *~ *.bak src/*% src/*~ src/*.bak *.0* *.c
 
 realclean: clean
-	rm -f $(TARGETS) $(TARGETS2) *.bin *.hex *.uu testout.c bin/*.exe
+	rm -f $(TARGETS) $(TARGETS2) *.bin *.hex *.uu *.out.* testout.c srecout.c bin/*.exe
 
 distclean: realclean
 
 # ========================================================================
 
-test: testhdr install testapp testcat testc testcrc testdiff testsplit
+test: testhdr install testapp testcat testc testcrc testdiff testsplit test2hex testsrec
 
 testhdr:
 	@-echo " "
 	@-echo "Testing binary utilities..."
-	@-rm -rf ./bin
-	@-rm -f *.bin *.uu
+	@-rm -f *.bin *.uu *.out.* srecout.c
 	@-echo " "
 
 testapp:
@@ -187,6 +185,12 @@ testuu:
 	uudecode -o uu2.bin uu.uu
 	./bin/bindiff uu.bin uu2.bin
 
+testedit:
+	@-echo "-- testing binedit ..."
+	./bin/bingen -n 8 -c -o edit1.bin
+	./bin/binedit  -e 4 -n 8  -c  -o edit2.bin
+	./bin/bindiff edit1.bin edit2.bin
+
 # ========================================================================
 
 #------------------------------------------------------------------------
@@ -203,7 +207,8 @@ TAR_FILES = 	\
 	$(TAR_HOME)/Makefile		\
 	$(TAR_HOME)/bin				\
 	$(TAR_HOME)/man/*			\
-	$(TAR_HOME)/src/*
+	$(TAR_HOME)/src/*           \
+	$(TAR_HOME)/test/*
 
 tar: distclean
 	cd .. ; \

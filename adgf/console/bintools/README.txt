@@ -6,39 +6,43 @@ This directory contains various binary file utilities.
 
 Contents:
 
-	COPYING.txt	- copying policy
+	COPYING.txt     - copying policy
 
-	Makefile	- makefile
+	Makefile        - makefile
 
-	README.txt	- this file
+	README.txt      - this file
 
-	REVISION.txt	- revision history
+	REVISION.txt    - revision history
 
-	bin/		- binary output directory
+	bin/            - binary output directory
 
-	man/		- man pages
+	man/            - man pages
 
-	src/append.c	- append binary file with specified num bytes
-	
-	src/bincat.c	- concatenates two binary files
+	src/append.c    - append binary file with specified num bytes
 
-	src/bindiff.c	- diff's two binary files
+	src/bincat.c    - concatenates two binary files
 
-	src/bindump.c	- display contents of binary file
+	src/bindiff.c   - diff's two binary files
 
-	src/bingen.c	- generate binary file
+	src/bindump.c   - display contents of binary file
 
-	src/binjoin.c	- joins binary chunks
+	src/bingen.c    - generate binary file
 
-	src/binsplit.c	- splits binary file into chunks
+	src/binedit.c   - generate file but allow to direct input of N bytes
 
-	src/bintoc.c	- convert raw binary to "C" array
+	src/binjoin.c   - joins binary chunks
 
-	src/crcgen.c	- generates CRC of binary file
+	src/binsplit.c  - splits binary file into chunks
 
-	src/prepend.c	- prepend binary file with specified num bytes
+	src/bintoc.c    - convert raw binary to "C" array
 
-	src/srectoc.c	- convert SREC file to "C" array
+	src/bin2hex.c   - convert binary file to Intel Hex format
+
+	src/crcgen.c    - generates CRC of binary file
+
+	src/prepend.c   - prepend binary file with specified num bytes
+
+	src/srectoc.c   - convert SREC file to "C" array
 
 
 --------------------------------------------------------------------
@@ -69,11 +73,15 @@ Usage:
 
 	bingen [-h] [-n bytes] [-a | -c | -d data] [-o file]
 
+	binedit [-h] [-e bytes] [-n bytes] [-a | -c | -d data] [-o file] [-s]
+
 	binjoin [-h] [-r file] [-o file]
 
 	binsplit [-h] [-n bytes] [-i file] [-r file]
 
 	bintoc [-h] [-i file] [-o file] [-a name]
+
+	bin2hex [-h] [-a addr] [-r NN] [-i file] [-o file] [-s]
 
 	crcgen file
 
@@ -84,4 +92,4 @@ Usage:
 --------------------------------------------------------------------
 
 last updated:
-August 10, 2004 - BSL
+Sept 14, 2025 - BSL

@@ -41,7 +41,7 @@ main(int argc, char *argv[])
       return 0;
 
    if((input2=fopen(argv[2], "rb")) == NULL)
-     return 0;
+      return 0;
 
    fread(array1, 1, MAX_ROM_SIZE, input1);
    fread(array2, 1, MAX_ROM_SIZE, input2);

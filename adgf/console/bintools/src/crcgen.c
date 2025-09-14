@@ -52,76 +52,71 @@ static unsigned char array[2097152];
  */
 int main(int argc, char *argv[])
 {
+	unsigned long  textsize, flashsize;
+	unsigned long calcCRC;
+	unsigned char ch;
+	int i;
+	FILE *input;
 
-unsigned long  textsize, flashsize;
-unsigned long calcCRC;
-unsigned char ch;
-int i;
-FILE *input;
+	/*hdmplus.bin file is made up of operational image and decompression utility.
+	  display the correct length of the file in the first byte. Calculate CRC and
+	  display it in the last byte.*/
 
-/*hdmplus.bin file is made up of operational image and decompression utility.
-  display the correct length of the file in the first byte. Calculate CRC and
-  display it in the last byte.*/
+	if((input=fopen(argv[1], "r+b")) == NULL)
+	    return 0;
 
-if((input=fopen(argv[1], "r+b")) == NULL)
-  return 0;
+	/*move the file pointer to the beginning of the file */
+	fseek(input,0L,2);
+	textsize = ftell(input);
 
-/*move the file pointer to the beginning of the file */
-fseek(input,0L,2);
-textsize = ftell(input);
+	/*calculate CRC */
+	CRCgen();
+	fseek(input,0L,0);
+	i=0;
+	while(!feof(input))
+	{
+		ch=fgetc(input);
+		if(!feof(input))
+		{
+		    array[i]=ch;
+		    i++;
+	    }
+	}
 
-/*calculate CRC */
+	calcCRC =  CalculateCRC(array, textsize);
 
-CRCgen();
-fseek(input,0L,0);
-i=0;
-while(!feof(input))
-  {
+	fseek(input, 0L, 2);
+	textsize = ftell(input);
 
-    ch=fgetc(input);
-    if(!feof(input)){
-    array[i]=ch;
-    i++;
-  }
-  }
+	/*move the file pointer at the end of the file and write down CRC*/
+	fseek(input, 0L, 2);
+	fputc((Int16)((calcCRC & 0xff000000L) >> 24),input);
+	fputc((Int16)((calcCRC & 0xff0000L) >> 16),input);
+	fputc((Int16)((calcCRC & 0xff00) >> 8),input);
+	fputc((Int16)((calcCRC & 0xff)),input);
 
-calcCRC =  CalculateCRC(array, textsize);
+	/*display crc and size of the file*/
+	printf("\nFile CRC  : %lX", calcCRC);
 
+	/*software download module expects the address where contents of that address
+	indicates CRC */
+	textsize=textsize-1;
 
-fseek(input, 0L, 2);
-textsize = ftell(input);
+	printf("\nFile Size : %lX\n\n", textsize);
 
+	/*move the file pointer at the begining and overwrite the correct length*/
+	fseek(input, 0L, 0);
+	fputc((Int16)((textsize & 0xff000000L) >> 24),input);
+	fputc((Int16)((textsize & 0xff0000L) >> 16),input);
+	fputc((Int16)((textsize & 0xff00) >> 8),input);
+	fputc((Int16)((textsize & 0xff)),input);
 
-/*move the file pointer at the end of the file and write down CRC*/
-fseek(input, 0L, 2);
-fputc((Int16)((calcCRC & 0xff000000L) >> 24),input);
-fputc((Int16)((calcCRC & 0xff0000L) >> 16),input);
-fputc((Int16)((calcCRC & 0xff00) >> 8),input);
-fputc((Int16)((calcCRC & 0xff)),input);
+	fseek(input, 0L, 0);
 
-
-/*display crc and size of the file*/
-printf("\nFile CRC  : %lX", calcCRC);
-
-/*software download module expects the address where contents of that address
-indicates CRC */
-textsize=textsize-1;
-
-printf("\nFile Size : %lX\n\n", textsize);
-
-/*move the file pointer at the begining and overwrite the correct length*/
-fseek(input, 0L, 0);
-fputc((Int16)((textsize & 0xff000000L) >> 24),input);
-fputc((Int16)((textsize & 0xff0000L) >> 16),input);
-fputc((Int16)((textsize & 0xff00) >> 8),input);
-fputc((Int16)((textsize & 0xff)),input);
-
-fseek(input, 0L, 0);
-
-fclose(input);
+	fclose(input);
 
 
-return 0;
+	return 0;
 }  /*end main*/
 
 
