@@ -64,7 +64,7 @@ DUNGEON_HOME = thuria
 DUNGEON_NAME = thuria-$(REV)
 
 TAR_FILES = 	\
-	$(DUNGEON_HOME)/README.unx		\
+	$(DUNGEON_HOME)/README.txt		\
 	$(DUNGEON_HOME)/READWIN.txt		\
 	$(DUNGEON_HOME)/Makefile		\
 	$(DUNGEON_HOME)/cheats/map.ppt		\
@@ -77,9 +77,9 @@ TAR_FILES = 	\
 	$(DUNGEON_HOME)/win/uninstall.bat	\
 	$(DUNGEON_HOME)/win/Dungeons_of_Thuria.lnk	\
 	$(DUNGEON_HOME)/win/Readme.lnk		\
-	$(DUNGEON_HOME)/unix/README		\
-	$(DUNGEON_HOME)/unix/COPYING		\
-	$(DUNGEON_HOME)/unix/REVISION		\
+	$(DUNGEON_HOME)/unix/README.txt		\
+	$(DUNGEON_HOME)/unix/COPYING.txt	\
+	$(DUNGEON_HOME)/unix/REVISION.txt	\
 	$(DUNGEON_HOME)/unix/Makefile		\
 	$(DUNGEON_HOME)/unix/thuria.mk		\
 	$(DUNGEON_HOME)/unix/man/thuria.man	\
