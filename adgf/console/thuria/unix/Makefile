@@ -67,7 +67,7 @@ TAR_FILES = 	\
 	$(DUNGEON_HOME)/README.txt		\
 	$(DUNGEON_HOME)/READWIN.txt		\
 	$(DUNGEON_HOME)/Makefile		\
-	$(DUNGEON_HOME)/cheats/map.ppt		\
+	$(DUNGEON_HOME)/cheats/map.pdf		\
 	$(DUNGEON_HOME)/cheats/walk.txt		\
 	$(DUNGEON_HOME)/win/readme.txt		\
 	$(DUNGEON_HOME)/win/copying.txt		\
@@ -91,5 +91,5 @@ tar:
 	cd ../.. ; \
 	tar -cvf $(DUNGEON_NAME).tar $(TAR_FILES) ; \
 	gzip $(DUNGEON_NAME).tar ; \
-	mv $(DUNGEON_NAME).tar.gz thuria.tgz
+	mv $(DUNGEON_NAME).tar.gz $(DUNGEON_NAME).tgz
 

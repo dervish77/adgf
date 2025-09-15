@@ -20,10 +20,15 @@ package: copy tar
 #
 
 DUNGEON_HOME = dungeon-thuria
-DUNGEON_NAME = thuria-$(REV)
+DUNGEON_NAME = thuria-win-$(REV)
 
+fixexe:
+	chmod 755 thuria.exe
 
-copy: remove
+remove:
+	rm -rf $(DUNGEON_HOME)
+
+copy: fixexe remove
 	mkdir $(DUNGEON_HOME)
 	cp readme.txt          $(DUNGEON_HOME)
 	cp copying.txt         $(DUNGEON_HOME)
@@ -31,9 +36,6 @@ copy: remove
 	cp thuria.exe          $(DUNGEON_HOME)
 	cp ../cheats/map.pdf   $(DUNGEON_HOME)
 	cp ../cheats/walk.txt  $(DUNGEON_HOME)
-
-remove:
-	rm -rf $(DUNGEON_HOME)
 
 tar:
 	tar -cvf $(DUNGEON_NAME).tar $(DUNGEON_HOME)/* ; \

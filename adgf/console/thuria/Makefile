@@ -11,7 +11,9 @@
 # make targets
 #
 
-default: 
+default: all
+
+all: 
 	(cd unix ; $(MAKE) )
 
 clean:
@@ -28,6 +30,11 @@ install: default
 uninstall:
 	(cd unix; $(MAKE) uninstall)
 
-tar:
+tar: tar-unix tar-win
+
+tar-unix: all
 	(cd unix; $(MAKE) tar)
+
+tar-win:
+	(cd win; $(MAKE) )
 
