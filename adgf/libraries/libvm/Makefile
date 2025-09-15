@@ -9,14 +9,20 @@ DIRS = src test
 # make library and test programs
 #
 
-default:
+default: libvm tests regress
+
+libvm:
 	@echo ""
 	@echo "Making ... LIBVM library"
 	(cd src ; $(MAKE) )
 	(cp src/libvm.a lib/libvm.a)
+
+tests:
 	@echo ""
 	@echo "Making ... test programs"
 	(cd test ; $(MAKE) )
+
+regress:
 	@echo ""
 	@echo "Making ... running regression tests"
 	(cd test ; $(MAKE) regress )
